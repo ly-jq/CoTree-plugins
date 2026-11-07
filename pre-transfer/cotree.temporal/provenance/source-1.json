@@ -1,0 +1,714 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.temporal",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "temporal",
+    "repository": "plugins",
+    "path": "plugins/temporal",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "5b3710e23d18a2a4ab27aa46309573fefe757363065508da3affa78de7131a36",
+    "upstreamVersion": "0.4.0"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/temporal-cloud-setup/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/temporal-cloud-setup/SKILL.md",
+      "sourceMetadata": {
+        "name": "temporal-cloud-setup",
+        "description": "Set up Temporal Cloud and run a sample Workflow on it for the user, doing the work end to end. Use when the user wants to set up Temporal Cloud, get started on Temporal Cloud, install the unified Temporal CLI (prerelease cloud-cli), create a Cloud namespace or API key, clone a money-transfer sample app, write the client config TOML, or connect a local Worker to Temporal Cloud and run a sample Workflow. This is the Cloud setup path, not the local learning path (see temporal-getting-started). Covers Python, TypeScript, Go, Java, .NET, and Ruby SDKs.",
+        "version": "0.8.1",
+        "disable-model-invocation": true
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/temporal-developer/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/temporal-developer/SKILL.md",
+      "sourceMetadata": {
+        "name": "temporal-developer",
+        "description": "Develop, debug, and manage Temporal applications across Python, TypeScript, Go, Java, .NET, Ruby, and Rust. Use when the user is building workflows, activities, or workers with a Temporal SDK, debugging issues like non-determinism errors, stuck workflows, or activity retries, using Temporal CLI, Temporal Server, or Temporal Cloud, or working with durable execution concepts like signals, queries, heartbeats, versioning, continue-as-new, child workflows, or saga patterns. Also use when the user mentions \"run a Temporal workflow from the CLI\", \"start a dev server\", \"run temporal server start-dev\", \"temporal workflow start\", \"temporal workflow execute\", \"temporal workflow signal\", \"temporal workflow query\", \"temporal workflow update\".",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/temporal-ops/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/temporal-ops/SKILL.md",
+      "sourceMetadata": {
+        "name": "temporal-ops",
+        "description": "Administer and diagnose running Temporal Cloud or self-hosted Temporal Server environments via CLI (temporal, tcld) — not SDK code. Operations: namespace CRUD, Cloud capacity/APS, API-key rotation, mTLS cert rotation, workflow health, batch cancel/terminate/reset, export, search attributes, Ops API, billing, audit logs, Terraform, SAML/SCIM, migration. Diagnosis: bottom-up triage of stuck workflows, non-determinism, worker-health, task-queue problems, HA failover, payload size limits, performance bottlenecks, missed schedules. Do NOT trigger for generic TLS/gRPC errors unrelated to Temporal, writing application code (temporal-developer), or worker tuning/sizing (temporal-workertuning).",
+        "version": "0.2.0",
+        "disable-model-invocation": true
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/temporal-serverless/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/temporal-serverless/SKILL.md",
+      "sourceMetadata": {
+        "name": "temporal-serverless",
+        "description": "Deploy and operate Temporal Workers on serverless compute (AWS Lambda) driven by the Worker Controller Instance (WCI). Use when the user mentions: \"serverless worker\", \"Temporal serverless\", \"Worker Controller Instance\", \"WCI\", \"deploy Temporal worker on Lambda\", \"Lambda packaging\", \"Lambda timeout\", \"WCI inspection\", \"CloudFormation Temporal\".",
+        "version": "0.6.0",
+        "disable-model-invocation": true
+      }
+    }
+  ],
+  "copiedFiles": 158,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/assets/composer-icon.svg",
+      "sha256": "2bdb3e6348ac4dbed369498ddc8d462c5ea6eb42382fb069d327e80fde647be4"
+    },
+    {
+      "path": ".codex-plugin/assets/logo.svg",
+      "sha256": "2bdb3e6348ac4dbed369498ddc8d462c5ea6eb42382fb069d327e80fde647be4"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "53f3152ab2f6aa9b835c25d1d8c5e8a7088ed131df2d816ed620273a866f63d2"
+    },
+    {
+      "path": "assets/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "assets/temporal-logo.svg",
+      "sha256": "2bdb3e6348ac4dbed369498ddc8d462c5ea6eb42382fb069d327e80fde647be4"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "b43dd18a0afdc9d6c860fe38bbc24ab72dfa3695b1462456fb88acec49a3c92d"
+    },
+    {
+      "path": "skills/temporal-cloud-setup/agents/openai.yaml",
+      "sha256": "6478745cb85f73e6e6ae8f88e5bd02d5a022de53db6c79352c42bf0a201a6c2f"
+    },
+    {
+      "path": "skills/temporal-cloud-setup/references/failure-handling.md",
+      "sha256": "ad09d3c674f341f7dbda5d4f471985da72bc32f98948cf57a1a4290dbeb0206d"
+    },
+    {
+      "path": "skills/temporal-cloud-setup/references/sdk-cloud.md",
+      "sha256": "df7b0ecc29ad481eca43c877a3b8b21cffba53a92e5923d4d1290d207448c471"
+    },
+    {
+      "path": "skills/temporal-cloud-setup/references/unified-cli.md",
+      "sha256": "c235df9c31671055de8a09ddd6df15786f2f419713d35c0e05df2b25b20ebe0e"
+    },
+    {
+      "path": "skills/temporal-cloud-setup/scripts/provision.sh",
+      "sha256": "f302b9f1bdd1a71a8d939751bcb3c8965ba6477d58d2b401900d828dadb1b02d"
+    },
+    {
+      "path": "skills/temporal-cloud-setup/SKILL.md",
+      "sha256": "8256734a954f2e6efe9ace984bb7e12ac55027a8691829984f72a4127a39f9d9"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/ai-patterns.md",
+      "sha256": "c73698245a6028b334174fd9938b9b6d6ac1ce95f8085d275fa525e2cb59b2df"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/cli-workflow-commands.md",
+      "sha256": "1130b9f03a63ee8d04bb626211d942a2db5b88263e6312367eb2da35bece5f45"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/determinism.md",
+      "sha256": "7e7fb7bc216a2cf2d2155313f716e119235ecd1defe5d54659307a7c04b04f42"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/dev-management.md",
+      "sha256": "63eaf03c57be9d4d3726c0f97c2e48eb22bec88f4dafc6f5065321d462a45e90"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/error-reference.md",
+      "sha256": "2334d419429c212d48d074327b357d7139bf79afd223823aa5a33701f900ac8f"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/gotchas.md",
+      "sha256": "39e4c099307185652728cad8a846792d185c0fa20f49133f0255e591c42c21a0"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/install_cli.md",
+      "sha256": "de45d2c02f2d5abd150a5537c9b5f2257d565a037f74760d7a035e3926723ec5"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/interactive-workflows.md",
+      "sha256": "f4d095cdfe5806933952a1f7cbca24f863298ecae3fc11068980ac3c3f848711"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/patterns.md",
+      "sha256": "81167ce15edfa276df96e8073dba0a4f66b58a22c13fee466f0e5292dc47e342"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/priority-fairness.md",
+      "sha256": "2f6fba2fe6f837a45060de5afde055368c5c3f5fa1662718fad4ca18f5f622c2"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/standalone-activities.md",
+      "sha256": "80053dafc1cccb75e597202772a7f8c0f3e7751673fe7a6c2cbfc34e5b3c8f8f"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/troubleshooting.md",
+      "sha256": "853a893f5304e9e4bcb80ab0f76f557089b6da1219bb13b0daa197f2ea1e4417"
+    },
+    {
+      "path": "skills/temporal-developer/references/core/versioning.md",
+      "sha256": "4e2f49a4d14f9755682b4735d8acd990bf8dca1ce96ea4e8a2a00ee6c34431a1"
+    },
+    {
+      "path": "skills/temporal-developer/references/dotnet/advanced-features.md",
+      "sha256": "5959f974257fca1663c704aa86d23c8821a5dc7244c3a53f0479faeefdcbae04"
+    },
+    {
+      "path": "skills/temporal-developer/references/dotnet/data-handling.md",
+      "sha256": "7e04550775da2cf7362077a723bd932e41708effd85a2d7abf2de64540491e96"
+    },
+    {
+      "path": "skills/temporal-developer/references/dotnet/determinism-protection.md",
+      "sha256": "f9f724db37226bfb22ad8d2152abeb84689bebf89b3b0afac4005f3807a140ca"
+    },
+    {
+      "path": "skills/temporal-developer/references/dotnet/determinism.md",
+      "sha256": "8b2862bd83967843c4fb74d5c42e593c64d7b287cc532f4e9c143e8eded7ea3a"
+    },
+    {
+      "path": "skills/temporal-developer/references/dotnet/dotnet.md",
+      "sha256": "b3d8ce2446adf64dfe8a31c162907785205c6a9b3de914be53c171a18733d87b"
+    },
+    {
+      "path": "skills/temporal-developer/references/dotnet/error-handling.md",
+      "sha256": "bcaf26225a0983cf13b8a024d688a8c9055c8469fffab24f80009e51b3d387e7"
+    },
+    {
+      "path": "skills/temporal-developer/references/dotnet/gotchas.md",
+      "sha256": "8e68af342e316e05d9331201162c0a479d0aaf78ab4e57bd4d1d310138795c37"
+    },
+    {
+      "path": "skills/temporal-developer/references/dotnet/observability.md",
+      "sha256": "c3f4cd264bce005167a9fdaea552fc2d7d236b5bd9e660f2c67722414de50b1b"
+    },
+    {
+      "path": "skills/temporal-developer/references/dotnet/patterns.md",
+      "sha256": "b9f85fc68df7cbf3069f00c204af2aabea16f50e23cf99b7a80ab0af04eac1c5"
+    },
+    {
+      "path": "skills/temporal-developer/references/dotnet/standalone-activities.md",
+      "sha256": "612cd2364ef0645723c26c4ba273c9036f73fdc59c4905f27e4fbb1d6eac839f"
+    },
+    {
+      "path": "skills/temporal-developer/references/dotnet/testing.md",
+      "sha256": "8ee217d4e62a47f89ba34196214bab860b2cc622876693601caf1fcf3c27db31"
+    },
+    {
+      "path": "skills/temporal-developer/references/dotnet/versioning.md",
+      "sha256": "7c99013b30ff41f320eb4d08afd6abdbb991d229b8e5fa41e4334bef3f5ea3f4"
+    },
+    {
+      "path": "skills/temporal-developer/references/go/advanced-features.md",
+      "sha256": "8031926e78ba17f846b3784a5a8fb56842b593c2accae32b8f7acd4087ce8274"
+    },
+    {
+      "path": "skills/temporal-developer/references/go/data-handling.md",
+      "sha256": "9fdf02ccfdb67cc4f4da28b1e1e353fd6b686e034f2afeeb51602e3073760593"
+    },
+    {
+      "path": "skills/temporal-developer/references/go/determinism-protection.md",
+      "sha256": "5d3a891e4d21c3ba900dd3dd19b72f858af88144cc96771c8b94ebb4158485ac"
+    },
+    {
+      "path": "skills/temporal-developer/references/go/determinism.md",
+      "sha256": "8145ff9838485c28bb16588217be5aba074c5272299d40e4c9d404ecccd832c0"
+    },
+    {
+      "path": "skills/temporal-developer/references/go/error-handling.md",
+      "sha256": "f74533cbc3eb3b269fd254cefadf61587f860f6526c37cb29c1db65752e1da20"
+    },
+    {
+      "path": "skills/temporal-developer/references/go/go.md",
+      "sha256": "511eb9ba512a3e93518ccbceab80dcb0e3c67bd5062e759fd3e7fce9d386dd48"
+    },
+    {
+      "path": "skills/temporal-developer/references/go/gotchas.md",
+      "sha256": "cb891aab4753c30df284ae5e074dc218d6a2b13df924cf98b49b68e00f8cc034"
+    },
+    {
+      "path": "skills/temporal-developer/references/go/observability.md",
+      "sha256": "4ed0e579c2c474aa665d0411f9e4b3149cba12fba1a1f5c44000e6a0a9944759"
+    },
+    {
+      "path": "skills/temporal-developer/references/go/patterns.md",
+      "sha256": "9d5f346a633c185d2c75dc72972c1954370c77770ced4ec54b7ff68a0190daea"
+    },
+    {
+      "path": "skills/temporal-developer/references/go/standalone-activities.md",
+      "sha256": "d91b04c1c75847ddbbe7af62f43d5262cd916db01855b55473ac241885ba131c"
+    },
+    {
+      "path": "skills/temporal-developer/references/go/testing.md",
+      "sha256": "3e9c9ef832e7cc97dff6ea99f849edba7b7de30a43e132dc8e4eee4e30d62c90"
+    },
+    {
+      "path": "skills/temporal-developer/references/go/versioning.md",
+      "sha256": "4865c2efdb28118367a97cde0ea7fc596b797299ede82e803fba6a92a0927457"
+    },
+    {
+      "path": "skills/temporal-developer/references/integrations.md",
+      "sha256": "c55db1c54216b0daca039eb96b5a6b160061ca1eed6e021a8993e5b08549174d"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/advanced-features.md",
+      "sha256": "a7228737946e20b835ea035ac8dfe414ae0339d76dcb07a45c1e71d7b77e714c"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/data-handling.md",
+      "sha256": "acae9fdbf481dff033686b5a81028f7cd1e84955c805d731ddad0cac65ef3cd2"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/determinism-protection.md",
+      "sha256": "3ad3086c13cf4545c469b0e1c0fd36b40951a639933df53b352d4e5dfc037789"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/determinism.md",
+      "sha256": "95aed24b0047be8aea39b391fdf1cbf81e9bc1effc316a5b6b6aa00f2f95e996"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/error-handling.md",
+      "sha256": "e3c7b4dd9859def8f88a41de223357f1e5035559548f42fff64b760b87c681be"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/gotchas.md",
+      "sha256": "423cf766999cb28679b2a918e5100255182025554573658a06437ccf5301c9c5"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/integrations/spring-ai.md",
+      "sha256": "fcafaf83e13f773b825d2664789bbef78eede9a200e6e1a1953e8568db976d5e"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/integrations/spring-boot.md",
+      "sha256": "b3f3d008d2b72a46cef1572d636753da3220e30f84ad0ed47d7404b19aa893a3"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/java.md",
+      "sha256": "0c640647558eb98d8aa912afe1201f9ff47f7d6f46317032d67d7f2d559fc333"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/observability.md",
+      "sha256": "1859d8411754f00f979bdbb670fdc3821c8e653c152a504ad69fc5002eb63672"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/patterns.md",
+      "sha256": "17cea33fedd87b4c5dae1cb864c8f6b1b5eaa5ce6557c803b6aaa620bdb0176b"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/standalone-activities.md",
+      "sha256": "b9baab6e3a412d509389b642a10be9530b50c8071d346a092114335d768837a5"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/testing.md",
+      "sha256": "7609255ba2161cde9d49e9dbd4ceef4dfb1b7088d2f3ac30b3e2fb8e65c7022e"
+    },
+    {
+      "path": "skills/temporal-developer/references/java/versioning.md",
+      "sha256": "2cae9a3df5ec2d568d8117d14b9cb1e179383640d29ed048311f64766dca3e7a"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/advanced-features.md",
+      "sha256": "5ae7752ee64cc1c6359c26b68795b9d1f7b76772df8b263632cd9f3111780919"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/ai-patterns.md",
+      "sha256": "d8f427944eac25f3f0f94c395ace088db3327e8982d76379660523aa593a3204"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/data-handling.md",
+      "sha256": "345be68c7789ef49d274250d88749a5c22937bf66ae3c93c4be1a6ddba3b793f"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/determinism-protection.md",
+      "sha256": "6b648f9238a299dcbf271b532db62dc2f537036dbaa5de6c0df49249e54d3e49"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/determinism.md",
+      "sha256": "eb63529e15397409b06da14c742cf18a8eb8e2d6779e8f4666ed13659b3baa00"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/error-handling.md",
+      "sha256": "8b7576c07cc6f8a0caa4a2991555bea5d689d528bd2f0cc2e9fb6d885d4d90d5"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/gotchas.md",
+      "sha256": "68fd46e540e5f83134b9d9dc5dd93c9e0f7222042096ccd0358a75cab6b2a8f6"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/integrations/braintrust.md",
+      "sha256": "6a4749073a1ca96b8d9eaa31d8d33d94e5a0c5d71530c4313ddedec8d1ef881a"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/integrations/google-adk.md",
+      "sha256": "5f1fe1df44b33511c498c8bebcad6323ffad708d69a7c17f1f8bbb7872c6aa93"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/integrations/langgraph.md",
+      "sha256": "4daa0b0e01416839fc9385cbf85ac3622980d96a37405f6c98de4bdd7d236b75"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/integrations/langsmith.md",
+      "sha256": "2d3114840596fdaf222ee7d20ffa3be87cf243138de2c416c62a9c63f2adcb5f"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/integrations/openai-agents-sdk.md",
+      "sha256": "62dd6cc2252564cd6aa686a505be3a59ca56a3e24142e81c2191fcab8323a6d1"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/integrations/opentelemetry.md",
+      "sha256": "ca57867caca64ddbdffee06b7e90f0a0b4139114e1ad1fa7cf40a4e62e304235"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/integrations/pydantic-ai.md",
+      "sha256": "7194220f9a609a93ce149130101df29f7203bcaff90ae84aedaa6760eb1e9e1c"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/observability.md",
+      "sha256": "9c59bbad45c5c6a9f649111cf0587197ec81d378a3530032a84c1f01bb2c601c"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/patterns.md",
+      "sha256": "d3b4c52c7a514a4d1d890aab54e3ae92d449c7db920d20a41b75c0a4a5155771"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/python.md",
+      "sha256": "29255cf57e56f268ae4ed70b17d33b81993abe48401ad05cd9525bc2dd17ec09"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/standalone-activities.md",
+      "sha256": "8139c6dc1e75b28ad97c5d52706026ac553ea479206474886324b147ebaad814"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/sync-vs-async.md",
+      "sha256": "1fda35d0c8c79c35274bac7a62fecb8aaefc8017d6d15eaad434ce99c142b395"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/testing.md",
+      "sha256": "7abb301ef54ed403333f5b48b9c2f6df033b095ee98eb0b4f21afed98657c57c"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/versioning.md",
+      "sha256": "5253a716e6d8eb9056aa1486a9a69c8755d1e67b4c7b7ab1770a9ae6fcc90ab9"
+    },
+    {
+      "path": "skills/temporal-developer/references/python/workflow-streams.md",
+      "sha256": "20ea8a72ec042d31884f9721ff713d0b314ed193a16e4960a0969b3ac5dbe958"
+    },
+    {
+      "path": "skills/temporal-developer/references/ruby/advanced-features.md",
+      "sha256": "c70699b48d403f40b834261c09e2c905d1c9ab9acb1c9c3d0db3a32e8fa4d90e"
+    },
+    {
+      "path": "skills/temporal-developer/references/ruby/data-handling.md",
+      "sha256": "bba2a204e955e586facb2deba6343663cb697472037467eed05b1bb7076d99ed"
+    },
+    {
+      "path": "skills/temporal-developer/references/ruby/determinism-protection.md",
+      "sha256": "80ce08b629901cb11a0ce3f792341ad62a0ba50a4e08b93b7fe587eb6209b988"
+    },
+    {
+      "path": "skills/temporal-developer/references/ruby/determinism.md",
+      "sha256": "510918c36a64328aad1dc82b708f70921a228846ae1458df98222a4f1759da74"
+    },
+    {
+      "path": "skills/temporal-developer/references/ruby/error-handling.md",
+      "sha256": "9e2f06dda258b1e81dc5eec14ffa375b1295b24bbc091bfab60ee7aae45710db"
+    },
+    {
+      "path": "skills/temporal-developer/references/ruby/gotchas.md",
+      "sha256": "737e19020afa4e9ddf3cf666a3385918aa7c9e3819dace564170613490df007b"
+    },
+    {
+      "path": "skills/temporal-developer/references/ruby/observability.md",
+      "sha256": "114380b679184539ce67b8f1e214aabb0f87f6562b61ee2d55801087edfab966"
+    },
+    {
+      "path": "skills/temporal-developer/references/ruby/patterns.md",
+      "sha256": "a25d798addc50520a045f77dbeff95614fc759e91ea95c4431b9f963940d11dd"
+    },
+    {
+      "path": "skills/temporal-developer/references/ruby/ruby.md",
+      "sha256": "4da5472a0e2970720b375c1b5dcd44a85068dafefe32bb326206ba618c926821"
+    },
+    {
+      "path": "skills/temporal-developer/references/ruby/testing.md",
+      "sha256": "1110dc13299f35960851bc7cb4d2bfec6dcc56c66a3623e01ddcc509da011825"
+    },
+    {
+      "path": "skills/temporal-developer/references/ruby/versioning.md",
+      "sha256": "005e7d0575ffeb89ce569a49c0b8f6422799cc434cd17ad43e45dc96ab99195b"
+    },
+    {
+      "path": "skills/temporal-developer/references/rust/rust.md",
+      "sha256": "b595670a7cd9bf01e705ad0f06d17bfca5069980b239f7564fbd74f68aa9aed0"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/advanced-features.md",
+      "sha256": "87f2eba27897e4fd0f0af931a5bab5f3b1949d8ab1ff98c9a13ee25451abd015"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/data-handling.md",
+      "sha256": "fb33bf2ff1de8cb90b9b1493c6e2a2ce89bd3bd29451a028f22f364533cdcc21"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/determinism-protection.md",
+      "sha256": "5756b8a6a5efde845225975998e11b1b96e58ab9972bc0c6c0064f2270dcea17"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/determinism.md",
+      "sha256": "71ed6bd5ba65d3fe6578e9d5acf0964e945e1d049b512ac7aa60920d9f222d18"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/error-handling.md",
+      "sha256": "e78195a73a2af68de9bc6f5ba52486047ad8b21ca166f1e89118ebbd9f6b0849"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/gotchas.md",
+      "sha256": "0fa001ab78aae9b3b0709540f2e895e2898ef1f3fe5c997d10deb11ebd8a6d4d"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/integrations/braintrust.md",
+      "sha256": "bdbe86e74004dbbbda983781ff26bc5ac3051981a969f0a2997e8e92356ee8f5"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/integrations/mastra.md",
+      "sha256": "fbd16bb132675e743acb355f961626089a36c0bd5f0a5cc503975a7470ff9843"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/integrations/opentelemetry.md",
+      "sha256": "895d7f0a4b636248e23056abc4300eb788a6f1ffec8003729d09122dd3852318"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/integrations/vercel-ai-sdk.md",
+      "sha256": "367b8162a271aa40ae37620c61a0285b94cb8cb02d5648abfb8a2bc04f73210a"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/observability.md",
+      "sha256": "e10f360b36e0e730eff125d39ea87bfdbf68d2421b160a023514335be0274005"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/patterns.md",
+      "sha256": "e72b8048a847c1b9a83817c5c8dca5176628dffb9f58e00bc6b4b7d888783013"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/standalone-activities.md",
+      "sha256": "5456eab7de4e6d7b90b585ab312c661f5ad884c78f6b4aa9ecedce90cf5d6110"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/testing.md",
+      "sha256": "b2c7e4918fbf9618483d3be87efa0825e67a66055f1e0eccdf2375fcb9d35c9c"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/typescript.md",
+      "sha256": "5bb1e46848ca90511a1827df7dc22c308b0d5e1a73587aac6b2259239ccc5fee"
+    },
+    {
+      "path": "skills/temporal-developer/references/typescript/versioning.md",
+      "sha256": "508de35f2ac0787c0a828f3d56076434283a040a4d1180c3df3e4507ffa28ffa"
+    },
+    {
+      "path": "skills/temporal-developer/SKILL.md",
+      "sha256": "88d147e289083164cee919f42bce8e9e621daf183b04bd3cc581fae60cd93348"
+    },
+    {
+      "path": "skills/temporal-ops/agents/openai.yaml",
+      "sha256": "9843257b8ee50a29da8793a2ca00961c262ffe9c4f34f63dab1cad42fe70b934"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cli-conventions.md",
+      "sha256": "a728778f43dee6a00c1f9e56cdfa66c0abb1f4c7abf8d30afde6d1643c680231"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cloud-audit-logs.md",
+      "sha256": "33929197a8d54cfbe9de6c23d9eb792648293c9f83b1d583f7f6eacc9d5805c9"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cloud-billing.md",
+      "sha256": "645c404839c9ec75cade8e6e37c879f5473895cdb6865d84b2ac1803ebd85a70"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cloud-capacity.md",
+      "sha256": "b6f6d6125f0acd7b6b69b949730716e984f93f76770d29a1b6c49f1c19c0aff7"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cloud-certs.md",
+      "sha256": "93109f39c86d591ae36e90fbd039a0fa1db2dde3c0dff578de900c27dd865b18"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cloud-connectivity.md",
+      "sha256": "25dca102bbada944c42b1dc769942296376b7d913ebe401d15b87d086f6dc3a4"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cloud-iam.md",
+      "sha256": "813a3b7833504ff45a4c53861f3fe597c4c2fc385701ba007e1e61c6be3fe865"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cloud-migration.md",
+      "sha256": "86bf3a7c5fe9d8e926ee673c38f9e09cf7828745c697ecebc05dfe58f73712b4"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cloud-namespace-admin.md",
+      "sha256": "be0841a704e92a131093860c5d46268264a77ef93ec98018b51b3482928bab60"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cloud-notifications.md",
+      "sha256": "8a5d0d20a3c153c9218dbcecaa05b488d4dae9c7c851e62b59c6c9001c5bf642"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cloud-ops-api.md",
+      "sha256": "4137bd5ff698b8f9f966b7929bc052a02f6cd3d504968889b23aac02bcdbf14c"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cloud-saml-scim.md",
+      "sha256": "0a7090cab27126b232880f084b483ebf40fa6bdc5eb3c611b0ef8c0df27a89d3"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/cloud-terraform.md",
+      "sha256": "341f7e4a5d1fd9a740d0cf8548118446d1cde47a06e39190c6fb2e5ecf794f62"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/recipes.md",
+      "sha256": "ea3a6aa0a30fed74de65616c4de1c11b69e9fd6568a92f3198ed6cdd6e6ab751"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/self-hosted-admin.md",
+      "sha256": "b25d2c9a7c1894f6994181b3223c7ec8c61d86699e9d8fb7139b9156bfd1b560"
+    },
+    {
+      "path": "skills/temporal-ops/references/ops/workflow-health.md",
+      "sha256": "ffd42138225ca8e2c7a7ec8a51075744fc9b43a6378541ef80425b4168c3bcf7"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/authentication.md",
+      "sha256": "1e3f73f8698edc6e617d76947e2cb3bbca8cebfe1d41cb214314f90db848bcd1"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/blob-size-limits.md",
+      "sha256": "a61a79e451a7902b11e301fbe1d4fb01468c8e8a76c596d6f5ba3f0831a4ff15"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/certificates.md",
+      "sha256": "f415a7fcfa7017a63ef6254a005b19e24174a3f0c2706fab2d5d0d6ced6dae26"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/connectivity.md",
+      "sha256": "17d9a47ffd52c988fc15b0247a084f6a779489b3ef347435dd68e6a812874d9a"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/diagnostic-ladder.md",
+      "sha256": "69498b5feee5bcdc7814b9a5ecf451eb6e71bc595ea5ce3ad6d613115acdeb82"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/ha-failover.md",
+      "sha256": "2f5c101784a7745493f91bdc8ee533c70fb52d4b65c0d0e08e697febb55c8f0b"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/non-determinism.md",
+      "sha256": "4a8c2b0b802e5b1bd3cf5a1cc5e787a1fb5d78129a7cc3cf08160029712f42e4"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/performance-bottlenecks.md",
+      "sha256": "7b17c150d7583e9ad7bdf68a5280c51a1689eb2e3740703c0c966a08f09debda"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/rate-limits.md",
+      "sha256": "f412d69766641e6ac4b2b595978308bac5baae97a8521b0ba7116a94dd1acf9b"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/recipes.md",
+      "sha256": "dba6087e104555f4d5e7a0789822874462a039812a999e1825ca45392d0c414b"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/replay.md",
+      "sha256": "07b73d7973d632e59c3d6955dfd302581da0da94ba6b79634062d01d0cab2959"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/runtime-errors.md",
+      "sha256": "b6336d75cc53de1caba548fc180200baa41ad1638f180568bc0071c09077195a"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/schedule-missed.md",
+      "sha256": "7b3d09669384f3283e514b844beec42c2dd2675ea80a7c28355310b6ef803a20"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/sdk-snippet-review.md",
+      "sha256": "19f6999c419affa8a090ad9f4e646d4d3c2f7f6823233fd043ccc4c00e7a11fe"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/worker-health.md",
+      "sha256": "171eae985e5e8181f0c4b6767c9cdcfe796293709c20a70fd720d81fafce32d5"
+    },
+    {
+      "path": "skills/temporal-ops/references/triage/workflow-stuck.md",
+      "sha256": "06abf8334e214a699efe0cf92b44c93b037302366573112aee25713f13113529"
+    },
+    {
+      "path": "skills/temporal-ops/SKILL.md",
+      "sha256": "1a05adeaa4305b23d9a4c0a3fa07b981e536624ec0ae402e2b6e7705c9c302cd"
+    },
+    {
+      "path": "skills/temporal-serverless/agents/openai.yaml",
+      "sha256": "88f744f375470cec0ff0fe3d2e95b2e4fd668fd49c22db12704565bbf079a2e1"
+    },
+    {
+      "path": "skills/temporal-serverless/assets/temporal-cloud-serverless-worker-role.yaml",
+      "sha256": "d1f433be1191b586e4b192ab71b77c32baca77589b57e864c280c1b32d95159c"
+    },
+    {
+      "path": "skills/temporal-serverless/assets/temporal-self-hosted-serverless-worker-role.yaml",
+      "sha256": "c600c935c3e2bc7512f7e26780913f6b1a7abf7f156c306af81547f19118d398"
+    },
+    {
+      "path": "skills/temporal-serverless/references/aws-lambda/diagnostics.md",
+      "sha256": "0643213e01f07b8cb31bea10ac4b1e18482cce03b9de6006d570c238704129a8"
+    },
+    {
+      "path": "skills/temporal-serverless/references/aws-lambda/iam.md",
+      "sha256": "1d796c857e4b725b3679c6da39f819cc81e9d10d137e185853526eb6098a1207"
+    },
+    {
+      "path": "skills/temporal-serverless/references/aws-lambda/observability.md",
+      "sha256": "7c2be214d4196e9e319fe675186ed0f0dc6f8684718e83f3d4f466a8284d20f1"
+    },
+    {
+      "path": "skills/temporal-serverless/references/aws-lambda/self-hosted.md",
+      "sha256": "999cc6f9df99e8a6633ae147ddbaaf20a7ede85d057751870bf3317312ef8ab4"
+    },
+    {
+      "path": "skills/temporal-serverless/references/aws-lambda/setup.md",
+      "sha256": "07694fb7515d5d4a1ced15e5a1277861a5d9dcb3eb9a5495bdfe04f7c2ed02f1"
+    },
+    {
+      "path": "skills/temporal-serverless/references/aws-lambda/versioning.md",
+      "sha256": "be2a683c74d8b8c588254a8b9d9a7517a56c9f328c5149f334f33d726dafdbb6"
+    },
+    {
+      "path": "skills/temporal-serverless/references/concepts.md",
+      "sha256": "90a8f292f8f4e1d30d48206e23c164eebcd868b52444ef0835e8b2f85c4e4081"
+    },
+    {
+      "path": "skills/temporal-serverless/references/sdk-configuration.md",
+      "sha256": "2fefa2a33f937da3fc2eba3e335142ddfb9b294b8863014c408d448c03cc7032"
+    },
+    {
+      "path": "skills/temporal-serverless/SKILL.md",
+      "sha256": "48b57f629dcf64d157461d050ae9251595b00ff7d63ac1ddbb4e486ca48e8296"
+    }
+  ]
+}

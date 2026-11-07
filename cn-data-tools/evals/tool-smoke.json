@@ -1,0 +1,30 @@
+{
+  "name": "cn-data-tools tool smoke",
+  "description": "Agent smoke cases for the three kernel-owned China data runtimes.",
+  "cases": [
+    {
+      "id": "weather-runtime-declared",
+      "suite": "cn-data-tools-smoke",
+      "task": "Use PluginCoTreeCnDataToolsWeatherGet for Beijing and summarize the returned current conditions.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "finance-runtime-declared",
+      "suite": "cn-data-tools-smoke",
+      "task": "Use PluginCoTreeCnDataToolsFinanceQuote for a declared A-share fixture symbol and report its returned quote fields.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "news-runtime-declared",
+      "suite": "cn-data-tools-smoke",
+      "task": "Use PluginCoTreeCnDataToolsNewsSearch for a Chinese-language fixture topic and confirm at least one normalized result is returned.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    }
+  ]
+}

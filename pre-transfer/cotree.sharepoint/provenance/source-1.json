@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.sharepoint",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "sharepoint",
+    "repository": "plugins",
+    "path": "plugins/sharepoint",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "afb370aa5c53f5b27cea4132b8fbe13af894740d0154252f4417f5368c91f7fa",
+    "upstreamVersion": "0.1.7"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "原包只提供 ChatGPT / Codex 专属连接器；需独立 Microsoft 服务适配。"
+  ],
+  "components": [
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 1,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "121e42f69574d2147f1d964507038fec765ef7f7fdd488e8beea8f4b734d013b"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "218b91bf2a14d5249ffd3c929d8275f7ecfc22953348b14ab0c48fb48c761ac2"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "29baa18ad6db89408509eb925ce6ba5fe50676387de34fdb0372f068f8869343"
+    }
+  ]
+}

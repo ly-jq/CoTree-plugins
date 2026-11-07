@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.playwright",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 2,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "playwright",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/playwright",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "40253d6e770cb25fde01ae4a3c31259e3da6c2a66e1f60b371e318965e22c66a"
+    }
+  ],
+  "changes": [
+    "固定 MCP 版本，默认 headless / isolated，避免复用个人浏览器登录状态。",
+    "加入基于真实页面引用的原生测试流程和清理要求。"
+  ],
+  "limitations": [
+    "需要 Node.js / npm、可用 Chromium 及网络安装依赖；首次启动可能下载包。",
+    "与 CoTree 原生浏览器能力有交集，按测试任务选择一个控制面，不混用页面引用。",
+    "cotree.browser-use 提供宿主浏览器；此插件限独立测试浏览器和可复现 E2E，不重复接管个人浏览器。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "browser MCP": "test + 固定版本的 cotree.playwright.playwright；原协议工具由 tools/list 发现，文件快照用真实路径读取。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

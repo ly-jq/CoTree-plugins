@@ -1,0 +1,452 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.expo",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "expo",
+    "repository": "plugins",
+    "path": "plugins/expo",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "701b4afabad176b8dd7f3dd3658116641e9693acda3cd77f36847dff411db2f4",
+    "upstreamVersion": "1.0.2"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "Expo 工程方法可用；原宿主设备、预览和应用操作需映射。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/building-native-ui/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/building-native-ui/SKILL.md",
+      "sourceMetadata": {
+        "name": "building-native-ui",
+        "description": "Complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling, components, navigation, animations, patterns, and native tabs.",
+        "version": "1.0.1",
+        "license": "MIT"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/codex-expo-run-actions/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/codex-expo-run-actions/SKILL.md",
+      "sourceMetadata": {
+        "name": "codex-expo-run-actions",
+        "description": "Wire Expo projects into the Codex app with project-local run scripts and .codex/environments/environment.toml actions. Use when the user wants the Codex app Run button, build/run actions, action buttons, or a stable Expo start/run workflow from Codex.",
+        "version": "1.0.0",
+        "license": "MIT"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/expo-api-routes/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/expo-api-routes/SKILL.md",
+      "sourceMetadata": {
+        "name": "expo-api-routes",
+        "description": "Guidelines for creating API routes in Expo Router with EAS Hosting",
+        "version": "1.0.0",
+        "license": "MIT"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/expo-cicd-workflows/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/expo-cicd-workflows/SKILL.md",
+      "sourceMetadata": {
+        "name": "expo-cicd-workflows",
+        "description": "Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with EAS build pipelines or deployment automation.",
+        "version": "1.0.0",
+        "license": "MIT License"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/expo-deployment/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/expo-deployment/SKILL.md",
+      "sourceMetadata": {
+        "name": "expo-deployment",
+        "description": "Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes",
+        "version": "1.0.0",
+        "license": "MIT"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/expo-dev-client/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/expo-dev-client/SKILL.md",
+      "sourceMetadata": {
+        "name": "expo-dev-client",
+        "description": "Build and distribute Expo development clients locally or via TestFlight",
+        "version": "1.0.0",
+        "license": "MIT"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/expo-module/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/expo-module/SKILL.md",
+      "sourceMetadata": {
+        "name": "expo-module",
+        "description": "Guide for writing Expo native modules and views using the Expo Modules API (Swift, Kotlin, TypeScript). Covers module definition DSL, native views, shared objects, config plugins, lifecycle hooks, autolinking, and type system. Use when building or modifying native modules for Expo.",
+        "version": "1.0.0",
+        "license": "MIT"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/expo-tailwind-setup/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/expo-tailwind-setup/SKILL.md",
+      "sourceMetadata": {
+        "name": "expo-tailwind-setup",
+        "description": "Set up Tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling",
+        "version": "1.0.0",
+        "license": "MIT"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/expo-ui-jetpack-compose/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/expo-ui-jetpack-compose/SKILL.md",
+      "sourceMetadata": {
+        "name": "expo-ui-jetpack-compose",
+        "description": "`@expo/ui/jetpack-compose` package lets you use Jetpack Compose Views and modifiers in your app."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/expo-ui-swift-ui/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/expo-ui-swift-ui/SKILL.md",
+      "sourceMetadata": {
+        "name": "expo-ui-swift-ui",
+        "description": "`@expo/ui/swift-ui` package lets you use SwiftUI Views and modifiers in your app."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/native-data-fetching/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/native-data-fetching/SKILL.md",
+      "sourceMetadata": {
+        "name": "native-data-fetching",
+        "description": "Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, and Expo Router data loaders (`useLoaderData`).",
+        "version": "1.0.0",
+        "license": "MIT"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/upgrading-expo/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/upgrading-expo/SKILL.md",
+      "sourceMetadata": {
+        "name": "upgrading-expo",
+        "description": "Guidelines for upgrading Expo SDK versions and fixing dependency issues",
+        "version": "1.0.0",
+        "license": "MIT"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/use-dom/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/use-dom/SKILL.md",
+      "sourceMetadata": {
+        "name": "use-dom",
+        "description": "Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally.",
+        "version": "1.0.0",
+        "license": "MIT"
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/setup-codex-run-actions.md",
+      "state": "converted",
+      "target": "content/commands/setup-codex-run-actions.md",
+      "sourceMetadata": {}
+    }
+  ],
+  "copiedFiles": 66,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "be998d16bab66443482613bf4caea17efbb670c9ebf5b5c08f42442e6356f96d"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "ceeaaffa8efc1f5891a619146202a676f23b841f18224b36c102c92fc2ad7261"
+    },
+    {
+      "path": "assets/expo.png",
+      "sha256": "8a0da01fdd368341cb7d5103c6435d7b94a8a09521da6c65d57be34e97c4cb2a"
+    },
+    {
+      "path": "commands/setup-codex-run-actions.md",
+      "sha256": "ba322abfb9ea5640dc2a37722bff4e780b9b7e97e3a4e7783423cd6f072f861d"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "0e19d24423e0904b8a6c340f19358d5c4f9594d2c6b69bf5cb79b13694498e86"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b33e8b60cc9fc2c69fbf71df08735779a879659a1a045806ed24d9ec79e759cc"
+    },
+    {
+      "path": "skills/building-native-ui/agents/openai.yaml",
+      "sha256": "8fd1944ce7d02d53bf760f344f8fc341e9eb10f8afc7905a3c85b119cfecc4ca"
+    },
+    {
+      "path": "skills/building-native-ui/references/animations.md",
+      "sha256": "e52361d8926f6f178f82f7fd5cdfc52554e13fd79a2f4719e9a5414cc085c8a7"
+    },
+    {
+      "path": "skills/building-native-ui/references/controls.md",
+      "sha256": "f82883ef6f2a9f44475ca7a6e1e2b2703029245c4057a1c78a1cf654d070d8bf"
+    },
+    {
+      "path": "skills/building-native-ui/references/form-sheet.md",
+      "sha256": "f9935982a9dc6f0c926602e30b8deef9e271d5d58db2a8031ca18a690affcc90"
+    },
+    {
+      "path": "skills/building-native-ui/references/gradients.md",
+      "sha256": "e401012d5255dd762fd936fd1a01f21a59032494a476c1de4bdcf4e9e958803b"
+    },
+    {
+      "path": "skills/building-native-ui/references/icons.md",
+      "sha256": "0d0c82586164b78b324d8bb329c6915dc1000177ca44b46a6d4c5ff6d697079c"
+    },
+    {
+      "path": "skills/building-native-ui/references/media.md",
+      "sha256": "146f26c198254fee525f04a71aacb398789461db1c87d79bb38aa747226b1401"
+    },
+    {
+      "path": "skills/building-native-ui/references/route-structure.md",
+      "sha256": "80992ea08d16c0151dffacd4f31ce1b1cd553e01f4f941bd36d991a978ce274c"
+    },
+    {
+      "path": "skills/building-native-ui/references/search.md",
+      "sha256": "317fd181c7ff9783a0a738630042fc662a483f9eccff23aa5eb2ade4195c9e73"
+    },
+    {
+      "path": "skills/building-native-ui/references/storage.md",
+      "sha256": "62d6a91f458a7f59eb81ca5279d7d022407749a12e95d70e2046a217230e17c7"
+    },
+    {
+      "path": "skills/building-native-ui/references/tabs.md",
+      "sha256": "5ec9f4a60dfcc42039ae369a90c4710255bd8fd91cf751ba6679a76aab38a4d5"
+    },
+    {
+      "path": "skills/building-native-ui/references/toolbar-and-headers.md",
+      "sha256": "7bdd70b3f48b9a5b79c24ee1861bf3d078ec39e93f5db7756e695ff92d244760"
+    },
+    {
+      "path": "skills/building-native-ui/references/visual-effects.md",
+      "sha256": "920346e657f74906ee30d9b95bb8007cbac56261c06d269593d1bef3da3cadaa"
+    },
+    {
+      "path": "skills/building-native-ui/references/webgpu-three.md",
+      "sha256": "4e8b7eae87c9537eab2b28d43c2a718027825ead675a7477ddadaccd74dfebf6"
+    },
+    {
+      "path": "skills/building-native-ui/references/zoom-transitions.md",
+      "sha256": "4fddef8ee52e45e64c35f6cc45965d05678b135b26b5eddb116ef1b1fe0527ac"
+    },
+    {
+      "path": "skills/building-native-ui/SKILL.md",
+      "sha256": "d7c3bd3f5709e3c5ee7cc9cda3889f069132469aa0a91d61d3bc5881c5827907"
+    },
+    {
+      "path": "skills/codex-expo-run-actions/agents/openai.yaml",
+      "sha256": "16abc2fc2424401928e6f6280395ad30ba42b38cf554bbd43f40548d8c8b6bed"
+    },
+    {
+      "path": "skills/codex-expo-run-actions/references/expo-run-button-bootstrap.md",
+      "sha256": "40725df669186fe9129efcbc05e9dd8f960a231d8d906207c6b2b5d11e9116ad"
+    },
+    {
+      "path": "skills/codex-expo-run-actions/SKILL.md",
+      "sha256": "c21e2a87b8713d4cba2bdb79f513af2169c863674bfc058e50676cfe91ca17f8"
+    },
+    {
+      "path": "skills/expo-api-routes/agents/openai.yaml",
+      "sha256": "ef908a141d237b8ccd32b095838fb96cb6696af5f8bd05a652fbd7ec9ec14ff1"
+    },
+    {
+      "path": "skills/expo-api-routes/SKILL.md",
+      "sha256": "6fca0647cb0dc9c1e94d6b82deb1455d0c0f705c1494ea37876392b6d729b257"
+    },
+    {
+      "path": "skills/expo-cicd-workflows/agents/openai.yaml",
+      "sha256": "90997dee06ca290912f0a4e4f13419fed86e467889b4ed9407ce5da0fdeaec06"
+    },
+    {
+      "path": "skills/expo-cicd-workflows/scripts/fetch.js",
+      "sha256": "b2414cb0973707beef936d812b80390836eae616395162fcbafbb5d259583dd1"
+    },
+    {
+      "path": "skills/expo-cicd-workflows/scripts/package.json",
+      "sha256": "3833ee45c56ff8cb997e798ef288095ce435be37f6a7510a56bd684639b6f7ff"
+    },
+    {
+      "path": "skills/expo-cicd-workflows/scripts/validate.js",
+      "sha256": "67be22960496486929a83d7cb5763509bed881380b71c5a081c012be8a12b940"
+    },
+    {
+      "path": "skills/expo-cicd-workflows/SKILL.md",
+      "sha256": "6a248c54ba28b627a00a14e361438e9bdba5d1055c442e63256dd7c8a664b675"
+    },
+    {
+      "path": "skills/expo-deployment/agents/openai.yaml",
+      "sha256": "5f1f2bd91da35ad22510443011ec2e8b222c967201e6972fa240b9a8eeece3e0"
+    },
+    {
+      "path": "skills/expo-deployment/references/app-store-metadata.md",
+      "sha256": "b942c3f7d703962f220e7dbe613005d77076939d2d937b3536105023ae8c52c1"
+    },
+    {
+      "path": "skills/expo-deployment/references/ios-app-store.md",
+      "sha256": "6a53116d4ec2c2ba568cbdc88f501f3e6882e99ef2c5e8485a71ecae71fd080f"
+    },
+    {
+      "path": "skills/expo-deployment/references/play-store.md",
+      "sha256": "ea94c161e049bd48f37340918d281f977573632bee619f93160f7cee0ddddd54"
+    },
+    {
+      "path": "skills/expo-deployment/references/testflight.md",
+      "sha256": "da0c67288f92c18e2464cc40cd5a654004a18c072f26b1dd28a07d64677e4add"
+    },
+    {
+      "path": "skills/expo-deployment/references/workflows.md",
+      "sha256": "e15b61f0f3fecc2cc0c34b78e4f3883f7d68e30dc3397e35f65dec5f6c0271d4"
+    },
+    {
+      "path": "skills/expo-deployment/SKILL.md",
+      "sha256": "5da4127bd229d1742d498e22a3532a0003f306deca0005e77cb1d58e85a73853"
+    },
+    {
+      "path": "skills/expo-dev-client/agents/openai.yaml",
+      "sha256": "44c4c300636892b6b04eb4af7e6d4c6b2b0daeb487536e11b05c540ddcfd7e8f"
+    },
+    {
+      "path": "skills/expo-dev-client/SKILL.md",
+      "sha256": "92d37fc4a16f29d9dab38cb58bab0d344d7c288f589aec61f8e4860e30ad7ab2"
+    },
+    {
+      "path": "skills/expo-module/agents/openai.yaml",
+      "sha256": "23eac97abba35ed140115c3513f52f7f81e786029ae4a4121a401032260ca221"
+    },
+    {
+      "path": "skills/expo-module/references/config-plugin.md",
+      "sha256": "9955d360ccd7e8604acbe01cbc1acf5964d4e94ea2f6b2cafb5b2cf09a4eb1c5"
+    },
+    {
+      "path": "skills/expo-module/references/lifecycle.md",
+      "sha256": "66339c77300c074159d655f43bbb597db714f6695fb89b7c11059a8838c90923"
+    },
+    {
+      "path": "skills/expo-module/references/module-config.md",
+      "sha256": "524b9570985ccadef8f5a2dfe97c8eb19e20f553742509bdc41c8135c62850cc"
+    },
+    {
+      "path": "skills/expo-module/references/native-module.md",
+      "sha256": "28a8a535839e4bf073794197a066da7b2573eb0621e70bd9985da5596edd1099"
+    },
+    {
+      "path": "skills/expo-module/references/native-view.md",
+      "sha256": "e080d20b216c3c5db84984635810e9486c34cda57407e3dda65b91bc3cacb146"
+    },
+    {
+      "path": "skills/expo-module/SKILL.md",
+      "sha256": "33d604ed32599117b906753c6a85014600bd15e6c11a0906eba9121bff967014"
+    },
+    {
+      "path": "skills/expo-tailwind-setup/agents/openai.yaml",
+      "sha256": "2bd51471c6447d1c6a3b332a347630d66da3122b16f961bf4d1ebd99851a5707"
+    },
+    {
+      "path": "skills/expo-tailwind-setup/SKILL.md",
+      "sha256": "d8a29999edc9cf9f61c337d2c532807a75b3961b5cdf5bd38ddfb136c87842ce"
+    },
+    {
+      "path": "skills/expo-ui-jetpack-compose/agents/openai.yaml",
+      "sha256": "188289e57d2104f12bc6a53860c5ceed6bfa75612ac6fcc256f568ab7cb1a7cc"
+    },
+    {
+      "path": "skills/expo-ui-jetpack-compose/SKILL.md",
+      "sha256": "f42be3925715a265deb1fe4c3b7cbe0c155e4f9b23ea3b218f69c6f4850c7387"
+    },
+    {
+      "path": "skills/expo-ui-swift-ui/agents/openai.yaml",
+      "sha256": "3cbff002d7e262a40a4af28604b7679f3bd902484eca6961c1a89fde39b52567"
+    },
+    {
+      "path": "skills/expo-ui-swift-ui/SKILL.md",
+      "sha256": "b228280b7b201bee5a7a15167b28902f5171eb7ccc06ee85d6b6a7d4375c14e0"
+    },
+    {
+      "path": "skills/native-data-fetching/agents/openai.yaml",
+      "sha256": "10589a7bdfacd90601a78e13f3c7ccc87e35cebafe8d1f2b46797986fe0d5e3d"
+    },
+    {
+      "path": "skills/native-data-fetching/references/expo-router-loaders.md",
+      "sha256": "4fb443d7bf0f9586b277e152c7532b995d10027fef1cae44bf87c085230b0911"
+    },
+    {
+      "path": "skills/native-data-fetching/SKILL.md",
+      "sha256": "cb15d261969ff8b294e2c69c3c99e808f76362a83fc0ac6c389f6f8f6b973a4c"
+    },
+    {
+      "path": "skills/upgrading-expo/agents/openai.yaml",
+      "sha256": "22999c8a40b2b41145a4656b43406791df2cca8968e25072f0641505cc6c90d9"
+    },
+    {
+      "path": "skills/upgrading-expo/references/expo-av-to-audio.md",
+      "sha256": "b455a85555e9af9def3441177006584c01ad93cced95d70a47a430537336f90c"
+    },
+    {
+      "path": "skills/upgrading-expo/references/expo-av-to-video.md",
+      "sha256": "2fe6ffc6a7e8ee41643b0db4cf5f547198e5cd99060d1986660ccce052f6755d"
+    },
+    {
+      "path": "skills/upgrading-expo/references/native-tabs.md",
+      "sha256": "bff2b54150e2047173f0c69da0fe9fd005d253b6c841a5ea9b6b393614346c27"
+    },
+    {
+      "path": "skills/upgrading-expo/references/new-architecture.md",
+      "sha256": "ebf4242393dd9fd83f77fafeefd0a942cd338ab2f341ec5d3a3dc2689b239dbd"
+    },
+    {
+      "path": "skills/upgrading-expo/references/react-19.md",
+      "sha256": "17df383ddb3d619022e18cf545bbfc6745f5d3bc1166e3c7c8c2057828694bbd"
+    },
+    {
+      "path": "skills/upgrading-expo/references/react-compiler.md",
+      "sha256": "146eb76c8f0e1d83f062ba202e2f3859a394a616fad1b20f234ef1c514776953"
+    },
+    {
+      "path": "skills/upgrading-expo/SKILL.md",
+      "sha256": "d895f12af18c73e0757923154b05d50d471bd6ee23f874ccf3a3d112a4063b93"
+    },
+    {
+      "path": "skills/use-dom/agents/openai.yaml",
+      "sha256": "667335bd9e6527bf4329adf80da36d7b8c2ecd60958d7023e18b57c0a90acbd6"
+    },
+    {
+      "path": "skills/use-dom/SKILL.md",
+      "sha256": "97d80e3ed323c837dfbbff07c4a15def65f0ad07e4700bebe603d6735924b148"
+    }
+  ]
+}

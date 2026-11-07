@@ -1,0 +1,73 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.slack",
+  "name": "Slack",
+  "version": "0.2.0",
+  "description": "Slack 搜索、会话摘要、授权消息与文档 / 文件协作的原生工作流。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.slack.connect",
+      "description": "检查 Slack 独立应用、OAuth、工作区与服务工具范围。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.slack.search",
+      "description": "在指定 Slack 范围查找消息、频道、成员或文件，并保留来源链接。",
+      "path": "skills/search/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.slack.summarize",
+      "description": "读取 Slack 频道或线程并整理决定、行动项与未决问题。",
+      "path": "skills/summarize/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.slack.message",
+      "description": "起草或发送用户明确要求的 Slack 消息、回复、定时消息或反应。",
+      "path": "skills/message/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.slack.documents",
+      "description": "读取或维护 Slack Canvas、Lists 和关联记录。",
+      "path": "skills/documents/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.slack.files",
+      "description": "在授权范围读取 Slack 文件或完成可验证的文件上传。",
+      "path": "skills/files/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "slack",
+      "transport": "streamable-http",
+      "url": "https://mcp.slack.com/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_SLACK_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "4d99bc2a6aac3f77ea2c545004524b1d53283d316b2d45191b57105e2c4c8bb5"
+  }
+}

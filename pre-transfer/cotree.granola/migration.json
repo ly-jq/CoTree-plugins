@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.granola",
+  "version": "0.2.0",
+  "category": "团队协作与知识",
+  "priority": 0,
+  "batch": 16,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "granola",
+      "repository": "plugins",
+      "path": "plugins/granola",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "a23cd7b37f6473a1d7b590ddb349a8f8d8c4744efda03c8f3da2c7b1e60283eb",
+      "upstreamVersion": "1.0.0"
+    }
+  ],
+  "changes": [
+    "保留唯一官方 MCP 与原图标，补齐六个 CoTree 工作流。",
+    "更新活动 workspace、共享笔记及套餐约束，独立身份不依赖原宿主连接器。"
+  ],
+  "limitations": [
+    "原生工作流与协议适配已实现；真实账户或本地 Desktop 文献库、模型任务效果及跨平台运行仍待验收。",
+    "标准 MCP 接入需要逐用户 OAuth；本包不实现自动登录、刷新或企业 EMA。MCP 不使用普通 API key / 服务账户。",
+    "可访问笔记、时间窗口、文件夹和转录由账户、工作区与工具目录决定；本包不实现笔记录制、编辑或外部通知。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "official MCP / meeting context": "独立 OAuth、活动 workspace 与权限核对；唯一 MCP 注册。",
+    "search / meeting insights / PRDs / proposals / reports": "六个原生入口：接入、搜索、读取、总结、跨会议简报与跟进；保留原图标。",
+    "source account assumptions": "按新版官方说明区分自有与有权读取的共享笔记、套餐和企业 scopes，不沿用旧 owner-only 结论。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

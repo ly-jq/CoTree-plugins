@@ -1,0 +1,26 @@
+{
+  "observedAt": "2026-10-06T15:44:24.814Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "live-unauthenticated-boundary-only",
+  "credentialsSent": false,
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "results": {
+    "elyra.datadog": {
+      "packageDigest": "4d1ea4ef0f1e3dc9db692b741734ac10ce770c4da322e55a54790511263f9893",
+      "endpoint": "https://mcp.datadoghq.com/v1/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": false
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.test-android-apps",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "test-android-apps",
+    "repository": "plugins",
+    "path": "plugins/test-android-apps",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "0a309c4af2535961553992e87270f007c8bee2f50ac3dedb889e0f54324a5983",
+    "upstreamVersion": "0.1.2"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/android-emulator-qa/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/android-emulator-qa/SKILL.md",
+      "sourceMetadata": {
+        "name": "android-emulator-qa",
+        "description": "Use when validating Android feature flows in an emulator with adb-driven launch, input, UI-tree inspection, screenshots, and logcat capture."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/android-performance/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/android-performance/SKILL.md",
+      "sourceMetadata": {
+        "name": "android-performance",
+        "description": "Gather and interpret Android performance evidence on an adb target using Simpleperf CPU profiles, Perfetto or Compose traces, gfxinfo frame data, dumpsys meminfo snapshots, Java heap dumps, and native allocation traces. Use when asked to profile an Android app flow, find CPU-heavy functions, diagnose jank, capture startup or frame timing evidence, compare before/after performance, explain what code is taking time, or gather memory/leak profiling artifacts."
+      }
+    }
+  ],
+  "copiedFiles": 13,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "3372471c3a4abc59678dfa6c0e74767ae691eaa6337d5d84e843e709a53dacec"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "dd3d862860baf83b61198517b21d47e138fee26d0607eda72be700b0c3e8d026"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "3e9984bfb849473e25a31b2df5b030209f27f76c0a5754008aa0460599ee34b4"
+    },
+    {
+      "path": "assets/test-android-apps-small.svg",
+      "sha256": "702937244a40154be5fddf116644ef8cbf19931053d4b2a8d732e3b25b43b46e"
+    },
+    {
+      "path": "plugin.lock.json",
+      "sha256": "c4d4baf49bdd9ea2a1a27c9c9ca0ac5ff543c36f8d45442b1bac615cb947a148"
+    },
+    {
+      "path": "skills/android-emulator-qa/agents/openai.yaml",
+      "sha256": "c3ba76b3074d88cda6b86e6682d6ad6e4395888d2c4b749b94150eca865b3c73"
+    },
+    {
+      "path": "skills/android-emulator-qa/LICENSE.txt",
+      "sha256": "44e03f7e263eb3ad256440c1eeab5e49168baff5a78ecef9a5447261cf3a91bc"
+    },
+    {
+      "path": "skills/android-emulator-qa/scripts/ui_pick.py",
+      "sha256": "eea3c69d8bb12f8aa20d1e526fa8415b839ddb507109f9d41133d3c51b13f939"
+    },
+    {
+      "path": "skills/android-emulator-qa/scripts/ui_tree_summarize.py",
+      "sha256": "90e7a1a4f820626776a60e21e48daaf926964b55f380cafc40c0c8b9d5156a8e"
+    },
+    {
+      "path": "skills/android-emulator-qa/SKILL.md",
+      "sha256": "df71c109a221524cdf0e9d703f38afa24cf914b7e488dee2dd3a817719c7466d"
+    },
+    {
+      "path": "skills/android-performance/agents/openai.yaml",
+      "sha256": "84319afe89290ee6935a246e207bb28f0bd87ae104c8854248a07ac689cb2185"
+    },
+    {
+      "path": "skills/android-performance/scripts/heapprofd_reports.sh",
+      "sha256": "eb6e2aa90d3fbfe2a862c7d61a7a559767d7a593846ad5799a64e893af395539"
+    },
+    {
+      "path": "skills/android-performance/scripts/simpleperf_hotspots.sh",
+      "sha256": "95b849f4d80f43a1673c1ad229dd54e71c2477c41d2d08de9ed7aa40689fde9f"
+    },
+    {
+      "path": "skills/android-performance/SKILL.md",
+      "sha256": "dbbc2a8c9c75a20bfca4b8aca8f4d99ff3b527bbaeb3b26e0e07af3472c8d57a"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "lsp": {
+    "servers": {
+      "rust": {
+        "command": "rust-analyzer",
+        "args": []
+      }
+    }
+  }
+}

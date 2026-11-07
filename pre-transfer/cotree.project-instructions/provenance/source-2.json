@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.claude-md-management",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "claude-md-management",
+    "repository": "claude-plugins-official",
+    "path": "plugins/claude-md-management",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "dcfc7999f2ff18a549a2280ebc121b6c84cb554625e6113e4d359f198bb72240",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "迁移为项目指令文档指导；Elyra 权威入口是 AGENTS.md，保持现有记忆系统。",
+    "skills/claude-md-improver/SKILL.md 的上游工具 / 环境声明作为迁移记录保留；Elyra Skill 不授予执行权限，实际工具与环境由宿主检查。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/claude-md-improver/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/claude-md-improver/SKILL.md",
+      "sourceMetadata": {
+        "name": "claude-md-improver",
+        "description": "Audit and improve CLAUDE.md files in repositories. Use when user asks to check, audit, update, improve, or fix CLAUDE.md files. Scans for all CLAUDE.md files, evaluates quality against templates, outputs quality report, then makes targeted updates. Also use when the user mentions \"CLAUDE.md maintenance\" or \"project memory optimization\".",
+        "tools": "Read, Glob, Grep, Bash, Edit"
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/revise-claude-md.md",
+      "state": "converted",
+      "target": "content/commands/revise-claude-md.md",
+      "sourceMetadata": {
+        "description": "Update CLAUDE.md with learnings from this session"
+      }
+    }
+  ],
+  "copiedFiles": 9,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "1fb6c89a04509d463ba5f98b49310ead78718e9dbb5e1e604b408cdd506e614a"
+    },
+    {
+      "path": "claude-md-improver-example.png",
+      "sha256": "a0b12357a8d8f9b1ba16692805344b8c4d03af2cc2eefcb70c68431b4350d1ad"
+    },
+    {
+      "path": "commands/revise-claude-md.md",
+      "sha256": "e52d3fec85c3b82f69f45f3f3a54b5a7e7df6a58db47d4c2a5913ad7487f02a6"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ffdc3d9064b173c82394a8a63bd2e208fd1bf69ee805b7f8bbe55bd73318805d"
+    },
+    {
+      "path": "revise-claude-md-example.png",
+      "sha256": "3c424544efe3f581b0fd61312586553bb18be091988a064910a269fac2d91b55"
+    },
+    {
+      "path": "skills/claude-md-improver/references/quality-criteria.md",
+      "sha256": "7bf282887925728b9aab2bef18486cd4f2c863f86fd1ccf4364acddb43c2a010"
+    },
+    {
+      "path": "skills/claude-md-improver/references/templates.md",
+      "sha256": "97f0c41f852b9612a6176e62cc9b7cef3705018ca6919d6dfb0f82ccd2ffc36b"
+    },
+    {
+      "path": "skills/claude-md-improver/references/update-guidelines.md",
+      "sha256": "8b38b3bbee5c9e644318498c72a213a65bbd05466678e588fa7d9f4407f55bda"
+    },
+    {
+      "path": "skills/claude-md-improver/SKILL.md",
+      "sha256": "29b43c0eaae3d615ee86c836050fa24252be516a7c41d2f8ee1b5cbf34e748be"
+    }
+  ]
+}

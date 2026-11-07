@@ -1,0 +1,10 @@
+{
+  "lsp": {
+    "enabled": true,
+    "servers": {
+      "go": {
+        "command": "gopls"
+      }
+    }
+  }
+}

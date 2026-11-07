@@ -1,0 +1,164 @@
+{
+  "resources": [
+    {
+      "sourceId": "import.codex.shopify",
+      "sourcePath": "content/skills/shopify-admin/scripts/validate.mjs",
+      "destination": "references/validators/shopify-admin/scripts/validate.mjs",
+      "sha256": "c539c03b01e110b571c37fa396f7849e2e7a521def158cd4daa60fef8bc2c76e",
+      "source": {
+        "ecosystem": "codex",
+        "package": "shopify",
+        "repository": "plugins",
+        "path": "plugins/shopify",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "b1a3d6f5775797668602a821a14e3b6af0ec17844e0ae72c4539598757366d82",
+        "upstreamVersion": "3.0.0"
+      }
+    },
+    {
+      "sourceId": "import.codex.shopify",
+      "sourcePath": "content/skills/shopify-admin/assets/admin_2026-04.json.gz",
+      "destination": "references/validators/shopify-admin/assets/admin_2026-04.json.gz",
+      "sha256": "860cd22ab667513c70d136371c2cdfe996c08af4c89df44bda9a0fea7fa2ec47",
+      "source": {
+        "ecosystem": "codex",
+        "package": "shopify",
+        "repository": "plugins",
+        "path": "plugins/shopify",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "b1a3d6f5775797668602a821a14e3b6af0ec17844e0ae72c4539598757366d82",
+        "upstreamVersion": "3.0.0"
+      }
+    },
+    {
+      "sourceId": "import.codex.shopify",
+      "sourcePath": "content/skills/shopify-customer/scripts/validate.mjs",
+      "destination": "references/validators/shopify-customer/scripts/validate.mjs",
+      "sha256": "489377da020c6b8158d65bf13d48c652d2983db13bdb990b4cb3697011ade4e1",
+      "source": {
+        "ecosystem": "codex",
+        "package": "shopify",
+        "repository": "plugins",
+        "path": "plugins/shopify",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "b1a3d6f5775797668602a821a14e3b6af0ec17844e0ae72c4539598757366d82",
+        "upstreamVersion": "3.0.0"
+      }
+    },
+    {
+      "sourceId": "import.codex.shopify",
+      "sourcePath": "content/skills/shopify-customer/assets/customer_2026-04.json.gz",
+      "destination": "references/validators/shopify-customer/assets/customer_2026-04.json.gz",
+      "sha256": "4d1533583891fda744afe978436e32808954605a959c884037fefe845b49e604",
+      "source": {
+        "ecosystem": "codex",
+        "package": "shopify",
+        "repository": "plugins",
+        "path": "plugins/shopify",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "b1a3d6f5775797668602a821a14e3b6af0ec17844e0ae72c4539598757366d82",
+        "upstreamVersion": "3.0.0"
+      }
+    },
+    {
+      "sourceId": "import.codex.shopify",
+      "sourcePath": "content/skills/shopify-partner/scripts/validate.mjs",
+      "destination": "references/validators/shopify-partner/scripts/validate.mjs",
+      "sha256": "9945e61e48545a33c77e89c90a670107e562fbe7d5bf359afb4ac43fe52220e4",
+      "source": {
+        "ecosystem": "codex",
+        "package": "shopify",
+        "repository": "plugins",
+        "path": "plugins/shopify",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "b1a3d6f5775797668602a821a14e3b6af0ec17844e0ae72c4539598757366d82",
+        "upstreamVersion": "3.0.0"
+      }
+    },
+    {
+      "sourceId": "import.codex.shopify",
+      "sourcePath": "content/skills/shopify-partner/assets/partner_2026-04.json.gz",
+      "destination": "references/validators/shopify-partner/assets/partner_2026-04.json.gz",
+      "sha256": "ca4072b623b40f7cb982f9c415234a7190561f0df68ec5c75c32cd946e93ba03",
+      "source": {
+        "ecosystem": "codex",
+        "package": "shopify",
+        "repository": "plugins",
+        "path": "plugins/shopify",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "b1a3d6f5775797668602a821a14e3b6af0ec17844e0ae72c4539598757366d82",
+        "upstreamVersion": "3.0.0"
+      }
+    },
+    {
+      "sourceId": "import.codex.shopify",
+      "sourcePath": "content/skills/shopify-payments-apps/scripts/validate.mjs",
+      "destination": "references/validators/shopify-payments-apps/scripts/validate.mjs",
+      "sha256": "626289fadb239183030676688c5cb487d0eb5e38d70214e7f60a721d3cb817dc",
+      "source": {
+        "ecosystem": "codex",
+        "package": "shopify",
+        "repository": "plugins",
+        "path": "plugins/shopify",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "b1a3d6f5775797668602a821a14e3b6af0ec17844e0ae72c4539598757366d82",
+        "upstreamVersion": "3.0.0"
+      }
+    },
+    {
+      "sourceId": "import.codex.shopify",
+      "sourcePath": "content/skills/shopify-payments-apps/assets/payments-apps_2026-04.json.gz",
+      "destination": "references/validators/shopify-payments-apps/assets/payments-apps_2026-04.json.gz",
+      "sha256": "e3f9ac6590a43617b60fa8ea32463217ec157d760b7f4508eeb689d697d53a99",
+      "source": {
+        "ecosystem": "codex",
+        "package": "shopify",
+        "repository": "plugins",
+        "path": "plugins/shopify",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "b1a3d6f5775797668602a821a14e3b6af0ec17844e0ae72c4539598757366d82",
+        "upstreamVersion": "3.0.0"
+      }
+    },
+    {
+      "sourceId": "import.codex.shopify",
+      "sourcePath": "content/skills/shopify-storefront-graphql/scripts/validate.mjs",
+      "destination": "references/validators/shopify-storefront-graphql/scripts/validate.mjs",
+      "sha256": "b07555373de2c2e57762a8dd1687f6a549ed11546da57a87b656892671f302a7",
+      "source": {
+        "ecosystem": "codex",
+        "package": "shopify",
+        "repository": "plugins",
+        "path": "plugins/shopify",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "b1a3d6f5775797668602a821a14e3b6af0ec17844e0ae72c4539598757366d82",
+        "upstreamVersion": "3.0.0"
+      }
+    },
+    {
+      "sourceId": "import.codex.shopify",
+      "sourcePath": "content/skills/shopify-storefront-graphql/assets/storefront-graphql_2026-04.json.gz",
+      "destination": "references/validators/shopify-storefront-graphql/assets/storefront-graphql_2026-04.json.gz",
+      "sha256": "ee149ed280ed7fd2cb3bb142c38e3dbb259df09b08779793be8083e589e789b8",
+      "source": {
+        "ecosystem": "codex",
+        "package": "shopify",
+        "repository": "plugins",
+        "path": "plugins/shopify",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "b1a3d6f5775797668602a821a14e3b6af0ec17844e0ae72c4539598757366d82",
+        "upstreamVersion": "3.0.0"
+      }
+    }
+  ]
+}

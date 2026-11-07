@@ -1,0 +1,117 @@
+{
+  "manifestVersion": 2,
+  "id": "cotree.voice-tools",
+  "name": "Voice Tools",
+  "version": "1.2.0",
+  "description": "Isolated voice Code Plugin for speech transcription and synthesis. Credentials are injected only into brokered HTTPS requests.",
+  "minKernelVersion": "0.1.0",
+  "entry": "dist/index.mjs",
+  "execution": {
+    "runtime": "node",
+    "abi": "cotree.plugin.tool.v2",
+    "isolation": "brokered-process",
+    "resources": {
+      "wallTimeMs": 60000,
+      "memoryMb": 256,
+      "maxStdoutBytes": 33554432,
+      "maxStderrBytes": 262144,
+      "maxCapabilityRequests": 4,
+      "maxConcurrentCapabilities": 1,
+      "maxCapabilityOutputBytes": 33554432,
+      "maxFileBytes": 25165824,
+      "maxNetworkRequestBytes": 25165824,
+      "maxNetworkResponseBytes": 25165824
+    }
+  },
+  "capabilities": {
+    "tools": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none",
+    "network": {
+      "allowDomains": ["api.openai.com"],
+      "methods": ["POST"]
+    },
+    "filesystem": {
+      "read": ["*.mp3", "*.mpga", "*.mpeg", "*.wav", "*.m4a", "*.mp4", "*.ogg", "*.oga", "*.opus", "*.webm", "*.flac", "*.aac", "**/*.mp3", "**/*.mpga", "**/*.mpeg", "**/*.wav", "**/*.m4a", "**/*.mp4", "**/*.ogg", "**/*.oga", "**/*.opus", "**/*.webm", "**/*.flac", "**/*.aac"],
+      "write": ["*.mp3", "*.opus", "*.aac", "*.flac", "*.wav", "*.pcm", "**/*.mp3", "**/*.opus", "**/*.aac", "**/*.flac", "**/*.wav", "**/*.pcm"]
+    },
+    "secrets": ["AUDIO_API_KEY", "OPENAI_API_KEY"]
+  },
+  "tools": [
+    {
+      "name": "AudioTranscribe",
+      "description": "Transcribe a workspace audio file or inline base64 audio to text via the OpenAI transcriptions API.",
+      "riskLevel": "low",
+      "idempotent": true,
+      "timeoutMs": 60000,
+      "requiresApproval": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "minLength": 1, "description": "Workspace-relative audio path. Prefer this when the audio already exists in the workspace." },
+          "audioBase64": { "type": "string", "description": "Base64-encoded audio bytes to transcribe." },
+          "fileName": { "type": "string", "description": "Source file name used to infer content type, e.g. clip.mp3." },
+          "contentType": { "type": "string", "description": "Override the audio MIME type." },
+          "model": { "type": "string", "description": "Override the STT model (default whisper-1)." },
+          "language": { "type": "string", "description": "ISO-639-1 language hint, e.g. en, zh." },
+          "prompt": { "type": "string", "description": "Optional context to guide transcription." },
+          "responseFormat": { "type": "string", "enum": ["json", "text", "srt", "verbose_json", "vtt"], "description": "json | text | srt | verbose_json | vtt." },
+          "temperature": { "type": "number", "minimum": 0, "maximum": 1 }
+        },
+        "oneOf": [{ "required": ["path"] }, { "required": ["audioBase64"] }],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "model": { "type": "string" },
+          "text": { "type": "string" }
+        }
+      },
+      "permissions": [{ "name": "network" }, { "name": "file.read" }],
+      "display": { "label": "Transcribe Audio", "summary": "Speech-to-text (STT)" }
+    },
+    {
+      "name": "AudioSpeech",
+      "description": "Synthesize speech from text via the OpenAI speech API and save the audio as a workspace file. Returns a resource reference, never base64 JSON.",
+      "riskLevel": "medium",
+      "idempotent": false,
+      "timeoutMs": 60000,
+      "requiresApproval": true,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "text": { "type": "string", "description": "Text to synthesize into speech." },
+          "voice": { "type": "string", "description": "Voice name (default alloy)." },
+          "model": { "type": "string", "description": "Override the TTS model (default tts-1)." },
+          "format": { "type": "string", "enum": ["mp3", "opus", "aac", "flac", "wav", "pcm"], "description": "Audio format (default mp3)." },
+          "speed": { "type": "number", "minimum": 0.25, "maximum": 4, "description": "Playback speed (default 1.0)." },
+          "outputPath": { "type": "string", "minLength": 1, "description": "Workspace-relative output path. Defaults to cotree-output/speech-<run>.<format>." },
+          "overwrite": { "type": "boolean", "default": false }
+        },
+        "required": ["text"],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "model": { "type": "string" },
+          "voice": { "type": "string" },
+          "format": { "type": "string" },
+          "bytes": { "type": "integer" },
+          "path": { "type": "string" },
+          "mimeType": { "type": "string" }
+        }
+      },
+      "permissions": [{ "name": "network" }, { "name": "file.write" }],
+      "lifecycle": { "supportsArtifacts": true, "producesStateChange": true },
+      "display": { "label": "Synthesize Speech", "summary": "Text-to-speech (TTS)" }
+    }
+  ],
+  "evals": ["evals/voice-smoke.json"],
+  "rollback": {
+    "strategy": "previous-active-version"
+  }
+}

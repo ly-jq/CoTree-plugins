@@ -1,0 +1,156 @@
+{
+  "observedAt": "2026-10-07T08:13:16.054Z",
+  "nodeVersion": "v24.13.0",
+  "browserVersion": "154.0.4258.53",
+  "results": {
+    "elyra.mixpanel-headless": {
+      "packageDigest": "ce476ae04f71fa55968e267187ccdcad815d09ce538230371e1c98a7d8331463",
+      "status": "isolated-mixpanel-types",
+      "libraryVersion": "0.4.0",
+      "pythonVersion": "3.12.14",
+      "signatures": {
+        "query": "(self, events: 'str | Metric | CohortMetric | FunnelMetric | RetentionMetric | MetricRef | SavedMetric | Formula | Sequence[str | Metric | CohortMetric | FunnelMetric | RetentionMetric | MetricRef | SavedMetric | Formula]', *, from_date: 'str | None' = None, to_date: 'str | None' = None, last: 'int' = 30, unit: 'QueryTimeUnit' = 'day', math: 'MathType' = 'total', math_property: 'str | None' = None, per_user: 'PerUserAggregation | None' = None, percentile_value: 'int | float | None' = None, group_by: 'str | GroupBy | CohortBreakdown | FrequencyBreakdown | list[str | GroupBy | CohortBreakdown | FrequencyBreakdown] | None' = None, where: 'Filter | FrequencyFilter | list[Filter | FrequencyFilter] | None' = None, formula: 'str | None' = None, formula_label: 'str | None' = None, rolling: 'int | None' = None, cumulative: 'bool' = False, mode: \"Literal['timeseries', 'total', 'table']\" = 'timeseries', time_comparison: 'TimeComparison | None' = None, data_group_id: 'int | None' = None, limit: 'int | None' = None) -> 'QueryResult'",
+        "query_funnel": "(self, steps: 'list[str | FunnelStep] | BehaviorRef | SavedBehavior', *, conversion_window: 'int' = 14, conversion_window_unit: \"Literal['second', 'minute', 'hour', 'day', 'week', 'month', 'session']\" = 'day', order: \"Literal['loose', 'any']\" = 'loose', from_date: 'str | None' = None, to_date: 'str | None' = None, last: 'int' = 30, unit: 'QueryTimeUnit' = 'day', math: 'FunnelMathType' = 'conversion_rate_unique', math_property: 'str | None' = None, group_by: 'str | GroupBy | CohortBreakdown | list[str | GroupBy | CohortBreakdown] | None' = None, where: 'Filter | list[Filter] | None' = None, exclusions: 'list[str | Exclusion] | None' = None, holding_constant: 'str | HoldingConstant | list[str | HoldingConstant] | None' = None, mode: \"Literal['steps', 'trends', 'table']\" = 'steps', reentry_mode: 'FunnelReentryMode | None' = None, time_comparison: 'TimeComparison | None' = None, data_group_id: 'int | None' = None, limit: 'int | None' = None) -> 'FunnelQueryResult'",
+        "query_retention": "(self, born_event: 'str | RetentionEvent | BehaviorRef | SavedBehavior', return_event: 'str | RetentionEvent | None' = None, *, retention_unit: 'TimeUnit' = 'week', alignment: 'RetentionAlignment' = 'birth', bucket_sizes: 'list[int] | None' = None, from_date: 'str | None' = None, to_date: 'str | None' = None, last: 'int' = 30, unit: 'QueryTimeUnit' = 'day', math: 'RetentionMathType' = 'retention_rate', group_by: 'str | GroupBy | CohortBreakdown | list[str | GroupBy | CohortBreakdown] | None' = None, where: 'Filter | list[Filter] | None' = None, mode: 'RetentionMode' = 'curve', unbounded_mode: 'RetentionUnboundedMode | None' = None, retention_cumulative: 'bool' = False, time_comparison: 'TimeComparison | None' = None, data_group_id: 'int | None' = None, limit: 'int | None' = None) -> 'RetentionQueryResult'",
+        "query_flow": "(self, event: 'str | FlowStep | Sequence[str | FlowStep]', *, forward: 'int' = 3, reverse: 'int' = 0, from_date: 'str | None' = None, to_date: 'str | None' = None, last: 'int' = 30, conversion_window: 'int' = 7, conversion_window_unit: \"Literal['day', 'week', 'month', 'session']\" = 'day', count_type: \"Literal['unique', 'total', 'session']\" = 'unique', cardinality: 'int' = 3, collapse_repeated: 'bool' = False, hidden_events: 'list[str] | None' = None, mode: \"Literal['sankey', 'paths', 'tree']\" = 'sankey', where: 'Filter | list[Filter] | None' = None, data_group_id: 'int | None' = None, segments: 'str | GroupBy | CohortBreakdown | FrequencyBreakdown | list[str | GroupBy | CohortBreakdown | FrequencyBreakdown] | None' = None, exclusions: 'list[str] | None' = None) -> 'FlowQueryResult'",
+        "query_user": "(self, *, where: 'Filter | list[Filter] | str | None' = None, cohort: 'int | CohortDefinition | None' = None, properties: 'list[str] | None' = None, sort_by: 'str | None' = None, sort_order: \"Literal['ascending', 'descending']\" = 'descending', limit: 'int | None' = 1, search: 'str | None' = None, distinct_id: 'str | None' = None, distinct_ids: 'list[str] | None' = None, group_id: 'str | None' = None, as_of: 'str | int | None' = None, mode: \"Literal['profiles', 'aggregate']\" = 'aggregate', aggregate: \"Literal['count', 'extremes', 'percentile', 'numeric_summary']\" = 'count', aggregate_property: 'str | None' = None, percentile: 'float | None' = None, segment_by: 'list[int] | None' = None, parallel: 'bool' = False, workers: 'int' = 5, include_all_users: 'bool' = False) -> 'UserQueryResult'"
+      },
+      "validatedTypes": [
+        "CreateDashboardParams",
+        "Metric",
+        "FunnelStep",
+        "RetentionEvent",
+        "FlowStep",
+        "UpdateDashboardParams",
+        "CreateBookmarkParams"
+      ],
+      "localDraftValidated": true,
+      "invalidDraftRejectedWithoutEcho": true,
+      "accountTested": false,
+      "businessQueriesTested": false
+    },
+    "elyra.magicpath": {
+      "packageDigest": "e0311cb86270d92151aeee9f6c0521c45931c9f3b00918a279efed53406c84f5",
+      "status": "isolated-magicpath-cli",
+      "cliVersion": "2.6.1",
+      "anonymousStateChecked": true,
+      "shareOnlyConstructsUrl": true,
+      "generatedUrl": "https://www.magicpath.ai/files/123",
+      "realTargetExistenceVerified": false,
+      "accountTested": false,
+      "canvasTested": false
+    },
+    "elyra.session-insights": {
+      "packageDigest": "14ad91dbafc2da17acfa3e7ebddcb7b84ce17ce2c235aac159f68cec21d8379a",
+      "status": "isolated-elyra-session-report",
+      "fixture": "Actual Elyra migrations with synthetic events; no user sessions opened.",
+      "totals": {
+        "responses": 4,
+        "responsesWithUsage": 3,
+        "tokens": {
+          "inputTokens": {
+            "value": 157,
+            "observedResponses": 3
+          },
+          "outputTokens": {
+            "value": 30,
+            "observedResponses": 2
+          },
+          "totalTokens": {
+            "value": 180,
+            "observedResponses": 2
+          },
+          "reasoningTokens": {
+            "value": 5,
+            "observedResponses": 1
+          },
+          "cacheReadTokens": {
+            "value": 50,
+            "observedResponses": 2
+          },
+          "cacheWriteTokens": {
+            "value": null,
+            "observedResponses": 0
+          }
+        },
+        "pairedCacheRead": 50,
+        "pairedCacheInput": 150,
+        "cacheObservedResponses": 2,
+        "cacheHitRatio": 0.3333333333333333,
+        "missingUsageResponses": 1,
+        "runs": 3,
+        "sessions": 1,
+        "runsWithoutSessionIdentity": 1,
+        "childRuns": 1,
+        "activeUtcDays": 1,
+        "userTurns": 2
+      },
+      "sourceDatabaseUnchanged": true,
+      "messageContentExcluded": true,
+      "browserInteraction": true,
+      "injectedTextNotExecuted": true,
+      "realProviderRunTested": false
+    }
+  },
+  "screenshots": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch20-runtime\\verification-02\\session-desktop.png",
+      "bytes": 112574,
+      "sha256": "c94822a03669e8dde8fe4b218716d2da44baf2cddd0abf3712b04b561299e5c8"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch20-runtime\\verification-02\\session-mobile.png",
+      "bytes": 100916,
+      "sha256": "5b17522cdf669f73b7dcbf6e9b1db803be3fcf89b9bf427b4c094a31bfb20c48"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch20-runtime\\verification-02\\report\\report.json",
+      "bytes": 7103,
+      "sha256": "276aa34b843127c4aea16384b9b4a8d31c19fe1340b21c74eb26d3bcb6ab75c6"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch20-runtime\\verification-02\\report\\report.html",
+      "bytes": 10946,
+      "sha256": "13bbf9cd9357e62c95ced99bac1aec07b4d792eb417b009da980138d1c786d5c"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch20-runtime\\verification-02\\report\\receipt.md",
+      "bytes": 1261,
+      "sha256": "f0455bd2f4b098f4c42e3f629e7b82015b3e0ccee41657aad68baafa3e23bcd2"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch20-runtime\\tooling\\node_modules\\magicpath-ai\\dist\\cli.js",
+      "bytes": 104510,
+      "sha256": "1c2deb3a554d09ed62360f5ef2117777871f198cbb0d82c4535bcfa76e67d9bb"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch20-runtime\\tooling\\package-lock.json",
+      "bytes": 32807,
+      "sha256": "014a68662ee5f213a09896ad4e069e4937cd380af1dd079a5276828b7f993d6f"
+    }
+  ],
+  "limitations": [
+    "All accounts and remote business writes remain untested.",
+    "Session fixture verifies the current persisted contract; it does not represent actual user productivity, billing or a live model-provider run."
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "visualReview": {
+    "observedAt": "2026-10-07T08:14:07.791Z",
+    "reviewedImages": [
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch20-runtime\\verification-02\\session-desktop.png",
+        "bytes": 112574,
+        "sha256": "c94822a03669e8dde8fe4b218716d2da44baf2cddd0abf3712b04b561299e5c8"
+      },
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch20-runtime\\verification-02\\session-mobile.png",
+        "bytes": 100916,
+        "sha256": "5b17522cdf669f73b7dcbf6e9b1db803be3fcf89b9bf427b4c094a31bfb20c48"
+      }
+    ],
+    "findings": "Desktop and 390px report inspected. Missing values and coverage are readable; mobile tables scroll inside cards; literal script text is displayed without execution."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.granola",
+  "name": "Granola",
+  "version": "0.2.0",
+  "description": "在 CoTree 中搜索和读取 Granola 会议笔记，汇总决策与待办，并为提案、产品需求和会前准备提取有来源的上下文。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.granola.connect",
+      "description": "配置 Granola 独立身份并核对活动工作区。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.granola.search",
+      "description": "按主题、参与者和时间范围检索 Granola 会议。",
+      "path": "skills/search/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.granola.read",
+      "description": "读取明确会议的笔记和必要转录，区分来源层次。",
+      "path": "skills/read/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.granola.summarize",
+      "description": "从会议记录提取可核对的决定、待办和未决问题。",
+      "path": "skills/summarize/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.granola.brief",
+      "description": "综合多场会议准备 PRD、提案、报告或会前简报。",
+      "path": "skills/brief/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.granola.followup",
+      "description": "根据 Granola 会议准备跟进文本与任务草稿。",
+      "path": "skills/followup/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "granola",
+      "transport": "streamable-http",
+      "url": "https://mcp.granola.ai/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_GRANOLA_MCP_AUTHORIZATION"
+      },
+      "timeoutMs": 60000
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "b696fc00e60af33e97eceb5b318640b1682a67146db003d020750af61ebe0a56"
+  }
+}

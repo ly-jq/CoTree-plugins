@@ -1,0 +1,116 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.public-equity-investing",
+  "name": "public-equity-investing",
+  "version": "0.2.0",
+  "description": "有来源的上市股票研究、财务模型、估值、事件、风险与研究交付工作流。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.public-equity-investing.context",
+      "description": "按用户要求管理股票研究偏好与来源指针。",
+      "path": "skills/context/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.research",
+      "description": "组织上市股票研究问题和候选想法。",
+      "path": "skills/research/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.coverage",
+      "description": "制作有来源的公司速览和首次覆盖。",
+      "path": "skills/coverage/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.normalize",
+      "description": "归一化财务披露并保留来源与可比性。",
+      "path": "skills/normalize/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.models",
+      "description": "构建可追溯的 DCF 与三张报表公式工作簿。",
+      "path": "skills/models/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.valuation",
+      "description": "比较同业估值并解释估值到价格的转换。",
+      "path": "skills/valuation/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.update-model",
+      "description": "依据来源映射更新模型副本并核对差异。",
+      "path": "skills/update-model/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.earnings",
+      "description": "区分财报前预期研究和财报后复盘。",
+      "path": "skills/earnings/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.events",
+      "description": "分析催化、事件路径和宏观冲击的股票影响。",
+      "path": "skills/events/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.scenarios",
+      "description": "构建情景、敏感性和盈亏平衡分析。",
+      "path": "skills/scenarios/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.risk",
+      "description": "研究组合暴露、仓位与股票对冲权衡。",
+      "path": "skills/risk/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.pitch",
+      "description": "制作面向投资讨论的多空观点。",
+      "path": "skills/pitch/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.memo",
+      "description": "撰写投资备忘录及研究会议准备。",
+      "path": "skills/memo/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.monitor",
+      "description": "按新证据更新论点与催化观察。",
+      "path": "skills/monitor/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.public-equity-investing.audit",
+      "description": "核对财务模型、报告和演示的一致性。",
+      "path": "skills/audit/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "55dbd18b9a3ea00863ae11107779b0af85de392ec1b894292e214c13e3b750dd"
+  }
+}

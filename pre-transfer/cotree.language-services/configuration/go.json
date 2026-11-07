@@ -1,0 +1,12 @@
+{
+  "lsp": {
+    "servers": {
+      "go": {
+        "command": "gopls",
+        "args": [
+          "serve"
+        ]
+      }
+    }
+  }
+}

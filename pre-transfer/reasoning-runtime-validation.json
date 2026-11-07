@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-14T04:37:47.467Z",
+  "kind": "isolated-cli-and-local-artifacts",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "results": {
+    "elyra.coderabbit": {
+      "packageDigest": "7de0817cec8a6b42cdc09d14ec5bbd9d16f17fb425729696ac1c4b529c24f04d",
+      "status": "isolated-coderabbit-cli",
+      "version": "0.9.0",
+      "signature": {
+        "status": "Valid",
+        "subject": "CN=CodeRabbit Inc., O=CodeRabbit Inc., L=San Francisco, S=California, C=US",
+        "issuer": "CN=Microsoft ID Verified CS AOC CA 04, O=Microsoft Corporation, C=US",
+        "codeSigningEku": true,
+        "sha256": "5b19c5f4d36cd7354b04a2c3a562d7ffa2705eb222c5c2eb0463bbb08818674c"
+      },
+      "authenticated": false,
+      "reviewStarted": false,
+      "codeUploaded": false,
+      "protocolFixtureOnly": true
+    },
+    "elyra.math-proof": {
+      "packageDigest": "bc1b897382944c6b13d87b7cfa7a743eac9bd2ca5e4889ef7620aef1e6cbe79d",
+      "status": "local-proof-artifacts",
+      "problemBytesPreserved": true,
+      "existingDirectoryRejected": true,
+      "evidenceReferencesChecked": true,
+      "mathematicalVerificationPerformed": false,
+      "modelCalled": false
+    },
+    "elyra.math-olympiad": {
+      "packageDigest": "4c0b5691bfe78d6bf564115e22061d1a0811e156a36d12acc68035b9b8b31180",
+      "status": "local-tex-preparation",
+      "sourcePrepared": true,
+      "compiled": false,
+      "modelCalled": false
+    }
+  },
+  "artifacts": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\cli-version.txt",
+      "bytes": 5,
+      "sha256": "30c99e8b103eacbe6f6d6e1b54b06ca6d5f3164b4f50094334a517ae95ca8fba"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\cli-review-help.txt",
+      "bytes": 3333,
+      "sha256": "d1488ee366b5b4f8eec09a9ace28bf22b49bc2d5ebb5b8b8a364435f66b24593"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\cli-auth-help.txt",
+      "bytes": 1311,
+      "sha256": "085f2ebbf4a4ec26d2cf783b78caea6b3de15087d1107683b918015862252924"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\cli-isolated-auth.json",
+      "bytes": 137,
+      "sha256": "755b67d6a44b50c4817a4f1460e08a4859a25fab9ab4f12ee4007a019a7bacf0"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\review-fixture.ndjson",
+      "bytes": 304,
+      "sha256": "028e644fd1b1f8b6d16ac8a44c455d2ae02a773e249aa47af594fa217dc90bdb"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\parsed-fixture.json",
+      "bytes": 465,
+      "sha256": "6f7704da12a6cf6d15e9a2bd616a518829fbbf84b95dcbb5c57d3dc38a056339"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\incomplete-fixture.ndjson",
+      "bytes": 64,
+      "sha256": "a6adcfe378436c27f8552df4c63314905aa2f9cfed96754cf03092548e8887e9"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\problem with spaces.md",
+      "bytes": 48,
+      "sha256": "c7403f83f8df4048bea00be3104bc85f391b57d7754c196c0feb13dfabee96e3"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\proof workspace\\proof.md",
+      "bytes": 166,
+      "sha256": "deea5806a345e82d154b214fccd3cd0c66a3c35fbe1f068b9121ce3ce188cf09"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\proof-inspect.json",
+      "bytes": 671,
+      "sha256": "413ef4cdca5e1caf1709a9592a60df1730db0ed38eac02fee2556967a8f6c1f8"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\proof-audit.json",
+      "bytes": 143,
+      "sha256": "ac7344bd593e5b6ae178f7b7a5a5bdefa48b067012c5ea44ed6ef23435d27cbc"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\body.tex",
+      "bytes": 203,
+      "sha256": "d96eb5f83b81c82d132757c204233175946c8ec0b9ed061321f4367b1770ef78"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\proof.tex",
+      "bytes": 418,
+      "sha256": "8387f5855b706943fb84a9c8be1a3501461e711f2a2e0d3d3865f3b92cf125a5"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\proof-document.json",
+      "bytes": 189,
+      "sha256": "da147ac03c082a839f771282f35fb7ed66c781dba95d5b2dc69a417c58999ace"
+    }
+  ],
+  "limitations": [
+    "CodeRabbit real account, remote analysis and billing not exercised.",
+    "Fixed mathematical fixture verifies file handling only; no model proof quality or formal proof checked.",
+    "TeX source prepared; compiler and PDF rendering not exercised by this script."
+  ],
+  "additionalCompilerObservation": {
+    "observedOn": "2026-10-14",
+    "tool": "compile_latex_document",
+    "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch22\\runtime-check\\proof.tex",
+    "sha256": "8387f5855b706943fb84a9c8be1a3501461e711f2a2e0d3d3865f3b92cf125a5",
+    "kind": "compile-failed",
+    "diagnostic": "Unable to find standard directories for platform",
+    "pdfCompiled": false,
+    "sourcePreserved": true
+  }
+}

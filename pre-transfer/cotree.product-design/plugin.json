@@ -1,0 +1,74 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.product-design",
+  "name": "产品设计",
+  "version": "0.2.0",
+  "description": "从产品背景、URL 或参考图完成设计研究、原型、体验审查和交付。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.product-design.brief",
+      "description": "整理产品目标、参考资料与约束，选择适合的设计工作流。",
+      "path": "skills/brief/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.product-design.explore",
+      "description": "基于真实产品约束探索、比较和迭代视觉方向。",
+      "path": "skills/explore/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.product-design.prototype",
+      "description": "把选定图像、现有 URL 或产品需求实现为可交互原型。",
+      "path": "skills/prototype/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.product-design.audit",
+      "description": "按真实产品流程评估 UX、设计与可访问性问题。",
+      "path": "skills/audit/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.product-design.research",
+      "description": "研究真实用户反馈和产品使用阻力，形成有来源的机会。",
+      "path": "skills/research/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.product-design.qa",
+      "description": "对照选定参考检查原型的视觉、交互与响应式效果。",
+      "path": "skills/qa/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.product-design.context",
+      "description": "按用户要求保存、读取、更新或遗忘产品设计上下文。",
+      "path": "skills/context/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.product-design.share",
+      "description": "准备并按授权分享可运行原型，核实发布和可见性。",
+      "path": "skills/share/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "f32e667137e096223db6535c0dfcfb1ff71200a09330dc2f0aa17279f79db59d"
+  }
+}

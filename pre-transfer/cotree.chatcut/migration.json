@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.chatcut",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 29,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "chatcut",
+      "repository": "plugins",
+      "path": "plugins/chatcut",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "12aa3382302330ce234ef1b0e9b3e982a64883deb4f091bf46d85f447cbf7080",
+      "upstreamVersion": "1.0.4"
+    }
+  ],
+  "changes": [
+    "用官方固定版本公共stdio桥替换Codex配置耦合。",
+    "保留签名应用为唯一编辑服务，独立CoTree项目核对与操作入口。"
+  ],
+  "limitations": [
+    "需实际ChatCut Desktop、用户登录及launcher，应用和真实视频编辑未验收。",
+    "Linux不支持；桥接传输夹具不代表真实工具目录或项目可用。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "connect-chatcut-desktop": "connect / edit：官方0.1.1 stdio桥接签名Desktop应用，单一真实服务，不复制编辑引擎。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

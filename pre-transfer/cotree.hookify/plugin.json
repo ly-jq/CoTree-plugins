@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.hookify",
+  "name": "hookify",
+  "version": "0.2.0",
+  "description": "用明确的结构化规则检查 CoTree 工具事件，提供提示与前置阻止。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "hooks/rules.mjs",
+  "capabilities": {
+    "skills": true,
+    "hooks": true
+  },
+  "permissions": {
+    "filesystem": {
+      "read": [
+        ".cotree/hookify/rules.json"
+      ]
+    },
+    "shell": "none",
+    "browser": "none"
+  },
+  "lifecycleHooks": [
+    {
+      "target": "tool_lifecycle",
+      "hooks": [
+        "hooks/rules.mjs"
+      ],
+      "mode": "execute",
+      "timeoutMs": 2000,
+      "order": "before"
+    },
+    {
+      "target": "run_completed",
+      "hooks": [
+        "hooks/rules.mjs"
+      ],
+      "mode": "execute",
+      "timeoutMs": 2000
+    }
+  ],
+  "skills": [
+    {
+      "name": "cotree.hookify.configure",
+      "description": "把用户明确的工具规则配置为 CoTree Hookify 规则。",
+      "path": "skills/configure/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.hookify.inspect",
+      "description": "列出并检查 Hookify 规则及具体事件的匹配结果。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "ba4e5e5b02aaf23adbcd51b8ae33b7364b33c31d0d4786eb8db63ae6da4fe385"
+  }
+}

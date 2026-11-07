@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "id": "telegram-reply-smoke",
+      "suite": "platform-smoke",
+      "task": "Given an inbound Telegram message with text 'ping', the gateway dispatches a run and delivers a reply back to the same chat id.",
+      "execution": "agent",
+      "maxSteps": 3,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "wecom-reply-smoke",
+      "suite": "platform-smoke",
+      "task": "Given an inbound WeCom callback message from a user, the gateway dispatches a run and delivers an app-message reply to that user.",
+      "execution": "agent",
+      "maxSteps": 3,
+      "expectedStatus": "completed"
+    }
+  ]
+}

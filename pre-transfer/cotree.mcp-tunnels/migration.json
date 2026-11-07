@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.mcp-tunnels",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 28,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "mcp-tunnels",
+      "repository": "claude-plugins-official",
+      "path": "plugins/mcp-tunnels",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "f892d9cfad1df512190b4865dab8ecf74916d47447dc81ab003e30b0f6c6e62f"
+    }
+  ],
+  "changes": [
+    "Anthropic专属托管传输替换为CoTree可用的SSH loopback MCP路径。",
+    "跨平台argv执行、严格主机身份、可取消进程和独立MCP协议验收。"
+  ],
+  "limitations": [
+    "需要用户授权的SSH主机、可信known_hosts与目标MCP；未连接任何真实私网。",
+    "原Anthropic Managed Agent专属服务不移植，Docker服务可复用，IPv6主机不在当前helper输入合同内。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "create-docker-mcp-tunnel": "connect / diagnose：独立SSH私网转发、严格主机密钥、CoTree MCP配置和实际协议验收。",
+    "Anthropic proxy, Console token and inner TLS": "完整资料归档；该专属传输不能直接注册成CoTree HTTP MCP，改用通用SSH通道。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

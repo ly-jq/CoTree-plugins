@@ -1,0 +1,381 @@
+{
+  "manifestVersion": 2,
+  "id": "cotree.doc-tools",
+  "name": "Doc Tools",
+  "version": "1.2.0",
+  "description": "Isolated document Code Plugin for ZIP, Office Open XML, PDF text, and offline OCR. Workspace files cross only the capability broker.",
+  "minKernelVersion": "0.1.0",
+  "entry": "dist/index.mjs",
+  "execution": {
+    "runtime": "node",
+    "abi": "cotree.plugin.tool.v2",
+    "isolation": "brokered-process",
+    "resources": {
+      "wallTimeMs": 300000,
+      "memoryMb": 1024,
+      "maxStdoutBytes": 8388608,
+      "maxStderrBytes": 1048576,
+      "maxCapabilityRequests": 1000,
+      "maxConcurrentCapabilities": 4,
+      "maxCapabilityOutputBytes": 33554432,
+      "maxFileBytes": 33554432
+    }
+  },
+  "capabilities": {
+    "tools": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none",
+    "filesystem": {
+      "read": ["."],
+      "write": ["."]
+    }
+  },
+  "tools": [
+    {
+      "name": "ArchiveList",
+      "agentExposure": "never",
+      "description": "Validate and list entries in a ZIP-compatible archive such as .zip, .docx, .xlsx, or .pptx. Rejects encrypted, ZIP64, duplicate, corrupt, and zip-bomb-like packages.",
+      "riskLevel": "low",
+      "idempotent": true,
+      "timeoutMs": 30000,
+      "requiresApproval": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "maxEntries": { "type": "integer", "minimum": 1, "maximum": 20000 }
+        },
+        "required": ["path"],
+        "additionalProperties": false
+      },
+      "permissions": [{ "name": "file.read" }],
+      "display": { "label": "List archive", "summary": "List ZIP archive entries" }
+    },
+    {
+      "name": "ArchiveExtract",
+      "agentExposure": "never",
+      "description": "Safely extract validated entries from a ZIP-compatible archive to a workspace directory with traversal, CRC, duplicate-path, size, and compression-ratio defenses.",
+      "riskLevel": "medium",
+      "idempotent": false,
+      "timeoutMs": 60000,
+      "requiresApproval": true,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "destination": { "type": "string", "minLength": 1 },
+          "entries": { "type": "array", "items": { "type": "string", "minLength": 1 }, "maxItems": 5000 },
+          "overwrite": { "type": "boolean", "default": false }
+        },
+        "required": ["path", "destination"],
+        "additionalProperties": false
+      },
+      "permissions": [{ "name": "file.read" }, { "name": "file.write" }],
+      "display": { "label": "Extract archive", "summary": "Extract ZIP entries" }
+    },
+    {
+      "name": "ArchiveCreate",
+      "agentExposure": "never",
+      "description": "Create a deterministic ZIP32 archive from listed workspace files with duplicate-path and total-input limits.",
+      "riskLevel": "medium",
+      "idempotent": false,
+      "timeoutMs": 60000,
+      "requiresApproval": true,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "output": { "type": "string", "minLength": 1 },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 5000,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": { "type": "string", "minLength": 1 },
+                "entryName": { "type": "string", "minLength": 1 }
+              },
+              "required": ["path"],
+              "additionalProperties": false
+            }
+          },
+          "overwrite": { "type": "boolean", "default": false }
+        },
+        "required": ["output", "files"],
+        "additionalProperties": false
+      },
+      "permissions": [{ "name": "file.read" }, { "name": "file.write" }],
+      "display": { "label": "Create archive", "summary": "Create ZIP archive" }
+    },
+    {
+      "name": "OfficeDocxRead",
+      "agentExposure": "never",
+      "description": "Read text from a DOCX file by parsing its Office Open XML package.",
+      "riskLevel": "low",
+      "idempotent": true,
+      "timeoutMs": 30000,
+      "requiresApproval": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "includeXml": { "type": "boolean", "default": false },
+          "maxChars": { "type": "integer", "minimum": 1, "maximum": 1000000 }
+        },
+        "required": ["path"],
+        "additionalProperties": false
+      },
+      "permissions": [{ "name": "file.read" }],
+      "display": { "label": "Read DOCX", "summary": "Extract DOCX text" }
+    },
+    {
+      "name": "OfficeDocxEdit",
+      "agentExposure": "never",
+      "description": "Edit a DOCX file by exact replacement inside WordprocessingML text nodes. Creates a backup by default and can style changed text red+bold.",
+      "riskLevel": "medium",
+      "idempotent": false,
+      "timeoutMs": 60000,
+      "requiresApproval": true,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "replacements": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 200,
+            "items": {
+              "type": "object",
+              "properties": {
+                "search": { "type": "string", "minLength": 1 },
+                "replace": { "type": "string" },
+                "replaceAll": { "type": "boolean", "default": false },
+                "style": { "type": "string", "enum": ["plain", "red_bold"], "default": "plain" }
+              },
+              "required": ["search", "replace"],
+              "additionalProperties": false
+            }
+          },
+          "backup": { "type": "boolean", "default": true }
+        },
+        "required": ["path", "replacements"],
+        "additionalProperties": false
+      },
+      "permissions": [{ "name": "file.read" }, { "name": "file.write" }],
+      "display": { "label": "Edit DOCX", "summary": "Modify DOCX text" }
+    },
+    {
+      "name": "OfficeDocumentEdit",
+      "agentExposure": "never",
+      "description": "Edit DOCX, XLSX, or PPTX content by exact replacement inside its Office Open XML text nodes. Creates a backup by default and preserves unrelated package parts.",
+      "riskLevel": "medium",
+      "idempotent": false,
+      "timeoutMs": 60000,
+      "requiresApproval": true,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "replacements": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 200,
+            "items": {
+              "type": "object",
+              "properties": {
+                "search": { "type": "string", "minLength": 1 },
+                "replace": { "type": "string" },
+                "replaceAll": { "type": "boolean", "default": false },
+                "style": { "type": "string", "enum": ["plain", "red_bold"], "default": "plain" }
+              },
+              "required": ["search", "replace"],
+              "additionalProperties": false
+            }
+          },
+          "backup": { "type": "boolean", "default": true }
+        },
+        "required": ["path", "replacements"],
+        "additionalProperties": false
+      },
+      "permissions": [{ "name": "file.read" }, { "name": "file.write" }],
+      "display": { "label": "Edit Office", "summary": "Modify Office document" }
+    },
+    {
+      "name": "OfficeDocumentInspect",
+      "description": "Inspect DOCX/XLSX/PPTX Open XML structure, text, package entries, and basic style signals.",
+      "riskLevel": "low",
+      "idempotent": true,
+      "timeoutMs": 30000,
+      "requiresApproval": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "maxTextChars": { "type": "integer", "minimum": 1, "maximum": 1000000 },
+          "includeEntries": { "type": "boolean", "default": true }
+        },
+        "required": ["path"],
+        "additionalProperties": false
+      },
+      "permissions": [{ "name": "file.read" }],
+      "display": { "label": "Inspect Office", "summary": "Inspect Office Open XML document" }
+    },
+    {
+      "name": "OfficeDocumentVerify",
+      "description": "Verify DOCX/XLSX/PPTX target artifacts for structure, required text, and basic style requirements such as red/bold.",
+      "riskLevel": "low",
+      "idempotent": true,
+      "timeoutMs": 30000,
+      "requiresApproval": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "requireText": { "type": "array", "items": { "type": "string", "minLength": 1 }, "maxItems": 500 },
+          "requireAnyText": { "type": "array", "items": { "type": "string", "minLength": 1 }, "maxItems": 500 },
+          "requireBold": { "type": "boolean", "default": false },
+          "requireRed": { "type": "boolean", "default": false },
+          "requireRedBoldText": { "type": "array", "items": { "type": "string", "minLength": 1 }, "maxItems": 500 },
+          "disallowText": { "type": "array", "items": { "type": "string", "minLength": 1 }, "maxItems": 500 },
+          "minTextChars": { "type": "integer", "minimum": 0, "maximum": 1000000 }
+        },
+        "required": ["path"],
+        "additionalProperties": false
+      },
+      "permissions": [{ "name": "file.read" }],
+      "display": { "label": "Verify Office", "summary": "Verify Office document" }
+    },
+    {
+      "name": "PdfRead",
+      "description": "Extract embedded text and page metadata from a PDF locally with packaged PDF.js. For scanned PDFs, discover PluginCoTreeDocToolsPdfOcr with ToolSearch.",
+      "riskLevel": "low",
+      "idempotent": true,
+      "timeoutMs": 30000,
+      "requiresApproval": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "maxChars": { "type": "integer", "minimum": 1, "maximum": 1000000 }
+        },
+        "required": ["path"],
+        "additionalProperties": false
+      },
+      "permissions": [{ "name": "file.read" }],
+      "display": { "label": "Read PDF", "summary": "Extract PDF text" }
+    },
+    {
+      "name": "PdfOcr",
+      "description": "Extract text from scanned PDFs or image files entirely offline with bundled Tesseract WASM and local Chinese/English language data. Native PDF text is preferred unless forceOcr is true.",
+      "riskLevel": "low",
+      "idempotent": true,
+      "timeoutMs": 300000,
+      "requiresApproval": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "languages": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["eng", "chi_sim"] },
+            "minItems": 1,
+            "maxItems": 2,
+            "default": ["chi_sim", "eng"]
+          },
+          "maxPages": { "type": "integer", "minimum": 1, "maximum": 50, "default": 20 },
+          "scale": { "type": "number", "minimum": 0.75, "maximum": 4, "default": 2 },
+          "maxChars": { "type": "integer", "minimum": 1, "maximum": 1000000 },
+          "forceOcr": { "type": "boolean", "default": false }
+        },
+        "required": ["path"],
+        "additionalProperties": false
+      },
+      "permissions": [{ "name": "file.read" }],
+      "display": { "label": "OCR PDF", "summary": "Offline OCR for PDF and images" }
+    }
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "cotree.doc-tools.archive-list",
+        "title": "List archive",
+        "action": {
+          "kind": "tool.execute",
+          "toolName": "PluginCoTreeDocToolsArchiveList"
+        }
+      },
+      {
+        "id": "cotree.doc-tools.archive-extract",
+        "title": "Extract archive",
+        "action": {
+          "kind": "tool.execute",
+          "toolName": "PluginCoTreeDocToolsArchiveExtract"
+        }
+      },
+      {
+        "id": "cotree.doc-tools.archive-create",
+        "title": "Create archive",
+        "action": {
+          "kind": "tool.execute",
+          "toolName": "PluginCoTreeDocToolsArchiveCreate"
+        }
+      },
+      {
+        "id": "cotree.doc-tools.docx-read",
+        "title": "Read DOCX",
+        "action": {
+          "kind": "tool.execute",
+          "toolName": "PluginCoTreeDocToolsOfficeDocxRead"
+        }
+      },
+      {
+        "id": "cotree.doc-tools.docx-edit",
+        "title": "Edit DOCX",
+        "action": {
+          "kind": "tool.execute",
+          "toolName": "PluginCoTreeDocToolsOfficeDocxEdit"
+        }
+      },
+      {
+        "id": "cotree.doc-tools.office-edit",
+        "title": "Edit Office document",
+        "action": {
+          "kind": "tool.execute",
+          "toolName": "PluginCoTreeDocToolsOfficeDocumentEdit"
+        }
+      }
+    ],
+    "placements": [
+      {
+        "command": "cotree.doc-tools.archive-list",
+        "location": "cli.commandPalette"
+      },
+      {
+        "command": "cotree.doc-tools.archive-extract",
+        "location": "cli.commandPalette"
+      },
+      {
+        "command": "cotree.doc-tools.archive-create",
+        "location": "cli.commandPalette"
+      },
+      {
+        "command": "cotree.doc-tools.docx-read",
+        "location": "cli.commandPalette"
+      },
+      {
+        "command": "cotree.doc-tools.docx-edit",
+        "location": "cli.commandPalette"
+      },
+      {
+        "command": "cotree.doc-tools.office-edit",
+        "location": "cli.commandPalette"
+      }
+    ]
+  },
+  "evals": ["evals/tool-smoke.json"],
+  "rollback": {
+    "strategy": "previous-active-version"
+  }
+}

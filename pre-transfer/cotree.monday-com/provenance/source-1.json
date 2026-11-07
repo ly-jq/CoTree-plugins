@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.monday-com",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "monday-com",
+    "repository": "plugins",
+    "path": "plugins/monday-com",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "18418231cfe7a5fb5f2b4b301a76718922fd3a1c149a5c91d981251fd3ad9a04",
+    "upstreamVersion": "2.0.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_MONDAY_COM_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#monday-com",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/monday-com"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 2,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "93fc994c00ca1ed3789545fdb49184aee936d89ac9d5e9e2d462cf96edc7f09f"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "d71e3d386f98c0e8e3d508e9b0f234e20cd22eac76c1108c8959759db7972640"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "30e6e694594f3484b4848876395a12c3833298c113fb0820c4f0d2913a6bf712"
+    },
+    {
+      "path": "assets/composer-icon.png",
+      "sha256": "55473eab42c39459a29a569fcf491cf29dfb937cf9266cf23450e00b7766a698"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "72b2fddc2db8d7490fdf98f015e97291ded5b60d891a26c7b5fab858764593eb"
+    }
+  ]
+}

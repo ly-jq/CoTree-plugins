@@ -1,0 +1,12 @@
+{
+  "lsp": {
+    "servers": {
+      "kotlin": {
+        "command": "kotlin-lsp",
+        "args": [
+          "--stdio"
+        ]
+      }
+    }
+  }
+}

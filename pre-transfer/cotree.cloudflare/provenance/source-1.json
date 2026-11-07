@@ -1,0 +1,1616 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.cloudflare",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "cloudflare",
+    "repository": "plugins",
+    "path": "plugins/cloudflare",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "88817ad7aa2f213456ec9c67949fa1501e67c1decc4919958787065d54745481",
+    "upstreamVersion": "0.1.2"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_CLOUDFLARE_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/agents-sdk/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/agents-sdk/SKILL.md",
+      "sourceMetadata": {
+        "name": "agents-sdk",
+        "description": "Build AI agents on Cloudflare Workers using the Agents SDK. Load when creating stateful agents, durable workflows, real-time WebSocket apps, scheduled tasks, MCP servers, or chat applications. Covers Agent class, state management, callable RPC, Workflows integration, and React hooks. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/building-ai-agent-on-cloudflare/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/building-ai-agent-on-cloudflare/SKILL.md",
+      "sourceMetadata": {
+        "name": "building-ai-agent-on-cloudflare",
+        "description": "Builds AI agents on Cloudflare using the Agents SDK with state management,\nreal-time WebSockets, scheduled tasks, tool integration, and chat capabilities.\nGenerates production-ready agent code deployed to Workers.\n\nUse when: user wants to \"build an agent\", \"AI agent\", \"chat agent\", \"stateful\nagent\", mentions \"Agents SDK\", needs \"real-time AI\", \"WebSocket AI\", or asks\nabout agent \"state management\", \"scheduled tasks\", or \"tool calling\".\nBiases towards retrieval from Cloudflare docs over pre-trained knowledge.\n"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/building-mcp-server-on-cloudflare/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/building-mcp-server-on-cloudflare/SKILL.md",
+      "sourceMetadata": {
+        "name": "building-mcp-server-on-cloudflare",
+        "description": "Builds remote MCP (Model Context Protocol) servers on Cloudflare Workers\nwith tools, OAuth authentication, and production deployment. Generates\nserver code, configures auth providers, and deploys to Workers.\n\nUse when: user wants to \"build MCP server\", \"create MCP tools\", \"remote\nMCP\", \"deploy MCP\", add \"OAuth to MCP\", or mentions Model Context Protocol\non Cloudflare. Also triggers on \"MCP authentication\" or \"MCP deployment\".\nBiases towards retrieval from Cloudflare docs over pre-trained knowledge.\n"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/cloudflare/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/cloudflare/SKILL.md",
+      "sourceMetadata": {
+        "name": "cloudflare",
+        "description": "Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), networking (Tunnel, Spectrum), security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any Cloudflare development task. Biases towards retrieval from Cloudflare docs over pre-trained knowledge.",
+        "references": [
+          "workers",
+          "pages",
+          "d1",
+          "durable-objects",
+          "workers-ai"
+        ]
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/durable-objects/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/durable-objects/SKILL.md",
+      "sourceMetadata": {
+        "name": "durable-objects",
+        "description": "Create and review Cloudflare Durable Objects. Use when building stateful coordination (chat rooms, multiplayer games, booking systems), implementing RPC methods, SQLite storage, alarms, WebSockets, or reviewing DO code for best practices. Covers Workers integration, wrangler config, and testing with Vitest. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/sandbox-sdk/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/sandbox-sdk/SKILL.md",
+      "sourceMetadata": {
+        "name": "sandbox-sdk",
+        "description": "Build sandboxed applications for secure code execution. Load when building AI code execution, code interpreters, CI/CD systems, interactive dev environments, or executing untrusted code. Covers Sandbox SDK lifecycle, commands, files, code interpreter, and preview URLs. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/web-perf/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/web-perf/SKILL.md",
+      "sourceMetadata": {
+        "name": "web-perf",
+        "description": "Analyzes web performance using Chrome DevTools MCP. Measures Core Web Vitals (FCP, LCP, TBT, CLS, Speed Index), identifies render-blocking resources, network dependency chains, layout shifts, caching issues, and accessibility gaps. Use when asked to audit, profile, debug, or optimize page load performance, Lighthouse scores, or site speed. Biases towards retrieval from current documentation over pre-trained knowledge."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/workers-best-practices/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/workers-best-practices/SKILL.md",
+      "sourceMetadata": {
+        "name": "workers-best-practices",
+        "description": "Reviews and authors Cloudflare Workers code against production best practices. Load when writing new Workers, reviewing Worker code, configuring wrangler.jsonc, or checking for common Workers anti-patterns (streaming, floating promises, global state, secrets, bindings, observability). Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/wrangler/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/wrangler/SKILL.md",
+      "sourceMetadata": {
+        "name": "wrangler",
+        "description": "Cloudflare Workers CLI for deploying, developing, and managing Workers, KV, R2, D1, Vectorize, Hyperdrive, Workers AI, Containers, Queues, Workflows, Pipelines, and Secrets Store. Load before running wrangler commands to ensure correct syntax and best practices. Biases towards retrieval from Cloudflare docs over pre-trained knowledge."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-agent.md",
+      "state": "converted",
+      "target": "content/commands/build-agent.md",
+      "sourceMetadata": {
+        "description": "Build an AI agent on Cloudflare using the Agents SDK",
+        "argument-hint": [
+          "agent-description"
+        ]
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-mcp.md",
+      "state": "converted",
+      "target": "content/commands/build-mcp.md",
+      "sourceMetadata": {
+        "description": "Build a remote MCP server on Cloudflare with tools and OAuth",
+        "argument-hint": [
+          "mcp-description"
+        ]
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#cloudflare-api",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/cloudflare-api"
+    }
+  ],
+  "copiedFiles": 364,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "549498f39d1e8a73799db5a35c57ff3310e0a85a4c63b13f68d795fd5639cce1"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "37f8128244e3aba882bd074682261de436e7d4d30ec7953ce17fe0ab6ad67c75"
+    },
+    {
+      "path": "assets/cloudflare-small.svg",
+      "sha256": "711c98be5a82360a8b8951a449af142fa78fb318fdf8ab6cca4c58f9fa7112e7"
+    },
+    {
+      "path": "assets/cloudflare.png",
+      "sha256": "ccef528d73dfe224cfb4817bcb7e15d63922421249d688031ff48c5eef2a2189"
+    },
+    {
+      "path": "commands/build-agent.md",
+      "sha256": "3804d846e338d6b3d8a2d1c699abf639b0ce8c7e1c2f3fc13a54a9448f9bd686"
+    },
+    {
+      "path": "commands/build-mcp.md",
+      "sha256": "e2b7c88c308e1ef7156fe64b5570ddba39dbcfee26f61b3a23462fadf24cfd59"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e25b9ed85d7814058f1cb99d6f9ea2c071dd27ef8b4cee2ae21332ff68c041c7"
+    },
+    {
+      "path": "skills/agents-sdk/agents/openai.yaml",
+      "sha256": "dee9f2aa720115da4b61d63ae1add7ab5c41307fb98bf3befeed1b3bb4ae1d1a"
+    },
+    {
+      "path": "skills/agents-sdk/assets/cloudflare-small.svg",
+      "sha256": "711c98be5a82360a8b8951a449af142fa78fb318fdf8ab6cca4c58f9fa7112e7"
+    },
+    {
+      "path": "skills/agents-sdk/assets/cloudflare.png",
+      "sha256": "ccef528d73dfe224cfb4817bcb7e15d63922421249d688031ff48c5eef2a2189"
+    },
+    {
+      "path": "skills/agents-sdk/LICENSE.txt",
+      "sha256": "44e03f7e263eb3ad256440c1eeab5e49168baff5a78ecef9a5447261cf3a91bc"
+    },
+    {
+      "path": "skills/agents-sdk/references/callable.md",
+      "sha256": "3d52823473498a17f83702841a4d078d0f69707f2304cabb06ead2a22dbe37cc"
+    },
+    {
+      "path": "skills/agents-sdk/references/codemode.md",
+      "sha256": "2aa22909fe7824744bd1c9a62dc94d6c7ef3032864c90beab5efaecec1ce9a7d"
+    },
+    {
+      "path": "skills/agents-sdk/references/email.md",
+      "sha256": "748e7bb48a8ea3561bf5112ee6402fd23beaf08229e599cb24016dfd2faa718b"
+    },
+    {
+      "path": "skills/agents-sdk/references/mcp.md",
+      "sha256": "8c6c383258d22283040ff8254a99224f748791cfcad7d9a1777ba7712f2f57a4"
+    },
+    {
+      "path": "skills/agents-sdk/references/state-scheduling.md",
+      "sha256": "5402be30413839997f73041c66fd2b03e398a5b10426b31cfc93c1f5979ef11e"
+    },
+    {
+      "path": "skills/agents-sdk/references/streaming-chat.md",
+      "sha256": "ce728cef52b7532008adde4da1a47aeb4ba350eadabdf9f5427b128f809857c6"
+    },
+    {
+      "path": "skills/agents-sdk/references/workflows.md",
+      "sha256": "146f325a5b1bde15409cf68a652543fc56c9bc2304f63be85d9d1bad399cc5ab"
+    },
+    {
+      "path": "skills/agents-sdk/SKILL.md",
+      "sha256": "d377772ee7d8a7261a1636634e876a496f885b16b5edcb95d13c2f13320a0192"
+    },
+    {
+      "path": "skills/building-ai-agent-on-cloudflare/agents/openai.yaml",
+      "sha256": "481ac291ef503100d46adfe3f898f38966cc1b2c3232192f22b1c4f3e8f8b76a"
+    },
+    {
+      "path": "skills/building-ai-agent-on-cloudflare/references/agent-patterns.md",
+      "sha256": "63e62143e97b40afc3d9709e4309ea7e3b7014ef61b09e872679073526e6493e"
+    },
+    {
+      "path": "skills/building-ai-agent-on-cloudflare/references/examples.md",
+      "sha256": "f7b3337365e346767d29af91e427bfffa9a57583d6417b3c073ddcc37f296477"
+    },
+    {
+      "path": "skills/building-ai-agent-on-cloudflare/references/state-patterns.md",
+      "sha256": "6ce51f082c12d1abc9fb4bda95e05998e11586579135105b889b771f6e8502f9"
+    },
+    {
+      "path": "skills/building-ai-agent-on-cloudflare/references/troubleshooting.md",
+      "sha256": "d10fd651c224ec061d0ac1a6a73c990150be4b1464df28a76e6a9b797e921b05"
+    },
+    {
+      "path": "skills/building-ai-agent-on-cloudflare/SKILL.md",
+      "sha256": "f62f556211ff0255f3687233ce280875d73d3215952759fa4f0c5114b73b3b9d"
+    },
+    {
+      "path": "skills/building-mcp-server-on-cloudflare/agents/openai.yaml",
+      "sha256": "6e703b8036b17e05be642a33252a66198e08cb1a1d45f8cdc3056a0121a5285c"
+    },
+    {
+      "path": "skills/building-mcp-server-on-cloudflare/references/examples.md",
+      "sha256": "1921816646c14b8a9077e012325d390e7d87f05c103e9fd5da78b7134277d451"
+    },
+    {
+      "path": "skills/building-mcp-server-on-cloudflare/references/oauth-setup.md",
+      "sha256": "aa3829202217a8bb8746c3afee0f92b370dcf8777c195b120250fc7ac81d7c9e"
+    },
+    {
+      "path": "skills/building-mcp-server-on-cloudflare/references/troubleshooting.md",
+      "sha256": "14e314b46d1612845150797743020fe654e422d68dbb6623a5148750f9905992"
+    },
+    {
+      "path": "skills/building-mcp-server-on-cloudflare/SKILL.md",
+      "sha256": "7ceb8daa9a88eb10be44e7862f55639b9c5a31716942fe9c4442c53dba249780"
+    },
+    {
+      "path": "skills/cloudflare/agents/openai.yaml",
+      "sha256": "ab81799c708088276575ab4abf1ef811618c024be06a4954536b85d7d649c7d0"
+    },
+    {
+      "path": "skills/cloudflare/assets/cloudflare-small.svg",
+      "sha256": "711c98be5a82360a8b8951a449af142fa78fb318fdf8ab6cca4c58f9fa7112e7"
+    },
+    {
+      "path": "skills/cloudflare/assets/cloudflare.png",
+      "sha256": "ccef528d73dfe224cfb4817bcb7e15d63922421249d688031ff48c5eef2a2189"
+    },
+    {
+      "path": "skills/cloudflare/LICENSE.txt",
+      "sha256": "44e03f7e263eb3ad256440c1eeab5e49168baff5a78ecef9a5447261cf3a91bc"
+    },
+    {
+      "path": "skills/cloudflare/references/agents-sdk/api.md",
+      "sha256": "505a61c21e2f8ef9dd16c64d1142d83c3c46fca5459780d62ff49699d58d14a9"
+    },
+    {
+      "path": "skills/cloudflare/references/agents-sdk/configuration.md",
+      "sha256": "90295996d4b95ab468ad94727b724e641011b4f8c4d6db229d285498ca5bc3bf"
+    },
+    {
+      "path": "skills/cloudflare/references/agents-sdk/gotchas.md",
+      "sha256": "e58302b89ad63a1108b02600f6709c3cc99d9f40a73036283f4b42febf9db235"
+    },
+    {
+      "path": "skills/cloudflare/references/agents-sdk/patterns.md",
+      "sha256": "c3218ee29220c61c91a0e1bac075301fca7390e3b54cb35c0e7434e3cf821db4"
+    },
+    {
+      "path": "skills/cloudflare/references/agents-sdk/README.md",
+      "sha256": "d7b9aa8647a58682dca7426be6dc1abeb834a6d6397dd7de7fc00dfe3b541696"
+    },
+    {
+      "path": "skills/cloudflare/references/ai-gateway/configuration.md",
+      "sha256": "f5fade7be02c081bfa0bfcb330ceda3c60ce666dcaac3aaa954574529a19baab"
+    },
+    {
+      "path": "skills/cloudflare/references/ai-gateway/dynamic-routing.md",
+      "sha256": "21fb26ca7378b3a447a91094812421f7063fb5fd49343d09dc37f4776aea91ed"
+    },
+    {
+      "path": "skills/cloudflare/references/ai-gateway/features.md",
+      "sha256": "fbc10d9218c42415ce51179aa70918b8ad09690c94d8303f7dbdfd61ac1d4f98"
+    },
+    {
+      "path": "skills/cloudflare/references/ai-gateway/README.md",
+      "sha256": "2c6611869d78bbb6817fc35b43f71eb00eb0d5f6f776dfc4a9f8c1658df2433d"
+    },
+    {
+      "path": "skills/cloudflare/references/ai-gateway/sdk-integration.md",
+      "sha256": "8c610f8f0d7f11ea9e9737590d1945bbde77801fc68bcfe730bfe212dbd87f31"
+    },
+    {
+      "path": "skills/cloudflare/references/ai-gateway/troubleshooting.md",
+      "sha256": "bb4d7a44f80bc31b78460c6944e7b838d12d3b42502a2d214cc2054330e7e814"
+    },
+    {
+      "path": "skills/cloudflare/references/ai-search/api.md",
+      "sha256": "df14977e6bb5f982d3cdb5127e2e8357c536ddba7f441628df0d53d65ca026de"
+    },
+    {
+      "path": "skills/cloudflare/references/ai-search/configuration.md",
+      "sha256": "f6b54e16be518896bac6a84f58ed6a9dc45104e733dc6cfe891af04c86f5f256"
+    },
+    {
+      "path": "skills/cloudflare/references/ai-search/gotchas.md",
+      "sha256": "f5ae4127c9ea9b6f38e23b7df27096da31cfa2e9bfb638bc4fa2dcc4a14b71d3"
+    },
+    {
+      "path": "skills/cloudflare/references/ai-search/patterns.md",
+      "sha256": "7abe82a818df5dab634e23e53205dec970a06539e92618e12353461bed531c91"
+    },
+    {
+      "path": "skills/cloudflare/references/ai-search/README.md",
+      "sha256": "f55b3d0130f8ba766095aa657f070a5b01a34d8bd2ad4d36575cf91316c37a49"
+    },
+    {
+      "path": "skills/cloudflare/references/analytics-engine/api.md",
+      "sha256": "b57594116664ece46bf66c7c04472f30ecfda416e05191b6fa5601493c25384e"
+    },
+    {
+      "path": "skills/cloudflare/references/analytics-engine/configuration.md",
+      "sha256": "737fe3188a920ec025c8044fd411bf140f71c0ae144dff68688d51ab71a0838c"
+    },
+    {
+      "path": "skills/cloudflare/references/analytics-engine/gotchas.md",
+      "sha256": "255c92070d9461f65c4e8c9922463af1414c1c2caf5ce32c64cce949594f5f5b"
+    },
+    {
+      "path": "skills/cloudflare/references/analytics-engine/patterns.md",
+      "sha256": "2eca0130b8557642c6ad02af0c397bf3bb08c5493dae5afbb98300ee2ca22ca5"
+    },
+    {
+      "path": "skills/cloudflare/references/analytics-engine/README.md",
+      "sha256": "135e3b898db6938457f3f59c2d7644c6ba267329de67fa0d04112abd6ef3d759"
+    },
+    {
+      "path": "skills/cloudflare/references/api/api.md",
+      "sha256": "ebdd5208ce26ab816a35bc3c1abbabf9285216ad46489ce253de6f4caa9482f4"
+    },
+    {
+      "path": "skills/cloudflare/references/api/configuration.md",
+      "sha256": "25d564adbe0fdde2faccd5a9a261b17360c49fc82c7bfabd0ffc1b31438b2158"
+    },
+    {
+      "path": "skills/cloudflare/references/api/gotchas.md",
+      "sha256": "b27919490eb99e28939dd8186028d19d9ad50c40f4e9b222b2ae27be439d066e"
+    },
+    {
+      "path": "skills/cloudflare/references/api/patterns.md",
+      "sha256": "c73c9074780363f013a897607618a0469b891314ca0d830ffc1a6189127c8e77"
+    },
+    {
+      "path": "skills/cloudflare/references/api/README.md",
+      "sha256": "fb07cea54031b77b3e96729eaf234c2fba5d24d7a4d17ca450ddb2dbb540d6c3"
+    },
+    {
+      "path": "skills/cloudflare/references/api-shield/api.md",
+      "sha256": "a5a9863a42a7c6d5a1518960316e9718d5a161914efa55470e76090f8af5abd4"
+    },
+    {
+      "path": "skills/cloudflare/references/api-shield/configuration.md",
+      "sha256": "c76f9da408378a2467287a5930e4370a7a98c55acb7c9810ff264a8cd1243b24"
+    },
+    {
+      "path": "skills/cloudflare/references/api-shield/gotchas.md",
+      "sha256": "744e40e854720fde26cd9434b41ea4d2748a22fbcb91da23bfdbf3ad3f4d6e22"
+    },
+    {
+      "path": "skills/cloudflare/references/api-shield/patterns.md",
+      "sha256": "b2cddbdbf87bdb0e5d8d1807e8db20408e54d5a08d3eeca75f48a01de8d9f8c3"
+    },
+    {
+      "path": "skills/cloudflare/references/api-shield/README.md",
+      "sha256": "bc9a99bfca5fae2d575d890201441b7856e6791a7fb8430c7404059a20ced389"
+    },
+    {
+      "path": "skills/cloudflare/references/argo-smart-routing/api.md",
+      "sha256": "65520a19fc3c43e87ff394a7bf80cac79d804e472246d81a57f268b49797186c"
+    },
+    {
+      "path": "skills/cloudflare/references/argo-smart-routing/configuration.md",
+      "sha256": "432e6e4b1b91b7d2106adf847e301ac110d249164a203325d501367db6fb1b37"
+    },
+    {
+      "path": "skills/cloudflare/references/argo-smart-routing/gotchas.md",
+      "sha256": "d72460211170676a3dfb6f0e21079e511f366f954f72504ec68a4f1357111b60"
+    },
+    {
+      "path": "skills/cloudflare/references/argo-smart-routing/patterns.md",
+      "sha256": "059db5186316273cb53f2fb2af97022e3a38feb8ebcf2896095aa04b2f4f271b"
+    },
+    {
+      "path": "skills/cloudflare/references/argo-smart-routing/README.md",
+      "sha256": "a545ee9c004eac4da117cbab0c5a7c06d9b31467c2fc4ffd661834885706bee4"
+    },
+    {
+      "path": "skills/cloudflare/references/bindings/api.md",
+      "sha256": "bb32f73a7341e68d6eb7af72509246051e36bc1ca5e0c586c2940bad1821a4da"
+    },
+    {
+      "path": "skills/cloudflare/references/bindings/configuration.md",
+      "sha256": "32b1945bc296062bde9133005fce4cd2e8a2a3fc50580c69cce325e24bb00c38"
+    },
+    {
+      "path": "skills/cloudflare/references/bindings/gotchas.md",
+      "sha256": "a0ea8a864ea5118f0b00a8f393ab13c93dbcabe58b4c7a5b4725b8ec6377d2a4"
+    },
+    {
+      "path": "skills/cloudflare/references/bindings/patterns.md",
+      "sha256": "81e3a5b003191ab0d5a5754ae44e017606850df1fcf8e6d4254c29dc7f8a06df"
+    },
+    {
+      "path": "skills/cloudflare/references/bindings/README.md",
+      "sha256": "987a72163c20d2085aec8e2b476cd7b947ffd465c5d2f4b0f5fba983420d03ec"
+    },
+    {
+      "path": "skills/cloudflare/references/bot-management/api.md",
+      "sha256": "957b0ab6502f894811d441908153f0a69643a291279784b2e154368c375bd3c3"
+    },
+    {
+      "path": "skills/cloudflare/references/bot-management/configuration.md",
+      "sha256": "6c669927d4d0ea60a6c796ddb93d1e3165e133f014b52104b1598199a609d603"
+    },
+    {
+      "path": "skills/cloudflare/references/bot-management/gotchas.md",
+      "sha256": "b81afa68512920582a97ce4a6ece81379fd6973f593fbb07e5cac1a0e3842b95"
+    },
+    {
+      "path": "skills/cloudflare/references/bot-management/patterns.md",
+      "sha256": "10a5d04e08d66aa283b22734d7f770ed03f8c9a149815c8d35ad090aedf1b157"
+    },
+    {
+      "path": "skills/cloudflare/references/bot-management/README.md",
+      "sha256": "ebf7c12c8547d6dc86f2fdcd582b43779f0bd0f68ca47825d38e630072e548c9"
+    },
+    {
+      "path": "skills/cloudflare/references/browser-rendering/api.md",
+      "sha256": "3f6cb5c0617df7fe7bdf7d43e76b4f410363e0a17288cb32c785b4e9bbe437ef"
+    },
+    {
+      "path": "skills/cloudflare/references/browser-rendering/configuration.md",
+      "sha256": "5f7eb283ebc46411450f6004f39a122597032f9101c07448f5733dcad4fbb73c"
+    },
+    {
+      "path": "skills/cloudflare/references/browser-rendering/gotchas.md",
+      "sha256": "1f288dcbc5ee18b3d6d0c7794210acb02f971713d4f8639f7224a52e1c8670e7"
+    },
+    {
+      "path": "skills/cloudflare/references/browser-rendering/patterns.md",
+      "sha256": "628cffb203727686e3f5256b4bc44afe738d645b805285a56afdf9320222884a"
+    },
+    {
+      "path": "skills/cloudflare/references/browser-rendering/README.md",
+      "sha256": "55344bd32dc6e2f6f57475800b019a00583d0f0d87f504b6fe63be315f77c72b"
+    },
+    {
+      "path": "skills/cloudflare/references/c3/api.md",
+      "sha256": "762015bda08bcdbdafd83717d8926f795ed3583d89170656bb0355e4b5f30973"
+    },
+    {
+      "path": "skills/cloudflare/references/c3/configuration.md",
+      "sha256": "82aa854e677472024e03af61b69430ef665b206667867651bf8e5cc3fdb23fee"
+    },
+    {
+      "path": "skills/cloudflare/references/c3/gotchas.md",
+      "sha256": "edf655cac45d4340c489d272f7a2394033edd36e95f4b7e2e0ff13382390d4cd"
+    },
+    {
+      "path": "skills/cloudflare/references/c3/patterns.md",
+      "sha256": "03924ea266068155c8b50efd4f36680fa1689c8b084d156a3a4ecd4484b7e7e3"
+    },
+    {
+      "path": "skills/cloudflare/references/c3/README.md",
+      "sha256": "14c0ad3b89997b26fb810c9caba24ccc3c979f6af39efaa163b9cf5ca1796d42"
+    },
+    {
+      "path": "skills/cloudflare/references/cache-reserve/api.md",
+      "sha256": "c465c5a35aaa6781a01a9f57a00ecf62aa63bf7aa087330c1c439bca5645ee5f"
+    },
+    {
+      "path": "skills/cloudflare/references/cache-reserve/configuration.md",
+      "sha256": "3be2132717aee04931494ce2582dd1526757f70b8809df7994871c1cfbcfa028"
+    },
+    {
+      "path": "skills/cloudflare/references/cache-reserve/gotchas.md",
+      "sha256": "5540992e685698ea5dda59bef0d90580556a2d7ebb8d79e9d7d8c47410b5b674"
+    },
+    {
+      "path": "skills/cloudflare/references/cache-reserve/patterns.md",
+      "sha256": "ea58816aa375ca03355a23477a4cc77eee584749905690a1d80c0b38b2cbe974"
+    },
+    {
+      "path": "skills/cloudflare/references/cache-reserve/README.md",
+      "sha256": "62ebe38a841f98ab8fcda1a6923de7d5a1014688535d815121dfd139a365c404"
+    },
+    {
+      "path": "skills/cloudflare/references/containers/api.md",
+      "sha256": "6545d70597e60d7642102efb1a64447b44af810e25bd35071b879ba941406348"
+    },
+    {
+      "path": "skills/cloudflare/references/containers/configuration.md",
+      "sha256": "32dc79be832fc76cc8f3acc8d910369321af2d99a66bc122dec6f6257bcf5002"
+    },
+    {
+      "path": "skills/cloudflare/references/containers/gotchas.md",
+      "sha256": "91dbf8bf31ed56931ed80eb717c53cc11bb03255cf4962455b743c8875bf9dc1"
+    },
+    {
+      "path": "skills/cloudflare/references/containers/patterns.md",
+      "sha256": "5c575e7b90a704abfbfe4a589e209bf80cf55f4175bac7b25a04424ec10a822f"
+    },
+    {
+      "path": "skills/cloudflare/references/containers/README.md",
+      "sha256": "a19a11684fd9462a626e3c4491da54109b3fc10731f012185fddf53e6567bc47"
+    },
+    {
+      "path": "skills/cloudflare/references/cron-triggers/api.md",
+      "sha256": "a4c2318cf325dc0b832b9a0a18a4d4915dde77c7fba64676c590d39cf8c833bc"
+    },
+    {
+      "path": "skills/cloudflare/references/cron-triggers/configuration.md",
+      "sha256": "bf9fe6d72d7cb4b10ccbc75fab4772ff072d015fcfeacc92457716815fe8bad1"
+    },
+    {
+      "path": "skills/cloudflare/references/cron-triggers/gotchas.md",
+      "sha256": "7cee2284ed8b34a3b4c183252acd00c6b513598699b8b33a1b7f82c1bfab859e"
+    },
+    {
+      "path": "skills/cloudflare/references/cron-triggers/patterns.md",
+      "sha256": "46a3a169f5a1e136ef941d80c15131bce09b79a2db399a3f0fa00c0a189a83b2"
+    },
+    {
+      "path": "skills/cloudflare/references/cron-triggers/README.md",
+      "sha256": "7b6643cad0aca93560a5c226f9c46a98521a872cc1d84ae1630267cb035a4055"
+    },
+    {
+      "path": "skills/cloudflare/references/d1/api.md",
+      "sha256": "90538fd694dd9c03118a59ebbbf3327f57da0f631bfa0ca4f0d49e8165a87dc0"
+    },
+    {
+      "path": "skills/cloudflare/references/d1/configuration.md",
+      "sha256": "95ff4e3dced8d6f93e1ac0dd9d84743d7eb005fa00b18b22b897427169f19dbf"
+    },
+    {
+      "path": "skills/cloudflare/references/d1/gotchas.md",
+      "sha256": "21f9b8f215164d3a1a59fe9a3c20851366c7923c9397764fdf8e4b59a66be648"
+    },
+    {
+      "path": "skills/cloudflare/references/d1/patterns.md",
+      "sha256": "fb860afaa776e13778fea5bd22aed968fb136ec402fc472e24283ce2fb8e42d0"
+    },
+    {
+      "path": "skills/cloudflare/references/d1/README.md",
+      "sha256": "65e2b44f0a96f22271c90ea5dd7f171934d982ba479ef693bbf71d4dbf9fd19f"
+    },
+    {
+      "path": "skills/cloudflare/references/ddos/api.md",
+      "sha256": "f1efda27abc47a4424abb503a21ba70fe63c68204aec35030bb3bae79c2e18f5"
+    },
+    {
+      "path": "skills/cloudflare/references/ddos/configuration.md",
+      "sha256": "1f6f590aa2f8fe24da24313e0149875e1926cef51c1bb63efbb6e0c91366ee32"
+    },
+    {
+      "path": "skills/cloudflare/references/ddos/gotchas.md",
+      "sha256": "1c32bf3dbaa1ac3b476b904df553c3f49d69b38a84b8f501be63de4172ea6a08"
+    },
+    {
+      "path": "skills/cloudflare/references/ddos/patterns.md",
+      "sha256": "30b6ed801e4e333ba6bd6a5365755fd3e98dbfcfc895fddf457be4162a353d6d"
+    },
+    {
+      "path": "skills/cloudflare/references/ddos/README.md",
+      "sha256": "f41c92f7a4a1201ed81241d57786c2c732479b1c6b9afb1381eb2e45859516d9"
+    },
+    {
+      "path": "skills/cloudflare/references/do-storage/api.md",
+      "sha256": "ad0fa5a914c15326afdac498520c3d637bb23cba5d5c3971bb6544319178e4ef"
+    },
+    {
+      "path": "skills/cloudflare/references/do-storage/configuration.md",
+      "sha256": "bba27d54d5eb1ce622e2171772984af10dbb7647068f7dc2b567532c801136f3"
+    },
+    {
+      "path": "skills/cloudflare/references/do-storage/gotchas.md",
+      "sha256": "8a2f69d065e7edfd6838c2a744688037a60484a78772fd798d99559332bbd4eb"
+    },
+    {
+      "path": "skills/cloudflare/references/do-storage/patterns.md",
+      "sha256": "b0286b9ffe73548fd264f5020902dc1d823602873677da92f72f27bbdb1f4ee9"
+    },
+    {
+      "path": "skills/cloudflare/references/do-storage/README.md",
+      "sha256": "3ee4198f1112ae93d50ceff80b816889564122bed361c6d3160b73c932181e85"
+    },
+    {
+      "path": "skills/cloudflare/references/do-storage/testing.md",
+      "sha256": "73da3411002a6d36cbe3725b23135947b5646cf9d0a78958b313ff4d51628d9c"
+    },
+    {
+      "path": "skills/cloudflare/references/durable-objects/api.md",
+      "sha256": "85fc11753c5c9e5658a0dfccf858e47b599fbc6c659de23bade6adae2e9ec4dd"
+    },
+    {
+      "path": "skills/cloudflare/references/durable-objects/configuration.md",
+      "sha256": "74345df085f5095a5f0f290c2f467e9ba43431626e39cdadfffce0456256d7c4"
+    },
+    {
+      "path": "skills/cloudflare/references/durable-objects/gotchas.md",
+      "sha256": "b08053d97d147902a19f1717d35b82234a78ee6e7ea49d631fb7f21e4d9aabf3"
+    },
+    {
+      "path": "skills/cloudflare/references/durable-objects/patterns.md",
+      "sha256": "0ea347512d00fba234f6794190d92d5dab3ac691351b35806e97d3a6115b43b1"
+    },
+    {
+      "path": "skills/cloudflare/references/durable-objects/README.md",
+      "sha256": "c18a14103a37f66d3a55a4032ffe9642d57b18d6e2256f48949cab8ea423409d"
+    },
+    {
+      "path": "skills/cloudflare/references/email-routing/api.md",
+      "sha256": "021bdf2ea1e5faa77948a45e544bb7bfe85cb5a9be22e3e408ffaccd40c8afb3"
+    },
+    {
+      "path": "skills/cloudflare/references/email-routing/configuration.md",
+      "sha256": "62e8098cf3d90969b23909eff4a57cb9f606f60ae780c8a37a0a95104e1c66eb"
+    },
+    {
+      "path": "skills/cloudflare/references/email-routing/gotchas.md",
+      "sha256": "8423921688907a116fcac79a0ee3048cbbd29373ac04065dd271a10a1446fe44"
+    },
+    {
+      "path": "skills/cloudflare/references/email-routing/patterns.md",
+      "sha256": "e7f8c12b02c1f137bbe6df854d527ebac0d9b1a71a1ffcbfc463a3e3b1655a0b"
+    },
+    {
+      "path": "skills/cloudflare/references/email-routing/README.md",
+      "sha256": "bd2333c59ae872dce66fee878c4685650579d0a8cd43516e625ba320a0383a79"
+    },
+    {
+      "path": "skills/cloudflare/references/email-workers/api.md",
+      "sha256": "009ea2c49f3e50953fbe623f5d72204d3f0f06bb8e57ee4ae342791aa72b292a"
+    },
+    {
+      "path": "skills/cloudflare/references/email-workers/configuration.md",
+      "sha256": "cb72c0865cf7d8091f0f8fdf81dea024fedf4208ad6a15281c2c6f9fe6fb8b0d"
+    },
+    {
+      "path": "skills/cloudflare/references/email-workers/gotchas.md",
+      "sha256": "8599e5772e711a308a2a62cdd24a93e7bed7a8b2bda624ddd58f0d5743dacbbf"
+    },
+    {
+      "path": "skills/cloudflare/references/email-workers/patterns.md",
+      "sha256": "e171932e302eba1789da9c3948ffbcd8fd7ede8faa3e47adf3f906d57604155d"
+    },
+    {
+      "path": "skills/cloudflare/references/email-workers/README.md",
+      "sha256": "de820e214b9a20d9379264c5732b308503b35c41b9ccd6be958015a3c2596833"
+    },
+    {
+      "path": "skills/cloudflare/references/graphql-api/api.md",
+      "sha256": "572b2583a1d6bde7ed563e13eb76c29bced4f9d633dba512644464ef08eb20fd"
+    },
+    {
+      "path": "skills/cloudflare/references/graphql-api/configuration.md",
+      "sha256": "78ef3a9a005a4a886b456aae98b41c122c6b187a4d4aff133f795cbb935b3789"
+    },
+    {
+      "path": "skills/cloudflare/references/graphql-api/gotchas.md",
+      "sha256": "7958d4836e940f81b967a197df8c8bbea22a71269920a17342592691f42fc006"
+    },
+    {
+      "path": "skills/cloudflare/references/graphql-api/patterns.md",
+      "sha256": "fb8ee107aa31f11d8bfab8571d5f48ff77fe60e8e908929f81a8469a49f57fba"
+    },
+    {
+      "path": "skills/cloudflare/references/graphql-api/README.md",
+      "sha256": "ed65c233e5d0f013543734f1ec98a982897dfd2a3583d4d5e3fb1dd6395ed2a5"
+    },
+    {
+      "path": "skills/cloudflare/references/hyperdrive/api.md",
+      "sha256": "7455698c8a609f36b3fd0801e697238544ddbe1fbfbc3f1f9170d0e493509d6d"
+    },
+    {
+      "path": "skills/cloudflare/references/hyperdrive/configuration.md",
+      "sha256": "1e5004ac070753757573ac211fe691036486b3c001aed922562abce706d05840"
+    },
+    {
+      "path": "skills/cloudflare/references/hyperdrive/gotchas.md",
+      "sha256": "e99a4c988b6527fd84d2bf9b4c33662cf95dcbc1a305a7bbcd62e6e73518b836"
+    },
+    {
+      "path": "skills/cloudflare/references/hyperdrive/patterns.md",
+      "sha256": "cf271d8729da20a9ec369c7b05096c5c8a6ff2e886a307e006bfef6244323868"
+    },
+    {
+      "path": "skills/cloudflare/references/hyperdrive/README.md",
+      "sha256": "248bcdef6379f27f2b53bc8fa92f915e2ac0f995d70e4040734a47936a928831"
+    },
+    {
+      "path": "skills/cloudflare/references/images/api.md",
+      "sha256": "aa120b76ed5511c9e1b3fb2b63ef08dd7c298009065e0a666d8b1d1c8101f33a"
+    },
+    {
+      "path": "skills/cloudflare/references/images/configuration.md",
+      "sha256": "34caee569a7262060e229a08aa54f44d9365a8921ffa2035d152007ffe9c2819"
+    },
+    {
+      "path": "skills/cloudflare/references/images/gotchas.md",
+      "sha256": "0348b8b8110e111bb453c2d936d4e17076ac99e01350ecd2cded469f2396a0f3"
+    },
+    {
+      "path": "skills/cloudflare/references/images/patterns.md",
+      "sha256": "9464be3d6c7dbd0c0c981cf6510cdfbb89c17615cfc87f9d1939ef30e5fcbb9b"
+    },
+    {
+      "path": "skills/cloudflare/references/images/README.md",
+      "sha256": "6d1564e69130323a713da087b288ac503ba71eb47831d70877486127da59e63d"
+    },
+    {
+      "path": "skills/cloudflare/references/kv/api.md",
+      "sha256": "e2615e31fa989bf9c57581cf034488c989a67bbf2f90c2be476666408eb75919"
+    },
+    {
+      "path": "skills/cloudflare/references/kv/configuration.md",
+      "sha256": "5b0f3b731ebb2f04a16b91b268851044b07854eede6a23d507d0463fb3dcf52c"
+    },
+    {
+      "path": "skills/cloudflare/references/kv/gotchas.md",
+      "sha256": "9c3664279c431e64805535aee2ad3990f4080746fc99768a374da6bf81d23685"
+    },
+    {
+      "path": "skills/cloudflare/references/kv/patterns.md",
+      "sha256": "9f2b9494764bd8d9fd0af898614db4b7474ffd7c2eb9f93501d81d102981e202"
+    },
+    {
+      "path": "skills/cloudflare/references/kv/README.md",
+      "sha256": "0aaba2c9896682ba79c4f29b6f4e9a9f6e7818367d4f2857d04afb10f802faa7"
+    },
+    {
+      "path": "skills/cloudflare/references/miniflare/api.md",
+      "sha256": "d74e47e84455b374f3851e745be22e072bab96bd7b2beac152ce203184b8f892"
+    },
+    {
+      "path": "skills/cloudflare/references/miniflare/configuration.md",
+      "sha256": "4067a7eb776ce8a4e699138e47fc2ae98771192d4081dfb800d05fbd1413a8f1"
+    },
+    {
+      "path": "skills/cloudflare/references/miniflare/gotchas.md",
+      "sha256": "1951f71b9f8792fc28ca8d9424bf6045762a3ebea318a9ab3d9ab696fa5a3373"
+    },
+    {
+      "path": "skills/cloudflare/references/miniflare/patterns.md",
+      "sha256": "551caddec69e08060991179de49e904f5720b00ff58c631c9ebda887f3a35b8d"
+    },
+    {
+      "path": "skills/cloudflare/references/miniflare/README.md",
+      "sha256": "4d8ce37150c7fd6eca2fba566d710b675e474d337367886f098bd81ab368e13c"
+    },
+    {
+      "path": "skills/cloudflare/references/network-interconnect/api.md",
+      "sha256": "faef2e6c79cde99bd3d70242e72424c1a5cbeecae3978f85ff77012af9c11ee0"
+    },
+    {
+      "path": "skills/cloudflare/references/network-interconnect/configuration.md",
+      "sha256": "e7ef7a00149982eda06434868ae9a05a650326e3eccfe3240a600e0f068c2967"
+    },
+    {
+      "path": "skills/cloudflare/references/network-interconnect/gotchas.md",
+      "sha256": "bfac1bc1161609a6b9126290c95b2bc5412aba953fb92b67ab7b4b21d592b979"
+    },
+    {
+      "path": "skills/cloudflare/references/network-interconnect/patterns.md",
+      "sha256": "339668fc8b7b92a6b5b43446d9c0eca4f0208603feebba214b7a99b91fa12f7e"
+    },
+    {
+      "path": "skills/cloudflare/references/network-interconnect/README.md",
+      "sha256": "8c0cbbd53ce19f51f1654fda708432e56e0c6500da440f589318dfeee7c0a137"
+    },
+    {
+      "path": "skills/cloudflare/references/observability/api.md",
+      "sha256": "7a85549a214759cc0b8a17e73e726a9b5033c083b5b234b4bfd691ef04fb0ae9"
+    },
+    {
+      "path": "skills/cloudflare/references/observability/configuration.md",
+      "sha256": "bff41f1db145052a4e7f0998182bce0477614135a40d7f0dcfe678cd3401210f"
+    },
+    {
+      "path": "skills/cloudflare/references/observability/gotchas.md",
+      "sha256": "7c43c8514ed3649d3f7ce01b29635a746900b5c24c1c9a3a0e8dc607e5d4f785"
+    },
+    {
+      "path": "skills/cloudflare/references/observability/patterns.md",
+      "sha256": "7436c1a4e22ecd46aa20d12d72844e324476da3ff34a1bf8b20399f215ecfbc8"
+    },
+    {
+      "path": "skills/cloudflare/references/observability/README.md",
+      "sha256": "e798934ff11cbd2cbce9c746245c888cceaab06ac7a5e539b432c017625161bb"
+    },
+    {
+      "path": "skills/cloudflare/references/pages/api.md",
+      "sha256": "7a98515f03558f3b6267003883ab5c21b5c8c5290a1310463ac2f4da8399d7a8"
+    },
+    {
+      "path": "skills/cloudflare/references/pages/configuration.md",
+      "sha256": "f9c19d2813ac03b076c966e4db7d4b393d1354dafaf60613c22b70ef58949f54"
+    },
+    {
+      "path": "skills/cloudflare/references/pages/gotchas.md",
+      "sha256": "b86040fe7911356208ded77883a18de3cb0eca57c187ca70d71e97804a5277e2"
+    },
+    {
+      "path": "skills/cloudflare/references/pages/patterns.md",
+      "sha256": "74f43ec94a49b883587d83676478ef0549148fc610ed4fc3037e04632fcb8d4c"
+    },
+    {
+      "path": "skills/cloudflare/references/pages/README.md",
+      "sha256": "f8e221a3acda3036515d57965df0b695607fe058a64f9a66eff67c95065effb3"
+    },
+    {
+      "path": "skills/cloudflare/references/pages-functions/api.md",
+      "sha256": "6c8949897a78f7a3cda357ad3926f7fad6bd902f01d313aa3141f1f98b743610"
+    },
+    {
+      "path": "skills/cloudflare/references/pages-functions/configuration.md",
+      "sha256": "129fd3cd64611cf2875b8e603f8039947ee6af22e3bf7f083b7814d5046e92d3"
+    },
+    {
+      "path": "skills/cloudflare/references/pages-functions/gotchas.md",
+      "sha256": "b7f87ff8ba4a64a322489c1ae141e8835627c0aef20735e9573d447646694d51"
+    },
+    {
+      "path": "skills/cloudflare/references/pages-functions/patterns.md",
+      "sha256": "14e2f9608e53a8cb6caa55d5e248cc8e349bd478252f4da7e51232f60f7cd806"
+    },
+    {
+      "path": "skills/cloudflare/references/pages-functions/README.md",
+      "sha256": "b31c49d935e0b1ca108fcb78de82cfc2954f412efa666f4c39aa5b90ac5892b4"
+    },
+    {
+      "path": "skills/cloudflare/references/pipelines/api.md",
+      "sha256": "594699deedafb01a0b4f79f0604aa2da9d4e8993fcfac2cd6afa3754f82c78ba"
+    },
+    {
+      "path": "skills/cloudflare/references/pipelines/configuration.md",
+      "sha256": "1429539b853c3afe586c0ab2a01b04cde7ac31cf45490be5d2e5492f9ff5ef4b"
+    },
+    {
+      "path": "skills/cloudflare/references/pipelines/gotchas.md",
+      "sha256": "475a7bdaf55524fbfcc35086fb76e2add401397e532c4e5a02988c9f09488d9a"
+    },
+    {
+      "path": "skills/cloudflare/references/pipelines/patterns.md",
+      "sha256": "9ac82cd297ff098ce77e0213abfb520f9c1efed3541b42e1c58d78982a39ff85"
+    },
+    {
+      "path": "skills/cloudflare/references/pipelines/README.md",
+      "sha256": "ccd7a3e6d1e6384aac378025699e027320742ea708093fca4552d7b8941ef2c8"
+    },
+    {
+      "path": "skills/cloudflare/references/pulumi/api.md",
+      "sha256": "90cee5d0fbde870f3e49ac5f3a261ce4a4bdec1375029ea52fbed1228f2c88f0"
+    },
+    {
+      "path": "skills/cloudflare/references/pulumi/configuration.md",
+      "sha256": "a224175b8943b3a1f4a03ef3bda434d57b5be796e37786f2da6e10eb15591159"
+    },
+    {
+      "path": "skills/cloudflare/references/pulumi/gotchas.md",
+      "sha256": "a64fe5c7fab3d26f872ce53d2a34f30ebda8640a499e36926ff630b648b51bee"
+    },
+    {
+      "path": "skills/cloudflare/references/pulumi/patterns.md",
+      "sha256": "b723ddd70e9a98773e776e7a511382e5c4ee68ddb59e1ed6fa6f6977a22602af"
+    },
+    {
+      "path": "skills/cloudflare/references/pulumi/README.md",
+      "sha256": "bbdf1c3ce0980b97b28daeaec0f65131e82469595858039b7e02167dc4a04db5"
+    },
+    {
+      "path": "skills/cloudflare/references/queues/api.md",
+      "sha256": "8a6b11b9f4987e822ba49f540e493efabebee7adde1865f65a61fb1a8ba15b68"
+    },
+    {
+      "path": "skills/cloudflare/references/queues/configuration.md",
+      "sha256": "36a73483f31c40fabcd0e545924e6ca99f83cedfd924e20c214b1a237aa96c79"
+    },
+    {
+      "path": "skills/cloudflare/references/queues/gotchas.md",
+      "sha256": "b97a5ae5c9cdf5b8a0f2457bcca228f76e05ec3aee231d8839d9363eb28ede69"
+    },
+    {
+      "path": "skills/cloudflare/references/queues/patterns.md",
+      "sha256": "b34265adaf69c42fb7714d8b7175eaaa77b6f7cd3b86b01e9d2c80d2ee9ad041"
+    },
+    {
+      "path": "skills/cloudflare/references/queues/README.md",
+      "sha256": "82b1f935a6d2c324cadd590bf01457507f717b0ddf1c0c6e8213758fd93016a1"
+    },
+    {
+      "path": "skills/cloudflare/references/r2/api.md",
+      "sha256": "624c430ef01511d1e416d85ae7702a6257278f69d49dd5f752460867c95e42cd"
+    },
+    {
+      "path": "skills/cloudflare/references/r2/configuration.md",
+      "sha256": "218c62b876414d9d21b1bc70ae29b9d3a4b4dedb4a9777cd3aa5d65978e0ce53"
+    },
+    {
+      "path": "skills/cloudflare/references/r2/gotchas.md",
+      "sha256": "49e323c3dccc8ded6596c9386b90ea8562a8f24287e42fc8143f0ee75f759edb"
+    },
+    {
+      "path": "skills/cloudflare/references/r2/patterns.md",
+      "sha256": "91e2dc8169d6bcba4a255c0c5a3c1a7cc7a5e470916aa4b5b277ca5678b502bd"
+    },
+    {
+      "path": "skills/cloudflare/references/r2/README.md",
+      "sha256": "e5b95d7e75830a8eaa81079dcef011b8b5277092d58e69a18688498730fdfde0"
+    },
+    {
+      "path": "skills/cloudflare/references/r2-data-catalog/api.md",
+      "sha256": "052e2ff4400abec35d2cfae01025b66aced65c994a3a04b6e0977feb2f312383"
+    },
+    {
+      "path": "skills/cloudflare/references/r2-data-catalog/configuration.md",
+      "sha256": "df3ccefebf647508aac37512ffbc2599b547807f02bd63d009264e9ca4ee8d35"
+    },
+    {
+      "path": "skills/cloudflare/references/r2-data-catalog/gotchas.md",
+      "sha256": "9a1f745352bcbc83b5c328d593e8598bd770a3045d0582ff954093a03f505ec5"
+    },
+    {
+      "path": "skills/cloudflare/references/r2-data-catalog/patterns.md",
+      "sha256": "72308b4799e3945e5c7ceca8c314d4888b39f0923715c79cf1086c9e50d5e2cb"
+    },
+    {
+      "path": "skills/cloudflare/references/r2-data-catalog/README.md",
+      "sha256": "858461cce0ec786521f761d80eccc7b5f3ea57b5e24a8fc17aa59e352be8494a"
+    },
+    {
+      "path": "skills/cloudflare/references/r2-sql/api.md",
+      "sha256": "6b3abfe3927c08787cecdff60e018bd75ad4953c1f8a3c002c7fe058fd683466"
+    },
+    {
+      "path": "skills/cloudflare/references/r2-sql/configuration.md",
+      "sha256": "841d5c71f4206517b8aed9066739e6e3767ceae6e9f23b9af2cd51a842f0dc82"
+    },
+    {
+      "path": "skills/cloudflare/references/r2-sql/gotchas.md",
+      "sha256": "29d380a90ee14ccb83a04038206d62b14514188c5bf70c5b66c9cd21a25237d2"
+    },
+    {
+      "path": "skills/cloudflare/references/r2-sql/patterns.md",
+      "sha256": "a5d457e050ee145aeb16eaf82a398093d82802bf77964a527ed4f39dc61bd454"
+    },
+    {
+      "path": "skills/cloudflare/references/r2-sql/README.md",
+      "sha256": "2c90d5c26809139e7e97d95f2eee51e88004ef23e2009de8ff0908ea0e70cce1"
+    },
+    {
+      "path": "skills/cloudflare/references/realtime-sfu/api.md",
+      "sha256": "de781ec88b7056ff2d453af6f5bc2955f877ba894d7f47852bee435558adb338"
+    },
+    {
+      "path": "skills/cloudflare/references/realtime-sfu/configuration.md",
+      "sha256": "63810448655160dc0e4b88bddc3489713bd98462b5bf91537a66cf47c538365f"
+    },
+    {
+      "path": "skills/cloudflare/references/realtime-sfu/gotchas.md",
+      "sha256": "991d7b3a1fdef94350fa3cef022ba896ee891a73d7a66db5b20cef5dc23aa6d6"
+    },
+    {
+      "path": "skills/cloudflare/references/realtime-sfu/patterns.md",
+      "sha256": "7bb0c34ee53e332d23e6febba16f29f6b7923bddd0f141212fac6dfcfe6121e0"
+    },
+    {
+      "path": "skills/cloudflare/references/realtime-sfu/README.md",
+      "sha256": "9e7aa2661d5bd283b5b815403b24d21809dda37ab01c857bfeba06818df0ee52"
+    },
+    {
+      "path": "skills/cloudflare/references/realtimekit/api.md",
+      "sha256": "b78a80cf6e1147f074b0bf0a2dc8ead07c6a461c84fdb23dcfb311f296abaa42"
+    },
+    {
+      "path": "skills/cloudflare/references/realtimekit/configuration.md",
+      "sha256": "ce5de8e00df0d957d2acbcf624658dd0b3b3fea2762b7a1ee1a28358b590dc40"
+    },
+    {
+      "path": "skills/cloudflare/references/realtimekit/gotchas.md",
+      "sha256": "e638138b5e449e80fea8c88e8dd855cc7daebafff1acee9d2da438bc939c758d"
+    },
+    {
+      "path": "skills/cloudflare/references/realtimekit/patterns.md",
+      "sha256": "930811e2f70207c969f2d3a3bf9750327c6114359ace9685c0087ace286d354a"
+    },
+    {
+      "path": "skills/cloudflare/references/realtimekit/README.md",
+      "sha256": "3932d4aa42e333e175e1df7d2e05e4e3c8f308389c17aedf277023687ef5bd41"
+    },
+    {
+      "path": "skills/cloudflare/references/sandbox/api.md",
+      "sha256": "1a5111914d238cf9a6b98b178ac6b44e2994ee034c358d79dad4acd5c6961d6c"
+    },
+    {
+      "path": "skills/cloudflare/references/sandbox/configuration.md",
+      "sha256": "95594ea044edb273e27b066541b3c3cff76a7b4aa41e6d153c011c749efa161b"
+    },
+    {
+      "path": "skills/cloudflare/references/sandbox/gotchas.md",
+      "sha256": "9998e85ffe04bceefe91a00e00ab26f2f8ce5df18e2cb2be610fbaaaa82aa74e"
+    },
+    {
+      "path": "skills/cloudflare/references/sandbox/patterns.md",
+      "sha256": "768ef05fda92b643cfb39a1eaf951dc96ab942780376b358b91d1ecdb8dd54d1"
+    },
+    {
+      "path": "skills/cloudflare/references/sandbox/README.md",
+      "sha256": "434ba529ecdc6f236b98fe2cf5a7d97b7367e0c7e8a2359fcb977339c112a0bf"
+    },
+    {
+      "path": "skills/cloudflare/references/secrets-store/api.md",
+      "sha256": "2871b601d5657b5cbb85135e42a07615d180b445c172740a5e9ce3a40f2b8c2d"
+    },
+    {
+      "path": "skills/cloudflare/references/secrets-store/configuration.md",
+      "sha256": "ea74efb6892b5615317a691c8fe989e2db13302fdbd54055ec681aa254a0e909"
+    },
+    {
+      "path": "skills/cloudflare/references/secrets-store/gotchas.md",
+      "sha256": "16315a5ff33c2ba6349f8c6acc3d7ee1f197a8827d7b3052b77b0ae28f810b49"
+    },
+    {
+      "path": "skills/cloudflare/references/secrets-store/patterns.md",
+      "sha256": "c49e287f2f1cb994c85ba90fd150d71e95e7b0e050004823c3989a8663d8e496"
+    },
+    {
+      "path": "skills/cloudflare/references/secrets-store/README.md",
+      "sha256": "743347003a1bc091e537398fd7a96bda5a8a3df87b55f584c991016b37f392c1"
+    },
+    {
+      "path": "skills/cloudflare/references/smart-placement/api.md",
+      "sha256": "00e1a74d14101108c30da60f6f96220427943afcf81f1d32de137703293634c0"
+    },
+    {
+      "path": "skills/cloudflare/references/smart-placement/configuration.md",
+      "sha256": "093bac033c1915a45aab3da2fa8118f06ed28d17d58634199ebd451ae52a0fa3"
+    },
+    {
+      "path": "skills/cloudflare/references/smart-placement/gotchas.md",
+      "sha256": "22007511f0856914e39c2d6862d917e7cd69b04304940624b7d6665d725e0707"
+    },
+    {
+      "path": "skills/cloudflare/references/smart-placement/patterns.md",
+      "sha256": "d97e0fa159bd62e18858cecf4f46115ba3a90fd68ddf13a82462b7ed269e83cf"
+    },
+    {
+      "path": "skills/cloudflare/references/smart-placement/README.md",
+      "sha256": "a700eb463e77c41d34c7aa1d56b82c66cdceaace077041ce4061ceec67321e9b"
+    },
+    {
+      "path": "skills/cloudflare/references/snippets/api.md",
+      "sha256": "e3fbc3a06c21867e99ee90563446ea6e9a009578b5c7749c8ff00b184973dc7d"
+    },
+    {
+      "path": "skills/cloudflare/references/snippets/configuration.md",
+      "sha256": "7d359318d7ebd8abb08632a7ab1b050911b48cce0031a29357af98a9a7e1e274"
+    },
+    {
+      "path": "skills/cloudflare/references/snippets/gotchas.md",
+      "sha256": "f243bbd25fded90b3f6a3b22436cb7eb5f5330d8c25249d64d9c00b57086de76"
+    },
+    {
+      "path": "skills/cloudflare/references/snippets/patterns.md",
+      "sha256": "7ae89556f4ba3403906b05242e93b2d5ed49c528ad47f6303301668e5f6a3610"
+    },
+    {
+      "path": "skills/cloudflare/references/snippets/README.md",
+      "sha256": "27d1309e02546726537a96fc8049188c3822b57458f6b72223b096e2b783ed9a"
+    },
+    {
+      "path": "skills/cloudflare/references/spectrum/api.md",
+      "sha256": "6cdd6ae22027e1ec753fb6012ca2ec7df831f7fae5e2b9741f7e197b819140cf"
+    },
+    {
+      "path": "skills/cloudflare/references/spectrum/configuration.md",
+      "sha256": "f3dab94846f0906aa14afe2ac1630dae43b3d7db5b24952d5aa6d63861f60e42"
+    },
+    {
+      "path": "skills/cloudflare/references/spectrum/gotchas.md",
+      "sha256": "6a4dfcc1d50c2a34c818b5686398292f2291e8d420714f6611fcab72cfa9e23b"
+    },
+    {
+      "path": "skills/cloudflare/references/spectrum/patterns.md",
+      "sha256": "8e1f338135dd57f1d363674eda831a368790e406daa90de6c196a8fa9e1d6ed2"
+    },
+    {
+      "path": "skills/cloudflare/references/spectrum/README.md",
+      "sha256": "2d1c83c14c81848b87a53517c825a83d76e4a56c7d7a209ad999b411f57c372f"
+    },
+    {
+      "path": "skills/cloudflare/references/static-assets/api.md",
+      "sha256": "f178352735c100e236b1dd31fa96e029c6e8d42ece972f01869d7643b34043f9"
+    },
+    {
+      "path": "skills/cloudflare/references/static-assets/configuration.md",
+      "sha256": "d34689bd4631bf5104280b9a99f00b8360321a63b190e4be673671d2e3069341"
+    },
+    {
+      "path": "skills/cloudflare/references/static-assets/gotchas.md",
+      "sha256": "fc3698c81ad99b0138c3ee03bbf968b810d5371f6e51f3826dcc19b3244f7ba2"
+    },
+    {
+      "path": "skills/cloudflare/references/static-assets/patterns.md",
+      "sha256": "7a03c6003f187403665ef1362661a43f7d3813db90eb59eb7e68267cdb7ff6ab"
+    },
+    {
+      "path": "skills/cloudflare/references/static-assets/README.md",
+      "sha256": "550e0bfdc5c9c01389270a98ac8ad322f7ab886259d0d771b81c33fbac164fa6"
+    },
+    {
+      "path": "skills/cloudflare/references/stream/api-live.md",
+      "sha256": "a87bef303f6faa108dff6886e7ed8fe913af18713368c21527319d18e57bdb21"
+    },
+    {
+      "path": "skills/cloudflare/references/stream/api.md",
+      "sha256": "b2453c61f777caa8b7bcee7ebf1c5027abab967a7731ff3d18e4aee96a14ef2a"
+    },
+    {
+      "path": "skills/cloudflare/references/stream/configuration.md",
+      "sha256": "b6c5e592e7971d3bd9e3730cbdc6c1fa853502a2d143f91e2ddc40d1e75a09a2"
+    },
+    {
+      "path": "skills/cloudflare/references/stream/gotchas.md",
+      "sha256": "f72182f18dde923285e78c302735e90b28f9a0af17479676ecc5c2a167e04436"
+    },
+    {
+      "path": "skills/cloudflare/references/stream/patterns.md",
+      "sha256": "82810f64f0c04552cc8b3976061957b4dcfcbff07b6aea15a4b8e86fedb4c2ba"
+    },
+    {
+      "path": "skills/cloudflare/references/stream/README.md",
+      "sha256": "c527c46fab32c728fd9ffce41dabb2928e474562b0f340e957244f3cec00536c"
+    },
+    {
+      "path": "skills/cloudflare/references/tail-workers/api.md",
+      "sha256": "6c468d6164a348af6ea6f300f9328ce6d85c549a022bf01ed5ba60b884efdfe7"
+    },
+    {
+      "path": "skills/cloudflare/references/tail-workers/configuration.md",
+      "sha256": "0a54eccb88b3865e5f005300b3a543588c37072f674842d07895ff595c1a9b62"
+    },
+    {
+      "path": "skills/cloudflare/references/tail-workers/gotchas.md",
+      "sha256": "f684a6385192e825ee0b5cbb43518f36ceb467ad34c15382fdfe928f7a1e3811"
+    },
+    {
+      "path": "skills/cloudflare/references/tail-workers/patterns.md",
+      "sha256": "5d4bc8f3952191cee0f36e7947a5eb5dc2f1745b6b7ae580d049d88d25a38583"
+    },
+    {
+      "path": "skills/cloudflare/references/tail-workers/README.md",
+      "sha256": "e39e7ebcbc9b3597f2c8b49e2a9f3ffd75010528c049257c5c6f04036666c16c"
+    },
+    {
+      "path": "skills/cloudflare/references/terraform/api.md",
+      "sha256": "6ff81bc38fa36d364763c419649957d88a1e90b100f176bbe2b5fbe86f58137b"
+    },
+    {
+      "path": "skills/cloudflare/references/terraform/configuration.md",
+      "sha256": "f285e297983bb62764ffcd5accd4bfd91f981c5c3032b9d0adc4ff89fc8b6b34"
+    },
+    {
+      "path": "skills/cloudflare/references/terraform/gotchas.md",
+      "sha256": "dc72b90826e116789a404e73629eaa4c53a4196c75e2756e5bb7d6a1fcf39e84"
+    },
+    {
+      "path": "skills/cloudflare/references/terraform/patterns.md",
+      "sha256": "4665f6ccf4a3d3f2da8d31671966ae8a61d528c8b9b79b8c8947922d2bb0410c"
+    },
+    {
+      "path": "skills/cloudflare/references/terraform/README.md",
+      "sha256": "c613c8d66f49efbd7efd30d9138002b74eb1000399b90f99d81ea199bb94662e"
+    },
+    {
+      "path": "skills/cloudflare/references/tunnel/api.md",
+      "sha256": "90c1518841cdcd6090cc17c7c06ce1b18df20779e58575aac0e790cb70be5f22"
+    },
+    {
+      "path": "skills/cloudflare/references/tunnel/configuration.md",
+      "sha256": "b79190f1666455d8523e9e4ff777c60510c3b11ba8dcea264e44648225e4ec75"
+    },
+    {
+      "path": "skills/cloudflare/references/tunnel/gotchas.md",
+      "sha256": "8cfcb1047b965c05e7266929314866014305ce2c921e5a6140383ed2dbe2655e"
+    },
+    {
+      "path": "skills/cloudflare/references/tunnel/networking.md",
+      "sha256": "4521e29f95af1b4ed1ce25b95d38c6da00e52d2e00c0ebfd14b1462302ad9884"
+    },
+    {
+      "path": "skills/cloudflare/references/tunnel/patterns.md",
+      "sha256": "80d78d224d7a8d50b741459a41de73575bcbcb90f0d9cc535908fc818bba76fb"
+    },
+    {
+      "path": "skills/cloudflare/references/tunnel/README.md",
+      "sha256": "a37d58552c846d4aa98c0c4f02c314592f56a61d1170ca3cd73a01072c0353e9"
+    },
+    {
+      "path": "skills/cloudflare/references/turn/api.md",
+      "sha256": "e0fa9534677aa4e1378c0294fc1bb70f959cab454eb3818dbbb5ab5c56bb55c1"
+    },
+    {
+      "path": "skills/cloudflare/references/turn/configuration.md",
+      "sha256": "49cd5cef836ff0e2b9e34070440c2b3851f693c3b8d35451d08fe5c24b28824a"
+    },
+    {
+      "path": "skills/cloudflare/references/turn/gotchas.md",
+      "sha256": "7edf1f348125c3cc9710df60f139d08d23febec9c69601657093181a1dc0b469"
+    },
+    {
+      "path": "skills/cloudflare/references/turn/patterns.md",
+      "sha256": "9ce949a098d8cd7b4f6843e4afe5b0b5ea14fd3586db3ac461e19fc70e451ea1"
+    },
+    {
+      "path": "skills/cloudflare/references/turn/README.md",
+      "sha256": "563471176abd1e88186f427a86c76f129b18ed01d6ffd7cdd0bfba94308fe934"
+    },
+    {
+      "path": "skills/cloudflare/references/turnstile/api.md",
+      "sha256": "02d4b7ae44210ecac05f10eaba4febd536bf1857b158daabcf9158d92fbbf382"
+    },
+    {
+      "path": "skills/cloudflare/references/turnstile/configuration.md",
+      "sha256": "f5b5557e6a29f51f7457b04542adeaa22371bef88ed948f17cad8fedd24a8335"
+    },
+    {
+      "path": "skills/cloudflare/references/turnstile/gotchas.md",
+      "sha256": "8bc23f989776e7e7e7ed8cf5ca4df81d5f583dd01743f2148e4bd864d52707ea"
+    },
+    {
+      "path": "skills/cloudflare/references/turnstile/patterns.md",
+      "sha256": "25ab4dde84a5f93d84f484f9f594953158397e60563096546fea8bd56a096bc0"
+    },
+    {
+      "path": "skills/cloudflare/references/turnstile/README.md",
+      "sha256": "4f62e851297299c0a0d41702b4a6b27d28151eacacaa8d65ab3e48877c5ad0d4"
+    },
+    {
+      "path": "skills/cloudflare/references/vectorize/api.md",
+      "sha256": "948d6742af9e85cf7bed0bc7d4cdf6599f826acca2f6fcd95923dcf1ed895c96"
+    },
+    {
+      "path": "skills/cloudflare/references/vectorize/configuration.md",
+      "sha256": "e7a625258a92afaf1c54aaf5de9dee2dd1d9fdb6e9e008b4b01f0c9e2737a183"
+    },
+    {
+      "path": "skills/cloudflare/references/vectorize/gotchas.md",
+      "sha256": "75d90ba780c91084686163453ddca427250072ab0407bc6ce5e08978b14cf188"
+    },
+    {
+      "path": "skills/cloudflare/references/vectorize/patterns.md",
+      "sha256": "f4b2c53bda95ea742b0348231953b0d8cdc5189599c81bb4b8c73c471efd0719"
+    },
+    {
+      "path": "skills/cloudflare/references/vectorize/README.md",
+      "sha256": "dd6c57307f8974d98afe18fb56b28a1c04af434d8384d289be54b45bc1843698"
+    },
+    {
+      "path": "skills/cloudflare/references/waf/api.md",
+      "sha256": "47bffa7d08a015812f2fce1b16b361d2eb6a655bb29e408ee3244f3a3431daf0"
+    },
+    {
+      "path": "skills/cloudflare/references/waf/configuration.md",
+      "sha256": "61c4e596bbc4b271c0689c6e17cf83bea423516a036732d4cf2aa6fc4ccd5fe4"
+    },
+    {
+      "path": "skills/cloudflare/references/waf/gotchas.md",
+      "sha256": "17515db9512ff90800d7ee17cd79fb7aa74479141c126f63bbc9df7a184fd398"
+    },
+    {
+      "path": "skills/cloudflare/references/waf/patterns.md",
+      "sha256": "5b7631de55125bbc0a81244cd4482798cc08895ff710c2393a8ba50fd507b431"
+    },
+    {
+      "path": "skills/cloudflare/references/waf/README.md",
+      "sha256": "39549d49af7c8633101126113ae8ef253cc416a564f3be8f808a359b81d34c8d"
+    },
+    {
+      "path": "skills/cloudflare/references/web-analytics/configuration.md",
+      "sha256": "faecca21c068e4a10c146b2427f58d8808390bf3cc1d03cf5bbcd73148722348"
+    },
+    {
+      "path": "skills/cloudflare/references/web-analytics/gotchas.md",
+      "sha256": "b2f9ec03f739741005aaaf535dc5e13b8b352ac3f17b4afaf2f9fd4604213331"
+    },
+    {
+      "path": "skills/cloudflare/references/web-analytics/integration.md",
+      "sha256": "4fc43cff77d92eea9ddef9e2d906cabf1e99387657b241ba77fbcf116dbeeb5c"
+    },
+    {
+      "path": "skills/cloudflare/references/web-analytics/patterns.md",
+      "sha256": "157bb605e7c22e9315167d488b3cafb80e4fad3546634d6d94601e905e61f472"
+    },
+    {
+      "path": "skills/cloudflare/references/web-analytics/README.md",
+      "sha256": "1789c0ddf3249f0050e0e6223265b21bc38b827b6bb148d968f6b409798d2b93"
+    },
+    {
+      "path": "skills/cloudflare/references/workerd/api.md",
+      "sha256": "f4ca59267e31c098c2145b4ed96cd05acce2a66e1c6b81db6a436aabfd944b1a"
+    },
+    {
+      "path": "skills/cloudflare/references/workerd/configuration.md",
+      "sha256": "e7c0260b6b79e32b4dde723968251235d6d94c2e0c6aa2ee613d32a54e96d6a7"
+    },
+    {
+      "path": "skills/cloudflare/references/workerd/gotchas.md",
+      "sha256": "f06f30f67ff23369531c6e709e85f79fb49f15eae34072e0c19780b3657d69ec"
+    },
+    {
+      "path": "skills/cloudflare/references/workerd/patterns.md",
+      "sha256": "fe2394a58fd66735d672ff397b2ab3718a1e63d28c40c08dd0e29a510095dd39"
+    },
+    {
+      "path": "skills/cloudflare/references/workerd/README.md",
+      "sha256": "6de3cd6d6046e60677e17e8a6eb62e700a7e4214229a6dbb2b0398f9b42fe488"
+    },
+    {
+      "path": "skills/cloudflare/references/workers/api.md",
+      "sha256": "155eb8956460a11254bd179a4f5ce63415c0e540c75ac2436de4c1d6834d87e2"
+    },
+    {
+      "path": "skills/cloudflare/references/workers/configuration.md",
+      "sha256": "b32ca7e2e02f45d89e777d275df957d978f0869e05e5798cef1291f73ea99669"
+    },
+    {
+      "path": "skills/cloudflare/references/workers/frameworks.md",
+      "sha256": "ca3743ff40e2fed57e435c6b80015ac67ba307bd0489191d16b4a48641c107c1"
+    },
+    {
+      "path": "skills/cloudflare/references/workers/gotchas.md",
+      "sha256": "c649d401ac630f3b5373356573602c17aef6d6b6cfb96277d10cb3e304255dd6"
+    },
+    {
+      "path": "skills/cloudflare/references/workers/patterns.md",
+      "sha256": "e3b159e64348970ea5ff4787bc34edb8bee829d421a96466f4d912264a156edf"
+    },
+    {
+      "path": "skills/cloudflare/references/workers/README.md",
+      "sha256": "dc819178b9972e58a59316653351a88a3428b9aa9bbacd28223c330562bf8a25"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-ai/api.md",
+      "sha256": "ded3718d2039fd1001b5bc979dc7caf43917cedf88c41fe03b6d3d25af04f669"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-ai/configuration.md",
+      "sha256": "05a4a75def4e7a22223d42748e7af41f5d9d75514a77bdcf43b392b6f50696b4"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-ai/gotchas.md",
+      "sha256": "8c86045c5d5e0bca5c4b9d256f175bcc3f58dd4c64fd2484853888d2e601b062"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-ai/patterns.md",
+      "sha256": "2018af7eba96ef5892b2ceda9cbb766fdfe7307f474b83e6a3ab8f53c462eeb1"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-ai/README.md",
+      "sha256": "4a891215c4b600fface91143550e2057be8ab2698aa81717d1dc5aabf7a5a26f"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-for-platforms/api.md",
+      "sha256": "d895cb9eca812a4438824ffdb489c0369d5390931c9537e36c1a182ad1c3fbc1"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-for-platforms/configuration.md",
+      "sha256": "5fadd90e99a6ceb85603a7f5e1b903921f45239f27f43f34b9757ea508afdcbf"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-for-platforms/gotchas.md",
+      "sha256": "d96cc391f0d523a0c1c17216fd091f4d9468eb14efc52b2f235cffd2b1fa9870"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-for-platforms/patterns.md",
+      "sha256": "3102a555a882d00f6c5c0efc14864d41b04934c38c5b0d33add54036bfebc440"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-for-platforms/README.md",
+      "sha256": "8ec32746130a1245e4a5006e0d459e5251c800cbb62d448eb24e31cef0fe6b4f"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-playground/api.md",
+      "sha256": "41b82250e8809fee305b6130979b9b6016259ca8e9e6090092597dfb1f6406eb"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-playground/configuration.md",
+      "sha256": "bac1ee1b8870b2ab83006960e19dd236a337fdea76476868425a3e723ecac11b"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-playground/gotchas.md",
+      "sha256": "a07b51705f3ac79ddd3eb298e1a23fd68c54abdc74eaf0107973bd23ca8026ac"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-playground/patterns.md",
+      "sha256": "af952e98983a3a300376317a79edc9026158639c7065f814fcd5b48721987b33"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-playground/README.md",
+      "sha256": "a51362f97512bc7d5092e12b9bb7c0a0570ad3876313f18975f6b890f2057f20"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-vpc/api.md",
+      "sha256": "d94a9c6f4fd60799da9da956f0734416c2e738b726d626fdd4859cb3fed1458f"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-vpc/configuration.md",
+      "sha256": "380dc38a740769e037e0c11bde3d09ea536e3a4b6e04cfa7d96bd3c5e66e2640"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-vpc/gotchas.md",
+      "sha256": "dad54ac6f27a10dfab893643c57824269ed43558366627ec48c1757e09843611"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-vpc/patterns.md",
+      "sha256": "62588392fc3ced6e1e0d3bafc7ea5eef0ea04b99507b2f20aaf415b82e87d3c2"
+    },
+    {
+      "path": "skills/cloudflare/references/workers-vpc/README.md",
+      "sha256": "cd4ae104e2a68d80344965db932020d146fbfb7e139ce7cbd2ddcfd414598a36"
+    },
+    {
+      "path": "skills/cloudflare/references/workflows/api.md",
+      "sha256": "7de943c7e51b621bf0997e2daa5eea9a39b5793b61dfe30625f02b8edd8e0f80"
+    },
+    {
+      "path": "skills/cloudflare/references/workflows/configuration.md",
+      "sha256": "066c81de71585600255068402e3771e511d644b4fccf76601764b6a29900292c"
+    },
+    {
+      "path": "skills/cloudflare/references/workflows/gotchas.md",
+      "sha256": "460da16348749f0e92522d076a19de9b8a30e53ec85f138c8d064ba0afa9b90d"
+    },
+    {
+      "path": "skills/cloudflare/references/workflows/patterns.md",
+      "sha256": "68bf18b6226799b0d26e4ab395dafb4f2ea8400d604a6e453771f07f1feded38"
+    },
+    {
+      "path": "skills/cloudflare/references/workflows/README.md",
+      "sha256": "0f77a9e07ccb406bc09e1963259c7b1565a8108c4b7aaca68f9b6d8213040770"
+    },
+    {
+      "path": "skills/cloudflare/references/wrangler/api.md",
+      "sha256": "4adf20de202beac9e5389d0ca43529bfe5661dd1b5c6116e01adaf863435bbc0"
+    },
+    {
+      "path": "skills/cloudflare/references/wrangler/configuration.md",
+      "sha256": "cf9603a1608658a50f6025a98a714efba44ae3bfe64bbeea784911176c8377a0"
+    },
+    {
+      "path": "skills/cloudflare/references/wrangler/gotchas.md",
+      "sha256": "fbd19502dddb14f3ade31047ce5cfc4ed5dedd87306ba7f941d6b7be7848c359"
+    },
+    {
+      "path": "skills/cloudflare/references/wrangler/patterns.md",
+      "sha256": "e5c03d56a4c4510b006b245a60493c94770c1f0cc9136d34b4cb41267d8c44d9"
+    },
+    {
+      "path": "skills/cloudflare/references/wrangler/README.md",
+      "sha256": "346357753e324f880cf1d493887885d60b29f086b84467acc8c361bec4d5d990"
+    },
+    {
+      "path": "skills/cloudflare/references/zaraz/api.md",
+      "sha256": "3b6a7f0ff89b785b053cd2c56e8e25cf57850e0a4911d63e24e1e9a564efaa93"
+    },
+    {
+      "path": "skills/cloudflare/references/zaraz/configuration.md",
+      "sha256": "09bf49fd221093f7761339086cc14893efa6673a2982009ec0b01f907c5e33b2"
+    },
+    {
+      "path": "skills/cloudflare/references/zaraz/gotchas.md",
+      "sha256": "27a9920b404b5df496f8f5d6825610e13358f842725ea45e6243eca33fe72f05"
+    },
+    {
+      "path": "skills/cloudflare/references/zaraz/IMPLEMENTATION_SUMMARY.md",
+      "sha256": "f90ba3051942dbe6c93c82d2300b25f6e5f4abb4cf3b2213f13c97876fa4e492"
+    },
+    {
+      "path": "skills/cloudflare/references/zaraz/patterns.md",
+      "sha256": "53424f7c8fb430901ecf1e832fa0152e8a69436fa2e7cb288d7d6a2a1506dd11"
+    },
+    {
+      "path": "skills/cloudflare/references/zaraz/README.md",
+      "sha256": "07d116170e3a0573750623d70d48aba02f9fa4bfc17ce1278e80408c0f657a64"
+    },
+    {
+      "path": "skills/cloudflare/SKILL.md",
+      "sha256": "016391794a80d83788053b0aae03fad653d93ae04a4a9a24c6ab346148a245d3"
+    },
+    {
+      "path": "skills/durable-objects/agents/openai.yaml",
+      "sha256": "c2b8f568aad77818ba141e0145b8d83a6678765991b16dcccf159aaeb07d41ee"
+    },
+    {
+      "path": "skills/durable-objects/references/rules.md",
+      "sha256": "44559ded9a770e4d18838b287c4763d0fd3c530d170f3c59fe01ee713fd0c80c"
+    },
+    {
+      "path": "skills/durable-objects/references/testing.md",
+      "sha256": "21009dcd4c22a15fdac3b61d542a7a0a43a8a7e1ef8fbd0abe2623c0e679cadd"
+    },
+    {
+      "path": "skills/durable-objects/references/workers.md",
+      "sha256": "f81ba83b1fbbc8f7bcea2c744787497eed8424dd97b3de7be330978f92aacaa9"
+    },
+    {
+      "path": "skills/durable-objects/SKILL.md",
+      "sha256": "8ecddfec282cdc8f964dbe577bdc176a5b5a490b3d7ddd68cb4b34cbafb0b177"
+    },
+    {
+      "path": "skills/sandbox-sdk/agents/openai.yaml",
+      "sha256": "0dc50c5fd63d894f657b3e23b17ec95f603e4ab2f87e46cb8450b0dba64ffba5"
+    },
+    {
+      "path": "skills/sandbox-sdk/references/api-quick-ref.md",
+      "sha256": "c929da01ff1753091dbb761578dfaf29a91ce74091b52fc0ac319779240e5163"
+    },
+    {
+      "path": "skills/sandbox-sdk/references/examples.md",
+      "sha256": "1f9c1813d98111370ee91933c0bd6000cb3fddf9de00e1227c9cf78e2234868d"
+    },
+    {
+      "path": "skills/sandbox-sdk/SKILL.md",
+      "sha256": "cbb2d82104e9ba11361ad9f790e56100f884c95bb0738ad028a0647a86fe4691"
+    },
+    {
+      "path": "skills/web-perf/agents/openai.yaml",
+      "sha256": "27efc705df7f9f1d00c55d13ac4cce3a9054d87f5d8b6bbf4a88f0fce062b7a4"
+    },
+    {
+      "path": "skills/web-perf/SKILL.md",
+      "sha256": "dc4dcc7dc370014f94056e62608f8fb2068821e4970b75ecf63a221692e3d763"
+    },
+    {
+      "path": "skills/workers-best-practices/agents/openai.yaml",
+      "sha256": "5f62184401894fd33cf30c54614521d6575416bbac5d4be2dd324720132a8cb7"
+    },
+    {
+      "path": "skills/workers-best-practices/references/review.md",
+      "sha256": "fb9fcc99dfe35b5004a06807fd0580fe0f632debfc9c6855d9360cf63507e93a"
+    },
+    {
+      "path": "skills/workers-best-practices/references/rules.md",
+      "sha256": "6730a1c56314039844c6b9b071a7cb089b11708ef7ab1b94763ee6cd3d9a6e17"
+    },
+    {
+      "path": "skills/workers-best-practices/SKILL.md",
+      "sha256": "b812711b9ea2e0def66553c46361998473845f319e3189c2c4f52ed3e15d8e85"
+    },
+    {
+      "path": "skills/wrangler/agents/openai.yaml",
+      "sha256": "e70655f03b87c8a3ae70e1680d280e9e4419460ff5f04615ed8e35c423ca450a"
+    },
+    {
+      "path": "skills/wrangler/assets/cloudflare-small.svg",
+      "sha256": "711c98be5a82360a8b8951a449af142fa78fb318fdf8ab6cca4c58f9fa7112e7"
+    },
+    {
+      "path": "skills/wrangler/assets/cloudflare.png",
+      "sha256": "ccef528d73dfe224cfb4817bcb7e15d63922421249d688031ff48c5eef2a2189"
+    },
+    {
+      "path": "skills/wrangler/LICENSE.txt",
+      "sha256": "44e03f7e263eb3ad256440c1eeab5e49168baff5a78ecef9a5447261cf3a91bc"
+    },
+    {
+      "path": "skills/wrangler/SKILL.md",
+      "sha256": "15d8ea7950775e30448bf0a046b1271e53db3f3db53fede6aafe4d25a4240b50"
+    }
+  ]
+}

@@ -1,0 +1,1179 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.life-science-research",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "life-science-research",
+    "repository": "plugins",
+    "path": "plugins/life-science-research",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "c1a01370d7017fe0d66e11c3087fb360af6794ebf020aec7e222e8f4828f8477",
+    "upstreamVersion": "1.0.3"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/alphafold-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/alphafold-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "alphafold-skill",
+        "description": "Submit compact AlphaFold Protein Structure Database API requests for prediction, UniProt summary, sequence summary, and annotation lookups. Use when a user wants AlphaFold metadata or concise structure summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/bgee-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/bgee-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "bgee-skill",
+        "description": "Submit compact Bgee SPARQL requests for healthy wild-type expression metadata and ontology-aware lookup patterns. Use when a user wants concise Bgee summaries; save raw results only on request."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/bindingdb-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/bindingdb-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "bindingdb-skill",
+        "description": "Submit compact BindingDB REST API requests for ligand-target binding lookups by PDB, UniProt, or similarity search. Use when a user wants concise BindingDB summaries; save raw payloads only on request."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/biobankjapan-phewas-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/biobankjapan-phewas-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "biobankjapan-phewas-skill",
+        "description": "Fetch compact BioBank Japan PheWAS summaries for single variants by accepting rsID, GRCh38, or GRCh37 input and resolving to the required GRCh37 query. Use when a user wants concise BBJ association results for one variant"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/biorxiv-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/biorxiv-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "biorxiv-skill",
+        "description": "Submit compact bioRxiv and medRxiv API requests for details, publication-linkage, and DOI lookups. Use when a user wants concise preprint metadata summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/biostudies-arrayexpress-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/biostudies-arrayexpress-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "biostudies-arrayexpress-skill",
+        "description": "Submit compact BioStudies and ArrayExpress API requests for free-text search and accession-based study retrieval. Use when a user wants concise BioStudies summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/cbioportal-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/cbioportal-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "cbioportal-skill",
+        "description": "Submit compact cBioPortal API requests for studies, molecular profiles, mutations, clinical data, and samples. Use when a user wants concise cBioPortal summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/cellxgene-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/cellxgene-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "cellxgene-skill",
+        "description": "Submit compact CELLxGENE Discover API requests for public collection and dataset metadata. Use when a user wants concise single-cell collection summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/chebi-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/chebi-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "chebi-skill",
+        "description": "Submit compact ChEBI 2.0 API requests for chemical search, compound lookup, ontology traversal, and structure metadata. Use when a user wants concise ChEBI summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/chembl-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/chembl-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "chembl-skill",
+        "description": "Submit compact ChEMBL API requests for activity, molecule, target, mechanism, and text-search endpoints. Use when a user wants concise ChEMBL summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/civic-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/civic-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "civic-skill",
+        "description": "Submit compact CIViC GraphQL requests for cancer variant interpretation schema inspection and targeted evidence retrieval. Use when a user wants concise CIViC summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/clinicaltrials-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/clinicaltrials-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "clinicaltrials-skill",
+        "description": "Submit compact ClinicalTrials.gov API v2 requests for study search, metadata, enums, search areas, and field statistics. Use when a user wants concise ClinicalTrials.gov summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/clinvar-variation-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/clinvar-variation-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "clinvar-variation-skill",
+        "description": "Submit compact ClinVar Clinical Tables and NCBI Variation requests for search, VCV, RCV, SCV, and RefSNP lookups. Use when a user wants variant-level summaries or identifier mapping"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/efo-ontology-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/efo-ontology-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "efo-ontology-skill",
+        "description": "Submit compact EFO OLS4 requests for search, term lookup, children, and descendants. Use when a user wants concise EFO resolution or ontology-expansion summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/encode-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/encode-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "encode-skill",
+        "description": "Submit compact ENCODE REST API requests for object lookups, portal-style search, and metadata retrieval. Use when a user wants concise ENCODE summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ensembl-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ensembl-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "ensembl-skill",
+        "description": "Submit compact Ensembl REST API requests for lookup, overlap, cross-reference, and variation endpoints. Use when a user wants concise Ensembl summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/epigraphdb-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/epigraphdb-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "epigraphdb-skill",
+        "description": "Submit compact EpiGraphDB API requests for ontology, literature, MR, gene-drug, and support-path evidence. Use when a user wants concise EpiGraphDB summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/eqtl-catalogue-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/eqtl-catalogue-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "eqtl-catalogue-skill",
+        "description": "Submit compact eQTL Catalogue API requests for association retrieval and documented metadata endpoints. Use when a user wants concise public eQTL Catalogue summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/eva-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/eva-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "eva-skill",
+        "description": "Submit compact EVA REST requests for species metadata and archived variant lookups. Use when a user wants concise European Variation Archive summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/finngen-phewas-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/finngen-phewas-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "finngen-phewas-skill",
+        "description": "Fetch compact FinnGen PheWAS summaries for single variants by accepting rsID, GRCh37, or GRCh38 input and resolving to the required GRCh38 query. Use when a user wants concise FinnGen association results for one variant"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/genebass-gene-burden-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/genebass-gene-burden-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "genebass-gene-burden-skill",
+        "description": "Submit compact Genebass gene burden requests for one Ensembl gene ID and one burden set. Use when a user wants concise Genebass PheWAS summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/gnomad-graphql-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/gnomad-graphql-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "gnomad-graphql-skill",
+        "description": "Submit compact gnomAD GraphQL requests for frequency, gene constraint, and variant context queries. Use when a user wants concise gnomAD summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/gtex-eqtl-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/gtex-eqtl-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "gtex-eqtl-skill",
+        "description": "Fetch GTEx single-tissue eQTL associations from one variant input by accepting rsID, GRCh37, or GRCh38 input and resolving to the required GRCh38 query for the GTEx v2 API. Use when a user wants eQTL associations returned as JSON."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/gwas-catalog-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/gwas-catalog-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "gwas-catalog-skill",
+        "description": "Submit compact GWAS Catalog REST API v2 requests for studies, associations, SNPs, EFO traits, genes, publications, loci, and metadata. Use when a user wants concise GWAS Catalog summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/hmdb-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/hmdb-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "hmdb-skill",
+        "description": "Submit compact HMDB search requests for metabolites, proteins, diseases, and pathways. Use when a user wants concise HMDB summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/human-protein-atlas-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/human-protein-atlas-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "human-protein-atlas-skill",
+        "description": "Submit compact Human Protein Atlas requests for gene JSON, search downloads, and page-level tissue or cell-line lookups. Use when a user wants concise Human Protein Atlas summaries; save raw JSON or HTML only on request."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ipd-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ipd-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "ipd-skill",
+        "description": "Submit compact IPD REST requests for HLA allele and cell-level metadata using the public IPD query API. Use when a user wants concise IPD summaries; save raw JSON or text only on request."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/locus-to-gene-mapper-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/locus-to-gene-mapper-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "locus-to-gene-mapper-skill",
+        "description": "Map GWAS loci to ranked candidate genes using a deterministic multi-skill chain (EFO -> GWAS -> coordinates -> Open Targets L2G/coloc -> eQTL -> burden/coding context), with reproducible tables and optional figures. Use when a user provides a trait/EFO term and/or lead variants and needs locus-to-gene prioritization for downstream biology decisions."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/metabolights-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/metabolights-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "metabolights-skill",
+        "description": "Submit compact MetaboLights requests for study discovery and study-level metabolomics metadata. Use when a user wants concise MetaboLights summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/mgnify-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/mgnify-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "mgnify-skill",
+        "description": "Submit compact MGnify API requests for microbiome studies, samples, and biome metadata. Use when a user wants concise MGnify summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ncbi-blast-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ncbi-blast-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "ncbi-blast-skill",
+        "description": "Submit, poll, and summarize NCBI BLAST Common URL API jobs (Blast.cgi) for nucleotide or protein sequences. Use when a user wants RID status, BLAST results, or compact top-hit summaries; fetch raw Text/JSON2 only on request."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ncbi-clinicaltables-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ncbi-clinicaltables-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "ncbi-clinicaltables-skill",
+        "description": "Submit compact Clinical Tables NCBI Gene requests for human gene lookup, pagination, and field selection. Use when a user wants concise autocomplete-style human gene search results"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ncbi-datasets-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ncbi-datasets-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "ncbi-datasets-skill",
+        "description": "Submit compact NCBI Datasets v2 requests for assembly, genome, taxonomy, and related metadata endpoints. Use when a user wants concise NCBI Datasets summaries; save raw JSON or text only on request."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ncbi-entrez-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ncbi-entrez-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "ncbi-entrez-skill",
+        "description": "Submit compact NCBI Entrez E-Utilities requests for PubMed, Gene, Protein, Nucleotide, PMC metadata, and GEO metadata workflows. Use when a user wants concise Entrez search, fetch, summary, or link results; save raw JSON or XML only on request."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ncbi-pmc-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ncbi-pmc-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "ncbi-pmc-skill",
+        "description": "Submit compact NCBI PMC Open Access requests for article/file availability metadata. Use when a user wants concise PMC Open Access summaries; save raw XML only on request."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/opentargets-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/opentargets-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "opentargets-skill",
+        "description": "Submit compact Open Targets Platform GraphQL requests for target, disease, drug, variant, study, and search data, including associated-disease datasource heatmap matrices. Use when a user wants concise Open Targets summaries or per-datasource evidence context"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/pharmgkb-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/pharmgkb-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "pharmgkb-skill",
+        "description": "Submit compact PharmGKB API requests for genes, variants, clinical annotations, dosing guidelines, and search. Use when a user wants concise PharmGKB summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/pride-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/pride-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "pride-skill",
+        "description": "Submit compact PRIDE Archive API requests for proteomics project discovery and project-level metadata. Use when a user wants concise PRIDE summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/proteomexchange-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/proteomexchange-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "proteomexchange-skill",
+        "description": "Submit compact ProteomeXchange PROXI requests for datasets, libraries, peptidoforms, proteins, PSMs, spectra, and USI examples. Use when a user wants concise PROXI summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/pubchem-pug-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/pubchem-pug-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "pubchem-pug-skill",
+        "description": "Submit compact PubChem PUG REST requests for compound properties, descriptions, assay summaries, and substance metadata. Use when a user wants concise PubChem summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/quickgo-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/quickgo-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "quickgo-skill",
+        "description": "Submit compact QuickGO requests for GO terms, annotations, and ontology traversal. Use when a user wants concise QuickGO summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/rcsb-pdb-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/rcsb-pdb-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "rcsb-pdb-skill",
+        "description": "Submit compact RCSB PDB requests for core metadata, Search API queries, and FASTA downloads. Use when a user wants concise RCSB summaries; save raw JSON or FASTA only on request."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/reactome-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/reactome-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "reactome-skill",
+        "description": "Submit compact Reactome ContentService requests for pathway, event, participant, search, and diagram-related data. Use when a user wants concise Reactome summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/research-router-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/research-router-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "research-router-skill",
+        "description": "Route broad or ambiguous life-sciences research requests to the right skills, normalize core entities, optionally parallelize independent evidence gathering with subagents when available, and synthesize a concise evidence-backed answer. Use when a user asks a general life-sciences question that could span multiple sources or analysis types."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/rhea-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/rhea-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "rhea-skill",
+        "description": "Submit compact Rhea reaction search requests for biochemical reactions and reaction IDs. Use when a user wants concise Rhea summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/rnacentral-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/rnacentral-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "rnacentral-skill",
+        "description": "Submit compact RNAcentral API requests for RNA entry browsing, single-entry lookup, and cross-reference retrieval. Use when a user wants concise RNAcentral summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/string-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/string-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "string-skill",
+        "description": "Submit compact STRING API requests for network, interaction partner, and enrichment endpoints. Use when a user wants concise STRING summaries"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/tpmi-phewas-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/tpmi-phewas-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "tpmi-phewas-skill",
+        "description": "Fetch compact TPMI PheWAS summaries for single variants by accepting rsID, GRCh37, or GRCh38 input and resolving to the required GRCh38 query. Use when a user wants concise TPMI association results for one variant"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ukb-topmed-phewas-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ukb-topmed-phewas-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "ukb-topmed-phewas-skill",
+        "description": "Fetch compact UKB-TOPMed PheWAS summaries for single variants by accepting rsID, GRCh37, or GRCh38 input and resolving to the required GRCh38 query. Use when a user wants concise UKB-TOPMed association results for one variant"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/uniprot-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/uniprot-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "uniprot-skill",
+        "description": "Submit compact UniProt REST API requests for UniProtKB, UniRef, UniParc, and FASTA stream endpoints. Use when a user wants concise UniProt summaries; save raw JSON or FASTA only on request."
+      }
+    }
+  ],
+  "copiedFiles": 163,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "703ae8363fc3fad8bede944bf41297bf438e950fb9b83613329f924f6dcb186d"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "02ad1294721616472a6a58783a8e0a3b16fb858acb87eae8921f2ca231e40717"
+    },
+    {
+      "path": "README.md",
+      "sha256": "49e6084c5d2da1cdab58131a58fa146aa3a1a17ab21bca7f781bed533582d533"
+    },
+    {
+      "path": "skills/alphafold-skill/agents/openai.yaml",
+      "sha256": "b7fed55cfb813b2574aba56847e272f6f1d0dfb9ab8c2415ffa567d8157297e0"
+    },
+    {
+      "path": "skills/alphafold-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/alphafold-skill/SKILL.md",
+      "sha256": "235f2c593d3bbcaac5870dc9b312d5e98ac4b4cceaf30a227f9d548638629d46"
+    },
+    {
+      "path": "skills/bgee-skill/agents/openai.yaml",
+      "sha256": "9b50d18fd0b06c3f8765e69d9e20b54f53b67371545775518a9f8259aa87cc5c"
+    },
+    {
+      "path": "skills/bgee-skill/scripts/sparql_request.py",
+      "sha256": "a9223b9c56a490ac860d637ebdeb6f08209e32e910f0ddac688c653f33d3f3b4"
+    },
+    {
+      "path": "skills/bgee-skill/SKILL.md",
+      "sha256": "14f3c56959fe2d67a4816a20d98d69856b34026045af6c8dcc5eb9f61037fb63"
+    },
+    {
+      "path": "skills/bindingdb-skill/agents/openai.yaml",
+      "sha256": "739c4228c3d4f73decf2454487b859d76491ff14f47dc8ae9f15ca2329cee3bd"
+    },
+    {
+      "path": "skills/bindingdb-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/bindingdb-skill/SKILL.md",
+      "sha256": "2970d17910aee62a128f26323af104b9211e38a0f7276436eee427e9ba591bca"
+    },
+    {
+      "path": "skills/biobankjapan-phewas-skill/agents/openai.yaml",
+      "sha256": "285c62db93a36a5cd97ad76ec97491813a4e1efc7b5cc77b0bab7f69b431129e"
+    },
+    {
+      "path": "skills/biobankjapan-phewas-skill/scripts/biobankjapan_phewas.py",
+      "sha256": "b225884347a3ae25675e6268d5acbc2b2aa634710caa118e5eeeb70bebb6137f"
+    },
+    {
+      "path": "skills/biobankjapan-phewas-skill/scripts/variant_resolution.py",
+      "sha256": "1bf5570f1e2661747e52ee1be42f683db67d3249c8874eac2dea3b16a49da6bd"
+    },
+    {
+      "path": "skills/biobankjapan-phewas-skill/SKILL.md",
+      "sha256": "c53989f35e9045bb59d4b9eaf3d797bdbad9931d63b80662079cae033c8de6c1"
+    },
+    {
+      "path": "skills/biorxiv-skill/agents/openai.yaml",
+      "sha256": "0ed9211531a92bb8965cc97f235bd7e33888c5a9d698512140b3bc03705ed876"
+    },
+    {
+      "path": "skills/biorxiv-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/biorxiv-skill/SKILL.md",
+      "sha256": "48eac49dcb55439a1f9aba028d7e3c7db52c3fe960624b20ed554882221076e0"
+    },
+    {
+      "path": "skills/biostudies-arrayexpress-skill/agents/openai.yaml",
+      "sha256": "6d721920e6c5ae1bd8b364faddfe4390b2dfd8139d6c346b8521fb99533eded6"
+    },
+    {
+      "path": "skills/biostudies-arrayexpress-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/biostudies-arrayexpress-skill/SKILL.md",
+      "sha256": "2f380754ca68ed0dda554296b7399a8dabc94f236bfda4e57ed72f2291c233e0"
+    },
+    {
+      "path": "skills/cbioportal-skill/agents/openai.yaml",
+      "sha256": "bb88fb15184a06b4e4f1563fcc61b734c49099573efecfba6d9777829f46f49d"
+    },
+    {
+      "path": "skills/cbioportal-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/cbioportal-skill/SKILL.md",
+      "sha256": "0e2bd2934782db8334664499be632df86cafa3d0bc3d44a6ad34835c6bdba054"
+    },
+    {
+      "path": "skills/cellxgene-skill/agents/openai.yaml",
+      "sha256": "808226ad98abcd971942930aeb3eb89efa1aeea25d02a229f93623162c72c978"
+    },
+    {
+      "path": "skills/cellxgene-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/cellxgene-skill/SKILL.md",
+      "sha256": "5701df063a3b12590811b3da8b0495a28465e4691f97c85345bbe5f2a9cb3389"
+    },
+    {
+      "path": "skills/chebi-skill/agents/openai.yaml",
+      "sha256": "f01870557e6d4a68d308f82fe44bd1f33891ed293311feb8ae54342c9bd8a5f7"
+    },
+    {
+      "path": "skills/chebi-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/chebi-skill/SKILL.md",
+      "sha256": "32291dba45a6ea84cf72acffdfdef1de355ee24abaa95c662cd20019b41dbd67"
+    },
+    {
+      "path": "skills/chembl-skill/agents/openai.yaml",
+      "sha256": "452689645a951b7404668cdb213edf7fbf50e95713945a44afe00eb3dc098a03"
+    },
+    {
+      "path": "skills/chembl-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/chembl-skill/SKILL.md",
+      "sha256": "85365ad57ad4e76fa87273a6069eb3748d9a101c92c048d7a0c34bd38faec792"
+    },
+    {
+      "path": "skills/civic-skill/agents/openai.yaml",
+      "sha256": "7665fe632cbcc02e9f970080542560a1af81025fe0ffd8d177f065927b06a4bf"
+    },
+    {
+      "path": "skills/civic-skill/scripts/civic_graphql.py",
+      "sha256": "3ba3882ff2e7c3a1abceb6496fb941eff8dae43f3c108d121f460db50e71c224"
+    },
+    {
+      "path": "skills/civic-skill/SKILL.md",
+      "sha256": "f1bf30d089cba61d5ed632a6cbe0c102d314fa54cf47966b2637392e3284c6c0"
+    },
+    {
+      "path": "skills/clinicaltrials-skill/agents/openai.yaml",
+      "sha256": "8a1b2ca00be1db40d22d187b08876ca77a6553e90a2b40ee2ea12ee327b15e72"
+    },
+    {
+      "path": "skills/clinicaltrials-skill/scripts/clinicaltrials_client.py",
+      "sha256": "064519ea2f1dded538f83a801bc738f8352a1ecc9039300e015477643c88a340"
+    },
+    {
+      "path": "skills/clinicaltrials-skill/SKILL.md",
+      "sha256": "5c03a8faa9c550db6f0a3be26fdd8c63c57f5d3f370865a973525c98c633dad4"
+    },
+    {
+      "path": "skills/clinvar-variation-skill/agents/openai.yaml",
+      "sha256": "91c46f1a424f7ed6e6582bf41a7fe8bd081c640aeddaf1270670c75213ab4200"
+    },
+    {
+      "path": "skills/clinvar-variation-skill/scripts/clinvar_variation.py",
+      "sha256": "f5b7634eda86870e79823872821fd311194f89694ca4ec03b8bcd1d6a8a22541"
+    },
+    {
+      "path": "skills/clinvar-variation-skill/SKILL.md",
+      "sha256": "93a918271491e6ccdf9f41f276afb3bf5ed7215aee433de5cd534244734b2054"
+    },
+    {
+      "path": "skills/efo-ontology-skill/agents/openai.yaml",
+      "sha256": "c20b61d8368290e733a426775efdff8270c0fadf65a3c0a366ff20f92e6978ff"
+    },
+    {
+      "path": "skills/efo-ontology-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/efo-ontology-skill/SKILL.md",
+      "sha256": "b91c3641396159ab48e436d306c2b18bf94c27d9cf5d447f89fb24f6797c227d"
+    },
+    {
+      "path": "skills/encode-skill/agents/openai.yaml",
+      "sha256": "45ffe1385d806f6f23b23b30735894bd20ae59523bb414fc6a5620da3dd40429"
+    },
+    {
+      "path": "skills/encode-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/encode-skill/SKILL.md",
+      "sha256": "e1db9e790253f3b7c49fc3b48c84d894def187156a5834aeff4a53724a574896"
+    },
+    {
+      "path": "skills/ensembl-skill/agents/openai.yaml",
+      "sha256": "7d2debab38cb31d6c48951df20dbe7367ef0bf8aa87343e30bc18c8ce6fbd9b5"
+    },
+    {
+      "path": "skills/ensembl-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/ensembl-skill/SKILL.md",
+      "sha256": "827bc7422b77b8be3bd6ad64fe663da0ad4a02e3fbc3683187c3828d9d59d0b2"
+    },
+    {
+      "path": "skills/epigraphdb-skill/agents/openai.yaml",
+      "sha256": "5b50d56e7372f703322816e1ffbbf04f2fddf5553b4ab89039f1acc6be98dc86"
+    },
+    {
+      "path": "skills/epigraphdb-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/epigraphdb-skill/SKILL.md",
+      "sha256": "bc83bb8ad121e8d84ee34b3cb78e952a4df5f434bb482435f2a59a3afca74154"
+    },
+    {
+      "path": "skills/eqtl-catalogue-skill/agents/openai.yaml",
+      "sha256": "df737b4bda5cb415d7711eda71af7612b93221fbe70a9fa5fa58c131a3f9ef96"
+    },
+    {
+      "path": "skills/eqtl-catalogue-skill/scripts/rest_request.py",
+      "sha256": "c8f8b20d7c7fcddf1bdbba052044ef2838081191055dd16cc9a8726c9f947e04"
+    },
+    {
+      "path": "skills/eqtl-catalogue-skill/scripts/test_rest_request.py",
+      "sha256": "ce42f1975c652c8ff9f369d85a5321420ed9966a65db81d8882a4af7fcb9ac36"
+    },
+    {
+      "path": "skills/eqtl-catalogue-skill/SKILL.md",
+      "sha256": "ad0e8921f17cfee942ef002a0ccbd2e7b9a375e0e691484f4f5c00720778d0b2"
+    },
+    {
+      "path": "skills/eva-skill/agents/openai.yaml",
+      "sha256": "669fee8cab596e448a99048ed5b36d2bb56c9eb6dfa909371924ea923a3998e5"
+    },
+    {
+      "path": "skills/eva-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/eva-skill/SKILL.md",
+      "sha256": "f5b3d0f50d7db57a1858ef6793836d51910d16287456a98932ea2a109ffc3ecf"
+    },
+    {
+      "path": "skills/finngen-phewas-skill/agents/openai.yaml",
+      "sha256": "8fbb83564157c294bf2917dfdccfcc5ae80ee03b064ff743bffafb7015957951"
+    },
+    {
+      "path": "skills/finngen-phewas-skill/scripts/finngen_phewas.py",
+      "sha256": "13ffb6f8638a47eb61a748baa4e8a11784cdf65ec6ad0c2b83eceb34db51e065"
+    },
+    {
+      "path": "skills/finngen-phewas-skill/scripts/variant_resolution.py",
+      "sha256": "1bf5570f1e2661747e52ee1be42f683db67d3249c8874eac2dea3b16a49da6bd"
+    },
+    {
+      "path": "skills/finngen-phewas-skill/SKILL.md",
+      "sha256": "8eb1c7717c26f400785709fa5d1150400557951ff19eb63cdec3e54bf7866047"
+    },
+    {
+      "path": "skills/genebass-gene-burden-skill/agents/openai.yaml",
+      "sha256": "1e1d552255527b538ca1e5728a874e1a2fd232fc0786d868e17f6be032589847"
+    },
+    {
+      "path": "skills/genebass-gene-burden-skill/scripts/genebass_gene_burden.py",
+      "sha256": "174105146289ac3b26286cea7ad76ac02a40cfe5be01c02d48e18de48777c9ce"
+    },
+    {
+      "path": "skills/genebass-gene-burden-skill/SKILL.md",
+      "sha256": "08e29bad26cdd03cafb33a5899447d9b2167dbda91c948fcd8f7bb48a081cb7c"
+    },
+    {
+      "path": "skills/gnomad-graphql-skill/agents/openai.yaml",
+      "sha256": "e0648acdb76068cdb4758063da358e7765d972d7bcbb20853d08909b46c8d973"
+    },
+    {
+      "path": "skills/gnomad-graphql-skill/scripts/gnomad_graphql.py",
+      "sha256": "508cda1bec9d5877a6ccccb549d1b9fdc1ddbe29f6c1643b0c0dcd7cb7286062"
+    },
+    {
+      "path": "skills/gnomad-graphql-skill/SKILL.md",
+      "sha256": "38c639cae96f95bbc62a913aca32ef7208d22b24e92649a80c0076a99665dc2e"
+    },
+    {
+      "path": "skills/gtex-eqtl-skill/agents/openai.yaml",
+      "sha256": "ea398fd8d500376faf67891b39bd88cafa042383dd182e68e6ab5de34caa8208"
+    },
+    {
+      "path": "skills/gtex-eqtl-skill/scripts/gtex_eqtl.py",
+      "sha256": "609f647c03e26ba19fade1a53821cbe540446191494bf470adf27fd2256b3407"
+    },
+    {
+      "path": "skills/gtex-eqtl-skill/scripts/variant_resolution.py",
+      "sha256": "1bf5570f1e2661747e52ee1be42f683db67d3249c8874eac2dea3b16a49da6bd"
+    },
+    {
+      "path": "skills/gtex-eqtl-skill/SKILL.md",
+      "sha256": "648452c7d70b94d1b2d610d16043980c2e18a4cb0aa48f18d333befd05da313f"
+    },
+    {
+      "path": "skills/gwas-catalog-skill/agents/openai.yaml",
+      "sha256": "736e31f3fadb01fc0017e26f31a9c0b7fe6a23f4a29cafc49befc79345670e83"
+    },
+    {
+      "path": "skills/gwas-catalog-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/gwas-catalog-skill/SKILL.md",
+      "sha256": "1dafb3e0724fedd0ab4896c45faf6ca6bdfa4a788349ba8b33c020a5152177dc"
+    },
+    {
+      "path": "skills/hmdb-skill/agents/openai.yaml",
+      "sha256": "cc03702cac712cf51e05cf3efe57c8f7e6382ab3b7c1110880803cb5606a8e0c"
+    },
+    {
+      "path": "skills/hmdb-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/hmdb-skill/SKILL.md",
+      "sha256": "ac7c08aff3e1e0644275ffa9d53ef31ff4343530240d72514a84f287e37f69e6"
+    },
+    {
+      "path": "skills/human-protein-atlas-skill/agents/openai.yaml",
+      "sha256": "11a051f3c90f9574580233b364e50422f62ccf0e15b9a58c2299e8ea40366e2e"
+    },
+    {
+      "path": "skills/human-protein-atlas-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/human-protein-atlas-skill/SKILL.md",
+      "sha256": "8ab46bfeb53c8f24d481c83ee7be0a7c154802dcaa892e481c7ebc64c1f1e0a4"
+    },
+    {
+      "path": "skills/ipd-skill/agents/openai.yaml",
+      "sha256": "52aeaa48ce7c9bb8fc02753fe7db6835f49ca4641bfc0b69f7db767606ce8431"
+    },
+    {
+      "path": "skills/ipd-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/ipd-skill/SKILL.md",
+      "sha256": "d4779764af6c179572aa15702a6890bb2b20e43cd5eb289a9b21c49b8014f8fd"
+    },
+    {
+      "path": "skills/locus-to-gene-mapper-skill/agents/openai.yaml",
+      "sha256": "91885590b1ff75ee837fd815a2de904a12c58e9a7cf3f508f58f688277bcd0a7"
+    },
+    {
+      "path": "skills/locus-to-gene-mapper-skill/scripts/map_locus_to_gene.py",
+      "sha256": "995d1a6fe4275c9f5f095954a2e1219d215d388eed7a879ea492391bd0f0626a"
+    },
+    {
+      "path": "skills/locus-to-gene-mapper-skill/scripts/test_map_locus_to_gene.py",
+      "sha256": "23c117cf5fba91c1a1fcd7c5ccc0e4c56454509e8372c6532fceadc2a9b1b6e3"
+    },
+    {
+      "path": "skills/locus-to-gene-mapper-skill/SKILL.md",
+      "sha256": "f5b034165015042c08d246d8ad7ad0ea2107b5e5662cee62b3fc2185cd9e78e3"
+    },
+    {
+      "path": "skills/metabolights-skill/agents/openai.yaml",
+      "sha256": "687f50fcfc96f378410b0855cb164f34752ee9aca880e9ba2b5f56e5a793aaf4"
+    },
+    {
+      "path": "skills/metabolights-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/metabolights-skill/SKILL.md",
+      "sha256": "c225ca1a57df75c98be2b6bb4c528a9e5ddbda37e87eec0e3e2515dbab40a4be"
+    },
+    {
+      "path": "skills/mgnify-skill/agents/openai.yaml",
+      "sha256": "8de8f4ba5abe40bdc8ff985846ba4facab903ca8b48cf40cc082a737bfd35cdf"
+    },
+    {
+      "path": "skills/mgnify-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/mgnify-skill/SKILL.md",
+      "sha256": "89ee826a06dd25495866f8cfe44f120dc48a2d43fc30cfbc06bad7c2284a6894"
+    },
+    {
+      "path": "skills/ncbi-blast-skill/agents/openai.yaml",
+      "sha256": "49157e5ea238f5eb7fc4d6b62b437e2148ddfd8c60eed77a5291c707ec642436"
+    },
+    {
+      "path": "skills/ncbi-blast-skill/references/blast-common-url-api.txt",
+      "sha256": "e8477bc597e50e1583523dd86f5b5e6f2dcd05d5a3a576d29271967d58739e4c"
+    },
+    {
+      "path": "skills/ncbi-blast-skill/references/intent-notes.txt",
+      "sha256": "b5036e9b2304b6470e83338636d6ab52d61a09daba75f2f901849ba33d01cc25"
+    },
+    {
+      "path": "skills/ncbi-blast-skill/scripts/ncbi_blast.py",
+      "sha256": "0ac08d702c86fc05c757e0a5c64c886e838e9cfb6d7d3edeecd553ec26b21d3a"
+    },
+    {
+      "path": "skills/ncbi-blast-skill/scripts/test_ncbi_blast.py",
+      "sha256": "e919da97723aa20c331e7a155506a4351081a8e32faf6fec88de890fe1a6d175"
+    },
+    {
+      "path": "skills/ncbi-blast-skill/SKILL.md",
+      "sha256": "d8c8a8d8b4a1c11735b532190e1993f3151f849deeae2e06e5f6e9b63d2f3e54"
+    },
+    {
+      "path": "skills/ncbi-clinicaltables-skill/agents/openai.yaml",
+      "sha256": "60b730a9920779f08ba53d71e699b49df811949171bf9ac3cbbc1db1bd93d785"
+    },
+    {
+      "path": "skills/ncbi-clinicaltables-skill/scripts/ncbi_gene_clinicaltables.py",
+      "sha256": "1ac1aadadb8774388bec718dbba76c18439bdebd0691cd76d950d898ff4c9c8a"
+    },
+    {
+      "path": "skills/ncbi-clinicaltables-skill/SKILL.md",
+      "sha256": "d1d0236ab7dbf86e8ee167b080ecc9ebf74868153d42f9071ef27fc6bb375dfc"
+    },
+    {
+      "path": "skills/ncbi-datasets-skill/agents/openai.yaml",
+      "sha256": "14a41ecc7b3ec891820b30c77bed826137664baa2682649205ec4d5240f0e121"
+    },
+    {
+      "path": "skills/ncbi-datasets-skill/scripts/ncbi_datasets.py",
+      "sha256": "7a810c804eb3b7e76f1400518ee372bbd6327b49bb6418923ee77a3b9f27aaa1"
+    },
+    {
+      "path": "skills/ncbi-datasets-skill/SKILL.md",
+      "sha256": "3c8d35f28d9d514e81fb401e69e3791a8fde00850841e94c98e9543e1f899a60"
+    },
+    {
+      "path": "skills/ncbi-entrez-skill/agents/openai.yaml",
+      "sha256": "2b04b467757c3266765ece82d1b31eae570f7e4bfee149dee72b4b3472f8bb6c"
+    },
+    {
+      "path": "skills/ncbi-entrez-skill/references/geo.md",
+      "sha256": "27d8cff1531b5424904c7e91b27d1ba97321a8c297b38e156c4046517af29151"
+    },
+    {
+      "path": "skills/ncbi-entrez-skill/scripts/ncbi_entrez.py",
+      "sha256": "538917d8ffac70180c2f2c5662bf7283bf855cfe1485e00dbd126d7970ad524f"
+    },
+    {
+      "path": "skills/ncbi-entrez-skill/SKILL.md",
+      "sha256": "bb587b103f0fdaab3560c1f7f20137f70c6ef1c2c2b050cf59bd19054289cb6a"
+    },
+    {
+      "path": "skills/ncbi-pmc-skill/agents/openai.yaml",
+      "sha256": "c6c26fa1fe3cadf1b1de356937167e26d54cfd16a87d4f068c242cd3490c9389"
+    },
+    {
+      "path": "skills/ncbi-pmc-skill/scripts/ncbi_pmc.py",
+      "sha256": "8ad1e25c1bf69364234e8cb03a76557ff04f3f31be0728f570e40f588a3ecb2f"
+    },
+    {
+      "path": "skills/ncbi-pmc-skill/SKILL.md",
+      "sha256": "4284ebc946c1fefdc3007a2494459aa6ccfec0ebc06533c5f0b756b6575100e4"
+    },
+    {
+      "path": "skills/opentargets-skill/agents/openai.yaml",
+      "sha256": "80d00808c0c428fbdeace0016389a98a61759ff7c6f651c739ece6a8153538a6"
+    },
+    {
+      "path": "skills/opentargets-skill/scripts/opentargets_disease_heatmap.py",
+      "sha256": "90c769e52236c24ca54d43681fe248132e0af8273962421874ab96145eb21d74"
+    },
+    {
+      "path": "skills/opentargets-skill/scripts/opentargets_graphql.py",
+      "sha256": "e8cd3a5e6b1ea826a959138f88e1afd43271bb12d993f617c630b28b834892a5"
+    },
+    {
+      "path": "skills/opentargets-skill/SKILL.md",
+      "sha256": "d16175cc40caf563a1204193dffe436a25dd0b1dddf3ec317a91646f531fcc37"
+    },
+    {
+      "path": "skills/pharmgkb-skill/agents/openai.yaml",
+      "sha256": "981d9d8cc069c0b85b077e3ad6acd3cc2835fe2f07f8bafda929643f209fb7c6"
+    },
+    {
+      "path": "skills/pharmgkb-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/pharmgkb-skill/SKILL.md",
+      "sha256": "36aa3da151d8c1efc00f41b313eaac70ebcbcc5366e5a775ffbfea6f7dd9b1a8"
+    },
+    {
+      "path": "skills/pride-skill/agents/openai.yaml",
+      "sha256": "9fdf61b1265f9d752246f8722206297cfdb969d3647d687c4117a04cd1364709"
+    },
+    {
+      "path": "skills/pride-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/pride-skill/SKILL.md",
+      "sha256": "31125ba4001962ecaa03d51e52a78d49aee2aea76d6f54a200ddaa986e7b167d"
+    },
+    {
+      "path": "skills/proteomexchange-skill/agents/openai.yaml",
+      "sha256": "8634f99a8713b47b892557c9ceae2794aa5d2cd479636bc7e871b5bbebba088c"
+    },
+    {
+      "path": "skills/proteomexchange-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/proteomexchange-skill/SKILL.md",
+      "sha256": "100563cad63f1d14c2ff1cf94a2c492a055d09522d083285b41ffa0891b80e18"
+    },
+    {
+      "path": "skills/pubchem-pug-skill/agents/openai.yaml",
+      "sha256": "d78f4d0ff669ec9cd09d747de0ba18069f4708843ef42a9cfb2cb33698081615"
+    },
+    {
+      "path": "skills/pubchem-pug-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/pubchem-pug-skill/SKILL.md",
+      "sha256": "5728f5fe20c3d3e63e10236e806f5d561560b5609ebaf13db1c244cd7e382b83"
+    },
+    {
+      "path": "skills/quickgo-skill/agents/openai.yaml",
+      "sha256": "3d38251c54a4685f8ddb43ddd30a4563a16662c87c95bcfd873ecd6b35677d69"
+    },
+    {
+      "path": "skills/quickgo-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/quickgo-skill/SKILL.md",
+      "sha256": "996c55b8e0d8c9cc83b193af0d6cf35b21569fdd4adf6837470e75f41e288edf"
+    },
+    {
+      "path": "skills/rcsb-pdb-skill/agents/openai.yaml",
+      "sha256": "6f2a138a60fd8bec7272fdb7735982c98611f884392b7dcbf2af82dcc59c382b"
+    },
+    {
+      "path": "skills/rcsb-pdb-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/rcsb-pdb-skill/SKILL.md",
+      "sha256": "9388defc4e738529e9e5e54120cc511d5570597d07e0b7d36346bce113b2f119"
+    },
+    {
+      "path": "skills/reactome-skill/agents/openai.yaml",
+      "sha256": "f842ecc8af490e6e9ca4cd32f3a3f4b52363ef057e6ab10007bf97d3d13b8035"
+    },
+    {
+      "path": "skills/reactome-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/reactome-skill/SKILL.md",
+      "sha256": "a8c663b889a4d9227caac4b3ae5f1211d79a3075e643d4eb5ba60e7520d9a263"
+    },
+    {
+      "path": "skills/research-router-skill/agents/openai.yaml",
+      "sha256": "84cfe8d23d5da5bcbecaa2976c8306f0254f4026010005c2ec8330a7c8a8bd15"
+    },
+    {
+      "path": "skills/research-router-skill/SKILL.md",
+      "sha256": "e04bb09f3f6def4504572b3831b3356bdbec2474a4d8697fd4fa7e6b0fb001ee"
+    },
+    {
+      "path": "skills/rhea-skill/agents/openai.yaml",
+      "sha256": "a1f5d66be4f03277aed97c408356529ebe065e349468b6ac42a6f64d3c9b0181"
+    },
+    {
+      "path": "skills/rhea-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/rhea-skill/SKILL.md",
+      "sha256": "d4819ac9009e7b1683dee20016eb4911a1a19ee4a62919658e4da503a2af4716"
+    },
+    {
+      "path": "skills/rnacentral-skill/agents/openai.yaml",
+      "sha256": "9a66556a9b64c1b22e4d09f458ea17b90dd8055d5db62e0488b6c0d6824f773c"
+    },
+    {
+      "path": "skills/rnacentral-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/rnacentral-skill/SKILL.md",
+      "sha256": "9915ce705a1a6c6b725c61bd637a63fc3eb1839a4f693e622abafd20dd33a12d"
+    },
+    {
+      "path": "skills/string-skill/agents/openai.yaml",
+      "sha256": "bf0f4901b8ebc4d1ca3c8782b09a06004dc1403ddffafe21704a622ff57f39a0"
+    },
+    {
+      "path": "skills/string-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/string-skill/SKILL.md",
+      "sha256": "11b00505982569e9f0c1f46a0ceb7e7a5b66c84950420e61340d0de455d37c82"
+    },
+    {
+      "path": "skills/tpmi-phewas-skill/agents/openai.yaml",
+      "sha256": "78cd1ea858dd7a49da3ddd28d5f3ff17b082e3a1f80fb26dcce56a19604e8ecf"
+    },
+    {
+      "path": "skills/tpmi-phewas-skill/scripts/tpmi_phewas.py",
+      "sha256": "156600546fa506db32869cfd24ff672463bc754e7b8515b5928fb66ec7e31c4d"
+    },
+    {
+      "path": "skills/tpmi-phewas-skill/scripts/variant_resolution.py",
+      "sha256": "1bf5570f1e2661747e52ee1be42f683db67d3249c8874eac2dea3b16a49da6bd"
+    },
+    {
+      "path": "skills/tpmi-phewas-skill/SKILL.md",
+      "sha256": "ada27e45c7c14eb7f2dc1ea905ed49a5b4c297f02250a1637ea9597b6b79bbc5"
+    },
+    {
+      "path": "skills/ukb-topmed-phewas-skill/agents/openai.yaml",
+      "sha256": "e424dabba7d948245331bf6d7de6335a38e5e6236bb95db6a86ee94575cadef7"
+    },
+    {
+      "path": "skills/ukb-topmed-phewas-skill/scripts/ukb_topmed_phewas.py",
+      "sha256": "8c1351148f5ce71e0e883a739464beff81d416dda75f41930e52b6651f3a4db1"
+    },
+    {
+      "path": "skills/ukb-topmed-phewas-skill/scripts/variant_resolution.py",
+      "sha256": "1bf5570f1e2661747e52ee1be42f683db67d3249c8874eac2dea3b16a49da6bd"
+    },
+    {
+      "path": "skills/ukb-topmed-phewas-skill/SKILL.md",
+      "sha256": "1949e016863a289307871e18600b403c086a1ebadb500c389906fb26f8b7482c"
+    },
+    {
+      "path": "skills/uniprot-skill/agents/openai.yaml",
+      "sha256": "760a7130662642815f648641249ee336cf115791c4206e160b8f1f53d54fe79c"
+    },
+    {
+      "path": "skills/uniprot-skill/scripts/rest_request.py",
+      "sha256": "519032fd31258f04e9a59e2d72fb3f005d5edbff3377dcc11975fecb68599b0c"
+    },
+    {
+      "path": "skills/uniprot-skill/SKILL.md",
+      "sha256": "bd5737336c41e224ce09350413db09c91e0969f12d0eb20cab0e606ddc7294ce"
+    }
+  ]
+}

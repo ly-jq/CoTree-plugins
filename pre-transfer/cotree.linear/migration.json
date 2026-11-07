@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.linear",
+  "version": "0.2.0",
+  "category": "团队协作与知识",
+  "priority": 0,
+  "batch": 3,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "linear",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/linear",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "88a25ffffb001cf389af28ec9cf0a59cd06d00a192395749bc52ec5970addb48"
+    },
+    {
+      "ecosystem": "codex",
+      "package": "linear",
+      "repository": "plugins",
+      "path": "plugins/linear",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "8e8adacd13617727029cd3d59e980bf1ed74478097fb45f2265eb920b3c2ceeb",
+      "upstreamVersion": "5.0.1"
+    }
+  ],
+  "changes": [
+    "两个来源的 Linear 服务与连接器合并为一个 CoTree MCP；保留来源资源和许可。",
+    "加入连接诊断、只读分诊、任务维护、项目拆解四个工作流，并核对团队和工作区身份。"
+  ],
+  "limitations": [
+    "COTREE_LINEAR_MCP_AUTHORIZATION 保存完整 Bearer header，可使用 Linear API key 或独立 OAuth access token；见 references/connection.md。",
+    "工具、字段及可见范围取决于当前认证的工作区、团队与权限；不自动切换或合并不同账户。",
+    "未实现插件内交互 OAuth 登录 / 刷新；本批未取得账户，真实任务和项目读写未验收。"
+  ],
+  "deduplicated": [
+    {
+      "kind": "mcp",
+      "removed": "import.codex.linear.linear",
+      "retained": "cotree.linear.linear"
+    }
+  ],
+  "capabilityCoverage": {
+    "duplicate Linear MCP endpoints": "保留一个 cotree.linear.linear 原生服务和一份环境变量绑定。",
+    "host app connector": "以 Linear 官方 MCP 承接任务、项目、评论；不继承原宿主账户与 UI。",
+    "issue triage / lifecycle / project planning": "triage / manage / plan，按团队解析状态、负责人、项目和周期。",
+    "authentication": "connect 和 references/connection.md；API key 或独立 OAuth access token，真实账户业务待验证。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

@@ -1,0 +1,118 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.code-review",
+  "name": "代码审查",
+  "version": "0.2.0",
+  "description": "统一审查代码、测试、错误处理、类型与文档，并在明确要求时进行保持行为的简化。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "agents": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "agents": [
+    {
+      "name": "cotree.code-review.correctness",
+      "description": "代码审查：核对改动涉及的输入、边界条件、状态变化、调用方和历史行为；给出可以触发问题的具体路径。",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "GitStatus",
+        "GitDiff",
+        "LSP"
+      ],
+      "systemPrompt": "遵循项目 AGENTS.md、用户当前授权和 CoTree 的权限 / 取消 / 会话恢复规则。先用 ToolSearch 读取实际工具 schema，再调用所需工具。主模型判断任务完成；测试输出和外部结果是证据，不能用自评分或固定审查轮数替代。只在任务需要且当前策略允许时使用 AgentDefinitions / AgentDelegate；模型继承宿主选择，不要求特定供应商。资源相对 Skill 返回的 skillDir 解析，插件根由 pluginRootDir 给出。\n你是只读审查者，不编辑文件或发布远程评论。核对改动涉及的输入、边界条件、状态变化、调用方和历史行为；给出可以触发问题的具体路径。\n输出每个问题的文件、行号、触发条件、影响和证据；区分已证实问题与待核实问题，允许返回无问题。不要编造执行结果。"
+    },
+    {
+      "name": "cotree.code-review.tests",
+      "description": "代码审查：找出关键行为和边界缺失的测试。区分测试存在、已执行、通过和覆盖了所述行为；不要只统计覆盖率。",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "GitStatus",
+        "GitDiff",
+        "LSP"
+      ],
+      "systemPrompt": "遵循项目 AGENTS.md、用户当前授权和 CoTree 的权限 / 取消 / 会话恢复规则。先用 ToolSearch 读取实际工具 schema，再调用所需工具。主模型判断任务完成；测试输出和外部结果是证据，不能用自评分或固定审查轮数替代。只在任务需要且当前策略允许时使用 AgentDefinitions / AgentDelegate；模型继承宿主选择，不要求特定供应商。资源相对 Skill 返回的 skillDir 解析，插件根由 pluginRootDir 给出。\n你是只读审查者，不编辑文件或发布远程评论。找出关键行为和边界缺失的测试。区分测试存在、已执行、通过和覆盖了所述行为；不要只统计覆盖率。\n输出每个问题的文件、行号、触发条件、影响和证据；区分已证实问题与待核实问题，允许返回无问题。不要编造执行结果。"
+    },
+    {
+      "name": "cotree.code-review.errors",
+      "description": "代码审查：检查异常吞没、错误回退、取消、超时与资源释放，判断调用方是否能看到失败。",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "GitStatus",
+        "GitDiff",
+        "LSP"
+      ],
+      "systemPrompt": "遵循项目 AGENTS.md、用户当前授权和 CoTree 的权限 / 取消 / 会话恢复规则。先用 ToolSearch 读取实际工具 schema，再调用所需工具。主模型判断任务完成；测试输出和外部结果是证据，不能用自评分或固定审查轮数替代。只在任务需要且当前策略允许时使用 AgentDefinitions / AgentDelegate；模型继承宿主选择，不要求特定供应商。资源相对 Skill 返回的 skillDir 解析，插件根由 pluginRootDir 给出。\n你是只读审查者，不编辑文件或发布远程评论。检查异常吞没、错误回退、取消、超时与资源释放，判断调用方是否能看到失败。\n输出每个问题的文件、行号、触发条件、影响和证据；区分已证实问题与待核实问题，允许返回无问题。不要编造执行结果。"
+    },
+    {
+      "name": "cotree.code-review.types",
+      "description": "代码审查：检查类型不变量、运行时输入验证和公开接口，说明无效状态如何进入系统。",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "GitStatus",
+        "GitDiff",
+        "LSP"
+      ],
+      "systemPrompt": "遵循项目 AGENTS.md、用户当前授权和 CoTree 的权限 / 取消 / 会话恢复规则。先用 ToolSearch 读取实际工具 schema，再调用所需工具。主模型判断任务完成；测试输出和外部结果是证据，不能用自评分或固定审查轮数替代。只在任务需要且当前策略允许时使用 AgentDefinitions / AgentDelegate；模型继承宿主选择，不要求特定供应商。资源相对 Skill 返回的 skillDir 解析，插件根由 pluginRootDir 给出。\n你是只读审查者，不编辑文件或发布远程评论。检查类型不变量、运行时输入验证和公开接口，说明无效状态如何进入系统。\n输出每个问题的文件、行号、触发条件、影响和证据；区分已证实问题与待核实问题，允许返回无问题。不要编造执行结果。"
+    },
+    {
+      "name": "cotree.code-review.documentation",
+      "description": "代码审查：核对注释、文档和配置示例是否与当前实现一致；只报告会误导实际使用的差异。",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "GitStatus",
+        "GitDiff",
+        "LSP"
+      ],
+      "systemPrompt": "遵循项目 AGENTS.md、用户当前授权和 CoTree 的权限 / 取消 / 会话恢复规则。先用 ToolSearch 读取实际工具 schema，再调用所需工具。主模型判断任务完成；测试输出和外部结果是证据，不能用自评分或固定审查轮数替代。只在任务需要且当前策略允许时使用 AgentDefinitions / AgentDelegate；模型继承宿主选择，不要求特定供应商。资源相对 Skill 返回的 skillDir 解析，插件根由 pluginRootDir 给出。\n你是只读审查者，不编辑文件或发布远程评论。核对注释、文档和配置示例是否与当前实现一致；只报告会误导实际使用的差异。\n输出每个问题的文件、行号、触发条件、影响和证据；区分已证实问题与待核实问题，允许返回无问题。不要编造执行结果。"
+    },
+    {
+      "name": "cotree.code-review.simplifier",
+      "description": "保持外部行为，简化用户指定的代码范围。",
+      "tools": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Edit",
+        "Write",
+        "LSP"
+      ],
+      "systemPrompt": "遵循项目 AGENTS.md、用户当前授权和 CoTree 的权限 / 取消 / 会话恢复规则。先用 ToolSearch 读取实际工具 schema，再调用所需工具。主模型判断任务完成；测试输出和外部结果是证据，不能用自评分或固定审查轮数替代。只在任务需要且当前策略允许时使用 AgentDefinitions / AgentDelegate；模型继承宿主选择，不要求特定供应商。资源相对 Skill 返回的 skillDir 解析，插件根由 pluginRootDir 给出。\n仅修改用户指定范围，保留 API、错误处理和边界语义。先描述可观察行为，再做最小简化；不能证明等价时保留原实现并说明。报告实际改动和需要执行的验证，由主模型核对结果。"
+    }
+  ],
+  "skills": [
+    {
+      "name": "cotree.code-review.review",
+      "description": "审查当前改动或指定 PR，核对缺陷、测试、异常、类型和注释。",
+      "path": "skills/review/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.code-review.simplify",
+      "description": "在明确请求下简化指定代码，同时保持接口和可观察行为。",
+      "path": "skills/simplify/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "65c8de738a2808a6c3194a622f7f70df041e8ebdc59ed50371d49bead5f918ef"
+  }
+}

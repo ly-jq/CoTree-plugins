@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.terraform",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "terraform",
+    "repository": "claude-plugins-official",
+    "path": "external_plugins/terraform",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "dd622210ba1cef45cc396ee359fc6ce5da49d1871ac10ab40df2e14c70c9e301"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "需 Docker 与 TFE_TOKEN 环境凭据，容器仅继承该变量。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#terraform",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/terraform"
+    }
+  ],
+  "copiedFiles": 0,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "25ea7b07622d85ae26a2d87e266d69f543e87b201a27a98697a34d00420b5935"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "a68632d1f38de09b9dfffb38137f933598f9980c91abf6b871d1084897641d54"
+    }
+  ]
+}

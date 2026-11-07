@@ -1,0 +1,74 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.zotero",
+  "name": "Zotero",
+  "version": "0.2.0",
+  "description": "在 CoTree 中检索 Zotero Desktop 文献、导出 BibTeX 和格式化书目、准备准确引用，并读取指定附件或导入授权文献。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/icon.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.zotero.connect",
+      "description": "检查 Zotero Desktop、本地 API 和独立运行条件。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.zotero.inventory",
+      "description": "盘点 Zotero 本地条目、集合、标签与已同步群组。",
+      "path": "skills/inventory/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.zotero.search",
+      "description": "检索 Zotero 文献并明确选中的条目。",
+      "path": "skills/search/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.zotero.export",
+      "description": "导出或同步指定 Zotero 条目的 BibTeX 文件。",
+      "path": "skills/export/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.zotero.bibliography",
+      "description": "读取 Zotero 的格式化引文并整理可核对书目。",
+      "path": "skills/bibliography/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.zotero.cite",
+      "description": "将已确认文献引用写入 LaTeX 或 Markdown 草稿。",
+      "path": "skills/cite/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.zotero.attachments",
+      "description": "按用户请求读取 Zotero 附件元数据、索引文本或文件位置。",
+      "path": "skills/attachments/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.zotero.import",
+      "description": "将已授权 BibTeX / RIS 文献导入明确 Zotero 目标。",
+      "path": "skills/import/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "92e82219492e632ad00e9c7e4542edc13f58d9066514e807b387f2db398e45a0"
+  }
+}

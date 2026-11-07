@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.laravel-boost",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "laravel-boost",
+    "repository": "claude-plugins-official",
+    "path": "external_plugins/laravel-boost",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "5d20d2453ff0983d8cf423f3454d11dac84e6955ed73dc36c93eda937476cee4"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "需当前工作区为安装 Laravel Boost 的 PHP / Laravel 项目。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#laravel-boost",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/laravel-boost"
+    }
+  ],
+  "copiedFiles": 0,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "a8eb327c79822e9b8ed62e0e79a8f1207a85df97d10054e9d12fceaca2d0e0e4"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "3704e364b8a22aa3c493581607fde261f0b61c502c768f63ca986b52286cc1dd"
+    }
+  ]
+}

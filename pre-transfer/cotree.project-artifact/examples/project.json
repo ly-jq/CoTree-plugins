@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "title": "示例项目状态",
+  "summary": "这是输入结构示例，替换为实际项目、工作流和观察证据后再交付。",
+  "asOf": "2026-10-14T00:00:00Z",
+  "sources": [
+    {
+      "id": "plan",
+      "label": "示例计划",
+      "reference": "docs/plan.md",
+      "observedAt": "2026-10-14T00:00:00Z",
+      "status": "fresh"
+    }
+  ],
+  "workstreams": [
+    {
+      "id": "1.0",
+      "title": "准备项目",
+      "status": "计划中",
+      "evidence": "示例输入，不代表实际完成。",
+      "sourceIds": [
+        "plan"
+      ],
+      "next": "替换为真实资料。"
+    }
+  ],
+  "next": [
+    "读取项目实际资料后更新页面。"
+  ],
+  "sections": []
+}

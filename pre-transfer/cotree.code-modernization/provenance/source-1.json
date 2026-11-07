@@ -1,0 +1,585 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.code-modernization",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "code-modernization",
+    "repository": "claude-plugins-official",
+    "path": "plugins/code-modernization",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "1de783f8dbc3a281d2baf1f7e7d3e551c50992a2c23d26dffaf7bf55749cd923",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+  ],
+  "components": [
+    {
+      "kind": "command",
+      "source": "commands/modernize-assess.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/modernize-brief.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/modernize-extract-rules.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/modernize-harden.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/modernize-map.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/modernize-preflight.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/modernize-reimagine.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/modernize-review.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/modernize-status.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/modernize-transform.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/modernize-uplift.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/modernize-verify.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/modernize.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/architecture-critic.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/business-rules-extractor.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/legacy-analyst.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/scaffolder.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/security-auditor.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/test-engineer.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/uplift-migrator.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/version-delta-analyst.md",
+      "state": "deferred",
+      "reason": "依赖 claude-code EngineInterface 的 UI / store / prompt / turn API。"
+    },
+    {
+      "kind": "hook",
+      "source": "hooks/hooks.json",
+      "state": "deferred",
+      "reason": "Source host event / output contract is not registered in Elyra."
+    }
+  ],
+  "copiedFiles": 105,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "0337b90553605929ec1f089be359b60209f8923cd96b7e99203d328097744310"
+    },
+    {
+      "path": "agents/architecture-critic.md",
+      "sha256": "f490d869610401a587714e3bac0b953315f6a35067609f15463e0305fee29067"
+    },
+    {
+      "path": "agents/business-rules-extractor.md",
+      "sha256": "4440ea58bf4bcfbcfb51279fdc58c1481bdef935ddfca63cc1f08cd1f1eacf43"
+    },
+    {
+      "path": "agents/legacy-analyst.md",
+      "sha256": "c09f57c2041e70e5d7e551f994bde9095814151116358bc2fa2c0ef2aab61f77"
+    },
+    {
+      "path": "agents/scaffolder.md",
+      "sha256": "9f28e06b78a61dde14cc02ba0454d2da849cc08177188515cf920a85351e8ea8"
+    },
+    {
+      "path": "agents/security-auditor.md",
+      "sha256": "2d838c8c1339a3fcdbe367eb740260a8f5d8cc14b76edcca01f894e5bf99d495"
+    },
+    {
+      "path": "agents/test-engineer.md",
+      "sha256": "2ab400e3707b91126257499ab1676a40666cc2e9cd55c7eee7131b08554d9127"
+    },
+    {
+      "path": "agents/uplift-migrator.md",
+      "sha256": "63da56097e7d1b5d8bf42cc41512037b03f63d7c14eb0772b9e9f37fbc64e775"
+    },
+    {
+      "path": "agents/version-delta-analyst.md",
+      "sha256": "83c7f6f1261acd7eea146f4698b88d6b311ea659651707f8150a3df5a14ab589"
+    },
+    {
+      "path": "assets/media/pane-fleet.png",
+      "sha256": "6fc91ab55c13af5bed4c312864b630d78dfd91bf9b021ae8049d4579a6a11f0e"
+    },
+    {
+      "path": "assets/media/pane-hidden-bar.png",
+      "sha256": "710ae299969e70765222f81ee8fbf5f91c83341bd3b8a70981f254950af30bfb"
+    },
+    {
+      "path": "assets/media/pane-live.gif",
+      "sha256": "9144a8f2930a1271af33c60339233e18f17d8ef000102313637cc1317ec3bfa4"
+    },
+    {
+      "path": "assets/media/pane-review-deck.png",
+      "sha256": "2167258f7fc10a47085ac5d194ce74148744a0f98055050250cecb064be13eed"
+    },
+    {
+      "path": "assets/media/pane-rewrite-light.png",
+      "sha256": "81ed1c3d4a7c9c189f7b2d8f2a033452c50d80a0cc364f176b97ac08cba1819c"
+    },
+    {
+      "path": "assets/media/pane-rewrite.png",
+      "sha256": "1d8e642b296e156c7aaca9afcff6e68a0f2d7e41a5f94e2fbcb17dea2cf81aac"
+    },
+    {
+      "path": "assets/media/pane-sign.png",
+      "sha256": "be519ebf34752fad8af8508df5e6f080490731951a3792e7521fbac562616b44"
+    },
+    {
+      "path": "assets/media/pane-uplift-light.png",
+      "sha256": "61b486b94346d195162e0724f345630d5064afd2c3f88fdeff0c517d00e61f06"
+    },
+    {
+      "path": "assets/media/pane-uplift.png",
+      "sha256": "3d0416795fcc671ba1279a7fc120f04c3195c3424e4882a5291c7b4e3b6d21b6"
+    },
+    {
+      "path": "assets/media/pane-xray.png",
+      "sha256": "2d66476c5b569875bdd58e4db0ef45cc6aa41a397c69b8783e5559ca8a395194"
+    },
+    {
+      "path": "assets/media/report-caught.jpg",
+      "sha256": "851935e81f1b2ada2b17aa2e7fb5bf3fa49aba4ed067d739fb4e935bbc98a750"
+    },
+    {
+      "path": "assets/media/report-glance.jpg",
+      "sha256": "dcbb0350bfe406c09c66acb447039cb66890b735596b26f1e331e9c5e6c31adf"
+    },
+    {
+      "path": "assets/media/report-proof.jpg",
+      "sha256": "e4e9c2251f1c3e29f3367765b7584675a2ddc5fccab0f635464ab919e86af102"
+    },
+    {
+      "path": "assets/report-template.html",
+      "sha256": "ab9529b92bb5f947553bf668cd7169a5cd4fd688dcaa7d3a596677556a198a15"
+    },
+    {
+      "path": "assets/topology-viewer-screenshot.jpg",
+      "sha256": "2d08b465ccb3caa1366bd52fa7e4929cd3f88e7e173fc9df64d759d3598df028"
+    },
+    {
+      "path": "assets/topology-viewer.html",
+      "sha256": "a87b3d6f1e3726aa6c413c0972a820e825125206071a7ed19a72e2bf4657a9fb"
+    },
+    {
+      "path": "assets/vendor/LICENSE-mermaid.txt",
+      "sha256": "35f7140f8e9a741112cc2e94a9034796aa29710669c1f9e6b5385f219a0c78c3"
+    },
+    {
+      "path": "assets/vendor/mermaid.min.js",
+      "sha256": "66188ee859a5b1405cd66e8a96ff336e3151a92a9626ef61ae23bc728bd88a53"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "66f9166e2bf8cd4bfc3ebc483389f5b2e7cdae8ac844293092710fcbad2cfbb4"
+    },
+    {
+      "path": "commands/modernize-assess.md",
+      "sha256": "2d3dd17ba426702235e63a655ba2f329ab3ffaa4a4326bf6903c31d4201e9583"
+    },
+    {
+      "path": "commands/modernize-brief.md",
+      "sha256": "fbc3fbba2f3e02eb6423def321c393f577b8cdc306165a548321c04599fcae6e"
+    },
+    {
+      "path": "commands/modernize-extract-rules.md",
+      "sha256": "6ff27b0e580790c3be0c0636652abb9d579c1f7a2a65f218bce03d6540701cc5"
+    },
+    {
+      "path": "commands/modernize-harden.md",
+      "sha256": "d6754aeb02917560c639314c2e2ba12c7dae473c9c47ab4c55babc27dd16c296"
+    },
+    {
+      "path": "commands/modernize-map.md",
+      "sha256": "17b781afd6f3f07352ba7db68baf34b8462155a5a442ccf5648a587d9ca306b2"
+    },
+    {
+      "path": "commands/modernize-preflight.md",
+      "sha256": "50a655cc0ed99c01dbfd5e7d34779df78e0dd8b6ce857b0d891834d9f56c8c44"
+    },
+    {
+      "path": "commands/modernize-reimagine.md",
+      "sha256": "d32775e7fdf352a6eb3859be4ec099d28a057fcd481702ee947aea03c6b9e592"
+    },
+    {
+      "path": "commands/modernize-review.md",
+      "sha256": "2ca226d40c3b5b609517fb62769f12076f99ea31562d91d44d30cafea2401b31"
+    },
+    {
+      "path": "commands/modernize-status.md",
+      "sha256": "1f5620e46d0aaf1b84158e2efa5c3ec9f2d0a945501976a57bf7dc3b1caf0c57"
+    },
+    {
+      "path": "commands/modernize-transform.md",
+      "sha256": "3a4fc03abad7e44b67d49f0e83eaebb16176bd3f7d6442afbad8735f870e3676"
+    },
+    {
+      "path": "commands/modernize-uplift.md",
+      "sha256": "bdb2e4b207570913471bf86f55a4ec5aacffe1d28cd283c6d60b4e14b14f52ce"
+    },
+    {
+      "path": "commands/modernize-verify.md",
+      "sha256": "8517b2c99500bbd982776aa5b4cf8e5aaadc3769c234c80c99e9e6db15cef5f9"
+    },
+    {
+      "path": "commands/modernize.md",
+      "sha256": "131450409ebdaf921465e799e11cf0f5190441401982c15f647f1413d7bce50d"
+    },
+    {
+      "path": "hooks/fleet/fleet.ts",
+      "sha256": "855f92817a51f79c906641ca9ebee7d93f76ebe031a01c2d8c703ea03d20e678"
+    },
+    {
+      "path": "hooks/hooks.json",
+      "sha256": "9c8debb169bd6ca36bc057594cde8f1ecc1049cc177a9e3db7ddda3cb2fd1d81"
+    },
+    {
+      "path": "hooks/host.ts",
+      "sha256": "db107cc58d0f125767415ab31059490710edc0942ff8d11e921c9df75e4dddfc"
+    },
+    {
+      "path": "hooks/map/estate.ts",
+      "sha256": "575816ad41affbc337c7f2026e5b34b179bfcd65a0663ff1109ccf815f661d6d"
+    },
+    {
+      "path": "hooks/map/raster.ts",
+      "sha256": "e850f4831dacc8be5569ad8304e62b4f5ce160ffc4f1a149e1d792031d857dab"
+    },
+    {
+      "path": "hooks/map/treemap.ts",
+      "sha256": "36b374d53eb451467328e6ee91e41bb458e6b0879aa10e4a8c8bf23862a081d4"
+    },
+    {
+      "path": "hooks/paths.ts",
+      "sha256": "da3723517586fa96318722373d16649e83f10412ad794bbc637958662076efe4"
+    },
+    {
+      "path": "hooks/reader/brief.ts",
+      "sha256": "7501b827a7bfddc41512de0c8850b38429d633238523cbf542d3d1369b1d1855"
+    },
+    {
+      "path": "hooks/reader/discover.ts",
+      "sha256": "e0a6b0e9dcf21cb2790a31a5d4a18fbf0dd795bd697cfbffed089293a86a8bc0"
+    },
+    {
+      "path": "hooks/reader/estate-model.ts",
+      "sha256": "fc8eecf2f80cd7de3b7178c7edf737df5951f4103ab6a1166a3230c9b1847b5f"
+    },
+    {
+      "path": "hooks/reader/fs.ts",
+      "sha256": "eed7683645598ba6db4fb1906060b0789ba975f3d33a2f00c5cc1054a74bed88"
+    },
+    {
+      "path": "hooks/reader/modernized.ts",
+      "sha256": "180e515743bb99e0691e3b1235399d3011d6d9f9382b2c4094b527fe6d07dc1a"
+    },
+    {
+      "path": "hooks/reader/progress.ts",
+      "sha256": "ebf4ca9701a01191ea1135097807c89aee143ee386e032a1b2c8f7b6be440a62"
+    },
+    {
+      "path": "hooks/reader/rules.ts",
+      "sha256": "fbd55b6d31935e2726f8ce660b08492626e60e66c50e8c34e9912422afce9cee"
+    },
+    {
+      "path": "hooks/reader/topology.ts",
+      "sha256": "a1b8d2358e6935a35d84f3db7af69a2aa520b283b6c48cf99add8f88dc79ef4d"
+    },
+    {
+      "path": "hooks/reader/tracks.ts",
+      "sha256": "937b406fe02df8a0503e1c63afcbf24af85c8034a474625d3220ddf695910079"
+    },
+    {
+      "path": "hooks/reader/uplift.ts",
+      "sha256": "27a16a4b1dd4b800c178af84f4db6bbb60841baa240a62f83d917572940d908f"
+    },
+    {
+      "path": "hooks/reader/verification.ts",
+      "sha256": "29063d59ab3eebaaf369ac882c4d95471e251656333acc858a37b1dad8a1a754"
+    },
+    {
+      "path": "hooks/README.md",
+      "sha256": "b50f6ebf9944f3ccd99abc06e6b38cd88f5a69f9aff22b6b17cde0259cd94365"
+    },
+    {
+      "path": "hooks/register.ts",
+      "sha256": "0d11d295eba1f9662de1b71903d90cddcf89c8e19f5f8c35e7a62f86c14cc220"
+    },
+    {
+      "path": "hooks/review/deck.ts",
+      "sha256": "9b3f76d061c1d6a30366af2aa51caacf6dcbe95a441c9841eae9e4da70d59c6c"
+    },
+    {
+      "path": "hooks/review/ledger.ts",
+      "sha256": "1a9ac8583bca01db75e0cb46a302c8a1daeb68f742fbbebef5038791cd6210ab"
+    },
+    {
+      "path": "hooks/sign.ts",
+      "sha256": "58f177dd6beed8ae1c587f83ae39310e61d37f20a8cd1e97bd1bbd6c98e35811"
+    },
+    {
+      "path": "hooks/state.ts",
+      "sha256": "bd12463a0d03b2b22d43808d721fd5309efe64fee7a409d8b91515ea89873ca8"
+    },
+    {
+      "path": "hooks/tests-run.ts",
+      "sha256": "8b1229f792e58f3897f4d2b1954cbe83253a1eddbfd1cb1af69e3f6e38f5dbb4"
+    },
+    {
+      "path": "hooks/text.ts",
+      "sha256": "276cf3cda83788ff806520cea3579db99735045837448ec8b205d7d0f9424ece"
+    },
+    {
+      "path": "hooks/views/deck.tsx",
+      "sha256": "fa9fde7f7e92d7f5478625758d670f0e9335fd028516757cd5aad537420e30d7"
+    },
+    {
+      "path": "hooks/views/palette.ts",
+      "sha256": "d7487fe4948eabd2aea028e18df8c5a2dfb85ce47809411d57918f69837a98fd"
+    },
+    {
+      "path": "hooks/views/pane.tsx",
+      "sha256": "d1cf239534bbde88332b2ec55d5b1249628d42c5fdf73749966d3a9b4de37d64"
+    },
+    {
+      "path": "hooks/xray/xray.ts",
+      "sha256": "941ee62ec199baa69fa27ec40bef6248ce95ccafde361b7296eb004aafe3b461"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "2642850a3878ecc989bccf85ba914594b8ce32eee9b7faed885c1849f19810bc"
+    },
+    {
+      "path": "scripts/baseline_diff.py",
+      "sha256": "d0250c509b2d939954515e43892b2974f6d26ca1118a6ac86aa2f2a927877f3c"
+    },
+    {
+      "path": "scripts/build_report.py",
+      "sha256": "8b4df8f30f27663fdf1a011588ece42c05621f2852f167c407988b97834f519a"
+    },
+    {
+      "path": "scripts/compare.py",
+      "sha256": "02b0a24fd9ece5e647db61d3f93f301e4451de61ffa0280f99cef25cf6fbe07d"
+    },
+    {
+      "path": "scripts/make_shards.py",
+      "sha256": "70b37640eeb59529fe16f0a7e771827c06976ef55dc63e1b5f4e2d3105fb5628"
+    },
+    {
+      "path": "scripts/proof_pack.py",
+      "sha256": "0465427b6cbfe990ccaf21429d85cd3dfcf74bdd86b3ebab7c5f11731805e1ba"
+    },
+    {
+      "path": "scripts/render_rules.py",
+      "sha256": "95ecca03537b9c664e93b6ab6e40aab779ad4b387e568b398850b2abd53b7b45"
+    },
+    {
+      "path": "scripts/telemetry.py",
+      "sha256": "d6e34960bdb6b1c5f67f6d202ccb95c0788799cb0f9a5ce7f95e6bdeed79164d"
+    },
+    {
+      "path": "scripts/telemetry.sh",
+      "sha256": "81e2009e074c3b4a6cfde538004e6b6f99c48b3da7176f4fce9520d5b1d10a56"
+    },
+    {
+      "path": "scripts/tests/test_compare_tolerance.py",
+      "sha256": "f20b49c9bf815a3fa50258dd80a3c967ad992c1aecfbb74e8645327d5ab9189c"
+    },
+    {
+      "path": "scripts/tests/test_proof_rules_run.py",
+      "sha256": "908c912625d1509596a2d6afb1be2ce1670e8c098b5acb0b7ff53845dafd2a1b"
+    },
+    {
+      "path": "scripts/tests/test_proof_tools.py",
+      "sha256": "9b56fe3b526a5fdf7fb51d94cacac902b46f9bb82509354308021ebfe46d7490"
+    },
+    {
+      "path": "scripts/tests/test_report_next.py",
+      "sha256": "4af3fdb24c40ff03ee0c497ffbd321a52f53edc1c04c554c074eccf9d70b98ac"
+    },
+    {
+      "path": "scripts/tests/test_report_tools.py",
+      "sha256": "16e10531474e99e971d486aa93edc2c8a0d54e6ea596eb2849987a160b837d76"
+    },
+    {
+      "path": "scripts/tests/test_rules_tools.py",
+      "sha256": "a140e9b9be191bdea843c15dea0e589561cab7015d010005e101543abc2e1110"
+    },
+    {
+      "path": "scripts/tests/test_telemetry.py",
+      "sha256": "27d7ecef4ee67f944d8395ba3619ede3704c47388a85af3922e6380e13418ff6"
+    },
+    {
+      "path": "scripts/trace_rules.py",
+      "sha256": "6ff1f3e2e77ba5c0eee1d786755bd93e1270a75a20cb00f74bf326c22b6d8ea6"
+    },
+    {
+      "path": "scripts/uplift_checks.py",
+      "sha256": "f80397017a7c5fd768d814b1a36f56fad04d837eb3000f9c377b2361acf3ba8c"
+    },
+    {
+      "path": "tests/fixtures/inputs.ts",
+      "sha256": "4f4007fbc09ea8d087e5ebb408ae7ab3bd90ae83afc7d10a6bd2083aa8eead1a"
+    },
+    {
+      "path": "tests/fixtures/stacks.ts",
+      "sha256": "768b17c586787e4639ac09354c20343f096fab72c8f9857b5f1ed24e784c2dad"
+    },
+    {
+      "path": "tests/fixtures/workspace.ts",
+      "sha256": "f65fb838b2f0804ad62421a705456a3c56611e3ef7aea6c67930d83c887db68a"
+    },
+    {
+      "path": "tests/fixtures/world.ts",
+      "sha256": "6b58577228d890ca46b2dadeeb2420fc4a6fa6aec88b4862cc4ba0918cd98125"
+    },
+    {
+      "path": "tests/hostile.test.ts",
+      "sha256": "efab817494396f426f2beb427b43a200fb8639f577d31adb44570ca29243e744"
+    },
+    {
+      "path": "tests/logic.test.ts",
+      "sha256": "fe7509b52c4f731f4bbd7e8df7854e254646a47faa54cf6f4606e50cda744c4a"
+    },
+    {
+      "path": "tests/mount.test.ts",
+      "sha256": "a31abce7b7c2de402159de6bb983465fa4edccb31924fa59692830dfcfdb9e5a"
+    },
+    {
+      "path": "tests/register.test.ts",
+      "sha256": "e2618bc21e990781a5e539d8ac33fe306687f3c920af92391e10209321ef2473"
+    },
+    {
+      "path": "tests/stacks.test.ts",
+      "sha256": "860b76568e8639eb5fa8f3023e3fa76e639f4e20dccc6b571cd03a53bd8129e3"
+    },
+    {
+      "path": "tests/verification.test.ts",
+      "sha256": "7f8d0f8b2834c8670d4455cb9b37a721f271e87945ad3f097c1c874ac06e9665"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "4ff6ac584f88cacaa07d6ead19618bd25e504b59aa49b33ff74b2e0f6b332dcb"
+    },
+    {
+      "path": "workflows/extract-rules.js",
+      "sha256": "d740cf1513dba5b39ddaa0f0924906e14ef9dcd045679d41970fbf06768363ef"
+    },
+    {
+      "path": "workflows/harden-scan.js",
+      "sha256": "4448df2c9a444476fcedbcea1fc390b1b35362f3b6fe97954d859fcb919fe3e7"
+    },
+    {
+      "path": "workflows/portfolio-assess.js",
+      "sha256": "f394aa2857cf05ed4be6b33260cd008e2b8be0eee7a576d4e34e97790ffccc99"
+    },
+    {
+      "path": "workflows/reimagine-scaffold.js",
+      "sha256": "6df0ed5080c94ad8c367cbcaa929d2daecb78eaf73240abe45a4af91d0210c8e"
+    },
+    {
+      "path": "workflows/uplift-deltas.js",
+      "sha256": "a83f07700c9d7dfcab38c30303e466a27842f4f3b454315bfcbe15354c2b08c1"
+    },
+    {
+      "path": "workflows/uplift-migrate.js",
+      "sha256": "c7d09d3946428fc13ef070859bca406644cc7c8bdc8793189f2616ec978c9cf9"
+    }
+  ]
+}

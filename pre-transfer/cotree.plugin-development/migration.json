@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.plugin-development",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 4,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "plugin-dev",
+      "repository": "claude-plugins-official",
+      "path": "plugins/plugin-dev",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "9695c1577d6f82d2d2863b1eadd643b9ed8970f76a4585de52eba85499fd5764"
+    },
+    {
+      "ecosystem": "codex",
+      "package": "plugin-eval",
+      "repository": "plugins",
+      "path": "plugins/plugin-eval",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "0b3d9cbc4fe6a8415acdf6ca5ffa3240176bf37f80b55d43c4384fc1c62eb6e7",
+      "upstreamVersion": "0.1.2"
+    }
+  ],
+  "changes": [
+    "合并插件编写和整包评估；作者、校验器与审查者方法进入原生工作流，取消固定模型 Agent。",
+    "用 Manifest v3 / Code Tool ABI v2 模板替换旧宿主清单，提供拒绝覆盖的跨平台脚手架。",
+    "单技能创作与评估只归属 cotree.skill-creator，避免重复维护。"
+  ],
+  "limitations": [
+    "插件代码、UI、Hook 的生产执行仍需宿主信任、精确摘要和权限；模板本身不授予能力。",
+    "真实模型、外部服务与打包 Desktop 验收按插件场景另做；不把模板成功或静态评分当业务完成。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "plugin-structure / create-plugin / plugin-validator": "build / verify：Manifest v3、自包含代码模板、原生校验、隔离安装及执行。",
+    "agent-development / agent-creator / command-development": "components：当前 Agent 声明与 Skill / Command，继承模型，真实工具面。",
+    "hook-development / mcp-integration / plugin-settings": "components 与原生合同参考；只使用 CoTree 实际事件、认证和配置，不模仿上游宿主。",
+    "evaluate-plugin / plugin-eval / metric-pack-designer": "evaluate：任务场景、可观察指标、真实回执与自定义业务检查，不再调用外部宿主 runner。",
+    "skill-development / skill-reviewer / evaluate-skill / improve-skill": "写作与单技能评估归属 cotree.skill-creator；本包仅处理插件装配与整包验证。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

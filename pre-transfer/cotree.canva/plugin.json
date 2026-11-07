@@ -1,0 +1,98 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.canva",
+  "name": "Canva",
+  "version": "0.2.0",
+  "description": "在 CoTree 中编辑 Canva 设计、制作品牌演示、检查与落实反馈、调整尺寸、翻译和批量生成，并导出已核验成果。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.canva.connect",
+      "description": "配置 Canva 独立应用与用户授权，核实工具和设计访问。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.canva.edit",
+      "description": "按实际 Canva 编辑 schema 修改设计并核验提交。",
+      "path": "skills/edit/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.canva.presentation",
+      "description": "根据受众和品牌制作 Canva 演示文稿。",
+      "path": "skills/presentation/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.canva.brand-check",
+      "description": "依据可访问的品牌规范检查 Canva 设计。",
+      "path": "skills/brand-check/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.canva.feedback",
+      "description": "对 Canva 设计给出可定位且有依据的反馈。",
+      "path": "skills/feedback/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.canva.implement-feedback",
+      "description": "筛选并落实已授权的 Canva 评论或设计反馈。",
+      "path": "skills/implement-feedback/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.canva.resize",
+      "description": "按指定发布目标生成 Canva 尺寸变体。",
+      "path": "skills/resize/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.canva.translate",
+      "description": "保留原稿并翻译 Canva 设计文案。",
+      "path": "skills/translate/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.canva.bulk",
+      "description": "按准确模板字段与数据行规划和执行 Canva 批量生成。",
+      "path": "skills/bulk/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.canva.export",
+      "description": "导出 Canva 设计并核验格式、页面和实际文件。",
+      "path": "skills/export/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "canva",
+      "transport": "streamable-http",
+      "url": "https://mcp.canva.com/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_CANVA_MCP_AUTHORIZATION"
+      },
+      "timeoutMs": 60000
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "e5a3a655ca162eb9d57a7cb5934e64d59af186b332df0afeb1bb8d29bf99bd79"
+  }
+}

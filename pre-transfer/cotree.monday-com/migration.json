@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.monday-com",
+  "version": "0.2.0",
+  "category": "团队协作与知识",
+  "priority": 0,
+  "batch": 12,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "monday-com",
+      "repository": "plugins",
+      "path": "plugins/monday-com",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "18418231cfe7a5fb5f2b4b301a76718922fd3a1c149a5c91d981251fd3ad9a04",
+      "upstreamVersion": "2.0.0"
+    }
+  ],
+  "changes": [
+    "来源连接器改为八个原生工作流和唯一官方 Streamable HTTP MCP，独立个人 token / OAuth 路径分开。",
+    "覆盖核心看板、列类型、CRM、更新、自动化 / 工作流、可复用代码和平台 Agent，保留真实 schema 与预览能力边界。"
+  ],
+  "limitations": [
+    "已适配原生 Skill 与官方 MCP 声明；真实账户读写、权限 / 过期恢复仍待验收。静态 headersEnv 不实现 OAuth 注册、登录、刷新或撤销，不读取来源宿主会话。",
+    "个人 token 路径用于个人 / 开发测试；组织或公开集成应采用各自 OAuth / DCR，不能共享个人身份。",
+    "远程自动化、workflow、agent 和某些上传能力使用预览 schema，实际暴露、付费能力与权限需要独立验收；本包不声明新的 CoTree Agent 或持续后台执行器。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "boards / items / owners / timelines / CRM": "inspect / items / columns：工作区、看板、group / item / column IDs，列类型及结构化写入。",
+    "updates / official knowledge / reports": "updates / report：评论与知识来源分开，真实状态 / 阻塞和 CRM 口径。",
+    "automations / multistep workflows / reusable code": "automate：board automation 与 workspace workflow 分开，代码动作先审阅能力和副作用。",
+    "other monday agents": "agents：远端平台 agent 生命周期 / trigger / skill / knowledge；不是 CoTree AgentDelegate。",
+    "auth / host connector": "connect：原生唯一 MCP，独立个人 token 或组织 OAuth / 公共 DCR，来源 app 不导入。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

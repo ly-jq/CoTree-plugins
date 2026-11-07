@@ -1,0 +1,290 @@
+{
+  "observedAt": "2026-10-07T08:56:54.202Z",
+  "nodeVersion": "v24.13.0",
+  "browserVersion": "154.0.4258.53",
+  "versions": {
+    "@anthropic-ai/claude-agent-sdk": "0.3.292",
+    "@openai/agents": "0.19.0",
+    "claude-agent-sdk": "0.2.164",
+    "openai-agents": "0.23.1",
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "@modelcontextprotocol/ext-apps": "1.7.5",
+    "zod": "4.6.5"
+  },
+  "results": {
+    "elyra.agent-sdk-dev": {
+      "packageDigest": "fc1ee95640cd77baa9a84da8869f1cb3ecccda6c8f70fc385d01eb79c69d0b74",
+      "status": "isolated-claude-sdk",
+      "typescriptChecked": true,
+      "pythonImported": true,
+      "optionsConstructed": true,
+      "missingCredentialsRejected": true,
+      "realModelCalled": false,
+      "toolExecutionTested": false,
+      "deployed": false
+    },
+    "elyra.openai-developers": {
+      "packageDigest": "021dda4b5e66d86900608545a73a3dddc37646f7ec2c297bc7371844d04bb889",
+      "status": "isolated-openai-sdk-apps",
+      "typescriptChecked": true,
+      "pythonImported": true,
+      "agentConstructed": true,
+      "missingCredentialsRejected": true,
+      "loopbackMcp": true,
+      "invalidInputRejected": true,
+      "originAndHostRejected": true,
+      "officialBridgeFixture": true,
+      "widgetToolCalls": 2,
+      "initialResult": true,
+      "errorRecovery": true,
+      "keyboard": true,
+      "scriptTextNotExecuted": true,
+      "realModelCalled": false,
+      "chatgptClientTested": false,
+      "accountTested": false,
+      "deployed": false
+    },
+    "elyra.teaching": {
+      "packageDigest": "9d8c5c263f9185f40d34d9fffb5ab9c07793506a350ccd5c014bc635cffe4774",
+      "status": "explicit-guidance",
+      "externalRuntimeRequired": false,
+      "evidence": "Native installation / Skill dispatch and explicit-only metadata covered by regression suite.",
+      "learningOutcomeTested": false
+    }
+  },
+  "templates": [
+    {
+      "id": "elyra.agent-sdk-dev",
+      "template": "typescript",
+      "files": [
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\claude-ts\\.env.example",
+          "bytes": 33,
+          "sha256": "d66a8f9bde474047de0bd42fb2d01210bbb5c20bb54b50c28168c0627c2187f7"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\claude-ts\\.gitignore",
+          "bytes": 66,
+          "sha256": "b81fbad7378e9f69f0a61dbe26134f3201a8f0f7e5920b6093d7a676e6d46258"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\claude-ts\\package.json",
+          "bytes": 372,
+          "sha256": "17edc40c83744efe1e8a804fd71bbc0a4afc61640ca02d151f92df02e1cc4cb8"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\claude-ts\\README.md",
+          "bytes": 1169,
+          "sha256": "3db994c9849e3a090a32ce5554d26c90453b60ca0dcb6d7785c267bc307dd2b4"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\claude-ts\\src\\main.ts",
+          "bytes": 1684,
+          "sha256": "a316ba006b64b920ab8042448c61b842670dbcd50986d736d93b8a5c759ffd33"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\claude-ts\\tsconfig.json",
+          "bytes": 255,
+          "sha256": "7660465e5e86b4876cb56ccd8a5d273ed82d7c3d175f788ba314257a0bf3671c"
+        }
+      ]
+    },
+    {
+      "id": "elyra.agent-sdk-dev",
+      "template": "python",
+      "files": [
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\claude-py\\.env.example",
+          "bytes": 33,
+          "sha256": "d66a8f9bde474047de0bd42fb2d01210bbb5c20bb54b50c28168c0627c2187f7"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\claude-py\\.gitignore",
+          "bytes": 66,
+          "sha256": "b81fbad7378e9f69f0a61dbe26134f3201a8f0f7e5920b6093d7a676e6d46258"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\claude-py\\main.py",
+          "bytes": 1551,
+          "sha256": "e4d6b53a7e9504cf41a26b415fd9782f0ac1e5da5de9eba3af8014eb4aceac3c"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\claude-py\\README.md",
+          "bytes": 1206,
+          "sha256": "556c6705dca5860402f98ecf5a9c4078d5f99a3826dd0015b47fd050845d0fc3"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\claude-py\\requirements.txt",
+          "bytes": 26,
+          "sha256": "13e28ba5e6fb9168eddcb7e05c206a5a602ef0cc2ca53167c17cfc8f071d121b"
+        }
+      ]
+    },
+    {
+      "id": "elyra.openai-developers",
+      "template": "typescript",
+      "files": [
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\openai-ts\\.env.example",
+          "bytes": 30,
+          "sha256": "c35f9c2ff6ac2791b64dea8f6604875e3cfe8b561e47942df8dd184c84ee5aa8"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\openai-ts\\.gitignore",
+          "bytes": 66,
+          "sha256": "b81fbad7378e9f69f0a61dbe26134f3201a8f0f7e5920b6093d7a676e6d46258"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\openai-ts\\package.json",
+          "bytes": 375,
+          "sha256": "4c0792f181f4088bb410af87feff6164f0aed3105381c56fc8cf7b504b288d05"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\openai-ts\\README.md",
+          "bytes": 1065,
+          "sha256": "d72fa6093c1166e56c6e18102a10a052282003e4bdeb69816ae6d5cf40c78199"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\openai-ts\\src\\main.ts",
+          "bytes": 1393,
+          "sha256": "f772f2a9e8bce087b43b59577fae39c5da3b9d0af3be85ccbc5f96b412942117"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\openai-ts\\tsconfig.json",
+          "bytes": 255,
+          "sha256": "7660465e5e86b4876cb56ccd8a5d273ed82d7c3d175f788ba314257a0bf3671c"
+        }
+      ]
+    },
+    {
+      "id": "elyra.openai-developers",
+      "template": "python",
+      "files": [
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\openai-py\\.env.example",
+          "bytes": 30,
+          "sha256": "c35f9c2ff6ac2791b64dea8f6604875e3cfe8b561e47942df8dd184c84ee5aa8"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\openai-py\\.gitignore",
+          "bytes": 66,
+          "sha256": "b81fbad7378e9f69f0a61dbe26134f3201a8f0f7e5920b6093d7a676e6d46258"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\openai-py\\main.py",
+          "bytes": 1294,
+          "sha256": "8e4fb352abfc6fa13887773fd95206856ffc2130f571628b61c79ea410638f83"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\openai-py\\README.md",
+          "bytes": 1102,
+          "sha256": "b8c6ce8a34f256c646e371b45c29862e4b21761e5f687158a468d26fd9df2677"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\openai-py\\requirements.txt",
+          "bytes": 22,
+          "sha256": "a7050666299431b36925052ffe54551193a70140166146761940d4942c348f33"
+        }
+      ]
+    },
+    {
+      "id": "elyra.openai-developers",
+      "template": "chatgpt-app",
+      "files": [
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\chatgpt-app\\.gitignore",
+          "bytes": 32,
+          "sha256": "b2119fe42eaf191c47faa6ffeea7876593375e98201aa0e2e77bfad53f4033fb"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\chatgpt-app\\build.mjs",
+          "bytes": 679,
+          "sha256": "097a141de7e4082c8a921ccf5625212bb3db3f0ed8f42bb16106b7f3a80e792a"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\chatgpt-app\\package.json",
+          "bytes": 424,
+          "sha256": "2d33f28763f38312ed2aa9c4edc78da856e18b99c3d102e75c47eeb423920067"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\chatgpt-app\\README.md",
+          "bytes": 965,
+          "sha256": "c342ec673b35bebc16b681a4a7d12ead6ff7f55de30a112eabd05a9fee50f574"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\chatgpt-app\\server.mjs",
+          "bytes": 3466,
+          "sha256": "28348d68c8969d4fc194ccaecf560cbcf199f6085ec1d6dceb24d6f742128bd8"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\chatgpt-app\\widget.html",
+          "bytes": 1643,
+          "sha256": "94e12f992379afabbb7328f0b20e9229b3feb17d90449c0c8c8b9f80e48b67e1"
+        },
+        {
+          "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\chatgpt-app\\widget.js",
+          "bytes": 1330,
+          "sha256": "975adc4c475a9fc67f51ff9958df1c4d1eaea61175392d79d4f17315a43c20c5"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\verification-03\\apps-desktop.png",
+      "bytes": 27500,
+      "sha256": "47c0838376e078e9b7ddb229005b4395e2b82b238bc8a5b41854690b58527c6c"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\verification-03\\apps-mobile.png",
+      "bytes": 24571,
+      "sha256": "addafcb4380f4726e1560a465ab100e07dc432a0763f45f1785b9c00c568f50e"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\chatgpt-app\\dist\\widget.html",
+      "bytes": 957745,
+      "sha256": "960cf147e44b3faaeb85c93d4b93d5ab7bc8454c51c81bf9c00c2f0434ac6ed2"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\claude-ts\\package-lock.json",
+      "bytes": 67828,
+      "sha256": "6f5836ea900111ac7a717773d31d039437acf962263a8bd91931f9fce9b346da"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\openai-ts\\package-lock.json",
+      "bytes": 28570,
+      "sha256": "25406b846fc863de7f624efede8fdb63a6939358c5805aa0558b063350e6a106"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\chatgpt-app\\package-lock.json",
+      "bytes": 58029,
+      "sha256": "03a27c3b2baf715f5bd83a64fbffa847288b6aa0802f85e02c04b939291f3edd"
+    }
+  ],
+  "pageErrors": [],
+  "remoteRequests": [],
+  "limitations": [
+    "Offline SDK checks do not start an agent subprocess or call provider APIs.",
+    "Official bridge runs in a local fixture host, not ChatGPT or a packaged Elyra desktop UI.",
+    "Teaching semantics and real user learning outcomes were not automatically evaluated.",
+    "Real account auth, permission callbacks, live cancellation, public deployment and submission remain untested."
+  ],
+  "visualReview": {
+    "observedAt": "2026-10-07T08:58:12.363Z",
+    "reviewedImages": [
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\verification-03\\apps-desktop.png",
+        "bytes": 27500,
+        "sha256": "47c0838376e078e9b7ddb229005b4395e2b82b238bc8a5b41854690b58527c6c"
+      },
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch21-runtime\\verification-03\\apps-mobile.png",
+        "bytes": 24571,
+        "sha256": "addafcb4380f4726e1560a465ab100e07dc432a0763f45f1785b9c00c568f50e"
+      }
+    ],
+    "findings": "Desktop and 390px widget inspected. Labels, status, text output and focus are readable; no horizontal overflow. Real loopback MCP tool calls reached the official bridge fixture; no ChatGPT client was tested."
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "observedAt": "2026-10-06T09:13:42.185Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "live-unauthenticated-boundary-only",
+  "credentialsSent": false,
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "results": {
+    "elyra.github": {
+      "packageDigest": "65856afa8715e1573f54ba522a83494d0cde789b076a78da6d29b08eb69edc14",
+      "endpoint": "https://api.githubcopilot.com/mcp/",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.linear": {
+      "packageDigest": "e6d68e28a9bf6ec9a452ff6b53c5ec22857feb48488447c956388b43b268b160",
+      "endpoint": "https://mcp.linear.app/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.notion": {
+      "packageDigest": "ad90f35ef9f824181a82504457377327b2e2359ca50627f602f7f79782254971",
+      "endpoint": "https://mcp.notion.com/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.figma": {
+      "packageDigest": "e2d0dcca0dd8de6babebd0b4e6948d20c1a1d86fa8a275091d5bd4920b103ffb",
+      "endpoint": "https://mcp.figma.com/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.supabase": {
+      "packageDigest": "919771479d9ad3fd7684b22fd8f4f06651f5b82ee1324c42abbb94f7c6cdd053",
+      "endpoint": "https://mcp.supabase.com/mcp?read_only=true&features=database%2Cdocs%2Cdebugging%2Cdevelopment",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.vercel": {
+      "packageDigest": "94f977ac4e84db397fcaa924a968347d7cb06c8ccc4b22a27226b3b64cb0121c",
+      "endpoint": "https://mcp.vercel.com/",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.sentry": {
+      "packageDigest": "5897065a7f5735eade225998df6a0d573716db9d01a9e7f167b80cad77331bdf",
+      "endpoint": "https://mcp.sentry.dev/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.slack": {
+      "packageDigest": "5bc4bca7f0db56aec9172a9742974b948bf48af5f57ff3cddec02c2b6407b3c4",
+      "endpoint": "https://mcp.slack.com/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.google-drive": {
+      "packageDigest": "5e11a3c3bcc93aed6a2b6aaa6141f46bf17c1a6c81aaa58615f281c0ead9e507",
+      "endpoint": "https://drivemcp.googleapis.com/mcp/v1",
+      "status": "anonymous-catalog",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 200,
+          "authenticationChallenge": false
+        },
+        {
+          "method": "POST",
+          "httpStatus": 202,
+          "authenticationChallenge": false
+        },
+        {
+          "method": "POST",
+          "httpStatus": 200,
+          "authenticationChallenge": false
+        },
+        {
+          "method": "GET",
+          "httpStatus": 405,
+          "authenticationChallenge": false
+        }
+      ],
+      "anonymousToolCount": 8,
+      "anonymousToolNames": [
+        "copy_file",
+        "create_file",
+        "download_file_content",
+        "get_file_metadata",
+        "get_file_permissions",
+        "list_recent_files",
+        "read_file_content",
+        "search_files"
+      ],
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.gmail": {
+      "packageDigest": "2125da4b80ffeb5b848836ce6a82fca732bc85f9d2961573ceb25a14dc9cef0e",
+      "endpoint": "https://gmailmcp.googleapis.com/mcp/v1",
+      "status": "anonymous-catalog",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 200,
+          "authenticationChallenge": false
+        },
+        {
+          "method": "POST",
+          "httpStatus": 202,
+          "authenticationChallenge": false
+        },
+        {
+          "method": "GET",
+          "httpStatus": 405,
+          "authenticationChallenge": false
+        },
+        {
+          "method": "POST",
+          "httpStatus": 200,
+          "authenticationChallenge": false
+        }
+      ],
+      "anonymousToolCount": 23,
+      "anonymousToolNames": [
+        "apply_sensitive_message_label",
+        "apply_sensitive_thread_label",
+        "create_draft",
+        "create_label",
+        "get_draft",
+        "get_message",
+        "get_thread",
+        "label_message",
+        "label_thread",
+        "list_drafts",
+        "list_labels",
+        "mark_message_spam",
+        "mark_thread_spam",
+        "search_threads",
+        "trash_message",
+        "trash_thread",
+        "unlabel_message",
+        "unlabel_thread",
+        "unmark_message_spam",
+        "unmark_thread_spam",
+        "untrash_message",
+        "untrash_thread",
+        "update_message_labels"
+      ],
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.stripe": {
+      "packageDigest": "0d052ed344c7a2cbd5311e17ca71ab7e400989569659265163a694dd78e9e271",
+      "endpoint": "https://mcp.stripe.com",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    }
+  }
+}

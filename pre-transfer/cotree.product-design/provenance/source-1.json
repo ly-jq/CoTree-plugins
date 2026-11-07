@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.product-design",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "product-design",
+    "repository": "plugins",
+    "path": "plugins/product-design",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "b6e5344d23a1e2a196067e6f3a2ba7de32a1942a140a1ee29700be4339f2ca04",
+    "upstreamVersion": "0.1.52"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设计指导和模板可用；原宿主设计 / 生成 / 展示工具需按实际能力选择。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/audit/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/audit/SKILL.md",
+      "sourceMetadata": {
+        "name": "audit",
+        "description": "Audit or critique a product flow, journey, workflow, funnel, onboarding path, checkout path, settings path, screen, or multi-step product experience by capturing screenshots first, then reporting UX, design, and accessibility findings inline from that evidence. Use Figma only when the user explicitly asks for a board. Use when the user asks to audit, review, critique, inspect, assess, analyze, evaluate, or give feedback on a product experience."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/design-qa/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/design-qa/SKILL.md",
+      "sourceMetadata": {
+        "name": "design-qa",
+        "description": "Internal prototype QA helper. Use only after a Product Design prototype, URL-to-code build, or image-to-code build has a source visual target and a rendered implementation to compare before handoff. Do not use for broad UX critique, design critique, product audits, or flow reviews; route those user-facing requests to audit."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/get-context/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/get-context/SKILL.md",
+      "sourceMetadata": {
+        "name": "get-context",
+        "description": "Mandatory design-brief gate for clarifying the product and outcome. Use before ideation, image-to-code builds, redesigns, or product UI work to clarify missing product information and play back the brief before proceeding."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ideate/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ideate/SKILL.md",
+      "sourceMetadata": {
+        "name": "ideate",
+        "description": "Generate image-based alternatives, remixes, or new design directions from a Product Design brief. Use when the user asks for design variants, visual exploration, remixes, or image-generated approaches from provided context."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/image-to-code/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/image-to-code/SKILL.md",
+      "sourceMetadata": {
+        "name": "image-to-code",
+        "description": "Implement a selected image, screenshot, mockup, or Image Gen reference as a faithful, responsive frontend."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/index/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/index/SKILL.md",
+      "sourceMetadata": {
+        "name": "index",
+        "description": "Use when Product Design is explicitly invoked, or when the user's main goal is to explore a design, research UX, audit or critique a flow, faithfully clone a visual source, check a built design, or share a prototype. Do not use Product Design for ordinary implementation unless the user explicitly asks for it."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/research/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/research/SKILL.md",
+      "sourceMetadata": {
+        "name": "research",
+        "description": "Run fast, source-grounded UX research on the highest-signal problems users are experiencing with a user-specified digital product. Use when the user asks to research user pain, UX friction, onboarding issues, docs/help problems, developer experience friction, support pain, product workflow issues, or current user complaints for a named product."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/share/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/share/SKILL.md",
+      "sourceMetadata": {
+        "name": "share",
+        "description": "Share a runnable prototype using the user's preferred deployment tool."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/url-to-code/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/url-to-code/SKILL.md",
+      "sourceMetadata": {
+        "name": "url-to-code",
+        "description": "Clone a live URL as a runnable frontend-only local app."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/user-context/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/user-context/SKILL.md",
+      "sourceMetadata": {
+        "name": "user-context",
+        "description": "Load or manage Product Design's saved user context. Use when the user asks to set up Product Design, get started, onboard, save product or design sources, see what Product Design remembers, update saved context, or remember Product Design preferences. Examples include product URLs, Figma files, screenshots, reference images, codebase paths, Storybook, tokens, design systems, brand assets, and general product/design notes."
+      }
+    }
+  ],
+  "copiedFiles": 97,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "2b626ed0a2870e6cbd83afc6d898600d9c7beedf94e020542a16ff031d7a45e8"
+    },
+    {
+      "path": ".npmignore",
+      "sha256": "044c3961942eae1acdd627163fe87aae035048517043cfd93476150ab75e2d5d"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "776e8f0e8cc79bf64846008f4f98936cd6535c4ddaccc84a30f34ccc99b19f76"
+    },
+    {
+      "path": "assets/composerIcon.svg",
+      "sha256": "ce1ceaa47b9f397d0b5c2e9c2fe5631c1ec9825e4a1e6306bcd1829a08f6b895"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "a1f718f71e727e6573b5810fee5ea33c887d1161203037746dfcdf856df2db3d"
+    },
+    {
+      "path": "package.json",
+      "sha256": "fb93f642019b82fece618e94cf3dfc9dadee3e08996c04c3a6566efdfd8f7c40"
+    },
+    {
+      "path": "README.md",
+      "sha256": "29d8166ddb666969bcf33c0a3d0d4e370d11607aa9bce97444dc64b83f7c4dd6"
+    },
+    {
+      "path": "references/communication-protocol.md",
+      "sha256": "3d51acffa01e915eda8f4f68106a601c58972b4f7e8d1613d189757847f2693b"
+    },
+    {
+      "path": "references/critical-overrides.md",
+      "sha256": "8481601ca473c8b6889fbb6d220d68497f640675f784f21aacdce0bc33007572"
+    },
+    {
+      "path": "references/existing-codebase-edits.md",
+      "sha256": "bbf0257ec70c8d384fd31e2288d99ffd02e0653b01f3fd65dd8fd4fb4f12b107"
+    },
+    {
+      "path": "references/local-prototype-preflight.md",
+      "sha256": "eb3f2f3a3244da6e31bf3d2e48cd533ffde91c435b7498b7f65e70aec526598f"
+    },
+    {
+      "path": "scripts/bootstrap-prototype.mjs",
+      "sha256": "a991db76f63199c9ef0d793405b8a94d1d5171c768b08f45a80b2f8e851c12b3"
+    },
+    {
+      "path": "scripts/check-sites-starter-contract.mjs",
+      "sha256": "68514af17d5f88e3c4133de9dfea386c0565f178e2715a9e5745733d1d3a6f46"
+    },
+    {
+      "path": "skills/audit/agents/openai.yaml",
+      "sha256": "6539bf88dea537a0443e78a77961eaca4f8e42b88cc3c79410eadd5b7611d7e3"
+    },
+    {
+      "path": "skills/audit/references/design-audit-framework.md",
+      "sha256": "a7384b0852f6d0d989c415b486bda17c314bbec3c6565528928f495448352f12"
+    },
+    {
+      "path": "skills/audit/SKILL.md",
+      "sha256": "053e12c9ba064cd052d0ea3b151badf74c9ee1650c78abd8f188070fd67cf2cc"
+    },
+    {
+      "path": "skills/design-qa/agents/openai.yaml",
+      "sha256": "b2fb9eb7f16cbee51cac235b9d489065fe72f78a14c72d648d4126e8b988ab15"
+    },
+    {
+      "path": "skills/design-qa/references/qa-rubric.md",
+      "sha256": "55400f36286c5b3ef5f775d49f77a3fb617be1387f9c3aa1f555a91c2f9b3dee"
+    },
+    {
+      "path": "skills/design-qa/SKILL.md",
+      "sha256": "b45655376ed96dd2444442b051622f9461ead413daff3772a9c4f353b42bba9a"
+    },
+    {
+      "path": "skills/get-context/agents/openai.yaml",
+      "sha256": "9553c86dd57926375e99bf745de6767005b999e9739c8e4b014a38680de0095a"
+    },
+    {
+      "path": "skills/get-context/SKILL.md",
+      "sha256": "462a9bb2b2abd56c38636cf35605e16b9246b5e06040770e8af7523ebf095e65"
+    },
+    {
+      "path": "skills/ideate/agents/openai.yaml",
+      "sha256": "d5e5ee1c0f5e0bd1e242d215c96e31c5a57b4c8aaa3bf6aa392c67d55cbcd97e"
+    },
+    {
+      "path": "skills/ideate/SKILL.md",
+      "sha256": "2ef3405fb98021266cce6be3eabb86765f015c1580fea5b01160c63b70e0841b"
+    },
+    {
+      "path": "skills/image-to-code/agents/openai.yaml",
+      "sha256": "dd74b1f61a9672042c2194bab6206369588baddd16a41ef7813a8b5c875018f3"
+    },
+    {
+      "path": "skills/image-to-code/SKILL.md",
+      "sha256": "14fe56a7f36a390fcab88ae1923c2688aee2f8a489000d334e7f418b88aef6dd"
+    },
+    {
+      "path": "skills/index/agents/openai.yaml",
+      "sha256": "34879908e291b88f9d7f51d22c2a892939ca0044dbdbe6adaf1c0419817838c1"
+    },
+    {
+      "path": "skills/index/SKILL.md",
+      "sha256": "43a269c1d50b950cae44624a53e05335e85cdacfe5cd4d1398961909968860fc"
+    },
+    {
+      "path": "skills/research/agents/openai.yaml",
+      "sha256": "20e446a42342cb4eddab3531f1d108b460c66390b166aab09fbfff10f8bd5c08"
+    },
+    {
+      "path": "skills/research/SKILL.md",
+      "sha256": "b2f54bb0b851ae228d993d9f7f883903c340a41ff851c5ce059474e48c206f52"
+    },
+    {
+      "path": "skills/share/agents/openai.yaml",
+      "sha256": "3524b350093c411f916cffa7f386d4407cd7cf36557ca096c061ff06339ac44d"
+    },
+    {
+      "path": "skills/share/SKILL.md",
+      "sha256": "d2ffd1b5295087a4b36e44ea80a81ade717dcab2201505d1ee6e4e6b182a8b61"
+    },
+    {
+      "path": "skills/url-to-code/agents/openai.yaml",
+      "sha256": "f5b08427b67eff3efbfedce7ac3a0a3d7e39226640df66633d884b2f27b87770"
+    },
+    {
+      "path": "skills/url-to-code/SKILL.md",
+      "sha256": "3e828367a8ce627728ec6a4df5049d3a2f322a20f9425231212bd64cf7157c79"
+    },
+    {
+      "path": "skills/user-context/agents/openai.yaml",
+      "sha256": "e0d5f03b74d8573a6b79b10f3c987837783b885da189ddd6e5e5733abec80b42"
+    },
+    {
+      "path": "skills/user-context/plugin-author-config/user-context-template.md",
+      "sha256": "4c4e0ef76a23a22cc706eb15bb8d29e4639b84434a2694617ebc83493e1a6eb2"
+    },
+    {
+      "path": "skills/user-context/references/onboarding.md",
+      "sha256": "6b92a7a52f11009e9e3b7be3c7a5bf3070d7527efb562799219bcd085850481b"
+    },
+    {
+      "path": "skills/user-context/scripts/init_user_context.py",
+      "sha256": "57957969cbf69285e8b4e714968d617138eac943b1b41c4d21ec99014d0e15c8"
+    },
+    {
+      "path": "skills/user-context/scripts/user_context_preflight.py",
+      "sha256": "01363e0caa5b11aa58ed4f6bc3c7745460d747874576b149f6479f495ad1d203"
+    },
+    {
+      "path": "skills/user-context/SKILL.md",
+      "sha256": "e029a9a619fa9b7cad7e72c7fe6973a3f4e25cd3f905a26124c74f0b59316c5f"
+    },
+    {
+      "path": "templates/mobile-app/.gitignore",
+      "sha256": "06d5ba5ce22ac4879d200b2f8f3bcdbcca30515884b0fdb45e940eb88e81fcad"
+    },
+    {
+      "path": "templates/mobile-app/.openai/hosting.json",
+      "sha256": "d2841f8a91a91bab4f4a1e27671e7d3fe8f02261eb41996f43ac61e6970a9d74"
+    },
+    {
+      "path": "templates/mobile-app/AGENTS.md",
+      "sha256": "9cb67c2cd9596214ce13cc385d67b39689877cc41aedc5d96410256bf91bcaef"
+    },
+    {
+      "path": "templates/mobile-app/index.html",
+      "sha256": "e068be3543b331084357a0c735299f4d781d574946328290e2c59920936b4460"
+    },
+    {
+      "path": "templates/mobile-app/mobile-runtime.lock.json",
+      "sha256": "f4aab129809f38c06d84c14c45a852667cead21581ede2391519d20bb87ae1d5"
+    },
+    {
+      "path": "templates/mobile-app/package-lock.json",
+      "sha256": "8aeb92c06c0c7c208e242afe934862c790f7a157e778241980a7ffb301fd7d48"
+    },
+    {
+      "path": "templates/mobile-app/package.json",
+      "sha256": "1f591df39eeebff710fdb7ce96e61f0d57c65cb48b7d24f440864dc06511eccc"
+    },
+    {
+      "path": "templates/mobile-app/playwright.config.ts",
+      "sha256": "848106a99c6dc2995386c5d0f747c52f272408fba6c6b8eb8a878ec060e72a75"
+    },
+    {
+      "path": "templates/mobile-app/public/assets/android/Keyboard.png",
+      "sha256": "6085e50be17ca2705b4351283187be2c5b01b58262c70b90d74b3376efb4adfe"
+    },
+    {
+      "path": "templates/mobile-app/public/assets/android/navigation-bar.svg",
+      "sha256": "9d74d8913eedb154a118dabbb0eea9eada864ede4cbcfbdb8566471aba10b266"
+    },
+    {
+      "path": "templates/mobile-app/public/assets/android/Pixel10.png",
+      "sha256": "a87c1250ba20756f5d020b5351a7ae71d663dcfc64aca3a1cd56452e8a05233e"
+    },
+    {
+      "path": "templates/mobile-app/public/assets/iphone/Bezel.png",
+      "sha256": "ee2514d74d2f75f3541405fa2f20811f159879a66586778cfd8c9c84c44959df"
+    },
+    {
+      "path": "templates/mobile-app/public/assets/iphone/Keyboard.png",
+      "sha256": "292e2d83d69adaeb663d6a840ce8db8d0a5257710b472c20713e03f56b08ea88"
+    },
+    {
+      "path": "templates/mobile-app/public/assets/status/ios-status-icons.svg",
+      "sha256": "04f277cd117375574bcd81ca3efec8521cdaf3e56ecb9aecad6dbcf916739591"
+    },
+    {
+      "path": "templates/mobile-app/public/assets/status/status-icons.svg",
+      "sha256": "a82efb892a754a8e0c972f0e21233cd21bf5378bb98be58a8f7db35b22ecfbfa"
+    },
+    {
+      "path": "templates/mobile-app/scripts/check-mobile-runtime.mjs",
+      "sha256": "711d912cb8abd52eb36fff55fb051103dfc06b83a2d6c358927ce4b91fadb375"
+    },
+    {
+      "path": "templates/mobile-app/scripts/prepare-sites-build.mjs",
+      "sha256": "ea0855bb81a2b0425258ed95cc50f82a35ff95d9b88a30eb946580a6cc98c478"
+    },
+    {
+      "path": "templates/mobile-app/scripts/update-mobile-runtime-lock.mjs",
+      "sha256": "2e8bf9de406c7af7710adeeb7bff11a3d1a17585244143ada366ce94312f2592"
+    },
+    {
+      "path": "templates/mobile-app/src/App.tsx",
+      "sha256": "8dd45c37ed1bf15340f77369d86c102fb073ed59a1620f0900375439800a2100"
+    },
+    {
+      "path": "templates/mobile-app/src/main.tsx",
+      "sha256": "99a08fa42b8465aca43ba04ad8641c41d4668e626e5ef1b199d9f4b2a8a3f0bd"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/assets.ts",
+      "sha256": "588cec698a31e31ad5fe88f6b083f600dfdb9d63d6b029f01c5499692146a5f3"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/BottomSheet.tsx",
+      "sha256": "9230b826eb384f00f03ec916ae50d477afe3f327e75be5b582bc804756e074aa"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/Carousel.tsx",
+      "sha256": "aea168fa080a3471750b6148860c2886d92a975fe969f4f7bb2283ff9bc86a9a"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/COMPONENTS.md",
+      "sha256": "1a68bfa54f5a2e3c5a2f0c13a332524c42e2094ca15f097a9fa99dd58f58adb3"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/components.tsx",
+      "sha256": "965ea5a742152baac0f14080a869f366f068d63e35560f9ac6a63e7baecfd651"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/Device.tsx",
+      "sha256": "bf0e0ee8f5517ddc3414a862caf69447858b4a7f3acb1bf3faf58ca22f8e8aa4"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/FlowStack.tsx",
+      "sha256": "69122c5070826288d9788fff6332b55e1a7ba109995e0dc38fd07d1778b713af"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/geometry.ts",
+      "sha256": "b565de6b1f0b4d6376008e9440201d5c7abcd877d32cc361081c15f2c8999d27"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/index.ts",
+      "sha256": "17fd5b6e008873f60e04a1b8eb26d1e46b4edf4cf6580d2c26fa2361af71df91"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/Keyboard.tsx",
+      "sha256": "b2ce149644cb9e82bd97658129a035d3b66a6019b91a3b8bb5326a1e9f8fc75d"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/MobileCursor.tsx",
+      "sha256": "0f40c8d79b6e07bd4ae1fc9821f6c74a4a75f1e3714523be8efe7d0171115339"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/MobileRuntime.tsx",
+      "sha256": "2aefc951ac6e2fda5fd43730267d992b180f78f1902c6d0c285d060676e08b5e"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/MobileScroll.tsx",
+      "sha256": "8473a4456596a476b5ae5dc9aa397a34ef52efd535192d00a75a4c4b688a9a16"
+    },
+    {
+      "path": "templates/mobile-app/src/mobile/PhoneFrame.tsx",
+      "sha256": "b5ebc1355c776bf8a00cc14f680f1748d9a7da5d71cc8642c6191888c3309ff2"
+    },
+    {
+      "path": "templates/mobile-app/src/prototype.css",
+      "sha256": "6849f60c8687f94bd28c94dd44fe44f4eeeab8458ea827c6c333cb68a406b266"
+    },
+    {
+      "path": "templates/mobile-app/src/Prototype.tsx",
+      "sha256": "baff6a279600617f7b43256f4758dda49a35ff47d17ddad4d08aa1164f55c3f0"
+    },
+    {
+      "path": "templates/mobile-app/src/styles.css",
+      "sha256": "2e06533d121c7fb77da59c533e2065d36ebbea1f76d27cf4a92204e1551e0130"
+    },
+    {
+      "path": "templates/mobile-app/src/vite-env.d.ts",
+      "sha256": "424faf9241dd699dda995b367ed36665732da1e6ec1f33b2fd40394488ecac92"
+    },
+    {
+      "path": "templates/mobile-app/tests/mobile-runtime.spec.ts",
+      "sha256": "fe02d6884d6fd2ee59dec2e34563423ee4caa54b6c66764f84c0bf05d7524d9b"
+    },
+    {
+      "path": "templates/mobile-app/tests/runtime-fixture.css",
+      "sha256": "978f8a2f7af157875a5bce85f09e4973128291e525f30e77a1152f886325534d"
+    },
+    {
+      "path": "templates/mobile-app/tests/runtime-fixture.html",
+      "sha256": "db3ebe4945c91ad45781b8ac55e05278fd96f4c161f990e03a036b83e3ab2d8f"
+    },
+    {
+      "path": "templates/mobile-app/tests/runtime-fixture.tsx",
+      "sha256": "1d266803ff50b65753b307e7a2b3b6a15cea2ea1a06a7cb7c9ba664c36879e08"
+    },
+    {
+      "path": "templates/mobile-app/tests/sites-worker.test.mjs",
+      "sha256": "8ca10b7bda5d29d05cbed90fc0c63ee11091c8b197d7e6828cfb2ac8bd99b7ab"
+    },
+    {
+      "path": "templates/mobile-app/tsconfig.json",
+      "sha256": "8fa7705f43c4cd96071fdef3a707eaf599d7af04f82950cb5f876eef3187d9dc"
+    },
+    {
+      "path": "templates/mobile-app/vite.config.ts",
+      "sha256": "a4372bbd484bb0fef56e186f12809ff196a24437f63b3dde1fe9e4494d40a8dd"
+    },
+    {
+      "path": "templates/mobile-app/worker/index.js",
+      "sha256": "1a234cdb94a777085b246520ca7b660b55c5977cef1e529b7ef33d9a17254c3d"
+    },
+    {
+      "path": "templates/prototype/.npmrc",
+      "sha256": "12c285de6198e67f8a4ac3ea24f6b9d589b979bafba4f348fbf450769e5a209a"
+    },
+    {
+      "path": "templates/prototype/.openai/hosting.json",
+      "sha256": "d2841f8a91a91bab4f4a1e27671e7d3fe8f02261eb41996f43ac61e6970a9d74"
+    },
+    {
+      "path": "templates/prototype/AGENTS.md",
+      "sha256": "b7be71178492760b9b489a45c219270e9f77b0a4f00756e27365a72cafaca428"
+    },
+    {
+      "path": "templates/prototype/index.html",
+      "sha256": "5c4c256441a09573950ec7cd514a25c11a0256306c6b9714bbf3a0f4237e9563"
+    },
+    {
+      "path": "templates/prototype/package-lock.json",
+      "sha256": "a1fc11e8ac05a7aaf9e163de74b59b0e06572e91c76f5e3c5938f56fd4f2544a"
+    },
+    {
+      "path": "templates/prototype/package.json",
+      "sha256": "beb2337c6934db9d8e3a01b2a88be2a123ef5cb96ae3fb01f95920a36a3ea68f"
+    },
+    {
+      "path": "templates/prototype/scripts/prepare-sites-build.mjs",
+      "sha256": "ea0855bb81a2b0425258ed95cc50f82a35ff95d9b88a30eb946580a6cc98c478"
+    },
+    {
+      "path": "templates/prototype/src/App.jsx",
+      "sha256": "d05344f133df0430fdc7f41a0236ab1802ef5ab8277814492350f26e0a446138"
+    },
+    {
+      "path": "templates/prototype/src/main.jsx",
+      "sha256": "5545474924e9e3e6c7f601e2a1f4e6f7dc9ee1b4712d7881a4efd13137ac42da"
+    },
+    {
+      "path": "templates/prototype/src/styles.css",
+      "sha256": "72288113164f3e9bccfd630bf9a54365f6a615595be9db7dde0dd8be28182954"
+    },
+    {
+      "path": "templates/prototype/tests/sites-worker.test.mjs",
+      "sha256": "8ca10b7bda5d29d05cbed90fc0c63ee11091c8b197d7e6828cfb2ac8bd99b7ab"
+    },
+    {
+      "path": "templates/prototype/vite.config.mjs",
+      "sha256": "72bef3378e73ed5d0666b3bc00a3c0771c52cd02aaccee341aa62ca2b7169235"
+    },
+    {
+      "path": "templates/prototype/worker/index.js",
+      "sha256": "1a234cdb94a777085b246520ca7b660b55c5977cef1e529b7ef33d9a17254c3d"
+    }
+  ]
+}

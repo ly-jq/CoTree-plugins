@@ -1,0 +1,43 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.skill-creator",
+  "name": "Skill 编写",
+  "version": "0.2.0",
+  "description": "创建、评估和改进 CoTree Skill，管理资源、版本和真实任务证据。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.skill-creator.create",
+      "description": "创建或迁移 CoTree Skill 及必要脚本、模板和参考资料。",
+      "path": "skills/create/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.skill-creator.evaluate",
+      "description": "用真实场景比较 Skill 的任务效果、选择准确度和实际用量。",
+      "path": "skills/evaluate/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.skill-creator.improve",
+      "description": "根据已观察失败修订 Skill 描述、步骤与资源，并防止覆盖并行版本。",
+      "path": "skills/improve/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "3518244b178eb42e67a9fa933d58a6dbe533696f391ce53680904b0208d4a600"
+  }
+}

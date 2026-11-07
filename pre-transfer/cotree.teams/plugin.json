@@ -1,0 +1,68 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.teams",
+  "name": "Microsoft Teams",
+  "version": "0.2.0",
+  "description": "在 CoTree 中读取 Microsoft Teams 聊天与频道、整理决策和待办，发送已授权的纯文本消息并定位频道文件。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.teams.connect",
+      "description": "配置独立 Teams Graph OAuth 并核对账户与权限。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.teams.discover",
+      "description": "定位 Teams 团队、频道、聊天和参与者。",
+      "path": "skills/discover/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.teams.read",
+      "description": "读取 Teams 消息与完整相关线程。",
+      "path": "skills/read/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.teams.summarize",
+      "description": "从 Teams 对话提取有来源的摘要、决策和待办。",
+      "path": "skills/summarize/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.teams.send",
+      "description": "向明确 Teams 聊天或频道发送已授权纯文本消息。",
+      "path": "skills/send/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.teams.followup",
+      "description": "根据实际会议笔记或 Teams 对话准备跟进。",
+      "path": "skills/followup/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.teams.files",
+      "description": "定位 Teams 频道的文件夹并衔接授权文件读取。",
+      "path": "skills/files/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "ac7257e62876c7d50d60f6af5b31ac8e4f9a8c59b071b8f81ff6404bdff841ae"
+  }
+}

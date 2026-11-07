@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.supabase",
+  "version": "0.2.0",
+  "category": "代码托管与部署",
+  "priority": 0,
+  "batch": 5,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "supabase",
+      "repository": "plugins",
+      "path": "plugins/supabase",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "7e11a42ed899001472cfb15b115ae6b76437d98ea0fac8cb012de7e7cabb06c2",
+      "upstreamVersion": "1.0.0"
+    }
+  ],
+  "changes": [
+    "将来源综合技能拆为连接、检查、迁移、应用集成、诊断和优化六个 CoTree 工作流。",
+    "默认只读并限制功能组，提供必选 project-ref 的配置生成器；写模式需显式 --write，不跳过服务确认。",
+    "PostgreSQL 最佳实践归属本包唯一 optimize 入口，保留上游 1.1.1 完整参考和旧来源追溯。"
+  ],
+  "limitations": [
+    "远程访问需要独立 OAuth 或适用的 Supabase Management PAT；本包使用 COTREE_SUPABASE_MCP_AUTHORIZATION 传完整 Bearer header，不负责交互 OAuth。",
+    "默认地址尚无用户 project_ref；任何数据操作前须生成并应用项目级配置、核对环境。anon / publishable / service_role 项目密钥不能代替 Management 身份。",
+    "真实账户、项目数据库、迁移、Auth / Storage / Realtime / Edge Functions 尚未验收；默认功能组外的工具需按需配置，不能声称所有工具已启用。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "supabase": "connect / inspect / migrate / integrate / diagnose：项目范围、数据库、Auth、Storage、Realtime、Edge Functions 和故障证据。",
+    "supabase-postgres-best-practices": "optimize：唯一 PostgreSQL 优化入口，按问题读取保留的 1.1.1 规则与实测计划；旧 1.1.0 来源仅归档。",
+    "host connector": "原生 MCP 默认只读并限制功能组；脚本生成项目级配置，写模式显式选择，账户仍待验收。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

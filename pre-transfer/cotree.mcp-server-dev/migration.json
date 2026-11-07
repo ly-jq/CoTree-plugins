@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.mcp-server-dev",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 8,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "mcp-server-dev",
+      "repository": "claude-plugins-official",
+      "path": "plugins/mcp-server-dev",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "d10c9285bfde185c06b19076fb3733519b52240634c49feaa1cefad141e7fbab"
+    }
+  ],
+  "changes": [
+    "三项来源技能改造为五项工作流，移除 Claude 专属配置、固定提问与强制远程部署。",
+    "新增可运行的 Node stdio / loopback Streamable HTTP 脚手架和依赖捆绑器，输出 CoTree Manifest v3。",
+    "按当前 CoTree v1 SDK 能力区分工具 / resource / prompt 与 MCP Apps、elicitation、sampling、roots 等扩展。"
+  ],
+  "limitations": [
+    "脚手架固定 SDK 1.29.0，以当前 CoTree 客户端为验证目标；不是 SDK 最新主版本。v2 / 新协议升级需单独协商和回归，本包不修改宿主依赖。",
+    "HTTP 样例只绑定 127.0.0.1，无公网认证、多租户或生产上游；远程部署 / OAuth / 重连恢复需真实目标验收。",
+    "CoTree MCP Apps iframe bridge、MCPB 安装器和完整客户端反向能力不由本包实现；必须保留文本 / JSON 结果并以协商能力为准。",
+    "打包捆绑 JS 依赖，目标仍需 Node 20.19+；标准 stdio 子进程不是 OS 沙箱。只验证样例协议不证明新服务的业务实现。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "build-mcp-server": "design / build / verify：需求、协议、工具 / resource / prompt、stdio / HTTP、授权与真实宿主验证。",
+    "build-mcp-app": "ui：标准 MCP App 的渐进呈现与文本回退；CoTree MCP UI bridge 尚未实现，不伪造内嵌组件支持。",
+    "build-mcpb": "package：依赖捆绑与 CoTree Manifest v3 原生包；MCPB 的安装器、占位符和运行库不直接继承，外部格式按实际目标另行交付。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

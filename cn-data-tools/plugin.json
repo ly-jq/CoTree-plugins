@@ -1,0 +1,137 @@
+{
+  "manifestVersion": 2,
+  "id": "cotree.cn-data-tools",
+  "name": "CN Data Tools",
+  "version": "1.2.0",
+  "description": "Isolated China data Code Plugin for weather, A-share quotes, and current news over manifest-allowlisted public HTTPS sources.",
+  "minKernelVersion": "0.1.0",
+  "entry": "dist/index.mjs",
+  "execution": {
+    "runtime": "node",
+    "abi": "cotree.plugin.tool.v2",
+    "isolation": "brokered-process",
+    "resources": {
+      "wallTimeMs": 30000,
+      "memoryMb": 192,
+      "maxStdoutBytes": 4194304,
+      "maxStderrBytes": 262144,
+      "maxCapabilityRequests": 32,
+      "maxConcurrentCapabilities": 4,
+      "maxCapabilityOutputBytes": 8388608,
+      "maxNetworkResponseBytes": 4194304
+    }
+  },
+  "capabilities": {
+    "tools": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none",
+    "network": {
+      "allowDomains": [
+        "wttr.in",
+        "hq.sinajs.cn",
+        "push2.eastmoney.com",
+        "searchapi.eastmoney.com",
+        "www.chinanews.com.cn",
+        "finance.chinanews.com.cn",
+        "www.people.com.cn"
+      ]
+    }
+  },
+  "tools": [
+    {
+      "name": "WeatherGet",
+      "description": "Get current weather and a short forecast for a location. Prefer this for weather questions with a known city or region.",
+      "riskLevel": "low",
+      "idempotent": true,
+      "timeoutMs": 15000,
+      "requiresApproval": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "location": { "type": "string", "minLength": 1 },
+          "days": { "type": "integer", "minimum": 1, "maximum": 3 }
+        },
+        "required": ["location"],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "location": { "type": "string" },
+          "provider": { "type": "string" },
+          "current": { "type": "object" },
+          "forecast": { "type": "array", "items": { "type": "object" } }
+        }
+      },
+      "permissions": [{ "name": "network" }],
+      "display": { "label": "Weather", "summary": "Current weather + short forecast" }
+    },
+    {
+      "name": "FinanceQuote",
+      "description": "Get a structured current market quote (price, volume) for a supported public stock. Prefer this for stock price/quote questions. This tool returns market data only: for stock news, analysis, events, or research, use WebSearch and PluginCoTreeCnDataToolsNewsSearch instead of or in addition to this tool.",
+      "riskLevel": "low",
+      "idempotent": true,
+      "timeoutMs": 25000,
+      "requiresApproval": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "symbol": { "type": "string", "minLength": 1, "description": "A-share code or symbol such as 600519, SH600519, or 600519.SH." },
+          "name": { "type": "string", "minLength": 1, "description": "Chinese stock name such as 贵州茅台; resolved through the allowlisted Eastmoney suggestion API." }
+        },
+        "anyOf": [{ "required": ["symbol"] }, { "required": ["name"] }],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "symbol": { "type": "string" },
+          "latest": { "type": "number" },
+          "evidenceBatch": { "type": "object" }
+        }
+      },
+      "permissions": [{ "name": "network" }],
+      "display": { "label": "Finance Quote", "summary": "A-share market quote" }
+    },
+    {
+      "name": "NewsSearch",
+      "description": "Get structured current news headlines from known general news feeds. Use WebSearch with the entity and date range in query for company, stock, product or person-specific news. Fetch source URLs when details are needed.",
+      "riskLevel": "low",
+      "idempotent": true,
+      "timeoutMs": 25000,
+      "requiresApproval": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string" },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["all", "latest", "domestic", "international", "finance"]
+            }
+          },
+          "maxResults": { "type": "integer", "minimum": 1, "maximum": 30 },
+          "fresh": { "type": "boolean" }
+        },
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string" },
+          "items": { "type": "array", "items": { "type": "object" } },
+          "quality": { "type": "object" }
+        }
+      },
+      "permissions": [{ "name": "network" }],
+      "display": { "label": "News Search", "summary": "Current news headlines" }
+    }
+  ],
+  "evals": ["evals/tool-smoke.json"],
+  "rollback": {
+    "strategy": "previous-active-version"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.mcp-tunnels",
+  "name": "mcp-tunnels",
+  "version": "0.2.0",
+  "description": "将授权私网 MCP 通过严格 SSH 转发接入 CoTree，保留配置、排障和撤销流程。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.mcp-tunnels.connect",
+      "description": "建立明确目标的 SSH 私网 MCP 通道。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.mcp-tunnels.diagnose",
+      "description": "定位私网 MCP 的 SSH、HTTP、认证和协议故障。",
+      "path": "skills/diagnose/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "1f70d921f2d72d782fe054a0509b8cf40a46514fe0b8ab320a9f52b34628ec5b"
+  }
+}

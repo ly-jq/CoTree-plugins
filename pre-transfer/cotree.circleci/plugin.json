@@ -1,0 +1,69 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.circleci",
+  "name": "CircleCI",
+  "version": "0.2.0",
+  "description": "在 CoTree 中排查 CircleCI 构建、优化配置与测试数据，操作明确流水线，并按需接入 Chunk。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "darkIcon": "resources/source-01/content/assets/logo-dark.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.circleci.connect",
+      "description": "核实 CircleCI CLI、项目和独立认证入口。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.circleci.config",
+      "description": "优化 CircleCI 配置、缓存、触发过滤和环境晋级。",
+      "path": "skills/config/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.circleci.builds",
+      "description": "定位 CircleCI 首个失败步骤并修复确定性问题。",
+      "path": "skills/builds/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.circleci.tests",
+      "description": "配置 CircleCI 测试报告、拆分和可证实的并行优化。",
+      "path": "skills/tests/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.circleci.artifacts",
+      "description": "区分 CircleCI cache、workspace、artifact 并检查跨 job 数据。",
+      "path": "skills/artifacts/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.circleci.cli",
+      "description": "通过实际 CircleCI CLI 查看日志、触发、重跑或取消明确范围的任务。",
+      "path": "skills/cli/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.circleci.chunk",
+      "description": "按明确需求接入 CircleCI Chunk UI 或 CLI，并追踪云任务结果。",
+      "path": "skills/chunk/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "a9b0ce1d6c4a4f1d30dfe75e383924dee66225c46ef3c804e4f01f8b3b1e0b23"
+  }
+}

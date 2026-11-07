@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.math-olympiad",
+  "version": "0.2.0",
+  "category": "研究与专业工具",
+  "priority": 0,
+  "batch": 22,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "math-olympiad",
+      "repository": "claude-plugins-official",
+      "path": "plugins/math-olympiad",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "d390a7d573ec91c5f289515dfd3689d84b05343f1f82c20b6b662008fb0b791c"
+    }
+  ],
+  "changes": [
+    "竞赛数学改为 solve / verify / present 三项原生能力；数字题也要求可核对推导。",
+    "保留全部题型方法、构造、复核与排版资料；移除固定模型投票、强制追加轮次与原宿主工具禁令。",
+    "用跨平台 Node 文档生成替换 Bash 包装；编译与数学正确性分开报告。"
+  ],
+  "limitations": [
+    "参考资料和数学模型输出可能存在错误；投票、有限枚举和格式检查不能认证证明。",
+    "TeX 源生成不等于 PDF 编译；实际 PDF 需要宿主编译能力或已有 TeX 工具链。",
+    "独立复核仅在当前宿主允许并实际委派后才可如此标注；否则明确为主模型检查。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "interpret / solve / numeric answers / constructions": "solve：严谨读题、领域方法、构造与上界、数值题精确推导；不以多数答案作为正确性证据。",
+    "adversarial / fresh-context / deep mode": "verify：逐项核查前提、循环论证、遗漏情况和反例；独立委派可选，移除固定模型、票数与强制修复轮次。",
+    "presentation / check_latex.sh / compile_pdf.sh": "present + Node proof-document.mjs：跨平台准备独立 TeX，已有编译能力负责实际 PDF；保留全部原资料和脚本但不加载旧 Bash 入口。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.firebase",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "firebase",
+    "repository": "claude-plugins-official",
+    "path": "external_plugins/firebase",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "06140dfba46f73898acae8fdd35d921ffa9e801f87fefbb482dc190cd8c5b252"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "需 Node.js、Firebase CLI、项目和账户登录。",
+    "运行依赖已固定：firebase-tools@15.32.1（2026-10-06 查询上游 npm registry / Git；版本锁定不代表已执行验证）。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#firebase",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/firebase"
+    }
+  ],
+  "copiedFiles": 0,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "e74224900d6d4f18601154db4b26f598fd6d92fced14318a2ac9f031389bb482"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "a93b2ce5109e5fa926972adc8c070426534e9fca10971cc11f3f9e8e28ec6268"
+    }
+  ]
+}

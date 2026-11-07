@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.coderabbit",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 22,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "coderabbit",
+      "repository": "plugins",
+      "path": "plugins/coderabbit",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "f607826a30c1e0da018a8a89bbc1e3d53640de0e633b84c6ab18a1e34b906a11",
+      "upstreamVersion": "1.1.4"
+    }
+  ],
+  "changes": [
+    "原入口拆为连接、外部审查与修复三个 CoTree Skill，区别本地代码审查能力。",
+    "跟进当前 Windows 原生 CLI 与结构化终态合同；新增有界、只读 NDJSON 解析工具。",
+    "保留来源图标、许可及全部资源；凭据由官方 CLI 管理，不迁移原宿主账户。"
+  ],
+  "limitations": [
+    "远程审查会向 CodeRabbit 服务提交所选差异，需要对应授权、账户与套餐；本包不自动执行上传。",
+    "CLI 帮助 / 隔离未登录检查和协议夹具不证明真实账户、远程审查质量或付费权限。",
+    "只支持已核对的 review NDJSON 合同；新增事件或终态字段值需要重新核实，不据此给出零问题结论。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "coderabbit-review / code-review": "connect / review / fix：独立官方 CLI、账户身份、明确 Git 范围、NDJSON 终态和实际代码核对；本地代码审查继续由 cotree.code-review 负责。",
+    "agent output / auth failure / install": "按当前官方 CLI 0.9.0 文档支持原生 Windows；本地解析脚本区分 skipped、incomplete、action-required、reused 和完成，保留六种 severity。",
+    "silent ten-minute wait / automatic install": "遵循 CoTree 当前取消与进度策略，长任务保留进程句柄；不自动登录、安装全局软件或上传仓库。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

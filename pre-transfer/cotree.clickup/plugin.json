@@ -1,0 +1,79 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.clickup",
+  "name": "ClickUp",
+  "version": "0.2.0",
+  "description": "在 CoTree 中查找 ClickUp 工作、管理任务与协作信息，汇总项目风险，含独立 REST 入口。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.clickup.connect",
+      "description": "配置 ClickUp 独立 REST 或 MCP OAuth，核实用户与工作区。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.clickup.discover",
+      "description": "查找 ClickUp 空间、文件夹、列表和任务，并核对分页范围。",
+      "path": "skills/discover/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.clickup.tasks",
+      "description": "创建和更新 ClickUp 任务、状态、日期、负责人和优先级。",
+      "path": "skills/tasks/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.clickup.docs",
+      "description": "搜索和维护 ClickUp 文档与页面，保留上下文和引用。",
+      "path": "skills/docs/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.clickup.collaborate",
+      "description": "读取 ClickUp 评论与讨论，并发送用户授权的更新。",
+      "path": "skills/collaborate/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.clickup.time",
+      "description": "查询和记录 ClickUp 时间条目、计时器与任务工时。",
+      "path": "skills/time/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.clickup.report",
+      "description": "从 ClickUp 任务、文档和时间证据生成项目进度与风险报告。",
+      "path": "skills/report/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "clickup",
+      "transport": "streamable-http",
+      "url": "https://mcp.clickup.com/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_CLICKUP_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "34bda2e2763fe654d19a91574dab004ab819a992ee7ade1882539b4115ea7033"
+  }
+}

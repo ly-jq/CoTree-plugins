@@ -1,0 +1,864 @@
+{
+  "schemaVersion": 1,
+  "scope": "presentation-only-byte-equivalence",
+  "verifiedAt": "2026-10-06T10:55:14.363Z",
+  "newServiceObservations": false,
+  "packages": [
+    {
+      "id": "elyra.adobe",
+      "beforeDigest": "a4b364b9696f5f1db3c3816021735114f0522212b7d5bfeb961b9d5e50df0ce1",
+      "afterDigest": "45427805d0cd5172a32cb945eff62844c6591f965245b284801315c5cc890acd",
+      "filesCompared": 29,
+      "filesSha256": "d3c49c799c92c6325b2e7058f835b7e6fbea884d234bf7ed2f82d6d42473879e",
+      "executionManifestSha256": "fa97c9a918692a9b2b2a611add7fb75febb86c73959a60beb427ef58e104454b"
+    },
+    {
+      "id": "elyra.agent-sdk-dev",
+      "beforeDigest": "4d1b69b94db075d6659aa25d31e279fb7059c556aa255c20f7c20ece07086feb",
+      "afterDigest": "66d56cfaa97a03ce0a549e5043d272805ea0130079b020f24973abaf81708cf5",
+      "filesCompared": 11,
+      "filesSha256": "146e585e88a11a823de7f6ba5e93d32bde60af858a11d1a22d6f6ed0838689c4",
+      "executionManifestSha256": "f86e453c138e03b8cdcf783b264881f3c136bbc9e3a5669217092b95efd47ded"
+    },
+    {
+      "id": "elyra.airtable",
+      "beforeDigest": "852d6d3d2a0d19675e032974848fdeb3d9d211c0e5a30b1484017940346fe34e",
+      "afterDigest": "ae2eda2d97e990571f31cf5fe9d9270e6b797b2dcf5a1800d60e9e8c3c660c5e",
+      "filesCompared": 13,
+      "filesSha256": "a1531d927a9454ce283c4891b92f103c0c068bc216ac3914f111f283a1fbe5d8",
+      "executionManifestSha256": "4bf1d9f704ace4243d0cbdd83cfd6a191f4416c8c5faa84a77a2219d8d2e0a81"
+    },
+    {
+      "id": "elyra.apple-development",
+      "beforeDigest": "a8d8dcbcdb8b324a6e0fb3dcf73a6b345b12ee690b273fab335c8edad0bfaa33",
+      "afterDigest": "c011f8d88011a6f73984af4261323dd11c262e8455c595f9d30c244ae9e14e16",
+      "filesCompared": 121,
+      "filesSha256": "70bf21188a659b8e0d8c2fd48732f4d32680346a0338e47d655599174fc489d3",
+      "executionManifestSha256": "bd155e61c792b2aa0fdfd5fdf939377789d4d84bf7b3d17e2f19b18cb223b36e"
+    },
+    {
+      "id": "elyra.asana",
+      "beforeDigest": "8e2b77f6eecc008232455edced8daae0ee24efe6256d580c4d3fd2d657080e24",
+      "afterDigest": "ea85d41ab453d3d867614e49d35dc3eaf272c64aa7497d514196fe57e929e1eb",
+      "filesCompared": 8,
+      "filesSha256": "2aa1ca201747b81f6b2af1860aa99cc83cabcdee3dc0dd540e3cd25ddfcffa0c",
+      "executionManifestSha256": "e64fd1959037b2c8dcd1e4b397b1694f8cd45b038fc312ca2c1f8a07cdc2595f"
+    },
+    {
+      "id": "elyra.atlassian-rovo",
+      "beforeDigest": "2e584e4d38dbad2e1d6068dbd47be18869e4bdcf00b0c97c5608cb7de59e4664",
+      "afterDigest": "7c473b07eca100b7a1293485aeb150c7096de8e64cddd58764ec6f6f7d48a080",
+      "filesCompared": 9,
+      "filesSha256": "249e302a1007ea3fb3a52b3883d9f85fa2718ed8df81d7c9f68058adda27874b",
+      "executionManifestSha256": "adbb9e20a823ac2b85ee946c6fa88b959f50c4d9f5447f93b090f61259e0e76e"
+    },
+    {
+      "id": "elyra.boltz-api-cli",
+      "beforeDigest": "2e5018ae27421f3b01a834911b671d05b7a24e211c3f3db20af1ca6ba47856ba",
+      "afterDigest": "1397e1004960e3064b3e94836f970412a6762d465592b6fb2aa257e2e34bd670",
+      "filesCompared": 47,
+      "filesSha256": "04cb30b80a2b2ae7ef2eb3099d1c2aaa0ab8f1db6ee2b1c16e754a53aad90927",
+      "executionManifestSha256": "c084d3ffcd8e7e036a28b2865a7cb759227ed28af11c6e52fda468438881f4a3"
+    },
+    {
+      "id": "elyra.build-web-apps",
+      "beforeDigest": "24af54c0a62fa6d4cb6822c6d3bbf701093eff983da72dbe70e7b411c4a70e7a",
+      "afterDigest": "8b21d0860cd4945fbf900a83d7734eb4dcad982c523e0e4dfed179ef62bd2db5",
+      "filesCompared": 148,
+      "filesSha256": "f20e04421c32b5ef97ea6e3c6cf8433024f2152738e37eccf52907c32b1da1a8",
+      "executionManifestSha256": "4d0901ec0bfcd0cb1f00cca72436aa04a4b02222bfa67bd5a80bd74d171e19c9"
+    },
+    {
+      "id": "elyra.build-web-data-visualization",
+      "beforeDigest": "bd025fcb99f8ea8339f8191498b906a3eee57f02fc69066a716af12a4633b79e",
+      "afterDigest": "4585b73d224829458ce4598b55820a837fe0ae77d5e351897e817e7e2e9b4d82",
+      "filesCompared": 168,
+      "filesSha256": "5dade19e415931a8942e75f5b9f9ce5118fced9646a5834386bdae93254f479d",
+      "executionManifestSha256": "6f53ae52ac6ff131622c183be9931edcbfdf81c92add0f749a5683d0bf112ebd"
+    },
+    {
+      "id": "elyra.canva",
+      "beforeDigest": "6e2ee56cdb9ac6d27b2fd557e6b6e95dad409a0977dee0cf181ff89d0bf8e305",
+      "afterDigest": "4ab4afb3bd5c281ff9a470dba79e829045aa7cb28e262df266482444736ea264",
+      "filesCompared": 15,
+      "filesSha256": "e4f91a0622213a8a85843e4cd1f3132bda55f03f703e6fd80db50d9b2e2c9662",
+      "executionManifestSha256": "1205fd7f96af4a6688f56214ffe9ab581a44a3102a79fb22c3990603afe18345"
+    },
+    {
+      "id": "elyra.chatcut",
+      "beforeDigest": "117f2efa91c0455cae762e5aac20764175bb2ceeb4620cde1fb6431c7bd6d60e",
+      "afterDigest": "c56f5723b1cb8ba42948439b0a0d316e794d2ae3a0573e3940673dffee18ed30",
+      "filesCompared": 9,
+      "filesSha256": "831b01e2dd6c134b074c0734c03ffa26db25a274428c81969b6108131622cf23",
+      "executionManifestSha256": "6e7771638a60ef18439dcd173beb6056726408a2d9f4ed8e70c55afa6cba8bc5"
+    },
+    {
+      "id": "elyra.circleci",
+      "beforeDigest": "58fe391a90118bc0a8ae12207aeb246c1c203fc464732a8e6d21df02198ac158",
+      "afterDigest": "1272f0f8bd2913d7b092fc2d12460ea3cfa994935f32557a0ec049368f5c0e36",
+      "filesCompared": 23,
+      "filesSha256": "594fd36baf0f5a625af6fdeb35281dc86e34ec526a4d7a113c382b0fe1106706",
+      "executionManifestSha256": "93c3f729e6eda7bfaeb27835e5d72fb0bd949f4b8138ca91b07ad13e0def24f8"
+    },
+    {
+      "id": "elyra.clickup",
+      "beforeDigest": "bade431c850c4062274e4f818f09b452427523d2b25d248942c096898fa17cfd",
+      "afterDigest": "bef489aa5919662c71b68af1f1684e7c24278f5b3018d563156fe34af932b8d3",
+      "filesCompared": 7,
+      "filesSha256": "5f1798f6fcbe7f6c42b5bf1285c7e5eedc5a832e6e1f333d965bf0f797d816ed",
+      "executionManifestSha256": "e3c36abbbe37200b0285e51248b5e2756bef7cdea7971ef12578a6bdb18155c4"
+    },
+    {
+      "id": "elyra.cloudflare",
+      "beforeDigest": "4c6d7ab6b847a970bfed2f0df722debc5fffe343a9e378897d6e311d4877e856",
+      "afterDigest": "23aed2e5b96ef0498ae335dfae49b17afb13de3a88621bc97a7b4b3c03dff075",
+      "filesCompared": 369,
+      "filesSha256": "40fe818d9f33caee4dc506fce7d4ae83cd54d04580df234a645ed928dcf3886d",
+      "executionManifestSha256": "dd2cc8b61e2adf73eccfe1ad6bd3f13a9db9f15ff9630a256ae0c54482e83ce5"
+    },
+    {
+      "id": "elyra.code-modernization",
+      "beforeDigest": "7326cf86c501fbd2d3e49ceb21f17ca02b852f0a0d9d673d338f5cf9904b1a7c",
+      "afterDigest": "1c2cee599a93894c6059a2a20ec6fd9d99b1472e7f50d53a539c1de0fd85959d",
+      "filesCompared": 111,
+      "filesSha256": "b5c28d20e96d62c5f768d180fadbc12621b468ec450eed9bcee27cf32ad1310e",
+      "executionManifestSha256": "2540416d8152a1bbe3a935b13d6ca0f6810a004f98560ae4481c753111758184"
+    },
+    {
+      "id": "elyra.code-review",
+      "beforeDigest": "d4f32fb394f6a8146c5166976e48c248737a09efa7b6cc59535b3d3af8e95f8a",
+      "afterDigest": "503d1768cea3e21fbd03e10211e27caab82ab0048105f15050e7b0f5b9dfe13c",
+      "filesCompared": 26,
+      "filesSha256": "ff6dce149a5cf7a5897289b33f72dc04d2aeaf6600f1f6651265b78d744f9867",
+      "executionManifestSha256": "a7ba1c37e24736988a09634fab58a4ed176b22e12a9aed46fe062252f5e14a39"
+    },
+    {
+      "id": "elyra.coderabbit",
+      "beforeDigest": "8846924b314ea10984308ef2fec5dcb27a8cae8b22c6e8a42c113355887144ec",
+      "afterDigest": "c20f3cd92c58636608b29df5cd7f0bd87759661b9e6b11ab79883cc7a9d6fb13",
+      "filesCompared": 11,
+      "filesSha256": "23e4752d7d02082ee1303a5af6b89bec7b2903f5b452bae3a44f1cad88ab5984",
+      "executionManifestSha256": "456bbe3ec761f674b39b9e3cc819e9416e20169fd5f5a180a8695e40fde0c567"
+    },
+    {
+      "id": "elyra.consensus",
+      "beforeDigest": "d41eeac676eeface6ef5e79c61ccade02223429b6c5e9d94a8274b6113d9c785",
+      "afterDigest": "886ab0f4ad594b831d8a6fbdddcb964beffce5061b277b4719455f90da23528f",
+      "filesCompared": 5,
+      "filesSha256": "a9140ea702e805527ad233c060b0aed6c8e8f59e592372bd3857b61940ed2e79",
+      "executionManifestSha256": "5869d259227c6c860c4a592c438d7efcf21718cc776e2f3e7f827bb73b2c7c27"
+    },
+    {
+      "id": "elyra.context7",
+      "beforeDigest": "e21aff621f419212db3960cdf9b5c998c08b405197ef8a80289d76dc604ffaab",
+      "afterDigest": "5a597d53acac8af86668ca57c9892212ba0e6d7160ec26373bb24637453819dd",
+      "filesCompared": 7,
+      "filesSha256": "bd6e233898309787ed3b5e7769daf3e7d90c8669d72cfd7111031a14d7928d9e",
+      "executionManifestSha256": "2f2ab09940508d8bb1eace252e2ac76c937a6d01d8fb363c98164707e8ebd9ee"
+    },
+    {
+      "id": "elyra.creative-production",
+      "beforeDigest": "ff60efd1c405ab44dc59f692e456f4a6ab603b5a731e41e6a2c7fab48568fbbd",
+      "afterDigest": "9d489e97aae0fc4e2ff62374375740261c4f872d98a63592a04ca43dbb96cec8",
+      "filesCompared": 108,
+      "filesSha256": "c1e9d89d16102014586dce7eb13def9fced562acb713f240769bca998e794570",
+      "executionManifestSha256": "86d0541f5343b24d4d950738960ad8ad62007cdca9d9c36442a7f697a5179464"
+    },
+    {
+      "id": "elyra.cwc-makers",
+      "beforeDigest": "0ca39d0c5d742c0f323ee2d38e7b1b12aebb4eb62abe9c8a97f669d562c64d5f",
+      "afterDigest": "fa622bd11ea9000c6a05ac3a71a61960ca5bbf3811dac323736c16491bfbf3bd",
+      "filesCompared": 11,
+      "filesSha256": "7c0c1ee9b00dad3ff8c5f00a8ef271d11681df0c8c1cf77510e889ebf05faf66",
+      "executionManifestSha256": "e8bfb8441fa9e061e72edafebe906d584f6913260766c518902170aa70462584"
+    },
+    {
+      "id": "elyra.data-analytics",
+      "beforeDigest": "e1433cbc4249539fd93721941239b329003cec08057c1005ea2302d84d4be927",
+      "afterDigest": "841e6ed76fc99ca74372d1452b77b935d96edbff5c622fb835de1c483ad195cf",
+      "filesCompared": 203,
+      "filesSha256": "1c3353addbac566bb0c263e57fb3c28d542548e90b3a386800703b9b334cbd60",
+      "executionManifestSha256": "6b38ba481da56367a4efd16f77e857b652ef64a9dcee3cda43c6f81912bc0bfb"
+    },
+    {
+      "id": "elyra.datadog",
+      "beforeDigest": "d8ca69bf6cb313718271a75ccb102cb56fd6c683541a4c76c7acaaff715b97b4",
+      "afterDigest": "e7594c5991ec75ee4561428edbe1cf5720b7dbde2cd7aab2cc3d5140af389159",
+      "filesCompared": 7,
+      "filesSha256": "feef9de76bac11638abd1564accd4b9d27b77fbc8e53ef72cf64a2810a145861",
+      "executionManifestSha256": "cf3c9034e1e2ecd25152e6b9c4280b811a70464997d92463b1751688298bf5ac"
+    },
+    {
+      "id": "elyra.development-workflow",
+      "beforeDigest": "ce78f705c6f7007cb2fe5477e7ab7bcdf4b9078a31a32390f2382efd6c11e829",
+      "afterDigest": "8819f74a8b1dd5c8612489ad3b60c4bcf8fca871f3b56eb4e5c1f9e4dce2d487",
+      "filesCompared": 93,
+      "filesSha256": "63d4d41a9870ab3c607e407b117a0f2a67366c011294ea4046e9a9f7378aa423",
+      "executionManifestSha256": "f7200e58fe2df1aee5a05dd883a5357e18c75d66c2a48ff9505044220a686f5f"
+    },
+    {
+      "id": "elyra.discord",
+      "beforeDigest": "6920a869464e76d4f7fedf8a7eb2c28240e388351d3fcfb1eb67f0c1f24ee1bb",
+      "afterDigest": "349859491488a5b662a8b0a14870ff2d030758ac60f6d318f572b78ae67666c4",
+      "filesCompared": 15,
+      "filesSha256": "0688ff34226b2b26e58978a51f2e8309b7094601527502c7ce15a98dd76ca087",
+      "executionManifestSha256": "e9bf723ca73e34f5d902fc7eea39742583d791f95dda2b7aeb5beb5247a7b413"
+    },
+    {
+      "id": "elyra.dropbox",
+      "beforeDigest": "eeda966f8ad37e25e84bdb6946e95e1b630cdb4527180f355b1a485baf189d0d",
+      "afterDigest": "7d8971ba606e1c919a990b4284e8bca8f637156e3c473ca87dcd08118fd771f5",
+      "filesCompared": 16,
+      "filesSha256": "47c2ec59ec3c8e8a835660d6a59aa5f9ef42b28d32cf088e8fbe102a469fe58b",
+      "executionManifestSha256": "beadbcc42e355f801de0d80e461c1ce7c5fb47790e60d3da94aa3c4f6392f6a2"
+    },
+    {
+      "id": "elyra.example-plugin",
+      "beforeDigest": "98f10e72b2bd9d1050b0aa3c8b3afb53b20a0f0588e5b48afa53f03e849bb2c6",
+      "afterDigest": "df54d0870dd780b126d52c23acc63b08e67104858a086649f31e6cdae81c1699",
+      "filesCompared": 11,
+      "filesSha256": "10329bd5d3bfb51ff2dbc91444a61cffaaf85543bda58c76d8dfc296601481cc",
+      "executionManifestSha256": "3d14c8a9055bdd3007e929ca5dd52ca78e4f37024f967fad8724eed9722c866f"
+    },
+    {
+      "id": "elyra.expo",
+      "beforeDigest": "70fc754a110418d92ba146057d90ca2e1b9aa9b50a4960589b4ca42a23807687",
+      "afterDigest": "9bbd67c17e653d104df0f75c99818edeb18108b1205cf7f6b0dfd1833f2ace75",
+      "filesCompared": 71,
+      "filesSha256": "a6e96841deaf12af97093625eceea8ecc5eb88e9f2c6d304a4f5687c392b9f70",
+      "executionManifestSha256": "db390bfa61df8e92cffb5b2f7837370fa7db7f507a7bd8cf2cf386deb15d6ca3"
+    },
+    {
+      "id": "elyra.fakechat",
+      "beforeDigest": "0bb8d1148a488a3aa1d2d68e26bd1f1cdb6db827fdadcb18fa5cebac00d0cad7",
+      "afterDigest": "ce65e1a4c9861c09af2f09b4d5ce284a61b19485775d4f2a54466e18ea47c342",
+      "filesCompared": 12,
+      "filesSha256": "abfc99067cafbc3a21a4ceca702f6a99b5c1c990157c1c00f3427efe7123c577",
+      "executionManifestSha256": "e03a74fc84fd305248dc92cf6096bcbe5834e2b9c568fbb9169a4a7b4c883a7c"
+    },
+    {
+      "id": "elyra.figma",
+      "beforeDigest": "e2d0dcca0dd8de6babebd0b4e6948d20c1a1d86fa8a275091d5bd4920b103ffb",
+      "afterDigest": "9027a3606aed841b5470149d2099aa47f5cdea24c7be15799d981d9fc7bc5aaf",
+      "filesCompared": 127,
+      "filesSha256": "14139de1ab6708b989edd63c18d2dc8487ae6754dfc0fdc6c8997b4e758cc229",
+      "executionManifestSha256": "99da40c1f31fcf09e2c211ebc3b98ad5ed84a49a645edc2b0c4dfeadeffd5b54"
+    },
+    {
+      "id": "elyra.firebase",
+      "beforeDigest": "355a4e22413c9a7f7639251f04ad7f2bdd60381af99f2e8280deab0e5f46b48a",
+      "afterDigest": "7ec3827a739a701ef00393d19b722ecc6ddf96792b8802a5a5986bcb11a54ad9",
+      "filesCompared": 6,
+      "filesSha256": "4d3dc889d3a0bef8e3de0f13caf48be2bcc436be5f02de1ecb0b79a62a20ab77",
+      "executionManifestSha256": "e82044d953fba1a6e2f7512d60a59730bcb7c4c5e620b1ff1991c191183f8feb"
+    },
+    {
+      "id": "elyra.frontend-design",
+      "beforeDigest": "a592376209839326ab04adc12cada1282a210e042a06bd5f63352967ff8d8d5a",
+      "afterDigest": "e6994a9ea8ec380bb2282589221f4b6002e066766f82d98ead07835cd0b82eaf",
+      "filesCompared": 11,
+      "filesSha256": "8201736ec350b61b786c9459b1c78cd82f6b6e13e93f26a89ecb82c20b22f147",
+      "executionManifestSha256": "124abd29947452668bb5ac80752cd19425e0e18c07a45f39979e03950bd85117"
+    },
+    {
+      "id": "elyra.game-studio",
+      "beforeDigest": "8a15067203b20c003dd665da9aab096f0a6f0fdb680ffc6a24f52a2beeb24558",
+      "afterDigest": "dd715dc6c86e3bc0226f74ecf48930f394989929f5beabb4053e81626f550afd",
+      "filesCompared": 44,
+      "filesSha256": "4dbe73f5ba64582559f0316854b97c839463325e9103dc33d20f6551a52f64d8",
+      "executionManifestSha256": "85d37db67e1c87989fff20b99b1ca9e9402c1c725309154c78d1b7f9ae29b527"
+    },
+    {
+      "id": "elyra.git-workflow",
+      "beforeDigest": "51af5b0d8ab7e8a2b81221a6507a2f49338edda85525f49907df385da1c23cfe",
+      "afterDigest": "44e404f1541d8e0557587aa11ef0ee21761cdb95b2c567bb0851d705e94d8dd9",
+      "filesCompared": 14,
+      "filesSha256": "9c8175e92d287730102a65bb7dbcd878b0fc248165146286fd50f579ec38b4b5",
+      "executionManifestSha256": "53a11c73f7e5c74bfddb0d4139f81a7dd2003ad0be51a20a6ac72956e67cb14e"
+    },
+    {
+      "id": "elyra.github",
+      "beforeDigest": "65856afa8715e1573f54ba522a83494d0cde789b076a78da6d29b08eb69edc14",
+      "afterDigest": "81d374a3c7c73eb47f6fd818ea20f12770587806900578e0e7c2f7bbf73b0192",
+      "filesCompared": 16,
+      "filesSha256": "ba5d979d5f9e2b513968d754bf133b41540f898ace707d9bfcc1497bc69b426d",
+      "executionManifestSha256": "17805bc82bcdc675e96a7b46a6c83180bb63c2307a343058fedd1eae383df703"
+    },
+    {
+      "id": "elyra.gitlab",
+      "beforeDigest": "d97fab66b348c3b802d2fb1e249f9af84e5a25175601c2c7e5c08104745bb885",
+      "afterDigest": "856f8b7a9bbdd2cf660c45b331c6aa749c92b96750892ee54e47cff269b9631c",
+      "filesCompared": 6,
+      "filesSha256": "e4ac56fcb9c1165d6122ade855ca1ee7a9d75965516a039b193709eef094782d",
+      "executionManifestSha256": "ede7df499fce9b22176d2e986801265ef86c3e885396a3d9c3a88493b274cab2"
+    },
+    {
+      "id": "elyra.gmail",
+      "beforeDigest": "2125da4b80ffeb5b848836ce6a82fca732bc85f9d2961573ceb25a14dc9cef0e",
+      "afterDigest": "b3d1624de7fecd1d361cd460bbc8e22193d45e56127fca232853f2bf482d0e0f",
+      "filesCompared": 18,
+      "filesSha256": "2f8980dff2da906b279bd2c6c48e7402d482f4d6b5fe4b9ef2b4cb6a2d17c4a3",
+      "executionManifestSha256": "df348906c69f12af505f77af3daaa1aa9b3655a0771474b9dd7a990ee3d44be7"
+    },
+    {
+      "id": "elyra.google-calendar",
+      "beforeDigest": "6132b20069ba1dafecc285f4e2c528366801c90c0f94684f62be3318b1027002",
+      "afterDigest": "1f156d2e0c1a6031dba9492688991ad83ba5e09d6edcd79ab68975b4f6b2222f",
+      "filesCompared": 8,
+      "filesSha256": "946bcaf9e8df75e0c735addfd9d978f13e002dc3f7982f58647c667fde8c5588",
+      "executionManifestSha256": "6b26d0b2893a4217d13331f098169b2a38edd7a7329e23f41b6eeee85ee54d9b"
+    },
+    {
+      "id": "elyra.google-drive",
+      "beforeDigest": "5e11a3c3bcc93aed6a2b6aaa6141f46bf17c1a6c81aaa58615f281c0ead9e507",
+      "afterDigest": "0a48c8b7b44d3591ee51112c9f60fd7bf44ec9e90704d54013462d82d093d214",
+      "filesCompared": 100,
+      "filesSha256": "ee2d3669c1cce279e29883f1f4699d98776b27aeb37f048cc4a0b9d5500c3691",
+      "executionManifestSha256": "9a95837318bfde8151a8122ad0090751e786c27d63d49a0fc867f7e9e2760ae6"
+    },
+    {
+      "id": "elyra.granola",
+      "beforeDigest": "6b58a9b9c1257596497fdb1795eb243d532d31c09adb9d7db17d3103756be2bc",
+      "afterDigest": "57f720923fd3c83dbe184be106a172380e060036d9573898fdf109b95215e47e",
+      "filesCompared": 7,
+      "filesSha256": "d8986e7801e7f9882cd7ae830f9757880b94f36d50991c55e625c26f0578fcb5",
+      "executionManifestSha256": "f004145f6adc5ec11f1274d24e157b2a94dd63f8843500495d4d29a238b85dca"
+    },
+    {
+      "id": "elyra.higgsfield",
+      "beforeDigest": "df24c97da212d6caf33bf5d42f9a9d325e1bae33a0e4107fafaac981033cc341",
+      "afterDigest": "5224a3071eb51b517d813a756de5528fda637c2ab87932185bef308fa6fe33ba",
+      "filesCompared": 30,
+      "filesSha256": "36f5bf175bb51fcc058f79722b20ada30a380ff4e17a6afeded1b43e339a9ef6",
+      "executionManifestSha256": "56f608e9c7c51308e206077077333165194560c71a0026bcf0599a139034882c"
+    },
+    {
+      "id": "elyra.hookify",
+      "beforeDigest": "409a132dc857c846220b086cee60efea3ca8c029676535894d92ad21ed07f5fc",
+      "afterDigest": "ca640de9341f9fbb3528a4141042493b35f76729da9724661c43af463aaae8b3",
+      "filesCompared": 29,
+      "filesSha256": "6ebe61ba19d98542d466164d5fc29149a7f41e6cc1b3655e02677c1f5e5eeb38",
+      "executionManifestSha256": "abba3203d43702296b68d699e60ee73a1f5400b91b58ff8bfc187764a170716a"
+    },
+    {
+      "id": "elyra.hyperframes",
+      "beforeDigest": "963fc1e4c99d2b513af47b712b6749c4cd47d800b8708202ddbacd314427649b",
+      "afterDigest": "def7dbd1352d81e47ad522afdeb623ff39745f261c04baee6e559b922d69a92e",
+      "filesCompared": 73,
+      "filesSha256": "5cdee60bf30e381581672bab541c48e067edd935513e6be7cb4c5d111eba373b",
+      "executionManifestSha256": "0b0860c6d667cea01e138cadec07d3078b12f93d5800cd4297beaeec2489c336"
+    },
+    {
+      "id": "elyra.imessage",
+      "beforeDigest": "8f0570d1e12b3bf1c63f52cd09da9e6cb592186e03559ee116ca4507836798cc",
+      "afterDigest": "d1265fcde06ecb88611cb9870e52c5baddabe1617d654909bb150420b73ab129",
+      "filesCompared": 15,
+      "filesSha256": "0ee7c74367feb21a83c7d9b6ad393e31a15176595c3bf5c2162f06c4dfe02d77",
+      "executionManifestSha256": "29da65a5641f11d108dea2f36c5776c0d9102697fb4d9dfa09acb9d450947eb8"
+    },
+    {
+      "id": "elyra.language-services",
+      "beforeDigest": "394542ad3269cb4082acb8504d5286eafb3cf95078c9f21d8f9abf68e0a29f53",
+      "afterDigest": "0b02c0ebd5e2de0d92ad72b2656b08861f10ff609df0fa1dff2a22d40c85c75a",
+      "filesCompared": 71,
+      "filesSha256": "c95eea68521a5d7923f06bff6c8dab8b9ad8dfa6f006516a9c3bfbd1ffdb79f9",
+      "executionManifestSha256": "f4765d5b32e644ccae17ac79e615686d34a836d0c0318cf9d22210bde8eade94"
+    },
+    {
+      "id": "elyra.laravel-boost",
+      "beforeDigest": "c5badda2d9d0d9120db08a5861fde8e6f5e0b51a60ead8da6b6e4b4b08b145e8",
+      "afterDigest": "8838a22b6421896a41a3b6ab21cfa24fb412ffe7d90f396b3476a780f7e1c282",
+      "filesCompared": 6,
+      "filesSha256": "e0f86193342423e248856ff2660e5aad172753450016467aa238de9e83f85b13",
+      "executionManifestSha256": "ab22a22236e5d08918d0fb4845f63e01b3c50ca93d742a8e00e8ba49c1883758"
+    },
+    {
+      "id": "elyra.life-science-research",
+      "beforeDigest": "368603c13ae84f64b0b4c87447bbeb72ed4a9bfb399c38b0e8f473a5d2ada496",
+      "afterDigest": "2088c8f80d49ce47a9a41e47a7365c4e2c5d417b2ffef45ca0e34c64086d08ef",
+      "filesCompared": 168,
+      "filesSha256": "8e721f1733b04ad325770433f951895a668495f341f9aeec883633a0486fa1a2",
+      "executionManifestSha256": "74225c37b8b6c1a1075b62cd3d41d43ce482892779813ee0c59a337116c84ab8"
+    },
+    {
+      "id": "elyra.linear",
+      "beforeDigest": "e6d68e28a9bf6ec9a452ff6b53c5ec22857feb48488447c956388b43b268b160",
+      "afterDigest": "2bfe4b57647ec29309de87c0b8857099814ad2a6b7f66ff62670df71634ef4c4",
+      "filesCompared": 16,
+      "filesSha256": "4681152458806072b54504a9c2e7335fff9e849c7b890441aa7651374a39df30",
+      "executionManifestSha256": "6347e55754bba882278e7d6a95637288baeb5eecccdb15ee17dbfad8a00911be"
+    },
+    {
+      "id": "elyra.lovable",
+      "beforeDigest": "ddb76a2e09159a52f0cef749609a0d74e98435460bd47ad9cba26ac0514f2356",
+      "afterDigest": "9871bb2733f4410ff5f4af759a8fbf7e236eef4c644aa3cd59c1646ff6bbc996",
+      "filesCompared": 5,
+      "filesSha256": "8e1cf59422025078eb695e80e14b977668607afe83b9c6bfd8967ec06b177bb3",
+      "executionManifestSha256": "71f0ce465e4f18cf9be9c63759b0922fda1ccd01cb7fb21722f660e5079584e4"
+    },
+    {
+      "id": "elyra.magicpath",
+      "beforeDigest": "d6454600cd6e88b1915cf04010e1b4d5b8a55d7655ade2c7aa0b31d8f184de4f",
+      "afterDigest": "da966394bdd4c1c5f496a5e0d3b150422f61c4d076c22699fad5f00ef0115109",
+      "filesCompared": 11,
+      "filesSha256": "28bb886d7dcf62894884cf4dac4615a602401bc8f229ae85be5493301a88d3b8",
+      "executionManifestSha256": "fe31fbd6a826e3d87209a8d040b62bc062f3428f4bb1b60ba28462476d8e2cf5"
+    },
+    {
+      "id": "elyra.math-olympiad",
+      "beforeDigest": "77fd99fc29cd14460e0136efe25fa2f61f486c45e4ebe97a5f674121859d0f1b",
+      "afterDigest": "21773ce615a1bcb438cecfa407c0552d8e6e5bdc3bd0289e0a8f4d0e6f3002ff",
+      "filesCompared": 19,
+      "filesSha256": "3a1c4cebfe70ea9f24f4800766c639e9375e5d4fd0db97dcd329854ccdd9244f",
+      "executionManifestSha256": "b861474fdde18dd2d5fa8677f31b01ec9b10966504a1a246c6775dad2a109063"
+    },
+    {
+      "id": "elyra.math-proof",
+      "beforeDigest": "0fe44207e7cd6620002a153bb88b1185031984017e455bd7da553b85e2a7bc03",
+      "afterDigest": "373cc2975cb3f04b32e3e4612f932236fb0e22a8b5d0ce52220f62a7afb14e85",
+      "filesCompared": 15,
+      "filesSha256": "676077d27f8be685f102c3bc4cf0eebd15f1f41843e8f9d3c897bdf2642094e8",
+      "executionManifestSha256": "aa51d464c3ec2ca97ee099c7b711e0fff19cd2d682c866b099c1884ce85df872"
+    },
+    {
+      "id": "elyra.mcp-server-dev",
+      "beforeDigest": "7ec89a9e8652b395ff754ca0cd711e8031e327e1e9bf08da0c2059d3038a204c",
+      "afterDigest": "39ed738a69677681cfd1c907e4289d36019322a3cc3132cded1dd2b6e4b4bfcc",
+      "filesCompared": 38,
+      "filesSha256": "4ba6570e178020821abc62f78d6ee7c93ae2f782e9482898bb6a02bcb529ac6f",
+      "executionManifestSha256": "eb4f8976bc798a253d8a962bbea6e45642c2276a7b0fba3275ea5a43d8037150"
+    },
+    {
+      "id": "elyra.mcp-tunnels",
+      "beforeDigest": "aa68013e0a5c9285f6aaf7651f6ae3ee672bd6c6d28042c71ac5c15614ca6648",
+      "afterDigest": "34c5cbcccd6aa0b97e142796dc247a3362f2eab0e1011a6c2d0be981b1fd720e",
+      "filesCompared": 9,
+      "filesSha256": "7671be4a0896954a40cca8085cab7e9cb40f3e8405b4430d419db1cb7c5bb35d",
+      "executionManifestSha256": "8c3b8f343594672c0daa49cfc9b1aa6e6cd04476bae1fb271967bc95d69758db"
+    },
+    {
+      "id": "elyra.mixpanel-headless",
+      "beforeDigest": "eb3312579dc736c21e0776f4b6fde0993d55284546ebf075a71c281997f01426",
+      "afterDigest": "9a3863cc1dd5d01cf18103f969d0e3634aeeda82ec17f72db561514aaea1f2be",
+      "filesCompared": 24,
+      "filesSha256": "4b610d1f22044804444bf132d3903deb36749b9b5975b84797337a90eb3a4bf4",
+      "executionManifestSha256": "08e3f8bcf8a8c945e11116abb8c69e915d8a7f408492e7ee9c20c71dd66d46fe"
+    },
+    {
+      "id": "elyra.monday-com",
+      "beforeDigest": "1de8f2e86c1d503cc2e946d7ab479d54d7be89ff62ddb74cf87f73b4682d6356",
+      "afterDigest": "e50c2a205c8ebf3e597fcd05625d561b2b13b4e3e43bfce5def43c32a6306520",
+      "filesCompared": 7,
+      "filesSha256": "ba73eb69af905f9785c2d9c2f91e4835ad040f27e0c738c6085fc311edd445b1",
+      "executionManifestSha256": "69abbeebca1557943db1d51aaa0295760b1d71e469324aa52eddd0f12b22ca9d"
+    },
+    {
+      "id": "elyra.ngs-analysis",
+      "beforeDigest": "42ad437924f9d0303766374bbb7215d6dd6a5b9a4508d1eb93151f1f52b2c9b6",
+      "afterDigest": "6c3fa22d0b1c42a220bc748970ab776f62cc87b3511fbebbb1cc8ec46b48340d",
+      "filesCompared": 85,
+      "filesSha256": "19f16356f22a08f14b8371cbf2c3f2dbc27b972ee6f87c9b70b9bc684945a5b6",
+      "executionManifestSha256": "4496b4a4feee2736142030f106b51b2c45b053833ad6d1b6ec14e2d6a9195ac9"
+    },
+    {
+      "id": "elyra.notion",
+      "beforeDigest": "ad90f35ef9f824181a82504457377327b2e2359ca50627f602f7f79782254971",
+      "afterDigest": "fd05b7f572915b5cc015677f8252045624a58b95acac2fa74c07abd005246cbd",
+      "filesCompared": 99,
+      "filesSha256": "8ae51cf44151de864648aaa75958c88bfbe27a7eda80e76c510fea7c9921fa55",
+      "executionManifestSha256": "88023504a1aac4f8e3861ea33c31c7aa18a61f214681b657890b4d5d2da235f3"
+    },
+    {
+      "id": "elyra.nvidia",
+      "beforeDigest": "52f8d2c9a27e5177e9405d350a92edb77a7d5506859de280e88faa8ba783dc82",
+      "afterDigest": "9122330d2d81e98145cde0e892dba1e38fcf8a62f437a670cdfc142f8a30b5d2",
+      "filesCompared": 515,
+      "filesSha256": "fe29aa099d57ca64cba343e19842d8937b7788f053887c807de7ed0ed03abbb7",
+      "executionManifestSha256": "1316903e85a6a5d25e3c51f6a7504af6887d66cf056ee585b38c6cfeb4ccb287"
+    },
+    {
+      "id": "elyra.openai-ads-conversions",
+      "beforeDigest": "a112b3d6ff5801893701438fbf01e6f594e2ca538be0e46ba664a5549672be48",
+      "afterDigest": "dedc23315b42dbd112fd9429823df020f443a93e77377eef823198d6bf9df9db",
+      "filesCompared": 16,
+      "filesSha256": "2aae10fc3eeac93269827780f288fa10f357b1041bcb9b82216e77e3671ccd1d",
+      "executionManifestSha256": "1172eb106d41c15a3565d0ff4e104b7bf96e9758b5411b2d1083b01195495490"
+    },
+    {
+      "id": "elyra.openai-developers",
+      "beforeDigest": "c05441733d277e14e73498da52eefec359ec3d6aadc6b62277b42ea0cd27a149",
+      "afterDigest": "d679326db05e958ec71892630b6b56c00ca33af7bf643f53b1782d956bae7bfa",
+      "filesCompared": 32,
+      "filesSha256": "ee6405b17dd890c065c5e1c08363c4b3acab13b81657cad77a9d1b6ad355852b",
+      "executionManifestSha256": "3c67f92bf14f004def11fc8dc70914ee6f1d5b143b4d477cf86ef3a673638e9f"
+    },
+    {
+      "id": "elyra.outlook-calendar",
+      "beforeDigest": "ecea0e150c6f96b7b728a505ff25feb6f5caf143b31a07c45635c47d8e5dae3c",
+      "afterDigest": "6ec2355e431681351fee167479859240ed165c9ce4dff5b05f67e22c73bb151e",
+      "filesCompared": 6,
+      "filesSha256": "af933bfa9ebdc49171ad03eefb98cf2570dadaa527366409cf1a1bf1084f2c0e",
+      "executionManifestSha256": "bcc0c501d232bbb2ddef3c17b25deda3c84a9dec951d34f6b24a4558dcf39e04"
+    },
+    {
+      "id": "elyra.outlook-email",
+      "beforeDigest": "5314c026f0760354d61e4ea9e13939ab58f7c11af3d7b96dcc5710af498c558f",
+      "afterDigest": "74933d42a6ba2678ca43dce21aa6911d4324edeafd0ac64a624502e3e614739f",
+      "filesCompared": 6,
+      "filesSha256": "cfbf4d9368f4b91afd1f3fc6a83fc963fee76e3bc791deb83e0f9bedf76d5417",
+      "executionManifestSha256": "91205fdab5b9873ca3f5b9afb9de63035a261d4018acccf7a4306caf17ba0cac"
+    },
+    {
+      "id": "elyra.playground",
+      "beforeDigest": "a066ccac94a1efc6026d761fd0ac79e6132736cbef0135fc4ca81845b0d1cd15",
+      "afterDigest": "dc7a364dc0a40034ead6a2741af9f504e412dc823d540a85552a5080e745db30",
+      "filesCompared": 15,
+      "filesSha256": "9b8e1f736eb8a543e7836eb9f5055bc137c6e7ca79b60aec4abdcd2236f4bba6",
+      "executionManifestSha256": "bd7c1fb71f9272f520dc912a1b5b2d59710ef00838a79cdc7dc5a28614ce50c0"
+    },
+    {
+      "id": "elyra.playwright",
+      "beforeDigest": "a63581076018fdd85ae2be66d20ec84320e1726f1d469ea125fde79fa05dbddf",
+      "afterDigest": "7f21d9dcb1cf5c2902b9b78422ca698bcd9991679a3825a77f6b4b1815a68dbd",
+      "filesCompared": 6,
+      "filesSha256": "ebc1dc47e716974ab5a874e08cdd5b24f3db0e83664d65d98dd8ea0129ff4bfc",
+      "executionManifestSha256": "c65957deec1a7f9cc9427403bc893c4883b781e99ab81536da52bf6ad60b297f"
+    },
+    {
+      "id": "elyra.plugin-development",
+      "beforeDigest": "40cd5ef5d330863bbb0ae717c1a9063ee8913252570a835286436e0db00f106e",
+      "afterDigest": "b86b305ec2d9e2608abe517d7280c75c90035977a060208d1aae1e44c3bd2f34",
+      "filesCompared": 142,
+      "filesSha256": "7b44828c08fb78a5773b6dd9b8b56d5e38be86ecb5a3c7563c8a639eaf2ce5dc",
+      "executionManifestSha256": "3eab7d8edd8ef2d41da78940a56a580ccada233a66566a2f6513cdd0e8af6dd8"
+    },
+    {
+      "id": "elyra.posthog",
+      "beforeDigest": "060f3327708939d6095a66bf302205db4c704e62a99d48a5b68376119a051174",
+      "afterDigest": "507d7ba049fda51433c7ebb7a1117f192c8b3d6df444e9fb24693e82b008140e",
+      "filesCompared": 14,
+      "filesSha256": "e4a77a2ab2e1cd6691705e0b2bfa92dc703017d95b6e828904c9aea860d62128",
+      "executionManifestSha256": "cd5e450fb16740aec456c98244d9aa73f0e6b85278ff96b5a284f9b70927a456"
+    },
+    {
+      "id": "elyra.product-design",
+      "beforeDigest": "884fbdbabbc1e1b5fce92d8227b9e1067cad2f49d83b0c2503f47b9d74f0b990",
+      "afterDigest": "636bae95f6872856990a19f473ef65c5530ec6f750ef7bd9f80572d1ecbed78b",
+      "filesCompared": 116,
+      "filesSha256": "6e448064fa8d2ec0f130a43281a8ab5a3b83f2e5577bfbea5e46aac135de2751",
+      "executionManifestSha256": "c401c2db79159326c3fd0636de7e1055a7609c5652d5c3c5fe7e81de6589e6d3"
+    },
+    {
+      "id": "elyra.project-artifact",
+      "beforeDigest": "1a93adca151175075f5fa75cb1335da46147081cf0060c679094d844671e3247",
+      "afterDigest": "594c3401274f9bacf4e2f36a91b10196637b14ef1a34229363397377050cf41b",
+      "filesCompared": 11,
+      "filesSha256": "c97979f11f37e635aaab362a73842666ea2c716b7da8f8cef15e286c14c9e252",
+      "executionManifestSha256": "19907287edc23fb2917d532ef218be7e420c67549ba6461c25599c1851478926"
+    },
+    {
+      "id": "elyra.project-instructions",
+      "beforeDigest": "1f916a3a64e324a498cde04464d1404a120aeb15ec1e85825f253d692df809a2",
+      "afterDigest": "4bf51247c600ddee9d74a8049c54d73135ee2e071796982d8f852f3af16ce45f",
+      "filesCompared": 32,
+      "filesSha256": "75032410c87bddb8a46e4d280fb12da709ccb6877313abd7f4fdc38a29ca56f1",
+      "executionManifestSha256": "55039e56828dcd1ca93691e5f5f56fcf75cb75dc5a7a4ee6c13d7946a6b73ffa"
+    },
+    {
+      "id": "elyra.public-equity-investing",
+      "beforeDigest": "3c17c1521256b0a083bc11cad235f5d1fd33c3fec4a11b187126a97f0dc533a6",
+      "afterDigest": "6b6683ba5543eaf593a039b7e5aed8b8e1a1898b7fb7b2a0dd677931ab3062b8",
+      "filesCompared": 566,
+      "filesSha256": "96c74cd265870a9b2bbfeb2383147c147351d81366dfdf57996255a2e5b3eecd",
+      "executionManifestSha256": "f58b891c86ffc49490f34dfe76a70bdb131c2603d825bd821c330f52061430c3"
+    },
+    {
+      "id": "elyra.ralph-loop",
+      "beforeDigest": "9eec0ca883a27a6d70d6f088f3f882104e51f288bd53c64ae6aa5d87562d815f",
+      "afterDigest": "6f52b8a5373898955e61f81b8e0ba9f3129044e01be89f226ea1f2b89ea34030",
+      "filesCompared": 13,
+      "filesSha256": "b76fc67a2934d1b58c51b570efc489aa6443b955045b763327c22950e9652809",
+      "executionManifestSha256": "69e04e19f9c118b915a9dadbe2a8d5181acfa8db618dbccf28ff6422801d334a"
+    },
+    {
+      "id": "elyra.remotion",
+      "beforeDigest": "5ba7994ccf18fd439ad88756b101fb69e09087369aee31b8a59c4477b97f0f3c",
+      "afterDigest": "f0653b2cd7c23102d3b5c1333bfdf1759f520491777508105bdac3634cda4e02",
+      "filesCompared": 261,
+      "filesSha256": "653ab1b08b5b13b5d3297bdf6683ec2681a4c27b8c0e57f13b2897e8002c0538",
+      "executionManifestSha256": "0036b82158e2547e7de9a6884f698f11e6792a06cfe298ab695f5b033cc7d09b"
+    },
+    {
+      "id": "elyra.security-review",
+      "beforeDigest": "52122ce1a672a667dccd8b5561f11da5d33b2dbe646602247a87f74ac724c139",
+      "afterDigest": "52122ce1a672a667dccd8b5561f11da5d33b2dbe646602247a87f74ac724c139",
+      "filesCompared": 191,
+      "filesSha256": "8756d6aefca67513051c8763105cc97941f510b983101bb7ae1a8146cb53ca06",
+      "executionManifestSha256": "1354ad25b093cad2bf4affde7a1780ca8503ae797254c6d7fc7ad8aa9157ea18"
+    },
+    {
+      "id": "elyra.sentry",
+      "beforeDigest": "5897065a7f5735eade225998df6a0d573716db9d01a9e7f167b80cad77331bdf",
+      "afterDigest": "e7a808c3e8c770fbbbd706dd9feaea13a227bd6b2772abc5d44fec67c110bf2f",
+      "filesCompared": 19,
+      "filesSha256": "29efc1b97710dba0733426b1295d7dca0208718e5225464cac2a4a022183774e",
+      "executionManifestSha256": "5a91e0dbae6de1805c85aaf1fcd37ed2cfc804f4bca66a234c14b1c30f8a586f"
+    },
+    {
+      "id": "elyra.serena",
+      "beforeDigest": "390d1a8e0393e3491b3de582568a112668618589536aaa85b118789cb3e04759",
+      "afterDigest": "89c31e64b96d538211d1f81674d062f4986da092b4b41f1cd3eeeb6b2d12617e",
+      "filesCompared": 6,
+      "filesSha256": "ff6b024965e017d1998fd52ce704fb8c6b7af2c6d918fb4b87039df2ce455d11",
+      "executionManifestSha256": "890651de96e479f80af72c65e54fd0872d20f2a9d7838d3f744952e8fd1e8bfc"
+    },
+    {
+      "id": "elyra.session-insights",
+      "beforeDigest": "f17b0a357ae3a47797a97bb3902bf604f13657e55347fa491e3da5d31ff6e819",
+      "afterDigest": "3164b5028101c0dc425a65131aaffd0a9dfb3fa91766b5ec5a40feb89a411075",
+      "filesCompared": 18,
+      "filesSha256": "0e85418ee5f33caa41a836485189a93966a71f3837cadb8aa9b5bf9fabed20cf",
+      "executionManifestSha256": "a66125514694ba5ce75b11eb3f708868e12775744a7aba68b9c11564d5136938"
+    },
+    {
+      "id": "elyra.sharepoint",
+      "beforeDigest": "57fe3f565cf9e6de0cb9072f3a6c755cf07c7d2f7fd93ec5c6d67e2f40e9ccb6",
+      "afterDigest": "723bb0c23a1652c717236831af9c54002f94a41f9bc0721ab41e6bcb8efd3c32",
+      "filesCompared": 6,
+      "filesSha256": "cbcd18f92ce552b0120f3edf2347c90f2f0f3cf60b313e9be3ee5c1f08587868",
+      "executionManifestSha256": "c706b3e5bf735ecafb40f4ffddefa730aa353a9bb0a145d9d5966a1e8654e2cf"
+    },
+    {
+      "id": "elyra.shopify",
+      "beforeDigest": "842dcef2ba33fa3bab70b21b521a2e3c7cf3046b9ff7770c8aed75993413f22b",
+      "afterDigest": "824a5d83fca1330e7be229411fd9cd75b277740f140d860feae0daafa96999c8",
+      "filesCompared": 108,
+      "filesSha256": "88655eea9964227572f2393c92782fc44b2febf7f96fef4ccaaa15766da086f6",
+      "executionManifestSha256": "fb86502bda79aa41bdaf698a45fe7502338931bda24d40bc88bfafbae4faac6b"
+    },
+    {
+      "id": "elyra.skill-creator",
+      "beforeDigest": "40df4e5473297bc90044095831ca68484344cf7fa5049a377d3cd8206f2981e2",
+      "afterDigest": "791ac882c5542bbedc53407563119b71bd122cfddf4f51539def276b452bce2b",
+      "filesCompared": 32,
+      "filesSha256": "8868f0d7f1b3d9d69d114282f5bcb0fe07cab7b8c2346d5ea2c6dfbb0d7832ce",
+      "executionManifestSha256": "9c837489d5cae264cb93005be2d155e6ea80ab4c3ff00f075756b2f644196392"
+    },
+    {
+      "id": "elyra.slack",
+      "beforeDigest": "5bc4bca7f0db56aec9172a9742974b948bf48af5f57ff3cddec02c2b6407b3c4",
+      "afterDigest": "c7defa38e984b9564f1d7c57292e2e7b3f6695b21a2c62afd0e815a97d26383a",
+      "filesCompared": 19,
+      "filesSha256": "8c7e5e97091855affcca00324e10358c2faf71936493aa786861375ed2e916f2",
+      "executionManifestSha256": "b72765d7ba83040e545b1b418f41f78cf0ac3b5d188519d8d92f711019451928"
+    },
+    {
+      "id": "elyra.stripe",
+      "beforeDigest": "0d052ed344c7a2cbd5311e17ca71ab7e400989569659265163a694dd78e9e271",
+      "afterDigest": "1dac0d03a52fa48707dbb574cd80b7a2ebc03e5dd264be4cbc69368caacb025d",
+      "filesCompared": 50,
+      "filesSha256": "a538829aa71a8b5e616294f1ec25d33ec0c6401ef3ebf7759ca9ce7153f66c69",
+      "executionManifestSha256": "9ae4997c7acb24756fd5e171704662c2dc4754e0d5520848f7880f34e1ee197c"
+    },
+    {
+      "id": "elyra.supabase",
+      "beforeDigest": "919771479d9ad3fd7684b22fd8f4f06651f5b82ee1324c42abbb94f7c6cdd053",
+      "afterDigest": "042befa96590183d3d0164b20878e526f59262ccab8b9bc08c840226f2049710",
+      "filesCompared": 59,
+      "filesSha256": "e16087aa650cf2e7fc22aed096a8afc58029060de643184347f366ea2a48eb2d",
+      "executionManifestSha256": "087aaf3cd94c9824fe8c9af8834e0752084b9a06a47f9c3cbc7cf9ad5637443c"
+    },
+    {
+      "id": "elyra.teaching",
+      "beforeDigest": "a23a148d77b663ee78d06ada83386a3f6100a14b6f6a1825a4ab81805b98e65b",
+      "afterDigest": "8519952fd15c5dbe357738b4d63ec9cab5875eb15b9501d2b9acb3a536ffb859",
+      "filesCompared": 16,
+      "filesSha256": "0c192e4e9f53289ff13c47a76e96bdede5a5b68b46a51fee7875505ae99aeefb",
+      "executionManifestSha256": "c7ce51a03e9d6e2a55d4c34cf81d0636cd03c43d0347e3abdb346d6c379bc6ac"
+    },
+    {
+      "id": "elyra.teams",
+      "beforeDigest": "15cc552e29cede5ff103f44787253ac21fd1da340aec87f275177bc17edaad12",
+      "afterDigest": "d2592c47eb28227a16567ac44c4d03bc733a37b22b2c3fba5e1e896f419057b8",
+      "filesCompared": 6,
+      "filesSha256": "ef37ab86b51418dbdd0f3498d950486cff6b74ee9c8dcc45277d3aa4169f5f43",
+      "executionManifestSha256": "ef183325ea3101a1dac344644d4a0a40d640e73f001fefa242e9ce39033ad46c"
+    },
+    {
+      "id": "elyra.telegram",
+      "beforeDigest": "fdfe2299d10d6e07596461cad37397186a03f7cf875b3cf85e1793d1cb1ee3c7",
+      "afterDigest": "b9da07732fa984331bdeffcce74fad4b4a4c0a10c8ae2f5e1a87ad35945e5753",
+      "filesCompared": 15,
+      "filesSha256": "c7c78bed76b33847731e366028081096204092698a31f48bead7099bb2b556db",
+      "executionManifestSha256": "4c8a20e7db0ecda48fafecd21e5bcb438e26217f4081b2b8151fc775afebc314"
+    },
+    {
+      "id": "elyra.temporal",
+      "beforeDigest": "43a5f6c85163351a7970f0cb09c13e3970dd1a97783fa733a8c18ed5613acd27",
+      "afterDigest": "7f99ab326b74c991bc1db1c9cf5c7df9620d3d727c87c6a356fb6c67921af19d",
+      "filesCompared": 163,
+      "filesSha256": "ba22d56be72a2fa8f6ec7a31532c3b962cb27853723961677037b75c1c54551e",
+      "executionManifestSha256": "0ec38cebdc48351ced797c3994f27dc97607ac47ade08d8996139dbdf91bbb09"
+    },
+    {
+      "id": "elyra.terraform",
+      "beforeDigest": "293c2b2a2044c119a31b8bd9f6b75640ba5b76aa56622496c717c27a47b23eed",
+      "afterDigest": "7179c250217da71f54e405e77273de574b4bff2efe3ce6b1178da932c92343c2",
+      "filesCompared": 6,
+      "filesSha256": "ba9eb77b01218263ed531ad1b979381a50c3740d633ac2ffd94ce3a15f0be9d8",
+      "executionManifestSha256": "fa45b4f1acc6c04250341534679846f89b7512912bc07b42ccc2c607805a637f"
+    },
+    {
+      "id": "elyra.test-android-apps",
+      "beforeDigest": "561e4f5f660372f4f1507a6f96775da789961071e58fb385abb200143ef0058e",
+      "afterDigest": "bc8925da9e74375a922c851dbfbb008a947668f04c9eb318f0c7c5d6b458768d",
+      "filesCompared": 18,
+      "filesSha256": "caf760bce0767ad743fc806dd2b86ba9e5ba0c96dc03546edfbcf2065504e8c1",
+      "executionManifestSha256": "fe50f0e49f840a6e7dd7d0d396fe7a3d408f145e0e6ef4ad3d49a906da6763c7"
+    },
+    {
+      "id": "elyra.twilio-developer-kit",
+      "beforeDigest": "2757d7474b1682c1b3e4ac3bfb67e196a082a187f879cdf78b0ee61712d437fa",
+      "afterDigest": "fa3272001df00891883577a3e9513856b73962eef73abb750b7594d9a14ca7c7",
+      "filesCompared": 119,
+      "filesSha256": "d645c72401cb70ad5fe731096f2d86273952612467c1d8a7b664957a82f94880",
+      "executionManifestSha256": "3fff0e48c6d49a0bc3265c3849c6ff61da74f0c5a34233532c0194156c825daa"
+    },
+    {
+      "id": "elyra.vercel",
+      "beforeDigest": "94f977ac4e84db397fcaa924a968347d7cb06c8ccc4b22a27226b3b64cb0121c",
+      "afterDigest": "b8fe05367d2e03f59423c30e81856f22b2d4c2b58a3c7ca9dc3b22cf72f137a4",
+      "filesCompared": 302,
+      "filesSha256": "7c9f5a52559edcc5204a0364f0d8b20b50a185041c2df9255e730d9f51cb89e2",
+      "executionManifestSha256": "379dfb8446b5a3c427ea39421c889eca0809644d93f167ef70221f0d2edc5434"
+    },
+    {
+      "id": "elyra.zoom",
+      "beforeDigest": "b62341165d716747ab242a31cc4905ac68de3469a7b380e81be4544677287f55",
+      "afterDigest": "8898de9721f1614de1052b89d488d6c0d0f6a65e4d82eb41193cc0297c91f717",
+      "filesCompared": 797,
+      "filesSha256": "07cad27d29f537db2abcb69a3b9d5c46ae174ef115a6b7c4628f97b23496d340",
+      "executionManifestSha256": "66560fe40193ffed3d5ada0e07175f5e78f63157cd2ecfc78922acfff1dabf01"
+    },
+    {
+      "id": "elyra.zotero",
+      "beforeDigest": "2567ba1fc4fbce7ff529921c0a667b0c8eff34adedb60a51c16141d9873b933e",
+      "afterDigest": "b70769b3e2929e11c7b84714a95596a58d5df83f499cdcde12dad2248aa3b83e",
+      "filesCompared": 11,
+      "filesSha256": "df366b52f931bfbe97ee3aa05e23ca5c623de9ffe14a370dd639781a1ffce00f",
+      "executionManifestSha256": "a5125e8b7017bb224e5f30bb64d6069093797f81e33029e22d84e73f2a451c86"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "mcp-validation.json",
+      "sha256": "e40ddba5c125bc2252449cc9e45b0cdf60adefdd3c6c6d54a06b0f23ee78d8ff",
+      "bindings": [
+        {
+          "id": "elyra.context7",
+          "observedDigest": "e21aff621f419212db3960cdf9b5c998c08b405197ef8a80289d76dc604ffaab",
+          "currentDigest": "5a597d53acac8af86668ca57c9892212ba0e6d7160ec26373bb24637453819dd"
+        },
+        {
+          "id": "elyra.playwright",
+          "observedDigest": "a63581076018fdd85ae2be66d20ec84320e1726f1d469ea125fde79fa05dbddf",
+          "currentDigest": "7f21d9dcb1cf5c2902b9b78422ca698bcd9991679a3825a77f6b4b1815a68dbd"
+        }
+      ]
+    },
+    {
+      "file": "service-auth-validation.json",
+      "sha256": "b5e28ef9472d0a160c00cf6fc1254543b25735c371b8ca8484f9abc0417de5c5",
+      "bindings": [
+        {
+          "id": "elyra.github",
+          "observedDigest": "65856afa8715e1573f54ba522a83494d0cde789b076a78da6d29b08eb69edc14",
+          "currentDigest": "81d374a3c7c73eb47f6fd818ea20f12770587806900578e0e7c2f7bbf73b0192"
+        },
+        {
+          "id": "elyra.linear",
+          "observedDigest": "e6d68e28a9bf6ec9a452ff6b53c5ec22857feb48488447c956388b43b268b160",
+          "currentDigest": "2bfe4b57647ec29309de87c0b8857099814ad2a6b7f66ff62670df71634ef4c4"
+        },
+        {
+          "id": "elyra.notion",
+          "observedDigest": "ad90f35ef9f824181a82504457377327b2e2359ca50627f602f7f79782254971",
+          "currentDigest": "fd05b7f572915b5cc015677f8252045624a58b95acac2fa74c07abd005246cbd"
+        },
+        {
+          "id": "elyra.figma",
+          "observedDigest": "e2d0dcca0dd8de6babebd0b4e6948d20c1a1d86fa8a275091d5bd4920b103ffb",
+          "currentDigest": "9027a3606aed841b5470149d2099aa47f5cdea24c7be15799d981d9fc7bc5aaf"
+        },
+        {
+          "id": "elyra.supabase",
+          "observedDigest": "919771479d9ad3fd7684b22fd8f4f06651f5b82ee1324c42abbb94f7c6cdd053",
+          "currentDigest": "042befa96590183d3d0164b20878e526f59262ccab8b9bc08c840226f2049710"
+        },
+        {
+          "id": "elyra.vercel",
+          "observedDigest": "94f977ac4e84db397fcaa924a968347d7cb06c8ccc4b22a27226b3b64cb0121c",
+          "currentDigest": "b8fe05367d2e03f59423c30e81856f22b2d4c2b58a3c7ca9dc3b22cf72f137a4"
+        },
+        {
+          "id": "elyra.sentry",
+          "observedDigest": "5897065a7f5735eade225998df6a0d573716db9d01a9e7f167b80cad77331bdf",
+          "currentDigest": "e7a808c3e8c770fbbbd706dd9feaea13a227bd6b2772abc5d44fec67c110bf2f"
+        },
+        {
+          "id": "elyra.slack",
+          "observedDigest": "5bc4bca7f0db56aec9172a9742974b948bf48af5f57ff3cddec02c2b6407b3c4",
+          "currentDigest": "c7defa38e984b9564f1d7c57292e2e7b3f6695b21a2c62afd0e815a97d26383a"
+        },
+        {
+          "id": "elyra.google-drive",
+          "observedDigest": "5e11a3c3bcc93aed6a2b6aaa6141f46bf17c1a6c81aaa58615f281c0ead9e507",
+          "currentDigest": "0a48c8b7b44d3591ee51112c9f60fd7bf44ec9e90704d54013462d82d093d214"
+        },
+        {
+          "id": "elyra.gmail",
+          "observedDigest": "2125da4b80ffeb5b848836ce6a82fca732bc85f9d2961573ceb25a14dc9cef0e",
+          "currentDigest": "b3d1624de7fecd1d361cd460bbc8e22193d45e56127fca232853f2bf482d0e0f"
+        },
+        {
+          "id": "elyra.stripe",
+          "observedDigest": "0d052ed344c7a2cbd5311e17ca71ab7e400989569659265163a694dd78e9e271",
+          "currentDigest": "1dac0d03a52fa48707dbb574cd80b7a2ebc03e5dd264be4cbc69368caacb025d"
+        }
+      ]
+    },
+    {
+      "file": "lsp-validation.json",
+      "sha256": "990fa2307ef803876779a9c404c9f9829ccf13b22b27d2beb8233c708596ff40",
+      "bindings": [
+        {
+          "id": "elyra.language-services",
+          "observedDigest": "394542ad3269cb4082acb8504d5286eafb3cf95078c9f21d8f9abf68e0a29f53",
+          "currentDigest": "0b02c0ebd5e2de0d92ad72b2656b08861f10ff609df0fa1dff2a22d40c85c75a"
+        }
+      ]
+    },
+    {
+      "file": "office-resource-validation.json",
+      "sha256": "e5fe23cb0f4a9bf5bc253e8a8f866b7448afafe01eedff94943630284ef59573",
+      "bindings": [
+        {
+          "id": "elyra.google-drive",
+          "observedDigest": "5e11a3c3bcc93aed6a2b6aaa6141f46bf17c1a6c81aaa58615f281c0ead9e507",
+          "currentDigest": "0a48c8b7b44d3591ee51112c9f60fd7bf44ec9e90704d54013462d82d093d214"
+        }
+      ]
+    },
+    {
+      "file": "builder-resource-validation.json",
+      "sha256": "e1381575b20660bc32b9ecd35c82c67f8663492d932d8434387bd4b9c8976d42",
+      "bindings": [
+        {
+          "id": "elyra.product-design",
+          "observedDigest": "884fbdbabbc1e1b5fce92d8227b9e1067cad2f49d83b0c2503f47b9d74f0b990",
+          "currentDigest": "636bae95f6872856990a19f473ef65c5530ec6f750ef7bd9f80572d1ecbed78b"
+        }
+      ]
+    }
+  ]
+}

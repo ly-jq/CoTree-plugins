@@ -1,0 +1,63 @@
+{
+  "manifestVersion": 1,
+  "id": "cotree.deepseek-provider",
+  "name": "DeepSeek Provider",
+  "version": "1.0.0",
+  "description": "Declarative DeepSeek model provider (OpenAI-compatible) for CoTree. Registers a `deepseek` provider catalog entry plus `chat` (deepseek-chat / V3) and `reasoner` (deepseek-reasoner / R1) model profiles. Auth via DEEPSEEK_API_KEY only - no source fork, no embedded keys.",
+  "minKernelVersion": "0.1.0",
+  "entry": "src/index.ts",
+  "capabilities": {
+    "modelProviders": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none",
+    "network": {
+      "allowDomains": ["api.deepseek.com"]
+    },
+    "secrets": ["DEEPSEEK_API_KEY"]
+  },
+  "modelProviders": {
+    "providers": {
+      "deepseek": {
+        "runtimeProvider": "openai-compatible",
+        "displayName": "DeepSeek",
+        "auth": "api-key",
+        "defaultBaseUrl": "https://api.deepseek.com/v1",
+        "defaultApiKeyEnv": "DEEPSEEK_API_KEY",
+        "env": ["DEEPSEEK_API_KEY"],
+        "baseUrlEnv": ["DEEPSEEK_BASE_URL"],
+        "description": "DeepSeek OpenAI-compatible endpoint (chat + reasoner)."
+      }
+    },
+    "profiles": {
+      "chat": {
+        "provider": "openai-compatible",
+        "model": "deepseek-chat",
+        "baseUrl": "https://api.deepseek.com/v1",
+        "apiKeyEnv": "DEEPSEEK_API_KEY",
+        "inputCostPerMillionTokens": 0.27,
+        "outputCostPerMillionTokens": 1.1,
+        "costCurrency": "USD",
+        "reasoningEffort": "medium"
+      },
+      "reasoner": {
+        "provider": "openai-compatible",
+        "model": "deepseek-reasoner",
+        "baseUrl": "https://api.deepseek.com/v1",
+        "apiKeyEnv": "DEEPSEEK_API_KEY",
+        "inputCostPerMillionTokens": 0.55,
+        "outputCostPerMillionTokens": 2.19,
+        "costCurrency": "USD",
+        "reasoningEffort": "high"
+      }
+    },
+    "aliases": {
+      "deepseek": "chat"
+    }
+  },
+  "evals": ["evals/provider-smoke.json"],
+  "rollback": {
+    "strategy": "previous-active-version"
+  }
+}

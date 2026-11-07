@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.math-proof",
+  "version": "0.2.0",
+  "category": "研究与专业工具",
+  "priority": 0,
+  "batch": 22,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "math-proof",
+      "repository": "claude-plugins-official",
+      "path": "plugins/math-proof",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "48a6d9da68a219db59873aa489264df8fd4b9ee6460a7a8da3f4304b28d19749"
+    }
+  ],
+  "changes": [
+    "solo / siege 改为 solo / research / resume，研究调度由 CoTree 主模型与既有会话系统承担。",
+    "深浅 worker 合并为可选数学 analyst，judge 改为可选只读 checker；移除固定轮次、模型与强制完成门控。",
+    "Node 资料管理支持独占创建、精确题目匹配与带摘要证据检查，不将 ledger 或文件存在当作证明完成。"
+  ],
+  "limitations": [
+    "claims.json 的 established / refuted 是作者断言，脚本只检查依赖和文件摘要，不能验证数学真伪。",
+    "未建立 Lean / Coq 等形式验证运行环境；如需形式证明必须独立运行项目实际 checker。",
+    "旧 siege 的固定并发轮次、Python 完成门控和原宿主环境配置不移植；保留其研究资料以供追溯。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "solo / resume / proof.md": "solo / resume：保留完整问题、阶段性数学结果与自包含证明，使用 CoTree 会话恢复；Node 辅助脚本拒绝覆盖与题目串用。",
+    "siege / judge / worker / worker-deep": "research + 两个可选只读 Agent：主模型选择开放引理、整合证据，不强制 14 轮 / 升级模型 / 改写用户目标。深浅 worker 合并为同一能力。",
+    "ledger.py / gate / answers / state.md": "以可选 claims.json 记录作者断言、依赖与带摘要的证据；audit 只校验引用和依赖，不判断数学真伪、不控制完成、不维护第二套运行状态。原 Python 门控器仅归档。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

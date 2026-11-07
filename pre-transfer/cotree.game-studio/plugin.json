@@ -1,0 +1,80 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.game-studio",
+  "name": "Game Studio",
+  "version": "0.2.0",
+  "description": "在 CoTree 中规划、实现和试玩浏览器游戏，覆盖 Phaser、Three.js、React Three Fiber、精灵素材和游戏 UI。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/app-icon.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.game-studio.plan",
+      "description": "规划游戏核心循环并按项目选择 2D 或 3D 技术栈。",
+      "path": "skills/plan/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.game-studio.architecture",
+      "description": "划分游戏模拟、渲染、输入、资产、存档与调试边界。",
+      "path": "skills/architecture/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.game-studio.phaser",
+      "description": "用 Phaser 实现 2D 场景、输入、精灵、镜头和 DOM HUD。",
+      "path": "skills/phaser/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.game-studio.three",
+      "description": "用 Three.js 实现浏览器 3D 游戏、相机、加载与物理边界。",
+      "path": "skills/three/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.game-studio.react-three",
+      "description": "在 React 应用内实现 R3F 场景、共享状态和 DOM 菜单。",
+      "path": "skills/react-three/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.game-studio.sprites",
+      "description": "准备、规范化和检查透明精灵帧与预览图。",
+      "path": "skills/sprites/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.game-studio.assets-3d",
+      "description": "制作、压缩和验证 Web 用 GLB / glTF 素材。",
+      "path": "skills/assets-3d/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.game-studio.ui",
+      "description": "实现可读的游戏 HUD、菜单、响应式和无障碍控制。",
+      "path": "skills/ui/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.game-studio.playtest",
+      "description": "实际试玩并记录游戏行为、画面和性能问题。",
+      "path": "skills/playtest/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "db76f6386908e50c8312e2380390eb3a3ef10edd141a3a3fb942f88b5c48c400"
+  }
+}

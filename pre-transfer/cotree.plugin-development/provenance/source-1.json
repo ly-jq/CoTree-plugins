@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.plugin-dev",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "plugin-dev",
+    "repository": "claude-plugins-official",
+    "path": "plugins/plugin-dev",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "9695c1577d6f82d2d2863b1eadd643b9ed8970f76a4585de52eba85499fd5764"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "参考资料描述 Claude 插件格式；Elyra 开发应使用根 plugin.json 与 Elyra SDK。",
+    "Agent import.claude.plugin-dev.agent-creator 保留模型引用 sonnet；需配置对应 Elyra 模型，不静默改变模型选择。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/agent-development/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/agent-development/SKILL.md",
+      "sourceMetadata": {
+        "name": "agent-development",
+        "description": "This skill should be used when the user asks to \"create an agent\", \"add an agent\", \"write a subagent\", \"agent frontmatter\", \"when to use description\", \"agent examples\", \"agent tools\", \"agent colors\", \"autonomous agent\", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins.",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/command-development/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/command-development/SKILL.md",
+      "sourceMetadata": {
+        "name": "command-development",
+        "description": "This skill should be used when the user asks to \"create a slash command\", \"add a command\", \"write a custom command\", \"define command arguments\", \"use command frontmatter\", \"organize commands\", \"create command with file references\", \"interactive command\", \"use AskUserQuestion in command\", or needs guidance on slash command structure, YAML frontmatter fields, dynamic arguments, bash execution in commands, user interaction patterns, or command development best practices for Claude Code.",
+        "version": "0.2.0"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/hook-development/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/hook-development/SKILL.md",
+      "sourceMetadata": {
+        "name": "hook-development",
+        "description": "This skill should be used when the user asks to \"create a hook\", \"add a PreToolUse/PostToolUse/Stop hook\", \"validate tool use\", \"implement prompt-based hooks\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"set up event-driven automation\", \"block dangerous commands\", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides comprehensive guidance for creating and implementing Claude Code plugin hooks with focus on advanced prompt-based hooks API.",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/mcp-integration/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/mcp-integration/SKILL.md",
+      "sourceMetadata": {
+        "name": "mcp-integration",
+        "description": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external service\", mentions \"${CLAUDE_PLUGIN_ROOT} with MCP\", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Claude Code plugins for external tool and service integration.",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/plugin-settings/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/plugin-settings/SKILL.md",
+      "sourceMetadata": {
+        "name": "plugin-settings",
+        "description": "This skill should be used when the user asks about \"plugin settings\", \"store plugin configuration\", \"user-configurable plugin\", \".local.md files\", \"plugin state files\", \"read YAML frontmatter\", \"per-project plugin settings\", or wants to make plugin behavior configurable. Documents the .claude/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown content.",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/plugin-structure/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/plugin-structure/SKILL.md",
+      "sourceMetadata": {
+        "name": "plugin-structure",
+        "description": "This skill should be used when the user asks to \"create a plugin\", \"scaffold a plugin\", \"understand plugin structure\", \"organize plugin components\", \"set up plugin.json\", \"use ${CLAUDE_PLUGIN_ROOT}\", \"add commands/agents/skills/hooks\", \"configure auto-discovery\", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Claude Code plugin architecture best practices.",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/skill-development/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/skill-development/SKILL.md",
+      "sourceMetadata": {
+        "name": "skill-development",
+        "description": "This skill should be used when the user wants to \"create a skill\", \"add a skill to plugin\", \"write a new skill\", \"improve skill description\", \"organize skill content\", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/create-plugin.md",
+      "state": "converted",
+      "target": "content/commands/create-plugin.md",
+      "sourceMetadata": {
+        "description": "Guided end-to-end plugin creation workflow with component design, implementation, and validation",
+        "argument-hint": "Optional plugin description"
+      }
+    },
+    {
+      "kind": "agent",
+      "source": "agents/agent-creator.md",
+      "state": "converted",
+      "target": "content/agents/agent-creator.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/plugin-validator.md",
+      "state": "converted",
+      "target": "content/agents/plugin-validator.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/skill-reviewer.md",
+      "state": "converted",
+      "target": "content/agents/skill-reviewer.md"
+    }
+  ],
+  "copiedFiles": 59,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "e107e15aa3602bcdff364b10a4c5217b4f49d347a1fc8ceefc893084b7d8ea7b"
+    },
+    {
+      "path": "agents/agent-creator.md",
+      "sha256": "503522c5c9ee393379968bdba9650aeadca08ce094c3826a35bd74a6c6fd2f1e"
+    },
+    {
+      "path": "agents/plugin-validator.md",
+      "sha256": "d3a16d774e2adf80fa077770b73dceaba65abceeba28b8d086d6e839b8368f54"
+    },
+    {
+      "path": "agents/skill-reviewer.md",
+      "sha256": "fdc05c5a424dffba8b4003f24e4cc3936285fa87e1baad55a898724b812e1f8f"
+    },
+    {
+      "path": "commands/create-plugin.md",
+      "sha256": "ea47178792b91018c4dcc98f798a37010256998446f87a20c8e3d878dd08cfc0"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "898deb9a066f8782bc733e137c30c1ab219def0b5d345236f327a7c23f7339f9"
+    },
+    {
+      "path": "skills/agent-development/examples/agent-creation-prompt.md",
+      "sha256": "556136cd81f1ea574967f8cc51caf9695c68d02fa96d75f9b5728150f9b7ca0d"
+    },
+    {
+      "path": "skills/agent-development/examples/complete-agent-examples.md",
+      "sha256": "19a3b46d29f60a77db3287b7f7d67054aa0058a6e2a132b71b89888b68d16abb"
+    },
+    {
+      "path": "skills/agent-development/references/agent-creation-system-prompt.md",
+      "sha256": "560c673913cf1a7a824ef1dfb19133b5cf2ac9e1112d1cd9ea8e858008e55c0a"
+    },
+    {
+      "path": "skills/agent-development/references/system-prompt-design.md",
+      "sha256": "6db00d18f5465f9b89d249ab517e6de32b528de323edb2acd4ee9db444204de9"
+    },
+    {
+      "path": "skills/agent-development/references/triggering-examples.md",
+      "sha256": "b65d5176b7b2db0d05f45dfa37f23b29cffa49c262c5de3f6e79c08f3850cd4d"
+    },
+    {
+      "path": "skills/agent-development/scripts/validate-agent.sh",
+      "sha256": "2ffd086dc258f97f82348ea724b2dbf405273f2ad9d957c3e75e664508d85360"
+    },
+    {
+      "path": "skills/agent-development/SKILL.md",
+      "sha256": "54eaaa1f090c13ea05fd86f70fcc7a92dd5e42627bf537e54c628ff12042a6bb"
+    },
+    {
+      "path": "skills/command-development/examples/plugin-commands.md",
+      "sha256": "74080dd4afda1c68beea7720493feb817bcbb97ac2d35405055991178b7aa5cb"
+    },
+    {
+      "path": "skills/command-development/examples/simple-commands.md",
+      "sha256": "f8ca265cd58835108843314627f88254a917a28ac4572af7b3b99c1baebe9403"
+    },
+    {
+      "path": "skills/command-development/README.md",
+      "sha256": "ab509cdff71a5035c1e039ea70849cc5a8e865998d1bd1e08079bd91c45b20cd"
+    },
+    {
+      "path": "skills/command-development/references/advanced-workflows.md",
+      "sha256": "3dd9db241158c578bdfd6639a3773aad954990cc8d952e51a52349b951ea829c"
+    },
+    {
+      "path": "skills/command-development/references/documentation-patterns.md",
+      "sha256": "a520b8657b9202b7fe80f5c7d3303afb3f613c571a7e0b7f1d19d495e4e11941"
+    },
+    {
+      "path": "skills/command-development/references/frontmatter-reference.md",
+      "sha256": "2885d17f3846f61ab204cd4c723af8742df414d41de100454cbbbde7cf1b50ab"
+    },
+    {
+      "path": "skills/command-development/references/interactive-commands.md",
+      "sha256": "70f16531a9e0e2a95abb4830424bb6e007a4a8270be108250a11aa339fbdcc6f"
+    },
+    {
+      "path": "skills/command-development/references/marketplace-considerations.md",
+      "sha256": "f484090ae605387da5d77ca1a690821d2af7fdce65935a20de78495137b35d18"
+    },
+    {
+      "path": "skills/command-development/references/plugin-features-reference.md",
+      "sha256": "6131cd80ba8c362a44a880e3fe54dcd960e6698525d9205f278422239a9959c5"
+    },
+    {
+      "path": "skills/command-development/references/testing-strategies.md",
+      "sha256": "1c05c2f8958adce901e816468e6e8d8ddbdbd99c15eb982a5f10cf0592c31ceb"
+    },
+    {
+      "path": "skills/command-development/SKILL.md",
+      "sha256": "1bc31642262f4a73117956c2696787cf4e0848469c4857c725c6a1131b34e3e5"
+    },
+    {
+      "path": "skills/hook-development/examples/load-context.sh",
+      "sha256": "ff14a620083640480a929a446501e6861be945250377f2f22ac624815f3c85d3"
+    },
+    {
+      "path": "skills/hook-development/examples/validate-bash.sh",
+      "sha256": "d9d6fdd5697f0f8962cffab214f6aa9be8a543141d329a9862e4d4c243297f6d"
+    },
+    {
+      "path": "skills/hook-development/examples/validate-write.sh",
+      "sha256": "6655ec9358be5e3cbf02573e71076e7804e96f0b8c4aa34f74aa86aa7b6cbff0"
+    },
+    {
+      "path": "skills/hook-development/references/advanced.md",
+      "sha256": "1edcde21997d8d0fe7ac38adb255a44c58d7d780db2205d395558204557f7c46"
+    },
+    {
+      "path": "skills/hook-development/references/migration.md",
+      "sha256": "c323c56e66e2b4b1a4f9daa65e60e000d69b8934d73e4d8653978687c8c59c1c"
+    },
+    {
+      "path": "skills/hook-development/references/patterns.md",
+      "sha256": "e60941a7a8582e3779fb0b9baf18a1534f26a6cec1fb65f903f8cf911c520632"
+    },
+    {
+      "path": "skills/hook-development/scripts/hook-linter.sh",
+      "sha256": "a4936c67fa8dbb974b02b01abddf4e712aaef8a1a5da5321c914febcf7d2eedd"
+    },
+    {
+      "path": "skills/hook-development/scripts/README.md",
+      "sha256": "2694873ca92ebe3b444cf9789c419328c2a8f87bff3f194b61febd076ffd3c52"
+    },
+    {
+      "path": "skills/hook-development/scripts/test-hook.sh",
+      "sha256": "bc2ca5f0aa512b8505965b6d4084ea440ab83b42130380987d165da2ebfe34d5"
+    },
+    {
+      "path": "skills/hook-development/scripts/validate-hook-schema.sh",
+      "sha256": "901c386d06e51366258c70d197f1b2ce3f3058f06ea285b971758568e21cf323"
+    },
+    {
+      "path": "skills/hook-development/SKILL.md",
+      "sha256": "c25be1c425a3cbf1eb3d1cf30055611fffa1e58b12a042da9e70ddf071b28f97"
+    },
+    {
+      "path": "skills/mcp-integration/examples/http-server.json",
+      "sha256": "9a96bc6ee64e4a8e36df5dda23a517489bded4de84e28d5f947ddc0fc0863f4f"
+    },
+    {
+      "path": "skills/mcp-integration/examples/sse-server.json",
+      "sha256": "07f3c75a198bec3f6da011350109aaaa036c515812e9cebe266cf0131bc251a9"
+    },
+    {
+      "path": "skills/mcp-integration/examples/stdio-server.json",
+      "sha256": "0cebeece33217afd7e0c6a8c7c8aa75ead5d70a93c352d5fcfbf8dd486c35874"
+    },
+    {
+      "path": "skills/mcp-integration/references/authentication.md",
+      "sha256": "9e886d10498088d82a743ecbda42f04d20fd04b74dc38eb761e93b0eb1e3f2d0"
+    },
+    {
+      "path": "skills/mcp-integration/references/server-types.md",
+      "sha256": "5e5f0a520ee38001664ae2e49a851438d537ae5b6482d4a1ae53c17d21798b4d"
+    },
+    {
+      "path": "skills/mcp-integration/references/tool-usage.md",
+      "sha256": "05a6bedb87509624e250826ab00589620b08bd4a558bced3fd34efac9c17aecb"
+    },
+    {
+      "path": "skills/mcp-integration/SKILL.md",
+      "sha256": "253a780d3d927a9ff0c7260d11069a696a11d9e0a7b4c001585b17a8264fb604"
+    },
+    {
+      "path": "skills/plugin-settings/examples/create-settings-command.md",
+      "sha256": "e87a80231825ca345b8c8b52b1200beee0c6101cdea59652bb8b0de87e490026"
+    },
+    {
+      "path": "skills/plugin-settings/examples/example-settings.md",
+      "sha256": "664a77278fed768386153fe467f906e592fbe7750a2b8cf6809795b93a9fea4a"
+    },
+    {
+      "path": "skills/plugin-settings/examples/read-settings-hook.sh",
+      "sha256": "af9c126cc58e4dcfc24bb642f92974e1639952836d02c870ca1290ae3cce4419"
+    },
+    {
+      "path": "skills/plugin-settings/references/parsing-techniques.md",
+      "sha256": "566656c0073f7fcc7dc39afb53f5147f32773c5d6cb708e7d4dcf7ce3fb91bf3"
+    },
+    {
+      "path": "skills/plugin-settings/references/real-world-examples.md",
+      "sha256": "7714b69fa7acfa98378721ddbf5a6d588edb281bdb9b5ec1294ba760de29d81a"
+    },
+    {
+      "path": "skills/plugin-settings/scripts/parse-frontmatter.sh",
+      "sha256": "713260e5445424578b479192df5ef589ba052afce074ac759f844a914dbd38d2"
+    },
+    {
+      "path": "skills/plugin-settings/scripts/validate-settings.sh",
+      "sha256": "5f5a00de60ee14d96d1b4ee3cc72fc9407a9f0b1207a64f4ff918adfb2f0d249"
+    },
+    {
+      "path": "skills/plugin-settings/SKILL.md",
+      "sha256": "ec1036c56a452932ebbfdd845fbbe565e3af7e282bafb3179d2e0ef467b892d1"
+    },
+    {
+      "path": "skills/plugin-structure/examples/advanced-plugin.md",
+      "sha256": "7af8ededc8e34d0d258e096e6039fa7b57159822df142169b03842659ea25692"
+    },
+    {
+      "path": "skills/plugin-structure/examples/minimal-plugin.md",
+      "sha256": "520c5a551d09adf9ca6654c3659a153ab543771a5a60093f23920f42044d49bc"
+    },
+    {
+      "path": "skills/plugin-structure/examples/standard-plugin.md",
+      "sha256": "bd930c77c953b463aa10a3b8990ec5f5d58adda75ecbce64f15069d2579b6221"
+    },
+    {
+      "path": "skills/plugin-structure/README.md",
+      "sha256": "2f5ddc22d6c7b9ccf786775ca6cbbeb087fb1e68ac80f6f32202b847f2e23792"
+    },
+    {
+      "path": "skills/plugin-structure/references/component-patterns.md",
+      "sha256": "d2de5389a26a764741ab27a5a30e9b835bb5ae62ca646a74a30607dd985cb78d"
+    },
+    {
+      "path": "skills/plugin-structure/references/manifest-reference.md",
+      "sha256": "441d280d65e11411a8a79b230153e328dd961e7eea47c7e76fef0d6557345a03"
+    },
+    {
+      "path": "skills/plugin-structure/SKILL.md",
+      "sha256": "d18f09728680f96500e58494b72586f943e8d2a7074a9015c83b8827b13fdb73"
+    },
+    {
+      "path": "skills/skill-development/references/skill-creator-original.md",
+      "sha256": "ebd88ee948461270b859f5d371c0b84e414371d3370c89352c671dcb9e362ac9"
+    },
+    {
+      "path": "skills/skill-development/SKILL.md",
+      "sha256": "3043b569c146cb6b9e44c720d432323b582d38be6db554c01104587859625d3c"
+    }
+  ]
+}

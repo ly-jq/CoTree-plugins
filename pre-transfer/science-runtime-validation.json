@@ -1,0 +1,392 @@
+{
+  "observedAt": "2026-10-14T06:27:42.607Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "python": "3.10.11",
+  "scope": "public-metadata-and-isolated-offline-preparation",
+  "credentialsSent": false,
+  "providerCalls": false,
+  "userRegistryModified": false,
+  "paidJobsSubmitted": false,
+  "results": {
+    "elyra.life-science-research": {
+      "packageDigest": "8a6501e34e2319f6f8dbe049865d73d8094044ce5a20a71d4a58f047a10fef96",
+      "status": "public-science-metadata",
+      "publicQueries": [
+        {
+          "service": "uniprot",
+          "id": "P69905",
+          "status": "public-metadata-observed",
+          "httpStatus": 200
+        },
+        {
+          "service": "ensembl",
+          "id": "ENSG00000139618",
+          "status": "public-metadata-observed",
+          "httpStatus": 200
+        },
+        {
+          "service": "pdb",
+          "id": "1A3N",
+          "status": "public-metadata-observed",
+          "httpStatus": 200
+        },
+        {
+          "service": "clinicaltrials",
+          "id": "NCT00000102",
+          "status": "public-metadata-observed",
+          "httpStatus": 200
+        }
+      ],
+      "sourceCoverage": {
+        "sourceSkills": 50,
+        "nativeSkills": 12,
+        "archivedFiles": 163
+      },
+      "controlledData": "not-tested",
+      "otherDatabases": "not-comprehensively-tested"
+    },
+    "elyra.ngs-analysis": {
+      "packageDigest": "b0327b77fae5fac1dd0915bd5cda28d32b958996a9d875af24b3e70af8031e02",
+      "status": "isolated-ngs-preparation",
+      "compiledScripts": [
+        "ngs_epigenomics_utils.py",
+        "ngs_planner_utils.py",
+        "ngs_preflight.py",
+        "ngs_reference_manager.py",
+        "ngs_resource_gate.py",
+        "ngs_run_utils.py",
+        "ngs_visualization_utils.py",
+        "run_amplicon_microbiome.py",
+        "run_atacseq_peaks_qc.py",
+        "run_bcl_to_fastq.py",
+        "run_bulk_rnaseq_counts_qc.py",
+        "run_bulk_rnaseq_de.py",
+        "run_chip_cutrun_peaks_qc.py",
+        "run_dna_germline_variants.py",
+        "run_dna_somatic_variants.py",
+        "run_dna_umi_panel_variants.py",
+        "run_dna_variant_calling.py",
+        "run_fastq_assay_package.py",
+        "run_fastq_qc.py",
+        "run_nfcore_pipeline.py",
+        "run_scrnaseq_fastq_to_count.py",
+        "run_scrnaseq_post_count_qc.py",
+        "run_shotgun_metagenomics.py"
+      ],
+      "offlineChecks": [
+        "workspace_env_not_loaded",
+        "elyra_package_identity",
+        "explicit_registry_selection",
+        "plain_and_gzip_paired_fastq",
+        "sampled_validation_not_full_file_claim",
+        "pair_mismatch_after_first_25_detected",
+        "reject_empty.fastq",
+        "reject_truncated.fastq",
+        "reject_length.fastq",
+        "reject_separator.fastq",
+        "reject_invalid_gzip",
+        "reject_missing_qc_evidence"
+      ],
+      "preparationStatus": "blocked",
+      "pipelineExecution": "not-tested-missing-bioinformatics-tools",
+      "sourceCoverage": {
+        "sourceSkills": 18,
+        "nativeSkills": 13,
+        "archivedFiles": 80
+      }
+    },
+    "elyra.boltz-api-cli": {
+      "packageDigest": "ce314b4956c0e3f4d0d2705146224d13ea427c82e3a910b184a9792b4e011076",
+      "status": "isolated-boltz-cli",
+      "cliVersion": "0.43.0",
+      "helpChecks": [
+        "predictions-structure-and-binding-estimate-cost",
+        "predictions-structure-and-binding-start",
+        "predictions-structure-and-binding-retrieve",
+        "predictions-adme-estimate-cost",
+        "predictions-adme-start",
+        "predictions-adme-retrieve",
+        "small-molecule-library-screen-estimate-cost",
+        "small-molecule-library-screen-start",
+        "small-molecule-library-screen-retrieve",
+        "small-molecule-design-estimate-cost",
+        "small-molecule-design-start",
+        "small-molecule-design-retrieve",
+        "protein-library-screen-estimate-cost",
+        "protein-library-screen-start",
+        "protein-library-screen-retrieve",
+        "protein-design-estimate-cost",
+        "protein-design-start",
+        "protein-design-retrieve",
+        "download-status",
+        "download-results"
+      ],
+      "authenticationObserved": false,
+      "sourceCoverage": {
+        "sourceSkills": 8,
+        "nativeSkills": 8,
+        "archivedFiles": 42
+      },
+      "remoteEstimatesAndJobs": "not-tested",
+      "scientificResults": "not-tested"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\source-coverage.json",
+      "sha256": "b437ac8a5f999df8da92d65f368378e1bcd73558edb8a144fcc311cd8afe8145",
+      "bytes": 303
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\uniprot-public.json",
+      "sha256": "14ea9efb98c20addb4434795ac30aa3db67307f5de925d5bd375562e3a65efa0",
+      "bytes": 513
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\ensembl-public.json",
+      "sha256": "fd3b2c6453910c3a0e107957ced0efd3854131d9e20bd1395e81a5c913c402ff",
+      "bytes": 633
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\pdb-public.json",
+      "sha256": "1f288aef9dd84fba14174326c63b3894598b8c6ee7da62017960314eb4d61485",
+      "bytes": 494
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\clinicaltrials-public.json",
+      "sha256": "7f8365ff2f4b796bf0eb5444126982a7953cb4fa145b3659d27a33fba4053ec5",
+      "bytes": 580
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\tests\\plugin-runtime\\fixtures\\science-ngs-check.py",
+      "sha256": "6bf22576ea9be95f83d92d9d246c1591b130328625c79a03b9aa2cb8f90a2107",
+      "bytes": 3410
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\ngs-offline-checks.json",
+      "sha256": "0907601af85f0b5009f607f1eef00db7d4d2ec6156cec09cb814718ab51ff966",
+      "bytes": 1592
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\ngs-list.json",
+      "sha256": "64ef4154feda5adca721aa1693fa3ebe72946e80836c64b505d7acd14338ef6f",
+      "bytes": 1424
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\ngs-prepare.json",
+      "sha256": "f39221b91d3d125238cc0fe952414ec385396e1891e2b4b0821ee9992abf68dc",
+      "bytes": 144
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\prepared-fastq\\artifact_index.json",
+      "sha256": "8c6a88003b4bfaca5390bdb7545b68823b6382ab2bb820b701f1572b4faa6267",
+      "bytes": 947
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\prepared-fastq\\commands.sh",
+      "sha256": "70683c23e287e308168ecb67cf7e01876fca58d5b6b4b3cc7b65b9b37b02f697",
+      "bytes": 755
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\prepared-fastq\\config.json",
+      "sha256": "0ab601ac5c82af0a7e4d1a81abce630cbf621c7959f6c445c72d99288ac9c8ca",
+      "bytes": 509
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\prepared-fastq\\run_manifest.json",
+      "sha256": "5b3258ec8eaa0594b5160a90e94a443c69b18d80dee9dd3ce671267a54cd7301",
+      "bytes": 1329
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\prepared-fastq\\summary.md",
+      "sha256": "53e8dbc37c8a3a242b5ccb20489704f7ad4705c920f7077d44bcb6436a3a9185",
+      "bytes": 278
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\prepared-fastq\\validation\\input_summary.json",
+      "sha256": "a522a856dfa12ab584a43a2847ff5f0178641d3abcfdcce870085d85abde34e6",
+      "bytes": 320
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\prepared-fastq\\validation\\tool_preflight.json",
+      "sha256": "dbe9858815e1a8dfc19623ca2725c82c3fb7c42fbf07b499ed2a2deed3d53366",
+      "bytes": 315
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\prepared-fastq\\validation\\validation_summary.json",
+      "sha256": "fe5d2db9e400c4b634293df68601520fb2d2aa9b8f38d32375d9b352c829a1f3",
+      "bytes": 2883
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\prepared-fastq\\visualizations\\index.html",
+      "sha256": "0565cbb35417538bdd91ee32747d23f5a364072cb2c201c77064f490d8215ffd",
+      "bytes": 3288
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\prepared-fastq\\visualizations\\localhost_launch_hint.txt",
+      "sha256": "37e9491fced3ad6b5982203f0eac3283c94fa46ebbab64b0967c0b0c9fe1bd18",
+      "bytes": 200
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\prepared-fastq\\visualizations\\visualization_manifest.json",
+      "sha256": "d9305d34cb702217aaab43cee1cd8cf44e4680382d3df15c6c14b9f1c432db46",
+      "bytes": 2647
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\prepared-fastq\\workflow\\Snakefile",
+      "sha256": "3f08e81bc06ae2e7f1bf87a77f7b2ab99a00fb05a458142ac630f6acaab211a6",
+      "bytes": 1328
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\ngs-preparation-boundary.json",
+      "sha256": "d5df7cde06249d429949cf62c2b275421bf88694723c36159c3f18686d8fd3e2",
+      "bytes": 461
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\boltz-release.json",
+      "sha256": "4fdf5f8bef9a765bbdf5d10f65dc18a692eb0913eb53bd70dbb53950a506e08d",
+      "bytes": 52698
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\boltz-api_0.43.0_checksums.txt",
+      "sha256": "8763d42f0ab2d6fe8ef4f511c1fbe4429da2e2f943dacc506e8377d17f4ba73c",
+      "bytes": 2406
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\boltz-api_0.43.0_windows_amd64.zip",
+      "sha256": "93c7a08af46a319115dc7721a80bf44528065b875d3a77ccadc59252dd289eb5",
+      "bytes": 8635259
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\boltz-cli\\boltz-api.exe",
+      "sha256": "280371e8517cda5a46f98a217d108a8f7fb749af6b00d072384d47a1e5e31ef9",
+      "bytes": 37266944
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-version.json",
+      "sha256": "667059c50c753b6602c6c9119c3b51ab09c7914e2833bafe946365ce61ee917f",
+      "bytes": 78
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-auth.json",
+      "sha256": "ea4bd9db2be02e3a8a68e7596d667ce26aaa18751b740f5f12556c64ba1aed51",
+      "bytes": 1263
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-predictions-structure-and-binding-estimate-cost.json",
+      "sha256": "60057c051e147bf75786492760e2d03a44579448d9bd901501462ccca24893ba",
+      "bytes": 757
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-predictions-structure-and-binding-start.json",
+      "sha256": "e19c123af9ed26065437c1041b77f2f976bdc814a7e556896d75136331087f3c",
+      "bytes": 1160
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-predictions-structure-and-binding-retrieve.json",
+      "sha256": "43968ea0389c2c03be0c6f1a43e6697892cfc65eeb920483e7228737eecd1f60",
+      "bytes": 447
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-predictions-adme-estimate-cost.json",
+      "sha256": "b368dfb5a1e62020c0dba2ed54da68f8a06492e9f6d67eddeb064bd01889a5c3",
+      "bytes": 712
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-predictions-adme-start.json",
+      "sha256": "2eb74687119631acf0dd2087163136b33924be7839fb2e7d7f41352f3a0f5163",
+      "bytes": 693
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-predictions-adme-retrieve.json",
+      "sha256": "d06ea5ad9bfbac74a1d0d3b61993b986b3d130f212a9f7d91ef634e4ed865b3f",
+      "bytes": 419
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-small-molecule-library-screen-estimate-cost.json",
+      "sha256": "71144867ff9816ce1efcc016fb809578db8d3ffda14f2d062cd327c03812846f",
+      "bytes": 2269
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-small-molecule-library-screen-start.json",
+      "sha256": "20ef0cc0fdc3df79ae677d04bf1eb1b5df8f0d5c7bf10b9c8411d5570b021692",
+      "bytes": 2159
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-small-molecule-library-screen-retrieve.json",
+      "sha256": "840eb77de9abbe2b61ef8b733724c2aa39c9b57137c37a3b3ac9d6106d9e73a8",
+      "bytes": 439
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-small-molecule-design-estimate-cost.json",
+      "sha256": "eefff464fe282b72e2967fc197c62a3ffe1f9580ae3eefa2cf0fe10ba1fb1ef5",
+      "bytes": 2808
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-small-molecule-design-start.json",
+      "sha256": "80dee92a49d88dd7829bdd4c464170e7f583d94383334ef9a19cc9a02e3e7c00",
+      "bytes": 2593
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-small-molecule-design-retrieve.json",
+      "sha256": "d4155bb260415a819ad64ba0531bf24465151ec5436eeeaf829479b1e3eb8eba",
+      "bytes": 419
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-protein-library-screen-estimate-cost.json",
+      "sha256": "9064fa11c888f45f655980b3552c072c632fdfadab274f69d0d5bffc75a43d91",
+      "bytes": 1823
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-protein-library-screen-start.json",
+      "sha256": "8e87a360f7a5822ea5773ccd8f97c0564cb1168c3d70fe11747d909417029600",
+      "bytes": 1712
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-protein-library-screen-retrieve.json",
+      "sha256": "6f15419dde3e7b418c94bce007ec78c637536df0f49b05d0cf24ab1656e0edc1",
+      "bytes": 425
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-protein-design-estimate-cost.json",
+      "sha256": "487625e3f1eecb5c486504f52bdb6e9faac7c0eef0b3ed062c623d476ba54df8",
+      "bytes": 4280
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-protein-design-start.json",
+      "sha256": "2c82785cec2ef0fed472ba57d1206cd250e870a77dd733776b4355341e09cca7",
+      "bytes": 4374
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-protein-design-retrieve.json",
+      "sha256": "7b127f5c957dd120bdd3c7ea8c29e094000f4aac490638dfb10af7037984f3ae",
+      "bytes": 405
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-download-status.json",
+      "sha256": "2d0a15bd23be594371e6136ec6326b2a2b4d02104a2bee7afb9fbeae93e8fff6",
+      "bytes": 453
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-download-results.json",
+      "sha256": "0e6e8c205d08977dca0fdf7f0551e000e5334b208cf0c115aadef67de0852aca",
+      "bytes": 1550
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-local-payload.json",
+      "sha256": "7b7aaece84c75d632cda172f32c9f88111977a61875e2ec1e70ec619bc7894bc",
+      "bytes": 57
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-local-plan.json",
+      "sha256": "538f741799bd6bfd3d36da5497933b5838590a8910dcd9fc17cc7e4e1a6243bd",
+      "bytes": 1458
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch24\\runtime-check-final\\boltz-local-recovery.json",
+      "sha256": "ca8d15a28b083c5a694ae31bf066f892080493623758ab058edb8b25a1cb6fb9",
+      "bytes": 1158
+    }
+  ]
+}

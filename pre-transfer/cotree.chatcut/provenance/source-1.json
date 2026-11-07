@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.chatcut",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "chatcut",
+    "repository": "plugins",
+    "path": "plugins/chatcut",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "12aa3382302330ce234ef1b0e9b3e982a64883deb4f091bf46d85f447cbf7080",
+    "upstreamVersion": "1.0.4"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "视频指导和资源保留；ChatCut 宿主应用 / 会话集成待适配。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/connect-chatcut-desktop/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/connect-chatcut-desktop/SKILL.md",
+      "sourceMetadata": {
+        "name": "connect-chatcut-desktop",
+        "description": "Install, open, connect, or repair ChatCut Desktop when the chatcut_desktop MCP tools are missing or unavailable. Do not use from a managed agent already running inside ChatCut Desktop, or when chatcut_desktop tools are already available."
+      }
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "reference",
+      "reason": "Empty upstream app declaration; no connector to migrate."
+    }
+  ],
+  "copiedFiles": 4,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "45cc192f4b495f7556e8ff04bf34697325ba08fadadc35fb63366202298d5c9e"
+    },
+    {
+      "path": ".codex-plugin/assets/composer-icon.png",
+      "sha256": "521cc2088a18d6d38211e34dcf816a52ad8cfd06a0583ace65f6307d49f0b26e"
+    },
+    {
+      "path": ".codex-plugin/assets/logo.png",
+      "sha256": "521cc2088a18d6d38211e34dcf816a52ad8cfd06a0583ace65f6307d49f0b26e"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "0c69e0c7f64630da2fdce6ae1f84e24daa8c7cb2274f2f32a2b3f5d5190dbe21"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "521cc2088a18d6d38211e34dcf816a52ad8cfd06a0583ace65f6307d49f0b26e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "fc1f82db1060c5c066724befe7c45c60647e97e04ed8e99acaaecbe1dcc5c7ae"
+    },
+    {
+      "path": "skills/connect-chatcut-desktop/agents/openai.yaml",
+      "sha256": "d443ae87a7d0305c601b8b00959ab8251e1e7cf725fa74ec438c83582d847c8d"
+    },
+    {
+      "path": "skills/connect-chatcut-desktop/SKILL.md",
+      "sha256": "c825b16500f3fada1e9eb228e115d6124ef1c3935ce6b879bc7c8fb2092751a1"
+    }
+  ]
+}

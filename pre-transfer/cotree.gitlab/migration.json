@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.gitlab",
+  "version": "0.2.0",
+  "category": "代码托管与部署",
+  "priority": 0,
+  "batch": 13,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "gitlab",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/gitlab",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "7444b36d7d5962a4fcec8dbc5a352643ec8a72ccd81aaa103d260c2760e350cf"
+    }
+  ],
+  "changes": [
+    "官方 HTTP 声明补齐八个原生协作工作流，区分 project ID、Issue / MR IID、SHA 和流水线状态。",
+    "增加 Self-Managed / 子路径配置生成器与协作 toolset 选择，认证使用独立 OAuth，不导入来源客户端注册。"
+  ],
+  "limitations": [
+    "已适配 CoTree 原生 Skill / MCP；真实账户读写、过期恢复与线上业务仍待验收。配置脚本只生成配置，不实现登录 / token 刷新、不读取来源宿主身份、不启用插件。",
+    "需 top-level group / 实例允许 MCP；OAuth 客户端注册、授权和刷新须独立完成，headersEnv 不提供交互登录。普通 PAT 是否可用不能从 REST 支持推断。",
+    "toolset 选择依 GitLab 版本；旧实例可生成 --legacy 配置，不提供服务端工具组过滤。Schema / 能力以实际发现为准，本包不封装 REST 备用传输、不启动 GitLab Duo 远程代理或启用 Code Security。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "official GitLab HTTP MCP declaration": "保留唯一 HTTP 服务；独立 OAuth，GitLab.com / Self-Managed 端点配置与版本差异。",
+    "source had no domain workflows": "connect / inspect / issues / merge-request / review / pipelines / wiki / report 补齐代码协作，不冒充 API 已支持所有操作。",
+    "toolsets / remote agents": "默认仅协作工具组；不启用 Code Security 或远程 Duo 会话，不注册第二个 Agent 执行器。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

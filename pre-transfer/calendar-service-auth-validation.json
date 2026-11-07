@@ -1,0 +1,82 @@
+{
+  "observedAt": "2026-10-06T13:37:57.214Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "live-unauthenticated-boundary-only",
+  "credentialsSent": false,
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "results": {
+    "elyra.google-calendar": {
+      "packageDigest": "e51decc323b9a2b0a17bf1c9ad31d8b5e3867c1a8db17e7ad063340509eaf663",
+      "endpoint": "https://calendarmcp.googleapis.com/mcp/v1",
+      "protocol": "mcp",
+      "status": "anonymous-catalog",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 200,
+          "authenticationChallenge": false
+        },
+        {
+          "method": "POST",
+          "httpStatus": 202,
+          "authenticationChallenge": false
+        },
+        {
+          "method": "POST",
+          "httpStatus": 200,
+          "authenticationChallenge": false
+        },
+        {
+          "method": "GET",
+          "httpStatus": 405,
+          "authenticationChallenge": false
+        }
+      ],
+      "anonymousToolNames": [
+        "create_event",
+        "delete_event",
+        "get_event",
+        "list_calendars",
+        "list_events",
+        "respond_to_event",
+        "search_events",
+        "suggest_time",
+        "update_event"
+      ],
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.outlook-calendar": {
+      "packageDigest": "3b4cecff72b6b7f3e8e0ec21774d101718ce28dc7b13cc205943852ba630c692",
+      "endpoint": "https://graph.microsoft.com/v1.0/me?$select=id",
+      "protocol": "graph-rest",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "GET",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.outlook-email": {
+      "packageDigest": "1daf1eb7e0196d2b62c573c3b7e0127c0bcf8d54cc23e59414217e953be9a3cd",
+      "endpoint": "https://graph.microsoft.com/v1.0/me?$select=id",
+      "protocol": "graph-rest",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "GET",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    }
+  }
+}

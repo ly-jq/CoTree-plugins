@@ -1,0 +1,85 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.google-drive",
+  "name": "Google Drive",
+  "version": "0.2.0",
+  "description": "统一 Google Drive、Docs、Sheets、Slides 和评论的 CoTree 工作流，含独立 Google REST 入口。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.google-drive.connect",
+      "description": "配置 Google Drive 的独立 OAuth、API 与开发者预览 MCP 路径。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.google-drive.discover",
+      "description": "查找和读取 Google 文件，确认真实类型、共享盘、资源密钥与版本范围。",
+      "path": "skills/discover/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.google-drive.organize",
+      "description": "按明确目标管理 Drive 文件夹、移动、复制、共享与回收站。",
+      "path": "skills/organize/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.google-drive.docs",
+      "description": "创建或编辑 Google Docs，保留多 Tab、表格、列表、链接与原生控件结构。",
+      "path": "skills/docs/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.google-drive.sheets",
+      "description": "维护 Google Sheets 的值、公式、格式、数据验证和图表。",
+      "path": "skills/sheets/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.google-drive.slides",
+      "description": "按 Google Slides 模板或现有稿件编辑结构、版式和关联图表。",
+      "path": "skills/slides/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.google-drive.comments",
+      "description": "在 Drive 文档中按真实位置创建、回复或解决评论。",
+      "path": "skills/comments/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.google-drive.transfer",
+      "description": "导入、导出或下载 Google 文件，并核验格式与目标位置。",
+      "path": "skills/transfer/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "google-drive",
+      "transport": "streamable-http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "headersEnv": {
+        "Authorization": "COTREE_GOOGLE_DRIVE_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "42fc694c9d3b2bea61cf439a918951722b848468658aa44a7e31cc1930894642"
+  }
+}

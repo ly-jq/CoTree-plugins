@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.clickup",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "clickup",
+    "repository": "plugins",
+    "path": "plugins/clickup",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "9502b7894340b1662e1fb80a51b55ef3cc07a2b24e3b702cb914da03494dd9be",
+    "upstreamVersion": "1.0.3"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_CLICKUP_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#clickup",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/clickup"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 2,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "c62249cda16c77e0503d1490c1e59dcfb7e2d4aa43fe1e8e9b81a2ea86f92bee"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "6c0387af44b3009782adb515d2add5c4e74b3f87c860acfcba7c98b441ebb89a"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "f2c2a6b19959e028c373e2c1a16c170ae2a362be32e35774edd8aee8cba87bf9"
+    },
+    {
+      "path": "assets/composer-icon.png",
+      "sha256": "218b96eecc8b8039227db1f6edbf6c64dfaaffc08dd2c6465f6a4a355e9d2248"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "218b96eecc8b8039227db1f6edbf6c64dfaaffc08dd2c6465f6a4a355e9d2248"
+    }
+  ]
+}

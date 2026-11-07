@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.plugin-eval",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "plugin-eval",
+    "repository": "plugins",
+    "path": "plugins/plugin-eval",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "0b3d9cbc4fe6a8415acdf6ca5ffa3240176bf37f80b55d43c4384fc1c62eb6e7",
+    "upstreamVersion": "0.1.2"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "格式检查与评估材料保留；codex exec runner 未移植。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/evaluate-plugin/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/evaluate-plugin/SKILL.md",
+      "sourceMetadata": {
+        "name": "evaluate-plugin",
+        "description": "Evaluate a local Codex plugin in engineer-friendly language. Use when the user says \"evaluate this plugin\", \"audit this plugin\", \"why did this score that way\", \"what should I fix first\", \"help me benchmark this plugin\", or asks for a plugin-wide report before comparing versions."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/evaluate-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/evaluate-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "evaluate-skill",
+        "description": "Evaluate a local Codex skill in engineer-friendly terms. Use when the user says \"evaluate this skill\", \"give me an analysis of the game dev skill\", \"audit this skill\", \"why did this score that way\", \"what should I fix first\", or asks for a skill-specific report before benchmarking it."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/improve-skill/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/improve-skill/SKILL.md",
+      "sourceMetadata": {
+        "name": "improve-skill",
+        "description": "Turn plugin-eval findings into a concrete rewrite brief for a Codex skill. Use when the user already evaluated a skill and now wants Codex to improve it, especially after asking what to fix first."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/metric-pack-designer/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/metric-pack-designer/SKILL.md",
+      "sourceMetadata": {
+        "name": "metric-pack-designer",
+        "description": "Design custom metric packs for plugin-eval so teams can add local evaluation rubrics that emit schema-compatible checks and metrics. Use when the user wants their own evaluation criteria or visualizations."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/plugin-eval/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/plugin-eval/SKILL.md",
+      "sourceMetadata": {
+        "name": "plugin-eval",
+        "description": "Help engineers evaluate a local skill or plugin, explain why it scored that way, show what to fix first, measure real token usage, benchmark starter scenarios, or decide what to run next. Use when the user says things like \"evaluate this skill\", \"give me an analysis of the game dev skill\", \"why did this score that way\", \"what should I fix first\", \"measure the real token usage of this skill\", or \"what should I run next?\"."
+      }
+    }
+  ],
+  "copiedFiles": 71,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "85d30f783ae84848c0d592b2a32dc2b1246e97506ccf3dba26987e380ab13576"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "bdef102b629906cc8d84614c6a797c6c3c5edcbe65a5bf0b349fac180cf3bf85"
+    },
+    {
+      "path": "assets/plugin-eval.svg",
+      "sha256": "7ad3022987828d5117c0079d7dc4422657ca3e8ac502244971a6886ad3d5c56a"
+    },
+    {
+      "path": "fixtures/coverage-samples/coverage-final.json",
+      "sha256": "c88a4e2d1619c0177872297cafa2c472ce2d7fa5cd9d25ad151830975c6d7403"
+    },
+    {
+      "path": "fixtures/coverage-samples/coverage.xml",
+      "sha256": "aba2d76de0f9aa89e7dd6bcb60f01f8118d22c87549ea7c4f264f0df50aec836"
+    },
+    {
+      "path": "fixtures/coverage-samples/lcov.info",
+      "sha256": "6f2a81b8d0951a9f25b4801cae0be3608258d3b87b82fef64586ea021debb941"
+    },
+    {
+      "path": "fixtures/metric-pack/emit-pack.js",
+      "sha256": "e7e8abbcbb02c10c73c66d4e2eba6fccb572b9204f11635b2f342bdfb5b37291"
+    },
+    {
+      "path": "fixtures/metric-pack/manifest.json",
+      "sha256": "e501b4d2360eb0c0214e98a24e3a90bdf33c56385a820cc718054340bb7a268e"
+    },
+    {
+      "path": "fixtures/minimal-plugin/.codex-plugin/plugin.json",
+      "sha256": "3f192ffc82f21810d0e770adab6b6861fdc7a20ea34fbb21ae821b18aa329e5f"
+    },
+    {
+      "path": "fixtures/minimal-plugin/assets/minimal.svg",
+      "sha256": "3e3a62bc3d1694faf75f3eb3ccdf99c366c5e7f3d0304660f15ede7634655ed1"
+    },
+    {
+      "path": "fixtures/minimal-plugin/skills/minimal-plugin-skill/SKILL.md",
+      "sha256": "9f9748fcd0fbb677fc789e1318e0cb0b4bfd510ce919ddf1894dcee750301212"
+    },
+    {
+      "path": "fixtures/minimal-skill/references/details.md",
+      "sha256": "b08a7d7e531a34c54b95f0ecb2983890af43f16ed4b5427e625bde19060b6827"
+    },
+    {
+      "path": "fixtures/minimal-skill/SKILL.md",
+      "sha256": "ed2887d358084f434f9350b674278630bab9a7490fc772fa9002c0568f881ee7"
+    },
+    {
+      "path": "fixtures/multi-skill-plugin/.codex-plugin/plugin.json",
+      "sha256": "903d96bb175ab5986429d6f7051e72f1cff7ddf86ad05d99f10e832146319513"
+    },
+    {
+      "path": "fixtures/multi-skill-plugin/assets/multi.svg",
+      "sha256": "3dd7b133d4198693bc8fc09e328f90f50426bd469270eb5ce9de6b467dbb8659"
+    },
+    {
+      "path": "fixtures/multi-skill-plugin/skills/alpha/SKILL.md",
+      "sha256": "1c8e56a391bf6776c56f892942e47aee470ff0e585d5dccc090a70c82dcd93a1"
+    },
+    {
+      "path": "fixtures/multi-skill-plugin/skills/beta/SKILL.md",
+      "sha256": "e5ff0409421e4876a067bd1a0d1bcaeef27b7cd64cedefb74f63e2ece8cf600f"
+    },
+    {
+      "path": "fixtures/observed-usage/responses.jsonl",
+      "sha256": "b404eb6a3f8c4b39bac1365499fbbd0530e4b29c6d7edd3dd3a54faa327e6f60"
+    },
+    {
+      "path": "fixtures/ts-python-sample/src/sample.py",
+      "sha256": "68a80a6dde0cf0395f03e0979da4af8660eb151928513dc40e8bfb578c9ea721"
+    },
+    {
+      "path": "fixtures/ts-python-sample/src/sample.ts",
+      "sha256": "4b5b6dd064dad7f76510714f5df6c0996f4997be97aa245edcf71890693b6cae"
+    },
+    {
+      "path": "fixtures/ts-python-sample/tests/sample.test.ts",
+      "sha256": "8056978f22e7fdf7725585bfbbdba1675f15fea73c5d64fb8eb3657f5e132205"
+    },
+    {
+      "path": "fixtures/ts-python-sample/tests/test_sample.py",
+      "sha256": "414f19b2e1fe895d785eeb3b215fdc94075ee935a6406113d51b277501f04564"
+    },
+    {
+      "path": "package.json",
+      "sha256": "95b94c3064f6586b5e72b676de2e326e8be6de0df643d974793dcfec1d0bfcbc"
+    },
+    {
+      "path": "README.md",
+      "sha256": "766545af973987567cd10b51fa8ea6f8fea04254d46778cd9c2a5476bbb48288"
+    },
+    {
+      "path": "references/benchmark-harness.md",
+      "sha256": "5695560f150c951ec8e5e7229cfc4b25c97cea14f2100fc7c4a5a89f6443eb82"
+    },
+    {
+      "path": "references/chat-first-workflows.md",
+      "sha256": "1a7aac72c5240ca4b6d647c71c74b9fa2513cd27cc93aa4ae9db42889eda25d9"
+    },
+    {
+      "path": "references/evaluation-result-schema.md",
+      "sha256": "9d39a1d275835a5b5d11b30a21cf2040c5d6bb7a9837e98577cc9ab413dc673f"
+    },
+    {
+      "path": "references/metric-pack-manifest.md",
+      "sha256": "ad5f630b0613a9a6ffc5733ec344f029b9aa452371f77ff7516cf8e326633aec"
+    },
+    {
+      "path": "references/observed-usage.md",
+      "sha256": "e42e1e14e04b7fb4246f141bcc3e81fdb3af1700bcf001beb6f2b71ce2be4657"
+    },
+    {
+      "path": "references/technical-design.md",
+      "sha256": "da1a6e4bfbb465103a1862992caed2bcfac3a07a4c8db5264086cfd5f53562de"
+    },
+    {
+      "path": "scripts/plugin-eval.js",
+      "sha256": "2d0b6759f1509d47944f86c4e62719d7da52fc5aaf6b6bcb5764d5268d59d1fb"
+    },
+    {
+      "path": "skills/evaluate-plugin/agents/openai.yaml",
+      "sha256": "a9b4531e9344ec8994dfd5113d383d844f7adfc8124fba56c61c3eeade9bbd73"
+    },
+    {
+      "path": "skills/evaluate-plugin/SKILL.md",
+      "sha256": "cf170bc718fb87d8bf0f38b08d61b371f74ad7f9447b3d0887d224a5c6cc5dcc"
+    },
+    {
+      "path": "skills/evaluate-skill/agents/openai.yaml",
+      "sha256": "a686ff81ed94ef3481163967b75373f3c1d9a16752211040bf70264a8412fc2d"
+    },
+    {
+      "path": "skills/evaluate-skill/SKILL.md",
+      "sha256": "c8912f39d3b4f5c57a814cba507dabe07d6bb99f836f9a127b45f5f58aff9db4"
+    },
+    {
+      "path": "skills/improve-skill/agents/openai.yaml",
+      "sha256": "e2e4242ceb1f362d4c09e19a3733d595f2f50070f0030894be13c8993bb22064"
+    },
+    {
+      "path": "skills/improve-skill/SKILL.md",
+      "sha256": "035e4f02636a8be9b4a3a767f3784c5dc33710616d91f238865ee5a62dc6b020"
+    },
+    {
+      "path": "skills/metric-pack-designer/agents/openai.yaml",
+      "sha256": "78aa22afb79a6217b0c9f368e1b732f874750fd95474fa3cea53a080cbd91e89"
+    },
+    {
+      "path": "skills/metric-pack-designer/SKILL.md",
+      "sha256": "7c1894d319307044037fefbd9595658a966c99a2a660dd48dcd3042685992a41"
+    },
+    {
+      "path": "skills/plugin-eval/agents/openai.yaml",
+      "sha256": "677974f301a06fb484cfb993c85fe94798bd6a4294a951c61ef8aac35c1dd322"
+    },
+    {
+      "path": "skills/plugin-eval/SKILL.md",
+      "sha256": "85338f56d2d8a6051d03ccfba52b00c5b9224c6b78f241315216432af1063f7d"
+    },
+    {
+      "path": "src/cli.js",
+      "sha256": "19fd683d9a6b08f87d600e8e4965d86cf2775c67cb980b173308519d4230b7f0"
+    },
+    {
+      "path": "src/core/analyze.js",
+      "sha256": "76ec809e2dad0988bbaf3a4be64e637eef6b249781457cd20cd0cd4f3cfb4624"
+    },
+    {
+      "path": "src/core/baseline.js",
+      "sha256": "297192801bee0a99cf25fc1aba9d793c2ec5cf801045a330171cef22e13d9903"
+    },
+    {
+      "path": "src/core/benchmark-events.js",
+      "sha256": "43ea8bf5b126665aab983a8cb4e57394fe57ea7dc5f63d212bdae74fb3c30b80"
+    },
+    {
+      "path": "src/core/benchmark-workspace.js",
+      "sha256": "858e3925cd53e892caa7f11133448dc7bbc5168e538a44cf455abd094be4a40b"
+    },
+    {
+      "path": "src/core/benchmark.js",
+      "sha256": "abfb8d9999c4a62bd2ff76d4d02734a6e0325d87b11e44da213470061487f9ff"
+    },
+    {
+      "path": "src/core/budget.js",
+      "sha256": "0030aca28899e3d354960886beea8bce45b6e81598f4d278c56e284a51af792c"
+    },
+    {
+      "path": "src/core/compare.js",
+      "sha256": "4b82438d7562d76f38fe820fee848847b0f75c9bc0543300f59d08a52c586fa9"
+    },
+    {
+      "path": "src/core/improvement-brief.js",
+      "sha256": "fc47df775c858c26aba5ffc0aef1c01c96937352edfaf39113b95729f42b3751"
+    },
+    {
+      "path": "src/core/measurement-plan.js",
+      "sha256": "e0e053ffd738def003f4dadd12ca0857679ac8f932bcc2d19bc4563e48e37bf2"
+    },
+    {
+      "path": "src/core/metric-packs.js",
+      "sha256": "805a78538ce702606415b5e8ae2649f9a8ea0d40bd318c416d12f9bc8bbdeaba"
+    },
+    {
+      "path": "src/core/observed-usage.js",
+      "sha256": "a994892e663e0a24dd773aea3c1b883048bbb0da6d3a1c67578468c0006a9fb4"
+    },
+    {
+      "path": "src/core/presentation.js",
+      "sha256": "460dcfac368d985c6e74a64ddb8758f8752be0ed275ed337bd23d0386d3ddac1"
+    },
+    {
+      "path": "src/core/schema.js",
+      "sha256": "d38ae3bd33fb92b6b25a7d32705b86a1acccf0bb522198a2f255f71d33411b64"
+    },
+    {
+      "path": "src/core/scoring.js",
+      "sha256": "f005d1e2912dbbc34e8b517e07cd081467b0338f9f9bc94340bbe64100bf97bd"
+    },
+    {
+      "path": "src/core/target.js",
+      "sha256": "e20002a269f03cea6ab0c613a8977fbcca275acdd289370b3cbeec211878eb7a"
+    },
+    {
+      "path": "src/core/workflow-guide.js",
+      "sha256": "45db1f4f07eab5ea42adb6c41bebe2a6167dcd97d82cd4b7be0cb7171de9f96c"
+    },
+    {
+      "path": "src/evaluators/code.js",
+      "sha256": "5e84ef7d6741587b3ca6314d0c03f61bf64d814a7f9be0b249ccd9fcec725a30"
+    },
+    {
+      "path": "src/evaluators/coverage.js",
+      "sha256": "cd4fdb788dce7f68cf940a348c5f607c9b7d9f8abdc1c23cab42808aafad31a8"
+    },
+    {
+      "path": "src/evaluators/plugin.js",
+      "sha256": "d77e10ef032d2fe3a838a74c2716a14b1fefb1ce0f07b58585ea82c318bdd275"
+    },
+    {
+      "path": "src/evaluators/python.js",
+      "sha256": "0d714a57de08401081c63eefe311c1b121eccd4a32cc21909d15416254500db1"
+    },
+    {
+      "path": "src/evaluators/skill.js",
+      "sha256": "d06a136c458bb6272245e7efd22f1ad0175f2a906a5459ac92131e0bf3b2f650"
+    },
+    {
+      "path": "src/evaluators/typescript.js",
+      "sha256": "d704c9993f4ad4dd49c879ed497ccb6c9480324783e587c7f214c13cd88999a8"
+    },
+    {
+      "path": "src/index.js",
+      "sha256": "bf7c2281fb3123670d68385cc8fabacd510c1b4719f081e87f0d6c08e831115f"
+    },
+    {
+      "path": "src/lib/files.js",
+      "sha256": "a5064c48424cb30c6a918e9778770dd449380f3efc15259d3268201ba1991f2d"
+    },
+    {
+      "path": "src/lib/frontmatter.js",
+      "sha256": "a6222c168df5abd48e0baeca0dff24db5adaa426e1176965b3fbcdee77758e12"
+    },
+    {
+      "path": "src/lib/tokens.js",
+      "sha256": "ba85e44b1f5da75e1771ee945d9bf7c8f6bb8d159711c6bc097acd18f8e7760b"
+    },
+    {
+      "path": "src/renderers/html.js",
+      "sha256": "c804ecf4a57b7a420488d4620c0408c32b6cc3dabe3ed14d1e4080d260c6476f"
+    },
+    {
+      "path": "src/renderers/index.js",
+      "sha256": "feadb88dc4696ed2c01897790a072d52b829885a432fe5752dcacac1396a4f0b"
+    },
+    {
+      "path": "src/renderers/markdown.js",
+      "sha256": "efd958f7d76d4593a1e28533bee71cb22c619f88d890509edfb61078143c01d6"
+    },
+    {
+      "path": "tests/plugin-eval.test.js",
+      "sha256": "5f7a452f913b6a9a424c971a6db6b6327a2b13e0e88b08773059cef6a6b6a1e4"
+    }
+  ]
+}

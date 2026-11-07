@@ -1,0 +1,74 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.openai-developers",
+  "name": "OpenAI Developers",
+  "version": "0.2.0",
+  "description": "开发 OpenAI Agents SDK 与 ChatGPT MCP Apps 应用，准备评测、提交材料并诊断 API 接入。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.openai-developers.docs",
+      "description": "查阅当前 OpenAI API、Agents SDK 与 ChatGPT 应用官方文档。",
+      "path": "skills/docs/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.openai-developers.agents-sdk",
+      "description": "用 TypeScript 或 Python 创建、改造 OpenAI Agents SDK 应用。",
+      "path": "skills/agents-sdk/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.openai-developers.build-chatgpt-app",
+      "description": "构建 ChatGPT MCP Apps 服务、UI 和工具交互。",
+      "path": "skills/build-chatgpt-app/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.openai-developers.submission",
+      "description": "从真实实现准备 ChatGPT 应用提交 JSON、说明与正负测试。",
+      "path": "skills/submission/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.openai-developers.credentials",
+      "description": "配置独立 OpenAI 项目 API 身份并核实最小调用范围。",
+      "path": "skills/credentials/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.openai-developers.troubleshoot",
+      "description": "根据实际响应诊断 OpenAI API 传输、认证、额度、限流与访问错误。",
+      "path": "skills/troubleshoot/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.openai-developers.evaluate",
+      "description": "针对 OpenAI agent 的真实工作流建立有意义的本地或平台评测。",
+      "path": "skills/evaluate/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.openai-developers.deploy",
+      "description": "准备并部署 OpenAI agent 或 ChatGPT MCP Apps 服务。",
+      "path": "skills/deploy/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "8180202e725ac2127cd2f8ca62100618c1aeac3c1390bcc58dbe952c64a3f5a9"
+  }
+}

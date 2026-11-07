@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.math-proof",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "math-proof",
+    "repository": "claude-plugins-official",
+    "path": "plugins/math-proof",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "48a6d9da68a219db59873aa489264df8fd4b9ee6460a7a8da3f4304b28d19749"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "未注册 skills/siege/SKILL.md：需要保留上游工具禁用 / 调用限制，不能静默放宽为普通 Skill。",
+    "未注册 skills/solo/SKILL.md：需要保留上游工具禁用 / 调用限制，不能静默放宽为普通 Skill。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/siege/SKILL.md",
+      "state": "deferred",
+      "sourceMetadata": {
+        "name": "siege",
+        "description": "Work on one hard mathematics problem in rounds: each round a judge writes a few self-contained questions, independent workers answer them, and the judge keeps a ledger of what is proved, refuted and open, until the judge concludes or the rounds run out, and then a proof.md says plainly what is and is not proved. A run takes hours and dozens of worker runs. Usage: /math-proof:siege [NAME=value settings] <the problem, stated in full, or the path of a file holding it>.",
+        "argument-hint": "[NAME=value ...] [DIR=run-directory] <problem statement | problem-file>",
+        "disable-model-invocation": true,
+        "disallowed-tools": "WebSearch, WebFetch, AskUserQuestion"
+      },
+      "reason": "Source invocation / tool denial restriction has no equivalent Skill authority contract; retained without registration."
+    },
+    {
+      "kind": "skill",
+      "source": "skills/solo/SKILL.md",
+      "state": "deferred",
+      "sourceMetadata": {
+        "name": "solo",
+        "description": "Work on one hard mathematics problem in this session yourself, with no sub-agents: reason in stages, record each settled step in a notes file so that nothing written is lost if a response is cut off, and end with a self-contained proof.md. Usage: /math-proof:solo <the problem, stated in full, or the path of a file holding it>.",
+        "argument-hint": "[DIR=run-directory] <problem statement | problem-file>",
+        "disable-model-invocation": true,
+        "disallowed-tools": "WebSearch, WebFetch, AskUserQuestion"
+      },
+      "reason": "Source invocation / tool denial restriction has no equivalent Skill authority contract; retained without registration."
+    },
+    {
+      "kind": "agent",
+      "source": "agents/math-proof-judge.md",
+      "state": "converted",
+      "target": "content/agents/math-proof-judge.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/math-proof-worker-deep.md",
+      "state": "converted",
+      "target": "content/agents/math-proof-worker-deep.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/math-proof-worker.md",
+      "state": "converted",
+      "target": "content/agents/math-proof-worker.md"
+    }
+  ],
+  "copiedFiles": 9,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "0530d256945947dee2af736ab3147575b1f762b1ff94f5d9c28d2e34b9f46d57"
+    },
+    {
+      "path": "agents/math-proof-judge.md",
+      "sha256": "9e35bd2cf3134ddff58a33a7c0043e4c67800b3ecac90330f636d05781007be5"
+    },
+    {
+      "path": "agents/math-proof-worker-deep.md",
+      "sha256": "1eeb0b7cbef5574116f1a947264506576aac018e0f4e53a51df3fc6757d1d88d"
+    },
+    {
+      "path": "agents/math-proof-worker.md",
+      "sha256": "e8560af5eb79b5a62f30037f21667d184be0580b0c25d5efb37857ce7b8e9146"
+    },
+    {
+      "path": "assets/how-a-run-unfolds.png",
+      "sha256": "a3f5181cb30946db0aed4eba991fc7bdccccc05015d90eb6c18809631cc01d73"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "159d58315262fd51fa9a591ed1a07cbc667808b6ccee4dbc876a104da4f6161a"
+    },
+    {
+      "path": "skills/siege/scripts/ledger.py",
+      "sha256": "1a1dd27f655a02f3cad6d62f84766895757368ed5c159ae97bfea2782ca4577e"
+    },
+    {
+      "path": "skills/siege/SKILL.md",
+      "sha256": "c3c3a233f94dc6b72a68d9c7c848cfe68bb69e9d5500449245d99584872f527a"
+    },
+    {
+      "path": "skills/solo/SKILL.md",
+      "sha256": "87c366c1ef735d614dc11bb4da3b647d7d7aa675b4a1997e8b5e64b41c703492"
+    }
+  ]
+}

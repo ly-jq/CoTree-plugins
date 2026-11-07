@@ -1,0 +1,50 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.plugin-development",
+  "name": "插件开发",
+  "version": "0.2.0",
+  "description": "创建、装配、验证和评估 CoTree 原生插件，复用现有 SDK 与安装生命周期。",
+  "presentation": {
+    "icon": "resources/source-02/content/assets/plugin-eval.svg",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.plugin-development.build",
+      "description": "创建或迁移 CoTree 插件，选择声明式能力或受控代码实现。",
+      "path": "skills/build/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.plugin-development.components",
+      "description": "为 CoTree 插件接入 Agent、Skill、MCP、Hook、配置或 UI 组件。",
+      "path": "skills/components/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.plugin-development.verify",
+      "description": "检查 CoTree 插件清单、资源、安装、执行和禁用，定位实际兼容问题。",
+      "path": "skills/verify/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.plugin-development.evaluate",
+      "description": "评估整包插件在真实任务中的正确性、边界、成本和改进优先级。",
+      "path": "skills/evaluate/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "72afe29c7ee2d9d6e4963d2d808590853f77e08ab99b6df992b5a562a737bf4e"
+  }
+}

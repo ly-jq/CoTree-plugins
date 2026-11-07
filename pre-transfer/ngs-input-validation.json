@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-10-14T07:22:11.977Z",
+  "results": {
+    "elyra.ngs-analysis": {
+      "status": "isolated-ngs-input-repair",
+      "packageDigest": "7d2901ac49f80f4b3ec42fb5a1daf0de116898e5d21951eba004c39677b78c79",
+      "checks": [
+        "compile_23_runtime_scripts",
+        "six_explicit_library_types_and_opt_in_inference",
+        "no_silent_library_fallback",
+        "sample_sheet_rejects_unspecified_strand_before_planning",
+        "umi_mode_required_and_invalid_chemistry_rejected",
+        "duplex_raw_input_cannot_run_single_consensus",
+        "explicit_single_consensus_plan_retained",
+        "missing_supplied_consensus_is_an_error",
+        "provided_duplex_consensus_uses_downstream_plan_only"
+      ],
+      "pipelinesExecuted": false
+    }
+  },
+  "supersedesForPackage": "science-runtime-validation.json",
+  "artifacts": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\ngs-input-repair\\runtime-check\\ngs-input-check.py",
+      "sha256": "523bd1e5573098a1ec84851746ab9ca4b07bf421d7d15719a556da75a4e20f18"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\ngs-input-repair\\runtime-check\\checks.json",
+      "sha256": "a19ebf9e112cfc763cf2f8ac18811599eb9e9cb7c3323dfc5d74307da82bd3a7"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.lovable",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "lovable",
+    "repository": "plugins",
+    "path": "plugins/lovable",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "17a8dcb6438327d3fdcffa1eb2f86d7205e82e995566cf8e2328657e96be6961",
+    "upstreamVersion": "2.0.1"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "Lovable 的原宿主连接器尚未接入 Elyra。"
+  ],
+  "components": [
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 0,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "10fa40c54b6a6342cd9feeccd7d77886c8010205c6a44cacc7ea9c3887c8638a"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "8b3664b096e9bf0359c434452f8f5acfb130ce7c71a2830bf6edd03f44b8426e"
+    }
+  ]
+}

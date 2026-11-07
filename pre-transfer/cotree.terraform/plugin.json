@@ -1,0 +1,91 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.terraform",
+  "name": "Terraform",
+  "version": "0.2.0",
+  "description": "在 CoTree 中查询 Terraform provider / module 文档，开发和验证 IaC，审查计划并执行明确授权的基础设施变更。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.terraform.connect",
+      "description": "启动固定 Terraform MCP，选择公共文档或独立云账户范围。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.terraform.docs",
+      "description": "查询与当前锁定版本相符的 Terraform provider / module 文档。",
+      "path": "skills/docs/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.terraform.develop",
+      "description": "编写和重构 Terraform 配置，保持资源地址和环境边界。",
+      "path": "skills/develop/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.terraform.validate",
+      "description": "运行 Terraform 格式、初始化与验证，记录是否访问后端。",
+      "path": "skills/validate/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.terraform.plan",
+      "description": "生成明确 workspace 的 Terraform 计划并核对创建、替换和删除。",
+      "path": "skills/plan/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.terraform.apply",
+      "description": "应用已审查且仍有效的 Terraform 计划并核对实际结果。",
+      "path": "skills/apply/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.terraform.state",
+      "description": "处理 Terraform state、导入和迁移，保留锁与恢复路径。",
+      "path": "skills/state/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.terraform.cloud",
+      "description": "管理指定 HCP Terraform / Enterprise workspace、run 与私有 registry。",
+      "path": "skills/cloud/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "terraform",
+      "transport": "stdio",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "hashicorp/terraform-mcp-server:0.4.0",
+        "stdio",
+        "--toolsets=registry"
+      ],
+      "cwd": ".",
+      "cwdBase": "workspace"
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "3024025524e5253d97cfe6ab3384db44417ce1ad267e5b60ff5d6c7913f974e8"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "generatedAt": "2026-10-14T08:36:25.153Z",
+  "results": {
+    "elyra.openai-ads-conversions": {
+      "packageDigest": "6a87e4c7584f16a590626152db97b2b56d325881f1ace5ed30fd889d6a086423",
+      "status": "isolated-finance-runtime",
+      "skills": 4
+    },
+    "elyra.public-equity-investing": {
+      "packageDigest": "13777025f1f51867743824bd48453542636b08b4eb321ea56707af852d686147",
+      "status": "isolated-finance-runtime",
+      "skills": 15
+    }
+  },
+  "artifacts": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\equity-source-coverage.json",
+      "sha256": "4845938df12001a2bdb70b91d0f764f88e42189e31ed10da0be20536776caeec"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\tests\\plugin-runtime\\fixtures\\finance-input-check.py",
+      "sha256": "3f7a5f8ba2fe6fccfd5fb3b3f4c4e23aa9fe04e0ff3832c37738d3310a4e274e"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\python-finance-check.json",
+      "sha256": "424dbca397652ab051cccfbeea2c586d7781f6abb17b8b67f2fa9710b5314e0c"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\normalized-input.json",
+      "sha256": "1b35fb3dab3a3a0753f552fd711d2eef0ef6c6e4b94795f42c2b3008d2527103"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\normalized\\elyra-execution.json",
+      "sha256": "60494ac580971a70340b441a962aa4d6e43ecbe7555f07fad6f07c95a1f72bc7"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\normalized\\elyra-normalization-input.json",
+      "sha256": "d9ad521891f517aba6157ada60907fe4237a230e516b07134d99d73423ed379d"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\normalized\\helper.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\normalized\\helper.stdout.txt",
+      "sha256": "542dc847f20f998fc1fad8246e8348a7be6e2983eb39a3dc6a165a88785cc56f"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\normalized\\manifest.json",
+      "sha256": "e56b4264cfafe181597f1877e967ff2c7e8464e6de449f4ea1ec4ffe65f966b8"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\normalized\\Normalization_Issues.csv",
+      "sha256": "ea254924771cd31bc0d851dd87ebd198c39c9f423d87df07dc10f39ccd437022"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\normalized\\Normalized_Financials_Long.csv",
+      "sha256": "8b273ef9570c2fcdd3b7987af3fa4f1f2c7f3116c7540fe0fbf47fd048aa68ae"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\normalized\\run_log.json",
+      "sha256": "2077e5a1d4ffb36f9c949f326894d24d9182c65bfdc620cdf7bfa1ed9132f218"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\normalized\\Source_Index.csv",
+      "sha256": "ae6cd5a1bcde1df00e359f3db7e3b8760d5b59298553591f57107a03431c0f44"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\rejected-2.json",
+      "sha256": "199ad9584356eb6103519cac34ea1350fed62a104a8626e7b82acb3851715020"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\rejected-3.json",
+      "sha256": "1da099fb186eef3ce532436b67ee1e1c3eae3495d63f2fb43ea2f5eb3df90fb2"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\rejected-4.json",
+      "sha256": "f4497ff61f2350c5883c6c70cdb0e0c357eca2ff9589713b0e69efc9f04c4849"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\rejected-5.json",
+      "sha256": "eac7278568ad41442019fd30a8eb41d493cdc7faa25014793695d23408c399b7"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\rejected-6.json",
+      "sha256": "5bfcfff48267e494bf43178d7bc9e9190b7d5e90bc40ffd8e9ddac2ce0f7ed1b"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\rejected-7.json",
+      "sha256": "24d1d3020bbee0139b6d66a911f7aa3e2ccdf59d2bd47fe91054fad7cbe39dba"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\dcf-input.json",
+      "sha256": "c7bc13a49a2bac90eb91c2c69714e9a5d6f812de65493bc296e62d6d79b171b6"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\dcf-output\\banker_formula_workbook.xlsx",
+      "sha256": "79bde47d4373ca05775978e769c8fb08222829dd22fd0b498e2ff19c66719f83"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\dcf-output\\banker_formula_workbook_run_log.json",
+      "sha256": "55357da3dff4f84a9ea5379a37bccc04971f925cb4cf048f2b9de4b54dace7b2"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\dcf-output\\elyra-execution.json",
+      "sha256": "642ac3a9dfb74c68df34a5f6fd25f045c0f82f7f3d6bc0b1c4a94a109d23e54d"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\dcf-output\\helper.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\dcf-output\\helper.stdout.txt",
+      "sha256": "0e19a163d415603b8a73c113f77a1f654b25d0ae6c23a3b016a9e81807b212eb"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\dcf-output\\manifest.json",
+      "sha256": "251df8132ed16fb2e9655733823bc6fed42f9b393864aacace8af6505f2327c3"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\dcf-output\\model_citations.json",
+      "sha256": "dde62fde89ce61de9ff0412519df8b230de66e34df8699de2347805fc310baf7"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\three-statement-input.json",
+      "sha256": "b2f7210e1af8db20add41eb563bcf4f8dd8e0e0571a3067e7b94e01c53de4d35"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\three-statement-output\\banker_formula_workbook.xlsx",
+      "sha256": "4cee3c74b057dd6b293b904d2cdeb3ca0f45fc6b4f1aedaa26afab06f94e70cd"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\three-statement-output\\banker_formula_workbook_run_log.json",
+      "sha256": "d3e9c4c27991e8d52bb299ed4888c99b766b2b2cdae424575234e4a497bda44e"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\three-statement-output\\elyra-execution.json",
+      "sha256": "e91ab9e380beb667b8d536f18305c79f8cf221e324b7db250d11090ea121a875"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\three-statement-output\\helper.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\three-statement-output\\helper.stdout.txt",
+      "sha256": "e8ed0e0e2f7bdd645cbbfdeb4722eea2233208cc15aa57dc294b7ae5f9d48c6c"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\three-statement-output\\manifest.json",
+      "sha256": "c43bd5c0e2487bc886a793be90110f0a8a15bee47fc5581d6c2aecb33f582401"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\three-statement-output\\model_citations.json",
+      "sha256": "4bc0846c4d770c3006d74feb62e44bf06144b9673877b745fd4d1b0e62060a50"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\event-input.json",
+      "sha256": "4988bf05a51c5b5f820cb347f09ee58438d3f21eb595589794e910a09c8a3dab"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\event-output\\elyra-execution.json",
+      "sha256": "537c9cef4ac6279e612e51ebed6d11ab268f00f7204b6fbe4c51244da17b5a02"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\event-output\\helper.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\event-output\\helper.stdout.txt",
+      "sha256": "e99f0b3900d99f53671a916baedc7c81dd97e185070ec1cd546211aed6a81158"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\invalid-probabilities.json",
+      "sha256": "7745661decb558491c222a6940efc2b8f179882a9350ef3d41505ab64ec26252"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\failed-event-output\\elyra-execution.json",
+      "sha256": "0aacc28266a8879990825a590e1fe4beac94de06aa1f1ad15f4988d971194d46"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\failed-event-output\\helper.stderr.txt",
+      "sha256": "b292f651eb1af9ff336a755ce84b5d9ef3c427410d022ce9f95e66e82da5969a"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\failed-event-output\\helper.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\ads-input.json",
+      "sha256": "7dd6690c55fc01edeaa4b1f092c01ecf2b6c7c5b74f6a88c099187ffb453217a"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\ads-local-validation.json",
+      "sha256": "1eef72ebf8192ea153e8246fb266ff23895a011568fb9e16f009a04dc52e8f9b"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\ads-capi-transport-fixture.json",
+      "sha256": "5bcaeb774d25319d593048ae0ea8c56ec749afbffbcd499e429223b1bec0ece7"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\ads-browser-fixture.html",
+      "sha256": "768b47c58489b6ce6ffdad88b6204d9ab008f5ce420e7941afa938566e39c172"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch30\\runtime-final\\ads-browser-validation.json",
+      "sha256": "76688751f96b284a091d67281295a496b25502a9fd3304e10b28fd5bdde6ee47"
+    }
+  ],
+  "realAccounts": false,
+  "externalWrites": 0,
+  "limitations": [
+    "Ads browser SDK stub and injected transport only; no OpenAI conversion request, receipt or attribution verified.",
+    "Financial input is synthetic, preserved example models are not real market research; formula workbooks were generated but not recalculated in Excel.",
+    "No paid data, brokerage, trading, account authentication or automated scheduling exercised."
+  ]
+}

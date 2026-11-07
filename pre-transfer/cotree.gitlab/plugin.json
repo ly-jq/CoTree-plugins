@@ -1,0 +1,87 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.gitlab",
+  "name": "GitLab",
+  "version": "0.2.0",
+  "description": "在 CoTree 中读取 GitLab 项目、处理 Issue 和 Merge Request、检查流水线与 Wiki，支持独立 OAuth 和自建实例配置。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.gitlab.connect",
+      "description": "配置 GitLab 独立 OAuth、实例地址和协作工具组，验证账户与项目范围。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.gitlab.inspect",
+      "description": "查找 GitLab 项目、仓库文件与提交，保留路径、ref 和对象身份。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.gitlab.issues",
+      "description": "读取或按授权更新 GitLab Issue / Work Item 与讨论。",
+      "path": "skills/issues/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.gitlab.merge-request",
+      "description": "创建或更新 GitLab Merge Request，核对源目标项目、分支和最新提交。",
+      "path": "skills/merge-request/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.gitlab.review",
+      "description": "审阅 GitLab MR 的真实 diff、流水线和讨论，以行号及提交证据提出问题。",
+      "path": "skills/review/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.gitlab.pipelines",
+      "description": "检查 GitLab CI 的流水线、Job、日志与产物，并按授权触发必要操作。",
+      "path": "skills/pipelines/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.gitlab.wiki",
+      "description": "读取或更新 GitLab Wiki，保留页面 slug、格式与并发修改。",
+      "path": "skills/wiki/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.gitlab.report",
+      "description": "基于 GitLab 已读取的 Issue、MR、提交和流水线生成可追溯交付报告。",
+      "path": "skills/report/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "gitlab",
+      "transport": "streamable-http",
+      "url": "https://gitlab.com/api/v4/mcp",
+      "headers": {
+        "X-Gitlab-Enabled-Mcp-Server-Toolsets": "core,work_items,merge_requests,repository,ci,wikis"
+      },
+      "headersEnv": {
+        "Authorization": "COTREE_GITLAB_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "0c9b31b38d7514daa2affae11faee49621ca765dd40455a66f494f6c0c2af284"
+  }
+}

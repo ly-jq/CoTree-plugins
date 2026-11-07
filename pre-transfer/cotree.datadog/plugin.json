@@ -1,0 +1,79 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.datadog",
+  "name": "Datadog",
+  "version": "0.2.0",
+  "description": "通过 Datadog 官方 MCP 查询日志、指标与 APM，排查事件并维护授权范围内的监控和仪表盘。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.datadog.connect",
+      "description": "接入 Datadog MCP，核对站点、身份与组织权限。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.datadog.logs",
+      "description": "限定时间、环境和服务查询 Datadog 日志，保留未覆盖范围。",
+      "path": "skills/logs/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.datadog.metrics",
+      "description": "解释 Datadog 指标、聚合与阈值变化。",
+      "path": "skills/metrics/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.datadog.apm",
+      "description": "从 Datadog APM 跟踪服务延迟、错误与依赖。",
+      "path": "skills/apm/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.datadog.monitors",
+      "description": "维护明确 Datadog monitor，验证条件与通知影响。",
+      "path": "skills/monitors/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.datadog.dashboards",
+      "description": "按观测目标修改 Datadog 仪表盘并核验保存结果。",
+      "path": "skills/dashboards/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.datadog.incident",
+      "description": "关联 Datadog 事件与遥测，形成有证据的事件时间线。",
+      "path": "skills/incident/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "datadog",
+      "transport": "streamable-http",
+      "url": "https://mcp.datadoghq.com/v1/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_DATADOG_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "e1339494aea001d67452ef273df0368c4a4e3e5208dbdd8dd13eff14f0be4d89"
+  }
+}

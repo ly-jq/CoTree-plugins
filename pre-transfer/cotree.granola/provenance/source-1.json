@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.granola",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "granola",
+    "repository": "plugins",
+    "path": "plugins/granola",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "a23cd7b37f6473a1d7b590ddb349a8f8d8c4744efda03c8f3da2c7b1e60283eb",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_GRANOLA_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#granola",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/granola"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 2,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "77e3372fc8d770e94acd2f71cff89c0ea85243c251c6d31bd1c3841b67018658"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "5c72107c4f07f618081b6fffa402ad94ffebc5ee9fdfba7334d41550a6e4c4e9"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "ac12dc8f83928cc1e3b3c500cc495f656c3f398692f1c9be233b2fea9f7379f3"
+    },
+    {
+      "path": "assets/composer-icon.png",
+      "sha256": "15cb8a06539f9b524056e1b13ed3cefbef3fddad7ac1f692e3e8ab4d9702a3ec"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "1360b28dec57099b071790a9d709cc9f2c1cc3039c543ae7e39e51b06802bdd0"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "lsp": {
+    "servers": {
+      "lua": {
+        "command": "lua-language-server",
+        "args": []
+      }
+    }
+  }
+}

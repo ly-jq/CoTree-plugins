@@ -1,0 +1,331 @@
+{
+  "resources": [
+    {
+      "source": "resources/source-01/content/scripts/ngs_epigenomics_utils.py",
+      "destination": "runtime/scripts/ngs_epigenomics_utils.py",
+      "replacements": [],
+      "sourceSha256": "76f2f11b4bdd3a9389d8f674091593454c561ee7cdf70df09abd0adcd979cbc8",
+      "sha256": "76f2f11b4bdd3a9389d8f674091593454c561ee7cdf70df09abd0adcd979cbc8"
+    },
+    {
+      "source": "resources/source-01/content/scripts/ngs_planner_utils.py",
+      "destination": "runtime/scripts/ngs_planner_utils.py",
+      "replacements": [],
+      "sourceSha256": "5f8d234f469f81ec60f40178828769aab490d369aa1d7614a970549acfc9c4f0",
+      "sha256": "5f8d234f469f81ec60f40178828769aab490d369aa1d7614a970549acfc9c4f0"
+    },
+    {
+      "source": "resources/source-01/content/scripts/ngs_preflight.py",
+      "destination": "runtime/scripts/ngs_preflight.py",
+      "replacements": [],
+      "sourceSha256": "36d60ad166534e5e10fad2ee59f447e6f84b36802457fedb68c01a600c220de2",
+      "sha256": "36d60ad166534e5e10fad2ee59f447e6f84b36802457fedb68c01a600c220de2"
+    },
+    {
+      "source": "resources/source-01/content/scripts/ngs_reference_manager.py",
+      "destination": "runtime/scripts/ngs_reference_manager.py",
+      "replacements": [],
+      "sourceSha256": "61c0637671727a310924ab478825a443a68072f964e3c5f1e337152124890332",
+      "sha256": "61c0637671727a310924ab478825a443a68072f964e3c5f1e337152124890332"
+    },
+    {
+      "source": "resources/source-01/content/scripts/ngs_resource_gate.py",
+      "destination": "runtime/scripts/ngs_resource_gate.py",
+      "replacements": [],
+      "sourceSha256": "e5ed3625d0e9573a6f127800943a7e786dafca856082d39b702cd5b5bb82721d",
+      "sha256": "e5ed3625d0e9573a6f127800943a7e786dafca856082d39b702cd5b5bb82721d"
+    },
+    {
+      "source": "resources/source-01/content/scripts/ngs_run_utils.py",
+      "destination": "runtime/scripts/ngs_run_utils.py",
+      "replacements": [
+        [
+          "LOCAL_ENV = _load_local_env_file()",
+          "LOCAL_ENV: dict[str, str] = {}  # Elyra passes an explicit process environment; never auto-load workspace files."
+        ],
+        [
+          "(current / \".codex-plugin\" / \"plugin.json\")",
+          "(current / \"plugin.json\")"
+        ],
+        [
+          "def plugin_metadata() -> dict[str, Any]:\r\n    root = _find_plugin_root()\r\n    metadata: dict[str, Any] = {\r\n        \"name\": None,\r\n        \"version\": None,\r\n        \"repository\": None,\r\n        \"source_root\": str(root) if root else None,\r\n        \"git_commit\": None,\r\n    }\r\n    if root is None:\r\n        return metadata\r\n    plugin_json = root / \".codex-plugin\" / \"plugin.json\"\r\n    try:\r\n        payload = json.loads(plugin_json.read_text(encoding=\"utf-8\"))\r\n        metadata[\"name\"] = payload.get(\"name\")\r\n        metadata[\"version\"] = payload.get(\"version\")\r\n        metadata[\"repository\"] = payload.get(\"repository\")\r\n    except (OSError, json.JSONDecodeError):\r\n        pass\r\n    git_root = next(\r\n        (candidate for candidate in [root, *root.parents] if (candidate / \".git\").exists()), None\r\n    )\r\n    if git_root is not None:\r\n        revision = run_cmd([\"git\", \"rev-parse\", \"HEAD\"], git_root, timeout=15)\r\n        if revision.get(\"ok\") and revision.get(\"stdout_tail\"):\r\n            metadata[\"git_commit\"] = str(revision[\"stdout_tail\"]).splitlines()[0].strip()\r\n    return metadata\r\n\r\n\r\n",
+          "def plugin_metadata() -> dict[str, Any]:\n    root = _find_plugin_root()\n    if root is None:\n        raise ValueError(\"Elyra plugin.json not found; run the packaged runtime without moving its files\")\n    manifest = json.loads((root / \"plugin.json\").read_text(encoding=\"utf-8\"))\n    if manifest.get(\"id\") != \"elyra.ngs-analysis\" or not manifest.get(\"version\"):\n        raise ValueError(\"NGS package identity missing; reinstall the verified Elyra package\")\n    return {\"id\": manifest[\"id\"], \"name\": manifest[\"name\"], \"version\": manifest[\"version\"], \"package_digest\": manifest.get(\"integrity\", {}).get(\"digest\"), \"source_root\": str(root)}\n\n\n"
+        ]
+      ],
+      "sourceSha256": "3ac6dc9760b83e2e359fddc7ae681b41beaa0c31f941343282449010094c631d",
+      "sha256": "5a910164d3cee354f9c83b99c80d143e802a2a72c5f4230fd1dfdffb0780c6b4"
+    },
+    {
+      "source": "resources/source-01/content/scripts/ngs_visualization_utils.py",
+      "destination": "runtime/scripts/ngs_visualization_utils.py",
+      "replacements": [
+        [
+          "            f'<td><span class=\"status {html.escape(entry.get(\"status\", \"unknown\"))}\">{html.escape(entry.get(\"status\", \"unknown\"))}</span></td>'",
+          "            f'<td><span class=\"status {html.escape(entry.get(\"status\") or \"Evidence missing: artifact status; inspect the producing step\")}\">{html.escape(entry.get(\"status\") or \"Evidence missing: artifact status; inspect the producing step\")}</span></td>'"
+        ],
+        [
+          "in the Codex in-app browser",
+          "in a browser"
+        ]
+      ],
+      "sourceSha256": "05d74d57b511ae28576546e90724f741e2751bfd841b25cf6043ece66054f611",
+      "sha256": "3c8d7804d174030977a625f9b2ffa5b6c19d6cb71dd85ff39753b446fc862450"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_amplicon_microbiome.py",
+      "destination": "runtime/scripts/run_amplicon_microbiome.py",
+      "replacements": [],
+      "sourceSha256": "f1f283f0694d6932816fb65393d4e6323576d62af16c1aeb5e3625d659ec4e8b",
+      "sha256": "f1f283f0694d6932816fb65393d4e6323576d62af16c1aeb5e3625d659ec4e8b"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_atacseq_peaks_qc.py",
+      "destination": "runtime/scripts/run_atacseq_peaks_qc.py",
+      "replacements": [],
+      "sourceSha256": "08ac374d9a8c8226a2f0afafbb21bcf46347b2aac5951a3e1c6a4e0796ea3eb8",
+      "sha256": "08ac374d9a8c8226a2f0afafbb21bcf46347b2aac5951a3e1c6a4e0796ea3eb8"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_bcl_to_fastq.py",
+      "destination": "runtime/scripts/run_bcl_to_fastq.py",
+      "replacements": [
+        [
+          "        sample = row.get(\"SampleID\", \"unknown\")",
+          "        sample = row.get(\"SampleID\")\n        if not sample:\n            raise ValueError(\"Demux quality row lacks SampleID; inspect the original quality report before assigning sample metrics\")"
+        ]
+      ],
+      "sourceSha256": "1972ef6ea74a7cad61d1b5eed6b2fbe79275b9ee645a0349cedee1ca5f3943d2",
+      "sha256": "9aacb5c9c0871e89a17932c2af33285c540c826f927d7c5127e13e4948cbd4a3"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_bulk_rnaseq_counts_qc.py",
+      "destination": "runtime/scripts/run_bulk_rnaseq_counts_qc.py",
+      "replacements": [
+        [
+          "in the Codex browser",
+          "in a browser"
+        ],
+        [
+          "def salmon_libtype(layout: str, strandedness: str) -> tuple[str, str]:\n    normalized = strandedness.lower().strip()\n    if normalized in {\"auto\", \"unknown\"}:\n        return \"A\", \"infer_from_salmon\"\n    if layout == \"PE\":\n        return {\n            \"forward\": (\"ISF\", \"from_input\"),\n            \"reverse\": (\"ISR\", \"from_input\"),\n            \"unstranded\": (\"IU\", \"from_input\"),\n        }.get(normalized, (\"A\", \"infer_from_salmon\"))\n    return {\n        \"forward\": (\"SF\", \"from_input\"),\n        \"reverse\": (\"SR\", \"from_input\"),\n        \"unstranded\": (\"U\", \"from_input\"),\n    }.get(normalized, (\"A\", \"infer_from_salmon\"))\n",
+          "def salmon_libtype(layout: str, strandedness: str) -> tuple[str, str]:\n    normalized = strandedness.lower().strip()\n    if layout not in {\"PE\", \"SE\"}:\n        raise ValueError(\"Specify PE or SE from the supplied reads before selecting a Salmon library type\")\n    if normalized not in {\"forward\", \"reverse\", \"unstranded\", \"auto\"}:\n        raise ValueError(\"Strandedness is not specified: provide forward, reverse or unstranded from library preparation evidence, or explicitly choose auto for Salmon inference\")\n    if normalized == \"auto\":\n        return \"A\", \"explicit_salmon_inference\"\n    library_types = {\"PE\": {\"forward\": \"ISF\", \"reverse\": \"ISR\", \"unstranded\": \"IU\"},\n                     \"SE\": {\"forward\": \"SF\", \"reverse\": \"SR\", \"unstranded\": \"U\"}}\n    return library_types[layout][normalized], \"from_input\"\n"
+        ],
+        [
+          "            if strandedness not in {\"forward\", \"reverse\", \"unstranded\", \"auto\", \"unknown\"}:\n                errors.append(f\"row {row_index}: unsupported strandedness value: {strandedness}\")",
+          "            if strandedness not in {\"forward\", \"reverse\", \"unstranded\", \"auto\"}:\n                errors.append(f\"row {row_index}: strandedness lacks library evidence; specify forward, reverse or unstranded, or explicitly choose auto for Salmon inference\")\n                continue"
+        ]
+      ],
+      "sourceSha256": "f580e17035842c15d7d42cadc772b41825d3de14e2ed940bfda73e5648442af5",
+      "sha256": "0c2f93da9b94eca896647c20073ef06fd50fb24b42d535d4f8791e95da699437"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_bulk_rnaseq_de.py",
+      "destination": "runtime/scripts/run_bulk_rnaseq_de.py",
+      "replacements": [],
+      "sourceSha256": "e292397049eccbdd99effcbe312ecafb7a43fc44e205f692ace32711521bf9fc",
+      "sha256": "e292397049eccbdd99effcbe312ecafb7a43fc44e205f692ace32711521bf9fc"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_chip_cutrun_peaks_qc.py",
+      "destination": "runtime/scripts/run_chip_cutrun_peaks_qc.py",
+      "replacements": [],
+      "sourceSha256": "90dd959129c6b8afb3e72b61a42b1a656e2bfe0b43df285fcb5477eff56f79d7",
+      "sha256": "90dd959129c6b8afb3e72b61a42b1a656e2bfe0b43df285fcb5477eff56f79d7"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_dna_germline_variants.py",
+      "destination": "runtime/scripts/run_dna_germline_variants.py",
+      "replacements": [],
+      "sourceSha256": "0a9d33e2add8fbdf111bf37446a503c4149e02ba96da796cf6cbc8ba65f6a617",
+      "sha256": "0a9d33e2add8fbdf111bf37446a503c4149e02ba96da796cf6cbc8ba65f6a617"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_dna_somatic_variants.py",
+      "destination": "runtime/scripts/run_dna_somatic_variants.py",
+      "replacements": [],
+      "sourceSha256": "7411f3752024893d5b1f543d91a2e1790e85a3a34e5b5a331172aa4d158be289",
+      "sha256": "7411f3752024893d5b1f543d91a2e1790e85a3a34e5b5a331172aa4d158be289"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_dna_umi_panel_variants.py",
+      "destination": "runtime/scripts/run_dna_umi_panel_variants.py",
+      "replacements": [
+        [
+          "raw_umi_tag_status = \"unknown\"",
+          "raw_umi_tag_status = \"not_observed\""
+        ],
+        [
+          "mate_tag_status = \"unknown\"",
+          "mate_tag_status = \"not_observed\""
+        ],
+        [
+          "fgbio_readiness = \"unknown\"",
+          "fgbio_readiness = \"not_verified\""
+        ],
+        [
+          "\"mate_tag_status\": mate_tag_status,",
+          "\"mate_tag_status\": mate_tag_status,\n                \"tag_evidence\": {\"inspectable\": tag_status[\"inspectable\"], \"next\": \"Inspect RX/MQ tags in the supplied raw alignment before relying on fgbio readiness; no raw alignment means tag evidence is not applicable.\"},"
+        ],
+        [
+          "    parser.add_argument(\"--umi-mode\", default=\"single\", choices=[\"single\", \"duplex\", \"unknown\"])",
+          "    parser.add_argument(\"--umi-mode\", required=True, choices=[\"single\", \"duplex\"], help=\"Explicit library chemistry; duplex requires an existing consensus BAM because this runner does not generate duplex consensus\")"
+        ],
+        [
+          "        if consensus_bam and not consensus_bam.exists():\n            warnings.append(f\"row {row_index}: consensus BAM does not exist yet: {consensus_bam}\")",
+          "        if consensus_bam and not consensus_bam.exists():\n            errors.append(f\"row {row_index}: supplied consensus BAM does not exist: {consensus_bam}\")\n        if args.umi_mode == \"duplex\" and not consensus_bam:\n            errors.append(f\"row {row_index}: duplex consensus generation is not implemented by this runner; provide a verified duplex consensus BAM from a separately validated pipeline\")"
+        ],
+        [
+          "            sample[\"consensus_state\"] == \"needs_generation\"\n            and bool(raw)",
+          "            sample[\"consensus_state\"] == \"needs_generation\"\n            and args.umi_mode == \"single\"\n            and bool(raw)"
+        ]
+      ],
+      "sourceSha256": "956969231fbbf165b5b07ebfafb49bdd8fe4d973affa9b93d2565c28f6ac21fc",
+      "sha256": "d726e24531d61a67cc3c9d3250c24c6c561f8b1378b64ddb95c7dd6a33ca1e87"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_dna_variant_calling.py",
+      "destination": "runtime/scripts/run_dna_variant_calling.py",
+      "replacements": [],
+      "sourceSha256": "93d89c5fff48aee62cbfc9c7f1147cea182431958811054e352bf978e36b3817",
+      "sha256": "93d89c5fff48aee62cbfc9c7f1147cea182431958811054e352bf978e36b3817"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_fastq_assay_package.py",
+      "destination": "runtime/scripts/run_fastq_assay_package.py",
+      "replacements": [
+        [
+          "plugin for Codex review and handoff.",
+          "plugin for Elyra review and handoff."
+        ],
+        [
+          "interpretation.get('verdict', 'unknown')",
+          "interpretation.get('verdict') or 'Evidence missing: verdict; inspect the interpretation artifact'"
+        ],
+        [
+          "interpretation.get('analysis_readiness', 'unknown')",
+          "interpretation.get('analysis_readiness') or 'Evidence missing: analysis_readiness; inspect the interpretation artifact'"
+        ]
+      ],
+      "sourceSha256": "2fa0b59d3e64cbb0af5b362ad1ccdb63a5873834c590be7708fb5fcba469fc84",
+      "sha256": "01a5341e11c80e0af68d4a142034f5f83ba05c658fc7a98234af2243ef18cb80"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_fastq_qc.py",
+      "destination": "runtime/scripts/run_fastq_qc.py",
+      "replacements": [
+        [
+          "            name = module.get(\"module\", \"unknown\")\r\n            status = module.get(\"status\", \"unknown\")",
+          "            name = module.get(\"module\")\r\n            status = module.get(\"status\")\r\n            if not name or status not in {\"PASS\", \"WARN\", \"FAIL\"}:\r\n                raise ValueError(\"FastQC module name/status missing or unsupported; inspect the original FastQC report\")"
+        ],
+        [
+          "min(pair_check_reads, READ_NAME_PREVIEW_LIMIT)",
+          "pair_check_reads"
+        ],
+        [
+          "        stats[\"record_count\"] = None if quick else record_count",
+          "        if record_count == 0:\n            stats[\"errors\"].append(\"FASTQ contains no complete records; provide a nonempty input\")\n        stats[\"record_count\"] = None if quick else record_count"
+        ]
+      ],
+      "sourceSha256": "53ea95a9cc97e8fc900b8d3379eb0204bb002eb1ac02141530f27d87f446b0c1",
+      "sha256": "6318833de6737299a1839d04394263dceb558c2649f119d646170bdf7e25b23f"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_nfcore_pipeline.py",
+      "destination": "runtime/scripts/run_nfcore_pipeline.py",
+      "replacements": [],
+      "sourceSha256": "59873e94808ff369fc8b40e4171122b5a8ef388a54e2fd5eecd78b295476146e",
+      "sha256": "59873e94808ff369fc8b40e4171122b5a8ef388a54e2fd5eecd78b295476146e"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_scrnaseq_fastq_to_count.py",
+      "destination": "runtime/scripts/run_scrnaseq_fastq_to_count.py",
+      "replacements": [],
+      "sourceSha256": "73bb81f81976c089c10dcc3a1e7e69293d998feb51afa134aabed7437a4fc987",
+      "sha256": "73bb81f81976c089c10dcc3a1e7e69293d998feb51afa134aabed7437a4fc987"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_scrnaseq_post_count_qc.py",
+      "destination": "runtime/scripts/run_scrnaseq_post_count_qc.py",
+      "replacements": [
+        [
+          "result[\"coarse_label\"] = \"unknown\"",
+          "result[\"coarse_label\"] = \"unassigned\"\n        result[\"label_evidence\"] = \"No matched marker score columns; provide a tissue-matched reference before interpreting cell identity\""
+        ],
+        [
+          "dataset_metadata.get('dataset_id', 'unknown')",
+          "dataset_metadata.get('dataset_id') or 'Metadata missing: dataset_id; supply the study accession'"
+        ],
+        [
+          "dataset_metadata.get('organism', 'unknown')",
+          "dataset_metadata.get('organism') or 'Metadata missing: organism; supply the species'"
+        ],
+        [
+          "dataset_metadata.get('assay', 'unknown')",
+          "dataset_metadata.get('assay') or 'Metadata missing: assay; supply the library protocol'"
+        ],
+        [
+          ".fillna(\"unknown\")",
+          ".fillna(\"not_evaluated_missing_scDblFinder_result\")"
+        ],
+        [
+          ".ne(\"unknown\")",
+          ".ne(\"not_evaluated_missing_scDblFinder_result\")"
+        ],
+        [
+          "plot_view.obs[\"coarse_label\"] = \"unknown\"",
+          "plot_view.obs[\"coarse_label\"] = \"unassigned\"\n        plot_view.obs[\"label_evidence\"] = \"No coarse label available; inspect annotation output and a tissue-matched reference\""
+        ]
+      ],
+      "sourceSha256": "947e5f2a5e8b7cf8a8bbf7b426114a2d1805ea019f8cdca6eb6ab7687668c8c8",
+      "sha256": "22dc9b0ac687efd2607284d97281d0dd6f326b7730d173aa1ab7e1f1b4c47467"
+    },
+    {
+      "source": "resources/source-01/content/scripts/run_shotgun_metagenomics.py",
+      "destination": "runtime/scripts/run_shotgun_metagenomics.py",
+      "replacements": [],
+      "sourceSha256": "d9cc8089d175a8b768b187cabefc401028ad25ede5d493e0518e31c1f2012c28",
+      "sha256": "d9cc8089d175a8b768b187cabefc401028ad25ede5d493e0518e31c1f2012c28"
+    },
+    {
+      "source": "resources/source-01/content/references/database-registry.json",
+      "destination": "runtime/references/database-registry.json",
+      "replacements": [],
+      "sourceSha256": "8ef2b5415a4691db0e9f760f7fcc1c3bebcc20ba057026c74680fac1b67a1dc7",
+      "sha256": "8ef2b5415a4691db0e9f760f7fcc1c3bebcc20ba057026c74680fac1b67a1dc7"
+    },
+    {
+      "source": "resources/source-01/content/references/intake-schema.json",
+      "destination": "runtime/references/intake-schema.json",
+      "replacements": [],
+      "sourceSha256": "c2aa6620546b461259df2fa91a7033c8183b445552d8dc92b720c2d95c4182a0",
+      "sha256": "c2aa6620546b461259df2fa91a7033c8183b445552d8dc92b720c2d95c4182a0"
+    },
+    {
+      "source": "resources/source-01/content/references/pipeline-registry.json",
+      "destination": "runtime/references/pipeline-registry.json",
+      "replacements": [],
+      "sourceSha256": "8de5c1bb19bce2632379a58facb8b55b9addb3b3c3ee20531f6441308f575dd2",
+      "sha256": "8de5c1bb19bce2632379a58facb8b55b9addb3b3c3ee20531f6441308f575dd2"
+    },
+    {
+      "source": "resources/source-01/content/references/reference-registry.json",
+      "destination": "runtime/references/reference-registry.json",
+      "replacements": [],
+      "sourceSha256": "39294c685a86f9bd066345911f239985be131b6e070f75893ed25142f18bad58",
+      "sha256": "39294c685a86f9bd066345911f239985be131b6e070f75893ed25142f18bad58"
+    },
+    {
+      "source": "resources/source-01/content/references/run-envelope-schema.json",
+      "destination": "runtime/references/run-envelope-schema.json",
+      "replacements": [],
+      "sourceSha256": "09b88dfbc12707f49a0169a1f73af12f2ea8edc8a925452d205e1358af2a7aa5",
+      "sha256": "09b88dfbc12707f49a0169a1f73af12f2ea8edc8a925452d205e1358af2a7aa5"
+    },
+    {
+      "source": "resources/source-01/content/references/runtime-install-guidance.md",
+      "destination": "runtime/references/runtime-install-guidance.md",
+      "replacements": [],
+      "sourceSha256": "4465b98f765a751f1b3610d981b55dd4005e276d8587d8b4f4ab3d281e8b0994",
+      "sha256": "4465b98f765a751f1b3610d981b55dd4005e276d8587d8b4f4ab3d281e8b0994"
+    }
+  ]
+}

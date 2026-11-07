@@ -1,0 +1,51 @@
+import { randomBytes } from 'node:crypto';
+import http from 'node:http';
+import { readFileSync, lstatSync } from 'node:fs';
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+const html=`<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>CoTree Fakechat</title><style>body{font:16px system-ui;max-width:760px;margin:30px auto;padding:16px;background:#f5f7fa;color:#18202b}li{background:white;margin:12px 0;padding:16px;list-style:none;white-space:pre-wrap;overflow-wrap:anywhere;border-radius:12px}ul{padding:0}textarea{box-sizing:border-box;width:100%;height:90px;padding:12px}button{padding:10px 18px;margin:8px}#status{color:#536073}h1{font-size:28px}</style><h1>CoTree 本地消息测试</h1><p>消息仅在当前进程内保存。CoTree 通过显式 poll / reply / edit 读取和回应；此页不会自动启动模型。</p><p id="status"></p><ul id="messages"></ul><form><textarea aria-label="消息" maxlength="10000" required></textarea><input type="file" aria-label="附件"><button>发送到测试收件箱</button></form><script>
+const token=location.hash.slice(1);history.replaceState(null,'',location.pathname);const status=document.querySelector('#status');
+async function api(route,body){const response=await fetch(route,{method:body?'POST':'GET',headers:{Authorization:'Bearer '+token,...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});if(!response.ok)throw new Error('本地接口 '+response.status);return response.json();}
+async function refresh(){try{const data=await api('/messages');const list=document.querySelector('#messages');list.replaceChildren();for(const item of data.messages){const li=document.createElement('li');const label=document.createElement('strong');label.textContent=item.role+' · '+item.id;li.append(label,document.createElement('br'),document.createTextNode(item.text));for(const attachment of item.attachments??[]){const button=document.createElement('button');button.textContent=attachment.name;button.onclick=async()=>{try{const r=await fetch('/attachments/'+attachment.id,{headers:{Authorization:'Bearer '+token}});if(!r.ok)throw new Error('附件读取失败');const url=URL.createObjectURL(await r.blob());const a=document.createElement('a');a.href=url;a.download=attachment.name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}catch(e){status.textContent=e.message;}};li.append(button);}list.append(li);}status.textContent='本地服务已连接 · '+data.messages.length+' 条消息';}catch(e){status.textContent=e.message;}}
+document.querySelector('form').onsubmit=async e=>{e.preventDefault();const area=document.querySelector('textarea'),file=document.querySelector('input').files[0];try{const attachments=[];if(file){if(file.size>4194304)throw new Error('附件上限4 MiB');const b=new Uint8Array(await file.arrayBuffer());let s='';for(let i=0;i<b.length;i+=8192)s+=String.fromCharCode(...b.subarray(i,i+8192));const result=await api('/upload',{name:file.name,data:btoa(s)});attachments.push(result.id);}await api('/messages',{text:area.value,attachments});area.value='';document.querySelector('input').value='';await refresh();}catch(error){status.textContent=error.message;}};
+refresh();setInterval(refresh,2000);
+</script></html>`;
+function text(value,label,max=10000){if(typeof value!=='string'||!value||value.length>max)throw new Error(`${label} required within ${max} characters`);return value;}
+export async function startFakechat({port=0}={}) {
+  if(!Number.isInteger(port)||port<0||port>65535)throw new Error('Invalid loopback port');
+  const token=randomBytes(24).toString('hex'),messages=[],attachments=new Map();let sequence=0,attachmentBytes=0,address;
+  function append(role,input){if(messages.length>=1000)throw new Error('Session message limit reached; export required data and start a new local session');const body=text(input.text,'text');const ids=input.attachments??[];if(!Array.isArray(ids)||ids.length>4||ids.some(id=>!attachments.has(id)))throw new Error('Use up to four uploaded attachment IDs');if(input.reply_to&&!messages.some(m=>m.id===input.reply_to))throw new Error('reply_to message is absent');const item={id:String(++sequence),role,text:body,...(input.reply_to?{reply_to:input.reply_to}:{}),attachments:ids.map(id=>({id,name:attachments.get(id).name,bytes:attachments.get(id).data.length})),createdAt:new Date().toISOString()};messages.push(item);return item;}
+  const server=http.createServer(async(req,res)=>{
+    res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'");
+    function send(status,data){res.writeHead(status,{'Content-Type':'application/json; charset=utf-8'});res.end(JSON.stringify(data));}
+    if(req.headers.host!==`127.0.0.1:${address?.port}`){send(403,{error:'Host rejected'});return;}
+    if(req.method==='GET'&&req.url==='/'){res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'});res.end(html);return;}
+    if(req.headers.authorization!==`Bearer ${token}`||req.headers.origin&&req.headers.origin!==`http://127.0.0.1:${address.port}`){send(403,{error:'Local session authorization required'});return;}
+    try{
+      const url=new URL(req.url,`http://127.0.0.1:${address.port}`);
+      if(req.method==='GET'&&url.pathname==='/messages'){const after=Number(url.searchParams.get('after')??0);if(!Number.isSafeInteger(after)||after<0)throw new Error('Invalid message cursor');send(200,{messages:messages.filter(m=>Number(m.id)>after),lastId:String(sequence)});return;}
+      if(req.method==='GET'&&url.pathname.startsWith('/attachments/')){const file=attachments.get(url.pathname.slice('/attachments/'.length));if(!file){send(404,{error:'Attachment absent'});return;}res.writeHead(200,{'Content-Type':'application/octet-stream','Content-Length':String(file.data.length),'Content-Disposition':`attachment; filename*=UTF-8''${encodeURIComponent(file.name)}`});res.end(file.data);return;}
+      if(req.method!=='POST'){send(404,{error:'Route absent'});return;}
+      if(req.headers['content-type']!=='application/json'){send(415,{error:'JSON required'});return;}
+      const chunks=[];let size=0;for await(const chunk of req){size+=chunk.length;if(size>5700000){send(413,{error:'Body limit exceeded'});req.destroy();return;}chunks.push(chunk);}const input=JSON.parse(Buffer.concat(chunks).toString('utf8'));
+      if(url.pathname==='/messages'||url.pathname==='/reply'){send(200,append(url.pathname==='/reply'?'cotree':'user',input));return;}
+      if(url.pathname==='/edit'){const message=messages.find(m=>m.id===input.id&&m.role==='cotree');if(!message)throw new Error('Only an observed CoTree reply can be edited');message.text=text(input.text,'text');message.editedAt=new Date().toISOString();send(200,message);return;}
+      if(url.pathname==='/upload'){const name=text(input.name,'name',160);if(/[\\/\u0000-\u001f]/.test(name)||name==='.'||name==='..')throw new Error('Use a plain filename');const data=text(input.data,'base64 data',5600000);if(!/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(data))throw new Error('Invalid base64');const bytes=Buffer.from(data,'base64');if(bytes.length>4194304||attachmentBytes+bytes.length>33554432||attachments.size>=20)throw new Error('Attachment memory limit reached');const id=randomBytes(12).toString('hex');attachments.set(id,{name,data:bytes});attachmentBytes+=bytes.length;send(200,{id,name,bytes:bytes.length});return;}
+      send(404,{error:'Route absent'});
+    }catch(error){if(!res.headersSent)send(400,{error:error.message});else res.end();}
+  });
+  server.requestTimeout=15000;server.headersTimeout=10000;
+  await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(port,'127.0.0.1',resolve);});address=server.address();
+  return {url:`http://127.0.0.1:${address.port}`,token,close:()=>new Promise((resolve,reject)=>{server.close(error=>error?reject(error):resolve());server.closeAllConnections();})};
+}
+export async function callFakechat(input,{env=process.env,signal}={}) {
+  const url=new URL(env.COTREE_FAKECHAT_URL??'http://invalid');if(url.protocol!=='http:'||url.hostname!=='127.0.0.1'||!url.port||url.pathname!=='/'||url.search||url.hash||url.username||url.password)throw new Error('Set COTREE_FAKECHAT_URL to the actual loopback server origin');
+  const token=text(env.COTREE_FAKECHAT_TOKEN,'local session token',100);let route,body;
+  if(input.action==='poll')route='/messages'+(input.after?'?after='+encodeURIComponent(input.after):'');
+  else if(input.action==='reply'){route='/reply';body={text:input.text,reply_to:input.reply_to,attachments:input.attachments};}
+  else if(input.action==='edit'){route='/edit';body={id:input.id,text:input.text};}
+  else if(input.action==='upload'){route='/upload';const file=path.resolve(input.file),s=lstatSync(file);if(!s.isFile()||s.isSymbolicLink()||s.size>4194304)throw new Error('Upload a regular file of at most 4 MiB');body={name:path.basename(file),data:readFileSync(file).toString('base64')};}
+  else throw new Error('Use poll, reply, edit or upload');
+  const response=await fetch(new URL(route,url),{method:body?'POST':'GET',headers:{Authorization:`Bearer ${token}`,...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{}),redirect:'error',signal:signal?AbortSignal.any([signal,AbortSignal.timeout(10000)]):AbortSignal.timeout(10000)});if(!response.ok)throw new Error(`Fakechat rejected request: HTTP ${response.status}`);return response.json();
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){try{const [mode,arg]=process.argv.slice(2);if(mode==='serve'){const app=await startFakechat({port:arg?Number(arg):0});console.log(JSON.stringify({url:app.url+'/#'+app.token,clientEnvironment:{COTREE_FAKECHAT_URL:app.url,COTREE_FAKECHAT_TOKEN:app.token},lifetime:'foreground process; no model calls'}));process.once('SIGINT',()=>void app.close());process.once('SIGTERM',()=>void app.close());}else if(mode==='call'&&arg&&lstatSync(arg).size<=131072)console.log(JSON.stringify(await callFakechat(JSON.parse(readFileSync(arg,'utf8')))));else throw new Error('Usage: node fakechat.mjs serve [port] OR call request.json');}catch(error){console.error(error.message);process.exitCode=1;}}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.outlook-calendar",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "outlook-calendar",
+    "repository": "plugins",
+    "path": "plugins/outlook-calendar",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "6809454bee8a7a91dad1a7dd38622b45a366ee0e75f4ce5f16929aad479690b1",
+    "upstreamVersion": "0.1.8"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "原包只提供 ChatGPT / Codex 专属连接器；需独立 Microsoft 服务适配。"
+  ],
+  "components": [
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 1,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "f53d55d4878672491445a105f44eab08db97d9f36d94e1bcc41c9dce83ffd327"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "9ff0411ff6fbaa680c859e04a96a91da79a2a72d3a4474b4f44a9e7bf7eba4be"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "5335d7747d4a58b3a99ece47d142a127fbc4a5acec2e335fab6d17b42f4ec16d"
+    }
+  ]
+}

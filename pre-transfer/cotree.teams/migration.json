@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.teams",
+  "version": "0.2.0",
+  "category": "通信与日程",
+  "priority": 0,
+  "batch": 15,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "teams",
+      "repository": "plugins",
+      "path": "plugins/teams",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "90dfd02fce468f33ba5922379963afac0d3ea9a91e2c2ecc017561f57041e761",
+      "upstreamVersion": "0.1.8"
+    }
+  ],
+  "changes": [
+    "把原宿主连接器声明改为七个 CoTree 原生工作流与独立 Graph REST 脚本。",
+    "14 个固定动作，单页读取、明确写入意图、消息回查及频道文件定位；保留原图标与来源。"
+  ],
+  "limitations": [
+    "原生入口、协议或 REST 适配已实现；独立账户授权、真实对象读写、过期恢复和业务结果仍待验收。",
+    "仅 Microsoft Graph 全球云、工作或学校账户的 delegated OAuth；没有自动登录 / 刷新。发送仅纯文本，HTML、mentions、附件、消息编辑 / 删除未实现。",
+    "会议音视频、录音和转录读取未实现；跟进基于用户提供笔记或已授权消息。频道文件内容可通过 SharePoint 插件或已有授权文件工具读取。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "source connector-only declaration": "补齐独立 Microsoft Graph REST：14 个固定动作，聊天 / 频道 / 回复读取及纯文本发送。",
+    "chat summaries / actions / meeting follow-ups": "七个原生入口：接入、发现、读取、摘要、发送、跟进与频道文件；不会宣称已有会议录音或转录 API。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.example-plugin",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "example-plugin",
+    "repository": "claude-plugins-official",
+    "path": "plugins/example-plugin",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "1975aa3766be72354f6782e53e77bde6ed4561670ff91874b89c3ac27b25fa45"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "示例中 mcp.example.com 不是真实业务服务。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/example-command/SKILL.md",
+      "state": "deferred",
+      "reason": "示例中 mcp.example.com 不是真实业务服务。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/example-skill/SKILL.md",
+      "state": "deferred",
+      "reason": "示例中 mcp.example.com 不是真实业务服务。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/example-command.md",
+      "state": "deferred",
+      "reason": "示例中 mcp.example.com 不是真实业务服务。"
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#example-server",
+      "state": "deferred",
+      "reason": "示例中 mcp.example.com 不是真实业务服务。"
+    }
+  ],
+  "copiedFiles": 5,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "23c98b89f149743e1fd31de9a78d4ee75b7ac1f8cd064fe42ea9fea9b59a3cbe"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "efde29bc3e0213c95fcae5ece2aff59539d2cca93ce32937b9a5ec9f37f5f7ca"
+    },
+    {
+      "path": "commands/example-command.md",
+      "sha256": "51f874015fab3692584247f98cf03691189f444be2349d0d3eb7b83eb0cedb04"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "00521e9408d8b7a329a1b8fdcf64737daaa6babd1d6793400a917bd6d1e4bc89"
+    },
+    {
+      "path": "skills/example-command/SKILL.md",
+      "sha256": "001d1844ff01c4f5ed5cba9a2d8153ac8230bd74395cc16c94ad338f2e3cbfcf"
+    },
+    {
+      "path": "skills/example-skill/SKILL.md",
+      "sha256": "9c58f218ecba372e536d5cb2a98268597749109b5c17a1632064cce9abdbf99b"
+    }
+  ]
+}

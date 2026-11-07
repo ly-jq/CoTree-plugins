@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.git-workflow",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 1,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "commit-commands",
+      "repository": "claude-plugins-official",
+      "path": "plugins/commit-commands",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "3e21db92f91923956b9431042a0ce0406d1118c7c06107fe0512b2603ead529e"
+    }
+  ],
+  "changes": [
+    "三个命令改为原生显式 Skill；Git 上下文由跨平台 Node 只读脚本收集。",
+    "清理使用分支 / worktree 精确核查，不保留 grep | xargs 或强制删除默认行为。"
+  ],
+  "limitations": [
+    "真实推送和 PR 创建需要目标仓库远程与授权账户；本轮不会向用户远程仓库发布测试内容。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "commit": "commit：差异检查、选定文件暂存、验证、提交回读。",
+    "commit-push-pr": "pull-request：检查远程与分支、推送、PR 创建及回读；需要独立授权和账户。",
+    "clean_gone": "cleanup：预览失效 upstream / 合并状态 / worktree，授权后用 branch -d 精确清理。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

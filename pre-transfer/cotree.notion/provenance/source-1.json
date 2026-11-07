@@ -1,0 +1,441 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.notion",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "notion",
+    "repository": "plugins",
+    "path": "plugins/notion",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "c3f0902613ddedd1e16bf1b7e7230847711a62d010011e1a12af92ccd309d1bb",
+    "upstreamVersion": "0.1.7"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_NOTION_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/notion-knowledge-capture/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/notion-knowledge-capture/SKILL.md",
+      "sourceMetadata": {
+        "name": "notion-knowledge-capture",
+        "description": "Capture conversations and decisions into structured Notion pages; use when turning chats/notes into wiki entries, how-tos, decisions, or FAQs with proper linking.",
+        "metadata": {
+          "short-description": "Capture conversations into structured Notion pages"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/notion-meeting-intelligence/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/notion-meeting-intelligence/SKILL.md",
+      "sourceMetadata": {
+        "name": "notion-meeting-intelligence",
+        "description": "Prepare meeting materials with Notion context and supplemental research; use when gathering context, drafting agendas/pre-reads, and tailoring materials to attendees.",
+        "metadata": {
+          "short-description": "Prep meetings with Notion context and tailored agendas"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/notion-research-documentation/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/notion-research-documentation/SKILL.md",
+      "sourceMetadata": {
+        "name": "notion-research-documentation",
+        "description": "Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.",
+        "metadata": {
+          "short-description": "Research Notion content and produce briefs/reports"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/notion-spec-to-implementation/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/notion-spec-to-implementation/SKILL.md",
+      "sourceMetadata": {
+        "name": "notion-spec-to-implementation",
+        "description": "Turn Notion specs into implementation plans, tasks, and progress tracking; use when implementing PRDs/feature specs and creating Notion plans + tasks from them.",
+        "metadata": {
+          "short-description": "Turn Notion specs into implementation plans, tasks, and progress tracking"
+        }
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#notion",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/notion"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 85,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "665ebaf4bd4c2f173a920f06ee30bbd5cc323b1f5f8dc34c347404134f703b2d"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "43f8882672a8ba0d0bc98337309f9c4a472e14347d21725fd564165c1f87efb1"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "9b492802d99ebedbe3d8411838b562b3954acc3a905ea98ef07cd8a9f9fbdf84"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "1bf26bd6d606f84102f6934fe6ebf98448be013e9a350b2487bbc413d371cbe2"
+    },
+    {
+      "path": "assets/notion-dark.png",
+      "sha256": "014ab1e20210938aea95d5b118eba970d7f4955068c9acc47223eb51ed79f74c"
+    },
+    {
+      "path": "assets/notion-small.svg",
+      "sha256": "724a69c77f638ad4dac8f073af5e3671ff465b06da60e5c042c61bbf5df840a7"
+    },
+    {
+      "path": "assets/notion.png",
+      "sha256": "e20b9668553aeb46b55a366d0a8eddd9051b5ac55207ab067ed347029a53434e"
+    },
+    {
+      "path": "plugin.lock.json",
+      "sha256": "747a6a49853ea8c5d730f2856cffdb2b7d90eceae076a62bef822cbfd364138c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0b12972992eb0e6fcbb319f8ca79fdd8385fca5a5881227e8a5c9731aa0c8d34"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/agents/openai.yaml",
+      "sha256": "64af696295e9f5e80c237079198d6c7d026a2f78fa9098b8a81444bd0433b06f"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/assets/notion-small.svg",
+      "sha256": "05e71ce9e88cc40f0b7c8418f7ccf8d3e6d351c2b8d78a74c9a0642ba2969ab9"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/assets/notion.png",
+      "sha256": "5eef1e62d96a3d09bc9d18e4140486c22799145b017033bd0924c2c49d741cd4"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/evaluations/conversation-to-wiki.json",
+      "sha256": "51440efeb14208d73c92483474a08cf76089fe3dff108108dfe36951bdb94d5c"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/evaluations/decision-record.json",
+      "sha256": "a8ca5eb08d99ccb5702041c4c5aa0cd73bacf1d5a6409310158e20462665f3b8"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/evaluations/README.md",
+      "sha256": "d5d0e832ee0f5b16a9858a05ad7f6d2a5ce7b51913edb2c94cd45711f8644cd6"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/examples/conversation-to-faq.md",
+      "sha256": "4ac612a6f60fa92ace29a9dd7fce0a20c945d356183fba50d5b948072258a730"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/examples/decision-capture.md",
+      "sha256": "7ea8a53b5c60173901831771f738512b4cf851f246ab46542f824b26a79a5a45"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/examples/how-to-guide.md",
+      "sha256": "c66c6b575d0f9bd20dbc545eee3124b9d08a68a43bf9dfd382f587ff73ffd8f9"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/LICENSE.txt",
+      "sha256": "bfb72d6e9280fef2aed5228cb6da0286444a5fb837e1c919d407e8e698b2df91"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/reference/database-best-practices.md",
+      "sha256": "00376299e49e0e5aadae7d8e13ec7f156928f6f10c44c7971e33a02b1188ecfb"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/reference/decision-log-database.md",
+      "sha256": "51f205f1c302a6097cb66c994d3508ec6ca50d99830c7f01b60acbc71f61d5eb"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/reference/documentation-database.md",
+      "sha256": "b28a081481a75f82e5aca4baa24dad98ad194169e93eb0c7e7b4dc43fc3b88d0"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/reference/faq-database.md",
+      "sha256": "dc47225f3b9d5754377c1437381dd9a942db8a2038ec3fd551afbe7dfb17bf08"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/reference/how-to-guide-database.md",
+      "sha256": "f404609e06e54c38020db37bbbe0f219190973124bee1884116261de9a03081e"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/reference/learning-database.md",
+      "sha256": "020b2371950a92c5321552592331d6117e65679fea36498f2f8039f9d10ae838"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/reference/team-wiki-database.md",
+      "sha256": "f3ab0b5aa734862650adda9a78acbe89338e822640ba7a8ffb681490b2c04d4d"
+    },
+    {
+      "path": "skills/notion-knowledge-capture/SKILL.md",
+      "sha256": "b1fe0f233c5ed71e78a21bd32a2bb673bb17883f6275e21beacc35b715af7737"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/agents/openai.yaml",
+      "sha256": "9eade355066c8afc363b335ec34fe6bc9150e0d1f874dd538d3b753286c599ba"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/assets/notion-small.svg",
+      "sha256": "05e71ce9e88cc40f0b7c8418f7ccf8d3e6d351c2b8d78a74c9a0642ba2969ab9"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/assets/notion.png",
+      "sha256": "5eef1e62d96a3d09bc9d18e4140486c22799145b017033bd0924c2c49d741cd4"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/evaluations/decision-meeting-prep.json",
+      "sha256": "5eedffa48a6b028382fb89f02610c8aeb5f30ba2cd1befa9e7aa044c8df5a20c"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/evaluations/README.md",
+      "sha256": "bc5bf634fb86230912191e50fb7b835f7737872a564e152386b1ef122d1aa25d"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/evaluations/status-meeting-prep.json",
+      "sha256": "966f5dd284aef25367b88b6d04fc556901586309bcea318d7bb444742211134b"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/examples/customer-meeting.md",
+      "sha256": "36b50b70020d58ff279fd7774de8b2bdfc3d0e8fc4a41cb7f11e8a02eff93a22"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/examples/executive-review.md",
+      "sha256": "58428b5122de4b4948cb3a2cd77c43c78e904c41103535b3ac95d1aec3a8f2ea"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/examples/project-decision.md",
+      "sha256": "08107a73a49571c0e9c4c59e5ae09f5fa791c34ceb81813b4ebf827e0a76bd55"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/examples/sprint-planning.md",
+      "sha256": "42afe8cef817fd152aaceb0270c8e8702b4ebe6a8fc80c67c470e7f11924049a"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/LICENSE.txt",
+      "sha256": "bfb72d6e9280fef2aed5228cb6da0286444a5fb837e1c919d407e8e698b2df91"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/reference/brainstorming-template.md",
+      "sha256": "98edb84aaec25e95aa1709ee8388fcd8146a50dc18d6abf9f8da8e59e380db0d"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/reference/decision-meeting-template.md",
+      "sha256": "73d771afa45cc221535e04f770bee7e7461c976539c3dcbe78306ebed12b1fea"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/reference/one-on-one-template.md",
+      "sha256": "dd5bd062e0876a23a3c5540943a21dc54de2eefe92c7e12a0dec9a53368236c2"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/reference/retrospective-template.md",
+      "sha256": "5c6fc5e6775b36f5bc45cfc04926b35dfa4fe28945be3487f6ad98e56dec1626"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/reference/sprint-planning-template.md",
+      "sha256": "476904a53d7bb4fa974326fbf7385505a18d88cacb622e8c437e549dbdb60a00"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/reference/status-update-template.md",
+      "sha256": "bab1811749eeee68fe25ebd347fff69d08628048082a7780cabedc688362d466"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/reference/template-selection-guide.md",
+      "sha256": "8126cdaa0f8cc22da92ab016109b10a2495bc4514a313d05d3707e32839aabbb"
+    },
+    {
+      "path": "skills/notion-meeting-intelligence/SKILL.md",
+      "sha256": "b31e0a4e5c3fd223d2e945f0a6c645d5292e0127e01d057e95aa43a5a461cba2"
+    },
+    {
+      "path": "skills/notion-research-documentation/agents/openai.yaml",
+      "sha256": "a4f5232394b52684808d49738a78c2185d72bfff07003d7305cf6655830b3a11"
+    },
+    {
+      "path": "skills/notion-research-documentation/assets/notion-small.svg",
+      "sha256": "05e71ce9e88cc40f0b7c8418f7ccf8d3e6d351c2b8d78a74c9a0642ba2969ab9"
+    },
+    {
+      "path": "skills/notion-research-documentation/assets/notion.png",
+      "sha256": "5eef1e62d96a3d09bc9d18e4140486c22799145b017033bd0924c2c49d741cd4"
+    },
+    {
+      "path": "skills/notion-research-documentation/evaluations/basic-research.json",
+      "sha256": "3d96065bd05fd8b69a8ca49f796654a97a77522f2e9ecffb343aadbaf594c5d1"
+    },
+    {
+      "path": "skills/notion-research-documentation/evaluations/README.md",
+      "sha256": "1a3ec2c2471d323966f77bd3ac36359db1967d9130876c8df9cd412e0f2aca09"
+    },
+    {
+      "path": "skills/notion-research-documentation/evaluations/research-to-database.json",
+      "sha256": "5949e827648caaf31fe9d9fe01be0d9ca955b406651a5b57b91305a7b0e5845f"
+    },
+    {
+      "path": "skills/notion-research-documentation/examples/competitor-analysis.md",
+      "sha256": "ae09a5be1a23ce7b16bfd09337bb51af22e40f575b7c96f624594821c18cccb0"
+    },
+    {
+      "path": "skills/notion-research-documentation/examples/market-research.md",
+      "sha256": "e34980ef82d629f3550a157f8e39bbaa463ffac583dc61245b87ae221a85406f"
+    },
+    {
+      "path": "skills/notion-research-documentation/examples/technical-investigation.md",
+      "sha256": "295ff9176c9f0e9b2da5adf89d8d920e656c215328582e27bb34f657b781e872"
+    },
+    {
+      "path": "skills/notion-research-documentation/examples/trip-planning.md",
+      "sha256": "3a1424b84233579881c404f35d2522e00d22cc77c02a5591fc52f1718e93e13b"
+    },
+    {
+      "path": "skills/notion-research-documentation/LICENSE.txt",
+      "sha256": "bfb72d6e9280fef2aed5228cb6da0286444a5fb837e1c919d407e8e698b2df91"
+    },
+    {
+      "path": "skills/notion-research-documentation/reference/advanced-search.md",
+      "sha256": "038ef8cd7a786980a70137052b9dcc5224b491948b9f35ac1cb390e509ef514d"
+    },
+    {
+      "path": "skills/notion-research-documentation/reference/citations.md",
+      "sha256": "a6adce05742b285d9b338e8c98b2c4792b53eaf8d2d32ad9ec37d5d1f9f35d41"
+    },
+    {
+      "path": "skills/notion-research-documentation/reference/comparison-format.md",
+      "sha256": "cea1885197367cd15020d4c9c0313a754a78f74b5ecac5a23295794f49cb992a"
+    },
+    {
+      "path": "skills/notion-research-documentation/reference/comparison-template.md",
+      "sha256": "c1717848628e69cdf09bf4580a4513de487f884d198b325cf546cbcfb191c5c0"
+    },
+    {
+      "path": "skills/notion-research-documentation/reference/comprehensive-report-format.md",
+      "sha256": "97c132f53d309900dcc467e44d09b4acf104c8789dd70f0219d6746d888f6d90"
+    },
+    {
+      "path": "skills/notion-research-documentation/reference/comprehensive-report-template.md",
+      "sha256": "41682a265a6c8ddf08d62f7f6656324f8f1618d2e7d34dd0b4701c877dcaf45e"
+    },
+    {
+      "path": "skills/notion-research-documentation/reference/format-selection-guide.md",
+      "sha256": "31a64659e14fb251aabee6aaa76e43c2422aff505b14c5c09ae03961bd0a55cc"
+    },
+    {
+      "path": "skills/notion-research-documentation/reference/quick-brief-format.md",
+      "sha256": "3455d67be88755ecc3da1f8507bb3c8cf418efaa746d4774773fef55eed94373"
+    },
+    {
+      "path": "skills/notion-research-documentation/reference/quick-brief-template.md",
+      "sha256": "374899ab3cd5111b2782fe1d5e3b58fee9944d2f106634afc32f74c77d40e64e"
+    },
+    {
+      "path": "skills/notion-research-documentation/reference/research-summary-format.md",
+      "sha256": "c3d70163cba9dc758bfab419f3f8501a9c685ac1b86e5c5c16bc4105d1a5d74e"
+    },
+    {
+      "path": "skills/notion-research-documentation/reference/research-summary-template.md",
+      "sha256": "ab0495da75055b1d57c811e7440c89a0dffc0e142bc4fbdd8022574f8426cf35"
+    },
+    {
+      "path": "skills/notion-research-documentation/SKILL.md",
+      "sha256": "b725a7981d65d08ea7b25b14b64c459c3370cfd8c7dc43480f4584f06b0cba0a"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/agents/openai.yaml",
+      "sha256": "3aee0e5d7d6bf5ec67a98ae4c236356b212026932b2ca1e99597ab1555767757"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/assets/notion-small.svg",
+      "sha256": "05e71ce9e88cc40f0b7c8418f7ccf8d3e6d351c2b8d78a74c9a0642ba2969ab9"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/assets/notion.png",
+      "sha256": "5eef1e62d96a3d09bc9d18e4140486c22799145b017033bd0924c2c49d741cd4"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/evaluations/basic-spec-implementation.json",
+      "sha256": "c1fbe697e3ae59834f74d9ee1a8cb9d22ee5bca49de6bde30711a533d7cb49e8"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/evaluations/README.md",
+      "sha256": "3e0edb1a5bf5c90818728ad54e0920ef331d7f9547444042c95bdbeb8212dbe2"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/evaluations/spec-to-tasks.json",
+      "sha256": "9f9e272d983c512aac44592b97fc95874e11a0c90bd3d87f1dd9207fa1b53fda"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/examples/api-feature.md",
+      "sha256": "b22b1f055918a8c5a9235cf53a227a9a4954d4f961ed4f4835fdd7efb44f4d54"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/examples/database-migration.md",
+      "sha256": "a612876fa37b8c141856af517053f9cafa0766d90d6ca8eaafbf8a12e1ad9b8a"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/examples/ui-component.md",
+      "sha256": "8dc798bac4c4dcac3825ee9bb7e7f0ae49506299b111288019169610ffd91f4d"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/LICENSE.txt",
+      "sha256": "bfb72d6e9280fef2aed5228cb6da0286444a5fb837e1c919d407e8e698b2df91"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/reference/milestone-summary-template.md",
+      "sha256": "ce60ffa71386e5a66eb29789333d356d500768c02f17b159f7a9d5c2b492f179"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/reference/progress-tracking.md",
+      "sha256": "419336102aeccff0fabd0c4844eb2ab44f86a0a17b75dd666e44887e10f445f6"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/reference/progress-update-template.md",
+      "sha256": "c7e3085ee3c7bfba4b3a1fbb792237716a2cb3ab6c610180af6501f6563af3b5"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/reference/quick-implementation-plan.md",
+      "sha256": "e9ae4adddc90a2773c10cf8b155fe6b38f735bc1e38467b6e58f7e72a09ba9de"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/reference/spec-parsing.md",
+      "sha256": "4c0d082da07c1aa897788acc1608984d410c662752ff86fb37ed67a5c3b38aa9"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/reference/standard-implementation-plan.md",
+      "sha256": "4c88aae3a8e30fd8be71613936533bd871e3124db8aaa6ad073dfd07dc7694b0"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/reference/task-creation-template.md",
+      "sha256": "4fd5523f5ee4f83e846a6d31ac0d9e15291f918fdb82d137d5cd09b213b8dc33"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/reference/task-creation.md",
+      "sha256": "b96043397b08d663ff604990b8134fa5e4e3cfebf2c345608714e7a8580d9a92"
+    },
+    {
+      "path": "skills/notion-spec-to-implementation/SKILL.md",
+      "sha256": "887290939272e7b083ba084fac4299cff333711cc16dffc267ac11eeaad4c7d4"
+    }
+  ]
+}

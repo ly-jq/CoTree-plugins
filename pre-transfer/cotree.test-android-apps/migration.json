@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.test-android-apps",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 18,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "test-android-apps",
+      "repository": "plugins",
+      "path": "plugins/test-android-apps",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "0a309c4af2535961553992e87270f007c8bee2f50ac3dedb889e0f54324a5983",
+      "upstreamVersion": "0.1.2"
+    }
+  ],
+  "changes": [
+    "两项来源Skill改为八项原生工作流，设备连接与交互复用现有cotree.android-device。",
+    "补齐跨平台二进制ADB采集与UTF-8 UI唯一节点选择，拒绝覆盖和模糊点击；不清空全局日志或终止无关采样。"
+  ],
+  "limitations": [
+    "本包原生工作流、辅助工具与安装合同已适配；用户工程、真实模型任务、云服务和设备业务分别验收，不由协议夹具或示例代替。",
+    "需要明确授权的测试设备 / 模拟器、ADB及目标应用；CPU / heap / trace能力由Android版本、profileable / debuggable与工具链决定。未连接设备不能声称真实QA / 性能通过。",
+    "Python辅助只解析已有XML，Node辅助默认只产生命令计划；实际capture需--execute，仍使用宿主Shell权限。原POSIX报告脚本可选，Windows优先使用NDK / Perfetto官方跨平台工具。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "android-emulator-qa": "connect / build / qa / locate / capture；复用 cotree.android-device，二进制 ADB 采集与 UTF-8 XML 唯一匹配可跨平台执行。",
+    "android-performance / Simpleperf": "cpu：profileable 预检、明确采样边界和 PID / 任务进程归属，保留原报告脚本作可选 POSIX 参考。",
+    "Perfetto / Compose / gfxinfo": "timeline：实际 frame / scheduling / Compose 轨道证据；不把一次 framestats 或缺事件的 trace 当根因。",
+    "meminfo / Java heap / heapprofd": "memory：PSS / retained objects / native allocation 分别采样解释，保留 HPROF / Shark / SQL 报告参考。",
+    "host-specific sessions / cleanup": "不创建 Codex 会话、第二个设备执行器或全局停止逻辑；不清空共享 logcat、不覆盖固定采样文件、不 kill 所有 profiler。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

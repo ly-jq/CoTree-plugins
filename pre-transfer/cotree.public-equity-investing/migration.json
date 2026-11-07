@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.public-equity-investing",
+  "version": "0.2.0",
+  "category": "数据与商业",
+  "priority": 0,
+  "batch": 30,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "public-equity-investing",
+      "repository": "plugins",
+      "path": "plugins/public-equity-investing",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "d57d876ef317bdb03418d7f2408e880d699fbb8e220e49214cba4c4943aed246",
+      "upstreamVersion": "0.1.31"
+    }
+  ],
+  "changes": [
+    "23项来源按研究能力归并为15个CoTree原生入口，完整计算资源、工作簿模板和共享依赖保持。",
+    "以明确JSON输入、新输出目录和本地桥接提供归一化、DCF、三报表、事件计算；主模型负责研究判断。",
+    "上下文/调度复用CoTree现有合同，不继承来源专属账号/状态和固定认证流程。"
+  ],
+  "limitations": [
+    "真实市场数据、付费来源、账户、模型重算和投资判断未验收；离线模板通过不认证外部结果。",
+    "源helper仍有特定财务输入与模板范围，其他领域模块须按其实际依赖/数据逐项执行验证。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "skill:user-context": "context：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:public-equity-investing": "research：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:idea-generation": "research：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:company-tearsheet": "coverage：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:initiating-coverage": "coverage：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:financials-normalizer": "normalize：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:dcf-model-builder": "models：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:three-statement-model-builder": "models：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:comps-valuation": "valuation：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:equity-model-update": "update-model：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:earnings-preview": "earnings：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:earnings-deep-dive": "earnings：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:catalyst-calendar": "events：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:event-driven-analyzer": "events：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:economic-impact-report": "events：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:scenario-sensitivity-generator": "scenarios：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:portfolio-risk-management": "risk：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:long-short-pitch": "pitch：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:memo-builder": "memo：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:meeting-prep": "memo：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:thesis-tracker": "monitor：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:model-audit-tieout": "audit：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。",
+    "skill:deck-report-qc": "audit：完整领域参考、计算/模板/共享依赖保留；使用CoTree当前工具与真实来源。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

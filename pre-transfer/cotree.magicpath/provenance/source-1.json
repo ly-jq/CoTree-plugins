@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.magicpath",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "magicpath",
+    "repository": "plugins",
+    "path": "plugins/magicpath",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "3dc8bb78ae479f9e636e7b910a8f211390c9237921caea168501e671d7bab549",
+    "upstreamVersion": "0.1.2"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/magicpath/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/magicpath/SKILL.md",
+      "sourceMetadata": {
+        "name": "magicpath",
+        "description": "Use when the user mentions MagicPath, designs, UI components, themes, canvas selections, or repo-to-canvas UI work; run magicpath-ai to search, inspect, install, or author components.",
+        "user-invocable": true
+      }
+    }
+  ],
+  "copiedFiles": 6,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "17d2dedbe186cca7773fec147820ed74a12200821af78b9fbb4e55563f8b48e7"
+    },
+    {
+      "path": "assets/magicpath.png",
+      "sha256": "d3c261c132e56841924c7db046eb3958036f0dc29fb6066235d4c2e9a4ed3668"
+    },
+    {
+      "path": "README.md",
+      "sha256": "27ce0ca7082bbce9f26fdfca22ec4182e5701279f43fd86a91d94430aa05ec72"
+    },
+    {
+      "path": "skills/magicpath/references/cli-reference.md",
+      "sha256": "de3afc5bc7824fbe1f05ebc5a5fc2372b6aebdaa069cdbaeabf57c67e2a997bd"
+    },
+    {
+      "path": "skills/magicpath/references/working-with-embedded-browsers.md",
+      "sha256": "6617abfcc9d442111a7a893516bcc6cfd4812e2ac6f66c07c8d21ef13b3944ef"
+    },
+    {
+      "path": "skills/magicpath/references/working-with-repositories.md",
+      "sha256": "87444a879c6f3dc071f276eb8c2e97eeddbc25411ae3a295171f1c083efecedd"
+    },
+    {
+      "path": "skills/magicpath/SKILL.md",
+      "sha256": "24c97a1a1eb825a99d41f6f3936c3166855352138823faa76da9a02b18110966"
+    }
+  ]
+}

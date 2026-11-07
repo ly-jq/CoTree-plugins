@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.imessage",
+  "version": "0.2.0",
+  "category": "通信与日程",
+  "priority": 0,
+  "batch": 27,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "imessage",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/imessage",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "86457dfa4ea60acf0a62bf33da4bb54c816822b65b0ba0ef55eb929c2dea2e06",
+      "upstreamVersion": "0.2.0"
+    }
+  ],
+  "changes": [
+    "Bun/私有Channels改为Node只读SQLite和参数化AppleScript。",
+    "显式会话与数据库配置，保留消息/附件引用和单次发送，排除SMS身份绕过。"
+  ],
+  "limitations": [
+    "真实macOS数据库、系统权限和发送需在Mac验收，Windows无实际AppleScript执行。",
+    "原推送改为按需有界读取，无远程审批或自动唤醒；AppleScript无送达回执。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "configure/access": "connect：macOS TCC/Automation、精确会话GUID授权、显式数据库路径。",
+    "chat_messages/history/search/attachments": "history：只读SQLite，明确会话、游标、参与者和附件引用。",
+    "reply/files": "send：参数化AppleScript，实际提交与送达分开。",
+    "polling / remote permission replies": "当前任务按需读取；不继承私有Channels权限或自动模型唤醒。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

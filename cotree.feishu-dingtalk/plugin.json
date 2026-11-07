@@ -1,0 +1,30 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.feishu-dingtalk",
+  "name": "飞书与钉钉",
+  "version": "0.2.2",
+  "description": "通过配置面板接入飞书和钉钉，界面保存凭据、选择工作区、检查连接及启停消息服务。后台自动由 CoTree 管理，需要 Node.js 22.13+。",
+  "minKernelVersion": "0.1.0",
+  "entry": "dist/plugin.mjs",
+  "execution": { "runtime": "node", "abi": "cotree.plugin.tool.v2", "isolation": "brokered-process", "resources": { "wallTimeMs": 65000, "memoryMb": 128, "maxStdoutBytes": 524288, "maxStderrBytes": 65536 } },
+  "capabilities": { "tools": true, "services": true, "ui": true },
+  "permissions": { "shell": "none", "browser": "none", "services": ["messaging.bridge"], "nativeExecutables": ["messaging-node"], "ui": { "customViews": true } },
+  "services": [{
+    "id": "messaging.bridge", "entry": "dist/service.mjs", "runtime": "node", "protocol": "cotree.plugin.service.v1",
+    "activationEvents": ["onView:cotree.feishu-dingtalk.panel"], "idleTimeoutMs": 60000,
+    "resources": { "memoryMb": 128, "maxPendingCalls": 8, "maxEventBytes": 262144, "maxStreams": 1, "maxStreamBytesPerSecond": 1048576 }
+  }],
+  "nativeExecutables": [{
+    "id": "messaging-node", "source": "system", "command": "node",
+    "searchPaths": ["${LOCALAPPDATA}/Programs/nodejs/node", "/opt/homebrew/bin/node", "/usr/local/bin/node", "/usr/bin/node"],
+    "argumentPolicy": { "mode": "exact", "allowed": [["bridge.cjs", "control"]] }
+  }],
+  "contributes": {
+    "commands": [{ "id": "cotree.feishu-dingtalk.open", "title": "飞书与钉钉 · 配置与服务", "action": { "kind": "view.open", "viewId": "cotree.feishu-dingtalk.panel" } }],
+    "placements": [
+      { "command": "cotree.feishu-dingtalk.open", "location": "desktop.sidebar.primary", "group": "integrations", "order": 30 },
+      { "command": "cotree.feishu-dingtalk.open", "location": "desktop.commandPalette", "group": "integrations", "order": 30 }
+    ]
+  },
+  "ui": { "designSystem": "cotree.plugin-ui.v1", "views": [{ "id": "cotree.feishu-dingtalk.panel", "title": "飞书与钉钉", "entry": "ui/index.html", "location": "desktop.surface.primary" }] }
+}

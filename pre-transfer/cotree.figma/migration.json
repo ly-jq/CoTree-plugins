@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.figma",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 5,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "figma",
+      "repository": "plugins",
+      "path": "plugins/figma",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "723370f8a9207315e130f9e0fca65747272eea7a4ee65ed612a77991ca856206",
+      "upstreamVersion": "2.0.20"
+    }
+  ],
+  "changes": [
+    "十二个来源 Skill 和四个命令收敛为九个 CoTree 工作流，覆盖设计读写、代码映射、SwiftUI、图表、幻灯片与动效。",
+    "随包提供桌面 / 远程连接配置输出器、严格 URL 解析器和自包含编辑指南，不把来源宿主工具名当运行接口。"
+  ],
+  "limitations": [
+    "Figma 远程 MCP 限官方目录内客户端；CoTree 准入未确认，OAuth 客户端接入和账户读写均待完成。REST PAT 不作为通用 MCP 登录凭据。",
+    "桌面连接需已登录的 Figma Desktop 开启 Dev Mode MCP；可生成 http://127.0.0.1:3845/mcp 配置，但此环境尚未验收桌面服务。",
+    "桌面与远程工具集不同；创建文件、远程编辑、部分库 / 图表等能力必须通过实际 tools/list 确认，不能把桌面读取路径声称为全部写能力。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "figma-design-to-code / implement-from-figma / review-design-parity": "inspect / implement：真实设计上下文、截图、资产、项目组件和浏览器差异复核。",
+    "figma-code-connect / connect-figma-components / create-design-system-rules": "code-connect / library：组件映射、项目规则、变量样式和组件库。",
+    "figma-create-new-file / figma-generate-design / figma-use": "compose：目标文件、编辑器实际 API、分段创建、读回与截图；远程写工具受准入限制。",
+    "figma-generate-library": "library：现有库盘点、变量别名 / 模式、组件与实例绑定和验证。",
+    "figma-generate-diagram / figma-use-figjam": "diagram：FigJam 原生节点 / 连接器与受支持 Mermaid 类型。",
+    "figma-use-slides": "slides：原生可编辑幻灯片、版式与逐页验证。",
+    "figma-implement-motion / figma-use-motion": "motion：真实时间线、代码实现或受支持的远程编辑；静态图不能证明动画。",
+    "figma-swiftui": "implement / compose：SwiftUI 双向映射，保留平台布局、语义字体和动态类型。",
+    "host connector": "connect：桌面 / 远程连接配置、目标 URL 解析；远程客户端准入及 OAuth 未完成。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

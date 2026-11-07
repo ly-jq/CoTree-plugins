@@ -1,0 +1,56 @@
+{
+  "observedAt": "2026-10-06T16:34:20.336Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "live-unauthenticated-boundary-only",
+  "credentialsSent": false,
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "results": {
+    "elyra.canva": {
+      "packageDigest": "8c5d8dd7075f43bb0e498afbd9b623cc80df655dd85c49656f64b07ff6028081",
+      "endpoint": "https://mcp.canva.com/mcp",
+      "protocol": "mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.teams": {
+      "packageDigest": "3d3a42c1bb0b5e2001c58f35b8afe1371db60dda6ea7f352d8cf9f7be643487a",
+      "endpoint": "https://graph.microsoft.com/v1.0/me?$select=id",
+      "protocol": "graph-rest",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "GET",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.sharepoint": {
+      "packageDigest": "7f95adfc6008d54cfd294020702a32f4b021763538b244954874e748a7ffb831",
+      "endpoint": "https://graph.microsoft.com/v1.0/me?$select=id",
+      "protocol": "graph-rest",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "GET",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    }
+  }
+}

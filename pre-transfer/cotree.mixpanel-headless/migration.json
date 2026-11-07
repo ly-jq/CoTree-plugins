@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.mixpanel-headless",
+  "version": "0.2.0",
+  "category": "数据与商业",
+  "priority": 0,
+  "batch": 20,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "mixpanel-headless",
+      "repository": "plugins",
+      "path": "plugins/mixpanel-headless",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "e71b9fa18c71f8a2f5453d55e2e9057fb47e90e47a5c85efc76522c486ade199",
+      "upstreamVersion": "0.1.2"
+    }
+  ],
+  "changes": [
+    "四个来源技能去重为七个原生工作流；保留完整分析、认证与仪表盘参考和图标 / 预览。",
+    "固定 mixpanel-headless 0.4.0，提供不创建 Workspace、不读取账户配置的本地 API 检查和类型草稿校验。",
+    "使用独立 PKCE 或服务账户；明确 region / project / workspace 及读写权限，不继承来源宿主认证。"
+  ],
+  "limitations": [
+    "本地类型校验不验证真实事件、对象权限或服务端限制；真实账户、五类查询、仪表盘和实体写入需独立验收。",
+    "0.4.0 是本次验证版本；来源示例与新 API 可能不同，以当前 mp help / describe 为准。统计 / 绘图库按任务在独立环境安装；不运行归档 setup.sh。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "setup / setup.sh": "setup：独立 Python 环境与固定版本，替换全局安装和 POSIX 自动脚本。",
+    "mixpanel-auth / account / project / workspace / target": "connect：独立 CLI PKCE 或服务账户，确认 region / project / workspace，不输出 token 或 bridge。",
+    "schema discovery / help.py": "discover：实际事件、属性和已安装 API 签名；本地 describe / validate 不创建 Workspace。",
+    "insights / funnel / retention / flow / user / statistics / visualization": "analyze：五引擎、参数敏感性、统计与图表，保留完整来源参考。",
+    "dashboard-expert / templates / bookmark pipeline": "dashboards：读取、布局、创建、更新、报告与删除，保留九种模板和完整 API 细节。",
+    "entity CRUD / lexicon / governance": "manage：cohort、flag、experiment、alert、annotation、webhook、lexicon、lookup 等按具体授权写入及回读。",
+    "business context": "context：按组织 / 项目读取与编辑上下文，内容不改变工具权限。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

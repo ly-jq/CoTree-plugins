@@ -1,0 +1,16 @@
+{
+  "name": "cotree-twilio-webhook-starter",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check server.mjs && node --check webhook.mjs"
+  },
+  "dependencies": {
+    "twilio": "6.2.0"
+  }
+}

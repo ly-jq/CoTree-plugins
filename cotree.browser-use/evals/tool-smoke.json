@@ -1,0 +1,12 @@
+{
+  "cases": [
+    {
+      "id": "browser-use-observe-smoke",
+      "suite": "browser-use-smoke",
+      "task": "Observe the existing browser tab and report its URL without changing page state.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    }
+  ]
+}

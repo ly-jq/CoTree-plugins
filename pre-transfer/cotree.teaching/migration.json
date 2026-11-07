@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.teaching",
+  "version": "0.2.0",
+  "category": "研究与专业工具",
+  "priority": 0,
+  "batch": 21,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "explanatory-output-style",
+      "repository": "claude-plugins-official",
+      "path": "plugins/explanatory-output-style",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "4d7f0d73cba51603a68c79d7c5ced12217f06b1f08c940c9e9aec4b815558c82",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "learning-output-style",
+      "repository": "claude-plugins-official",
+      "path": "plugins/learning-output-style",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "c4d90767302935a1cbf71b9ed4d6600afb6947b5c0f5e3602c924b6e33bf7e06",
+      "upstreamVersion": "1.0.0"
+    }
+  ],
+  "changes": [
+    "解释与学习两份来源合并为三个显式 Skill，不作为全局 output style 或 Hook。",
+    "保留代码上下文、取舍与用户实践，取消固定 Insight 格式和每次编辑的冗余讲解。"
+  ],
+  "limitations": [
+    "无需外部账户。原生加载 / 分派测试不证明实际教学效果、用户掌握程度或模型评价准确性。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "explanatory-output-style": "explain：按需解释代码、设计与取舍，保留实例与证据，不强制星号段落或每次编辑插入说明。",
+    "learning-output-style": "practice / feedback：明确学习任务、实质代码练习、渐进提示、用户尝试与真实检查；不全局接管普通工程任务。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

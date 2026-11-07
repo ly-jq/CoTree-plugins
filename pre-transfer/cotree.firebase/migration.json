@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.firebase",
+  "version": "0.2.0",
+  "category": "代码托管与部署",
+  "priority": 0,
+  "batch": 13,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "firebase",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/firebase",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "06140dfba46f73898acae8fdd35d921ffa9e801f87fefbb482dc190cd8c5b252"
+    }
+  ],
+  "changes": [
+    "官方 MCP 声明补齐十个原生工作流，固定 firebase-tools 15.32.1 并默认限定 auth / firestore / storage。",
+    "增加离线项目目录 / 功能配置；核对真实 mcp 参数，拒绝未知功能组，分清 CLI 身份、ADC、模拟器与线上服务。"
+  ],
+  "limitations": [
+    "已适配 CoTree 原生 Skill / MCP；真实账户读写、过期恢复与线上业务仍待验收。配置脚本只生成配置，不实现登录 / token 刷新、不读取来源宿主身份、不启用插件。",
+    "需要 Node.js / npm 与固定版 firebase-tools 可用。MCP 功能组不是权限或只读控制，core 工具始终存在；未选择的功能需生成并应用配置后重连。",
+    "Firebase CLI 的共享登录 / 活动项目与 MCP 的持久客户端目录设置可能影响目标；每次以 firebase_get_environment 等真实结果核对。默认 workspace 或 --dir 不提供 OS 隔离。",
+    "prompts / UI resources 不作为 CoTree 原生 UI 声明；缺少通用资源入口时使用实际 firebase_read_resources 或官方文档。未覆盖的远程扩展工具按真实目录验收。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "official firebase-tools MCP declaration": "保留唯一 stdio 服务并固定 15.32.1；默认 auth,firestore,storage，core 始终可用；其他功能显式配置。",
+    "source had no domain workflows": "connect / inspect / initialize / data / auth / rules / diagnose / deploy / messaging / configure 补齐项目工作流，不虚构来源能力。",
+    "directory / feature discovery / authentication": "离线配置生成器核实绝对项目目录及功能组；拒绝上游会忽略的错拼组名；不向 mcp 错传通用 --project 参数。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

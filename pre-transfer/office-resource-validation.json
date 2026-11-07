@@ -1,0 +1,23 @@
+{
+  "observedAt": "2026-10-06T09:13:26.431Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "packageId": "elyra.google-drive",
+  "packageDigest": "5e11a3c3bcc93aed6a2b6aaa6141f46bf17c1a6c81aaa58615f281c0ead9e507",
+  "scope": "retained-source-utilities-with-synthetic-api-fixture",
+  "serviceCalls": false,
+  "renderedPresentation": false,
+  "parsedDesign": {
+    "masters": 1,
+    "layouts": 1,
+    "slides": 2,
+    "catalogWritten": true,
+    "revisionPreserved": true
+  },
+  "issueCodes": [
+    "BLANK_SLIDE",
+    "GENERIC_PLACEHOLDER_TEXT",
+    "TEXT_EFFECTIVELY_UNREADABLE"
+  ],
+  "outputCount": 3
+}

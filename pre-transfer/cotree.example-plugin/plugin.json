@@ -1,0 +1,37 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.example-plugin",
+  "name": "example-plugin",
+  "version": "0.2.0",
+  "description": "可安装的 CoTree Manifest v3 与显式参数入口演示。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.example-plugin.tour",
+      "description": "演示 CoTree 插件的原生 Skill 与显式入口格式。",
+      "path": "skills/tour/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.example-plugin.echo",
+      "description": "显式运行一个无外部副作用的参数回显示例。",
+      "path": "skills/echo/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "f7e21016965765a2eb2a942bea1c54533e82047c1fc3852a090ca75f2637cc82"
+  }
+}

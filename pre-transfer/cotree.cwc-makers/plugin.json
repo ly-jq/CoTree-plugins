@@ -1,0 +1,49 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.cwc-makers",
+  "name": "cwc-makers",
+  "version": "0.2.0",
+  "description": "用独立 USB / MicroPython 工具准备和迭代 Cardputer / M5Stack 应用，明确刷写与设备验收边界。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.cwc-makers.setup",
+      "description": "准备 Cardputer / M5Stack 的独立 USB 开发环境。",
+      "path": "skills/setup/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.cwc-makers.flash",
+      "description": "准备和执行指定 M5Stack 固件刷写与恢复。",
+      "path": "skills/flash/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.cwc-makers.apps",
+      "description": "通过 USB 向 M5Stack 迭代 MicroPython 应用。",
+      "path": "skills/apps/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.cwc-makers.debug",
+      "description": "诊断 M5Stack 串口、启动、MicroPython 与硬件交互。",
+      "path": "skills/debug/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "49eb8cf738ea78e0bfb9001f476ec03d58d60463ec17027b57c83bf89a1dfb64"
+  }
+}

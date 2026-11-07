@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.mixpanel-headless",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "mixpanel-headless",
+    "repository": "plugins",
+    "path": "plugins/mixpanel-headless",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "e71b9fa18c71f8a2f5453d55e2e9057fb47e90e47a5c85efc76522c486ade199",
+    "upstreamVersion": "0.1.2"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/dashboard-expert/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/dashboard-expert/SKILL.md",
+      "sourceMetadata": {
+        "name": "dashboard-expert",
+        "description": "Full CRUD and analysis for Mixpanel dashboards. Use when the user asks to build, create, analyze, read, understand, explain, modify, update, enhance, or manage dashboards, or asks about dashboard layout, text cards, or report arrangement. Covers dashboard analysis (read + understand existing), creation (new builds), modification (update existing), and explanation (data-driven annotation)."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/mixpanel-auth/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/mixpanel-auth/SKILL.md",
+      "sourceMetadata": {
+        "name": "mixpanel-auth",
+        "description": "Manage Mixpanel Headless authentication: check session state, list/add/use accounts, run OAuth login, switch projects/workspaces, manage targets, and check bridge credentials."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/mixpanelyst/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/mixpanelyst/SKILL.md",
+      "sourceMetadata": {
+        "name": "mixpanelyst",
+        "description": "This skill should be used when the user asks about Mixpanel product analytics, event data, funnel analysis, retention curves, cohort analysis, segmentation queries, user behavior, conversion rates, churn, DAU/MAU, ARPU, revenue metrics, feature adoption, A/B test results, user paths, flow analysis, or any request to query, explore, visualize, or analyze Mixpanel data using Python. Also use when the user asks to read, write, or manage Mixpanel \"business context\" — the markdown documentation that grounds AI assistants in an organization's structure and goals."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/setup/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/setup/SKILL.md",
+      "sourceMetadata": {
+        "name": "mixpanel-headless-setup",
+        "description": "This skill installs mixpanel_headless, pandas, numpy, matplotlib, seaborn, networkx, anytree, scipy (and pyarrow on Python 3.11+), then verifies Mixpanel credentials. It should be invoked when setting up a new environment for Mixpanel data analysis, when dependencies are missing, or when configuring service account or OAuth credentials for the first time.",
+        "disable-model-invocation": false
+      }
+    }
+  ],
+  "copiedFiles": 19,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "5d485279f0da7e2c2a4cea66a80127585291155ccfc38bfca4af3178214d62b8"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "1c3816789a9149e2e94f384e9364c044b3e226939a3232b702eb1f0c0a3406de"
+    },
+    {
+      "path": "assets/logo-dark.png",
+      "sha256": "0f47a5c3f481ac76b88e326befdb1267e58ef12e6a9a7f3bfcf94d88eb42e42d"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "3ebcb85818875354ca119b5651b1eee0467fa50d3ddf4243104dada9381ed8c2"
+    },
+    {
+      "path": "assets/screenshot-1.png",
+      "sha256": "9084092ced779fc0f386d2cef1eb064b9d39821c3cbbd5cc1e0b9fc3f2bedf0c"
+    },
+    {
+      "path": "assets/screenshot-2.png",
+      "sha256": "1824a9eb749a47d177ce50f2cb5005035ce1230e2e03dec672d744a388550e6a"
+    },
+    {
+      "path": "assets/screenshot-3.png",
+      "sha256": "b3dac7eab6a9dd0a3060778c345529dfe1d7881e07c774b950e5d696160f3b39"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "94b21900e71a27dac65d8f4962cc3b47612da4ac2e553b9afa3b0810e6db4308"
+    },
+    {
+      "path": "README.md",
+      "sha256": "8c85f542ba7932f46bc80e70ee52c51569f1089098dd3a97cca72eec12b05edf"
+    },
+    {
+      "path": "skills/dashboard-expert/references/bookmark-pipeline.md",
+      "sha256": "6c84825b4c02b8063a46670dac213f0cc053865c7db3090f26cffc05f86db2e2"
+    },
+    {
+      "path": "skills/dashboard-expert/references/chart-types.md",
+      "sha256": "6ed0dc5f744e085bf482cacafe4d999cdf686eaa8518c9c24857fb771665eae4"
+    },
+    {
+      "path": "skills/dashboard-expert/references/dashboard-reference.md",
+      "sha256": "b534a442dc4b25f2ce456c55348c6562589434e96051d755ff9aa4797252b22c"
+    },
+    {
+      "path": "skills/dashboard-expert/references/dashboard-templates.md",
+      "sha256": "8aee504c031ad4826e7540fe880a491f61e07696e60253ae52c1ee40bd0f9e4c"
+    },
+    {
+      "path": "skills/dashboard-expert/SKILL.md",
+      "sha256": "14fd87eebbbc01e6b1a280e9934fa9ae285b1e1a077987c06122e089977de9cf"
+    },
+    {
+      "path": "skills/mixpanel-auth/SKILL.md",
+      "sha256": "3f89d6574b3805ddd7d4a5e6849c5eba1d4c6a33935c53eca845f3554aec4af8"
+    },
+    {
+      "path": "skills/mixpanelyst/scripts/auth_manager.py",
+      "sha256": "1dec5930faa90b2af2881c987a52153c28c4d4ccbd9bf3e5965f409b4dd6a483"
+    },
+    {
+      "path": "skills/mixpanelyst/scripts/help.py",
+      "sha256": "ef201ef273dcc6f3795a7fa282031d7ba768f6c9895972e4e52982328a7d452b"
+    },
+    {
+      "path": "skills/mixpanelyst/SKILL.md",
+      "sha256": "a25105da7074be692b8ff32761c881463ef573246ea932dfe6e5b3b09b0d7ca1"
+    },
+    {
+      "path": "skills/setup/scripts/setup.sh",
+      "sha256": "6a661ef2de2b5843ef851b18532feb72675d0b785a12afc16dbc7d78b406fbeb"
+    },
+    {
+      "path": "skills/setup/SKILL.md",
+      "sha256": "0c37920873b9dae215ee837830bf5cc01dadd7847c136b95cebc952033cda368"
+    }
+  ]
+}

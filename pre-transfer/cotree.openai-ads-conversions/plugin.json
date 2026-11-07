@@ -1,0 +1,50 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.openai-ads-conversions",
+  "name": "openai-ads-conversions",
+  "version": "0.2.0",
+  "description": "按现行 OpenAI Ads 合同接入 Pixel 与服务端转化，保持去重、同意和核心业务失败隔离。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/icon.svg",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.openai-ads-conversions.inspect",
+      "description": "检查现有转化代码、事件边界和接入范围。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.openai-ads-conversions.pixel",
+      "description": "将浏览器 Pixel 集成到现有同意与分析层。",
+      "path": "skills/pixel/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.openai-ads-conversions.capi",
+      "description": "在服务端集成有界转化请求与归因上下文。",
+      "path": "skills/capi/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.openai-ads-conversions.verify",
+      "description": "验证转化覆盖、去重、失败隔离和真实接收边界。",
+      "path": "skills/verify/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "46e02f56b2f93b996ca66bda3003cc585e9fd39088d982f87a207199bda61fc9"
+  }
+}

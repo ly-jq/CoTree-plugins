@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.nvidia",
+  "version": "0.2.0",
+  "category": "研究与专业工具",
+  "priority": 0,
+  "batch": 25,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "nvidia",
+      "repository": "plugins",
+      "path": "plugins/nvidia",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "db7e03f99347fa83190715d287e3b5571669832109575d46cfc8633b98b8471b",
+      "upstreamVersion": "1.0.4"
+    }
+  ],
+  "changes": [
+    "去除来源强制关键词 finder 和自动远程 skill 安装；由主模型按任务选择 11 项能力。",
+    "增加有界只读 GPU 查询，区分设备可见与计算/互联验证。",
+    "拆清部署、研究恢复、数据许可及独立账户，保留完整嵌套资源。"
+  ],
+  "limitations": [
+    "GPU 查询不证明所有计算、SDK、容器或集群可用；Windows 和远程生产环境分别核实。",
+    "来源 AI-Q 客户端只支持本地匿名后端；远程认证另适配。",
+    "NGC/HF/NVIDIA/NVCF/云账户、许可与计费未验收；没有运行部署、模型推理、USD渲染或科学计算。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "source-01/content/skills/nvidia-skill-finder/SKILL.md": "environment：原生入口及完整归档参考",
+    "source-01/content/skills/cuopt-user-rules/SKILL.md": "cuopt：原生入口及完整归档参考",
+    "source-01/content/skills/dynamo-router-starter/SKILL.md": "dynamo：原生入口及完整归档参考",
+    "source-01/content/skills/dynamo-interconnect-check/SKILL.md": "dynamo：原生入口及完整归档参考",
+    "source-01/content/skills/aiq-deploy/SKILL.md": "aiq-deploy：原生入口及完整归档参考",
+    "source-01/content/skills/aiq-research/SKILL.md": "aiq-research：原生入口及完整归档参考",
+    "source-01/content/skills/nemoclaw-user-get-started/SKILL.md": "nemoclaw：原生入口及完整归档参考",
+    "source-01/content/skills/omniverse-cad-to-simready/SKILL.md": "simready：原生入口及完整归档参考",
+    "source-01/content/skills/omniverse-realtime-viewer/SKILL.md": "viewer：原生入口及完整归档参考",
+    "source-01/content/skills/omniverse-usd-performance-tuning/SKILL.md": "usd-performance：原生入口及完整归档参考",
+    "source-01/content/skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md": "infrastructure：原生入口及完整归档参考",
+    "source-01/content/skills/physical-ai-neural-reconstruction/SKILL.md": "reconstruction：原生入口及完整归档参考"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

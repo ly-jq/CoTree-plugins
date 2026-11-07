@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.pr-review-toolkit",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "pr-review-toolkit",
+    "repository": "claude-plugins-official",
+    "path": "plugins/pr-review-toolkit",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "3afe881a7504d17781b615b9f8ece8412bd5b0e952a17ebd0b4d8ae2138d7ba2"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "Agent import.claude.pr-review-toolkit.code-reviewer 保留模型引用 opus；需配置对应 Elyra 模型，不静默改变模型选择。",
+    "Agent import.claude.pr-review-toolkit.code-simplifier 保留模型引用 opus；需配置对应 Elyra 模型，不静默改变模型选择。"
+  ],
+  "components": [
+    {
+      "kind": "command",
+      "source": "commands/review-pr.md",
+      "state": "converted",
+      "target": "content/commands/review-pr.md",
+      "sourceMetadata": {
+        "description": "Comprehensive PR review using specialized agents",
+        "argument-hint": "[review-aspects]"
+      }
+    },
+    {
+      "kind": "agent",
+      "source": "agents/code-reviewer.md",
+      "state": "converted",
+      "target": "content/agents/code-reviewer.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/code-simplifier.md",
+      "state": "converted",
+      "target": "content/agents/code-simplifier.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/comment-analyzer.md",
+      "state": "converted",
+      "target": "content/agents/comment-analyzer.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/pr-test-analyzer.md",
+      "state": "converted",
+      "target": "content/agents/pr-test-analyzer.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/silent-failure-hunter.md",
+      "state": "reference",
+      "reason": "Reference Markdown; not an Agent definition."
+    },
+    {
+      "kind": "agent",
+      "source": "agents/type-design-analyzer.md",
+      "state": "converted",
+      "target": "content/agents/type-design-analyzer.md"
+    }
+  ],
+  "copiedFiles": 9,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "01ec130935144e116d804b3aa9f4e6bf5efd4546f62ba41e6d8cc2da40dc4dd7"
+    },
+    {
+      "path": "agents/code-reviewer.md",
+      "sha256": "5d417194e3a35e7843c4bfa358ef3be4273cfcc2a0029af03762aa2df4aace45"
+    },
+    {
+      "path": "agents/code-simplifier.md",
+      "sha256": "576672274e305c853ae4c25e8ea29e008dcd56f84d8bc6bd8f42cda06f565a08"
+    },
+    {
+      "path": "agents/comment-analyzer.md",
+      "sha256": "dbd5f96db40142b80dd2f7f9b82f0b252fff52036eb25663e6ba4846675503a3"
+    },
+    {
+      "path": "agents/pr-test-analyzer.md",
+      "sha256": "ab0613389bbf46a2dac6f6ff9975837f084e98a0fcc190bedb7fff7a3a737301"
+    },
+    {
+      "path": "agents/silent-failure-hunter.md",
+      "sha256": "d00d9e9f69c3a309f8d786070e39cc10a88b2e9ae02c031bc7a89cb7eae7a0ca"
+    },
+    {
+      "path": "agents/type-design-analyzer.md",
+      "sha256": "b9d949186cada5bb7f37bc9fb771eca8f085dcd8860835c3547d34afeebe9e28"
+    },
+    {
+      "path": "commands/review-pr.md",
+      "sha256": "6f1a336d56b5b5ffd73c87e9af17e102249522ec4ff79455d5dba9d6e55163e3"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "c721ea6aff09bc49dfce9c4a3ea6e83370bf794592c4c83f67afb58a980c0f2c"
+    }
+  ]
+}

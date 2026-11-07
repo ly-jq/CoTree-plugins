@@ -1,0 +1,26 @@
+{
+  "observedAt": "2026-10-06T11:31:59.732Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "live-unauthenticated-boundary-only",
+  "credentialsSent": false,
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "results": {
+    "elyra.posthog": {
+      "packageDigest": "bd0c523bb19e03c6f70f412f27a43efc88214fc0bda40597b80f1f040fcfe5d5",
+      "endpoint": "https://mcp.posthog.com/mcp?mode=tools&readonly=true",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.zotero",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "zotero",
+    "repository": "plugins",
+    "path": "plugins/zotero",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "5f8583a93eae664f2fba3a188fe4c175569e5372c7a9d2c19f58df0f1570ed60",
+    "upstreamVersion": "0.1.2"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "需 Zotero Desktop、本地 API 和 Python。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/zotero/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/zotero/SKILL.md",
+      "sourceMetadata": {
+        "name": "Zotero",
+        "description": "Use Zotero Desktop from Codex to enable/probe the local API, search a local Zotero library, list items/collections/tags, export BibTeX, insert citation keys into LaTeX or Markdown drafts, read indexed full text when requested, and import BibTeX/RIS records into Zotero through the connector server. Use when the user mentions Zotero, citations, references.bib, BibTeX export, local Zotero API, localhost:23119, or adding citations from a Zotero library."
+      }
+    }
+  ],
+  "copiedFiles": 6,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "26c5592f3541ddc58639f3fd0d5927452cf5399ea95ab075d5a165a8e3759ab5"
+    },
+    {
+      "path": "assets/icon.png",
+      "sha256": "7ac4579b4a075173126862ebf70243ff0a447ffe843e7fbdf16ea2681f4fff13"
+    },
+    {
+      "path": "skills/zotero/agents/openai.yaml",
+      "sha256": "b5c0dc61569b544c158698174b6fc33b7bd9e347021f7359211c3d6a6a86efc0"
+    },
+    {
+      "path": "skills/zotero/assets/icon.png",
+      "sha256": "7ac4579b4a075173126862ebf70243ff0a447ffe843e7fbdf16ea2681f4fff13"
+    },
+    {
+      "path": "skills/zotero/references/local-api-routes.md",
+      "sha256": "45a6a0d4420df74e8fc62e71ee2cba783b6085293b9df3a3022dfe08c35dfc39"
+    },
+    {
+      "path": "skills/zotero/scripts/zotero.py",
+      "sha256": "b19966bd0ba658581ec335a0f6fb2e8d48ea0d339e8ca67728aa0ed8e4083581"
+    },
+    {
+      "path": "skills/zotero/SKILL.md",
+      "sha256": "4916e6ddf6daa27028f87b63216710da883cc1dc215c5e991d518c36f53290a6"
+    }
+  ]
+}

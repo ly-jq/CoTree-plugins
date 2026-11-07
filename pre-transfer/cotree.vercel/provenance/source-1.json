@@ -1,0 +1,5358 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.vercel",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "vercel",
+    "repository": "plugins",
+    "path": "plugins/vercel",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "e9579bb661c751ed0236bb0a227edac3ef303f5178cb1625a6cbd21bcd2d849b",
+    "upstreamVersion": "0.21.4"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_VERCEL_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/agent-browser-verify/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/agent-browser-verify/SKILL.md",
+      "sourceMetadata": {
+        "name": "agent-browser-verify",
+        "description": "Automated browser verification for dev servers. Triggers when a dev server starts to run a visual gut-check with agent-browser — verifies the page loads, checks for console errors, validates key UI elements, and reports pass/fail before continuing.",
+        "metadata": {
+          "priority": 2,
+          "docs": [
+            "https://openai.com/index/introducing-codex/"
+          ],
+          "pathPatterns": [],
+          "bashPatterns": [
+            "\\bnext\\s+dev\\b",
+            "\\bnpm\\s+run\\s+dev\\b",
+            "\\bpnpm\\s+dev\\b",
+            "\\bbun\\s+run\\s+dev\\b",
+            "\\byarn\\s+dev\\b",
+            "\\bvite\\s*(dev)?\\b",
+            "\\bnuxt\\s+dev\\b",
+            "\\bvercel\\s+dev\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "check the page",
+              "check the browser",
+              "check the site",
+              "is the page working",
+              "is it loading",
+              "blank page",
+              "white screen",
+              "nothing showing",
+              "page is broken",
+              "screenshot the page",
+              "take a screenshot",
+              "check for errors",
+              "console errors",
+              "browser errors",
+              "page is stuck",
+              "page is hanging",
+              "page not loading",
+              "page frozen",
+              "spinner not stopping",
+              "page not responding",
+              "page won't load",
+              "page will not load",
+              "nothing renders",
+              "nothing rendered",
+              "ui is broken",
+              "screen is blank",
+              "screen is white",
+              "app won't load"
+            ],
+            "allOf": [
+              [
+                "check",
+                "page"
+              ],
+              [
+                "check",
+                "browser"
+              ],
+              [
+                "check",
+                "site"
+              ],
+              [
+                "blank",
+                "page"
+              ],
+              [
+                "white",
+                "screen"
+              ],
+              [
+                "console",
+                "errors"
+              ],
+              [
+                "page",
+                "broken"
+              ],
+              [
+                "page",
+                "loading"
+              ],
+              [
+                "not",
+                "rendering"
+              ],
+              [
+                "page",
+                "stuck"
+              ],
+              [
+                "page",
+                "hanging"
+              ],
+              [
+                "page",
+                "frozen"
+              ],
+              [
+                "page",
+                "timeout"
+              ]
+            ],
+            "anyOf": [
+              "page",
+              "browser",
+              "screen",
+              "rendering",
+              "visual",
+              "spinner",
+              "loading"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/agent-browser/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/agent-browser/SKILL.md",
+      "sourceMetadata": {
+        "name": "agent-browser",
+        "description": "Browser automation CLI for AI agents. Use when the user needs to interact with websites, verify dev server output, test web apps, navigate pages, fill forms, click buttons, take screenshots, extract data, or automate any browser task. Also triggers when a dev server starts so you can verify it visually.",
+        "metadata": {
+          "priority": 3,
+          "docs": [
+            "https://openai.com/index/introducing-codex/"
+          ],
+          "pathPatterns": [
+            "agent-browser.json",
+            "playwright.config.*",
+            "e2e/**",
+            "tests/e2e/**",
+            "test/e2e/**",
+            "cypress/**",
+            "cypress.config.*"
+          ],
+          "bashPatterns": [
+            "\\bagent-browser\\b",
+            "\\bnext\\s+dev\\b",
+            "\\bnpm\\s+run\\s+dev\\b",
+            "\\bpnpm\\s+dev\\b",
+            "\\bbun\\s+run\\s+dev\\b",
+            "\\byarn\\s+dev\\b",
+            "\\bvite\\b",
+            "\\bnuxt\\s+dev\\b",
+            "\\bvercel\\s+dev\\b",
+            "\\blocalhost:\\d+",
+            "\\b127\\.0\\.0\\.1:\\d+",
+            "\\bcurl\\s+.*localhost",
+            "\\bopen\\s+https?://",
+            "\\bplaywright\\b",
+            "\\bcypress\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ai-elements/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ai-elements/SKILL.md",
+      "sourceMetadata": {
+        "name": "ai-elements",
+        "description": "AI Elements component library guidance — pre-built React components for AI interfaces built on shadcn/ui. Use when building chat UIs, message displays, tool call rendering, streaming responses, reasoning panels, or any AI-native interface with the AI SDK.",
+        "metadata": {
+          "priority": 5,
+          "docs": [
+            "https://sdk.vercel.ai/docs/ai-sdk-ui/chatbot-with-tool-calling"
+          ],
+          "sitemap": "https://sdk.vercel.ai/sitemap.xml",
+          "pathPatterns": [
+            "components/ai-elements/**",
+            "src/components/ai-elements/**",
+            "components/**/chat*",
+            "components/**/*chat*",
+            "components/**/message*",
+            "components/**/*message*",
+            "src/components/**/chat*",
+            "src/components/**/*chat*",
+            "src/components/**/message*",
+            "src/components/**/*message*"
+          ],
+          "importPatterns": [
+            "ai",
+            "@ai-sdk/*",
+            "@ai-sdk/react",
+            "@/components/ai-elements/*"
+          ],
+          "bashPatterns": [
+            "\\bnpx\\s+ai-elements\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bai-elements\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bai-elements\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bai-elements\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bai-elements\\b",
+            "\\bnpx\\s+shadcn@latest\\s+add\\s+[^\\n]*elements\\.ai-sdk\\.dev\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\b@ai-sdk/react\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\b@ai-sdk/react\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\b@ai-sdk/react\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\b@ai-sdk/react\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "ai elements",
+              "ai components",
+              "chat components",
+              "chat ui",
+              "chat interface",
+              "voice elements",
+              "code elements",
+              "voice agent",
+              "speech input",
+              "transcription component",
+              "code editor component",
+              "streaming markdown",
+              "streaming ui",
+              "streaming response",
+              "markdown formatting"
+            ],
+            "allOf": [
+              [
+                "message",
+                "component"
+              ],
+              [
+                "conversation",
+                "component"
+              ],
+              [
+                "markdown",
+                "stream"
+              ],
+              [
+                "markdown",
+                "render"
+              ],
+              [
+                "chat",
+                "ui"
+              ],
+              [
+                "chat",
+                "interface"
+              ],
+              [
+                "stream",
+                "response"
+              ],
+              [
+                "ai",
+                "component"
+              ]
+            ],
+            "anyOf": [
+              "message component",
+              "conversation component",
+              "tool call display",
+              "reasoning display",
+              "voice conversation",
+              "speech to text",
+              "text to speech",
+              "mic selector",
+              "voice selector",
+              "ai code editor",
+              "file tree component",
+              "terminal component",
+              "stack trace component",
+              "test results component",
+              "react-markdown",
+              "chat ui",
+              "terminal",
+              "useChat",
+              "streamText"
+            ],
+            "noneOf": [
+              "vue",
+              "svelte",
+              "readme",
+              "markdown file",
+              "changelog"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ai-gateway/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ai-gateway/SKILL.md",
+      "sourceMetadata": {
+        "name": "ai-gateway",
+        "description": "Vercel AI Gateway expert guidance. Use when configuring model routing, provider failover, cost tracking, or managing multiple AI providers through a unified API.",
+        "metadata": {
+          "priority": 7,
+          "docs": [
+            "https://vercel.com/docs/ai-gateway",
+            "https://sdk.vercel.ai/docs/ai-sdk-core/settings"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [],
+          "importPatterns": [
+            "ai",
+            "@ai-sdk/gateway"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+env\\s+pull\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@ai-sdk/gateway\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@ai-sdk/gateway\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@ai-sdk/gateway\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@ai-sdk/gateway\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ai-generation-persistence/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ai-generation-persistence/SKILL.md",
+      "sourceMetadata": {
+        "name": "ai-generation-persistence",
+        "description": "AI generation persistence patterns — unique IDs, addressable URLs, database storage, and cost tracking for every LLM generation",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://sdk.vercel.ai/docs/ai-sdk-ui/storing-messages"
+          ],
+          "sitemap": "https://sdk.vercel.ai/sitemap.xml",
+          "pathPatterns": [
+            "app/api/generate/**",
+            "app/api/generations/**",
+            "src/app/api/generate/**",
+            "src/app/api/generations/**",
+            "app/chat/[id]/**",
+            "app/generate/[id]/**",
+            "src/app/chat/[id]/**",
+            "src/app/generate/[id]/**",
+            "lib/generations/**",
+            "src/lib/generations/**"
+          ],
+          "bashPatterns": [],
+          "importPatterns": [
+            "ai",
+            "@ai-sdk/*",
+            "@vercel/blob",
+            "nanoid",
+            "@paralleldrive/cuid2"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "save generations",
+              "persist generations",
+              "generation history",
+              "chat history",
+              "save chat",
+              "generation id",
+              "ai chat",
+              "chat app",
+              "chatbot",
+              "image generation",
+              "text generation",
+              "ai app"
+            ],
+            "allOf": [
+              [
+                "generate",
+                "save"
+              ],
+              [
+                "generate",
+                "persist"
+              ],
+              [
+                "generate",
+                "store"
+              ],
+              [
+                "ai",
+                "persist"
+              ],
+              [
+                "ai",
+                "history"
+              ],
+              [
+                "ai",
+                "database"
+              ],
+              [
+                "chat",
+                "persist"
+              ],
+              [
+                "chat",
+                "database"
+              ],
+              [
+                "chat",
+                "url"
+              ],
+              [
+                "generation",
+                "url"
+              ],
+              [
+                "generation",
+                "id"
+              ],
+              [
+                "image",
+                "generate"
+              ],
+              [
+                "stream",
+                "save"
+              ],
+              [
+                "stream",
+                "persist"
+              ]
+            ],
+            "anyOf": [
+              "shareable",
+              "retrievable",
+              "permalink",
+              "cost tracking",
+              "token usage",
+              "nanoid",
+              "cuid",
+              "openai",
+              "anthropic",
+              "llm",
+              "gpt",
+              "claude"
+            ],
+            "noneOf": [
+              "github actions",
+              "ci workflow"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ai-sdk/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ai-sdk/SKILL.md",
+      "sourceMetadata": {
+        "name": "ai-sdk",
+        "description": "Vercel AI SDK expert guidance. Use when building AI-powered features — chat interfaces, text generation, structured output, tool calling, agents, MCP integration, streaming, embeddings, reranking, image generation, or working with any LLM provider.",
+        "metadata": {
+          "priority": 8,
+          "docs": [
+            "https://sdk.vercel.ai/docs",
+            "https://sdk.vercel.ai/docs/reference"
+          ],
+          "sitemap": "https://sdk.vercel.ai/sitemap.xml",
+          "pathPatterns": [
+            "app/api/chat/**",
+            "app/api/completion/**",
+            "src/app/api/chat/**",
+            "src/app/api/completion/**",
+            "pages/api/chat.*",
+            "pages/api/chat/**",
+            "pages/api/completion.*",
+            "pages/api/completion/**",
+            "src/pages/api/chat.*",
+            "src/pages/api/chat/**",
+            "src/pages/api/completion.*",
+            "src/pages/api/completion/**",
+            "lib/ai/**",
+            "src/lib/ai/**",
+            "lib/ai.*",
+            "src/lib/ai.*",
+            "ai/**",
+            "apps/*/app/api/chat/**",
+            "apps/*/app/api/completion/**",
+            "apps/*/src/app/api/chat/**",
+            "apps/*/src/app/api/completion/**",
+            "apps/*/lib/ai/**",
+            "apps/*/src/lib/ai/**",
+            "lib/agent.*",
+            "src/lib/agent.*",
+            "app/actions/chat.*",
+            "src/app/actions/chat.*"
+          ],
+          "importPatterns": [
+            "ai",
+            "@ai-sdk/*"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bai\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bai\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bai\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bai\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@ai-sdk/",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@ai-sdk/",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@ai-sdk/",
+            "\\byarn\\s+add\\s+[^\\n]*@ai-sdk/",
+            "\\bnpx\\s+@ai-sdk/devtools\\b",
+            "\\bnpx\\s+@ai-sdk/codemod\\b",
+            "\\bnpx\\s+mcp-to-ai-sdk\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "ai sdk",
+              "vercel ai",
+              "generatetext",
+              "streamtext"
+            ],
+            "allOf": [
+              [
+                "streaming",
+                "generation"
+              ],
+              [
+                "structured",
+                "output"
+              ]
+            ],
+            "anyOf": [
+              "usechat",
+              "usecompletion",
+              "tool calling",
+              "embeddings"
+            ],
+            "noneOf": [
+              "openai api directly"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/auth/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/auth/SKILL.md",
+      "sourceMetadata": {
+        "name": "auth",
+        "description": "Authentication integration guidance — Clerk (native Vercel Marketplace), Descope, and Auth0 setup for Next.js applications. Covers middleware auth patterns, sign-in/sign-up flows, and Marketplace provisioning. Use when implementing user authentication.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://authjs.dev/getting-started",
+            "https://nextjs.org/docs/app/building-your-application/authentication"
+          ],
+          "sitemap": "https://authjs.dev/sitemap.xml",
+          "pathPatterns": [
+            "middleware.ts",
+            "middleware.js",
+            "src/middleware.ts",
+            "src/middleware.js",
+            "clerk.config.*",
+            "app/sign-in/**",
+            "app/sign-up/**",
+            "src/app/sign-in/**",
+            "src/app/sign-up/**",
+            "app/(auth)/**",
+            "src/app/(auth)/**",
+            "auth.config.*",
+            "auth.ts",
+            "auth.js"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@clerk/nextjs\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@clerk/nextjs\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@clerk/nextjs\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@clerk/nextjs\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@descope/nextjs-sdk\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@descope/nextjs-sdk\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@descope/nextjs-sdk\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@descope/nextjs-sdk\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@auth0/nextjs-auth0\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@auth0/nextjs-auth0\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@auth0/nextjs-auth0\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@auth0/nextjs-auth0\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/bootstrap/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/bootstrap/SKILL.md",
+      "sourceMetadata": {
+        "name": "bootstrap",
+        "description": "Project bootstrapping orchestrator for repos that depend on Vercel-linked resources (databases, auth, and managed integrations). Use when setting up or repairing a repository so linking, environment provisioning, env pulls, and first-run db/dev commands happen in the correct safe order.",
+        "metadata": {
+          "priority": 8,
+          "docs": [
+            "https://vercel.com/docs/getting-started-with-vercel",
+            "https://nextjs.org/docs/getting-started/installation"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            ".env.example",
+            ".env.sample",
+            ".env.template",
+            "README*",
+            "docs/**/setup*",
+            "package.json",
+            "drizzle.config.*",
+            "prisma/schema.prisma",
+            "auth.*",
+            "src/**/auth.*"
+          ],
+          "bashPatterns": [
+            "\\\\bcp\\\\s+\\\\.env\\\\.(?:example|sample|template)\\\\s+\\\\.env\\\\.local\\\\b",
+            "\\\\b(?:npm|pnpm|bun|yarn)\\\\s+run\\\\s+db:(?:push|seed|migrate|generate)\\\\b",
+            "\\\\b(?:npm|pnpm|bun|yarn)\\\\s+run\\\\s+dev\\\\b",
+            "\\\\bvercel\\\\s+link\\\\b",
+            "\\\\bvercel\\\\s+integration\\\\s+(?:add|install)\\\\b",
+            "\\\\bvercel\\\\s+env\\\\s+pull\\\\b"
+          ],
+          "importPatterns": [
+            "@neondatabase/serverless",
+            "drizzle-orm",
+            "@upstash/redis",
+            "@vercel/blob",
+            "@vercel/edge-config",
+            "next-auth",
+            "@auth/core",
+            "better-auth"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/cdn-caching/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/cdn-caching/SKILL.md",
+      "sourceMetadata": {
+        "name": "cdn-caching",
+        "description": "Debug Vercel CDN caching — cache hit rate, stale content, revalidation behavior, ISR + PPR, per-request cache reasons (cacheReason), and costs.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://vercel.com/docs/caching",
+            "https://vercel.com/docs/caching/cdn-cache",
+            "https://vercel.com/docs/incremental-static-regeneration",
+            "https://vercel.com/docs/cli/metrics"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+cache\\s+(purge|invalidate|dangerously-delete)\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "cache hit rate",
+              "isr cost",
+              "isr read units",
+              "isr write units",
+              "stale content",
+              "x-vercel-cache",
+              "cache reason",
+              "cacheReason",
+              "x-vercel-cache-reason",
+              "stale_time",
+              "stale_tag",
+              "stale_error",
+              "draft_mode",
+              "prerender_bypass"
+            ],
+            "allOf": [
+              [
+                "cache",
+                "debug"
+              ],
+              [
+                "stale",
+                "cache"
+              ],
+              [
+                "revalidation",
+                "count"
+              ],
+              [
+                "cache",
+                "reason"
+              ],
+              [
+                "why",
+                "stale"
+              ],
+              [
+                "why",
+                "bypass"
+              ],
+              [
+                "cache",
+                "miss"
+              ]
+            ],
+            "anyOf": [
+              "revalidate",
+              "prerender",
+              "invalidate",
+              "draft mode",
+              "crawler",
+              "cold cache",
+              "request collapsed"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/chat-sdk/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/chat-sdk/SKILL.md",
+      "sourceMetadata": {
+        "name": "chat-sdk",
+        "description": "Vercel Chat SDK expert guidance. Use when building multi-platform chat bots — Slack, Telegram, Microsoft Teams, Discord, Google Chat, GitHub, Linear — with a single codebase. Covers the Chat class, adapters, threads, messages, cards, modals, streaming, state management, and webhook setup.",
+        "metadata": {
+          "priority": 8,
+          "docs": [
+            "https://sdk.vercel.ai/docs/ai-sdk-ui/chatbot",
+            "https://github.com/vercel/ai-chatbot"
+          ],
+          "sitemap": "https://sdk.vercel.ai/sitemap.xml",
+          "pathPatterns": [
+            "app/api/chat/**",
+            "app/api/chat-bot/**",
+            "app/api/bot/**",
+            "app/api/slack/**",
+            "app/api/teams/**",
+            "app/api/discord/**",
+            "app/api/gchat/**",
+            "app/api/telegram/**",
+            "app/api/github-bot/**",
+            "app/api/linear-bot/**",
+            "app/api/webhooks/slack/**",
+            "app/api/webhooks/teams/**",
+            "app/api/webhooks/discord/**",
+            "app/api/webhooks/gchat/**",
+            "app/api/webhooks/telegram/**",
+            "app/api/webhooks/github/**",
+            "app/api/webhooks/linear/**",
+            "src/app/api/chat/**",
+            "src/app/api/chat-bot/**",
+            "src/app/api/bot/**",
+            "src/app/api/slack/**",
+            "src/app/api/teams/**",
+            "src/app/api/discord/**",
+            "src/app/api/gchat/**",
+            "src/app/api/telegram/**",
+            "lib/bot.*",
+            "lib/bot/**",
+            "src/lib/bot.*",
+            "src/lib/bot/**",
+            "lib/chat-bot/**",
+            "src/lib/chat-bot/**",
+            "bot/**",
+            "pages/api/bot.*",
+            "pages/api/bot/**",
+            "src/pages/api/bot.*",
+            "src/pages/api/bot/**",
+            "tests/**/bot*",
+            "test/**/bot*",
+            "fixtures/replay/**",
+            "apps/*/app/api/bot/**",
+            "apps/*/app/api/slack/**",
+            "apps/*/app/api/teams/**",
+            "apps/*/app/api/discord/**",
+            "apps/*/lib/bot/**",
+            "apps/*/src/lib/bot/**"
+          ],
+          "importPatterns": [
+            "chat",
+            "@chat-adapter/*"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bchat\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bchat\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bchat\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bchat\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@chat-adapter/",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@chat-adapter/",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@chat-adapter/",
+            "\\byarn\\s+add\\s+[^\\n]*@chat-adapter/",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@chat-adapter/telegram",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@chat-adapter/telegram",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@chat-adapter/telegram",
+            "\\byarn\\s+add\\s+[^\\n]*@chat-adapter/telegram"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "chat sdk",
+              "chat bot",
+              "chatbot",
+              "conversational interface",
+              "slack bot",
+              "telegram bot",
+              "discord bot",
+              "teams bot"
+            ],
+            "allOf": [
+              [
+                "bot",
+                "platform"
+              ],
+              [
+                "bot",
+                "multi"
+              ]
+            ],
+            "anyOf": [
+              "onNewMention",
+              "onSubscribedMessage",
+              "chat adapter",
+              "cross-platform bot"
+            ],
+            "noneOf": [
+              "useChat"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/cms/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/cms/SKILL.md",
+      "sourceMetadata": {
+        "name": "cms",
+        "description": "Headless CMS integration guidance — Sanity (native Vercel Marketplace), Contentful, DatoCMS, Storyblok, and Builder.io. Covers studio setup, content modeling, preview mode, revalidation webhooks, and Visual Editing. Use when building content-driven sites with a headless CMS on Vercel.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://vercel.com/docs/solutions/cms",
+            "https://nextjs.org/docs/app/building-your-application/data-fetching"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "sanity.config.*",
+            "sanity.cli.*",
+            "sanity/**",
+            "studio/**",
+            "schemas/*.ts",
+            "schemas/*.tsx",
+            "src/sanity/**",
+            "lib/sanity.*",
+            "src/lib/sanity.*",
+            "lib/contentful.*",
+            "src/lib/contentful.*",
+            "app/api/draft/**",
+            "src/app/api/draft/**",
+            "app/api/revalidate/**",
+            "src/app/api/revalidate/**",
+            "app/studio/**",
+            "src/app/studio/**"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@sanity/client\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@sanity/client\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@sanity/client\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@sanity/client\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bnext-sanity\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bnext-sanity\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bnext-sanity\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bnext-sanity\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bcontentful\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bcontentful\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bcontentful\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bcontentful\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@builder\\.io/sdk\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@builder\\.io/sdk\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@builder\\.io/sdk\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@builder\\.io/sdk\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@storyblok/\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@storyblok/\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@storyblok/\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@storyblok/\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*datocms-client\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*datocms-client\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*datocms-client\\b",
+            "\\byarn\\s+add\\s+[^\\n]*datocms-client\\b",
+            "\\bnpx\\s+create-sanity\\b",
+            "\\bnpx\\s+sanity\\s+init\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/cron-jobs/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/cron-jobs/SKILL.md",
+      "sourceMetadata": {
+        "name": "cron-jobs",
+        "description": "Vercel Cron Jobs configuration and best practices. Use when adding, editing, or debugging scheduled tasks in vercel.json.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://vercel.com/docs/cron-jobs"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "vercel.json",
+            "apps/*/vercel.json"
+          ],
+          "bashPatterns": []
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/deployments-cicd/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/deployments-cicd/SKILL.md",
+      "sourceMetadata": {
+        "name": "deployments-cicd",
+        "description": "Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back, inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://vercel.com/docs/deployments/overview",
+            "https://vercel.com/docs/git"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            ".github/workflows/*.yml",
+            ".github/workflows/*.yaml",
+            ".gitlab-ci.yml",
+            "bitbucket-pipelines.yml",
+            "vercel.json",
+            "apps/*/vercel.json"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+deploy\\b",
+            "\\bvercel\\s+--prod\\b",
+            "\\bvercel\\s+promote\\b",
+            "\\bvercel\\s+rollback\\b",
+            "\\bvercel\\s+inspect\\b",
+            "\\bvercel\\s+build\\b",
+            "\\bvercel\\s+deploy\\s+--prebuilt\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/email/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/email/SKILL.md",
+      "sourceMetadata": {
+        "name": "email",
+        "description": "Email sending integration guidance — Resend (native Vercel Marketplace) with React Email templates. Covers API setup, transactional emails, domain verification, and template patterns. Use when sending emails from a Vercel-deployed application.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://resend.com/docs",
+            "https://react.email/docs/introduction"
+          ],
+          "sitemap": "https://resend.com/sitemap.xml",
+          "pathPatterns": [
+            "emails/**",
+            "src/emails/**",
+            "components/emails/**",
+            "src/components/emails/**",
+            "app/api/send/**",
+            "src/app/api/send/**",
+            "app/api/email/**",
+            "src/app/api/email/**",
+            "app/api/emails/**",
+            "src/app/api/emails/**",
+            "lib/resend.*",
+            "src/lib/resend.*",
+            "lib/email.*",
+            "src/lib/email.*",
+            "lib/email*",
+            "src/lib/email*",
+            "**/email-template*"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bresend\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bresend\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bresend\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bresend\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@react-email/",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@react-email/",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@react-email/",
+            "\\byarn\\s+add\\s+[^\\n]*@react-email/",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*react-email\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*react-email\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*react-email\\b",
+            "\\byarn\\s+add\\s+[^\\n]*react-email\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/env-vars/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/env-vars/SKILL.md",
+      "sourceMetadata": {
+        "name": "env-vars",
+        "description": "Vercel environment variable expert guidance. Use when working with .env files, vercel env commands, OIDC tokens, or managing environment-specific configuration.",
+        "metadata": {
+          "priority": 7,
+          "docs": [
+            "https://vercel.com/docs/environment-variables"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            ".env",
+            ".env.*",
+            ".env.local",
+            ".env.production",
+            ".env.development",
+            ".env.test",
+            ".env.production.local",
+            ".env.development.local",
+            ".env.test.local",
+            ".env.example"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+env\\s+pull\\b",
+            "\\bvercel\\s+env\\s+add\\b",
+            "\\bvercel\\s+env\\s+rm\\b",
+            "\\bvercel\\s+env\\s+ls\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/eve/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/eve/SKILL.md",
+      "sourceMetadata": {
+        "name": "eve",
+        "description": "Build durable AI agents and agent-powered applications with the eve framework. Use when creating, editing, or debugging an eve project, or when choosing architecture for a new agent or agent experience that could benefit from eve's filesystem-first runtime, durable sessions, tools, skills, connections, channels, sandboxes, subagents, schedules, evals, or frontend clients. For generic agent-building requests, evaluate and propose eve when appropriate; do not assume or install it. Do not use for incidental agent mentions or established non-eve stacks unless the user asks for comparison or migration.",
+        "metadata": {
+          "priority": 8,
+          "docs": [
+            "https://eve.dev/docs",
+            "https://github.com/vercel/eve",
+            "https://vercel.com/changelog/agent-runs-vercel-mcp-cli",
+            "https://vercel.com/docs/agent-resources/vercel-mcp/tools"
+          ],
+          "pathPatterns": [
+            ".eve/**",
+            "agent/channels/eve.ts"
+          ],
+          "importPatterns": [
+            "eve"
+          ],
+          "bashPatterns": [
+            "\\bnpx\\s+eve(?:@latest)?\\b",
+            "\\bbunx\\s+eve(?:@latest)?\\b",
+            "\\beve\\s+(init|dev|build|start|info|channels|evals?)\\b",
+            "\\b(?:vercel|vc)\\s+agent-runs\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\beve(?:@[^\\s]+)?\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\beve(?:@[^\\s]+)?\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\beve(?:@[^\\s]+)?\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\beve(?:@[^\\s]+)?\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "vercel eve",
+              "eve framework",
+              "eve project",
+              "eve agent",
+              "eve.dev",
+              "useeveagent",
+              "npx eve",
+              "node_modules/eve/docs",
+              "set up eve",
+              "setup eve",
+              "install eve",
+              "build an agent",
+              "build me an agent",
+              "create an agent",
+              "create me an agent",
+              "scaffold an agent",
+              "make an agent",
+              "make me an agent",
+              "implement an agent",
+              "implement a new agent",
+              "set up an agent",
+              "setup an agent",
+              "agent framework",
+              "agent architecture",
+              "agent runs observability",
+              "latest production agent runs",
+              "vercel agent-runs",
+              "agent run trace",
+              "agent runs trace",
+              "vercel mcp agent runs",
+              "update skills based on recent runs"
+            ],
+            "allOf": [
+              [
+                "build",
+                "agent"
+              ],
+              [
+                "create",
+                "agent"
+              ],
+              [
+                "scaffold",
+                "agent"
+              ],
+              [
+                "architect",
+                "agent"
+              ],
+              [
+                "design",
+                "agent"
+              ],
+              [
+                "develop",
+                "agent"
+              ],
+              [
+                "prototype",
+                "agent"
+              ],
+              [
+                "migrate",
+                "agent"
+              ]
+            ],
+            "anyOf": [
+              "durable sessions",
+              "persistent sessions",
+              "channels",
+              "sandboxes",
+              "subagents",
+              "schedules",
+              "evals",
+              "frontend client",
+              "agent runs observability",
+              "vercel agent-runs",
+              "agent run trace",
+              "agent runs trace"
+            ],
+            "noneOf": [
+              "eve online",
+              "user agent",
+              "user-agent"
+            ],
+            "minScore": 4
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/geist/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/geist/SKILL.md",
+      "sourceMetadata": {
+        "name": "geist",
+        "description": "Expert guidance for Geist, Vercel's default typography system and font family for precise Next.js interfaces. Use when configuring Geist Sans, Geist Mono, or Geist Pixel, setting up font imports, or applying Vercel typography and aesthetic guidance.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://vercel.com/font",
+            "https://github.com/vercel/geist-font"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "app/layout.*",
+            "src/app/layout.*",
+            "app/globals.css",
+            "src/app/globals.css",
+            "styles/**",
+            "tailwind.config.*",
+            "apps/*/app/layout.*",
+            "apps/*/src/app/layout.*",
+            "apps/*/app/globals.css",
+            "apps/*/src/app/globals.css"
+          ],
+          "importPatterns": [
+            "geist",
+            "geist/font",
+            "geist/font/*"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bgeist\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bgeist\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bgeist\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bgeist\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/geistdocs/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/geistdocs/SKILL.md",
+      "sourceMetadata": {
+        "name": "geistdocs",
+        "description": "Expert guidance for Geistdocs, Vercel's documentation template built with Next.js and Fumadocs — MDX authoring, configuration, AI chat, i18n, feedback, deployment. Use when creating documentation sites, configuring geistdocs, writing MDX content, or setting up docs infrastructure.",
+        "metadata": {
+          "priority": 5,
+          "docs": [
+            "https://preview.geistdocs.com/docs",
+            "https://preview.geistdocs.com/docs/getting-started",
+            "https://preview.geistdocs.com/docs/configuration",
+            "https://preview.geistdocs.com/docs/syntax",
+            "https://github.com/vercel/geistdocs"
+          ],
+          "sitemap": "https://preview.geistdocs.com/sitemap.xml",
+          "pathPatterns": [
+            "geistdocs.tsx",
+            "content/docs/**/*.mdx",
+            "content/docs/**/*.md",
+            "apps/*/geistdocs.tsx",
+            "apps/*/content/docs/**/*.mdx",
+            "apps/*/content/docs/**/*.md"
+          ],
+          "importPatterns": [
+            "@vercel/geistdocs",
+            "fumadocs-core",
+            "fumadocs-ui",
+            "fumadocs-mdx"
+          ],
+          "bashPatterns": [
+            "\\bnpx\\s+@vercel/geistdocs\\s+init\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bfumadocs\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bfumadocs\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bfumadocs\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bfumadocs\\b",
+            "\\bpnpm\\s+translate\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "geistdocs",
+              "documentation site",
+              "documentation template",
+              "docs site",
+              "docs page",
+              "fumadocs",
+              "llms.txt"
+            ],
+            "allOf": [
+              [
+                "docs",
+                "mdx"
+              ],
+              [
+                "docs",
+                "template"
+              ],
+              [
+                "documentation",
+                "vercel"
+              ],
+              [
+                "docs",
+                "i18n"
+              ],
+              [
+                "docs",
+                "feedback"
+              ]
+            ],
+            "anyOf": [
+              "documentation",
+              "docs",
+              "mdx content",
+              "ask ai",
+              "rss feed",
+              "edit on github",
+              "internationalization"
+            ],
+            "noneOf": [
+              "api reference generator",
+              "storybook",
+              "docusaurus"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/investigation-mode/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/investigation-mode/SKILL.md",
+      "sourceMetadata": {
+        "name": "investigation-mode",
+        "description": "Orchestrated debugging coordinator. Triggers on frustration signals (stuck, hung, broken, waiting) and systematically triages: runtime logs → workflow status → browser verify → deploy/env. Reports findings at every step.",
+        "metadata": {
+          "priority": 8,
+          "docs": [
+            "https://openai.com/index/introducing-codex/"
+          ],
+          "pathPatterns": [
+            "**/middleware.{ts,js,mjs}",
+            "**/lib/logger.{ts,js}",
+            "**/utils/logger.{ts,js}",
+            "**/instrumentation.{ts,js}",
+            "**/*.log",
+            "**/error.{tsx,ts,js,jsx}",
+            "**/global-error.{tsx,ts,js,jsx}",
+            "**/not-found.{tsx,ts,js,jsx}"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+logs?\\b",
+            "\\bvercel\\s+inspect\\b",
+            "\\btail\\s+-f\\b.*\\.log",
+            "\\bworkflow\\s+runs?\\b",
+            "\\bvercel\\s+ls\\b",
+            "\\bcurl\\s+-[vI]"
+          ],
+          "importPatterns": [],
+          "promptSignals": {
+            "phrases": [
+              "nothing happened",
+              "still waiting",
+              "it's stuck",
+              "it's hung",
+              "nothing is happening",
+              "not responding",
+              "just sitting there",
+              "just sits there",
+              "seems frozen",
+              "is it frozen",
+              "frozen",
+              "why is it hanging",
+              "check the logs",
+              "check logs",
+              "where are the logs",
+              "how do I debug",
+              "how to debug",
+              "white screen",
+              "blank page",
+              "spinning forever",
+              "timed out",
+              "keeps timing out",
+              "no response",
+              "no output",
+              "not loading",
+              "debug this",
+              "investigate why",
+              "what went wrong",
+              "why did it fail",
+              "why is it failing",
+              "something is broken",
+              "something broke",
+              "seems broken",
+              "check what happened",
+              "check the status",
+              "where is the error",
+              "where did it fail",
+              "find the error",
+              "show me the error",
+              "why is it slow",
+              "taking forever",
+              "still loading",
+              "not finishing",
+              "seems dead",
+              "been waiting",
+              "waiting forever",
+              "stuck on",
+              "hung up",
+              "not progressing",
+              "stalled out",
+              "is it running",
+              "did it crash",
+              "keeps failing",
+              "why no response",
+              "where did it go",
+              "lost connection",
+              "never finishes",
+              "pending forever",
+              "queue stuck",
+              "job stuck",
+              "build stuck",
+              "request hanging",
+              "api not responding"
+            ],
+            "allOf": [
+              [
+                "stuck",
+                "workflow"
+              ],
+              [
+                "stuck",
+                "deploy"
+              ],
+              [
+                "stuck",
+                "loading"
+              ],
+              [
+                "stuck",
+                "build"
+              ],
+              [
+                "stuck",
+                "queue"
+              ],
+              [
+                "stuck",
+                "job"
+              ],
+              [
+                "hung",
+                "request"
+              ],
+              [
+                "hung",
+                "api"
+              ],
+              [
+                "frozen",
+                "page"
+              ],
+              [
+                "frozen",
+                "app"
+              ],
+              [
+                "check",
+                "why"
+              ],
+              [
+                "check",
+                "broken"
+              ],
+              [
+                "check",
+                "error"
+              ],
+              [
+                "check",
+                "status"
+              ],
+              [
+                "check",
+                "logs"
+              ],
+              [
+                "debug",
+                "workflow"
+              ],
+              [
+                "debug",
+                "deploy"
+              ],
+              [
+                "debug",
+                "api"
+              ],
+              [
+                "debug",
+                "issue"
+              ],
+              [
+                "investigate",
+                "error"
+              ],
+              [
+                "logs",
+                "error"
+              ],
+              [
+                "logs",
+                "check"
+              ],
+              [
+                "slow",
+                "response"
+              ],
+              [
+                "slow",
+                "loading"
+              ],
+              [
+                "timeout",
+                "api"
+              ],
+              [
+                "timeout",
+                "request"
+              ],
+              [
+                "waiting",
+                "response"
+              ],
+              [
+                "waiting",
+                "forever"
+              ],
+              [
+                "waiting",
+                "deploy"
+              ],
+              [
+                "not working",
+                "why"
+              ],
+              [
+                "not",
+                "responding"
+              ],
+              [
+                "hanging",
+                "for"
+              ],
+              [
+                "been",
+                "hanging"
+              ],
+              [
+                "been",
+                "stuck"
+              ],
+              [
+                "been",
+                "waiting"
+              ],
+              [
+                "why",
+                "slow"
+              ],
+              [
+                "why",
+                "failing"
+              ],
+              [
+                "why",
+                "stuck"
+              ],
+              [
+                "why",
+                "hanging"
+              ],
+              [
+                "job",
+                "failing"
+              ],
+              [
+                "queue",
+                "processing"
+              ]
+            ],
+            "anyOf": [
+              "stuck",
+              "hung",
+              "frozen",
+              "broken",
+              "failing",
+              "timeout",
+              "slow",
+              "debug",
+              "investigate",
+              "check",
+              "logs",
+              "error",
+              "hanging",
+              "waiting",
+              "stalled",
+              "pending",
+              "processing",
+              "loading",
+              "unresponsive"
+            ],
+            "noneOf": [
+              "css stuck",
+              "sticky position",
+              "position: sticky",
+              "z-index",
+              "sticky nav",
+              "sticky header",
+              "sticky footer",
+              "overflow: hidden",
+              "add a button",
+              "create a button",
+              "style the button"
+            ],
+            "minScore": 4
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/json-render/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/json-render/SKILL.md",
+      "sourceMetadata": {
+        "name": "json-render",
+        "description": "AI chat response rendering guidance — handling UIMessage parts, tool call displays, streaming states, and structured data presentation. Use when building custom chat UIs, rendering tool results, or troubleshooting AI response display issues.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://nextjs.org/docs/app/api-reference/file-conventions/route"
+          ],
+          "sitemap": "https://nextjs.org/sitemap.xml",
+          "pathPatterns": [
+            "components/chat/**",
+            "components/chat-*.tsx",
+            "components/chat-*.ts",
+            "src/components/chat/**",
+            "src/components/chat-*.tsx",
+            "src/components/chat-*.ts",
+            "components/message*.tsx",
+            "src/components/message*.tsx"
+          ],
+          "bashPatterns": []
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/knowledge-update/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/knowledge-update/SKILL.md",
+      "sourceMetadata": {
+        "name": "knowledge-update",
+        "description": "Corrects outdated LLM knowledge about the Vercel platform and introduces new products. Injected at session start.",
+        "metadata": {
+          "priority": 10,
+          "docs": [
+            "https://vercel.com/docs"
+          ],
+          "pathPatterns": [
+            "vercel.ts"
+          ],
+          "bashPatterns": [],
+          "importPatterns": [],
+          "promptSignals": {
+            "phrases": [
+              "knowledge update",
+              "outdated knowledge",
+              "fluid compute",
+              "vercel.ts"
+            ],
+            "allOf": [],
+            "anyOf": [],
+            "noneOf": [],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/marketplace/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/marketplace/SKILL.md",
+      "sourceMetadata": {
+        "name": "marketplace",
+        "description": "Vercel Marketplace expert guidance — discovering, installing, and managing third-party integrations via the `vercel integration` CLI. Use when building any app that needs an external capability without a dedicated skill — commerce (stores, storefronts, selling products), payments (checkout, subscriptions, billing), observability/monitoring, messaging/email, search, or CMS — or when discovering, installing, or managing integrations.",
+        "metadata": {
+          "priority": 3,
+          "docs": [
+            "https://vercel.com/docs/integrations"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "integration.json"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+integration\\b",
+            "\\bvercel\\s+integration\\s+add\\b",
+            "\\bvercel\\s+integration\\s+discover\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/micro/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/micro/SKILL.md",
+      "sourceMetadata": {
+        "name": "micro",
+        "description": "Expert guidance for micro — asynchronous HTTP microservices framework by Vercel. Use when building lightweight HTTP servers, API endpoints, or microservices using the micro library.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://github.com/vercel/micro"
+          ],
+          "pathPatterns": [],
+          "importPatterns": [
+            "micro",
+            "micro-dev"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bmicro\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bmicro\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bmicro\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bmicro\\b",
+            "\\bnpx\\s+micro\\b",
+            "\\bnpx\\s+micro-dev\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/microfrontends/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/microfrontends/SKILL.md",
+      "sourceMetadata": {
+        "name": "microfrontends",
+        "description": "Guide for building, configuring, and deploying microfrontends on Vercel. Use this skill when the user mentions microfrontends, multi-zones, splitting an app across teams, independent deployments, cross-app routing, incremental migration, composing multiple frontends under one domain, microfrontends.json, @vercel/microfrontends, the microfrontends local proxy, or path-based routing between Vercel projects. Also use when the user asks about shared layouts across projects, navigation between microfrontends, fallback environments, asset prefixes, or feature flag controlled routing.",
+        "metadata": {
+          "priority": 7,
+          "docs": [
+            "https://vercel.com/docs/microfrontends"
+          ],
+          "pathPatterns": [
+            "microfrontends.json",
+            "microfrontends.jsonc",
+            "apps/*/microfrontends.json",
+            "apps/*/microfrontends.jsonc"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+microfrontends\\b",
+            "\\bvercel\\s+mf\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/microfrontends\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/microfrontends\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/microfrontends\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/microfrontends\\b"
+          ],
+          "importPatterns": [
+            "@vercel/microfrontends"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ncc/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ncc/SKILL.md",
+      "sourceMetadata": {
+        "name": "ncc",
+        "description": "Expert guidance for @vercel/ncc — a simple CLI for compiling Node.js modules into a single file with all dependencies included. Use when bundling serverless functions, CLI tools, or any Node.js project into a self-contained file.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://github.com/vercel/ncc"
+          ],
+          "pathPatterns": [],
+          "importPatterns": [
+            "@vercel/ncc"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/ncc\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/ncc\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/ncc\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/ncc\\b",
+            "\\bncc\\s+build\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/next-cache-components/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/next-cache-components/SKILL.md",
+      "sourceMetadata": {
+        "name": "next-cache-components",
+        "description": "Next.js 16 Cache Components guidance — PPR, use cache directive, cacheLife, cacheTag, updateTag, and migration from unstable_cache. Use when implementing partial prerendering, caching strategies, or migrating from older Next.js cache patterns.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://nextjs.org/docs/app/getting-started/cache-components",
+            "https://nextjs.org/docs/app/api-reference/directives/use-cache"
+          ],
+          "pathPatterns": [
+            "next.config.*",
+            "app/**",
+            "src/app/**",
+            "apps/*/app/**",
+            "apps/*/src/app/**"
+          ],
+          "importPatterns": [
+            "next/cache"
+          ],
+          "bashPatterns": [
+            "\\bnext\\s+(dev|build)\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "use cache",
+              "cache components",
+              "partial prerendering",
+              "PPR",
+              "cacheLife",
+              "cacheTag",
+              "updateTag",
+              "unstable_cache"
+            ],
+            "allOf": [
+              [
+                "cache",
+                "component"
+              ],
+              [
+                "cache",
+                "directive"
+              ],
+              [
+                "partial",
+                "prerender"
+              ]
+            ],
+            "anyOf": [
+              "revalidateTag",
+              "stale",
+              "revalidate",
+              "cache profile"
+            ],
+            "noneOf": [],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/next-forge/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/next-forge/SKILL.md",
+      "sourceMetadata": {
+        "name": "next-forge",
+        "description": "next-forge expert guidance — production-grade Turborepo monorepo SaaS starter by Vercel. Use when working in a next-forge project, scaffolding with `npx next-forge init`, or editing @repo/* workspace packages.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://next-forge.com/docs",
+            "https://github.com/haydenbleasel/next-forge"
+          ],
+          "pathPatterns": [
+            "pnpm-workspace.yaml",
+            "apps/app/**",
+            "apps/web/**",
+            "apps/api/**",
+            "apps/email/**",
+            "apps/docs/**",
+            "apps/studio/**",
+            "apps/storybook/**",
+            "packages/auth/**",
+            "packages/database/**",
+            "packages/design-system/**",
+            "packages/payments/**",
+            "packages/email/**",
+            "packages/analytics/**",
+            "packages/observability/**",
+            "packages/security/**",
+            "packages/ai/**",
+            "packages/cms/**",
+            "packages/collaboration/**",
+            "packages/feature-flags/**",
+            "packages/internationalization/**",
+            "packages/notifications/**",
+            "packages/rate-limit/**",
+            "packages/seo/**",
+            "packages/storage/**",
+            "packages/webhooks/**",
+            "packages/next-config/**",
+            "packages/typescript-config/**",
+            "**/keys.ts",
+            "**/env.ts",
+            "**/proxy.ts",
+            "biome.jsonc"
+          ],
+          "bashPatterns": [
+            "\\bnext-forge\\b",
+            "\\bnpx\\s+next-forge\\b",
+            "\\bpnpm\\s+migrate\\b",
+            "\\bpnpm\\s+bump-deps\\b",
+            "\\bpnpm\\s+bump-ui\\b",
+            "\\bprisma\\s+(generate|db\\s+push|format|studio)\\b",
+            "\\bstripe\\s+listen\\b",
+            "\\bnpx\\s+shadcn@latest\\s+add\\b.*-c\\s+packages/design-system\\b"
+          ],
+          "importPatterns": [
+            "@repo/auth",
+            "@repo/database",
+            "@repo/design-system",
+            "@repo/payments",
+            "@repo/email",
+            "@repo/analytics",
+            "@repo/observability",
+            "@repo/security",
+            "@repo/ai",
+            "@repo/cms",
+            "@repo/collaboration",
+            "@repo/feature-flags",
+            "@repo/internationalization",
+            "@repo/notifications",
+            "@repo/rate-limit",
+            "@repo/seo",
+            "@repo/storage",
+            "@repo/webhooks",
+            "@repo/next-config",
+            "@t3-oss/env-nextjs",
+            "@rescale/nemo"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "next-forge",
+              "next forge",
+              "@repo/"
+            ],
+            "allOf": [
+              [
+                "monorepo",
+                "saas",
+                "starter"
+              ],
+              [
+                "turborepo",
+                "clerk",
+                "stripe"
+              ]
+            ],
+            "anyOf": [
+              "saas starter",
+              "production monorepo",
+              "keys.ts",
+              "pnpm-workspace"
+            ],
+            "noneOf": [
+              "create-t3-app"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/next-upgrade/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/next-upgrade/SKILL.md",
+      "sourceMetadata": {
+        "name": "next-upgrade",
+        "description": "Upgrade Next.js to the latest version following official migration guides and codemods. Use when upgrading Next.js versions, running codemods, or migrating between major releases.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://nextjs.org/docs/app/guides/upgrading",
+            "https://nextjs.org/docs/app/guides/upgrading/codemods"
+          ],
+          "pathPatterns": [
+            "next.config.*",
+            "package.json"
+          ],
+          "bashPatterns": [
+            "\\bnpx\\s+@next/codemod\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bnext@",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bnext@",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bnext@",
+            "\\byarn\\s+add\\s+[^\\n]*\\bnext@"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "upgrade next",
+              "upgrade nextjs",
+              "migrate next",
+              "update next.js",
+              "next.js upgrade",
+              "nextjs migration",
+              "next codemod"
+            ],
+            "allOf": [
+              [
+                "upgrade",
+                "next"
+              ],
+              [
+                "migrate",
+                "next"
+              ],
+              [
+                "update",
+                "nextjs"
+              ]
+            ],
+            "anyOf": [
+              "breaking changes",
+              "codemod",
+              "migration guide",
+              "version upgrade"
+            ],
+            "noneOf": [],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/nextjs/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/nextjs/SKILL.md",
+      "sourceMetadata": {
+        "name": "nextjs",
+        "description": "Next.js App Router expert guidance. Use when building, debugging, or architecting Next.js applications — routing, Server Components, Server Actions, Cache Components, layouts, middleware/proxy, data fetching, rendering strategies, and deployment on Vercel.",
+        "metadata": {
+          "priority": 5,
+          "docs": [
+            "https://nextjs.org/docs",
+            "https://nextjs.org/docs/app"
+          ],
+          "sitemap": "https://nextjs.org/sitemap.xml",
+          "pathPatterns": [
+            "next.config.*",
+            "next-env.d.ts",
+            "app/**",
+            "pages/**",
+            "src/app/**",
+            "src/pages/**",
+            "tailwind.config.*",
+            "postcss.config.*",
+            "tsconfig.json",
+            "tsconfig.*.json",
+            "apps/*/app/**",
+            "apps/*/pages/**",
+            "apps/*/src/app/**",
+            "apps/*/src/pages/**",
+            "apps/*/next.config.*"
+          ],
+          "bashPatterns": [
+            "\\bnext\\s+(dev|build|start|lint)\\b",
+            "\\bnext\\s+experimental-analyze\\b",
+            "\\bnpx\\s+create-next-app\\b",
+            "\\bbunx\\s+create-next-app\\b",
+            "\\bnpm\\s+run\\s+(dev|build|start)\\b",
+            "\\bpnpm\\s+(dev|build)\\b",
+            "\\bbun\\s+run\\s+(dev|build)\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "next.js",
+              "nextjs",
+              "app router",
+              "server component",
+              "server action"
+            ],
+            "allOf": [
+              [
+                "middleware",
+                "next"
+              ],
+              [
+                "layout",
+                "route"
+              ]
+            ],
+            "anyOf": [
+              "pages router",
+              "getserversideprops",
+              "use server"
+            ],
+            "noneOf": [],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/observability/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/observability/SKILL.md",
+      "sourceMetadata": {
+        "name": "observability",
+        "description": "Vercel Observability expert guidance — Drains (logs, traces, speed insights, web analytics), Web Analytics, Speed Insights, runtime logs, custom events, OpenTelemetry integration, and monitoring dashboards. Use when instrumenting, debugging, or optimizing application performance and user experience on Vercel.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://vercel.com/docs/observability",
+            "https://vercel.com/docs/observability/otel-overview"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "instrumentation.ts",
+            "instrumentation.js",
+            "src/instrumentation.ts",
+            "src/instrumentation.js",
+            "app/layout.*",
+            "src/app/layout.*",
+            "pages/_app.*",
+            "src/pages/_app.*",
+            "apps/*/instrumentation.ts",
+            "apps/*/instrumentation.js",
+            "apps/*/app/layout.*",
+            "apps/*/src/app/layout.*",
+            "apps/*/pages/_app.*",
+            "apps/*/src/pages/_app.*",
+            "sentry.client.config.*",
+            "sentry.server.config.*",
+            "sentry.edge.config.*"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+logs?\\b",
+            "\\bvercel\\s+logs?\\s+.*--follow\\b",
+            "\\bvercel\\s+logs?\\s+.*--level\\b",
+            "\\bvercel\\s+logs?\\s+.*--since\\b",
+            "\\bcurl\\s+.*deployments.*events\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/analytics\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/analytics\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/analytics\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/analytics\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/speed-insights\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/speed-insights\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/speed-insights\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/speed-insights\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@sentry/nextjs\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@sentry/nextjs\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@sentry/nextjs\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@sentry/nextjs\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@sentry/node\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@sentry/node\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@sentry/node\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@sentry/node\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@datadog/browser-rum\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@datadog/browser-rum\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@datadog/browser-rum\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@datadog/browser-rum\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bcheckly\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bcheckly\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bcheckly\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bcheckly\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bnewrelic\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bnewrelic\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bnewrelic\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bnewrelic\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "add logging",
+              "add logs",
+              "set up logging",
+              "setup logging",
+              "configure logging",
+              "structured logging",
+              "log drain",
+              "log drains",
+              "vercel analytics",
+              "speed insights",
+              "web analytics",
+              "opentelemetry",
+              "otel",
+              "instrumentation",
+              "monitoring",
+              "set up monitoring",
+              "add observability",
+              "track errors",
+              "error tracking",
+              "sentry",
+              "datadog",
+              "check the logs",
+              "show me the error",
+              "what went wrong",
+              "where did it fail",
+              "show me the logs",
+              "find the error",
+              "why did it fail",
+              "debug the error"
+            ],
+            "allOf": [
+              [
+                "add",
+                "logging"
+              ],
+              [
+                "add",
+                "monitoring"
+              ],
+              [
+                "set up",
+                "logs"
+              ],
+              [
+                "configure",
+                "analytics"
+              ],
+              [
+                "vercel",
+                "logs"
+              ],
+              [
+                "vercel",
+                "analytics"
+              ],
+              [
+                "track",
+                "performance"
+              ],
+              [
+                "track",
+                "errors"
+              ]
+            ],
+            "anyOf": [
+              "logging",
+              "monitoring",
+              "analytics",
+              "observability",
+              "telemetry",
+              "traces",
+              "metrics",
+              "debug",
+              "debugging",
+              "stuck",
+              "hanging",
+              "hung",
+              "waiting",
+              "stalled",
+              "spinning",
+              "timeout",
+              "slow",
+              "pending",
+              "unresponsive"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/payments/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/payments/SKILL.md",
+      "sourceMetadata": {
+        "name": "payments",
+        "description": "Stripe payments integration guidance — native Vercel Marketplace setup, checkout sessions, webhook handling, subscription billing, and the Stripe SDK. Use when implementing payments, subscriptions, or processing transactions.",
+        "metadata": {
+          "priority": 5,
+          "docs": [
+            "https://docs.stripe.com",
+            "https://docs.stripe.com/payments/quickstart"
+          ],
+          "sitemap": "https://docs.stripe.com/sitemap.xml",
+          "pathPatterns": [
+            "app/api/webhook/stripe/**",
+            "app/api/webhooks/stripe/**",
+            "src/app/api/webhook/stripe/**",
+            "src/app/api/webhooks/stripe/**",
+            "pages/api/webhook/stripe.*",
+            "pages/api/webhooks/stripe.*",
+            "app/api/checkout/**",
+            "src/app/api/checkout/**",
+            "app/api/stripe/**",
+            "src/app/api/stripe/**",
+            "lib/stripe.*",
+            "src/lib/stripe.*",
+            "utils/stripe.*",
+            "src/utils/stripe.*"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bstripe\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bstripe\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bstripe\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bstripe\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@stripe/stripe-js\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@stripe/stripe-js\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@stripe/stripe-js\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@stripe/stripe-js\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@stripe/react-stripe-js\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@stripe/react-stripe-js\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@stripe/react-stripe-js\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@stripe/react-stripe-js\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/react-best-practices/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/react-best-practices/SKILL.md",
+      "sourceMetadata": {
+        "name": "react-best-practices",
+        "description": "React best-practices reviewer for TSX files. Triggers after editing multiple TSX components to run a condensed quality checklist covering component structure, hooks usage, accessibility, performance, and TypeScript patterns.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://react.dev/reference/react",
+            "https://react.dev/learn"
+          ],
+          "pathPatterns": [
+            "src/components/**/*.tsx",
+            "src/components/**/*.jsx",
+            "app/components/**/*.tsx",
+            "app/components/**/*.jsx",
+            "components/**/*.tsx",
+            "components/**/*.jsx",
+            "src/ui/**/*.tsx",
+            "lib/components/**/*.tsx"
+          ],
+          "bashPatterns": [],
+          "importPatterns": [
+            "react",
+            "react-dom"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/routing-middleware/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/routing-middleware/SKILL.md",
+      "sourceMetadata": {
+        "name": "routing-middleware",
+        "description": "Vercel Routing Middleware guidance — request interception before cache, rewrites, redirects, personalization. Works with any framework. Supports Edge, Node.js, and Bun runtimes. Use when intercepting requests at the platform level.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://nextjs.org/docs/app/building-your-application/routing/middleware",
+            "https://vercel.com/docs/routing-middleware"
+          ],
+          "sitemap": "https://nextjs.org/sitemap.xml",
+          "pathPatterns": [
+            "middleware.ts",
+            "middleware.js",
+            "middleware.mts",
+            "middleware.mjs",
+            "proxy.ts",
+            "proxy.js",
+            "proxy.mts",
+            "proxy.mjs",
+            "src/middleware.ts",
+            "src/middleware.js",
+            "src/middleware.mts",
+            "src/middleware.mjs",
+            "src/proxy.ts",
+            "src/proxy.js",
+            "src/proxy.mts",
+            "src/proxy.mjs",
+            "vercel.json",
+            "apps/*/vercel.json",
+            "vercel.ts",
+            "vercel.mts"
+          ],
+          "bashPatterns": [
+            "\\bnpx\\s+@vercel/config\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/runtime-cache/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/runtime-cache/SKILL.md",
+      "sourceMetadata": {
+        "name": "runtime-cache",
+        "description": "Vercel Runtime Cache API guidance — ephemeral per-region key-value cache with tag-based invalidation. Shared across Functions, Routing Middleware, and Builds. Use when implementing caching strategies beyond framework-level caching.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://nextjs.org/docs/app/building-your-application/caching"
+          ],
+          "sitemap": "https://nextjs.org/sitemap.xml",
+          "pathPatterns": [
+            "lib/cache/**",
+            "src/lib/cache/**",
+            "lib/cache.*",
+            "src/lib/cache.*"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/functions\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/functions\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/functions\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/functions\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/satori/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/satori/SKILL.md",
+      "sourceMetadata": {
+        "name": "satori",
+        "description": "Expert guidance for Satori — Vercel's library that converts HTML and CSS to SVG, commonly used to generate dynamic OG images for Next.js and other frameworks.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://github.com/vercel/satori",
+            "https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image"
+          ],
+          "sitemap": "https://nextjs.org/sitemap.xml",
+          "pathPatterns": [
+            "app/**/og/**",
+            "app/**/og.*",
+            "app/**/opengraph-image.*",
+            "app/**/twitter-image.*",
+            "src/app/**/og/**",
+            "src/app/**/og.*",
+            "src/app/**/opengraph-image.*",
+            "src/app/**/twitter-image.*",
+            "pages/api/og.*",
+            "pages/api/og/**",
+            "src/pages/api/og.*",
+            "src/pages/api/og/**",
+            "apps/*/app/**/og/**",
+            "apps/*/app/**/og.*",
+            "apps/*/app/**/opengraph-image.*",
+            "apps/*/app/**/twitter-image.*"
+          ],
+          "importPatterns": [
+            "satori",
+            "satori/wasm",
+            "@vercel/og",
+            "next/og"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bsatori\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bsatori\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bsatori\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bsatori\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/og\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/og\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/og\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/og\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shadcn/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shadcn/SKILL.md",
+      "sourceMetadata": {
+        "name": "shadcn",
+        "description": "shadcn/ui expert guidance — CLI, component installation, composition patterns, custom registries, theming, Tailwind CSS integration, and high-quality interface design. Use when initializing shadcn, adding components, composing product UI, building custom registries, configuring themes, or troubleshooting component issues.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://ui.shadcn.com/docs",
+            "https://ui.shadcn.com/docs/components"
+          ],
+          "pathPatterns": [
+            "components.json",
+            "components/ui/**",
+            "src/components/ui/**",
+            "apps/*/components/ui/**",
+            "apps/*/src/components/ui/**",
+            "packages/*/components/ui/**",
+            "packages/*/src/components/ui/**"
+          ],
+          "bashPatterns": [
+            "\\bnpx\\s+shadcn\\b",
+            "\\bnpx\\s+shadcn@latest\\s+(init|add|build|search|list|migrate|info|docs|view)\\b",
+            "\\bnpx\\s+create-next-app\\b",
+            "\\bbunx\\s+create-next-app\\b",
+            "\\bpnpm\\s+create\\s+next-app\\b",
+            "\\bnpm\\s+create\\s+next-app\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/sign-in-with-vercel/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/sign-in-with-vercel/SKILL.md",
+      "sourceMetadata": {
+        "name": "sign-in-with-vercel",
+        "description": "Sign in with Vercel guidance — OAuth 2.0/OIDC identity provider for user authentication via Vercel accounts. Use when implementing user login with Vercel as the identity provider.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://vercel.com/docs/sign-in-with-vercel"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "app/api/auth/**",
+            "app/login/**",
+            "src/app/api/auth/**",
+            "src/app/login/**",
+            "pages/api/auth/**"
+          ],
+          "bashPatterns": []
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/swr/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/swr/SKILL.md",
+      "sourceMetadata": {
+        "name": "swr",
+        "description": "SWR data-fetching expert guidance. Use when building React apps with client-side data fetching, caching, revalidation, mutations, optimistic UI, pagination, or infinite loading using the SWR library.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://swr.vercel.app/docs"
+          ],
+          "sitemap": "https://swr.vercel.app/sitemap.xml",
+          "pathPatterns": [
+            "lib/fetcher.*",
+            "src/lib/fetcher.*",
+            "utils/fetcher.*",
+            "src/utils/fetcher.*",
+            "hooks/use*SWR*",
+            "src/hooks/use*SWR*",
+            "hooks/useFetch*",
+            "src/hooks/useFetch*"
+          ],
+          "importPatterns": [
+            "swr",
+            "swr/*"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bswr\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bswr\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bswr\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bswr\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "swr",
+              "useswr",
+              "stale-while-revalidate"
+            ],
+            "allOf": [
+              [
+                "data fetching",
+                "client"
+              ],
+              [
+                "cache",
+                "revalidat"
+              ]
+            ],
+            "anyOf": [
+              "mutation",
+              "optimistic",
+              "infinite loading",
+              "pagination"
+            ],
+            "noneOf": [],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/turbopack/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/turbopack/SKILL.md",
+      "sourceMetadata": {
+        "name": "turbopack",
+        "description": "Turbopack expert guidance. Use when configuring the Next.js bundler, optimizing HMR, debugging build issues, or understanding the Turbopack vs Webpack differences.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://turbo.build/pack/docs",
+            "https://nextjs.org/docs/architecture/turbopack"
+          ],
+          "sitemap": "https://turbo.build/sitemap.xml",
+          "pathPatterns": [
+            "next.config.*"
+          ],
+          "bashPatterns": [
+            "\\bnext\\s+dev\\s+--turbo\\b",
+            "\\bnext\\s+dev\\s+--turbopack\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/turborepo/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/turborepo/SKILL.md",
+      "sourceMetadata": {
+        "name": "turborepo",
+        "description": "Turborepo expert guidance. Use when setting up or optimizing monorepo builds, configuring task caching, remote caching, parallel execution, or the --affected flag for incremental CI.",
+        "metadata": {
+          "priority": 5,
+          "docs": [
+            "https://turborepo.dev/docs"
+          ],
+          "sitemap": "https://turborepo.dev/sitemap.xml",
+          "pathPatterns": [
+            "turbo.json",
+            "turbo/**"
+          ],
+          "bashPatterns": [
+            "\\bturbo\\s+(run|build|test|lint|dev)\\b",
+            "\\bnpx\\s+turbo\\b",
+            "\\bbunx\\s+turbo\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/v0-dev/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/v0-dev/SKILL.md",
+      "sourceMetadata": {
+        "name": "v0-dev",
+        "description": "v0 by Vercel expert guidance. Use when discussing AI code generation, generating UI components from prompts, v0 CLI usage, v0 SDK/API integration, or integrating v0 into development workflows with GitHub and Vercel deployment.",
+        "metadata": {
+          "priority": 5,
+          "docs": [
+            "https://v0.dev/docs",
+            "https://vercel.com/docs/v0"
+          ],
+          "sitemap": "https://v0.dev/sitemap.xml",
+          "pathPatterns": [],
+          "importPatterns": [
+            "@v0/sdk",
+            "v0"
+          ],
+          "bashPatterns": [
+            "\\bnpx\\s+v0\\b",
+            "\\bbunx\\s+v0\\b",
+            "\\bv0\\s+(generate|dev|chat)\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "generate with v0",
+              "v0 components",
+              "use v0",
+              "v0 generate"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/vercel-agent/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/vercel-agent/SKILL.md",
+      "sourceMetadata": {
+        "name": "vercel-agent",
+        "description": "Vercel Agent guidance — AI-powered code review, incident investigation, and SDK installation. Automates PR analysis and anomaly debugging. Use when configuring or understanding Vercel's AI development tools.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://vercel.com/docs",
+            "https://sdk.vercel.ai/docs"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            ".github/workflows/vercel*.yml",
+            ".github/workflows/vercel*.yaml",
+            ".github/workflows/deploy*.yml",
+            ".github/workflows/deploy*.yaml",
+            ".github/workflows/preview*.yml",
+            ".github/workflows/preview*.yaml"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+agent\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/vercel-api/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/vercel-api/SKILL.md",
+      "sourceMetadata": {
+        "name": "vercel-api",
+        "description": "Vercel app and REST API expert guidance. Use when the agent needs live access to Vercel projects, deployments, environment variables, domains, logs, or documentation through the connected Vercel app or REST API.",
+        "metadata": {
+          "priority": 7,
+          "docs": [
+            "https://vercel.com/docs/rest-api"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            ".mcp.json",
+            ".vercel/project.json"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/sdk\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/sdk\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/sdk\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/sdk\\b",
+            "\\bmcp\\.vercel\\.com\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/vercel-cli/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/vercel-cli/SKILL.md",
+      "sourceMetadata": {
+        "name": "vercel-cli",
+        "description": "Vercel CLI expert guidance. Use when deploying, managing environment variables, linking projects, viewing logs, querying metrics, managing domains, or interacting with the Vercel platform from the command line.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://vercel.com/docs/cli"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "vercel.json",
+            "vercel.ts",
+            ".vercel/**",
+            ".vercelignore",
+            "now.json"
+          ],
+          "bashPatterns": [
+            "^\\s*vercel(?:\\s|$)",
+            "^\\s*vc(?:\\s|$)",
+            "\\bnpx\\s+vercel\\b",
+            "\\bpnpm\\s+dlx\\s+vercel\\b",
+            "\\bbunx\\s+vercel\\b",
+            "\\byarn\\s+dlx\\s+vercel\\b",
+            "\\bnpx\\s+@vercel/config\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "check deployment",
+              "check deploy",
+              "deployment status",
+              "deploy status",
+              "vercel logs",
+              "vercel metrics",
+              "deployment logs",
+              "deploy logs",
+              "vercel inspect",
+              "is it deployed",
+              "deploy failing",
+              "deploy failed",
+              "deployment error",
+              "check vercel",
+              "vercel status"
+            ],
+            "allOf": [
+              [
+                "check",
+                "deployment"
+              ],
+              [
+                "check",
+                "deploy"
+              ],
+              [
+                "vercel",
+                "status"
+              ],
+              [
+                "vercel",
+                "logs"
+              ],
+              [
+                "vercel",
+                "metrics"
+              ],
+              [
+                "deploy",
+                "error"
+              ],
+              [
+                "deploy",
+                "failed"
+              ],
+              [
+                "deploy",
+                "stuck"
+              ]
+            ],
+            "anyOf": [
+              "deployment",
+              "deploy",
+              "vercel",
+              "production"
+            ],
+            "noneOf": [
+              "terraform",
+              "aws deploy",
+              "heroku"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/vercel-connect/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/vercel-connect/SKILL.md",
+      "sourceMetadata": {
+        "name": "vercel-connect",
+        "description": "Vercel Connect expert guidance — securely obtain scoped OAuth tokens for third-party services (Slack, GitHub, MCP servers, OAuth, Snowflake) on behalf of apps or users via Vercel OIDC. Use when wiring up third-party API access, connecting to MCP servers, sending Slack messages, accessing GitHub APIs, receiving webhook events from Slack/Linear/GitHub and forwarding them to your agents and apps, or building Eve agent connections.",
+        "metadata": {
+          "priority": 5,
+          "docs": [
+            "https://vercel.com/docs/connect"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "agent/connections/**",
+            "agent/channels/**"
+          ],
+          "importPatterns": [
+            "@vercel/connect",
+            "@vercel/connect/eve",
+            "@vercel/connect/authjs",
+            "@vercel/connect/betterauth"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+connect\\b",
+            "\\bvc\\s+connect\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/connect\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/connect\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/connect\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/connect\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "vercel connect",
+              "slack token",
+              "slack bot token",
+              "post to slack",
+              "send slack message",
+              "github oauth token",
+              "linear oauth",
+              "oauth token for",
+              "third-party token",
+              "connect to slack",
+              "connect to github",
+              "connect to mcp",
+              "mcp connection",
+              "mcp server",
+              "snowflake connection"
+            ],
+            "allOf": [
+              [
+                "slack",
+                "token"
+              ],
+              [
+                "github",
+                "token"
+              ],
+              [
+                "oauth",
+                "token"
+              ],
+              [
+                "mcp",
+                "connect"
+              ],
+              [
+                "mcp",
+                "server"
+              ]
+            ],
+            "anyOf": [
+              "vercel connect",
+              "@vercel/connect",
+              "oauth",
+              "mcp"
+            ],
+            "noneOf": [
+              "supabase auth",
+              "clerk",
+              "auth0"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/vercel-firewall/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/vercel-firewall/SKILL.md",
+      "sourceMetadata": {
+        "name": "vercel-firewall",
+        "description": "Vercel Firewall expert guidance — automatic DDoS mitigation, the Vercel WAF (custom rules, IP blocking, managed rulesets, rate limiting), Attack Mode, system bypass, bot management, and the `vercel firewall` CLI. Use when configuring platform-level security, responding to attacks, or staging firewall rules.",
+        "metadata": {
+          "priority": 7,
+          "docs": [
+            "https://vercel.com/docs/vercel-firewall",
+            "https://vercel.com/docs/cli/firewall"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+firewall\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "vercel firewall",
+              "vercel waf",
+              "attack mode",
+              "ddos protection",
+              "ip block",
+              "managed ruleset",
+              "bot protection",
+              "system bypass",
+              "rate limit rule"
+            ],
+            "allOf": [
+              [
+                "firewall",
+                "vercel"
+              ],
+              [
+                "waf",
+                "vercel"
+              ],
+              [
+                "ddos",
+                "vercel"
+              ],
+              [
+                "challenge",
+                "vercel"
+              ],
+              [
+                "rate limit",
+                "vercel"
+              ],
+              [
+                "system bypass",
+                "vercel"
+              ],
+              [
+                "ip block",
+                "vercel"
+              ]
+            ],
+            "noneOf": [],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/vercel-flags/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/vercel-flags/SKILL.md",
+      "sourceMetadata": {
+        "name": "vercel-flags",
+        "description": "Vercel Flags guidance — feature flags platform with unified dashboard, Flags Explorer, gradual rollouts, A/B testing, and provider adapters. Use when implementing feature flags, experimentation, or staged rollouts.",
+        "metadata": {
+          "priority": 6,
+          "docs": [
+            "https://vercel.com/docs/workflow-collaboration/feature-flags",
+            "https://flags-sdk.dev"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "flags.ts",
+            "flags.js",
+            "src/flags.ts",
+            "src/flags.js",
+            "lib/flags/**",
+            "src/lib/flags/**",
+            "lib/flags.*",
+            "src/lib/flags.*",
+            ".well-known/vercel/flags/**",
+            "app/.well-known/vercel/flags/**",
+            "src/app/.well-known/vercel/flags/**"
+          ],
+          "importPatterns": [
+            "flags",
+            "flags/next",
+            "flags/sveltekit",
+            "@vercel/flags",
+            "@vercel/flags/next",
+            "@vercel/flags/sveltekit",
+            "@flags-sdk/*"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bflags\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bflags\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bflags\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bflags\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/flags\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/flags\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/flags\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/flags\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@flags-sdk/",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@flags-sdk/",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@flags-sdk/",
+            "\\byarn\\s+add\\s+[^\\n]*@flags-sdk/"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/vercel-functions/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/vercel-functions/SKILL.md",
+      "sourceMetadata": {
+        "name": "vercel-functions",
+        "description": "Vercel Functions expert guidance — Serverless Functions, Edge Functions, Fluid Compute, streaming, Cron Jobs, and runtime configuration. Use when configuring, debugging, or optimizing server-side code running on Vercel.",
+        "metadata": {
+          "priority": 8,
+          "docs": [
+            "https://vercel.com/docs/functions",
+            "https://vercel.com/docs/functions/runtimes",
+            "https://vercel.com/docs/functions/websockets"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "api/**/*.*",
+            "pages/api/**",
+            "src/pages/api/**",
+            "app/**/route.*",
+            "src/app/**/route.*",
+            "apps/*/api/**/*.*",
+            "apps/*/app/**/route.*",
+            "apps/*/src/app/**/route.*",
+            "apps/*/pages/api/**",
+            "vercel.json",
+            "apps/*/vercel.json"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+dev\\b",
+            "\\bvercel\\s+logs\\b"
+          ],
+          "importPatterns": [
+            "ws",
+            "socket.io",
+            "socket.io-client"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "websocket",
+              "websockets",
+              "web socket",
+              "socket.io",
+              "long polling",
+              "long-polling"
+            ],
+            "allOf": [],
+            "anyOf": [
+              "realtime",
+              "bidirectional",
+              "ws server",
+              "polling",
+              "server-sent events"
+            ],
+            "noneOf": [],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/vercel-queues/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/vercel-queues/SKILL.md",
+      "sourceMetadata": {
+        "name": "vercel-queues",
+        "description": "Vercel Queues guidance (public beta) — durable event streaming with topics, consumer groups, retries, and delayed delivery. $0.60/1M ops. Powers Workflow DevKit. Use when building async processing, fan-out patterns, or event-driven architectures.",
+        "metadata": {
+          "priority": 5,
+          "docs": [
+            "https://vercel.com/docs/workflow-collaboration/conformance"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "lib/queues/**",
+            "src/lib/queues/**",
+            "lib/queues.*",
+            "lib/queue.*",
+            "src/lib/queues.*",
+            "src/lib/queue.*",
+            "workflows/*.ts",
+            "workflows/*.mts",
+            "src/workflows/*.ts",
+            "src/workflows/*.mts",
+            "app/api/workflow/**",
+            "src/app/api/workflow/**",
+            "app/api/workflows/**",
+            "src/app/api/workflows/**",
+            "vercel.ts",
+            "vercel.mts"
+          ],
+          "importPatterns": [
+            "workflow",
+            "@vercel/workflow"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/queue\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/queue\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/queue\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/queue\\b"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/vercel-sandbox/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/vercel-sandbox/SKILL.md",
+      "sourceMetadata": {
+        "name": "vercel-sandbox",
+        "description": "Vercel Sandbox guidance — ephemeral Firecracker microVMs for running untrusted code safely. Supports AI agents, code generation, and experimentation. Use when executing user-generated or AI-generated code in isolation.",
+        "metadata": {
+          "priority": 4,
+          "docs": [
+            "https://vercel.com/docs/sandbox"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [],
+          "importPatterns": [
+            "@vercel/sandbox"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/sandbox\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/sandbox\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/sandbox\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/sandbox\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "@vercel/sandbox",
+              "sandbox",
+              "code sandbox",
+              "vercel sandbox",
+              "isolated environment",
+              "sandboxed execution"
+            ],
+            "allOf": [
+              [
+                "sandbox",
+                "code"
+              ],
+              [
+                "sandbox",
+                "execute"
+              ],
+              [
+                "sandbox",
+                "run"
+              ],
+              [
+                "sandbox",
+                "isolated"
+              ],
+              [
+                "sandbox",
+                "safe"
+              ],
+              [
+                "sandbox",
+                "environment"
+              ],
+              [
+                "isolated",
+                "execute"
+              ],
+              [
+                "isolated",
+                "code"
+              ],
+              [
+                "isolated",
+                "environment"
+              ],
+              [
+                "isolated",
+                "run"
+              ],
+              [
+                "safe",
+                "execute"
+              ],
+              [
+                "safe",
+                "code"
+              ],
+              [
+                "untrusted",
+                "code"
+              ],
+              [
+                "untrusted",
+                "execute"
+              ],
+              [
+                "code",
+                "runner"
+              ],
+              [
+                "code",
+                "playground"
+              ],
+              [
+                "execute",
+                "safely"
+              ],
+              [
+                "run",
+                "safely"
+              ],
+              [
+                "run",
+                "isolation"
+              ],
+              [
+                "execute",
+                "isolation"
+              ],
+              [
+                "ffmpeg",
+                "process"
+              ],
+              [
+                "ffmpeg",
+                "convert"
+              ],
+              [
+                "ffmpeg",
+                "compress"
+              ],
+              [
+                "student",
+                "code"
+              ],
+              [
+                "student",
+                "execute"
+              ],
+              [
+                "student",
+                "run"
+              ]
+            ],
+            "anyOf": [
+              "sandbox",
+              "isolated",
+              "isolation",
+              "untrusted",
+              "safely",
+              "microvm",
+              "ffmpeg",
+              "playground"
+            ],
+            "noneOf": [
+              "iframe sandbox",
+              "sandbox attribute",
+              "codesandbox.io",
+              "stackblitz"
+            ],
+            "minScore": 4
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/vercel-services/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/vercel-services/SKILL.md",
+      "sourceMetadata": {
+        "name": "vercel-services",
+        "description": "Vercel Services — deploy multiple services within a single Vercel project. Use for monorepo layouts or when combining a backend (Python, Go) with a frontend (Next.js, Vite) in one deployment.",
+        "metadata": {
+          "priority": 7,
+          "docs": [
+            "https://vercel.com/docs/services"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "backend/**",
+            "backend/main.py",
+            "backend/main.go",
+            "backend/go.mod",
+            "backend/pyproject.toml",
+            "backend/requirements.txt",
+            "frontend/**",
+            "apps/*/backend/**",
+            "apps/*/frontend/**",
+            "services/*/vercel.json",
+            "*/pyproject.toml",
+            "*/go.mod"
+          ],
+          "bashPatterns": [
+            "\\bvercel\\s+dev\\b.*-L",
+            "\\bpip\\s+install\\b.*fastapi",
+            "\\buv\\s+(sync|pip|run)\\b",
+            "\\bgo\\s+(run|build|mod)\\b",
+            "\\bpython\\s+-m\\s+uvicorn\\b",
+            "\\buvicorn\\b"
+          ],
+          "importPatterns": [
+            "fastapi"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "services api",
+              "vercel services",
+              "multi-service",
+              "python backend",
+              "go backend",
+              "fastapi",
+              "deploy backend",
+              "backend and frontend",
+              "multiple services"
+            ],
+            "allOf": [
+              [
+                "backend",
+                "frontend"
+              ],
+              [
+                "python",
+                "vercel"
+              ],
+              [
+                "go",
+                "vercel"
+              ],
+              [
+                "backend",
+                "deploy"
+              ],
+              [
+                "service",
+                "monorepo"
+              ],
+              [
+                "fastapi",
+                "deploy"
+              ]
+            ],
+            "anyOf": [
+              "backend",
+              "monorepo",
+              "service",
+              "python",
+              "golang"
+            ],
+            "noneOf": [
+              "turborepo cache",
+              "turbo.json",
+              "aws lambda",
+              "docker compose"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/vercel-storage/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/vercel-storage/SKILL.md",
+      "sourceMetadata": {
+        "name": "vercel-storage",
+        "description": "Vercel storage expert guidance — Blob, Edge Config, and Marketplace storage (Neon Postgres, Upstash Redis). Use when choosing, configuring, or using data storage with Vercel applications.",
+        "metadata": {
+          "priority": 7,
+          "docs": [
+            "https://vercel.com/docs/storage"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "lib/blob/**",
+            "lib/storage/**",
+            "src/lib/blob/**",
+            "src/lib/storage/**",
+            "lib/blob.*",
+            "lib/storage.*",
+            "lib/edge-config.*",
+            "src/lib/blob.*",
+            "src/lib/storage.*",
+            "src/lib/edge-config.*",
+            "supabase/**",
+            "lib/supabase.*",
+            "src/lib/supabase.*",
+            "prisma/schema.prisma",
+            "prisma/**"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/blob\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/blob\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/blob\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/blob\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/edge-config\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/edge-config\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/edge-config\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/edge-config\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@neondatabase/serverless\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@neondatabase/serverless\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@neondatabase/serverless\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@neondatabase/serverless\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@upstash/redis\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@upstash/redis\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@upstash/redis\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@upstash/redis\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/kv\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/kv\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/kv\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/kv\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/postgres\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/postgres\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/postgres\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/postgres\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@supabase/supabase-js\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@supabase/supabase-js\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@supabase/supabase-js\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@supabase/supabase-js\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@supabase/ssr\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@supabase/ssr\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@supabase/ssr\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@supabase/ssr\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@prisma/client\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@prisma/client\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@prisma/client\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@prisma/client\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bmongodb\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bmongodb\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bmongodb\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bmongodb\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bconvex\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bconvex\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bconvex\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bconvex\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@libsql/client\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@libsql/client\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@libsql/client\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@libsql/client\\b"
+          ],
+          "importPatterns": [
+            "@vercel/blob",
+            "@vercel/edge-config",
+            "@neondatabase/serverless",
+            "@upstash/redis",
+            "@vercel/kv",
+            "@vercel/postgres",
+            "@supabase/supabase-js",
+            "@prisma/client"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/verification/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/verification/SKILL.md",
+      "sourceMetadata": {
+        "name": "verification",
+        "description": "Full-story verification — infers what the user is building, then verifies the complete flow end-to-end: browser → API → data → response. Triggers on dev server start and 'why isn't this working' signals.",
+        "metadata": {
+          "priority": 7,
+          "docs": [
+            "https://vercel.com/docs/projects/project-configuration"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [],
+          "bashPatterns": [
+            "\\bnext\\s+dev\\b",
+            "\\bnpm\\s+run\\s+dev\\b",
+            "\\bpnpm\\s+dev\\b",
+            "\\bbun\\s+run\\s+dev\\b",
+            "\\byarn\\s+dev\\b",
+            "\\bvite\\s*(dev)?\\b",
+            "\\bvercel\\s+dev\\b",
+            "\\bastro\\s+dev\\b"
+          ],
+          "importPatterns": [],
+          "promptSignals": {
+            "phrases": [
+              "verify the flow",
+              "verify everything works",
+              "test the whole thing",
+              "does it actually work",
+              "check end to end",
+              "end to end test",
+              "why isn't it working right",
+              "why doesn't it work",
+              "it's not working correctly",
+              "something's off",
+              "not quite right",
+              "almost works but",
+              "works locally but",
+              "verify the feature",
+              "make sure it works",
+              "full verification"
+            ],
+            "allOf": [
+              [
+                "verify",
+                "flow"
+              ],
+              [
+                "verify",
+                "works"
+              ],
+              [
+                "check",
+                "everything"
+              ],
+              [
+                "test",
+                "end",
+                "end"
+              ],
+              [
+                "not",
+                "working",
+                "right"
+              ],
+              [
+                "something",
+                "off"
+              ],
+              [
+                "almost",
+                "works"
+              ],
+              [
+                "make",
+                "sure",
+                "works"
+              ]
+            ],
+            "anyOf": [
+              "verify",
+              "verification",
+              "end-to-end",
+              "full flow",
+              "works",
+              "working"
+            ],
+            "noneOf": [
+              "unit test",
+              "jest",
+              "vitest",
+              "playwright test",
+              "cypress test"
+            ],
+            "minScore": 6
+          }
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/workflow/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/workflow/SKILL.md",
+      "sourceMetadata": {
+        "name": "workflow",
+        "description": "Vercel Workflow DevKit (WDK) expert guidance. Use when building durable workflows, long-running tasks, API routes or agents that need pause/resume, retries, step-based execution, or crash-safe orchestration with Vercel Workflow.",
+        "metadata": {
+          "priority": 9,
+          "docs": [
+            "https://vercel.com/docs/workflow",
+            "https://useworkflow.dev"
+          ],
+          "sitemap": "https://vercel.com/sitemap/docs.xml",
+          "pathPatterns": [
+            "lib/workflow/**",
+            "src/lib/workflow/**",
+            "lib/workflow.*",
+            "src/lib/workflow.*",
+            "workflow.*",
+            "*workflow*"
+          ],
+          "importPatterns": [
+            "@vercel/workflow",
+            "workflow",
+            "@workflow/*",
+            "*workflow*"
+          ],
+          "bashPatterns": [
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/workflow\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@vercel/workflow\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@vercel/workflow\\b",
+            "\\byarn\\s+add\\s+[^\\n]*@vercel/workflow\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*\\bworkflow\\b",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*\\bworkflow\\b",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*\\bworkflow\\b",
+            "\\byarn\\s+add\\s+[^\\n]*\\bworkflow\\b",
+            "\\bnpm\\s+(install|i|add)\\s+[^\\n]*@workflow/",
+            "\\bpnpm\\s+(install|i|add)\\s+[^\\n]*@workflow/",
+            "\\bbun\\s+(install|i|add)\\s+[^\\n]*@workflow/",
+            "\\byarn\\s+add\\s+[^\\n]*@workflow/",
+            "\\bnpx\\s+workflow(?:@latest)?\\b",
+            "\\bbunx\\s+workflow(?:@latest)?\\b"
+          ],
+          "promptSignals": {
+            "phrases": [
+              "vercel workflow",
+              "workflow devkit",
+              "durable workflow",
+              "durable execution",
+              "durable function",
+              "durable pipeline",
+              "durable process",
+              "durable agent",
+              "durable chat",
+              "step function",
+              "step functions",
+              "use workflow",
+              "use step",
+              "multi-step pipeline",
+              "multi step pipeline",
+              "multi-step process",
+              "multi step process",
+              "multi-step creation",
+              "multi-step generation",
+              "processing pipeline",
+              "creation pipeline",
+              "generation pipeline",
+              "content pipeline",
+              "production pipeline",
+              "approval pipeline",
+              "ingestion pipeline",
+              "streams progress",
+              "stream progress",
+              "streams each phase",
+              "streams each step",
+              "streams each",
+              "stream each",
+              "survive page reload",
+              "survive page reloads",
+              "survive a crash",
+              "survive crashes",
+              "survive network",
+              "fault-tolerant",
+              "fault tolerant",
+              "crash-safe",
+              "crash safe",
+              "automatically retry",
+              "auto retry",
+              "retry on failure",
+              "retry on error",
+              "reliable and retry",
+              "reliable processing",
+              "individually reliable",
+              "each step reliable",
+              "each step should be reliable",
+              "steps should be reliable",
+              "reliable with automatic retry",
+              "reliable with retry",
+              "retry on transient",
+              "transient failures",
+              "session persistence",
+              "session should persist",
+              "session survives",
+              "reconnect automatically",
+              "auto reconnect",
+              "reconnect if the network",
+              "reconnect on disconnect",
+              "resume after failure",
+              "resume after crash",
+              "resume on reconnect",
+              "human-in-the-loop",
+              "human in the loop",
+              "wait for approval",
+              "approval step",
+              "approval before",
+              "editorial approval",
+              "manual approval",
+              "wait for user",
+              "pause until",
+              "wait for response",
+              "callback url",
+              "webhook callback",
+              "chat should survive",
+              "chat survives",
+              "conversation should persist",
+              "conversation persists",
+              "conversation should survive",
+              "sequential chain",
+              "email chain",
+              "chain of emails",
+              "chain of steps",
+              "chain engine",
+              "chain with triggers",
+              "trigger chain",
+              "triggered chain",
+              "webhook chain",
+              "webhook pipeline",
+              "webhook orchestration",
+              "multi-service trigger",
+              "cross-service trigger",
+              "various triggers",
+              "different triggers",
+              "triggers from different",
+              "triggers from various",
+              "sequential steps",
+              "sequential pipeline",
+              "sequential process",
+              "sequential emails",
+              "escalation chain",
+              "escalation pipeline",
+              "state machine",
+              "step-based",
+              "step based",
+              "delay between steps",
+              "delay between emails",
+              "delayed steps",
+              "conditional steps",
+              "skip steps",
+              "branch based on",
+              "wait for webhook",
+              "wait for trigger",
+              "wait for event",
+              "orchestrate emails",
+              "orchestrate webhooks",
+              "orchestrate services",
+              "chain across services",
+              "workflow stuck",
+              "workflow hung",
+              "workflow hanging",
+              "workflow waiting",
+              "workflow failing",
+              "workflow timeout",
+              "workflow not running",
+              "workflow error",
+              "check workflow",
+              "workflow logs",
+              "workflow run status",
+              "debug workflow",
+              "workflow not finishing",
+              "workflow not responding",
+              "workflow stalled",
+              "workflow pending",
+              "step is stuck",
+              "step is hanging",
+              "why is my workflow",
+              "workflow run",
+              "step failed",
+              "run status",
+              "run failed",
+              "run logs",
+              "workflow run failed",
+              "workflow step failed"
+            ],
+            "allOf": [
+              [
+                "workflow",
+                "durable"
+              ],
+              [
+                "workflow",
+                "retry"
+              ],
+              [
+                "workflow",
+                "resume"
+              ],
+              [
+                "pause",
+                "resume"
+              ],
+              [
+                "survive",
+                "crash"
+              ],
+              [
+                "survive",
+                "reload"
+              ],
+              [
+                "survive",
+                "disconnect"
+              ],
+              [
+                "pipeline",
+                "stream"
+              ],
+              [
+                "pipeline",
+                "step"
+              ],
+              [
+                "pipeline",
+                "durable"
+              ],
+              [
+                "pipeline",
+                "reliable"
+              ],
+              [
+                "pipeline",
+                "retry"
+              ],
+              [
+                "multi-step",
+                "stream"
+              ],
+              [
+                "multi-step",
+                "reliable"
+              ],
+              [
+                "generation",
+                "pipeline"
+              ],
+              [
+                "creation",
+                "pipeline"
+              ],
+              [
+                "process",
+                "stream"
+              ],
+              [
+                "process",
+                "reliable"
+              ],
+              [
+                "process",
+                "retry"
+              ],
+              [
+                "retry",
+                "failure"
+              ],
+              [
+                "retry",
+                "error"
+              ],
+              [
+                "retry",
+                "automatically"
+              ],
+              [
+                "retry",
+                "transient"
+              ],
+              [
+                "reliable",
+                "retry"
+              ],
+              [
+                "individually",
+                "reliable"
+              ],
+              [
+                "steps",
+                "reliable"
+              ],
+              [
+                "sandbox",
+                "reliable"
+              ],
+              [
+                "sandbox",
+                "retry"
+              ],
+              [
+                "reconnect",
+                "network"
+              ],
+              [
+                "reconnect",
+                "drop"
+              ],
+              [
+                "reconnect",
+                "disconnect"
+              ],
+              [
+                "session",
+                "persist"
+              ],
+              [
+                "session",
+                "survive"
+              ],
+              [
+                "session",
+                "reload"
+              ],
+              [
+                "session",
+                "reconnect"
+              ],
+              [
+                "chat",
+                "survive"
+              ],
+              [
+                "chat",
+                "persist"
+              ],
+              [
+                "chat",
+                "reconnect"
+              ],
+              [
+                "chat",
+                "durable"
+              ],
+              [
+                "chat",
+                "fault"
+              ],
+              [
+                "conversation",
+                "persist"
+              ],
+              [
+                "conversation",
+                "survive"
+              ],
+              [
+                "approval",
+                "wait"
+              ],
+              [
+                "approval",
+                "human"
+              ],
+              [
+                "each",
+                "step"
+              ],
+              [
+                "each",
+                "phase"
+              ],
+              [
+                "each",
+                "stage"
+              ],
+              [
+                "step",
+                "reliable"
+              ],
+              [
+                "step",
+                "retry"
+              ],
+              [
+                "chain",
+                "trigger"
+              ],
+              [
+                "chain",
+                "sequential"
+              ],
+              [
+                "chain",
+                "email"
+              ],
+              [
+                "chain",
+                "webhook"
+              ],
+              [
+                "chain",
+                "delay"
+              ],
+              [
+                "chain",
+                "step"
+              ],
+              [
+                "chain",
+                "escalat"
+              ],
+              [
+                "sequential",
+                "trigger"
+              ],
+              [
+                "sequential",
+                "email"
+              ],
+              [
+                "sequential",
+                "step"
+              ],
+              [
+                "sequential",
+                "webhook"
+              ],
+              [
+                "trigger",
+                "orchestrat"
+              ],
+              [
+                "trigger",
+                "service"
+              ],
+              [
+                "trigger",
+                "delay"
+              ],
+              [
+                "trigger",
+                "sequential"
+              ],
+              [
+                "webhook",
+                "chain"
+              ],
+              [
+                "webhook",
+                "orchestrat"
+              ],
+              [
+                "webhook",
+                "pipeline"
+              ],
+              [
+                "webhook",
+                "sequential"
+              ],
+              [
+                "email",
+                "trigger"
+              ],
+              [
+                "email",
+                "pipeline"
+              ],
+              [
+                "email",
+                "sequential"
+              ],
+              [
+                "email",
+                "delay"
+              ],
+              [
+                "email",
+                "escalat"
+              ],
+              [
+                "escalat",
+                "trigger"
+              ],
+              [
+                "escalat",
+                "step"
+              ],
+              [
+                "escalat",
+                "email"
+              ],
+              [
+                "state",
+                "machine"
+              ],
+              [
+                "conditional",
+                "step"
+              ],
+              [
+                "conditional",
+                "skip"
+              ],
+              [
+                "branch",
+                "condition"
+              ],
+              [
+                "wait",
+                "webhook"
+              ],
+              [
+                "wait",
+                "trigger"
+              ],
+              [
+                "wait",
+                "event"
+              ],
+              [
+                "workflow",
+                "stuck"
+              ],
+              [
+                "workflow",
+                "hung"
+              ],
+              [
+                "workflow",
+                "timeout"
+              ],
+              [
+                "workflow",
+                "error"
+              ],
+              [
+                "workflow",
+                "logs"
+              ],
+              [
+                "workflow",
+                "debug"
+              ],
+              [
+                "workflow",
+                "check"
+              ],
+              [
+                "workflow",
+                "failing"
+              ],
+              [
+                "workflow",
+                "status"
+              ],
+              [
+                "run",
+                "status"
+              ],
+              [
+                "step",
+                "failed"
+              ],
+              [
+                "step",
+                "stuck"
+              ],
+              [
+                "step",
+                "timeout"
+              ],
+              [
+                "workflow",
+                "run"
+              ],
+              [
+                "run",
+                "logs"
+              ]
+            ],
+            "anyOf": [
+              "long-running",
+              "long running",
+              "multi-step",
+              "multi step",
+              "pipeline",
+              "orchestration",
+              "step-by-step",
+              "step by step",
+              "each piece",
+              "each step",
+              "each phase",
+              "each stage",
+              "phase",
+              "phases",
+              "stage",
+              "stages",
+              "durable",
+              "reliable",
+              "fault-tolerant",
+              "retry",
+              "reconnect",
+              "survive",
+              "persist",
+              "approval",
+              "chain",
+              "sequential",
+              "trigger",
+              "webhook",
+              "escalation",
+              "state machine",
+              "orchestrate",
+              "orchestration"
+            ],
+            "noneOf": [
+              "github actions",
+              ".github/workflows",
+              "ci workflow",
+              "aws step functions"
+            ],
+            "minScore": 4
+          }
+        }
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/_conventions.md",
+      "state": "converted",
+      "target": "content/commands/_conventions.md",
+      "sourceMetadata": {}
+    },
+    {
+      "kind": "command",
+      "source": "commands/bootstrap.md",
+      "state": "converted",
+      "target": "content/commands/bootstrap.md",
+      "sourceMetadata": {
+        "description": "Bootstrap a repository with Vercel-linked resources by running preflight checks, provisioning integrations, verifying env keys, and then executing db/dev startup commands safely."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/deploy.md",
+      "state": "converted",
+      "target": "content/commands/deploy.md",
+      "sourceMetadata": {
+        "description": "Deploy the current project to Vercel. Pass \"prod\" or \"production\" as argument to deploy to production. Default is preview deployment."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/env.md",
+      "state": "converted",
+      "target": "content/commands/env.md",
+      "sourceMetadata": {
+        "description": "Manage Vercel environment variables. Commands include list, pull, add, remove, and diff. Use to sync environment variables between Vercel and your local development environment."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/marketplace.md",
+      "state": "converted",
+      "target": "content/commands/marketplace.md",
+      "sourceMetadata": {
+        "description": "Discover and install Vercel Marketplace integrations. Use to find databases, CMS, auth providers, and other services available on the Vercel Marketplace."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/status.md",
+      "state": "converted",
+      "target": "content/commands/status.md",
+      "sourceMetadata": {
+        "description": "Show the status of the current Vercel project — recent deployments, linked project info, and environment overview."
+      }
+    },
+    {
+      "kind": "agent",
+      "source": "agents/ai-architect.md",
+      "state": "converted",
+      "target": "content/agents/ai-architect.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/deployment-expert.md",
+      "state": "converted",
+      "target": "content/agents/deployment-expert.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/performance-optimizer.md",
+      "state": "converted",
+      "target": "content/agents/performance-optimizer.md"
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#vercel",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/vercel"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 256,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "bb7ac58f944d972ca5da5e55405376fa4b647e628e74d0a1b1a332bcb190bd15"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "7383c0ef6c34af0e453979319f95da6ac8cbec96a973d81124dc5cb72cc8a3c0"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "9ac937975fe5f5f330648a5e6ffb6faea37bb8601e81af325189774880803b3f"
+    },
+    {
+      "path": "agents/ai-architect.md",
+      "sha256": "4bb3edf2fa94d0609305d61d0211c372f1a95309d3a6da3d815afcf7db7e96b4"
+    },
+    {
+      "path": "agents/ai-architect.md.tmpl",
+      "sha256": "25b724d6b8a0f15d179a81a10b78fa2ba7234112c182889d724316bd1d45d706"
+    },
+    {
+      "path": "agents/deployment-expert.md",
+      "sha256": "7856e871ef8f6c6c56b3e70d41672248aa1f59ffed9f10b3104fbb195d810ca0"
+    },
+    {
+      "path": "agents/deployment-expert.md.tmpl",
+      "sha256": "1a89f2021e9444914f55d54eba4b2c4e7e9792d204ad6299600b1f4ce3c37ce0"
+    },
+    {
+      "path": "agents/performance-optimizer.md",
+      "sha256": "95e756724e48fdb783119dd9a4ce0d28605a0bc99c62db02f61a1fb6aa806078"
+    },
+    {
+      "path": "agents/performance-optimizer.md.tmpl",
+      "sha256": "1ce8a2d0dd87ab4c111f45c34e89f2db1c4f6781afc1cec8557eb283c70e3c34"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "3bbcc360dadfbdd161591284f540b3c5d1d7d8083f2b4e6e5698be7dd4541de4"
+    },
+    {
+      "path": "assets/composer-icon.png",
+      "sha256": "3e4a7d38560781583cbe7356c4e538f22fbf222fd490551cbc61c00ebdf4475c"
+    },
+    {
+      "path": "assets/logo-padded.png",
+      "sha256": "3e4a7d38560781583cbe7356c4e538f22fbf222fd490551cbc61c00ebdf4475c"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "3e4a7d38560781583cbe7356c4e538f22fbf222fd490551cbc61c00ebdf4475c"
+    },
+    {
+      "path": "commands/_conventions.md",
+      "sha256": "a05d7b05bebf7353ea4129c259bb23faedc88286a21fe2d66aea54ed17830cda"
+    },
+    {
+      "path": "commands/bootstrap.md",
+      "sha256": "317bed40a14e5361e0c0a4cac745881153e83d3cd837a7eece17413e38907227"
+    },
+    {
+      "path": "commands/bootstrap.md.tmpl",
+      "sha256": "439f01c5503965cc52e35aeb3f3007767834ae0016b290db751f2f1dc8f3968e"
+    },
+    {
+      "path": "commands/deploy.md",
+      "sha256": "12904f92cd320bf1fbbfff3a8c21a7d58e74ea1c7f1e490d01862ca19358b5a4"
+    },
+    {
+      "path": "commands/deploy.md.tmpl",
+      "sha256": "102a94eee864788f3f2df3e2166bddc4eee4cc9e1835865530951c1e473b7386"
+    },
+    {
+      "path": "commands/env.md",
+      "sha256": "f289bf44c73136829af7998e3c2e69223eb4c2e4b216b1a26f3d2e903aa04cd6"
+    },
+    {
+      "path": "commands/env.md.tmpl",
+      "sha256": "8db34ab9cf68d76568f74af80f05b5358ec5a5fd9d66525520d9cb28addc5db6"
+    },
+    {
+      "path": "commands/marketplace.md",
+      "sha256": "c341071d6b786c9ceb91d27bada27b07f8f971ee4713f7ad4e3d493afa3e1c9a"
+    },
+    {
+      "path": "commands/marketplace.md.tmpl",
+      "sha256": "d652c77835f321cee80d92c14a510772e08ce662d24716018b90160f53c2d372"
+    },
+    {
+      "path": "commands/status.md",
+      "sha256": "ee94cb8e2e98cbec596ea4e169a60c99e514a3d905a5bdf6a326aeb16453a180"
+    },
+    {
+      "path": "commands/status.md.tmpl",
+      "sha256": "95236cb9003143611f1d678475006653d83be467fc5739c8ddec1312ab22a0a8"
+    },
+    {
+      "path": "README.md",
+      "sha256": "03753acf4fc2ebabbf6d7b74f3dc81c78d4b048b284f86aeddaa8f9f34f36744"
+    },
+    {
+      "path": "skills/_chain-audit.md",
+      "sha256": "98749e3818081ceee4b0d66b67881e5e9a8431d7d773d89e5349018d8d24b233"
+    },
+    {
+      "path": "skills/agent-browser/agents/openai.yaml",
+      "sha256": "e760d7d7b7db79d9ac667e2d087b833f20d76b2d82b996149c630c633692bfe2"
+    },
+    {
+      "path": "skills/agent-browser/SKILL.md",
+      "sha256": "fb2f5649ea808479a50f3f25de36de1ed55cdfae3971a45c79c29ada042d8a4c"
+    },
+    {
+      "path": "skills/agent-browser-verify/agents/openai.yaml",
+      "sha256": "4c0ce19e10923d989f5416e9b848faf7fff6e939b99aabbd8a7cc6fe5a44a379"
+    },
+    {
+      "path": "skills/agent-browser-verify/SKILL.md",
+      "sha256": "51e0c58eb6fded833faccc44ce1f5161db78dbaefaa8af16187f3dfbc6aec26b"
+    },
+    {
+      "path": "skills/ai-elements/agents/openai.yaml",
+      "sha256": "0ffeb5412e085172d664e45510a2de4dab6b524da8c7a3db24c194dfba3c9fff"
+    },
+    {
+      "path": "skills/ai-elements/SKILL.md",
+      "sha256": "f31a5ceb606fbdf1ca0e81527cb55978dd957981f7e70db3ca678aaa4862e564"
+    },
+    {
+      "path": "skills/ai-gateway/agents/openai.yaml",
+      "sha256": "0c33ddaeddd724dff63e39558a8069db72b6d56924abf28c35cdfc9e4a3124ca"
+    },
+    {
+      "path": "skills/ai-gateway/SKILL.md",
+      "sha256": "d5ac2858e3984b92b818f6ee28d7f9dd9e53b545052d0a6fb84e52e37fa1074b"
+    },
+    {
+      "path": "skills/ai-generation-persistence/agents/openai.yaml",
+      "sha256": "6ce87c918adcd8d5337ccb993b5135354233122922c801ac891737dde417e696"
+    },
+    {
+      "path": "skills/ai-generation-persistence/SKILL.md",
+      "sha256": "82fb7247d1357dd0aac0cb4593d06a27dc9eaa8d982ff5557c187d63b4fbd373"
+    },
+    {
+      "path": "skills/ai-sdk/agents/openai.yaml",
+      "sha256": "93e1bed2c72630c439b6979053c6675524077d1eda784d1a923bcea26ab63a3b"
+    },
+    {
+      "path": "skills/ai-sdk/references/ai-gateway.md",
+      "sha256": "40ecef6a1786fb0683073428705268abc3a362684154312525b5b42f31a88479"
+    },
+    {
+      "path": "skills/ai-sdk/references/common-errors.md",
+      "sha256": "c73c179092e66853fdc2d16baeadf62c91231c350aba74a1bdd19982c66ebe48"
+    },
+    {
+      "path": "skills/ai-sdk/references/devtools.md",
+      "sha256": "de5b0f6a0c404cf2400725ae83b16c30ffccff6feb19eb6931321537b589074e"
+    },
+    {
+      "path": "skills/ai-sdk/references/providers.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "skills/ai-sdk/references/type-safe-agents.md",
+      "sha256": "8830d4d32cd908b7e299e5fe32182204e33d22a105f740261b6883f912c2fb8a"
+    },
+    {
+      "path": "skills/ai-sdk/SKILL.md",
+      "sha256": "becca17305da03b0edb6a0638cc856c785eb0c3f58c44ae4ff8bed89705db56c"
+    },
+    {
+      "path": "skills/auth/agents/openai.yaml",
+      "sha256": "622dfb1f4259354f07efb7658cd6ffb62be536c3bebf16b05a5e9ec845163ed1"
+    },
+    {
+      "path": "skills/auth/SKILL.md",
+      "sha256": "d292766f2d581a9a5ac73621dbda541361deb4a55d530cb60451f880a65b4604"
+    },
+    {
+      "path": "skills/bootstrap/agents/openai.yaml",
+      "sha256": "9d0acbbc4e18e727eeae136be5ce9a22216c497f38f26753693fce680964a025"
+    },
+    {
+      "path": "skills/bootstrap/SKILL.md",
+      "sha256": "188c0d6a909c0410f73c86539891925e426321adc513f2a1940edb6d237dae3b"
+    },
+    {
+      "path": "skills/cdn-caching/agents/openai.yaml",
+      "sha256": "868adfb17fed126a752755179e12cba6d138603d6451dfc790a00c8c249dfba4"
+    },
+    {
+      "path": "skills/cdn-caching/SKILL.md",
+      "sha256": "59429927e009c58a67b6990d604ff8b3d7ee525f47374bf85389a6aa41301c35"
+    },
+    {
+      "path": "skills/chat-sdk/agents/openai.yaml",
+      "sha256": "6a06f1ab8226053ed05af39df6387c7d5557127c7d72184b35a6d3d31cacbfd4"
+    },
+    {
+      "path": "skills/chat-sdk/SKILL.md",
+      "sha256": "2b39dca861dd27279b1c8df90f04722798f3b79cf3c973c8b267527691c975cf"
+    },
+    {
+      "path": "skills/cms/agents/openai.yaml",
+      "sha256": "7d81b3a2400c495dd9cc2dcbda467ed0106805c559816d7ffdb32739d1658a84"
+    },
+    {
+      "path": "skills/cms/SKILL.md",
+      "sha256": "52e4ef01c12b1f142c449218dff8f6bf11d052e83b65e7206906f736d9a78fcf"
+    },
+    {
+      "path": "skills/cron-jobs/agents/openai.yaml",
+      "sha256": "aa71fa6ba41bd95e5c0bf89e5f6e99838fabc4350c9549c0a5c14ed5daae6856"
+    },
+    {
+      "path": "skills/cron-jobs/SKILL.md",
+      "sha256": "2a580546feddc73e6658e776aed9053fd6a480574748d6427499679a934a460e"
+    },
+    {
+      "path": "skills/deployments-cicd/agents/openai.yaml",
+      "sha256": "7d462f30ef881a8bc19ea413536d687e6cb465bdbae70dcaa75ead4b6bb296c8"
+    },
+    {
+      "path": "skills/deployments-cicd/SKILL.md",
+      "sha256": "69ef3404bb8643a3070fc6bc0aea165927f38286e5d22041aa82c909822d0af6"
+    },
+    {
+      "path": "skills/email/agents/openai.yaml",
+      "sha256": "e1eeac6fa7af53450777091b915597d60290eda5f05c95419a191fb1990d84fb"
+    },
+    {
+      "path": "skills/email/SKILL.md",
+      "sha256": "481af3949749ec564febd539458bdffb152ac868fbf6d0d0f1c82b6fca63a39e"
+    },
+    {
+      "path": "skills/env-vars/agents/openai.yaml",
+      "sha256": "08ad9faa2876d5566ef9697095f97c5363dfc2517469f0f30d71bc33728dc5cd"
+    },
+    {
+      "path": "skills/env-vars/SKILL.md",
+      "sha256": "6f5b31bd2cb2c9f050e2cf3752c266f45b74df57b0832516b80d93130f105d3b"
+    },
+    {
+      "path": "skills/eve/agents/openai.yaml",
+      "sha256": "acdd97214e92a68e568f2e5572aad4ae83ee5b18d39b21b13e52975ec46036e3"
+    },
+    {
+      "path": "skills/eve/SKILL.md",
+      "sha256": "a24d737e9a11faf0ab68da1f09772f87932f2d124fce741b9881954b17265d33"
+    },
+    {
+      "path": "skills/geist/agents/openai.yaml",
+      "sha256": "92c7f0dfa6c4bce53c576334f579741c9f8e9c2d1ea460c7ebdbabe9f337d793"
+    },
+    {
+      "path": "skills/geist/SKILL.md",
+      "sha256": "9df187819184e0ce620b78e2a0af97661075b463ca61d0322569378a93eb9d63"
+    },
+    {
+      "path": "skills/geistdocs/agents/openai.yaml",
+      "sha256": "0474e0e6216f27604289bfe1decd82efa2050f5d3e2228fdc7cd088f097efc6a"
+    },
+    {
+      "path": "skills/geistdocs/SKILL.md",
+      "sha256": "92c51f3a579917b238e793c5b677d1aeb71fae4e97b95d10cbd79d2818608bba"
+    },
+    {
+      "path": "skills/investigation-mode/agents/openai.yaml",
+      "sha256": "53d0039e5cd0e2a2e21bbe6d46bda53a6d1b79bd7865bdb4716e449414842bbc"
+    },
+    {
+      "path": "skills/investigation-mode/SKILL.md",
+      "sha256": "59d9dd4660fc1c10750ec511decb8564ab0343f9b52faa0948bfb2f522deacfa"
+    },
+    {
+      "path": "skills/json-render/agents/openai.yaml",
+      "sha256": "d48b76b5d28726c34e2014aaefc7f867f95642f31d1cfde4aa5aa56725f90ef6"
+    },
+    {
+      "path": "skills/json-render/SKILL.md",
+      "sha256": "fdcdb49618f5cdf925130d43771a1364060a58b0499b4ed47a27508b4879c007"
+    },
+    {
+      "path": "skills/knowledge-update/agents/openai.yaml",
+      "sha256": "f1050a3a158eb35f6459ecc8d1cc79cb77d40bdcb503953f394223fcb128d707"
+    },
+    {
+      "path": "skills/knowledge-update/SKILL.md",
+      "sha256": "ff57429d16e96015fe4a8e0ee0d418cad91d0b505484c569e41843da3f6b465f"
+    },
+    {
+      "path": "skills/marketplace/agents/openai.yaml",
+      "sha256": "772e2e9ee32ceef7d62162e3e95c49271015e4f63516bfb29195d0515de37359"
+    },
+    {
+      "path": "skills/marketplace/SKILL.md",
+      "sha256": "7e0bc0655df4fba7506c6ad15f3e0eb5de1219fe221ee25c5091cfbe67659b8e"
+    },
+    {
+      "path": "skills/micro/agents/openai.yaml",
+      "sha256": "6773b3f4c544939f0d49fd6e3b2cb3f87236f79eae153bda383f99861d393342"
+    },
+    {
+      "path": "skills/micro/SKILL.md",
+      "sha256": "1c7ac4d7544f00222ef3894988f6d4d75fb087b5045941f793fd03fb4e141991"
+    },
+    {
+      "path": "skills/microfrontends/agents/openai.yaml",
+      "sha256": "bbe81eec0502f0694760475e4ddf89da46e939c7418ef1794c6136e68febb4ff"
+    },
+    {
+      "path": "skills/microfrontends/references/configuration.md",
+      "sha256": "3ef20bb1daca1e119da04deb2d755ac3a35811482b620699f36170069bdc3775"
+    },
+    {
+      "path": "skills/microfrontends/references/local-development.md",
+      "sha256": "6b5e1064641daa4db0b708ad9723e61658686c3c56c64f81ba2f80d167520d5f"
+    },
+    {
+      "path": "skills/microfrontends/references/managing-microfrontends.md",
+      "sha256": "1a29297925977355ae3e17336f1ce97129816d7478a43e5331520ad3a9aab0ef"
+    },
+    {
+      "path": "skills/microfrontends/references/path-routing.md",
+      "sha256": "9a5f6538ec6953cc30dbfa1fe05454925d4afafcb3af5f897c1b6770fe3a96ea"
+    },
+    {
+      "path": "skills/microfrontends/references/security.md",
+      "sha256": "4621c08350fe1643b506e9df7c6a57337e037d07843fe92e149a803e43125b51"
+    },
+    {
+      "path": "skills/microfrontends/references/troubleshooting.md",
+      "sha256": "be1e959ca1881115ce8855faaf00a460e4f77ec87760fde4b7b1011aa300c796"
+    },
+    {
+      "path": "skills/microfrontends/SKILL.md",
+      "sha256": "a11864af09117e39ff378d0e182ec436d7bbd8ff0a3c1325fb2f3717eb45ccba"
+    },
+    {
+      "path": "skills/ncc/agents/openai.yaml",
+      "sha256": "dc19e065a2d65d2a59d3abfda929f99dab0e713f08c3ee358f74ca90cd1e3c8d"
+    },
+    {
+      "path": "skills/ncc/SKILL.md",
+      "sha256": "8d42fe90c5af043ce384d7f57c1ef68843c3935d4d1603ab557984f8bc849764"
+    },
+    {
+      "path": "skills/next-cache-components/agents/openai.yaml",
+      "sha256": "55766364b5ecc0ce563f1ea68c4d835cd7ceea43584f34400826ce3a951a257a"
+    },
+    {
+      "path": "skills/next-cache-components/SKILL.md",
+      "sha256": "e187a61b6af4e8f53f43cd321ba027499e966bc28acf8c85ae02d67185cc0ece"
+    },
+    {
+      "path": "skills/next-forge/agents/openai.yaml",
+      "sha256": "48870b2aa524145cfc9328536b46313dd5f92556aa71ad4463fc7c914a7b11c4"
+    },
+    {
+      "path": "skills/next-forge/references/architecture.md",
+      "sha256": "497240fc14cbd1566196dc9b7d339cd8d22e353f284e60aea60d818b09322ef8"
+    },
+    {
+      "path": "skills/next-forge/references/customization.md",
+      "sha256": "4f1612b7b6bb098cc6dc9be85546271e5928eef9fb90c350e7c79acd7c6a8fd2"
+    },
+    {
+      "path": "skills/next-forge/references/packages.md",
+      "sha256": "e57bdae39e4d3abebf7f58da68684466320121aacb86bdebf5202d15401787b5"
+    },
+    {
+      "path": "skills/next-forge/references/setup.md",
+      "sha256": "49ae2792cf0d3e5c9078055fc2fd1f637a5fb33a8a8b996212546c49ee5ceee1"
+    },
+    {
+      "path": "skills/next-forge/SKILL.md",
+      "sha256": "7082cbf95d275f5131a78c82d6ec894f90f2f9cd84c43bba3344228775124ac9"
+    },
+    {
+      "path": "skills/next-upgrade/agents/openai.yaml",
+      "sha256": "9ae72aa9042a7358480ae5edc6168d9e9207461cf33d69492a28ccc50576cc17"
+    },
+    {
+      "path": "skills/next-upgrade/SKILL.md",
+      "sha256": "e24f7dbd44377a6c3049c06695e6646a728e600fd901904abe18a15a48dc2858"
+    },
+    {
+      "path": "skills/nextjs/agents/openai.yaml",
+      "sha256": "8dd898b8471201314c230844afa81530bbcd35f41e58471a070f6babbbc35136"
+    },
+    {
+      "path": "skills/nextjs/references/app-router-files.md",
+      "sha256": "4ce44e5af4690378aee03f107c70e17623f26d3b89092fedeba58e13586ed893"
+    },
+    {
+      "path": "skills/nextjs/references/async-patterns.md",
+      "sha256": "d6851966541b8f14d2e08d4710a0903491e8a0be55af848095f46b6f90d11aa7"
+    },
+    {
+      "path": "skills/nextjs/references/bundling.md",
+      "sha256": "9dce3efcf3886841634d9898428c6691f3ff5ebc2219e76fb161f2bd6f8974ef"
+    },
+    {
+      "path": "skills/nextjs/references/data-patterns.md",
+      "sha256": "4a3b4b022501820537b94dc0673be2ee0bc686061c2e08b2c25b8fdfe5ebe5a6"
+    },
+    {
+      "path": "skills/nextjs/references/debug-tricks.md",
+      "sha256": "d6664077b905a9a2c1c7b60e66522df0257f8313e61fac0b9f327e1a169bb4cb"
+    },
+    {
+      "path": "skills/nextjs/references/directives.md",
+      "sha256": "7060405d45db3f9e372428df64b85cbf330f691490b45936a15d2314c45fb48d"
+    },
+    {
+      "path": "skills/nextjs/references/error-handling.md",
+      "sha256": "253cfa74b20ee8de82ec9547035b8bb8871135b55bfaa15d085d7f9d5053f494"
+    },
+    {
+      "path": "skills/nextjs/references/file-conventions.md",
+      "sha256": "ee92c8cd848c76ec9d17e6cf74e1c915f99842970b350a4ee301495089ea6ad1"
+    },
+    {
+      "path": "skills/nextjs/references/font.md",
+      "sha256": "5cfa0abf0d835c09b5d8f61f6910d44b16acb9f347af4a2040af828c010f5c9f"
+    },
+    {
+      "path": "skills/nextjs/references/functions.md",
+      "sha256": "c0467adf74d4c59e2919bb79562a6a7a2b92a84d2040a49864d596af3e6e0926"
+    },
+    {
+      "path": "skills/nextjs/references/hydration-error.md",
+      "sha256": "2e326719f5d869b7d7efddbee47af083d2adddc7c55aa194711be09d86509915"
+    },
+    {
+      "path": "skills/nextjs/references/image.md",
+      "sha256": "21a8fe9bf1ea301fa4842e75e7f5c74759f32ab384251413fcecff746ae7a414"
+    },
+    {
+      "path": "skills/nextjs/references/metadata.md",
+      "sha256": "35d7ad6c4cd34047ed2fd63b49453a1b6eced92559fa5d016b718cacea25b6c9"
+    },
+    {
+      "path": "skills/nextjs/references/parallel-routes.md",
+      "sha256": "f801424a163b380309696f17fe4ad94c34bcbd0e4cfa4ae7037620d24ce665a5"
+    },
+    {
+      "path": "skills/nextjs/references/route-handlers.md",
+      "sha256": "a8c7872c7e2e284ca9cd56f4669a266db273d96aab48d90ea8a63388a1a1b04c"
+    },
+    {
+      "path": "skills/nextjs/references/rsc-boundaries.md",
+      "sha256": "a0cf4e2e21eac77a20cd2ed9d64d4ceb2e6a17b6a6e65f21838b1b4ba4a44dde"
+    },
+    {
+      "path": "skills/nextjs/references/runtime-selection.md",
+      "sha256": "cd27c8e9275ebe804cec4d081fd5fae0fdd4b7e2d89cff79ab793c97760f275f"
+    },
+    {
+      "path": "skills/nextjs/references/scripts.md",
+      "sha256": "66c96a20163d96b600fb6744000feec6315b88f5c29d0d18d4655c75eef5a313"
+    },
+    {
+      "path": "skills/nextjs/references/self-hosting.md",
+      "sha256": "8d3910a486e58d3d7ac5527045f7215e0c5d764c5369fcc07330f9012874cf2e"
+    },
+    {
+      "path": "skills/nextjs/references/suspense-boundaries.md",
+      "sha256": "f3a50ceb846ae8044cf0514f7f26f0c2c493b4bd5b13d3b2de620888420be7a0"
+    },
+    {
+      "path": "skills/nextjs/SKILL.md",
+      "sha256": "6b5defe807f00b72065895f11a15bd7a1bc0d46453030c5992f1247b962ffff1"
+    },
+    {
+      "path": "skills/observability/agents/openai.yaml",
+      "sha256": "9214cbca2d963da6271c2789dcf7141297a098dee7335dee048f02ceb9de2337"
+    },
+    {
+      "path": "skills/observability/SKILL.md",
+      "sha256": "1eef5a68be48543a3527b968e9c9c20458f1951141d23f67c6a84970fb69d5b5"
+    },
+    {
+      "path": "skills/payments/agents/openai.yaml",
+      "sha256": "ba89c70af0b1b7a052aae416bd5597699ed7544c53c4bd5de2ba1daaf7a4f018"
+    },
+    {
+      "path": "skills/payments/SKILL.md",
+      "sha256": "e26a3fab1d430f0fabfb909420cbc07ecc678d10d29952497bbbb5205ec60e93"
+    },
+    {
+      "path": "skills/react-best-practices/agents/openai.yaml",
+      "sha256": "6a7781d8ca71c85ca0e2c71aea38940fa92acc35994e7ff0890c3ea05a82f2f1"
+    },
+    {
+      "path": "skills/react-best-practices/AGENTS.md",
+      "sha256": "9b3abf80b7c86221320d0ee735da0ce1a72602a123126fc116a235c994838781"
+    },
+    {
+      "path": "skills/react-best-practices/rules/_sections.md",
+      "sha256": "cf809520101755d628039ae466a06f18d14cc5d2b292f0941fb0a7e067670667"
+    },
+    {
+      "path": "skills/react-best-practices/rules/_template.md",
+      "sha256": "21231af1b4c70cfe6f07625830d982934295c735f91fddd9741b3a8e3688d735"
+    },
+    {
+      "path": "skills/react-best-practices/rules/advanced-event-handler-refs.md",
+      "sha256": "029f0c929c665fb9263b8c72a44e50610caf94a6e22a8142821a84482eda825d"
+    },
+    {
+      "path": "skills/react-best-practices/rules/advanced-init-once.md",
+      "sha256": "3d209bc4b17c2a503fdbb53b39261bc5ee824703a8b387daef3f53bad1f32ce4"
+    },
+    {
+      "path": "skills/react-best-practices/rules/advanced-use-latest.md",
+      "sha256": "84b3504ef0dc85f171c6aa0c5d15ac6d252ba72e38fc4e87872c0a3b1728345f"
+    },
+    {
+      "path": "skills/react-best-practices/rules/async-api-routes.md",
+      "sha256": "adf38ea4f34fa74b275b908e49aa20de20af9d9935b4a656314a49217b182663"
+    },
+    {
+      "path": "skills/react-best-practices/rules/async-defer-await.md",
+      "sha256": "5e828399c1bbb901a5ed0a2426cd1f2399ecde1b391090f7d7214b6b6f04333b"
+    },
+    {
+      "path": "skills/react-best-practices/rules/async-dependencies.md",
+      "sha256": "4901341bd7f7b7036eb8d98b243515ce294e6e4079370b3187c1514c3e597ec6"
+    },
+    {
+      "path": "skills/react-best-practices/rules/async-parallel.md",
+      "sha256": "ff95abbb67b62a889d7ef71f1d06834238c47ecd3d49483f7823b4cd17d92680"
+    },
+    {
+      "path": "skills/react-best-practices/rules/async-suspense-boundaries.md",
+      "sha256": "69597821113c025ddd1ead17f46f492267896ecec77c2f8394e43708b5e2eeb0"
+    },
+    {
+      "path": "skills/react-best-practices/rules/bundle-barrel-imports.md",
+      "sha256": "f3a0d74c71aaa98547d970901d73d1bc4c082762e891244e9103def40846eecb"
+    },
+    {
+      "path": "skills/react-best-practices/rules/bundle-conditional.md",
+      "sha256": "16992beeaf9bdd1e7ff20989b8672cfffc8b918deb0783c058560c7a233dd37c"
+    },
+    {
+      "path": "skills/react-best-practices/rules/bundle-defer-third-party.md",
+      "sha256": "64de0f01dfe58b4d3a3865baa623f743ef1b8c363106c7dfaf2b2867f69b96d4"
+    },
+    {
+      "path": "skills/react-best-practices/rules/bundle-dynamic-imports.md",
+      "sha256": "0fb947cdfec5ce0e95a894c6b68220f88983eff73ce65b98e4f00c885ebd9b36"
+    },
+    {
+      "path": "skills/react-best-practices/rules/bundle-preload.md",
+      "sha256": "b673a49f4cf4bf385ddf6956ca704139ec2915802bade1925134f8cfabb2278c"
+    },
+    {
+      "path": "skills/react-best-practices/rules/client-event-listeners.md",
+      "sha256": "662b53281f562c3ec8f6e101e4290fd318a92142300b3ed2eb0396734b48a3d5"
+    },
+    {
+      "path": "skills/react-best-practices/rules/client-localstorage-schema.md",
+      "sha256": "f9d177a557f4bd4bd1a81f30f841f75041821dd88f706a6b8c4eac86c7472e05"
+    },
+    {
+      "path": "skills/react-best-practices/rules/client-passive-event-listeners.md",
+      "sha256": "631704921be4e49d229cabdc39a367a62635b8b03348284b0e9baa37d8870804"
+    },
+    {
+      "path": "skills/react-best-practices/rules/client-swr-dedup.md",
+      "sha256": "866e6cc267f06df39129c44c68c5e6a2e62faa554bc8cdb6ada1f58afe4bcbbe"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-batch-dom-css.md",
+      "sha256": "9cbee591c30ce161d100faafd582abe7b6c1badc1f04892e08fde8a65572fad2"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-cache-function-results.md",
+      "sha256": "a165197ff308c1cf0a1653830d6a0acf12ee723c51711f4cc152c131578b8e15"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-cache-property-access.md",
+      "sha256": "bbecc553a5b51caab2ddc90423a23d4c3245669439ff91e5204e48d62aaf1c5e"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-cache-storage.md",
+      "sha256": "7710a2ceb421d9b6d3828d7f38ec8a093af4a372c2b3b4ea2299d5df2518f770"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-combine-iterations.md",
+      "sha256": "c43a02979586d39f341fa6da7fc61bdd6a6917fa0c4f9c926091fa540cdf8022"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-early-exit.md",
+      "sha256": "94e00037311438067850735bb7b4ee865fba22ef483f638d792afd431399c4f2"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-flatmap-filter.md",
+      "sha256": "acfa11d07d7982ec565e4d8cfb410d477ffb73a7b41a532b938bcdb15c6ba51f"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-hoist-regexp.md",
+      "sha256": "86f4772c5d732c1f5f0656412713c6dc919360f0f3ea32bb1a45937eaaa5866e"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-index-maps.md",
+      "sha256": "752dd0803a7394a70e8d437b7eb025d1e085566e30ad733e75b9d2e04cc6c4d9"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-length-check-first.md",
+      "sha256": "9e57362d76e57ea6a2ff8cd137cf2a87b094aaff152eac61758305acb450a25c"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-min-max-loop.md",
+      "sha256": "e1c45de0a86f54722ed3a22e0e283169c6d7af6c1a4a901883373b252314b8d5"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-set-map-lookups.md",
+      "sha256": "7143f8d7b71cdbc77a171fc801bdcf5e7a209e0f471ff17bb669acc986a6b064"
+    },
+    {
+      "path": "skills/react-best-practices/rules/js-tosorted-immutable.md",
+      "sha256": "2722514cac46990f3361fa35ee20d499a12da2539362e7871b670978664d158a"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rendering-activity.md",
+      "sha256": "e23dd494d955db99d376b5bf62a59ce7df9f14576d94094f2e53cfdc388453a0"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rendering-animate-svg-wrapper.md",
+      "sha256": "86bfd51a95f3d2ece6800666bdc25e434c910ab0b09afbf93cd4ffba137284db"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rendering-conditional-render.md",
+      "sha256": "6db58f36c8b080c35e91f6504281f85ea2dbd133030610c860e60181d6d9556a"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rendering-content-visibility.md",
+      "sha256": "45437e9594857ee1066ee061e946ed129731cf2e80f7e08f3cc621fa0554c567"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rendering-hoist-jsx.md",
+      "sha256": "c5fa7274f067ce3760107196a9416df333a7b4187254ef66c547fad7c45cd8d3"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rendering-hydration-no-flicker.md",
+      "sha256": "80b9e62b1eac75c1b74ceeae869f25974ca38712c45022f0d743564c3f55b362"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rendering-hydration-suppress-warning.md",
+      "sha256": "7ec1623c69e1a82b09b8b5a6028005e3eb8485741898447af1bcaed8ff8c0139"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rendering-resource-hints.md",
+      "sha256": "03ffeb3c26ae514bd24ea8683621d67a4b8432926ef7ee8d3296f82ae5c1b6ab"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rendering-script-defer-async.md",
+      "sha256": "28ef87814467a4758645889dcbb0ccb9a9e2387c4cebbd8cd4dfa33435e3e5d8"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rendering-svg-precision.md",
+      "sha256": "d57cdfaaaf660a28a9a5d6d10e97202a5eb13e1bc1675e024cb1ccbfa8bb2c32"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rendering-usetransition-loading.md",
+      "sha256": "90c88c57a4d6eb15fb088fa2ad111413c07a9a448d49f0aa18c1a39538f33420"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-defer-reads.md",
+      "sha256": "bb98d9b7c7622641887df6407406a8c4f61510af9cc1bd275574ebee71bac8c8"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-dependencies.md",
+      "sha256": "4f0a1806694c2391c0b5b79bb4dee89fdf2c02ee322acf308509c17542240446"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-derived-state-no-effect.md",
+      "sha256": "1d50f7b1b86d24f987c557415590f79b06250e3ec1ca552da981e31a31f9edb9"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-derived-state.md",
+      "sha256": "6a501211aa53036905df7531deaf25fdb8582697366fd071d4c2607828662dcb"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-functional-setstate.md",
+      "sha256": "6732ccc09dd06c181749cfcecfb26df9fddb21f313ff8f7c63e399a6525333da"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-lazy-state-init.md",
+      "sha256": "cc5d6bbb79b929ab0b71e244cb0e59ba7ae29499999839f9dc3cd39c7810a8da"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-memo-with-default-value.md",
+      "sha256": "e69d637687b85967554df7d5fcfd83cc6fbb89237e9b80d10fbea7916244aa8b"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-memo.md",
+      "sha256": "8cc2d062f22ae762f7f5f93baf2bfc374c917079131896559721f9dfbd402a7c"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-move-effect-to-event.md",
+      "sha256": "00f5eaf8d4380c736c9177b67583f6b33f6b1f84addc252653cd6dea9551ad8d"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-no-inline-components.md",
+      "sha256": "381ec0a4224c20c57545b6c44a65ffcaf0ed520fad97f3d0f8abcb7389de602f"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-simple-expression-in-memo.md",
+      "sha256": "1e41299336d72ce42ffe0b4d397496e520eae13ea544b1412b83761555f4e631"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-split-combined-hooks.md",
+      "sha256": "93543c1987b8bb639302a4598f1444bc9ed02d200ea7ad0e47e890ff3fa8cf21"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-transitions.md",
+      "sha256": "b51a82fb6b223d13c585dfddaeb753c79d7da0524da87b708f61fd6939600ab6"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-use-deferred-value.md",
+      "sha256": "2c393cc085e9ae6285ee9e71f4db86ddd0120a41b84c6a1d659f46e8c7684db5"
+    },
+    {
+      "path": "skills/react-best-practices/rules/rerender-use-ref-transient-values.md",
+      "sha256": "26ddded1d59cc04cddf7c1412ffb05315dd1f358510edcce3c3474d5acb63f32"
+    },
+    {
+      "path": "skills/react-best-practices/rules/server-after-nonblocking.md",
+      "sha256": "d658b6625d6caea26e187201a68d7a8cc3898b47b377f22a49fccb6c44530bab"
+    },
+    {
+      "path": "skills/react-best-practices/rules/server-auth-actions.md",
+      "sha256": "a82d5244663ba821af433c9fd7e8a203c5875197f4b09a3dc5debcf7f4d6a37a"
+    },
+    {
+      "path": "skills/react-best-practices/rules/server-cache-lru.md",
+      "sha256": "19d844eebd1fb7ef5f43f4d1e85baf1fc0160547400ab838ba4d40226eb891b9"
+    },
+    {
+      "path": "skills/react-best-practices/rules/server-cache-react.md",
+      "sha256": "7448470adc9f0066455f9cf45b658f5c3f1884a7990c89f880fbb272a4028b05"
+    },
+    {
+      "path": "skills/react-best-practices/rules/server-dedup-props.md",
+      "sha256": "5c4d4c9930812d3ab98e28ad97ca2f5af778effbf9b50b6a7558c18abf2e98b5"
+    },
+    {
+      "path": "skills/react-best-practices/rules/server-hoist-static-io.md",
+      "sha256": "a7bf6e303de3eeeaae8a3bd69dc7a47c8966da7c72787b388306800c6e239564"
+    },
+    {
+      "path": "skills/react-best-practices/rules/server-parallel-fetching.md",
+      "sha256": "f8f275fea2378e7707a50f2df4af6a2f65fe1fa84edb3ffc4720af805ebabe42"
+    },
+    {
+      "path": "skills/react-best-practices/rules/server-serialization.md",
+      "sha256": "567ce457f775d4e03e2a6ef7bf67213fee35c6c3b9d1bcfa783007d1df414d4b"
+    },
+    {
+      "path": "skills/react-best-practices/SKILL.md",
+      "sha256": "1830491e1a7e6fe5359cbba485394bf8fca42bc5ec7b818c92ad94a1dde7ab66"
+    },
+    {
+      "path": "skills/routing-middleware/agents/openai.yaml",
+      "sha256": "194bf64c4a35e9c2704adee30aef817e1e464478a234bfd2f53b448ab6d2c63e"
+    },
+    {
+      "path": "skills/routing-middleware/SKILL.md",
+      "sha256": "3560dea241982f6c15bc9bcc66a2ad12b6e902dc94ec7aa4c8a47de1953c604d"
+    },
+    {
+      "path": "skills/runtime-cache/agents/openai.yaml",
+      "sha256": "bf4ea84622e01d5b293c8cd8eccec1a5ab672a80a4f8d273597e4a37b2b6b1b9"
+    },
+    {
+      "path": "skills/runtime-cache/SKILL.md",
+      "sha256": "fad272fc3589b0a59a26b7d124276b41982e58c16fb49fa999085762a0ab18d6"
+    },
+    {
+      "path": "skills/satori/agents/openai.yaml",
+      "sha256": "0c13630fc7512975e13e2e6b7725da63569d2e7dea2230694d05383747bb75dc"
+    },
+    {
+      "path": "skills/satori/SKILL.md",
+      "sha256": "af0488fb0d5cc63caad0592297adcb703788dad0e9d944b6014a50b8c6337f9d"
+    },
+    {
+      "path": "skills/shadcn/agents/openai.yaml",
+      "sha256": "8f565792e18f494c04a6660d6c2d187586c2161a7b4939316b3a0020b337d685"
+    },
+    {
+      "path": "skills/shadcn/SKILL.md",
+      "sha256": "3acfc1f7f1f0cc19380d641a894db8b54552f0bd47c97a786e85ae74f748e6e0"
+    },
+    {
+      "path": "skills/sign-in-with-vercel/agents/openai.yaml",
+      "sha256": "d9458787069e5464d1d84833531461d812c5e939c21f225f1643bf274cd63d40"
+    },
+    {
+      "path": "skills/sign-in-with-vercel/SKILL.md",
+      "sha256": "70e607a7cdef782d2ad2d2fd747fceedb2f7584da5f25f879421f4cf9592334d"
+    },
+    {
+      "path": "skills/swr/agents/openai.yaml",
+      "sha256": "eba7d5da7df20d2ce370d6beeadd3b678aecfec6f42c5c2e862e994c660c13aa"
+    },
+    {
+      "path": "skills/swr/SKILL.md",
+      "sha256": "c22a1535fd6950df4f046c43700471f415d60d5fb046cf90b64b9d77d4e4aea4"
+    },
+    {
+      "path": "skills/turbopack/agents/openai.yaml",
+      "sha256": "6dac3b1bb2a6fdd916bbd67c6d98088ee77d961d85af957cd0343aaf99918e37"
+    },
+    {
+      "path": "skills/turbopack/SKILL.md",
+      "sha256": "3f665cf083c39d5f7d0ddd16c4a2f04c251e488de87c72bd9fadb04b804691f6"
+    },
+    {
+      "path": "skills/turborepo/agents/openai.yaml",
+      "sha256": "add5d8c98332100252f8e68de12934305c5dd1fcbc899dab0e39d2018e63c4b3"
+    },
+    {
+      "path": "skills/turborepo/SKILL.md",
+      "sha256": "8a2b3ad8e259aa01a484d1d63cf53580fece2a9176119e07725d58a6785e3a04"
+    },
+    {
+      "path": "skills/v0-dev/agents/openai.yaml",
+      "sha256": "338b94dc543f19a61285428157ae12e0576282479e56c433f2744e873e73b2cc"
+    },
+    {
+      "path": "skills/v0-dev/SKILL.md",
+      "sha256": "2b6ac0b65da7fafc3cf4525fe287d58ee9e7c528e0b56715f672e15cda774e4c"
+    },
+    {
+      "path": "skills/vercel-agent/agents/openai.yaml",
+      "sha256": "ca140c1108116bf98d9b8c500785a7212dc3ae5826f5f4d8cc3da9989069f94f"
+    },
+    {
+      "path": "skills/vercel-agent/SKILL.md",
+      "sha256": "dfe32ed9100f0fa46d345972d70604a0e820d0738bd9423b2a4229fff78e72e7"
+    },
+    {
+      "path": "skills/vercel-api/agents/openai.yaml",
+      "sha256": "bca5922cfab24e089048a45f0a278cc39ccc55479a9061a8c3121f7af96a2b56"
+    },
+    {
+      "path": "skills/vercel-api/SKILL.md",
+      "sha256": "21362b293106f9aceec723eba2394047c7756ebefd6ab8d994dcd8cddc3853a1"
+    },
+    {
+      "path": "skills/vercel-cli/agents/openai.yaml",
+      "sha256": "bd63d249717c7ae8ab3cfe32d9388326f742852f6dbc17a90822352be460d244"
+    },
+    {
+      "path": "skills/vercel-cli/references/advanced.md",
+      "sha256": "e49a6e28207d29758833b5e270ee2a951617d1b3fe5e0c37b105f9f6b649f1d7"
+    },
+    {
+      "path": "skills/vercel-cli/references/bun.md",
+      "sha256": "54b81f2bb9259797288a45a870e3699973ccdc8517ece2e477d8018a69fc33cd"
+    },
+    {
+      "path": "skills/vercel-cli/references/ci-automation.md",
+      "sha256": "ebb6d08f9d9cb8eca01406841120adf61679a26e0f7384fac797eed6ae561b8d"
+    },
+    {
+      "path": "skills/vercel-cli/references/deployment.md",
+      "sha256": "11a22916f6f97c380d9d2ebaf8857b3e9cbd692f0aa67ec48afe1dd64a8a0d9e"
+    },
+    {
+      "path": "skills/vercel-cli/references/domains-and-dns.md",
+      "sha256": "1cffb79d565ba97644255f2349bccb6afd71c88139ffc3c125e002cded1b2c20"
+    },
+    {
+      "path": "skills/vercel-cli/references/environment-variables.md",
+      "sha256": "3e842d42d90cb21655afc53d7199bf138cfeb7f0cf18862ce14f02c65d4ca5ee"
+    },
+    {
+      "path": "skills/vercel-cli/references/flags.md",
+      "sha256": "35aba153a4ac315e855023b66b44fc4e7bdac388cf95f4fa64dcffd5504e6044"
+    },
+    {
+      "path": "skills/vercel-cli/references/getting-started.md",
+      "sha256": "74a3fe564b778bb0807cea47b9600d10f30bf65730134c3daeb503844c0ea7b6"
+    },
+    {
+      "path": "skills/vercel-cli/references/global-options.md",
+      "sha256": "518e7e1883cb247f8a9052cccbdac9473466be2c5b5e18945c361386b2b0c1af"
+    },
+    {
+      "path": "skills/vercel-cli/references/integrations.md",
+      "sha256": "119b74f9b8441092a37c2014d2a73bb0bfb69a9dff00912d38b299b28cf0d965"
+    },
+    {
+      "path": "skills/vercel-cli/references/local-development.md",
+      "sha256": "e2aa731dda641a0515db12ae08fe45071aebc16f502945a18a600953313b8202"
+    },
+    {
+      "path": "skills/vercel-cli/references/monitoring-and-debugging.md",
+      "sha256": "8a9aa847e3380fcb3e90857cd57be09e6601dafec83e2bb6cb576ca21da6a3f6"
+    },
+    {
+      "path": "skills/vercel-cli/references/monorepos.md",
+      "sha256": "c20503107618eb1cb5d5fed4125d4d057fc5720524531bac4cb08d131b23d411"
+    },
+    {
+      "path": "skills/vercel-cli/references/node-backends.md",
+      "sha256": "8dfdfc4a0f9fa4663331002a44dde08b313a44889a8d51435ed2393a0ab4ab07"
+    },
+    {
+      "path": "skills/vercel-cli/references/projects-and-teams.md",
+      "sha256": "d2eed0bc4eb3c3a0f86aa084a998177a6e636891b345cc9dcda8b5f604f4ba06"
+    },
+    {
+      "path": "skills/vercel-cli/references/storage.md",
+      "sha256": "2e6814df2507ede09bd8a84a93a72ecd1d7e847ed5788dd458d902f2b7d62fa2"
+    },
+    {
+      "path": "skills/vercel-cli/SKILL.md",
+      "sha256": "806d4680eb73613566e224aa7327877c4d2b36f1c28d7ffdb011ddd4cb0ff92c"
+    },
+    {
+      "path": "skills/vercel-connect/agents/openai.yaml",
+      "sha256": "1cffc288e93bc138953169d1ff52b76a3d798e00312b8cbb1a34f66d598d3f72"
+    },
+    {
+      "path": "skills/vercel-connect/SKILL.md",
+      "sha256": "d6247856f19e602d89f481d5d56e254699d8071e45d852e8ad7bac24e896e4f9"
+    },
+    {
+      "path": "skills/vercel-firewall/agents/openai.yaml",
+      "sha256": "cc0ebd6f2e66476b362ab4d8338346dc4d3187004442ae50494445caf909b722"
+    },
+    {
+      "path": "skills/vercel-firewall/SKILL.md",
+      "sha256": "b450cd19d3c451f1eb98a96ac625ac28bd497deb343c87c8ce854aa220509332"
+    },
+    {
+      "path": "skills/vercel-flags/agents/openai.yaml",
+      "sha256": "beb13d1bbef01a57ddb7fbb7d7dfe9ba52de28eacaaa27ad57ee387f0601d827"
+    },
+    {
+      "path": "skills/vercel-flags/SKILL.md",
+      "sha256": "d062e65eb879c2fe7b99bbd204b007a55db301878de46e3d34a9deb21b1b1d7e"
+    },
+    {
+      "path": "skills/vercel-functions/agents/openai.yaml",
+      "sha256": "2fe57e24a20d576c5de0e13ab58a3b6443f98b39b437c0130c871be2dd23e68c"
+    },
+    {
+      "path": "skills/vercel-functions/SKILL.md",
+      "sha256": "aa8cd02ae874e4af8cf99dc2ff04631bb19292c36991c671518236e880af1b1d"
+    },
+    {
+      "path": "skills/vercel-queues/agents/openai.yaml",
+      "sha256": "e965d7c62d3c53622065a3351a6b974fdc9729bfb5ec948ca4636a257fc7d277"
+    },
+    {
+      "path": "skills/vercel-queues/SKILL.md",
+      "sha256": "cb2362dbbd83027fb50c5bf148d888f09503ec9345e54e648a7c1014fc958871"
+    },
+    {
+      "path": "skills/vercel-sandbox/agents/openai.yaml",
+      "sha256": "e82d0117b8ec8a0c1281ae0f00bb79b0c6cf98a859948609f4daef428ec6a6cd"
+    },
+    {
+      "path": "skills/vercel-sandbox/SKILL.md",
+      "sha256": "fec037aa4e9a5c7080ff2180c3fbbf609748494dd0e8707b8387f14eeb793f92"
+    },
+    {
+      "path": "skills/vercel-services/agents/openai.yaml",
+      "sha256": "b6085abfc1857bd454b2b4e08cfb6555a29ec4518fa187d79654ac5954dff612"
+    },
+    {
+      "path": "skills/vercel-services/references/fastapi-vite/backend/pyproject.toml",
+      "sha256": "a886f16af0b5e0701a52d8392093879a6071b529786e329163a7acf7e10f6712"
+    },
+    {
+      "path": "skills/vercel-services/references/fastapi-vite/frontend/package.json",
+      "sha256": "1757aba15858f45d1b5b2d30b9903b20edd57e683e03163dd239397fd54fe6a6"
+    },
+    {
+      "path": "skills/vercel-services/references/fastapi-vite/frontend/vite.config.ts",
+      "sha256": "537bcf934522a5030ec0d25e9957be60e5489bfb40d25b31033ef97618bd1bb1"
+    },
+    {
+      "path": "skills/vercel-services/references/fastapi-vite/vercel.json",
+      "sha256": "923f10b798e10f9f37b0129620d01ba7ec8c8704669599a039b89e4ff171e7d9"
+    },
+    {
+      "path": "skills/vercel-services/SKILL.md",
+      "sha256": "c8cec6753b8198003a25543f20e53671210f854d6b4c40dac1ffae1cd6f8c0c6"
+    },
+    {
+      "path": "skills/vercel-storage/agents/openai.yaml",
+      "sha256": "1f46b7326df3ed2e2b8a3b6d6569483820afe25d44d5480ede5974e6bc44ae83"
+    },
+    {
+      "path": "skills/vercel-storage/SKILL.md",
+      "sha256": "e3b3343fef16fb9cf0e8251f81965b8f9a1a777e6c9c60a5ae512f9a1904d43d"
+    },
+    {
+      "path": "skills/verification/agents/openai.yaml",
+      "sha256": "4efb64726c30db3f1c71c036bd4c49be82b234daa1be07f74f187b6d753037ce"
+    },
+    {
+      "path": "skills/verification/SKILL.md",
+      "sha256": "61cd8b14a1869591a8026b30b57005c5bd9159a474129d61e8b67048d088e87a"
+    },
+    {
+      "path": "skills/workflow/agents/openai.yaml",
+      "sha256": "bf82a174cd5d52ca14cdeb67fef7bd8040cf680fcaf434f14415070c93a8ebb5"
+    },
+    {
+      "path": "skills/workflow/references/durable-agent-patterns.md",
+      "sha256": "848d35a79b7e0833f25bc9c5d446e27cb3bd7088e38c58de3e41db132660a037"
+    },
+    {
+      "path": "skills/workflow/SKILL.md",
+      "sha256": "079130f397f0c7a4df15775ab8bbcedcfe07e3489d90bd43296a5cfbb5d442b4"
+    },
+    {
+      "path": "vercel.md",
+      "sha256": "bb5570fb6750605a96434be952fb1edefa0f49f0d821608dbcb304314bb10fe5"
+    },
+    {
+      "path": "website/index.html",
+      "sha256": "08baa5747808a0c4776d80f46798f6a0a6d936e42a5b5f6099ef5bdff2ce31fd"
+    }
+  ]
+}

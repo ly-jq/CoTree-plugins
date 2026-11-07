@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.gitlab",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "gitlab",
+    "repository": "claude-plugins-official",
+    "path": "external_plugins/gitlab",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "7444b36d7d5962a4fcec8dbc5a352643ec8a72ccd81aaa103d260c2760e350cf"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "设置 ELYRA_CLAUDE_GITLAB_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#gitlab",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/gitlab"
+    }
+  ],
+  "copiedFiles": 0,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "2a3b8e959dd2cfc899ab64b243994b19b1c045d5a1ec5c19a04773dbec4f3495"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "df7bde40772fc69e8718f7871a6d0bb9d0e8b20ec3bc33de58f014950efd5f35"
+    }
+  ]
+}

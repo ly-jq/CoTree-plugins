@@ -1,0 +1,47 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.playwright",
+  "name": "Playwright",
+  "version": "0.2.0",
+  "description": "用独立 Playwright 测试浏览器执行页面观察、交互和端到端检查。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.playwright.test",
+      "description": "用 Playwright MCP 检查网页交互、表单、可访问性快照和浏览器测试。",
+      "path": "skills/test/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "playwright",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@0.0.83",
+        "--headless",
+        "--isolated"
+      ],
+      "cwd": ".",
+      "cwdBase": "workspace"
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "f231fccffb4ba5b50b9b871d036b900047279da94772666675df64f170451e50"
+  }
+}

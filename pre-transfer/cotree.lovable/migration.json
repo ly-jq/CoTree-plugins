@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.lovable",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 28,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "lovable",
+      "repository": "plugins",
+      "path": "plugins/lovable",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "17a8dcb6438327d3fdcffa1eb2f86d7205e82e995566cf8e2328657e96be6961",
+      "upstreamVersion": "2.0.1"
+    }
+  ],
+  "changes": [
+    "用独立官方MCP替换宿主私有App连接器。",
+    "提供创建、迭代、检查、知识/数据和发布原生入口，付费调用与公共发布边界明确。"
+  ],
+  "limitations": [
+    "独立OAuth/PKCE、令牌刷新、真实项目与额度未验收；仅匿名元数据/认证边界可验证。",
+    "客户端专属widget/设计导入按实际宿主能力省略，不伪造UI回执。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "host app / build apps and websites": "connect / build / iterate / publish：独立官方MCP，项目、工作区与实际产物；不保留私有连接器ID。",
+    "project widget": "CoTree真实链接/预览与工具回执；MCP Apps专属widget按客户端能力省略。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

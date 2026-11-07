@@ -1,0 +1,12 @@
+{
+  "cases": [
+    {
+      "id": "mem0-roundtrip-smoke",
+      "suite": "memory-smoke",
+      "task": "Store a long-term memory that the user prefers dark mode, then retrieve it through memory search and confirm the stored preference is found.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    }
+  ]
+}

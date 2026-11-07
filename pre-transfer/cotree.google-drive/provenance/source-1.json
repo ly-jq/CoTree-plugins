@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.google-drive",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "google-drive",
+    "repository": "plugins",
+    "path": "plugins/google-drive",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "9f27a7e65d885648f594ceefc6af9b06c929bab48d979a63ca55572021939063",
+    "upstreamVersion": "0.1.15"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_GOOGLE_DRIVE_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/google-docs/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/google-docs/SKILL.md",
+      "sourceMetadata": {
+        "name": "google-docs",
+        "description": "Prompt- and template-complete Google Docs creation and editing with explicit-instruction-authoritative structural preservation, including semantic roles, relationships, comparison dimensions, and instructed extensions; full-topology native-copy routing; source-grounded per-tab adaptation for past/example references; style-preserving hyperlink and table edits; canonical smart-chip-first authoring for dates and relevant supported people or Google resources; a file-backed advisory trusted read before existing-document writes; automatic protected-control awareness; direct connector APIs by default; DOCX-first import only when no supplied Google Doc template/reference constrains the output; and checked-in code mode only for exact native dropdown mutation. Use when Codex must create, edit, fill, adapt, redesign, or verify Google Docs without overriding explicit user/template instructions, adding unrequested document scope, or carrying stale reference facts into a new deliverable."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/google-drive-comments/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/google-drive-comments/SKILL.md",
+      "sourceMetadata": {
+        "name": "google-drive-comments",
+        "description": "Write, reply to, and resolve Google Drive comments on Docs, Sheets, Slides, and Drive files with evidence-backed location context. Use when the user asks to leave comments, review a file with comments, respond to comment threads, or resolve Drive comments."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/google-drive/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/google-drive/SKILL.md",
+      "sourceMetadata": {
+        "name": "google-drive",
+        "description": "Use connected Google Drive as the single entrypoint for Drive, Docs, Sheets, and Slides work. Use when the user wants to find, fetch, organize, share, export, copy, or delete Drive files, or summarize and edit Google Docs, Google Sheets, and Google Slides through one unified Google Drive plugin."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/google-sheets/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/google-sheets/SKILL.md",
+      "sourceMetadata": {
+        "name": "google-sheets",
+        "description": "Analyze and edit connected Google Sheets with range precision. Use when the user wants to create Google Sheets, find a spreadsheet, inspect tabs or ranges, search rows, plan formulas, create or repair charts, clean or restructure tables, write concise summaries, or make explicit cell-range updates."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/google-slides/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/google-slides/SKILL.md",
+      "sourceMetadata": {
+        "name": "google-slides",
+        "description": "Route Google Slides authoring requests and derive a design system from a native template or reference deck. Use this skill when the user provides an existing native Google Slides deck as a template, reference, or prior-period source, or asks to edit, update, repair, restyle, or clean up an existing native Google Slides deck. Use the Presentations skill instead for net-new presentation creation when no existing native Google Slides deck must be followed."
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#google-drive",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/google-drive"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 82,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "99650e61d2a8ec4bf66b965e8241075b994ddb9d6372af76a96316747a73a63c"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "df9a3e97465c6a87f53589d8832090c887191e794ea155a1bd57a264221a8c68"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "b6121a305f93ddbab1fe45dc301c4b5f1583f41669602c79fd181b3352bb86fd"
+    },
+    {
+      "path": "assets/google-drive.svg",
+      "sha256": "340a898059ac66d63c43764caeff579bf8e3bd1a7f14d3625b7093db622491f2"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "585b2c8a695f8167559e9177e6aa9a73b0347a238e21b82df0f669b819670c6c"
+    },
+    {
+      "path": "OWNERS",
+      "sha256": "2204839e2e56a8ddfa6e6044e6e11311c865c149f0e85b3d093c402a8e4e161d"
+    },
+    {
+      "path": "skills/google-docs/agents/openai.yaml",
+      "sha256": "e13277bebbba05ce8ada2c0c787633a685e031c2cd9f77ada95a3beb3fccbd0a"
+    },
+    {
+      "path": "skills/google-docs/assets/google-docs-small.svg",
+      "sha256": "2623b4188d12f7e2c2dbcf8f8ac5c342760f62cf64e08915fcc8ea74ca02c574"
+    },
+    {
+      "path": "skills/google-docs/assets/google-docs.png",
+      "sha256": "b416735b10fb7bc27fe80f72007ef957486d7c29ae603083e137ca689d6920d5"
+    },
+    {
+      "path": "skills/google-docs/host/docs-dropdown-executor.mjs",
+      "sha256": "5e15f3ef610cd8df7aed23222dbca0fcc87057eb2b5498118add135d7e6d39a0"
+    },
+    {
+      "path": "skills/google-docs/host/docs-dropdown-file-bridge.mjs",
+      "sha256": "00007d25e3e5f6492f1e3e43376d5b0dd92b3e7b9b56b932e5787d164836f6fb"
+    },
+    {
+      "path": "skills/google-docs/host/docs-stdin-receiver.pl",
+      "sha256": "43762d397d5bf1f528ad30f04511b19a7c3029b71da6fbd36c10cc3b8c633eca"
+    },
+    {
+      "path": "skills/google-docs/host/docs-trusted-read-file-bridge.mjs",
+      "sha256": "7030af93189bd081d91f577bfcb32b63752f785139921ecb07294c96152d24a8"
+    },
+    {
+      "path": "skills/google-docs/host/docs-trusted-read-wrapper.mjs",
+      "sha256": "a21d61571df1dbc1ff961c924dffa44e129982f7bbb0ef684ca535ed67de571c"
+    },
+    {
+      "path": "skills/google-docs/references/reference-citations-and-hyperlinks.md",
+      "sha256": "cde52922fbb06c358eccd73c25990c017a79f7a92bebb718cc426087c67fb2f9"
+    },
+    {
+      "path": "skills/google-docs/references/reference-connector-runtime-and-safety.md",
+      "sha256": "8019b3b1f70e2b70630f893aecf7a3b7c1fe709056aa1087763b48cf2fda1947"
+    },
+    {
+      "path": "skills/google-docs/references/reference-direct-request-composition.md",
+      "sha256": "7ea6332d6e7c2b0f2fdb8b967dda18c8a24fb95678eb0088ea6701b733bb41a7"
+    },
+    {
+      "path": "skills/google-docs/references/reference-dropdown-code-mode.md",
+      "sha256": "6029f2a630c8173b21bbb5fd3623c91205bdeda7083e66b36a51162945b8a9d5"
+    },
+    {
+      "path": "skills/google-docs/references/reference-figures-and-image-insertion.md",
+      "sha256": "98fec644ba4a1fb8b6e51078ee9a340e271fd7422e9c362475acc0727812d6ec"
+    },
+    {
+      "path": "skills/google-docs/references/reference-foreground-guard.md",
+      "sha256": "56d4c0aa6286fa57e8193b34dc0986d18bb5375d1d445a0d7812f46f3fd4fb8a"
+    },
+    {
+      "path": "skills/google-docs/references/reference-headings-and-question-format.md",
+      "sha256": "dde9fabf93485e8f93923d8855004d590c785b97f5c37bcf365dc8ec6419b8ee"
+    },
+    {
+      "path": "skills/google-docs/references/reference-import-docx-to-native-docs.md",
+      "sha256": "30e7606e9b4dc9174a24b42797a24ffd9add8c6a47515431eee6a275629bf692"
+    },
+    {
+      "path": "skills/google-docs/references/reference-meeting-notes-direct.md",
+      "sha256": "abc84d985d92b213cd362e0cbbbfe44c9a8df6eed35c4a0e1fff97cdf9228225"
+    },
+    {
+      "path": "skills/google-docs/references/reference-native-create-direct.md",
+      "sha256": "3a475dfe44421f45a4084bf31abf4e30c44a9d04ef9fa5510a6a66949c1ad61c"
+    },
+    {
+      "path": "skills/google-docs/references/reference-pdf-export-visual-qa.md",
+      "sha256": "b4f692a54718cb8cc255d42e70c509f90edd8d2dc11b1f86986d944635115954"
+    },
+    {
+      "path": "skills/google-docs/references/reference-request-shapes-and-write-safety.md",
+      "sha256": "0366ff85d40bfb6ddf5461c65724e9a15bd02cd3f54ad44cf9b979b53a5bcd8f"
+    },
+    {
+      "path": "skills/google-docs/references/reference-response-and-list-format.md",
+      "sha256": "5cb42dc22a07c4bfae8ebf30ae46f51d650c9ef9df1bc7e92e7aa2d9731d61f4"
+    },
+    {
+      "path": "skills/google-docs/references/reference-section-completeness-and-final-pass.md",
+      "sha256": "27781d675dde39722a2bf69454d8d9204739a694a15a30bbe62b765c48dd78a7"
+    },
+    {
+      "path": "skills/google-docs/references/reference-smart-chips-and-building-blocks.md",
+      "sha256": "5148d3438cf06fd0b138ba6942bc3f334dd4836bd8bfc37dac242ee026e16f04"
+    },
+    {
+      "path": "skills/google-docs/references/reference-table-formatting-deep-dive.md",
+      "sha256": "bfb3a13b024d0357e41f6545f33532bd638a371aeb216a4789279cc4798dd8ed"
+    },
+    {
+      "path": "skills/google-docs/references/reference-template-preservation-and-edit-scope.md",
+      "sha256": "0590c24c6cceeb1bfa7a4b0c8d5ce7200ea366f7df113b8a1daad6eb7a11d538"
+    },
+    {
+      "path": "skills/google-docs/references/reference-trusted-read-wrapper.md",
+      "sha256": "ad56f7afa0603753e51d1670a2051d8ba90e5cc3bb6a0776bbe95138241f8911"
+    },
+    {
+      "path": "skills/google-docs/runtime/docs-read-normalizer.mjs",
+      "sha256": "b9a1283f1903e19ff054192d916bd17e4e3cebfeab6aa3ece67d212e224219e0"
+    },
+    {
+      "path": "skills/google-docs/runtime/dropdown-common.mjs",
+      "sha256": "828f93571577e47c36cefe3702e19f0c9b38d9d3c69516c07b02c3588a8e8b9f"
+    },
+    {
+      "path": "skills/google-docs/runtime/dropdown-contract.mjs",
+      "sha256": "a9a1f4088c2a80f4675852641170b5364654246ae3a0adba88c42375322c15cf"
+    },
+    {
+      "path": "skills/google-docs/runtime/dropdown-inventory.mjs",
+      "sha256": "a18552439f08caacccf7a46cf5cdd34aa40f2b2ce8a85c1458110191833247c5"
+    },
+    {
+      "path": "skills/google-docs/runtime/dropdown-plan.mjs",
+      "sha256": "ae2143c333712b02bb0c99fcf455533a9dd48dbd8a48934e170039e400cc7507"
+    },
+    {
+      "path": "skills/google-docs/runtime/dropdown-routing.mjs",
+      "sha256": "6da87bf695be9c8c2dac4711c5bda2bc18ddf00a22f47631d518d9ac5852823d"
+    },
+    {
+      "path": "skills/google-docs/scripts/build_docs_dropdown_inventory.mjs",
+      "sha256": "6c5108cf4a394eaf127737ba5857aae84fcf432b3ebe0a019a668f775a81c387"
+    },
+    {
+      "path": "skills/google-docs/scripts/canonicalize_google_workspace_url.mjs",
+      "sha256": "edc464342e4a799d76b5230fc36aaa37c90e5e4d3ed9b8a342e1f573132fce39"
+    },
+    {
+      "path": "skills/google-docs/scripts/create_docs_dropdown_execution_context.mjs",
+      "sha256": "1504109d95aac6c178bfdb0a39894593c3e583be873ea919053c44598547225c"
+    },
+    {
+      "path": "skills/google-docs/scripts/freeze_docs_dropdown_contract.mjs",
+      "sha256": "583c46e38d479b68e59a287877d71abc6b9805e9946411acfe89540919693649"
+    },
+    {
+      "path": "skills/google-docs/scripts/validate_docs_dropdown_plan.mjs",
+      "sha256": "0c69384a9498a0249452fe5a8cc3dbdc544a232fc09055779ffb7fc4c561a433"
+    },
+    {
+      "path": "skills/google-docs/SKILL.md",
+      "sha256": "967d7c44cc08056097e7125a86907061cdfd258cf124562ece2f880dfa2ac542"
+    },
+    {
+      "path": "skills/google-drive/agents/openai.yaml",
+      "sha256": "15aa350736efdef0d22bebcd1204b3a84b6b759d1146b53777b6f0283e837964"
+    },
+    {
+      "path": "skills/google-drive/assets/app-icon.png",
+      "sha256": "a0da54a5f966e876668ab59d8df987ddad1328846216578356e6c10b07791f6c"
+    },
+    {
+      "path": "skills/google-drive/assets/google-drive-small.svg",
+      "sha256": "340a898059ac66d63c43764caeff579bf8e3bd1a7f14d3625b7093db622491f2"
+    },
+    {
+      "path": "skills/google-drive/assets/google-drive.png",
+      "sha256": "a0da54a5f966e876668ab59d8df987ddad1328846216578356e6c10b07791f6c"
+    },
+    {
+      "path": "skills/google-drive/assets/google-drive.svg",
+      "sha256": "340a898059ac66d63c43764caeff579bf8e3bd1a7f14d3625b7093db622491f2"
+    },
+    {
+      "path": "skills/google-drive/references/slides/chart-refresh-workflows.md",
+      "sha256": "71205e432330e9ba660c4efe6b51e36969ad10ee35741c4d7235e190bc437155"
+    },
+    {
+      "path": "skills/google-drive/references/slides/deck-scope-verification.md",
+      "sha256": "b56f05de886c5c1b311acddca8d38818e4405c156312328147bca40170f52b15"
+    },
+    {
+      "path": "skills/google-drive/references/slides/sheets-chart-replacement.md",
+      "sha256": "3fbb1f2f9c0a83bcab3b637ec87bba06e2f3df4696e46ec449660f266ecca5ac"
+    },
+    {
+      "path": "skills/google-drive/references/slides/visual-change-loop.md",
+      "sha256": "62a21ed4e629d462e606a564ee9fce2e17c34614604ca3c04f1f9574122a2569"
+    },
+    {
+      "path": "skills/google-drive/SKILL.md",
+      "sha256": "b10e70c54dda846125140a4037f44f059a03203c089ee321691aed42ebbab1f2"
+    },
+    {
+      "path": "skills/google-drive-comments/agents/openai.yaml",
+      "sha256": "a741b5df73e062e9b2781b165beae89f9a47402a686efeb29d223e3f7b5d1cb0"
+    },
+    {
+      "path": "skills/google-drive-comments/SKILL.md",
+      "sha256": "ca15dbcec6d56cb6ad73b32126ad8469af657960a599e36a435835bb383bbdaf"
+    },
+    {
+      "path": "skills/google-sheets/agents/openai.yaml",
+      "sha256": "c033353727d6cdc6b44630b23ae670e1d489a604dd2af6c36ae042eb7fc961e7"
+    },
+    {
+      "path": "skills/google-sheets/assets/google-sheets-small.svg",
+      "sha256": "d35c488daabf0254ec62422f234ddb197ecf6d8f390511c0f6f25e1c65643a3f"
+    },
+    {
+      "path": "skills/google-sheets/assets/google-sheets.png",
+      "sha256": "e3775513bef981e135ed001ee82be2381e04c6361093628628360b565635e4fe"
+    },
+    {
+      "path": "skills/google-sheets/references/reference-batch-update-recipes.md",
+      "sha256": "9c46eceac2c87e3605658e0e08b361b84c99526cdd700947a17e6ce516283859"
+    },
+    {
+      "path": "skills/google-sheets/references/reference-chart-recipes.md",
+      "sha256": "68d4aa485c974ae7743b98e417b03f7b3e82e74292c4d4fbb845480b3049a4cc"
+    },
+    {
+      "path": "skills/google-sheets/references/reference-edit-workflow.md",
+      "sha256": "ee9759d530ea1b3358ca55c324abc69e3e43157f1a4b72b0430e47ae6a20a2a1"
+    },
+    {
+      "path": "skills/google-sheets/references/reference-formula-patterns.md",
+      "sha256": "9aebf3a57ee1b7c3fd2528191fa0403d3ef17d94fd6edb9ca66093288dde6de9"
+    },
+    {
+      "path": "skills/google-sheets/references/reference-import-spreadsheet-to-native-sheets.md",
+      "sha256": "1d848558c32d6bf4c32e98ec1aa86b09cce92c478e21246c29d8d76e483a6bdd"
+    },
+    {
+      "path": "skills/google-sheets/references/reference-live-read-search-safety.md",
+      "sha256": "fd963aaee17f403e646e565947c4610d1e053f1b87526739d619ccb00101864e"
+    },
+    {
+      "path": "skills/google-sheets/references/reference-native-cell-structure.md",
+      "sha256": "113ef90176dfbc58dff468cf7366ac629f14dace7e5648b3b8ac4de3142ac257"
+    },
+    {
+      "path": "skills/google-sheets/references/reference-visual-quality.md",
+      "sha256": "10440fd4994a0fe0e57d09a8b7cf779723214741650a9aaff10a1f4dab5b7e22"
+    },
+    {
+      "path": "skills/google-sheets/references/style-profiles.md",
+      "sha256": "77d1590f0af65c993480e75856c6947b0e2883880b3c36c47414331345dc2480"
+    },
+    {
+      "path": "skills/google-sheets/SKILL.md",
+      "sha256": "a7ad9382dfe64bd6244523ddf144321eeabe6bb4709fb8b5109f6f873e8714b6"
+    },
+    {
+      "path": "skills/google-slides/agents/openai.yaml",
+      "sha256": "14084d373cbfcdefba2e5f156d37b12087e77218ffea28596294ac1b7cd0a725"
+    },
+    {
+      "path": "skills/google-slides/assets/google-slides-small.svg",
+      "sha256": "5bfcc038e2379522fef3135ab0dc936948c1be7a1d470f42645c0504731b4a18"
+    },
+    {
+      "path": "skills/google-slides/assets/google-slides.png",
+      "sha256": "b9e27de164f75478c181d2f2804b259f96bcd2d28b8af4328f94ab20dd0cd71d"
+    },
+    {
+      "path": "skills/google-slides/host/export-and-render-slides.mjs",
+      "sha256": "644e6f7589084a900b712f230cb34185cb99591ef82526f137aded86f6fc42e0"
+    },
+    {
+      "path": "skills/google-slides/host/export-and-render-slides.test.mjs",
+      "sha256": "10f7c4554661cb6ce2236acefc2b0fc9d7862027f4a4106e3e0927ea5205b2bc"
+    },
+    {
+      "path": "skills/google-slides/host/read-template-to-file.mjs",
+      "sha256": "9c3c0b7c2142a1ae0f330e3b4f3240f009bc5d18ed8d8e6a01d009ce89116e8a"
+    },
+    {
+      "path": "skills/google-slides/host/slides-stdin-receiver.pl",
+      "sha256": "4fc11030397a5e7a3b4b9ca63a66b3fbea4e88355b5645bdf7da4f945eca642e"
+    },
+    {
+      "path": "skills/google-slides/runtime/common.mjs",
+      "sha256": "dbfd90ec96c3f6119349bc5dceab7661d527f1fd40628d66aa3b8790b616a1c0"
+    },
+    {
+      "path": "skills/google-slides/runtime/design-system.mjs",
+      "sha256": "1946ab839ae456ea055379e960957ab2d459bf75f292ea47f80a306e6fefd4cb"
+    },
+    {
+      "path": "skills/google-slides/runtime/media-geometry.mjs",
+      "sha256": "8d10e5d038d730cd68536914e504a1aa05941bf96428ccea010a8605b7eadb36"
+    },
+    {
+      "path": "skills/google-slides/runtime/normalize.mjs",
+      "sha256": "4c1cb80161daae0833b53e4d563c4db706b3dff3b6ad2322389cd0d8308ca8da"
+    },
+    {
+      "path": "skills/google-slides/runtime/output-issues.mjs",
+      "sha256": "08ac09df810b6255591b155d34f4f9b4a128f9efac8cbc6aaca3c8c85660d278"
+    },
+    {
+      "path": "skills/google-slides/runtime/result.mjs",
+      "sha256": "cd3bfb71e6e364de6c4cbf8658822537b029ea8721ebaf778b7bdb5b8a42f537"
+    },
+    {
+      "path": "skills/google-slides/scripts/check_output_issues.mjs",
+      "sha256": "22c93e9113987e4ddb954172dc939279199476776cd8e427ea271944ba1781a4"
+    },
+    {
+      "path": "skills/google-slides/scripts/parse_template_design_system.mjs",
+      "sha256": "f719a7f9bcbf03bf2435574946bfca4063581c0a6d80fdb86a1b76977d51af08"
+    },
+    {
+      "path": "skills/google-slides/SKILL.md",
+      "sha256": "2ca649eaf542c8c87a2f8e791c49435138c341513775460b2cf9c6e8231d9f59"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "lsp": {
+    "servers": {
+      "java": {
+        "command": "jdtls",
+        "args": []
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.git-workflow",
+  "name": "Git 工作流",
+  "version": "0.2.0",
+  "description": "检查 Git 改动，按授权范围提交、推送、创建 PR，并预览失效分支清理。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.git-workflow.commit",
+      "description": "检查差异并按用户指定范围创建 Git 提交。",
+      "path": "skills/commit/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.git-workflow.pull-request",
+      "description": "按已授权范围提交、推送功能分支并创建 PR。",
+      "path": "skills/pull-request/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.git-workflow.cleanup",
+      "description": "预览并按明确授权清理远程已删除且本地已合并的分支。",
+      "path": "skills/cleanup/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "05997805dfe27ec676d6ff9998173c38636fe285e98e8f831ce31d72714a4d08"
+  }
+}

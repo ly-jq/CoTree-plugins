@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.product-design",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 8,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "product-design",
+      "repository": "plugins",
+      "path": "plugins/product-design",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "b6e5344d23a1e2a196067e6f3a2ba7de32a1942a140a1ee29700be4339f2ca04",
+      "upstreamVersion": "0.1.52"
+    }
+  ],
+  "changes": [
+    "十项来源 Skill 收敛为八项原生工作流，移除模式停止门、强制问答 / 三方案 / 固定宿主和自动分享。",
+    "新增本地 React / mobile-app 模板生成器，保留移动运行库、资源和交互测试，移除 Sites worker 与发布绑定。",
+    "产品上下文复用现有存储，index / user-context 与分析 / 投资领域保留各自边界；视觉实现和云部署复用已有能力。"
+  ],
+  "limitations": [
+    "生成器只写不存在的新目录，不安装依赖或启动服务；模板仍需目标 Node / npm 依赖和实际浏览器。移动运行库保持网页模拟，不代表原生 iOS / Android 应用。",
+    "源码中的 Sites 发布、ChatGPT 标注、Figma / 图像生成入口不直接继承；按 CoTree 实际工具与独立服务身份分别使用。",
+    "设计原型通常使用本地状态或明确的示例数据，不证明生产后端、账户或真实用户研究结果；共享与发布需实际目标和授权。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "index": "brief：由主模型按实际目标选择设计工作流，不保留关键词路由或 Chat / Work 模式停止门。",
+    "get-context": "brief：已有产品事实优先，只澄清会改变方案的缺口，不强制每次提问与回放。",
+    "ideate": "explore：按任务探索有区别的方向，不强制三张生成图及固定审批。",
+    "image-to-code": "prototype：参考图到可交互界面、组件 / token 提取及实际渲染对比。",
+    "url-to-code": "prototype：按已授权可见页面取证、真实状态与响应式实现，不推断不可见后端。",
+    "audit": "audit：UX / 设计 / 可访问性证据，不执行安全扫描。",
+    "research": "research：真实用户来源、日期、样本与机会，不编造访谈或使用量。",
+    "design-qa": "qa：比例、像素密度、字体 / 布局 / 颜色 / 图片 / 文案及交互核对。",
+    "user-context": "context：用户授权的产品资料与偏好，复用既有持久存储或明确文档路径，不写原宿主 state。",
+    "share": "share：准备可审查原型，按既有授权发布到所选平台并验证 URL。",
+    "prototype / mobile-app templates": "跨平台 bootstrap，保留 React / 移动交互运行库与资源，替换 Sites 构建 / 预览 / 发布绑定。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.cloudflare",
+  "version": "0.2.0",
+  "category": "代码托管与部署",
+  "priority": 0,
+  "batch": 13,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "cloudflare",
+      "repository": "plugins",
+      "path": "plugins/cloudflare",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "88817ad7aa2f213456ec9c67949fa1501e67c1decc4919958787065d54745481",
+      "upstreamVersion": "0.1.2"
+    }
+  ],
+  "changes": [
+    "九个来源 Skill 与两个命令收敛为十一个原生工作流，保留完整产品 / SDK 参考与原图标。",
+    "采用官方 Code Mode MCP，补齐独立 token、API 执行边界、明确部署环境；浏览器测量复用现有能力。"
+  ],
+  "limitations": [
+    "已适配 CoTree 原生 Skill / MCP；真实账户读写、过期恢复与线上业务仍待验收。配置脚本只生成配置，不实现登录 / token 刷新、不读取来源宿主身份、不启用插件。",
+    "Code Mode execute 的代码可发起实际 API 写入；服务端隔离不等于只读，API token 需限制 account / zone 与权限。",
+    "Workers / Agents / Sandbox 应用需要项目依赖、实际账户和对应套餐；本批不创建或部署示例云资源。性能 trace 和字段指标依可用浏览器能力。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "cloudflare platform / product references": "platform / storage：保留全产品索引与参考，按任务取用并核实当前文档。",
+    "agents-sdk / building-ai-agent / build-agent command": "agents：合并重复入口，覆盖状态、RPC、客户端、调度、Workflows、流式恢复与隔离。",
+    "building-mcp-server / build-mcp command": "mcp：Cloudflare 运行时适配；通用协议方法复用 cotree.mcp-server-dev。",
+    "workers-best-practices / durable-objects / sandbox-sdk": "workers / durable-objects / sandbox：独立开发流程，保留专项参考，不盲升 SDK 或套固定配置。",
+    "wrangler / web-perf": "wrangler / deploy / performance：项目 CLI、明确环境、实测浏览器；不再强依赖 Chrome DevTools MCP。",
+    "cloudflare-api MCP": "connect：唯一 Code Mode 服务；先 search schema 再检查 execute 的每个请求及副作用。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

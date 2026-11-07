@@ -1,0 +1,859 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.build-web-data-visualization",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "build-web-data-visualization",
+    "repository": "plugins",
+    "path": "plugins/build-web-data-visualization",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "23165f78a3a04682313a25df4612933c7dfabb2f7a9ff33d1ca7da67406966b8",
+    "upstreamVersion": "0.1.21"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/accessibility-and-inclusive-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/accessibility-and-inclusive-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "accessibility-and-inclusive-visualization",
+        "description": "Make data visualizations accessible and inclusive. Use when the user needs chart or diagram accessibility guidance, text alternatives for complex visuals, color and contrast review, keyboard support, reduced-motion behavior for animation or parallax, or an accessibility QA workflow for exported figures, UML-like diagrams, and dashboards."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/canvas2d-data-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/canvas2d-data-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "canvas2d-data-visualization",
+        "description": "Render data visualizations with Canvas2D. Use when the visualization needs high mark counts, fast redraws, immediate-mode rendering, custom hit testing, or a hybrid Canvas plus SVG or HTML architecture."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/d3-data-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/d3-data-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "d3-data-visualization",
+        "description": "Build custom data visualizations with D3. Use when the user needs SVG or DOM-based charts, rich annotation, domain-native contextual backgrounds, data joins, custom scales or interactions, scroll-driven SVG scene states, or precise control over browser visualization behavior."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/dashboards-and-real-time-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/dashboards-and-real-time-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "dashboards-and-real-time-visualization",
+        "description": "Design dashboards and live visualization systems. Use when the user needs monitoring views, streaming charts, coordinated interactions, downsampling, or performance-aware operational visualization."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/data-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/data-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "data-visualization",
+        "description": "Route web data visualization work. Use when the user needs chart choice, visual critique, dashboards, maps or geospatial views, Gantt timelines, UML/software diagrams, scrollytelling, reports or exports, testing, accessibility, browser implementation, or concept-first visual design."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/gantt-chart-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/gantt-chart-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "gantt-chart-visualization",
+        "description": "Design, critique, route, and implement Gantt charts and schedule visualizations. Use when the user mentions Gantt charts, project schedules, roadmaps with task spans, milestones, dependencies, predecessors, critical path, baselines, WBS, resource plans, capacity timelines, MS Project, Primavera P6, Jira Advanced Roadmaps, GitHub Projects, Smartsheet, monday.com, Asana, ClickUp, Azure DevOps iterations, or importing/exporting project-management data for a timeline chart."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/geospatial-and-cartographic-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/geospatial-and-cartographic-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "geospatial-and-cartographic-visualization",
+        "description": "Design geospatial and cartographic visualizations. Use when the user needs help deciding whether to use a map, choosing projections or basemaps, building choropleths or symbol maps, or implementing thematic maps, slippy maps, or geospatial interactions with D3 geo, Leaflet, MapLibre, Mapbox GL JS, Google Maps, OpenLayers, deck.gl, ArcGIS Maps SDK, Azure Maps, HERE Maps, CesiumJS, or related tools."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/grammar-of-graphics-and-declarative-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/grammar-of-graphics-and-declarative-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "grammar-of-graphics-and-declarative-visualization",
+        "description": "Build data visualizations with declarative grammars. Use when the user needs Vega-Lite, Vega, Observable Plot, or grammar-of-graphics reasoning, especially for tabular charts that do not require bespoke rendering."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/node-link-and-diagram-layout/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/node-link-and-diagram-layout/SKILL.md",
+      "sourceMetadata": {
+        "name": "node-link-and-diagram-layout",
+        "description": "Choose and apply automatic layout strategies for node-link diagrams and connected-node visuals. Use when the user asks how to auto-arrange nodes, reduce line crossings, route edges, avoid overlaps, stabilize layout, or choose graph-layout algorithms for network diagrams, dependency graphs, database schema diagrams, ERDs, state machines, decision trees, flow diagrams, box-and-line editors, or other line-connected nodes."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/react-and-nextjs-data-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/react-and-nextjs-data-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "react-and-nextjs-data-visualization",
+        "description": "Integrate data visualizations into React and Next.js applications. Use when the user needs chart components, UML-like or architecture diagram components, React integration patterns, Next.js client or server boundaries, hydration-safe rendering, lazy loading, framework-aware performance, scroll-driven visual stories, or export guidance."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/reports-pdfs-and-slide-automation/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/reports-pdfs-and-slide-automation/SKILL.md",
+      "sourceMetadata": {
+        "name": "reports-pdfs-and-slide-automation",
+        "description": "Lay out and export data-rich reports and documents. Use when the user needs report structure, figure packaging, PDFs, PowerPoint or Google Slides automation, or programmatic insertion of visualizations, UML-like diagrams, or architecture diagrams into documents."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/scrollytelling-and-parallax-data-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/scrollytelling-and-parallax-data-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "scrollytelling-and-parallax-data-visualization",
+        "description": "Design and implement parallax scrolling and scrollytelling data visualizations. Use when the user asks for parallax scrolling, scrollytelling, scroll-driven timelines, sticky graphics, Scrollama, ScrollTrigger, ScrollTimeline, view timelines, rich-media timelines, moviescrollers, scroll-scrubbed charts, staged narrative reveals, or interactive visual stories where scrolling changes a data visualization or media scene."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/statistical-and-uncertainty-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/statistical-and-uncertainty-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "statistical-and-uncertainty-visualization",
+        "description": "Design statistically honest and uncertainty-aware visualizations. Use when the user needs help showing distributions, intervals, confidence, missingness, sampling effects, or analytical rigor in charts and dashboards."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/testing-data-visualizations/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/testing-data-visualizations/SKILL.md",
+      "sourceMetadata": {
+        "name": "testing-data-visualizations",
+        "description": "Test data visualizations and dashboards. Use when the user needs chart or diagram test strategy, screenshot or image diff testing, visual regression, mocked or synthetic chart data, component or unit tests, E2E dashboard QA, interactive UML-like diagram verification, scroll-driven story verification, export verification, or guidance on avoiding brittle over-testing."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/threejs-data-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/threejs-data-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "threejs-data-visualization",
+        "description": "Render WebGL-accelerated data visualizations with Three.js, raw WebGL, deck.gl, luma.gl, PixiJS, Sigma.js, Plotly WebGL traces, ECharts GL, CesiumJS, Babylon.js, or related GPU libraries. Use when the visualization needs true spatial structure, dense 2D or 3D GPU rendering, particle or flow animation, volumetric views, or interactive exploration that adds real analytical value."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/typescript-data-visualization-engineering/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/typescript-data-visualization-engineering/SKILL.md",
+      "sourceMetadata": {
+        "name": "typescript-data-visualization-engineering",
+        "description": "Build typed data visualizations in TypeScript. Use when the user wants TypeScript visualization code, typed data models, browser visualization components, UML-like diagram models, interactive graph or architecture diagram contracts, scroll-driven scene contracts, library selection guidance, or a maintainable visualization architecture beyond React- or Next-specific concerns."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/uml-and-software-architecture-visualization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/uml-and-software-architecture-visualization/SKILL.md",
+      "sourceMetadata": {
+        "name": "uml-and-software-architecture-visualization",
+        "description": "Design, critique, read, write, render, and implement UML and UML-like software diagrams. Use when the user mentions UML, sequence diagrams, class diagrams, activity diagrams, state machines, use case diagrams, component diagrams, deployment diagrams, object diagrams, package diagrams, profile diagrams, timing diagrams, communication diagrams, interaction overview diagrams, composite structure diagrams, ERDs, database schema diagrams, C4, BPMN, swimlanes, flowcharts, network diagrams, application architecture diagrams, software architecture diagrams, diagram-as-code, model-as-code, XMI, UMLDI, PlantUML, Mermaid, Graphviz DOT, D2, Structurizr, DBML, diagrams.net/draw.io, Kroki, or interactive diagram editors and explorers."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/visualization-strategy-and-critique/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/visualization-strategy-and-critique/SKILL.md",
+      "sourceMetadata": {
+        "name": "visualization-strategy-and-critique",
+        "description": "Choose, lay out, critique, and explain data visualizations. Use when the user asks what visualization fits a dataset or goal, how a chart, dashboard, operational workspace, UML-like diagram, or software architecture diagram should be composed or interacted with, asks for visual page design, a layout mockup, generated large-screen and mobile concept images, or to be shown what a visualization could look like, when domain-native contextual surfaces or graphical backgrounds may help, when scrollytelling or parallax might be appropriate, wants a critique of an existing visualization, or needs guidance grounded in trusted visualization theory and practice. For advanced visual design or page-layout prompts where composition affects understanding, Codex must generate and show both large-screen and mobile portrait image concepts before implementation or text-only design handoff, plus mobile landscape when needed."
+      }
+    }
+  ],
+  "copiedFiles": 163,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "be4bb31100997609d4b661f63f2adfdc5ca12bc76f7e57b6165ccbc00a501076"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "4b4b17582826228b316436c3ef7a41ea70df01440e2d2c518b6dee2f5789bcbc"
+    },
+    {
+      "path": "assets/app-icon.svg",
+      "sha256": "3c587add2a55c01eaae80c6d3495a3873c7ad424b899d6feb72aa65525dd2b6a"
+    },
+    {
+      "path": "assets/data-visualization-small.svg",
+      "sha256": "0fe54a456470c36f15e3d1ae343c56cfc05b7dbb201cfeb7e8c5efc56d98cf4a"
+    },
+    {
+      "path": "assets/templates/accessibility-review-checklist.md",
+      "sha256": "2f4557a28e05a66ec089e0f250845d6fa8eebe62afc835afa59cf2d9fca5dc6a"
+    },
+    {
+      "path": "assets/templates/advanced-interactive-visualization-contract.md",
+      "sha256": "4a020cafc137495a875eb32580ce0af6798b0251e8e3b56181b4c67caec3f9b0"
+    },
+    {
+      "path": "assets/templates/chart-brief.md",
+      "sha256": "3715b99a39d993aa6a83121506edf210662ee2abae083491f5d1268673fb9254"
+    },
+    {
+      "path": "assets/templates/critique-checklist.md",
+      "sha256": "11ff89084ac75786e89e4a3178ae6038905f505db87ad3f7d44e2997ead5b212"
+    },
+    {
+      "path": "assets/templates/editorial-evaluation-rubric.md",
+      "sha256": "87d6f367ba3ae4299805b9ab9cbd9ad66128b07493e9dfd82909766144c337ab"
+    },
+    {
+      "path": "assets/templates/editorial-infographic-brief.md",
+      "sha256": "97444c346b15dde2963e505a62b61c6d1ac7cefb09ddbb766a7f67f8ef1cf10c"
+    },
+    {
+      "path": "assets/templates/editorial-infographic-examples.md",
+      "sha256": "9c6f47321383709bfb6a7357f1b68e7d769fc75192ecf320cae46e1dcd07cabb"
+    },
+    {
+      "path": "assets/templates/export-checklist.md",
+      "sha256": "1cf3ae847d0fe317109f37a765253868bba0c3a511483e0ab98f8dc8f1fd9daf"
+    },
+    {
+      "path": "assets/templates/html-report-starter.html",
+      "sha256": "106865fe2f5b1cb00121933964afcedf7d8904245552bc2657ccff787692f8ff"
+    },
+    {
+      "path": "assets/templates/human-visual-review-checklist.md",
+      "sha256": "084ce82fd911a21b7d9c3690bf31936ff331408f7e270a41f5e60dbfe7851536"
+    },
+    {
+      "path": "assets/templates/image-generation-visual-asset-brief.md",
+      "sha256": "9b4c72e4ce51541859cea4de320899e209d2c5de8b54c6d3b676dd5ca33d2a1a"
+    },
+    {
+      "path": "assets/templates/interactive-editorial-storyboard.md",
+      "sha256": "763f64af2e489519d1a01f9100e00b17ec328e939789839810943d96f6a16e95"
+    },
+    {
+      "path": "assets/templates/interactive-uml-test-plan.md",
+      "sha256": "ace6da6af929ce0f7fd2068423fa37ee546c4ae1b6e909dcb96fa269b7f0224f"
+    },
+    {
+      "path": "assets/templates/live-dashboard-review-checklist.md",
+      "sha256": "52ede0de2805472ab13cec811007ca5f550342c9bfc40e567dc5b03347728df2"
+    },
+    {
+      "path": "assets/templates/playwright-pdf-starter.ts",
+      "sha256": "738e309a6ba20a8e9927a47c8eafc24c91370af81cb8c337f512d4be341e736a"
+    },
+    {
+      "path": "assets/templates/playwright-starters.test.ts",
+      "sha256": "0230f3173b38a25e4bf88fc5f420715d4168fce41085351762b4d35b6ae01c43"
+    },
+    {
+      "path": "assets/templates/playwright-visual-regression-starter.ts",
+      "sha256": "a57cb272b80d75ff87f83889ed8e2263894f43b2f171f46bd571261f554b8507"
+    },
+    {
+      "path": "assets/templates/uml-diagram-brief.md",
+      "sha256": "6226060a5f56a1c30076e32f71cebc89a5f99dcf2a04aebb16b84dfb6f88dfbe"
+    },
+    {
+      "path": "assets/templates/visual-design-contract.md",
+      "sha256": "0796f8b83049bc3de12799abd7fa94dc7965c153a69ccb1b321044f6b924911b"
+    },
+    {
+      "path": "assets/templates/visualization-test-plan.md",
+      "sha256": "477fd7eb85f578928a74586bf7c720d0f9dd08da507bf149efda5c0258834351"
+    },
+    {
+      "path": "references/foundations/art-directed-interactive-visual-stories.md",
+      "sha256": "054946a76343155fd9901987b25137052749bb03763496555ad61e3023c7d0ca"
+    },
+    {
+      "path": "references/foundations/domain-contextual-surfaces.md",
+      "sha256": "566195f1832062d6d9e5463780db646e1e8675de80d5da00c03b864e5ee93a0c"
+    },
+    {
+      "path": "references/foundations/editorial-infographic-system.md",
+      "sha256": "88e3c5e58722074e95ac92b11ab17e6b878ba690fc799511ade82378637fab20"
+    },
+    {
+      "path": "references/foundations/embedded-visualization-self-use.md",
+      "sha256": "eba2d00d88d6d86d34b01f2ebf7f5c4f8230155642721a701c3220f011833d32"
+    },
+    {
+      "path": "references/foundations/fictional-data-story-simulation.md",
+      "sha256": "807eed73926ccbb87e6b630786b7d60909d337507939ddc417cd68de3dff6cc5"
+    },
+    {
+      "path": "references/foundations/implementation-design-and-tradeoffs.md",
+      "sha256": "e3bbf562e8874a636693fb0af62c61a03aad1b91576c333540e8344725b94f06"
+    },
+    {
+      "path": "references/foundations/interaction-models-and-progressive-disclosure.md",
+      "sha256": "c67ca0b97232ab27eb3ae98b6557143ba7bf4c4b64dace4fdc53161e9c25ece2"
+    },
+    {
+      "path": "references/foundations/layout-hierarchy-and-self-explanatory-ux.md",
+      "sha256": "5987a961cdc91ef0af2f6b395b706055cb1b94e7d957d504d149e3b5a27ecf38"
+    },
+    {
+      "path": "references/foundations/meaning-preserving-visual-design-workflow.md",
+      "sha256": "94f4c739f8c5160389171aea8ef3ce9f72395b9b14e26d1ece9bc0ce34d6ac57"
+    },
+    {
+      "path": "references/foundations/mobile-first-responsive-visualization.md",
+      "sha256": "72eb259e4cbeba93b06c8c0d24ca6e19793a4005453f2dbf7afc281019299fa9"
+    },
+    {
+      "path": "references/foundations/operational-visualization-workspaces.md",
+      "sha256": "d13f255210c06b69ea4a8ac5d80a7be2baeb4062c5c591f5299ec29855ace89d"
+    },
+    {
+      "path": "references/foundations/perception-color-and-encoding.md",
+      "sha256": "c992380a3c4f373a644bb4122242961617cee1f394422b61f0870bd07db6c17b"
+    },
+    {
+      "path": "references/foundations/sensitive-geopolitical-and-humanitarian-stories.md",
+      "sha256": "a6e15d74217ea613054227a1b70fb6ce9dbd9f1d89a22065a8e8755af3f9463b"
+    },
+    {
+      "path": "references/foundations/shareable-state-and-persistence.md",
+      "sha256": "74a67c31a2d29245cf8b95a2a050357848790c42a65e926f88f08137f474ad08"
+    },
+    {
+      "path": "references/foundations/storytelling-annotation-and-critique.md",
+      "sha256": "bb99e317bafb087ae9440dcc39f0f75a8726a2298360a20417fda9c3107feafa"
+    },
+    {
+      "path": "references/foundations/task-abstraction-and-chart-selection.md",
+      "sha256": "fb291ca2da22a82b70d81dcb9cbffbc643b6acba6a5a3a874cef10b92a33ebec"
+    },
+    {
+      "path": "references/foundations/theory-and-principles.md",
+      "sha256": "01b9ee4c81c5e586f42705ac8e314eabcf194b89caa901c1a8879bd25302b9d8"
+    },
+    {
+      "path": "references/source-index/export-and-automation-sources.md",
+      "sha256": "5d393f62441374e12f8d7d25e7a2cde853602a8c0e6de0ed1d8b8243555f1256"
+    },
+    {
+      "path": "references/source-index/official-implementation-docs.md",
+      "sha256": "33f2eaeeeb13a2ef6807954d62400b3658dd5e606a2efad4d588d4aecb957a60"
+    },
+    {
+      "path": "references/source-index/practitioner-guides.md",
+      "sha256": "a7e91bee59f05235768fef917c8c561b3045a67f0f74e4b0ca6adeed1513a206"
+    },
+    {
+      "path": "references/source-index/theory-books-and-papers.md",
+      "sha256": "c22bb223871122a9e0de17de460d63d2d2055cba30f5520fda464823bfba4c35"
+    },
+    {
+      "path": "skills/accessibility-and-inclusive-visualization/agents/openai.yaml",
+      "sha256": "a6d098767fea882a03cf98cac93b32e7219ec6f45b8855e4f4ffb554f6f57fb2"
+    },
+    {
+      "path": "skills/accessibility-and-inclusive-visualization/references/color-contrast-and-redundant-encoding.md",
+      "sha256": "1dffb6850f6be38ae7cb5a5b80f2e38684683a2962f130df61506119e31d9507"
+    },
+    {
+      "path": "skills/accessibility-and-inclusive-visualization/references/keyboard-screen-reader-and-export.md",
+      "sha256": "9478f105eccb0ac02efd91eba1361a3ea97e138ad61313e864d3e75c6e7425c5"
+    },
+    {
+      "path": "skills/accessibility-and-inclusive-visualization/references/testing-and-review-workflow.md",
+      "sha256": "954264a80d58c138946511341cf8975afcb847dd172895d1c22d4c90d1dad5fe"
+    },
+    {
+      "path": "skills/accessibility-and-inclusive-visualization/references/text-alternatives-and-complex-images.md",
+      "sha256": "5ba2d0490843283cf490ff76a42ec4eb23e56467401628f34ffd07f17a6d5c08"
+    },
+    {
+      "path": "skills/accessibility-and-inclusive-visualization/SKILL.md",
+      "sha256": "fc052419e290f113b044b7abd7a5e809b6000b4dec03441e63796b02f474a2c8"
+    },
+    {
+      "path": "skills/canvas2d-data-visualization/agents/openai.yaml",
+      "sha256": "0561538fe19fa228ba1e2589c9c6fe2072d99b80edb85010cef19bb8671674eb"
+    },
+    {
+      "path": "skills/canvas2d-data-visualization/references/high-density-interaction.md",
+      "sha256": "50f4fe03590b2afa701b1c75da43978353698a0716d442af7f0971e67ac7eb67"
+    },
+    {
+      "path": "skills/canvas2d-data-visualization/references/performance-playbook.md",
+      "sha256": "13680084e8df42a22b2bd6bbca214da936c8032f9aa39e94a6904248cd1a0dcb"
+    },
+    {
+      "path": "skills/canvas2d-data-visualization/references/rendering-architecture.md",
+      "sha256": "69261e5f6b0e9c4e2a2e51c4e9a43be5c9b059f53f7b980e8dda17311d9e1682"
+    },
+    {
+      "path": "skills/canvas2d-data-visualization/references/sparklines-and-microcharts.md",
+      "sha256": "acc34a3aec4b4242765ea26ca4b4d9f56eafea558967c22a428b742452c19fcb"
+    },
+    {
+      "path": "skills/canvas2d-data-visualization/SKILL.md",
+      "sha256": "3a90bb37ac0ad1392152bc836f937490fa4c14cc16c5fb66dc3500952434b869"
+    },
+    {
+      "path": "skills/d3-data-visualization/agents/openai.yaml",
+      "sha256": "31e69bcf994568fc8b5a12e2dff7207c22159b806c25b819a63b1b0319d8db3d"
+    },
+    {
+      "path": "skills/d3-data-visualization/references/d3-architecture-patterns.md",
+      "sha256": "8dea034c1777d04ca6622951126f0796c8cb8dd886a840eccafcf01ee994abe6"
+    },
+    {
+      "path": "skills/d3-data-visualization/references/d3-interaction-and-annotation.md",
+      "sha256": "9fbd79a3ead366053efdc3e0071895af05ac62b639514f4e119a70ef7cd0cc6e"
+    },
+    {
+      "path": "skills/d3-data-visualization/references/d3-module-map.md",
+      "sha256": "5ae3764b669695ba2dfff11b0c8fd4f63cf23b759b451632fb8cd85460273a6d"
+    },
+    {
+      "path": "skills/d3-data-visualization/references/d3-pitfalls-and-scale-limits.md",
+      "sha256": "36c8a61eac374887b487548c51b38bf84e3597e80a72eceb2f92e63e64b259fc"
+    },
+    {
+      "path": "skills/d3-data-visualization/references/svg-polish-and-crispness.md",
+      "sha256": "7b64a334c91a180d7be54adeb0eb98ea42fe0afb977dd2feae9a453f97f0f0d3"
+    },
+    {
+      "path": "skills/d3-data-visualization/SKILL.md",
+      "sha256": "7e333c70eed27846d5772034afbec21675c6c3e907a634eb560750c62edf3946"
+    },
+    {
+      "path": "skills/dashboards-and-real-time-visualization/agents/openai.yaml",
+      "sha256": "ca92f4da620948f8e96d3f7649fd759823d1b1b78bbf2b5edbc66bf3613b65e3"
+    },
+    {
+      "path": "skills/dashboards-and-real-time-visualization/references/interaction-patterns.md",
+      "sha256": "d966d484666c27b74fbb19b8a478eb0baf767315efa28fb751f52c6150a9a08c"
+    },
+    {
+      "path": "skills/dashboards-and-real-time-visualization/references/monitoring-vs-analysis.md",
+      "sha256": "bdf8e09d8b5eb420b341b3537a081cdaf4cf7f225358a3dc857bfb7f0d11639e"
+    },
+    {
+      "path": "skills/dashboards-and-real-time-visualization/references/performance-and-degradation.md",
+      "sha256": "ef775ed3308f3d13c35a27695f273003aa01ef5b484239d65745dda5b2c04a75"
+    },
+    {
+      "path": "skills/dashboards-and-real-time-visualization/references/streaming-data-pipelines.md",
+      "sha256": "1c4aeb89dec12a69ed3749a7a5f86a734e0cd39fa83bceb61f069b1f0000040d"
+    },
+    {
+      "path": "skills/dashboards-and-real-time-visualization/SKILL.md",
+      "sha256": "a13d4fb8b466f05746e8c7f63baa041a8ad3246a9b0ffc258bb663b3048c3a37"
+    },
+    {
+      "path": "skills/data-visualization/agents/openai.yaml",
+      "sha256": "5fe691a29fe39bf138df5de4508e71bc2aeb6e0ac02a243e70e138bfe7847f53"
+    },
+    {
+      "path": "skills/data-visualization/references/default-stack-selection.md",
+      "sha256": "d37c3fd80e0dd2ef9d84e4f627ba23b1baa531e4db8bec29a1385ce36acd4179"
+    },
+    {
+      "path": "skills/data-visualization/references/prompt-routing-examples.md",
+      "sha256": "76c895f5f27ae82c025a2280afc390d9ce3587b7862ceb4b40407d561c2ead1e"
+    },
+    {
+      "path": "skills/data-visualization/references/route-by-problem.md",
+      "sha256": "bc514559d714f7f9e7cd5775c1c30b48413f932d775fe9d54919fd68ed4ba348"
+    },
+    {
+      "path": "skills/data-visualization/SKILL.md",
+      "sha256": "0078ccf7d8f448dba767e6d0bd12e903c18df7411a09272289e48b5dd3b4731c"
+    },
+    {
+      "path": "skills/gantt-chart-visualization/agents/openai.yaml",
+      "sha256": "cc045541456c41ef6269a69f1fdfb4abd4a6eaf1823e63bd3a822463867d2657"
+    },
+    {
+      "path": "skills/gantt-chart-visualization/references/gantt-accessibility-export-and-testing.md",
+      "sha256": "7d20ffb122effae36fdee3e9c5ab5aa0c4b92cb240c80598a83af3f2c4caf69d"
+    },
+    {
+      "path": "skills/gantt-chart-visualization/references/gantt-api-and-export-format-ingestion.md",
+      "sha256": "b6cfcd1620b7312b90a67a8ca8e6681e7545b58bdbb5d1295d69b45c37e45d78"
+    },
+    {
+      "path": "skills/gantt-chart-visualization/references/gantt-chart-design-and-use-cases.md",
+      "sha256": "4d9a1d00f61074898556a15f33cd39bd1f3fd9e326f0e221f937d3a1996446c2"
+    },
+    {
+      "path": "skills/gantt-chart-visualization/references/gantt-data-contracts-and-integrations.md",
+      "sha256": "88bee1863d32504dd60fb4646e6cfb121a10627170f6f07375c62d8c20ed53d3"
+    },
+    {
+      "path": "skills/gantt-chart-visualization/references/gantt-interaction-patterns.md",
+      "sha256": "4dcad4cdc96c36f474829eed8b85efb04a6c56f1673604cc4bd5c6a5a20dde1c"
+    },
+    {
+      "path": "skills/gantt-chart-visualization/references/gantt-performance-and-rendering.md",
+      "sha256": "99536dab2de1cde15e7a65964331aad9c5860738b59f7cafd0567189af42f4ea"
+    },
+    {
+      "path": "skills/gantt-chart-visualization/SKILL.md",
+      "sha256": "d207d3a674d0aca0a3cec35b68cf5cf80c968e9c70a08f393d7bf555dc6a97f1"
+    },
+    {
+      "path": "skills/geospatial-and-cartographic-visualization/agents/openai.yaml",
+      "sha256": "1e7d558eb4a3343d567b7bf649f83c673c35c366442224dabc98eccae6fe1b0c"
+    },
+    {
+      "path": "skills/geospatial-and-cartographic-visualization/references/adaptive-basemaps-and-layer-stacks.md",
+      "sha256": "83a6d702439b5cc59f44bce105d4f25b18d0a27bda86d7e6c89ebf1fe036e3f6"
+    },
+    {
+      "path": "skills/geospatial-and-cartographic-visualization/references/choropleths-symbols-and-flows.md",
+      "sha256": "cf8aecbb0c482f4f42dd7cb0f73473c76dfdba4700b2b9e69a98d1dab4c2389d"
+    },
+    {
+      "path": "skills/geospatial-and-cartographic-visualization/references/deckgl-d3-geo-stack-selection.md",
+      "sha256": "268bf111c6d3dbc77692f9ee4ac1e78dc8f9679a68cf03d4615304f50261dc07"
+    },
+    {
+      "path": "skills/geospatial-and-cartographic-visualization/references/map-or-not.md",
+      "sha256": "d31badb2147fd9925b23c7f8739fe1ea6d4d466f7e1f2fd3b31360e43c46439f"
+    },
+    {
+      "path": "skills/geospatial-and-cartographic-visualization/references/multiscale-symbols-and-zoom-behavior.md",
+      "sha256": "e9d458b014267da33e63b9fffbbadbe4e222ddcc23708ed3253eaf5f289228b5"
+    },
+    {
+      "path": "skills/geospatial-and-cartographic-visualization/references/point-overlap-strategies.md",
+      "sha256": "0714ba47302be6f886c8e87553acc7972e67d499e9ce07ae6b7d1bf444023778"
+    },
+    {
+      "path": "skills/geospatial-and-cartographic-visualization/references/projections-and-normalization.md",
+      "sha256": "12c01442a5be50987c70c1b67f59c74fdfcf4222f1104526827d1109be805a0c"
+    },
+    {
+      "path": "skills/geospatial-and-cartographic-visualization/references/slippy-map-and-product-stack-selection.md",
+      "sha256": "8e7c12dc46e82453e6d795fd521efd2cbc06900c1254e4f69280265bd5b57108"
+    },
+    {
+      "path": "skills/geospatial-and-cartographic-visualization/references/source-method-and-coordinate-ledger.md",
+      "sha256": "93764fee2239d21357e638a63cc3b064dfa764013ce1fa81ab25c69fe03a90b0"
+    },
+    {
+      "path": "skills/geospatial-and-cartographic-visualization/SKILL.md",
+      "sha256": "ee7595430af215ebc65ae8e9396006ae95255478cbb4c196b6bd93cec5d86153"
+    },
+    {
+      "path": "skills/grammar-of-graphics-and-declarative-visualization/agents/openai.yaml",
+      "sha256": "464e3590b1dc7e977050473e275d783c4ce52b9da436fd08b7b9d1ac9ecb639c"
+    },
+    {
+      "path": "skills/grammar-of-graphics-and-declarative-visualization/references/observable-plot.md",
+      "sha256": "7f56b5b624fe3c1dacec05039c3d395094b1e341decf05f45e4f413c3fbe6450"
+    },
+    {
+      "path": "skills/grammar-of-graphics-and-declarative-visualization/references/vega-lite-and-vega.md",
+      "sha256": "f6ad6b02737f81a532e985d12d93e52392ef8ba81bca0a0e476dc66d35f7202e"
+    },
+    {
+      "path": "skills/grammar-of-graphics-and-declarative-visualization/references/when-to-stay-declarative.md",
+      "sha256": "2bcf3ec22f114cdcdb0cd7324883270cda607927c73b899cac5c1ee0cde32145"
+    },
+    {
+      "path": "skills/grammar-of-graphics-and-declarative-visualization/SKILL.md",
+      "sha256": "5e0feec02c4ae815013c983481c10611af02aa55a59786e86ee53e4c8ffeb1ff"
+    },
+    {
+      "path": "skills/node-link-and-diagram-layout/agents/openai.yaml",
+      "sha256": "128f6e6783d14dff09338b16dd469daeddefd2d381e76dde822a8df554ed9dc4"
+    },
+    {
+      "path": "skills/node-link-and-diagram-layout/references/algorithm-selection.md",
+      "sha256": "8eb511252db415cfebdb47dacfaae0610d0800db10b20efb44d1be36221bff0e"
+    },
+    {
+      "path": "skills/node-link-and-diagram-layout/references/layered-tree-force-and-radial-layouts.md",
+      "sha256": "2bd67ffa4cc6ddfb0b8881950b2486c6d958669d07eca9ba28a4494e09db4909"
+    },
+    {
+      "path": "skills/node-link-and-diagram-layout/references/routing-overlap-and-quality.md",
+      "sha256": "96691c96dc91a5481c4b9215ab7633c4c81b746135c1cdc60c52e5cffe9b66a9"
+    },
+    {
+      "path": "skills/node-link-and-diagram-layout/SKILL.md",
+      "sha256": "4fcfaac03db9f35a30f185f5b491f1d79cad5c3651b15c383e6c2e501bed7e24"
+    },
+    {
+      "path": "skills/react-and-nextjs-data-visualization/agents/openai.yaml",
+      "sha256": "95f08ba64463f0f660b8e657c3312163a30f79e25f3d386737a2d0b04533c2bf"
+    },
+    {
+      "path": "skills/react-and-nextjs-data-visualization/references/d3-canvas-and-grammar-in-react.md",
+      "sha256": "86b5b21e5828af5f080833dfed2e11f13734d1617e98ed443c8070eaaa115617"
+    },
+    {
+      "path": "skills/react-and-nextjs-data-visualization/references/lazy-loading-ssr-and-bundle-strategy.md",
+      "sha256": "1716e74df77a50420c158515cc8ff363f7e3b3cd62061bbbddddf50d12dab74c"
+    },
+    {
+      "path": "skills/react-and-nextjs-data-visualization/references/nextjs-client-server-boundaries.md",
+      "sha256": "a5b7418937bbe276452fd158c25a1a637807dbb201e799c260f7d26ebe978c83"
+    },
+    {
+      "path": "skills/react-and-nextjs-data-visualization/references/react-component-patterns.md",
+      "sha256": "b125bffce1b0c0fef19d57e95d482bcc78ec7b4aa9ea571b19109547e333ec74"
+    },
+    {
+      "path": "skills/react-and-nextjs-data-visualization/SKILL.md",
+      "sha256": "9d42a3e58680e4cc3fb8e4587b3db094886cbd4a1179d99d8ffaf79a97139227"
+    },
+    {
+      "path": "skills/reports-pdfs-and-slide-automation/agents/openai.yaml",
+      "sha256": "267f855fb767679813764f4656fdc27ce535dd6adb96c65fcdd0f68164f6e81f"
+    },
+    {
+      "path": "skills/reports-pdfs-and-slide-automation/references/document-embedding-and-regeneration.md",
+      "sha256": "75356e3a3169f50fae26f6320196cea39adbd3dafce889cab44f0b92802fff8e"
+    },
+    {
+      "path": "skills/reports-pdfs-and-slide-automation/references/pdf-generation-paths.md",
+      "sha256": "9559c531f916cb5de46b5770d441e46036e56f0d277be0446f231656264c5796"
+    },
+    {
+      "path": "skills/reports-pdfs-and-slide-automation/references/powerpoint-and-google-slides.md",
+      "sha256": "be99053b786c231f8fd842aad827d95c3884bc048ae2262a71de96baba71842c"
+    },
+    {
+      "path": "skills/reports-pdfs-and-slide-automation/references/report-structure-and-figure-packaging.md",
+      "sha256": "dbe8df0b19bc9afa398f0152e94d4357c5e41c44e95f40dd227e02996e4a1d29"
+    },
+    {
+      "path": "skills/reports-pdfs-and-slide-automation/SKILL.md",
+      "sha256": "5ff8af2886df8ecec3fbaada93e5cd066237ac083fc533ac293608addef74eac"
+    },
+    {
+      "path": "skills/scrollytelling-and-parallax-data-visualization/agents/openai.yaml",
+      "sha256": "02d020df66f19193f0fa82e90cdaae42a07582b5803b6002f75903c4b0b0e9d9"
+    },
+    {
+      "path": "skills/scrollytelling-and-parallax-data-visualization/references/accessibility-testing-and-review.md",
+      "sha256": "f5f0ee5fefd982afc04033ea69b78f0fb19ad1c74b99c145039d1ddd77ca0f8e"
+    },
+    {
+      "path": "skills/scrollytelling-and-parallax-data-visualization/references/implementation-and-performance.md",
+      "sha256": "98144904633a6eaa663bdc061f2ce111f3ac72b2a804e271f78dd524aa2473e3"
+    },
+    {
+      "path": "skills/scrollytelling-and-parallax-data-visualization/references/story-patterns-and-scene-contracts.md",
+      "sha256": "0b656f362cb15abd09e9ef4628fb1a1cd34d9678b17d8037193ca69c30f53475"
+    },
+    {
+      "path": "skills/scrollytelling-and-parallax-data-visualization/SKILL.md",
+      "sha256": "2b0d62b04f1555e1a28ea1ae87b25793e47220e8a6c1fb6d044531a567745d0e"
+    },
+    {
+      "path": "skills/statistical-and-uncertainty-visualization/agents/openai.yaml",
+      "sha256": "36f421a3c371dc2fd366c225b3bce5320fce889d587a3ae94a0ac2060290a619"
+    },
+    {
+      "path": "skills/statistical-and-uncertainty-visualization/references/distribution-and-summary-choices.md",
+      "sha256": "c86b1bf49bea44e7cf7dae5f5dd718afef628c51c5f600d919bd8502efed9f97"
+    },
+    {
+      "path": "skills/statistical-and-uncertainty-visualization/references/experimental-and-analytical-pitfalls.md",
+      "sha256": "1cc777d41a7f5f14d39a507295fc32514ad9fdc1e4ef1ef82e443a1942b37bd1"
+    },
+    {
+      "path": "skills/statistical-and-uncertainty-visualization/references/missingness-and-confidence.md",
+      "sha256": "4fd2a8005e2721f1fdda9e716cc641ebd2413df6ecf3804b95f79e37c6d7ef02"
+    },
+    {
+      "path": "skills/statistical-and-uncertainty-visualization/references/uncertainty-encodings.md",
+      "sha256": "08520849c9bd3f7e727784357ed7fd64c393177596708bddc17d5841ffe1c6b9"
+    },
+    {
+      "path": "skills/statistical-and-uncertainty-visualization/SKILL.md",
+      "sha256": "df7790fc9d40638abbeb6c983ee1a1cf136ebc530adacc747048d120817b7c23"
+    },
+    {
+      "path": "skills/testing-data-visualizations/agents/openai.yaml",
+      "sha256": "ce705d445d035bb86cd632764d6a6a27537547c44480401125b714f0098eed3d"
+    },
+    {
+      "path": "skills/testing-data-visualizations/references/avoiding-brittle-over-testing.md",
+      "sha256": "af3e9927834c493aa0b74ab129d64f07c1e85ee609886af548bf36a74edf549b"
+    },
+    {
+      "path": "skills/testing-data-visualizations/references/data-mocking-and-fixtures.md",
+      "sha256": "95df6da8087f2acf8c63439ea93bc737556a18179dfd08c21210be91dcd1ab67"
+    },
+    {
+      "path": "skills/testing-data-visualizations/references/e2e-dashboard-and-export-strategies.md",
+      "sha256": "19083e201a7345e53e33fe0b881bab0bf85fea66d4bd67d3c9546205462419ce"
+    },
+    {
+      "path": "skills/testing-data-visualizations/references/test-level-selection.md",
+      "sha256": "493e1967dedc504b59ba39083b908187df40dac39c8cb5f73e3aa59871211532"
+    },
+    {
+      "path": "skills/testing-data-visualizations/references/unit-and-component-tests.md",
+      "sha256": "ffbba16d27f04dc79b10c39fc3b77a6904dd9ad5932203e3a4cae40f0217a8cf"
+    },
+    {
+      "path": "skills/testing-data-visualizations/references/visual-regression-and-image-testing.md",
+      "sha256": "eb873b7f1857edb0a1767b1bbd792bc1836669ea0e20762799c5d96e01cb4de8"
+    },
+    {
+      "path": "skills/testing-data-visualizations/SKILL.md",
+      "sha256": "be5fd4725bd3fdbb1a75aa9d44dba666b69b6654d8cafd3a21d89c19b8b66d86"
+    },
+    {
+      "path": "skills/threejs-data-visualization/agents/openai.yaml",
+      "sha256": "13c25d54abb4192a9a0f23c4b2225e5312812d4b0ddb4efa0d450560aef23400"
+    },
+    {
+      "path": "skills/threejs-data-visualization/references/cutaway-terrain-and-domain-scenes.md",
+      "sha256": "846fd16ea0ebeb3c3e58792b5c45356eb8d7cdbb1d8d67c5ecf0294b689d330f"
+    },
+    {
+      "path": "skills/threejs-data-visualization/references/gpu-scaling-and-interaction.md",
+      "sha256": "886f146d56c1121616d3c1ef6a174fa29fc80068727a311ca9b7dedcd029dfb4"
+    },
+    {
+      "path": "skills/threejs-data-visualization/references/particle-effects-and-flow.md",
+      "sha256": "7617bbb503129ab732a6d17a3b73e9fb3c0d8676776dcc55c647a55e100754c5"
+    },
+    {
+      "path": "skills/threejs-data-visualization/references/scene-architecture-and-encodings.md",
+      "sha256": "e0328c4d6a660fb830a3221d856d21498146acb3d08f3431105ce0c1b6e2026f"
+    },
+    {
+      "path": "skills/threejs-data-visualization/references/scene-readiness-and-interaction-qa.md",
+      "sha256": "ac51123ef1f9ef2878a5652fb90c40df7decddaad51fe887c8fd4c70554424f8"
+    },
+    {
+      "path": "skills/threejs-data-visualization/references/webgl-2d-animation-patterns.md",
+      "sha256": "3ae9f9c47d7d82f3a9c2b44c2c6c0852c3906a0604a64c78aebf373f7b2d055f"
+    },
+    {
+      "path": "skills/threejs-data-visualization/references/webgl-library-selection.md",
+      "sha256": "6a098dc66e1e9b09eac7d371261d1c796baba28a973ac65872fe6fa912310433"
+    },
+    {
+      "path": "skills/threejs-data-visualization/references/when-3d-is-justified.md",
+      "sha256": "2b4f4cd36e863480d53ca424a7a4245cbd43c85e630d321445ef48f48d51d833"
+    },
+    {
+      "path": "skills/threejs-data-visualization/SKILL.md",
+      "sha256": "406048727d478742f7073eba7e2a923a65ecdf88e5e346799560066cfd78eb45"
+    },
+    {
+      "path": "skills/typescript-data-visualization-engineering/agents/openai.yaml",
+      "sha256": "9191c2b35bf99f913dcbf53faba722224f14746eb295416c17ec44b0a52f3054"
+    },
+    {
+      "path": "skills/typescript-data-visualization-engineering/references/export-and-product-integration.md",
+      "sha256": "1ad6d7a11886cb0e5cb87e54939d7f721b00f45b153689954ea94eeab9bb01ac"
+    },
+    {
+      "path": "skills/typescript-data-visualization-engineering/references/library-selection-for-builders.md",
+      "sha256": "0af43e69f7be76f5716e5c21929aa9446b31a6ddf64611c0b034d10fb791554f"
+    },
+    {
+      "path": "skills/typescript-data-visualization-engineering/references/react-and-framework-boundaries.md",
+      "sha256": "ac38bdcfb8eab4cd3f7c8a130e097611d1bb12ccd42a3835f9afcc86fd2eefdc"
+    },
+    {
+      "path": "skills/typescript-data-visualization-engineering/references/types-and-data-contracts.md",
+      "sha256": "d8ed0018d7cf8b00f3a435ea3c73a105028641485cf857c70490d132b5133a9a"
+    },
+    {
+      "path": "skills/typescript-data-visualization-engineering/SKILL.md",
+      "sha256": "3a080b13543b99749926504659f8095c3f6f644e88b2a55ca902ae21d1845fa1"
+    },
+    {
+      "path": "skills/uml-and-software-architecture-visualization/agents/openai.yaml",
+      "sha256": "9e477f2daebe7c68718d6a4b8e9e40190180643882f190eb72001cba9594d3e0"
+    },
+    {
+      "path": "skills/uml-and-software-architecture-visualization/references/formats-and-interchange.md",
+      "sha256": "1756fccc2877225cfde2764d6920484a19477626d52e68fa5fd113715e10f5cb"
+    },
+    {
+      "path": "skills/uml-and-software-architecture-visualization/references/interactive-diagram-patterns.md",
+      "sha256": "b04bedea7b5e843e7716c13cef441766e22e3212db3cbf3fe3366292a9eeec71"
+    },
+    {
+      "path": "skills/uml-and-software-architecture-visualization/references/quality-accessibility-export-testing.md",
+      "sha256": "cb8eee465f5dcb3a231b4ccaf57cf090203239efff1d752d41eddccedaf9d72a"
+    },
+    {
+      "path": "skills/uml-and-software-architecture-visualization/references/typescript-web-rendering.md",
+      "sha256": "71a33bdf10ddeeaec701a745aebe900a498c7084a9233ee620141c22d39de664"
+    },
+    {
+      "path": "skills/uml-and-software-architecture-visualization/references/uml-diagram-types-and-selection.md",
+      "sha256": "56095d845057ed157b8ce6437a03500f7d0b72fe6f139faf09aec495bd38fc54"
+    },
+    {
+      "path": "skills/uml-and-software-architecture-visualization/SKILL.md",
+      "sha256": "3c5f2101ab938525fd8c44729f3165cdb8bf6dbb6f9e73f84735b52c5aad5d26"
+    },
+    {
+      "path": "skills/visualization-strategy-and-critique/agents/openai.yaml",
+      "sha256": "d9dc6b4ed57a8bb3948200581bc7c30649cb331ee277316f581d74cf6e58fdce"
+    },
+    {
+      "path": "skills/visualization-strategy-and-critique/references/chart-selection-patterns.md",
+      "sha256": "edeb6d4c29d34ce016ab50cba723bad1f58d3dc65f051969e426db6caf9f653b"
+    },
+    {
+      "path": "skills/visualization-strategy-and-critique/references/critique-lenses.md",
+      "sha256": "d67c6aa791883fc998a8dcf1ecd087dfd5d74a5ab09246998d3fc6c694cfa025"
+    },
+    {
+      "path": "skills/visualization-strategy-and-critique/references/decision-framing.md",
+      "sha256": "e74eb51ba417a84c5354343242159e9bd668aec2c7cf58feaba84500cc8cf380"
+    },
+    {
+      "path": "skills/visualization-strategy-and-critique/references/tufte-munzner-cairo-synthesis.md",
+      "sha256": "ac20cb8916eeb4b312e91bd95d9ded351be3d94cb2592f43d4430f267dae513c"
+    },
+    {
+      "path": "skills/visualization-strategy-and-critique/SKILL.md",
+      "sha256": "3bcd91d14f9968346cf2ae91781e48784fb36d8fc95a6f5891d10cdc6ef67a1f"
+    }
+  ]
+}

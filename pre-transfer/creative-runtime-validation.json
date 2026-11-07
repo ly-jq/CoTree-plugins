@@ -1,0 +1,254 @@
+{
+  "observedAt": "2026-10-07T07:33:53.618Z",
+  "node": "v24.13.0",
+  "platform": "win32",
+  "scope": "isolated-local-creative-samples",
+  "credentialsUsed": false,
+  "accountBusiness": "not-tested",
+  "activeUserRegistryModified": false,
+  "browser": {
+    "executable": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+    "version": "154.0.4258.53",
+    "renderExecutable": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\browser\\chrome-headless-shell\\win64-152.0.7977.30\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+    "pageErrors": [],
+    "externalPageRequests": [],
+    "viewports": [
+      "1120x850",
+      "1120x1000",
+      "390x844",
+      "640x360"
+    ],
+    "closed": true
+  },
+  "results": {
+    "elyra.game-studio": {
+      "packageDigest": "97974bd19273583823046e5b15b83973d49efb89b5e59fa00bf01f1bd76b4a60",
+      "status": "isolated-phaser-playtest",
+      "phaser": "3.90.0",
+      "gameplay": [
+        "keyboard",
+        "pointer",
+        "pause",
+        "collect-once",
+        "win",
+        "restart",
+        "mobile"
+      ],
+      "sprites": {
+        "frames": 4,
+        "size": [
+          64,
+          64
+        ],
+        "lockedFirstFrame": true,
+        "transparent": true,
+        "overwriteRejected": true,
+        "invalidDimensionsRejected": true,
+        "imageGenerationCalled": false
+      },
+      "aiGeneration": "not-tested",
+      "threeAndR3f": "not-tested"
+    },
+    "elyra.hyperframes": {
+      "packageDigest": "52b64d99400674a0c4e5504194ac0da775b058da3d3a5206d871323672efe737",
+      "status": "isolated-hyperframes-render",
+      "version": "0.8.139",
+      "gsap": "3.15.0",
+      "lint": {
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "infoCount": 0,
+        "findings": [],
+        "filesScanned": 1,
+        "_meta": {
+          "version": "0.8.139",
+          "updateAvailable": false
+        }
+      },
+      "inspect": {
+        "schemaVersion": 1,
+        "duration": 3,
+        "samples": [
+          0.167,
+          0.5,
+          0.833,
+          1.167,
+          1.5,
+          1.833,
+          2.167,
+          2.5,
+          2.833
+        ],
+        "tolerance": 2,
+        "strict": false,
+        "collapseStatic": true,
+        "ok": true,
+        "errorCount": 0,
+        "warningCount": 0,
+        "infoCount": 0,
+        "issueCount": 0,
+        "totalIssueCount": 0,
+        "truncated": false,
+        "issues": [],
+        "_meta": {
+          "version": "0.8.139",
+          "updateAvailable": false,
+          "deprecated": true
+        }
+      },
+      "timeline": {
+        "initialOpacity": 0,
+        "visibleOpacity": 1,
+        "rewindOpacity": 0
+      },
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 640,
+            "height": 360,
+            "r_frame_rate": "24/1",
+            "duration": "3.000000",
+            "nb_read_frames": "72"
+          }
+        ],
+        "format": {
+          "duration": "3.000000"
+        }
+      },
+      "rendered": {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\render\\video.mp4",
+        "bytes": 42765,
+        "sha256": "4129a650024518d4ab9bf454ceec48e4de25534a53f378173a919e136b535a55"
+      },
+      "studioPreview": "not-tested; real engine inspect and source timeline seek tested",
+      "audio": "template-has-no-audio-sources",
+      "registryAndCloud": "not-tested"
+    },
+    "elyra.playground": {
+      "packageDigest": "39d7947ad67c604e747100e47dabbb7d47a4c4e6ec34a54c81dc7cab91b54da8",
+      "status": "isolated-html-interaction",
+      "liveControls": true,
+      "presets": 3,
+      "keyboard": true,
+      "clipboard": "real success and simulated denial",
+      "exportRoundTrip": true,
+      "htmlTextInjectionRejected": true,
+      "nativeThemeTemplates": 6,
+      "testedTemplate": "design",
+      "otherTemplateBusiness": "not-tested"
+    }
+  },
+  "dependencyLock": {
+    "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\tooling\\package-lock.json",
+    "bytes": 62481,
+    "sha256": "b406a29fbfeb750c7619e4c260e4897cb1093d2ff792e77137d2529fb8831a77"
+  },
+  "screenshots": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\game-desktop.png",
+      "bytes": 29954,
+      "sha256": "a9327513a8b5e60b5daf1aa6532f91d31263f103151075d592bf51dcfda99665"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\game-mobile.png",
+      "bytes": 25696,
+      "sha256": "a1e246cb704ff42bc80b9d5ab3da549da95fb708db26e3a6f8d1f69c47da6eae"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\playground-desktop.png",
+      "bytes": 77365,
+      "sha256": "c2f279c6be2c8be12483abb4f9dc5177c24a87ca88ac17bf3bacebfd56034049"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\playground-mobile.png",
+      "bytes": 66992,
+      "sha256": "1ae3a1300b8622e8cac706069d322d4f518cec974dec898a02ef56312bcfb504"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\hyperframes-source-seek.png",
+      "bytes": 16722,
+      "sha256": "86ce8d7fcf06bb3873e0b00100daa43a836a0f26aa0c84061caccd53c52c4d61"
+    }
+  ],
+  "spritePreview": {
+    "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\sheet.png",
+    "bytes": 440,
+    "sha256": "8916dc85a86fd1ea388efa671b64786f0b0ff1c7ed17328daf5cc574e537f161"
+  },
+  "decodedVideoFrames": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\first.png",
+      "bytes": 1586,
+      "sha256": "98e5dbaf0715364c368a80c8282a55d095b6a40c6b84ebcfdef10718d4052415"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\middle.png",
+      "bytes": 69118,
+      "sha256": "360a72be892b1f9a06401c673660f109e7bdf2cdca5a8347af7e74689be29c8c"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\last.png",
+      "bytes": 69135,
+      "sha256": "8811c77393c34fa2f20aef3c4c0b1e0e36ea0f40914092321f26c210e7da58d3"
+    }
+  ],
+  "visualReview": {
+    "observedAt": "2026-10-07T07:37:11.267Z",
+    "reviewedImages": [
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\game-desktop.png",
+        "sha256": "a9327513a8b5e60b5daf1aa6532f91d31263f103151075d592bf51dcfda99665"
+      },
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\game-mobile.png",
+        "sha256": "a1e246cb704ff42bc80b9d5ab3da549da95fb708db26e3a6f8d1f69c47da6eae"
+      },
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\playground-desktop.png",
+        "sha256": "c2f279c6be2c8be12483abb4f9dc5177c24a87ca88ac17bf3bacebfd56034049"
+      },
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\playground-mobile.png",
+        "sha256": "1ae3a1300b8622e8cac706069d322d4f518cec974dec898a02ef56312bcfb504"
+      },
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\hyperframes-source-seek.png",
+        "sha256": "86ce8d7fcf06bb3873e0b00100daa43a836a0f26aa0c84061caccd53c52c4d61"
+      },
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\sheet.png",
+        "sha256": "8916dc85a86fd1ea388efa671b64786f0b0ff1c7ed17328daf5cc574e537f161"
+      },
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\first.png",
+        "sha256": "98e5dbaf0715364c368a80c8282a55d095b6a40c6b84ebcfdef10718d4052415"
+      },
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\middle.png",
+        "sha256": "360a72be892b1f9a06401c673660f109e7bdf2cdca5a8347af7e74689be29c8c"
+      },
+      {
+        "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\verification-05\\last.png",
+        "sha256": "8811c77393c34fa2f20aef3c4c0b1e0e36ea0f40914092321f26c210e7da58d3"
+      }
+    ],
+    "findings": "Desktop and narrow layouts readable without overlap; sprite baselines and transparency inspected; first video frame intentionally empty before entrances, middle and last frames readable."
+  },
+  "renderBrowser": {
+    "browser": "chrome-headless-shell",
+    "buildId": "152.0.7977.30",
+    "platform": "win64",
+    "executablePath": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch19-runtime\\browser\\chrome-headless-shell\\win64-152.0.7977.30\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+    "sha256": "909fa4a0d2866f5b5b6cabd0a3b3545edeaf84db361148dbc8e992e25e61e7e6"
+  },
+  "environmentLimitations": [
+    "Windows Edge inspect passed, but HyperFrames 0.8.139 render preflight --version timed out. Render passed using isolated Chrome Headless Shell 152.0.7977.30.",
+    "Studio interactive preview, audio sources, registry installs, Three.js/R3F projects and cloud accounts not tested."
+  ],
+  "taskOwnedProcessesStopped": true
+}

@@ -1,0 +1,116 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "示例：渠道收入",
+    "description": "合成演示，不代表业务。",
+    "generatedAt": "2026-10-06T00:00:00Z",
+    "sources": [
+      {
+        "id": "synthetic",
+        "label": "合成演示查询",
+        "path": "queries/synthetic.sql"
+      }
+    ],
+    "filters": [
+      {
+        "id": "channel",
+        "label": "Channel",
+        "dataset": "revenue",
+        "field": "channel",
+        "includeAll": true,
+        "targets": [
+          {
+            "dataset": "revenue",
+            "field": "channel"
+          }
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "revenue-chart",
+        "title": "Revenue by channel",
+        "type": "bar",
+        "dataset": "revenue",
+        "sourceId": "synthetic",
+        "encodings": {
+          "x": {
+            "field": "channel",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "amount",
+            "type": "quantitative"
+          }
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "revenue-table",
+        "title": "Revenue detail",
+        "dataset": "revenue",
+        "sourceId": "synthetic",
+        "columns": [
+          {
+            "field": "channel",
+            "label": "Channel",
+            "type": "text"
+          },
+          {
+            "field": "amount",
+            "label": "Amount",
+            "type": "number"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "id": "summary",
+        "type": "markdown",
+        "body": "## 合成样本\n\nDirect 120，Search 80。单位：元；仅展示验证。"
+      },
+      {
+        "id": "plot",
+        "type": "chart",
+        "chartId": "revenue-chart"
+      },
+      {
+        "id": "detail",
+        "type": "table",
+        "tableId": "revenue-table"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "status": "fixture",
+    "generatedAt": "2026-10-06T00:00:00Z",
+    "datasets": {
+      "revenue": [
+        {
+          "channel": "Direct",
+          "amount": 120
+        },
+        {
+          "channel": "Search",
+          "amount": 80
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "synthetic",
+      "label": "合成演示查询（由本地 SQLite 复算核对，不是业务数据）",
+      "query": {
+        "engine": "sqlite",
+        "sql": "SELECT 'Direct' AS channel, 120 AS amount UNION ALL SELECT 'Search', 80",
+        "description": "Deterministic synthetic fixture; verification executes this query and compares rows."
+      }
+    }
+  ]
+}

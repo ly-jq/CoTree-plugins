@@ -1,0 +1,149 @@
+{
+  "observedAt": "2026-10-07T06:02:48.959Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "isolated-sample-runtimes-only",
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "accountCredentialsProvided": false,
+  "artifactsRetained": true,
+  "taskOwnedProcessesStopped": true,
+  "results": {
+    "elyra.serena": {
+      "packageDigest": "8df8bc1a66cb11e0690ff82adb37927934886bdf77d3f61f64614faa562fd8a0",
+      "status": "isolated-serena-symbol-edit",
+      "versions": {
+        "python": "3.12.14",
+        "serena": "2.0.0.dev0",
+        "temporalio": "1.34.0",
+        "jedi-language-server": "0.47.0",
+        "source": {
+          "url": "https://github.com/oraios/serena",
+          "vcs_info": {
+            "vcs": "git",
+            "commit_id": "3155fd67e9b7336a4a4cbf51ac111bba88fa53d7",
+            "requested_revision": "3155fd67e9b7336a4a4cbf51ac111bba88fa53d7"
+          }
+        }
+      },
+      "launch": "same-commit-preinstalled-cli-with-manifest-arguments",
+      "tools": [
+        "delete_memory",
+        "edit_memory",
+        "find_declaration",
+        "find_implementations",
+        "find_referencing_symbols",
+        "find_symbol",
+        "get_diagnostics_for_file",
+        "get_symbols_overview",
+        "initial_instructions",
+        "insert_after_symbol",
+        "insert_before_symbol",
+        "list_memories",
+        "onboarding",
+        "read_memory",
+        "rename_memory",
+        "rename_symbol",
+        "replace_content",
+        "replace_in_files",
+        "replace_symbol_body",
+        "safe_delete_symbol",
+        "search_for_pattern",
+        "write_memory"
+      ],
+      "calls": [
+        "get_symbols_overview",
+        "find_symbol",
+        "find_referencing_symbols",
+        "replace_symbol_body"
+      ],
+      "originalSourceSha256": "3e819eb66f52f470641e761bfa7688c02be7e5fdefe54f5a6f8a5349970fea80",
+      "editedSource": {
+        "path": ".codex-tmp/batch18-runtime/verified/serena-project/sample.py",
+        "sha256": "3604cb1458cc6f7172fc8230c900fc0f90f3374a0c42bb1c13fd2e02b245f17f",
+        "bytes": 109
+      },
+      "actualOutput": "Welcome Elyra",
+      "languagesVerified": [
+        "python_jedi"
+      ],
+      "uvxDownloadPathVerified": false,
+      "userProjectsOpened": false
+    },
+    "elyra.temporal": {
+      "packageDigest": "caa285f0462a5b38517be4ab6559ef4b7caaed2257d3dfaa03e16111efb596e6",
+      "status": "isolated-temporal-workflow",
+      "cliVersion": "temporal version 1.9.1 (Server 1.32.0, UI 2.54.1)",
+      "binary": {
+        "path": ".codex-tmp/batch18-runtime/temporal-cli/temporal.exe",
+        "sha256": "c49d7f0d9f6a7ae5aed3b97a259070c1cee7bf7e7543be9b4c602109caf3c806",
+        "bytes": 159710720
+      },
+      "sdk": "1.34.0",
+      "execution": {
+        "workflowId": "elyra-local-8fde6437bfff45c38b590530e5b35bc1",
+        "runId": "01a114f5-0ff1-74f8-a0cc-227229e28355",
+        "status": "COMPLETED",
+        "result": {
+          "attempt": 2,
+          "value": 42
+        },
+        "historyEvents": 11
+      },
+      "history": {
+        "path": ".codex-tmp/batch18-runtime/verified/temporal-history.json",
+        "sha256": "b673360079e6a67f51979de36dbd133055d06d7b1954dc3e3e2bb2afa4ff03a9",
+        "bytes": 8021
+      },
+      "credentialsLoaded": false,
+      "cloudAccount": "not-tested",
+      "serverlessWci": "not-tested",
+      "sample": [
+        {
+          "path": ".codex-tmp/batch18-runtime/verified/temporal-sample/sample.py",
+          "sha256": "e9fb2ce863cd5fbc3343be2bcd1fb6b9d5acdbc3e5cff6887dd3773a6b1e3273",
+          "bytes": 756
+        },
+        {
+          "path": ".codex-tmp/batch18-runtime/verified/temporal-sample/run.py",
+          "sha256": "193710814e3b43f7dcbff05f1631b79087999242d6d7155588da834428a2be4f",
+          "bytes": 1369
+        },
+        {
+          "path": ".codex-tmp/batch18-runtime/verified/temporal-sample/requirements.txt",
+          "sha256": "bcecc46835830a9188bb6023a5d2a1782d98182e88a1f51c26f17cc28ede4575",
+          "bytes": 19
+        }
+      ]
+    },
+    "elyra.test-android-apps": {
+      "packageDigest": "6be1a7ebc2b38794444a9b47e9a873074e88af207318b26a7617f2e22c2c7c15",
+      "status": "isolated-ui-parser-and-adb-version",
+      "adbVersion": "Android Debug Bridge version 1.0.41\r\nVersion 37.0.0-14910828\r\nInstalled as C:\\Users\\JqLy\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Genymobile.scrcpy_Microsoft.Winget.Source_8wekyb3d8bbwe\\scrcpy-win64-v4.1\\adb.exe\r\nRunning on Windows 10.0.26200\r\n",
+      "fixture": {
+        "path": ".codex-tmp/batch18-runtime/verified/android-fixture.xml",
+        "sha256": "cb32bbb883bb487c023559e5c68240857e587972dc8cfa6b30e1b2ec19b6feda",
+        "bytes": 134
+      },
+      "selection": {
+        "bounds": [
+          10,
+          20,
+          50,
+          60
+        ],
+        "center": [
+          30,
+          40
+        ],
+        "clickable": true,
+        "sourceSha256": "cb32bbb883bb487c023559e5c68240857e587972dc8cfa6b30e1b2ec19b6feda",
+        "deviceActionExecuted": false,
+        "freshnessVerified": false
+      },
+      "realDeviceActions": false,
+      "realDeviceScreenshot": "not-tested",
+      "realProfiling": "not-tested"
+    }
+  }
+}

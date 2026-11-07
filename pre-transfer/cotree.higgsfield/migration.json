@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.higgsfield",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 29,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "higgsfield",
+      "repository": "plugins",
+      "path": "plugins/higgsfield",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "daa43e63fc55749f886b57fe5dd2497f90487a75d1b0d84dc68aa8c4801973a4",
+      "upstreamVersion": "1.2.1"
+    }
+  ],
+  "changes": [
+    "保留无人出镜、旁白、字幕全套资料，迁移为独立MCP与跨平台本地处理。",
+    "提供真实FFmpeg合成/字幕/探测，改写隐藏沙箱与自动云转写回退，输出拒绝覆盖。"
+  ],
+  "limitations": [
+    "独立OAuth、有效订阅、真实生成/旁白和模型下载待验收；本地合成媒体不证明付费服务。",
+    "paper样式依赖明确可用字体/Pillow/numpy，faster-whisper需模型和相应环境；本地helper不提供缺失的专有沙箱功能。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "faceless-channel": "faceless / finish：独立MCP、脚本分块/视觉一致性、原生FFmpeg合成。",
+    "narrator": "narration：真实配音服务、实际媒体时长和原稿对齐。",
+    "subtitles": "captions：显式本地Whisper转写/词时钟、原稿对齐、clean字幕及可选paper renderer。",
+    "sandbox_exec / HF_WORKFLOWS": "本地Node/Python/FFmpeg，实际文件与作业ID恢复；不假定远端沙箱内隐藏脚本存在。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

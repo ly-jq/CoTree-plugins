@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.canva",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "canva",
+    "repository": "plugins",
+    "path": "plugins/canva",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "c2e50ecb64e35fbdbb68395598c1c39d61d0adde3e6b0b3853e66141cd8d3c90",
+    "upstreamVersion": "14.0.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_CANVA_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/canva-brand-check/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/canva-brand-check/SKILL.md",
+      "sourceMetadata": {
+        "name": "canva-brand-check",
+        "description": "Check a Canva design against a brand kit and report where it diverges — off-palette colors, non-brand fonts, logo misuse, and off-tone copy. Read-only; makes no changes. Use when the user asks \"is this on brand\", \"check this against our brand kit\", \"do a brand review\", \"does this match our brand guidelines\", or \"brand-check my design\"."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/canva-branded-presentation/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/canva-branded-presentation/SKILL.md",
+      "sourceMetadata": {
+        "name": "canva-branded-presentation",
+        "description": "Create on-brand Canva presentations from an outline or brief. Use when the user asks to create a branded presentation, make an on-brand deck, turn an outline into slides, or generate a presentation from a brief. Input can be text directly in the message, a Canva design ID, a reference to a Canva doc by name, or a Canva design link (e.g., https://www.canva.com/design/...)."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/canva-bulk-create/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/canva-bulk-create/SKILL.md",
+      "sourceMetadata": {
+        "name": "canva-bulk-create",
+        "description": "Bulk-create Canva designs from tabular data using a brand template with autofill fields, producing one design per row. Use when users say \"bulk create designs from this CSV\", \"generate one design per row\", \"create a design for each product\", \"batch generate from a template\", or \"autofill a template from a spreadsheet\". Accepts any tabular data source — uploaded files, pasted tables, JSON, or URLs."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/canva-design-feedback/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/canva-design-feedback/SKILL.md",
+      "sourceMetadata": {
+        "name": "canva-design-feedback",
+        "description": "Read a Canva design and return structured, actionable design feedback — visual hierarchy, copy/messaging, layout & spacing, consistency, readability, and accessibility. Read-only; makes no changes to the design. Use when the user asks to \"review my design\", \"give me feedback on this\", \"critique my deck/poster/flyer\", \"how can I improve this design\", or \"what's wrong with this slide\"."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/canva-edit-design/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/canva-edit-design/SKILL.md",
+      "sourceMetadata": {
+        "name": "canva-edit-design",
+        "description": "Make edits to an existing Canva design — change or fix text, replace/insert/delete images and videos, reformat text (size, weight, style, color, alignment, lists, line height), reposition or resize elements, and update the title. Use when the user wants to change, edit, update, fix, translate, replace, or reformat content in a specific Canva design. This is the safe edit engine that other Canva skills (e.g. implement-feedback) build on."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/canva-implement-feedback/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/canva-implement-feedback/SKILL.md",
+      "sourceMetadata": {
+        "name": "canva-implement-feedback",
+        "description": "Implement reviewer feedback on a Canva design. Reads all comment threads, synthesises what reviewers want, makes the clear-cut changes directly, and flags anything that needs a human decision. Use when the user asks to \"implement feedback on my deck\", \"address comments on a design\", \"apply review feedback\", \"fix the comments on my presentation\", or \"implement the feedback\"."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/canva-resize-for-social-media/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/canva-resize-for-social-media/SKILL.md",
+      "sourceMetadata": {
+        "name": "canva-resize-for-social-media",
+        "description": "Resize a Canva design into multiple social media formats (Facebook post, Facebook story, Instagram post, Instagram story, LinkedIn post). Use this skill when users want to resize Canva designs specifically for multiple social media platforms in one operation, rather than resizing to a single format manually."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/canva-translate-design/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/canva-translate-design/SKILL.md",
+      "sourceMetadata": {
+        "name": "canva-translate-design",
+        "description": "Translate all text in a Canva design to another language, creating a translated copy. Faster than manually copying and editing each text box in Canva's editor. Use when users say \"translate my design to [language]\", \"make a Spanish/French/etc version\", or \"localize my Canva design\"."
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#canva",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/canva"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 10,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "492436493be351f343b229dd4ef1f2f38007ac66d32dee27767d0d5b676949a8"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "f33e85150c5f1351784218f8f461579147d3d9de5f1fe4677279a9302219d4d2"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "e2b5be36bc593b18160dde8b886b3c6eb9aba5079757e7edfc435e5d420ca8a5"
+    },
+    {
+      "path": "assets/composer-icon.png",
+      "sha256": "79614839f7e38fb7e72b40e59da914c899b1782b1378c7577c187e0b16e7dca8"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "afb54276bf45167125048872621a14156c03034484519d81b5160cb73c2d7c20"
+    },
+    {
+      "path": "skills/canva-brand-check/SKILL.md",
+      "sha256": "c5af6f8f4f2064b2c2ae474e1f3f8eeeaf5329ad111345393cc1d611504faa94"
+    },
+    {
+      "path": "skills/canva-branded-presentation/SKILL.md",
+      "sha256": "ed677a647ea74e410a0ecb37da8c7cf9bfcea45169c0ab09a00fa33d2ba6a3d8"
+    },
+    {
+      "path": "skills/canva-bulk-create/SKILL.md",
+      "sha256": "90def81bdd48de33196cd370d734d9ddeb56b97a6583d109a4ff311ea3ba21bd"
+    },
+    {
+      "path": "skills/canva-design-feedback/SKILL.md",
+      "sha256": "eb847ed8eedc4e9cb83039953f25a954d6b0c5a2a6208b24ecb29afc23c187d9"
+    },
+    {
+      "path": "skills/canva-edit-design/SKILL.md",
+      "sha256": "33b28ed459f7eb9452bcbd77b5b7d9539c9afe1133f8dcaafa5ab25ee9e73cce"
+    },
+    {
+      "path": "skills/canva-implement-feedback/SKILL.md",
+      "sha256": "7b100da894f662e7815344fa79706cbf9da5880a1bff85464c5c7b7c0311783e"
+    },
+    {
+      "path": "skills/canva-resize-for-social-media/SKILL.md",
+      "sha256": "456bb2647ca466403834c4548080f750be9d8c6feaecc5e7bfc6aabcb80ceffa"
+    },
+    {
+      "path": "skills/canva-translate-design/SKILL.md",
+      "sha256": "85701adf64ef9ad58fe0d00051ff14935c7f02effb8c1583b9132c2ad4f800ef"
+    }
+  ]
+}

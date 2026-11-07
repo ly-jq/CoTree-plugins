@@ -1,0 +1,991 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.data-analytics",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "data-analytics",
+    "repository": "plugins",
+    "path": "plugins/data-analytics",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "87b947c93cb7f3deb3efb49b46078c9731c0d928fb47301b6f110b3a4f157d74",
+    "upstreamVersion": "0.2.8"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "本地分析与 portable HTML 方法可用；交互 MCP App 组件待适配。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/analyze-data-quality/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/analyze-data-quality/SKILL.md",
+      "sourceMetadata": {
+        "name": "analyze-data-quality",
+        "description": "Assess whether structured data, query results, dashboards, or analytical evidence are trustworthy enough to use. Use when the task is to check data quality, reconcile conflicting sources or metric definitions, or decide whether evidence is safe to cite."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/build-dashboard/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/build-dashboard/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-dashboard",
+        "description": "Build source-backed dashboards for monitoring performance, exploring drivers, or acting on product and business metrics. Use when the task needs a dashboard, scorecard, or monitoring view with clear metrics, filters, source definitions, and QA."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/build-report/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/build-report/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-report",
+        "description": "Build polished analytical reports for executive, product, business, or technical audiences. Use when the task needs a durable answer-first narrative with evidence-backed findings, visuals or tables, caveats, and source context."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/create-data-context/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/create-data-context/SKILL.md",
+      "sourceMetadata": {
+        "name": "create-data-context",
+        "description": "Create, update, inspect, or repair Data Analytics semantic layers. Use when the user asks to save data context or create a semantic layer that future Data Analytics work can inspect and cite."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/design-kpis/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/design-kpis/SKILL.md",
+      "sourceMetadata": {
+        "name": "design-kpis",
+        "description": "Design KPI frameworks, metric definitions, targets, guardrails, and measurement plans for product or business decisions. Use when success metrics, drivers, guardrails, targets, or the measurement approach need to be defined or improved."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/gather-business-context/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/gather-business-context/SKILL.md",
+      "sourceMetadata": {
+        "name": "gather-business-context",
+        "description": "Gather business context from connected or provided sources so downstream analysis starts with the right framing. Use when an analytical question depends on missing context, such as what a metric means, what changed recently, or which sources should be checked. If the same prompt asks for diagnosis, recommendation, or a deliverable, gather context first and continue to the focused skill."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/index/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/index/SKILL.md",
+      "sourceMetadata": {
+        "name": "index",
+        "description": "Route Data Analytics plugin-level requests and broad analytics work to the right focused workflow. Use when Data Analytics is at-mentioned, or for analytics requests involving data, metrics, dashboards, reports, charts, notebooks, spreadsheets, KPIs, market sizing, or semantic layers."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/jupyter-notebooks/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/jupyter-notebooks/SKILL.md",
+      "sourceMetadata": {
+        "name": "jupyter-notebooks",
+        "description": "Create, edit, or validate reproducible SQL or Python notebooks. Use for notebooks, SQL/Python scratchpads, reproducible exploration, audit trails, or runnable companions where the analysis should be reviewable or rerunnable."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/kpi-reporting/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/kpi-reporting/SKILL.md",
+      "sourceMetadata": {
+        "name": "kpi-reporting",
+        "description": "Prepare KPI readouts, scorecards, WBR/MBR/QBR updates, and executive summaries from quantitative business or product metrics; use when the task is to report status, compare against targets, explain validated drivers, and state operating implications."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/market-sizing/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/market-sizing/SKILL.md",
+      "sourceMetadata": {
+        "name": "market-sizing",
+        "description": "Estimate market, segment, or opportunity size with transparent assumptions and uncertainty. Use for TAM/SAM/SOM, sizing scenarios, or comparing the scale of possible opportunities."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/metric-diagnostics/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/metric-diagnostics/SKILL.md",
+      "sourceMetadata": {
+        "name": "metric-diagnostics",
+        "description": "Diagnose why a metric changed or differs from expectation. Use when the task is to identify likely drivers of a metric movement, anomaly, gap, or discrepancy."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/product-business-analysis/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/product-business-analysis/SKILL.md",
+      "sourceMetadata": {
+        "name": "product-business-analysis",
+        "description": "Analyze product or business data to support a decision or recommendation. Use when a decision depends on metric-backed evidence, such as choosing a direction, prioritizing an opportunity, evaluating a change, segmenting users, sizing tradeoffs, or deciding what to do next."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/publish-artifact-to-sites/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/publish-artifact-to-sites/SKILL.md",
+      "sourceMetadata": {
+        "name": "publish-artifact-to-sites",
+        "description": "Publish a validated Data Analytics report or dashboard artifact through Sites. Use automatically for durable artifacts in any positively identified Work Mode when the full Sites lifecycle is callable, or in ChatGPT Desktop outside Work Mode only after an explicit Sites request or acceptance of the optional post-handoff sharing offer."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/validate-data/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/validate-data/SKILL.md",
+      "sourceMetadata": {
+        "name": "validate-data",
+        "description": "Validate whether an analysis is accurate, well-supported, and ready to share or use for a decision. Use when reviewing methodology, calculations, comparisons, visuals, caveats, or conclusions."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/visualize-data/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/visualize-data/SKILL.md",
+      "sourceMetadata": {
+        "name": "visualize-data",
+        "description": "Design, build, revise, or QA quantitative charts and figures. Use when an analytical answer needs visual judgment, whether for an inline answer, report, dashboard, notebook, or artifact."
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#dataAnalyticsWidgets",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/dataAnalyticsWidgets"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 198,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "0316bfece02a7dd0dc9bef5bb8539feb1e88c83b81daad835cc6a2cf141b4e08"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "b4e6591a1aab3cac95fc04aa5857202f4179cb3abd017153db56ee64c49a8ad7"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "ea51f78e69c37ba5b07274b23829325147e58ae7f0b4ddb332200f761dd6ffb1"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "e765d333dcfce62f1a92ec9b5961930424565dde9da87cbcd0a382c565e55e66"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "d70a850f34d5a62eee4b50e640c66c6f171194d5913c1a92eb9b4b8355ca6750"
+    },
+    {
+      "path": "assets/datascience-artifact-widget.html",
+      "sha256": "c204fe00d132b227ef13cd235f793c6d2f8d08a5bda5b7cfa3c69baae2d1a9c9"
+    },
+    {
+      "path": "assets/datascience-artifact-widget.html.gz.b64.part001",
+      "sha256": "235506e35aa31665743b3036f87103068b1a588c83a2bc4cee8e24af8022bd73"
+    },
+    {
+      "path": "assets/datascience-artifact-widget.html.gz.b64.part002",
+      "sha256": "b931077e2d2e22e303dcc13b372b9694b3e8945bf1aaa0338d21343da8e6c473"
+    },
+    {
+      "path": "assets/datascience-artifact-widget.html.gz.b64.part003",
+      "sha256": "ac481522a1a283c481980d7a7167a2d36947facb5df811d57318c6ce63beae51"
+    },
+    {
+      "path": "assets/datascience-artifact-widget.html.gz.b64.part004",
+      "sha256": "56423e4c1909d8f3f8efe0a002fa891ebcce8b75b047d2e772e514d0a6bf3395"
+    },
+    {
+      "path": "assets/datascience-artifact-widget.html.gz.b64.part005",
+      "sha256": "6103ec8eac20b77bd62c207bd757c189c310f3e0bc3a2a7a575e3745cdec9019"
+    },
+    {
+      "path": "assets/datascience-artifact-widget.html.gz.b64.part006",
+      "sha256": "48af4bfb1331057531f2b83b648be25baf6efba99fd69073778dcca886d181aa"
+    },
+    {
+      "path": "assets/datascience-chart-widget.html",
+      "sha256": "afdcfb9f578ed93a5be1814c6ba30e7531f155323d2c809e5b2fb6ed026e329e"
+    },
+    {
+      "path": "assets/datascience-chart-widget.html.gz.b64.part001",
+      "sha256": "214c4b4110d958f3b2fe8c60964c3552f1b554c2d33de891a2fe692e9e1602e0"
+    },
+    {
+      "path": "assets/datascience-chart-widget.html.gz.b64.part002",
+      "sha256": "412b46673a9f38245829cd21c3c9b86091131da30992223059ce4a7d1a1181b3"
+    },
+    {
+      "path": "assets/datascience-chart-widget.html.gz.b64.part003",
+      "sha256": "09e5dddccd5ee5d9a7189eec6623645a20a04c88dd581e0f650f8f90fd6afb8e"
+    },
+    {
+      "path": "assets/datascience-chart-widget.html.gz.b64.part004",
+      "sha256": "32da90be2a1b6d5b449ba3d53eb3605c1a343bc7735f30dd54097970414072e0"
+    },
+    {
+      "path": "assets/datascience-chart-widget.html.gz.b64.part005",
+      "sha256": "f565d6c068be194e00484c52020d21877ebea61dde98b2cc9ba17d1af0d83e8a"
+    },
+    {
+      "path": "assets/datascience-chart-widget.html.gz.b64.part006",
+      "sha256": "3b7ff11fff1cdeab18e610aca91e0f1a601c47ddbb95bc4e1466b87067dbf75b"
+    },
+    {
+      "path": "assets/datascience-chart-widget.html.gz.b64.part007",
+      "sha256": "bf61f820b7abe7fe32a0bad1825c9d08da45ae0a8b620cfff9c9674b8b579019"
+    },
+    {
+      "path": "assets/datascience-small.svg",
+      "sha256": "2ba43b16e90eed2f84060cdae3bf4189ab40975030dba414af158f881b452185"
+    },
+    {
+      "path": "assets/datascience-table-widget.html",
+      "sha256": "6fa7ab52b38999faf4bd99846a6f9dd198db99693e3c4b1abd93a8a8dd34f991"
+    },
+    {
+      "path": "assets/datascience-table-widget.html.gz.b64.part001",
+      "sha256": "27c22db28fc143389dc8a7c2fce7fdf7c03381d0102e038fff4eb72a95651976"
+    },
+    {
+      "path": "assets/datascience-table-widget.html.gz.b64.part002",
+      "sha256": "8b443b46fe407d81cd5158ddf2ce374fa14dd0b1ec2c5deab9aa0c74514bb681"
+    },
+    {
+      "path": "assets/datascience-table-widget.html.gz.b64.part003",
+      "sha256": "ce3e62956dfec303746af228d75b2b014de6b0af9edf3a07f9795fbcdce689f1"
+    },
+    {
+      "path": "assets/datascience-table-widget.html.gz.b64.part004",
+      "sha256": "11888d7dd75360bfcc84523f77c3cbee973497f2952cd7af0b4e33916fe4300d"
+    },
+    {
+      "path": "assets/datascience.png",
+      "sha256": "43494b72f2b1ca063b775ba114130ae85d378bf3b3f6257a2e0e44e4830863a1"
+    },
+    {
+      "path": "assets/datascience.svg",
+      "sha256": "99c05f3e9c400325b40d2eb49d12b157f0f924828948b814958920101f53fe51"
+    },
+    {
+      "path": "assets/demo-product-growth.csv",
+      "sha256": "de1ed26680aad2a53bf95247adfdf6b1256542265f884da9d072f573f8ae457e"
+    },
+    {
+      "path": "assets/portable-artifact-reader.html",
+      "sha256": "540cba2c57cbbd18872e52aab6167b74aa59e662d79837f37ce4ab436b9d90a5"
+    },
+    {
+      "path": "assets/portable-artifact-reader.html.gz.b64.part001",
+      "sha256": "39ae4f58b84e2a53d0678108275b878b594b69f2d0b5756255aa250b2d3e9dc8"
+    },
+    {
+      "path": "assets/portable-artifact-reader.html.gz.b64.part002",
+      "sha256": "694d323ec31bdc2ebca53f1a0e5e456277553e04fdd988eac4024f2138dfe31f"
+    },
+    {
+      "path": "assets/portable-artifact-reader.html.gz.b64.part003",
+      "sha256": "32805ba55bd4aceb37b15a95e31de232b2fc926648ecfef284245b9fbe83f846"
+    },
+    {
+      "path": "mcp/server.cjs",
+      "sha256": "fea237bc37824d0c7c29090dcbdff97baa4324b1ff5c86af8025873fd6fdc7c6"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "eeeb79155b3fd37d2036b9115f333ebf0f99c5a780c2208aa7d8ff0391d039d0"
+    },
+    {
+      "path": "package.json",
+      "sha256": "68081db5ccf89f85c14b00bcf7ab89567132a6b8ff0e5cb76e8a7c7027b22b6d"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b66bc1535e73d3a3665aee836ba09f35bce99414d174e87724968370ad3c78ce"
+    },
+    {
+      "path": "scripts/normalize-widget-assets.mjs",
+      "sha256": "8c72975db4f8485160fe45918dc7217d301f5a55acb0298c927d9e5948f14c6e"
+    },
+    {
+      "path": "skills/analyze-data-quality/agents/openai.yaml",
+      "sha256": "67bc050ae1ab8f37ec0cc80957725f8b4e85faf7c61e071ef488a951e5e59345"
+    },
+    {
+      "path": "skills/analyze-data-quality/SKILL.md",
+      "sha256": "2a54559f2a681fb56bb348a52bfd7abc9d441776495c8a103f30db09c23e60ed"
+    },
+    {
+      "path": "skills/build-dashboard/agents/openai.yaml",
+      "sha256": "421fc4e2a9929a7b09d0e4f4ceb2a013ad98f30fd0391a745aca865a6a9f30b3"
+    },
+    {
+      "path": "skills/build-dashboard/SKILL.md",
+      "sha256": "26a36f16c85b7a0dda6ef3d0cf533c7d4c9f57dab0a3e545ca851c32675aad6c"
+    },
+    {
+      "path": "skills/build-dashboard/specifications/bi-platform-dashboard.md",
+      "sha256": "8e757e08f43169bf0c3bfdb8a411de5c9d95e239cb554d29f05874543eadcd9c"
+    },
+    {
+      "path": "skills/build-dashboard/specifications/html-dashboard.md",
+      "sha256": "32a23b6361210415846e4579962d93dfa7f10c9f2cb5270609c97b834f9b728d"
+    },
+    {
+      "path": "skills/build-dashboard/specifications/mcp-artifact-dashboard.md",
+      "sha256": "3339914a7c6d9b5142bac5b32bc68c40b42148d2ab2170b8653ec12fe84e164e"
+    },
+    {
+      "path": "skills/build-dashboard/specifications/streamlit-dashboard.md",
+      "sha256": "7642f0451b514da16b7cd1db4a23df12e3c2055fd3810d9a17b7d47a06dbadb3"
+    },
+    {
+      "path": "skills/build-report/agents/openai.yaml",
+      "sha256": "6169570ee9adbd1e9df0ef4969690de77910994539fba1fa9e0dffb0dc0c889b"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/agents/openai.yaml",
+      "sha256": "459e619835d4979124aa88fc4b8866c764b8e61e034646c483e2ccc7439aca73"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/report_to_google_doc/__init__.py",
+      "sha256": "f58b1844003d3fc6ac0e4fbd91e66d98d723690fde6b05506dce94b1711bd91f"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/report_to_google_doc/cli.py",
+      "sha256": "a5cc87bf73e7c7d186e196b5726d8ca0f1410b0a46578e731bc58bd690bf4e17"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/report_to_google_doc/constants.py",
+      "sha256": "cae7fcab6bcd540697a1c313c9b339fa7c79f8c0c314e6caa051eb70282aa3b4"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/report_to_google_doc/docx_writer.py",
+      "sha256": "83417236e85339df02e6c831ff3ac7fdb0e39cd5d1c365a44a1806941e2310b9"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/report_to_google_doc/html_parser.py",
+      "sha256": "f4e991cd67b84cb15ca021c5f8a6121fdddf647325dcef5afd7e429628452414"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/report_to_google_doc/model.py",
+      "sha256": "8eba4904bc7e98b03155f3662dfe482936f86e18fa51282413d938d0d5fe8511"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/report_to_google_doc/plan.py",
+      "sha256": "2c2465394b9d687c43b7092802e66c1ca6b4075605d6595c650be108141032ac"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/report_to_google_doc/quality.py",
+      "sha256": "b9f582600ff6ffac7a42fab810948458456264ab053022b8dfc416fba2dee16c"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/report_to_google_doc/rendering.py",
+      "sha256": "c02129259c150b5c5dd45180a3ea3169328cb5edef9a013b3f3a83f164e7eaa2"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/report_to_google_doc/table_utils.py",
+      "sha256": "ee8cc4a4c2d53d5e22fefcf3075fcd18745a40108dcbc55f66bbd74e010f043e"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/report_to_google_doc/utils.py",
+      "sha256": "8a06f2d3240ccc005b1df279a73f32f42d10b234dcf615003e81b4838fe6ff2b"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/report_to_google_doc_plan.py",
+      "sha256": "3bc370aac84d423d7d9e2b8b96db672f62cfb4ab5d95f7869f67cc48e7b45adf"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/scripts/tests/test_portable_fallback.py",
+      "sha256": "74b4e6b03e93ca6fc1179b15f56a33ab371bd112bc02f0e5ee6ca5f8c00c4a98"
+    },
+    {
+      "path": "skills/build-report/report-to-google-doc/SKILL.md",
+      "sha256": "c79d81ea9fa6aa43bb9007fc60d32542fda8f2b4e74075fe45967826b1d79dad"
+    },
+    {
+      "path": "skills/build-report/report-to-google-slides/agents/openai.yaml",
+      "sha256": "9439d6dce91f172b1914c8f14728d83076d33c526e1b869b2cf253d02dd959d7"
+    },
+    {
+      "path": "skills/build-report/report-to-google-slides/scripts/report_to_google_slides.py",
+      "sha256": "87cb7f1bb5353e184653f6c0d0c3d90c7dd89a99a60b0e4d4391cb21a449eb93"
+    },
+    {
+      "path": "skills/build-report/report-to-google-slides/SKILL.md",
+      "sha256": "6e6dd5596a0241606146149ba83700a909d3a20c02e0185f42d8dbfbea349d1c"
+    },
+    {
+      "path": "skills/build-report/report-to-pdf/agents/openai.yaml",
+      "sha256": "03c88327b210371f2de75a4a8c9ffa2201b56cceeb969fe061f0684f3269fdd2"
+    },
+    {
+      "path": "skills/build-report/report-to-pdf/SKILL.md",
+      "sha256": "8294db822fca198ba97a03c960b1b48d862483bcc549c9bcd3d1f61f5c63a131"
+    },
+    {
+      "path": "skills/build-report/scripts/build_portable_artifact.mjs",
+      "sha256": "edba8811aff3b40aed86c917a99ff81d35cd7a4cbd5f2b20b4b0c677fa117ca9"
+    },
+    {
+      "path": "skills/build-report/scripts/deliver_portable_artifact.mjs",
+      "sha256": "889d3e9c0037144fa98fadefa02588d2d09ac8a8ca93a769c1c80fe8085a7a7e"
+    },
+    {
+      "path": "skills/build-report/scripts/extract_portable_chart_svgs.mjs",
+      "sha256": "966a0065b54991bd391e756359eaa7b0550331280b7e586d81ff9858508f23cd"
+    },
+    {
+      "path": "skills/build-report/scripts/portable_browser_cli.mjs",
+      "sha256": "5b8218a430519430be06750670c02fe85ff503af8a1632abb7129abf48238df8"
+    },
+    {
+      "path": "skills/build-report/scripts/portable_browser_helpers.mjs",
+      "sha256": "9d6deef2c3d8bd8ba4bc3b6b05bc235fd2089b59963b5d20f368086f45a08001"
+    },
+    {
+      "path": "skills/build-report/scripts/verify_portable_artifact.mjs",
+      "sha256": "cbb46745ff3368411aa168005eee785615eabdf49034f7c14d35ad2d6c100b7a"
+    },
+    {
+      "path": "skills/build-report/SKILL.md",
+      "sha256": "dc0654b9982aba2f58edc3bcafddedcea8598b023339e9ab2edfb878c7a1c6c8"
+    },
+    {
+      "path": "skills/build-report/specifications/executive-report.md",
+      "sha256": "a8b0ab6e50bd3acb580f684e2707e771e3ef81c92b87d00a3beda26ba687ddbc"
+    },
+    {
+      "path": "skills/build-report/specifications/mcp-app-report.md",
+      "sha256": "577a77b758e74ce5f03a4cd3e6f934f5444b94a8f53867fe7a36ee0d427c0c66"
+    },
+    {
+      "path": "skills/build-report/specifications/technical-report.md",
+      "sha256": "14f0be7636b522ad9fe74b1eec4a0de5997f40bf7c21376057cbde59040e20fa"
+    },
+    {
+      "path": "skills/create-data-context/agents/openai.yaml",
+      "sha256": "5131fccb9e2a60da05000e822142e49ebbadaf5469e0a78b2c89222e46fe24fd"
+    },
+    {
+      "path": "skills/create-data-context/plugin-author-config/automation-config.md",
+      "sha256": "40ce2cad13264352a2f6579675bb8dad2247913aa77c38ebd8147a3fd8fcb911"
+    },
+    {
+      "path": "skills/create-data-context/plugin-author-config/source-category-config.json",
+      "sha256": "2822c85b1860e541d647a65a86436b4e16bef028b4a2ae6498792bce60c89359"
+    },
+    {
+      "path": "skills/create-data-context/references/automation.md",
+      "sha256": "840c2796318601ab5f57d2a28df77971f162142a007b0ed56019e86ccb04f07c"
+    },
+    {
+      "path": "skills/create-data-context/references/semantic-layer/connector-playbook.md",
+      "sha256": "82a855392f5cb2b6fd6fc07484799760a7223ec5f6291e7e79f73677a092e228"
+    },
+    {
+      "path": "skills/create-data-context/references/semantic-layer/skill-template.md",
+      "sha256": "63a7bca53927e33043e7b064c56d07486f793e093b87de0c090e56cd8dd1c5c8"
+    },
+    {
+      "path": "skills/create-data-context/references/semantic-layer/source-intake.md",
+      "sha256": "79de08c756468179cc7a07f9becfaea62b6ddfd54ef700f7d93ec888c928b809"
+    },
+    {
+      "path": "skills/create-data-context/references/semantic-layer/weekly-polling-automation.md",
+      "sha256": "cebe2a541548061ce57c1e9ef3b3f5830700b128298296f8af9a8f277fc04461"
+    },
+    {
+      "path": "skills/create-data-context/scripts/data_analytics_preflight.py",
+      "sha256": "3d7a8e64f1c9a5a4a104eb85b0b47e11d902b5c2c3c8cb9bcd121bdcaebaa6c6"
+    },
+    {
+      "path": "skills/create-data-context/scripts/record_plugin_install_suppression.py",
+      "sha256": "478272c43ff27d045bb528fee7ebcf6a5e6a1bda95241377951eb3927685b568"
+    },
+    {
+      "path": "skills/create-data-context/scripts/validate_data_context_contract.py",
+      "sha256": "8ccf338eb0ce531e6317a141f144d557a627ce2cd152a1f69d97f0b151b7a6a5"
+    },
+    {
+      "path": "skills/create-data-context/SKILL.md",
+      "sha256": "e6d98f9fb28487435bf28ddd44253b1e4940346cc82a629f198a406862432aed"
+    },
+    {
+      "path": "skills/create-data-context/tests/test_state_helpers.py",
+      "sha256": "59486cf317366c022e653a34389b13f82adeb7d4afdb17d4a6205d1529411f40"
+    },
+    {
+      "path": "skills/design-kpis/agents/openai.yaml",
+      "sha256": "88020ce386e3385a79863d689d1450a8de87c2a67f64311e02d8dd33eaeb9c1a"
+    },
+    {
+      "path": "skills/design-kpis/SKILL.md",
+      "sha256": "f4e7814cc81382c47207ccdce4e06a8e9740fa0910759799f77171bb3131b11b"
+    },
+    {
+      "path": "skills/gather-business-context/agents/openai.yaml",
+      "sha256": "2a40cd194e3bb4a509efd86aac64d927fdf8a70061c9e66ca704f4fc9c151d0e"
+    },
+    {
+      "path": "skills/gather-business-context/SKILL.md",
+      "sha256": "b46c69e6080e021be8cf160dcfbc257d947e4819b23667cda05ea7884b7bc615"
+    },
+    {
+      "path": "skills/index/agents/openai.yaml",
+      "sha256": "e18a40d6c79102fceed13811d98439eb204bf14a7ee6de0059f4512d01c485f1"
+    },
+    {
+      "path": "skills/index/SKILL.md",
+      "sha256": "7437b64da908521f3321568ae3ef682b324f1f57b6276d11a6fde16e28b7c2c2"
+    },
+    {
+      "path": "skills/jupyter-notebooks/agents/openai.yaml",
+      "sha256": "83b1c711984dce000f869b6a5f530abb5a7dd42fd5d61c425d6b9e603d7d9382"
+    },
+    {
+      "path": "skills/jupyter-notebooks/SKILL.md",
+      "sha256": "0923d6466a6262309ba2904df16f42a0bf21b21c9dea7246e88bfb79a9795759"
+    },
+    {
+      "path": "skills/kpi-reporting/agents/openai.yaml",
+      "sha256": "fb853dad6321ad4748d151c1e4b01c25eca3c9c0d4345413da8bb7d93b1e828d"
+    },
+    {
+      "path": "skills/kpi-reporting/references/report-templates.md",
+      "sha256": "28ff542fcb1e97b5d3d5f1b87d0da00da1a6b23b077cdc0d690e599363b88dd0"
+    },
+    {
+      "path": "skills/kpi-reporting/SKILL.md",
+      "sha256": "e1f0b6909f3a0ee9f0b9e19ed775df7a47976041caf0f7e4af5369cc80e947b0"
+    },
+    {
+      "path": "skills/market-sizing/agents/openai.yaml",
+      "sha256": "2b289d242894afe9ea4b4ec6fa361d8c5b38ca15edacb0fd8443c44625352875"
+    },
+    {
+      "path": "skills/market-sizing/SKILL.md",
+      "sha256": "dd4bb2981f9f9105a6182587bffd8e0323cb8e4529c1b74a3b6ffe183c31af8d"
+    },
+    {
+      "path": "skills/metric-diagnostics/agents/openai.yaml",
+      "sha256": "9b1ab99cd2d140fe9465e3e731eaa305d72926ddbcb1b434ca5911f9656273f8"
+    },
+    {
+      "path": "skills/metric-diagnostics/SKILL.md",
+      "sha256": "bfb5ad1626376035e048b9ecd3e50139bab88cf33d4b1691c1d5a278ff676bf8"
+    },
+    {
+      "path": "skills/product-business-analysis/agents/openai.yaml",
+      "sha256": "c22732492eb817e0da9d0849b73f286679d4760ae10baa8c3e1489b5f5819e1a"
+    },
+    {
+      "path": "skills/product-business-analysis/SKILL.md",
+      "sha256": "ce49806ae42a99f672079ae9a49abc8c72edf2eabed1c255319be70fe82312f8"
+    },
+    {
+      "path": "skills/publish-artifact-to-sites/SKILL.md",
+      "sha256": "fe3df7f57f9776173d188618204b77c751ccfd9f5c5890ff2099d291403cc2b0"
+    },
+    {
+      "path": "skills/validate-data/agents/openai.yaml",
+      "sha256": "46fbd0d3daef807e8907d3854e935fe1c0b02f4a9c5d2c744973befb9399094a"
+    },
+    {
+      "path": "skills/validate-data/SKILL.md",
+      "sha256": "4ecaf1c7a0caff764f37ca873d861789af14d3a9af2a0fd9038c7bfa4db13aea"
+    },
+    {
+      "path": "skills/visualize-data/agents/openai.yaml",
+      "sha256": "4632a402eab489e690110f3f6ece1229c10c92d8b78ceddcbf8d538b281cb698"
+    },
+    {
+      "path": "skills/visualize-data/references/native-inline-visualizations.md",
+      "sha256": "7ee88b8c3c62904f8ba953aed3397f3606eb400669439a77e7088dab5a42125c"
+    },
+    {
+      "path": "skills/visualize-data/SKILL.md",
+      "sha256": "6677504d577c7e33843bab485a3d01e0ecaca40dc3ee373261c37841f3caf5d4"
+    },
+    {
+      "path": "src/analytics-app/analytics-layout.test.mjs",
+      "sha256": "0aa28a252c5c24a4d2f7d8fe93d41ca9503aa66b02540fe888ac7d1fd83ed830"
+    },
+    {
+      "path": "src/analytics-app/App.tsx",
+      "sha256": "00f9fc90a21ae913fe23cc31404f971fc29c9f870e67868015eb6ff84ec908ab"
+    },
+    {
+      "path": "src/analytics-app/charting/chart-app-helpers.tsx",
+      "sha256": "9a3a50cc25fbd2f8694edcada9ce9fbf4b53586b8e7cda66e08e7a02e68b0e0a"
+    },
+    {
+      "path": "src/analytics-app/charting/chart-capabilities.ts",
+      "sha256": "bad8aec6e12eb8117ae4887948a06be14bd1b0e664033ad738898dd82f28868b"
+    },
+    {
+      "path": "src/analytics-app/charting/chart-compatibility.ts",
+      "sha256": "407625a583ca4aaa16bfa69ee5e4e8770b7606cbff3543c4d256afa9d343dc91"
+    },
+    {
+      "path": "src/analytics-app/charting/chart-contract.ts",
+      "sha256": "6c1c8fe796272923d6d5dc3870b0df18af1be1ddaaabaad67a2b5809ddd0785b"
+    },
+    {
+      "path": "src/analytics-app/charting/chart-theme.ts",
+      "sha256": "d8ee716e3fd7cf33113ec8d648885514d393f309226feb37486def1ea5c40719"
+    },
+    {
+      "path": "src/analytics-app/charting/chart-tokens.css",
+      "sha256": "e0221219aaef61783a26010e2b25bbfc9edd3c4e774c673c0e13883b82b1480f"
+    },
+    {
+      "path": "src/analytics-app/charting/chart-transforms.ts",
+      "sha256": "9a5e8fa64ff0b7c51fb690d1aecec6bdc759405980b52e4f8cdaec7866333972"
+    },
+    {
+      "path": "src/analytics-app/charting/ChartFrame.tsx",
+      "sha256": "21d5ff316e3f1eaa1d55ed5f0209c538de32b6f65f4c497bc78473b1306cf887"
+    },
+    {
+      "path": "src/analytics-app/charting/ChartLegend.tsx",
+      "sha256": "4b3e113ee32e07cac61f3043d3b85ef6fc9449b85f17427f7e96eb6295694b7d"
+    },
+    {
+      "path": "src/analytics-app/charting/ChartRenderer.tsx",
+      "sha256": "887404d05d9cccba9daa3f256da5c3f149b8eaa274945c67a91466f54c2fb160"
+    },
+    {
+      "path": "src/analytics-app/charting/ChartTooltip.tsx",
+      "sha256": "0e8cf7c86768b1d1880820fccaff548cded57d43e49627c988aeb59c5ae8d176"
+    },
+    {
+      "path": "src/analytics-app/charting/tooltipPositioning.ts",
+      "sha256": "946fc0a6ee7b2fddce6e5d115290e07870651d8ebff679d0167afd659f504eb3"
+    },
+    {
+      "path": "src/analytics-app/fonts/SystemSansVariableVF.woff2",
+      "sha256": "4cfaf599edebb52a63e8a917e611ad1183966b2294a3c758be0671ec6b954db4"
+    },
+    {
+      "path": "src/analytics-app/handoff.mjs",
+      "sha256": "ed7badadc9a66fcff0db76026f317215a7264dc9463a3dff02f7a6fedac3657c"
+    },
+    {
+      "path": "src/analytics-app/handoff.test.mjs",
+      "sha256": "bff1d9651ca7b6a72d286860c89017c9a38d9ff5d6e768a55728d7bf590d7494"
+    },
+    {
+      "path": "src/analytics-app/imageExport.portable.ts",
+      "sha256": "5c55cf453402e4fb80ee9c5d6b46496669b780856a5383bfd709c0d59bae8cbd"
+    },
+    {
+      "path": "src/analytics-app/imageExport.ts",
+      "sha256": "030a42f187f63b67d82aaf8e36c13c778dd003566d406d512f37025d567bab35"
+    },
+    {
+      "path": "src/analytics-app/layout/AnalyticsLayoutCanvas.tsx",
+      "sha256": "976d24a1eea67382d5bdb73a002c902c1d43ca39a10fecac274af94c0b11fc34"
+    },
+    {
+      "path": "src/analytics-app/layout/analyticsLayoutCore.ts",
+      "sha256": "399698f003c76d5d7ff5f1af5725c1aba283937d10cc0f1916ba8fa19ee23b8a"
+    },
+    {
+      "path": "src/analytics-app/layout/RichMarkdown.portable.tsx",
+      "sha256": "b477d3027083d92710b3ee14f9eea67a78b9bcb5bf41f34d60a0183643e46691"
+    },
+    {
+      "path": "src/analytics-app/layout/RichMarkdown.tsx",
+      "sha256": "6fb23adcfeb070756d25f8dc6060c3c2cdb03d6bee0c405e1b58c2642407bacc"
+    },
+    {
+      "path": "src/analytics-app/main.tsx",
+      "sha256": "48c96bcc989142064674a2b06e9544e1ba2e3540a8b6c1e9d44dbe24d1a2a31d"
+    },
+    {
+      "path": "src/analytics-app/runtimeEnvironment.portable.ts",
+      "sha256": "f08b632c44c2ef20e658ebf77b8c2d5ff131092045cf1105a0cd01f00993507d"
+    },
+    {
+      "path": "src/analytics-app/runtimeEnvironment.ts",
+      "sha256": "6e89fc1fa441d8b33fdcd621e2e0613bbc822649a95361f0aab1b37964f4bff9"
+    },
+    {
+      "path": "src/analytics-app/scripts/chart_contract.py",
+      "sha256": "fb3585877dd5a3276d333c184a5b2b52d68da73c1106c279d61c74c6edbef24f"
+    },
+    {
+      "path": "src/analytics-app/scripts/check_analytics_app_runtime_links.py",
+      "sha256": "2f920f9a7feff9a1a43c1781a1b670b3e2b4dd98d0fead963aca0999c9042967"
+    },
+    {
+      "path": "src/analytics-app/scripts/design_contract.py",
+      "sha256": "c668fc4b195f8a4d71e8b3eb5b2599130f735e9fb08f6f51db5ed624ff6d9d66"
+    },
+    {
+      "path": "src/analytics-app/scripts/package_utils.py",
+      "sha256": "038e594474c5aef0c3e7ddd7fc54eb4567db4ba7fbd3eaeb9e11e2c731bdd501"
+    },
+    {
+      "path": "src/analytics-app/scripts/tests/test_package_utils.py",
+      "sha256": "3d91aa2a4dbb8881805b4bc47a7a135cc7b481ce39e275b249bacac4d81897c4"
+    },
+    {
+      "path": "src/analytics-app/styles.css",
+      "sha256": "a9dcc4757f89e282c9713b5bf6a0c3b2d1501d8375b4a139911cdc1fe36e9acb"
+    },
+    {
+      "path": "src/analytics-app/tables/data-table.css",
+      "sha256": "4cda1a79b0689bbc59af2fb35355dd804271dcf192a1d4a39f80eea05d88fa22"
+    },
+    {
+      "path": "src/analytics-app/tables/DataTable.d.ts",
+      "sha256": "d1b50466359c7610f14a636054969d4efcc9c0beecc39bdc0b704149c4947514"
+    },
+    {
+      "path": "src/analytics-app/tables/DataTable.jsx",
+      "sha256": "9b890dc189bc9c559b24fd049e59189fd99ddb205160eb24c4d4db595efe8802"
+    },
+    {
+      "path": "src/analytics-app/tables/tableSizing.ts",
+      "sha256": "eb2aa6bc525a7b9c254b78f65c31137341704cb775a37ee52ffbb2cdddfb6021"
+    },
+    {
+      "path": "src/analytics-app/tokens.css",
+      "sha256": "579fe49543fdd14e8f9cacdf27c05deb80e207431f4c328a15db4079bf7f46de"
+    },
+    {
+      "path": "src/analytics-app/types.ts",
+      "sha256": "7caffc7f4e18dd4278b211d51c9726b38d23fff7437f9256ec144273e295c9a4"
+    },
+    {
+      "path": "src/analytics-app-core.md",
+      "sha256": "86db1debe93099e53262d16cdd8f5d5b250b38a68ba3d992b0e3fcd7d5998933"
+    },
+    {
+      "path": "src/codex-style-contract.md",
+      "sha256": "b2331c83979adb6d4d7cb33e4a6b81bcc17d540193dc0508e87ebee963118808"
+    },
+    {
+      "path": "src/datascience-artifact-widget.html",
+      "sha256": "4e0bf67b141d32501a0799404ca3ba8b0073d3ba00b2bf7448d3dbfeb6fb164c"
+    },
+    {
+      "path": "src/datascience-artifact-widget.jsx",
+      "sha256": "8d909cb35b2514237ee1430847bdde541a113ef0a9cf6dd62042ad25707392f2"
+    },
+    {
+      "path": "src/datascience-chart-widget.css",
+      "sha256": "ddff2b4fe58e927a318c61ad7e8430b4e023ae765fc6f82d400fb05b01cf20a6"
+    },
+    {
+      "path": "src/datascience-chart-widget.html",
+      "sha256": "f5eb6144412addc3b06cae6562cf78858845d180a82dbf1cd4ad3ef7336edf0f"
+    },
+    {
+      "path": "src/datascience-chart-widget.js",
+      "sha256": "a7a4007438288ffe412dac01162ca887086438b337c7ba1c9478a5bc144c4722"
+    },
+    {
+      "path": "src/datascience-table-widget.css",
+      "sha256": "dff028da7b7f928f4901b62280e41a2f5d95b2d9a466b15da2522450541a11e9"
+    },
+    {
+      "path": "src/datascience-table-widget.html",
+      "sha256": "03697a8096816585d1420b69e208eb9d8d6ca57a2116cedc170a246246931f66"
+    },
+    {
+      "path": "src/datascience-table-widget.js",
+      "sha256": "211a9e7059fc24272d1cdae42c2bb29c977fe8ec44ccc50daac4b0fe5e44ed5f"
+    },
+    {
+      "path": "src/DESIGN.md",
+      "sha256": "489b5ce5e44c253d03568da4bcdd2161aa040ec921908f532e8feab3d74f597b"
+    },
+    {
+      "path": "src/mcp-host.js",
+      "sha256": "3c9639529504f89b9e149fc787d2f8dcc5268eec2d60577fc59addc0a95204b3"
+    },
+    {
+      "path": "src/portable-artifact-reader.html",
+      "sha256": "76e7f933dc56541b802c7200bccee09928934a9adebb3776ea282bdaf3cb3d22"
+    },
+    {
+      "path": "src/portable-artifact-reader.tsx",
+      "sha256": "d815c75ab43df6e6492cb2a933deb5408341dde55811b5df7808a8128e5dd605"
+    },
+    {
+      "path": "src/recharts-config.js",
+      "sha256": "e3a9da165322f5033d77c05e73db3d34a8890fb77a90efe15cbde8f68e9200f8"
+    },
+    {
+      "path": "src/recharts-renderer.jsx",
+      "sha256": "b5d6eb8d34f27ca8d27076d857035afb2f96c2a0e8d116cb1896f226f5b16bd2"
+    },
+    {
+      "path": "src/sql-source-view.css",
+      "sha256": "c8fe050f225e102a5c01cc4de969d54fc51934e6f02cac7059307f81e5dd3fa7"
+    },
+    {
+      "path": "src/sql-source-view.js",
+      "sha256": "ab1b3e88afc1b7aa7a208433fff75ea47815bbadf6a2bef9494805957557dcec"
+    },
+    {
+      "path": "src/styles/codex-theme.css",
+      "sha256": "397ad9c3ee45b27453250e902d951b603909346cf1fbdc8ea6e890559be6446f"
+    },
+    {
+      "path": "src/table-renderer.jsx",
+      "sha256": "c13270f3151c86ce23b0490bf67482a47b4f69d5147a01a01ebd73f6e2297546"
+    },
+    {
+      "path": "tests/chart-axis-domain-contract.test.mjs",
+      "sha256": "c8c8aeb5c820fe422c71b8f5cfec640338cea556f4adcba6bb1fb00832a39cc8"
+    },
+    {
+      "path": "tests/chart-tooltip.test.mjs",
+      "sha256": "faf5cfc63e6c45314da5a04936655d241033e821a9aa944a5a7c8a361141294a"
+    },
+    {
+      "path": "tests/chart-transforms.test.mjs",
+      "sha256": "1b134050db1bccd2a6ec842f5f179be930841ead682550d72e79802e83f6fc2e"
+    },
+    {
+      "path": "tests/funnel-smoke.html",
+      "sha256": "ab37391b6f87cfeba37e1b414cc8057ec1735375e82508dc9e4ca43c47fc3eba"
+    },
+    {
+      "path": "tests/html-report-source-tooltip.test.mjs",
+      "sha256": "ccc69e3b7983e2603af4c938178a77b969f5e395b889516470a557543434a3e9"
+    },
+    {
+      "path": "tests/inline-widget-compare.html",
+      "sha256": "dffdb89ece7ccac5109545338eaca7facac290dcc476b2f1940f2e6845182bdd"
+    },
+    {
+      "path": "tests/mcp-server.test.mjs",
+      "sha256": "7cce411ea41b9dce76961f863d4e51d4eb0e5d72aa2619df2576a7d868be6809"
+    },
+    {
+      "path": "tests/native-style-contract.test.mjs",
+      "sha256": "bf76fb06746c8bfccb516f81c26847b6b15133fede253c45fe31cacf544e4b76"
+    },
+    {
+      "path": "tests/onboarding-intake.test.mjs",
+      "sha256": "186c02b4a9dd691bfc4f05e38c5d788861285df2a545202b9f72d047b6244182"
+    },
+    {
+      "path": "tests/portable-artifact-builder.test.mjs",
+      "sha256": "89b04143e9aa78be069f94bc027c15f366c01c2382f631a1c66260334ca0b25f"
+    },
+    {
+      "path": "tests/portable-artifact-delivery.test.mjs",
+      "sha256": "00ea7634ee1fadcc21c6c09b116391e523b8e285c748caed2146bc3d91c70517"
+    },
+    {
+      "path": "tests/portable-artifact-verifier.test.mjs",
+      "sha256": "1d9629f8961ae3ab5ab10e2e7cdd5596e0b435e83b324d64680724674ff6494b"
+    },
+    {
+      "path": "tests/portable-browser.smoke.mjs",
+      "sha256": "65a65d3d22e00c30bee996f207b03ce70ada8c0604a61d8fdb1f3a531111d1a3"
+    },
+    {
+      "path": "tests/portable-chart-svg-extractor.test.mjs",
+      "sha256": "86ba04e12a1890fa16169d8da801646b3875c786f3e1f05b3fb8d4059d38ac47"
+    },
+    {
+      "path": "tests/portable-parity.smoke.mjs",
+      "sha256": "27e6b0b1d5f2930f45fc44793b5f74202f2c3192d05baabd79269461e605ddce"
+    },
+    {
+      "path": "tests/portable-release-package.smoke.mjs",
+      "sha256": "097dfe70931aaa6691f6321042370d8c93f6a11f6577ffc854694767c55c6799"
+    },
+    {
+      "path": "tests/recharts-config.test.mjs",
+      "sha256": "ad170b4add82a4765868a0a5f654667bad447f0507cbf3b23afc15f18a119120"
+    },
+    {
+      "path": "tests/recharts-renderer.test.mjs",
+      "sha256": "308f8dcf165aadb39f214950eda5d429febc208035e5585d6b91a605f01fc5e9"
+    },
+    {
+      "path": "tests/report-delivery-contract.test.mjs",
+      "sha256": "8539a13fada3413571b72de75c772c655dae8f66adb154f7630025f82913840e"
+    },
+    {
+      "path": "tests/report-to-google-slides-portable.test.mjs",
+      "sha256": "a397830affd53ec984c0939f609dc0ed47f62f9363502703ac028ffba99c2b42"
+    },
+    {
+      "path": "tests/rich-markdown.test.mjs",
+      "sha256": "027082d00832ff7de401be9cca71c3b21947e446a05b8f4cf61b930af4c38294"
+    },
+    {
+      "path": "tests/sites-export.test.mjs",
+      "sha256": "d849fad9d904c9b0a1ea70d30d52e6c7eab263b1d570698afef1392122a98cac"
+    },
+    {
+      "path": "tests/source-discovery-contract.test.mjs",
+      "sha256": "ed3845c9db622865dd633c9f1d5eac7e4a4c6866519ee4ff4d9c2a7a5e3038c1"
+    },
+    {
+      "path": "tests/table-sizing.test.mjs",
+      "sha256": "976d147b41b5142bb70d9035b6fb828e5fe6f8dd96e903db2c4fd66309c1207b"
+    },
+    {
+      "path": "tests/test_app_dependencies.py",
+      "sha256": "d2bfa742992c3d09b3f6ecd10e035b28394d4f1d770d556fedefff914618e1a8"
+    },
+    {
+      "path": "tests/tooltip-positioning.test.mjs",
+      "sha256": "fbea602ec5cb1fef31f08a5038e2a2f20064d3b2226e51d669fb3d28108ed9db"
+    },
+    {
+      "path": "tests/web-work-mode-routing.test.mjs",
+      "sha256": "1e47540beb27b8c5f9bd0cd05a4c0830544d72ee3525d9d3ca18ab3d99ae0992"
+    },
+    {
+      "path": "tests/widget-render-harness.html",
+      "sha256": "a8a16d3fc578f2c2d527bfd8c8a7aa814a313b3b9f786465579db513258eb24d"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "797f510b2a82598739d6f786e3220d4fbf3bb648ef3aeae3e6bdca4bc7762926"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "ec9a55b40e4df455727f80564aaf0b667e58730ac0041a2a8c08d7c7e03e6b4f"
+    }
+  ]
+}

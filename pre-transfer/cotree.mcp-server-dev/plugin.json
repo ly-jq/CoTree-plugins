@@ -1,0 +1,55 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.mcp-server-dev",
+  "name": "MCP 服务开发",
+  "version": "0.2.0",
+  "description": "为 CoTree 设计、实现、验证和打包标准 MCP 服务，明确扩展能力边界。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.mcp-server-dev.design",
+      "description": "确定 MCP 服务范围、工具合同、传输和身份方案。",
+      "path": "skills/design/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.mcp-server-dev.build",
+      "description": "在现有工程中实现 MCP 服务，或生成可运行的本地脚手架。",
+      "path": "skills/build/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.mcp-server-dev.verify",
+      "description": "验证 MCP 初始化、工具与资源、错误和生命周期。",
+      "path": "skills/verify/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.mcp-server-dev.package",
+      "description": "捆绑本地 MCP 依赖并生成可安装的 CoTree 插件。",
+      "path": "skills/package/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.mcp-server-dev.ui",
+      "description": "设计 MCP 富展示及不支持扩展时的文本回退。",
+      "path": "skills/ui/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "276ce99d01a113ad9f3806559b4cce95e4e3488d3da66e13fd1993c3c35bb83f"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "observedAt": "2026-10-07T05:21:44.898Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "isolated-local-app-and-video-samples",
+  "credentialsUsed": false,
+  "cloudCalls": false,
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "results": {
+    "elyra.expo": {
+      "packageDigest": "ba34e6493d7edfc620ae9905fb109f501cb673fc993baf354654a5caa90b905f",
+      "status": "isolated-expo-web",
+      "sdk": "55.0.31",
+      "lockDigest": "9b13ac27d181acfae0682a309f7c155c80e48681fd8fa0688b11639066a42b2d",
+      "sourceFiles": [
+        {
+          "path": ".codex-tmp/batch17-runtime/expo/package.json",
+          "sha256": "fcbcbbcd7dcd050c78dd740c59a20e3870ac138d7cb497b79b704ea160eae249",
+          "bytes": 301
+        },
+        {
+          "path": ".codex-tmp/batch17-runtime/expo/app.json",
+          "sha256": "a9e40fbffc3b3e760c221819fef39c044df6e97b95bfd660e50f6cc396352aaa",
+          "bytes": 164
+        },
+        {
+          "path": ".codex-tmp/batch17-runtime/expo/index.js",
+          "sha256": "dbab92d1827cb8cb94b907dd56dd19fb2590b4642bf526059696be2f6e73cd94",
+          "bytes": 97
+        },
+        {
+          "path": ".codex-tmp/batch17-runtime/expo/App.js",
+          "sha256": "417384b9212c2e5a0671d71a64d8cb0070b5a35dcfb01dd81bee86cdf5d2f8f3",
+          "bytes": 620
+        }
+      ],
+      "exported": true,
+      "browser": {
+        "viewports": [
+          "1100x800",
+          "390x844"
+        ],
+        "observedCounts": [
+          0,
+          1,
+          2
+        ],
+        "pageErrors": [],
+        "externalRequests": []
+      },
+      "nativeDevices": "not-tested",
+      "accountBusiness": "not-tested"
+    },
+    "elyra.remotion": {
+      "packageDigest": "4fc1c4c62cbda787622c0c892a31c213ca2fa71aed67fdb07f3f4ff88a3049f1",
+      "status": "isolated-remotion-render",
+      "version": "4.0.506",
+      "lockDigest": "13f49951e5e4880a0d9874bea6382d78f22ea327e3d8f86ad3188ce6335fec68",
+      "templateBytesMatched": true,
+      "composition": {
+        "id": "Demo",
+        "width": 960,
+        "height": 540,
+        "fps": 30,
+        "durationInFrames": 60
+      },
+      "renders": [
+        {
+          "path": ".codex-tmp/batch17-runtime/verified-final/demo.png",
+          "sha256": "0fbafbee6c0e85397dda5f20f8247b505597034ad5385a57e35c55d686e174a2",
+          "bytes": 19508
+        },
+        {
+          "path": ".codex-tmp/batch17-runtime/verified-final/demo.mp4",
+          "sha256": "408b7f50a1bf71acb8de1cdd0ba123a15ba4b686a642de158bf182232197cee0",
+          "bytes": 106923
+        }
+      ],
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 540,
+            "r_frame_rate": "30/1",
+            "duration": "2.000000",
+            "nb_read_frames": "60",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "duration": "2.048000",
+            "nb_read_frames": "96"
+          }
+        ],
+        "format": {
+          "duration": "2.048000"
+        }
+      },
+      "audio": "sample-has-no-audio-sources; encoded-tracks-recorded-above",
+      "transparentEncoding": "not-tested",
+      "accountBusiness": "not-tested"
+    },
+    "elyra.laravel-boost": {
+      "packageDigest": "999c4654d30b49b672bfa0be0adc7456fb0caf7e34628f13d6dc3f6fea0d4259",
+      "status": "local-runtime-unverified",
+      "phpAvailable": false,
+      "phpProbe": "ENOENT",
+      "projectBooted": false,
+      "realMcpTools": "not-tested",
+      "databaseOperations": "not-tested"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.github",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "github",
+    "repository": "plugins",
+    "path": "plugins/github",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "b111cc7a985f08ed4ac10713ede9e62f1313731de91869db83cc62a6c83936b0",
+    "upstreamVersion": "0.1.12"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_GITHUB_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#github",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/github"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 4,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "6f06c37aace9adb2e3bde213753ce13599f5f7d96ed271f6879dee7c3cb4fc28"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "c16863955c603b8223f6e1212675035665b04b5d0064e39ebd16427bbf115cf3"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "b6d838e24bc03171c4b6b3fa6727022a7faa44be1ba8323255c8ada06e615048"
+    },
+    {
+      "path": "assets/github-dark.png",
+      "sha256": "9352c02c11e4b5c63e8990f6d8b973f551d25284186d3faeb8d7d0186d89c919"
+    },
+    {
+      "path": "assets/github-small.svg",
+      "sha256": "71ff625ee0ef38ccfab47e97832323a06b4b093db55fd658a884859cb86b9183"
+    },
+    {
+      "path": "assets/github.png",
+      "sha256": "07e4d8c81c906dc6fffa42f2686f446724c86c2079b23aa6c77ab9dab782fdea"
+    },
+    {
+      "path": "README.md",
+      "sha256": "30cd6897d5e217352c11204c426adbb41f1a63b15d754ae138de68bcf3911e2e"
+    }
+  ]
+}

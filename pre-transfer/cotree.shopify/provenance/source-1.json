@@ -1,0 +1,765 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.shopify",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "shopify",
+    "repository": "plugins",
+    "path": "plugins/shopify",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "b1a3d6f5775797668602a821a14e3b6af0ec17844e0ae72c4539598757366d82",
+    "upstreamVersion": "3.0.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_SHOPIFY_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/shopify-admin/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-admin/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-admin",
+        "description": "Write or explain **Admin GraphQL** queries and mutations for apps and integrations that extend the Shopify admin. Use when the user wants to **understand, design, or generate** the operation itself—even before deciding how to run it. Do **not** choose `admin` first for **app or extension config validation** —use **`use-shopify-cli`**. Do **not** choose `admin` first to **execute** Admin GraphQL **now via Shopify CLI** or for CLI setup/troubleshooting on store workflows—use **`use-shopify-cli`** (store auth/execute, handle/SKU/location lookups, inventory changes).",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-app-store-review/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-app-store-review/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-app-store-review",
+        "description": "Run a pre-submission compliance check against your Shopify app's codebase. Reviews App Store requirements and surfaces likely issues before you submit for official review.",
+        "compatibility": "Claude Code, Claude Desktop, Cursor",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-custom-data/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-custom-data/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-custom-data",
+        "description": "MUST be used first when prompts mention Metafields or Metaobjects. Use Metafields and Metaobjects to model and store custom data for your app. Metafields extend built-in Shopify data types like products or customers, Metaobjects are custom data types that can be used to store bespoke data structures. Metafield and Metaobject definitions provide a schema and configuration for values to follow.",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-customer/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-customer/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-customer",
+        "description": "The Customer Account API allows customers to access their own data including orders, payment methods, and addresses.",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-dev/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-dev/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-dev",
+        "description": "Search Shopify developer documentation across all APIs. Use only when no API-specific skill applies.",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-functions/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-functions/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-functions",
+        "description": "Shopify Functions allow developers to customize the backend logic that powers parts of Shopify. Available APIs: Discount, Cart and Checkout Validation, Cart Transform, Pickup Point Delivery Option Generator, Delivery Customization, Fulfillment Constraints, Local Pickup Delivery Option Generator, Order Routing Location Rule, Payment Customization",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-hydrogen/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-hydrogen/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-hydrogen",
+        "description": "Hydrogen storefront implementation cookbooks. Some of the available recipes are: B2B Commerce, Bundles, Combined Listings, Custom Cart Method, Dynamic Content with Metaobjects, Express Server, Google Tag Manager Integration, Infinite Scroll, Legacy Customer Account Flow, Markets, Partytown + Google Tag Manager, Subscriptions, Third-party API Queries and Caching. MANDATORY: Use this API for ANY Hydrogen storefront question - do NOT use Storefront GraphQL when 'Hydrogen' is mentioned.",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-liquid/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-liquid/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-liquid",
+        "description": "Liquid is an open-source templating language created by Shopify. It is the backbone of Shopify themes and is used to load dynamic content on storefronts. Keywords: liquid, theme, shopify-theme, liquid-component, liquid-block, liquid-section, liquid-snippet, liquid-schemas, shopify-theme-schemas",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-onboarding-dev/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-onboarding-dev/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-onboarding-dev",
+        "description": "Get started building on Shopify. Use when a developer asks to build an app, build a theme, create a dev store, set up a partner account, scaffold a project, or get started developing for Shopify. NOT for merchants managing stores.",
+        "compatibility": "Claude Code, Claude Desktop, Cursor",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-onboarding-merchant/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-onboarding-merchant/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-onboarding-merchant",
+        "description": "Set up and connect a Shopify store from your AI assistant. Use when the user wants to: set up my Shopify store, connect my store, install Shopify plugin, get started with Shopify, manage my store, add products to my store, merchant onboarding, start selling online, Shopify setup help, create my first store, how do I set up an online store, import products, migrate from Square, migrate from WooCommerce, migrate from Etsy, migrate from Amazon, migrate from eBay, migrate from Wix, import from Google Merchant Center, migrate from Clover, migrate from Lightspeed, move products to Shopify, import catalog, replatform to Shopify. This is for store owners — not developers.",
+        "compatibility": "Claude Code, Claude Desktop, Cursor",
+        "context": "fork",
+        "maintainer": "Shopify",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-partner/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-partner/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-partner",
+        "description": "The Partner API lets you programmatically access data about your Partner Dashboard, including your apps, themes, and affiliate referrals.",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-payments-apps/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-payments-apps/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-payments-apps",
+        "description": "The Payments Apps API enables payment providers to integrate their payment solutions with Shopify's checkout.",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-polaris-admin-extensions/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-polaris-admin-extensions/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-polaris-admin-extensions",
+        "description": "Add custom actions and blocks from your app at contextually relevant spots throughout the Shopify Admin. Admin UI Extensions also supports scaffolding new adminextensions using Shopify CLI commands.",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-polaris-app-home/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-polaris-app-home/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-polaris-app-home",
+        "description": "Build your app's primary user interface embedded in the Shopify admin. If the prompt just mentions `Polaris` and you can't tell based off of the context what API they meant, assume they meant this API.",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-polaris-checkout-extensions/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-polaris-checkout-extensions/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-polaris-checkout-extensions",
+        "description": "Build custom functionality that merchants can install at defined points in the checkout flow, including product information, shipping, payment, order summary, and Shop Pay. Checkout UI Extensions also supports scaffolding new checkout extensions using Shopify CLI commands.",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-polaris-customer-account-extensions/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-polaris-customer-account-extensions/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-polaris-customer-account-extensions",
+        "description": "Build custom functionality that merchants can install at defined points on the Order index, Order status, and Profile pages in customer accounts. Customer Account UI Extensions also supports scaffolding new customer account extensions using Shopify CLI commands.",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-pos-ui/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-pos-ui/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-pos-ui",
+        "description": "Build retail point-of-sale applications using Shopify's POS UI components. These components provide a consistent and familiar interface for POS applications. POS UI Extensions also supports scaffolding new POS extensions using Shopify CLI commands. Keywords: POS, Retail, smart grid",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-storefront-graphql/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-storefront-graphql/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-storefront-graphql",
+        "description": "Use for custom storefronts requiring direct GraphQL queries/mutations for data fetching and cart operations. Choose this when you need full control over data fetching and rendering your own UI. NOT for Web Components - if the prompt mentions HTML tags like <shopify-store>, <shopify-cart>, use storefront-web-components instead.",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/shopify-use-shopify-cli/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/shopify-use-shopify-cli/SKILL.md",
+      "sourceMetadata": {
+        "name": "shopify-use-shopify-cli",
+        "description": "Choose when the user needs **Shopify CLI** to run or fix something now: validate app or extension config on disk (`shopify.app.toml`, `shopify.app.<name>.toml`, `shopify.extension.toml`); run or troubleshoot store workflows (`shopify store auth`, `shopify store execute`); inventory or product changes by handle, SKU, or location name; or CLI setup, auth, upgrade issues. Emphasize **commands and operational steps**, not only authoring GraphQL. Skip for API-only understanding or codegen with no CLI execution. Examples: validate configuration before deploy; run an existing query via CLI; list products; missing `shopify store execute`.",
+        "compatibility": "Requires Node.js",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ucp/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ucp/SKILL.md",
+      "sourceMetadata": {
+        "name": "ucp",
+        "description": "Use when the user wants to use the UCP CLI to find, compare, buy, or track products from online merchants, or to set up and troubleshoot the local UCP profile required for merchant-scoped operations. Covers global catalog search (\"find me X under $Y\"), named-merchant transactions (\"buy this from Z.com\"), order tracking, `ucp profile init`, `ucp doctor`, carts, checkout, orders, and UCP setup/help. Falls back to merchant-hosted handoff when direct in-protocol checkout isn't available.",
+        "compatibility": "Requires UCP CLI",
+        "requires_bin": "ucp",
+        "command": "ucp",
+        "metadata": {
+          "author": "Shopify",
+          "version": "1.9.1"
+        }
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#shopify",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/shopify"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 103,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "5727dd9a0d5d311f44959d5a79823fb7da60366529c48f285f4eaf8c027b7a82"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "9640f88c1443f97669816c02a9c49e5fdf251b86ec1d881b97de581c907ba303"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "6319bdbc65b42ade6d3d0de09a85c536fc69723e4ae21c5762213941729ce7db"
+    },
+    {
+      "path": "assets/composer-icon.svg",
+      "sha256": "73cde3025a6f736b3c50dce3106a99fdcfb5072b8f6b08b6cc728a6ddc52e476"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "c450cd06ca1b37d51f8f6aa90fa2bdb1c54411ca4d562cdaf27bef6f895446e2"
+    },
+    {
+      "path": "skills/shopify-admin/agents/openai.yaml",
+      "sha256": "aad0b8467f92bf95115f8bea73fa15a5cdf1bb773e4ac832c9b99b5c76494793"
+    },
+    {
+      "path": "skills/shopify-admin/assets/admin_2026-04.json.gz",
+      "sha256": "860cd22ab667513c70d136371c2cdfe996c08af4c89df44bda9a0fea7fa2ec47"
+    },
+    {
+      "path": "skills/shopify-admin/scripts/search_docs.mjs",
+      "sha256": "76bc78bdee43267f43781b2e4d9fddc507c57075fdeffbf75aefd1f3b909a63e"
+    },
+    {
+      "path": "skills/shopify-admin/scripts/validate.mjs",
+      "sha256": "c539c03b01e110b571c37fa396f7849e2e7a521def158cd4daa60fef8bc2c76e"
+    },
+    {
+      "path": "skills/shopify-admin/SKILL.md",
+      "sha256": "2a04a4a17138ea74e5a3e0e1638096d93594c4e3147cde905f9357ff83bff5dc"
+    },
+    {
+      "path": "skills/shopify-app-store-review/agents/openai.yaml",
+      "sha256": "4c354a1aa3246d58bb6c926fc3c75bb6cde2841b1cca47a5f775f881da42ec3e"
+    },
+    {
+      "path": "skills/shopify-app-store-review/SKILL.md",
+      "sha256": "6337479a7fc108fa7be57ec0314b8d8724f5333cb8cc4fca73aa3a3cfed430f8"
+    },
+    {
+      "path": "skills/shopify-custom-data/agents/openai.yaml",
+      "sha256": "adabf21d8a1b623b12467f226fefecdfae81723a584411b44aec04ae566c4aae"
+    },
+    {
+      "path": "skills/shopify-custom-data/SKILL.md",
+      "sha256": "12d6c7cb2e1324a18d5d674e4b53d780363def46c05a18a4bd1496838aece35e"
+    },
+    {
+      "path": "skills/shopify-customer/agents/openai.yaml",
+      "sha256": "25b092320f7bc8241a4c31ef3a445a179e37f649c1358858a6e3cc35f3dd33d6"
+    },
+    {
+      "path": "skills/shopify-customer/assets/customer_2026-04.json.gz",
+      "sha256": "4d1533583891fda744afe978436e32808954605a959c884037fefe845b49e604"
+    },
+    {
+      "path": "skills/shopify-customer/scripts/search_docs.mjs",
+      "sha256": "adf01c58f7d8cbef1038aa86ba78de00d5375bd9d8a1fee901dca837bf062cfe"
+    },
+    {
+      "path": "skills/shopify-customer/scripts/validate.mjs",
+      "sha256": "489377da020c6b8158d65bf13d48c652d2983db13bdb990b4cb3697011ade4e1"
+    },
+    {
+      "path": "skills/shopify-customer/SKILL.md",
+      "sha256": "4718190e507fd9cdb285218feafb4f9f1b238ba37f0858322fc30c719655f6aa"
+    },
+    {
+      "path": "skills/shopify-dev/agents/openai.yaml",
+      "sha256": "925ba6b5bd6e8b2382af0f45fce8df900d078582398b8a1367f48069d5d743c9"
+    },
+    {
+      "path": "skills/shopify-dev/scripts/search_docs.mjs",
+      "sha256": "1168a1c698604078459e8c7f174bcf9ac0447bc699cadec28529e400aa65cb12"
+    },
+    {
+      "path": "skills/shopify-dev/SKILL.md",
+      "sha256": "ef751aacf1d3e14d8b4fa7931137e97dddd89aedbc5f301fee3ed41c343dff22"
+    },
+    {
+      "path": "skills/shopify-functions/agents/openai.yaml",
+      "sha256": "327da469efeb567acf15b9ea5a874472334ad34234a93c3d78c92d47282c1ffd"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_cart_checkout_validation_2026-04.json.gz",
+      "sha256": "cdd28caf132785bdc8c4367ab760615b289679853f39715cc693142374fc312e"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_cart_transform_2026-04.json.gz",
+      "sha256": "a77a0465bd820df0d84052411543f8a064d0d30d465e8c5c6039df5f4d73a28b"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_delivery_customization_2026-04.json.gz",
+      "sha256": "7e64a51d182b67f8e57448008d4d0577fc086178bda5184161329e6e6ef77cd7"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_discount_2026-04.json.gz",
+      "sha256": "af9a3dcf00f1cc2cd1a9b111889f10dc335b8f4c2ea4968702a1bddb90fb45b6"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_discounts_allocator_unstable.json.gz",
+      "sha256": "3072c5c37407156a13f087ab8a97dccffb3ab6b9175dca6640fc8a0933c6b65c"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_fulfillment_constraints_2026-04.json.gz",
+      "sha256": "1057dfa21efa1fe8fd788744ae0680d23b34d86a08460a36692443f848058d93"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_local_pickup_delivery_option_generator_unstable.json.gz",
+      "sha256": "4232789d5ced141c4b72901b861ebe2e506916b4eb041334f7304657fca0deba"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_order_discounts_2026-04.json.gz",
+      "sha256": "b09b2120a80b3bd32ef96ab47d18d0e9279d3ca93a02f167c37b1b4defad328e"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_order_routing_location_rule_2026-04.json.gz",
+      "sha256": "4a6dba0f55629d56ac4a5d79646886cd3101b4295f5f4abc4fa8b567d7eaf5a3"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_payment_customization_2026-04.json.gz",
+      "sha256": "e11abb60163cafa8a51888c6f47c682c0f1e6b003f6d5416efab89a703446ffb"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_pickup_point_delivery_option_generator_unstable.json.gz",
+      "sha256": "f483d1b14c7133c70fee399ed021b7d10881e9ab1faf4cddd0fa8bc11d6f2c41"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_product_discounts_2026-04.json.gz",
+      "sha256": "7a05a29f7987309f5b94dd3ee00f26a75ee4032eb1234903c1dad834f1636032"
+    },
+    {
+      "path": "skills/shopify-functions/assets/functions_shipping_discounts_2026-04.json.gz",
+      "sha256": "9d149e00f53a204aa3076291a04c41505058fd5569808bfff2b216ddb01130fd"
+    },
+    {
+      "path": "skills/shopify-functions/scripts/search_docs.mjs",
+      "sha256": "1d6fac813cc82f7a58741d9b35d8fdd6d62dd158fe5320547d0a20452cd10288"
+    },
+    {
+      "path": "skills/shopify-functions/scripts/validate.mjs",
+      "sha256": "dee29f83b9e919fe1eff319ebd08ec09311adcecd2fd4aaa54cde8f573ca1a0d"
+    },
+    {
+      "path": "skills/shopify-functions/SKILL.md",
+      "sha256": "22051b7b0a6a6b455020f8749c722c9c7c9aae78e56b2a703115257b40d65009"
+    },
+    {
+      "path": "skills/shopify-hydrogen/agents/openai.yaml",
+      "sha256": "5ad44e1ebef356000287cd8f48abaa5d00d451631538c801116c437fe380d01a"
+    },
+    {
+      "path": "skills/shopify-hydrogen/package.json",
+      "sha256": "d5e239db6551d7443d59215f40e12bfb520920fee5e33572c896e070bb727942"
+    },
+    {
+      "path": "skills/shopify-hydrogen/scripts/search_docs.mjs",
+      "sha256": "ca7b2f870f688231861bfe2d6901048845a625c63a090c3f00e901c7d7f81382"
+    },
+    {
+      "path": "skills/shopify-hydrogen/scripts/validate.mjs",
+      "sha256": "ae7d252a9e17978f040341544bbebf06a491fcc860f5835728bbc269c2bd7c3d"
+    },
+    {
+      "path": "skills/shopify-hydrogen/SKILL.md",
+      "sha256": "6f5ff120f780fac5bd26790d6f33189a667bf599ca1bfc8e6a64679394169022"
+    },
+    {
+      "path": "skills/shopify-liquid/agents/openai.yaml",
+      "sha256": "282a5b287001d8c0a37facfec709d80a10f09d380237d7ba0603892c74c23339"
+    },
+    {
+      "path": "skills/shopify-liquid/blocks/hero-slide.liquid",
+      "sha256": "e29f82da100590b974ff9c291266caa22d7a4b812f5d47f412523fdf3690ea6f"
+    },
+    {
+      "path": "skills/shopify-liquid/config/settings_schema.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f"
+    },
+    {
+      "path": "skills/shopify-liquid/featured-collection.liquid",
+      "sha256": "c188b0deefc04aeaafa4d46ebc28d816eaf88140fb0a045dce5f51c67f5f2490"
+    },
+    {
+      "path": "skills/shopify-liquid/locales/en.default.json",
+      "sha256": "f5c39cd6d5ae3a3e80186445f7fd066ac0fdadf302f3750585a9c5c5825e9d99"
+    },
+    {
+      "path": "skills/shopify-liquid/locales/en.default.schema.json",
+      "sha256": "d3f677fd0af6e82d0f13bc854e4b770fe7b418a6e425b9f708859ca4abbc35b9"
+    },
+    {
+      "path": "skills/shopify-liquid/package.json",
+      "sha256": "49d6a21baf3b2cfeea58523ddbb69839fa92b9699097d8244019d6cfea37672a"
+    },
+    {
+      "path": "skills/shopify-liquid/scripts/search_docs.mjs",
+      "sha256": "9ceaa0565925bde5762d74a0c5aa66585791b3be804a9a9de70d90c6434b9bc4"
+    },
+    {
+      "path": "skills/shopify-liquid/scripts/validate.mjs",
+      "sha256": "48540676142f972652ce02a7cb687a0961d6daa755f917622062cf5e385be4dc"
+    },
+    {
+      "path": "skills/shopify-liquid/sections/hero-banner.liquid",
+      "sha256": "2f1c46bcafba6a0ac1efada177834b85daf51513dd0138fb835fb433a9ef8bea"
+    },
+    {
+      "path": "skills/shopify-liquid/SKILL.md",
+      "sha256": "2cbb8b2dd7da2b48940ed52033be6094f29b10dbe96ef9814ec9183239c4ca19"
+    },
+    {
+      "path": "skills/shopify-onboarding-dev/agents/openai.yaml",
+      "sha256": "57364073c6eafe58b47f6f9dcb7c65be441a748ab1612c07eed69edb25abe4bc"
+    },
+    {
+      "path": "skills/shopify-onboarding-dev/SKILL.md",
+      "sha256": "3f18b00d47314f52cb6107e7fc30c650446bca4ba11f4d1e8157ca13d919dc2e"
+    },
+    {
+      "path": "skills/shopify-onboarding-merchant/agents/openai.yaml",
+      "sha256": "160f39d80d446c69da1dbc7d02895ae032305a37e04fd79a3d81c2f90d9503f4"
+    },
+    {
+      "path": "skills/shopify-onboarding-merchant/SKILL.md",
+      "sha256": "14d7d80978f194a60ed904b38f269afed9cbd86725c4496e0786804620285b80"
+    },
+    {
+      "path": "skills/shopify-partner/agents/openai.yaml",
+      "sha256": "a4cc2cd998d83509ee1e66a3afb570a052cb00a1981c2c3071f8e582ba002cbb"
+    },
+    {
+      "path": "skills/shopify-partner/assets/partner_2026-04.json.gz",
+      "sha256": "ca4072b623b40f7cb982f9c415234a7190561f0df68ec5c75c32cd946e93ba03"
+    },
+    {
+      "path": "skills/shopify-partner/scripts/search_docs.mjs",
+      "sha256": "78768a2bdc04ffa273d39d625e148debc9d681b974a7bb75299a6b6e013251f8"
+    },
+    {
+      "path": "skills/shopify-partner/scripts/validate.mjs",
+      "sha256": "9945e61e48545a33c77e89c90a670107e562fbe7d5bf359afb4ac43fe52220e4"
+    },
+    {
+      "path": "skills/shopify-partner/SKILL.md",
+      "sha256": "afbf2440d0daccdf9db80b57f15a1346513ce2da1fd98b325599245abb24cc96"
+    },
+    {
+      "path": "skills/shopify-payments-apps/agents/openai.yaml",
+      "sha256": "23767f60fef4aabe9d018e470747eb125f227dc7fdbc1decd3fd9b4d732edfbc"
+    },
+    {
+      "path": "skills/shopify-payments-apps/assets/payments-apps_2026-04.json.gz",
+      "sha256": "e3f9ac6590a43617b60fa8ea32463217ec157d760b7f4508eeb689d697d53a99"
+    },
+    {
+      "path": "skills/shopify-payments-apps/scripts/search_docs.mjs",
+      "sha256": "cfed937d76c013e87e0a6a9bafba5bf51b8d7a927ceca936fc22f26c6bf2ded5"
+    },
+    {
+      "path": "skills/shopify-payments-apps/scripts/validate.mjs",
+      "sha256": "626289fadb239183030676688c5cb487d0eb5e38d70214e7f60a721d3cb817dc"
+    },
+    {
+      "path": "skills/shopify-payments-apps/SKILL.md",
+      "sha256": "17fd140098d567c46a51a90157ca14d59c8c307c0034d5805717aab24f0e6622"
+    },
+    {
+      "path": "skills/shopify-polaris-admin-extensions/agents/openai.yaml",
+      "sha256": "c50fc448a27ef7c0b6e5780ee5488aca7b094485f18ae238a648ff3f65ade693"
+    },
+    {
+      "path": "skills/shopify-polaris-admin-extensions/package.json",
+      "sha256": "e2bda0ff652c52c9403af066ae555604ae7dbc0cd80bd042a7f802ef10a9b2a1"
+    },
+    {
+      "path": "skills/shopify-polaris-admin-extensions/scripts/search_docs.mjs",
+      "sha256": "ec22739cc98aa4d0719d6984bf1dcfe010cfb52440599c6ab33f7cfa4ea68592"
+    },
+    {
+      "path": "skills/shopify-polaris-admin-extensions/scripts/validate.mjs",
+      "sha256": "0199871a83d630c09caf906c4ca59e3d527cd6136ffdfa2589c12c04eac1f716"
+    },
+    {
+      "path": "skills/shopify-polaris-admin-extensions/SKILL.md",
+      "sha256": "19dbbd9625ac2d418e92475e0cbb3f6680815addb0a997eb0c9281a008d1dbcd"
+    },
+    {
+      "path": "skills/shopify-polaris-app-home/agents/openai.yaml",
+      "sha256": "37ba840c57711e91d2eb06514f4b4ff167754e21a06739e9b9587101ba50d857"
+    },
+    {
+      "path": "skills/shopify-polaris-app-home/package.json",
+      "sha256": "0624e9a4042717249c9d8cc73a8deba244d693d1735257172e2f20d3eb003599"
+    },
+    {
+      "path": "skills/shopify-polaris-app-home/scripts/search_docs.mjs",
+      "sha256": "2b0b21b9f29744f9a7f6dfc87b5bc032080661fc7e09cba15429371df9273d11"
+    },
+    {
+      "path": "skills/shopify-polaris-app-home/scripts/validate.mjs",
+      "sha256": "931261ee482d22d21b6fe214fef47ada5ddb0009e104b40c4f2f42cf88358f12"
+    },
+    {
+      "path": "skills/shopify-polaris-app-home/SKILL.md",
+      "sha256": "9103d6c435a59e0e196dfa37969faea73d84880292b2984c0f0cb1addffe337c"
+    },
+    {
+      "path": "skills/shopify-polaris-checkout-extensions/agents/openai.yaml",
+      "sha256": "323c9020f7038a4391a258d9ba81a49e2aa16bb223cd619f100aaa811ea5a762"
+    },
+    {
+      "path": "skills/shopify-polaris-checkout-extensions/package.json",
+      "sha256": "d49b2338324084bd1b4bd863f646b2d52ffc58dc345751974307ec02c4c0e7a9"
+    },
+    {
+      "path": "skills/shopify-polaris-checkout-extensions/scripts/search_docs.mjs",
+      "sha256": "8ffa070ae23f60549f53e5c456ed38d15fb83fa67bf26f75dea767b70f2d04f5"
+    },
+    {
+      "path": "skills/shopify-polaris-checkout-extensions/scripts/validate.mjs",
+      "sha256": "c4af7377e8bd18a97593f029b8a3b437dc238e3d62e971421c491af119679ca6"
+    },
+    {
+      "path": "skills/shopify-polaris-checkout-extensions/SKILL.md",
+      "sha256": "3f194d7998bc57e7fbedde54c9c838d1cd2826346377f8cfe15362ec7d9d482b"
+    },
+    {
+      "path": "skills/shopify-polaris-customer-account-extensions/agents/openai.yaml",
+      "sha256": "c6f29403f3616284a250119c79303c8f5e9b787f57291fa9511caa9e6da44498"
+    },
+    {
+      "path": "skills/shopify-polaris-customer-account-extensions/package.json",
+      "sha256": "1ebaa9b3319a1cee9d5d78d9b72d29b68936905544ad1e37bcd4d234a021df4a"
+    },
+    {
+      "path": "skills/shopify-polaris-customer-account-extensions/scripts/search_docs.mjs",
+      "sha256": "b4d09ebe8a3fcf3f3712f5876d3bd99dbae4f2b3b2670df6f59dc21cdd7de9f6"
+    },
+    {
+      "path": "skills/shopify-polaris-customer-account-extensions/scripts/validate.mjs",
+      "sha256": "dc68159171d5279fc33fd7f1edfc29081f101bef17c6354caa2670a09ddd5537"
+    },
+    {
+      "path": "skills/shopify-polaris-customer-account-extensions/SKILL.md",
+      "sha256": "cef725393c4f934d6c349baaeb05735b226cabc0600dd2fb3b0fb69f0f1ccffd"
+    },
+    {
+      "path": "skills/shopify-pos-ui/agents/openai.yaml",
+      "sha256": "85f90a31a1fdb230ff3170986302caff6088da0596236a5e33ede74fe92ac34d"
+    },
+    {
+      "path": "skills/shopify-pos-ui/package.json",
+      "sha256": "780ff5ff2cc334f79686b5832dfa3320ecac9e7b2a84dd7bea11c6a1824eaf1d"
+    },
+    {
+      "path": "skills/shopify-pos-ui/scripts/search_docs.mjs",
+      "sha256": "17a849f2be616c38183682ed737c275182b5928c87800fe9f37fe7d7583d2fa2"
+    },
+    {
+      "path": "skills/shopify-pos-ui/scripts/validate.mjs",
+      "sha256": "2ffa59f9272ed605c5c69c10d987d33c1593f0f2d12de1576adce144ef320f48"
+    },
+    {
+      "path": "skills/shopify-pos-ui/SKILL.md",
+      "sha256": "5de4e18b9e1ca614af9e131802fb8cec6005ee2d596f9d05ff75fa3dd4582e02"
+    },
+    {
+      "path": "skills/shopify-storefront-graphql/agents/openai.yaml",
+      "sha256": "86d5dfc5cc0fbb0df500e3c9b6277a3cd2d0f85c6059dd88098c205cb0b7c366"
+    },
+    {
+      "path": "skills/shopify-storefront-graphql/assets/storefront-graphql_2026-04.json.gz",
+      "sha256": "ee149ed280ed7fd2cb3bb142c38e3dbb259df09b08779793be8083e589e789b8"
+    },
+    {
+      "path": "skills/shopify-storefront-graphql/scripts/search_docs.mjs",
+      "sha256": "78f902d96b2ea5b59119d38c3161753f1b297ff819efc2d3fca0e8826b74f050"
+    },
+    {
+      "path": "skills/shopify-storefront-graphql/scripts/validate.mjs",
+      "sha256": "b07555373de2c2e57762a8dd1687f6a549ed11546da57a87b656892671f302a7"
+    },
+    {
+      "path": "skills/shopify-storefront-graphql/SKILL.md",
+      "sha256": "fe7228b2d90e9c59662709684edb4a3acf7ea75a24bd9af42498f7dae6f8bd56"
+    },
+    {
+      "path": "skills/shopify-use-shopify-cli/agents/openai.yaml",
+      "sha256": "2a5fe328179fae610dff0d3feb41192bf3c09e177e790fe7392e1d87be696330"
+    },
+    {
+      "path": "skills/shopify-use-shopify-cli/SKILL.md",
+      "sha256": "0dbd7c32894d30912b212f01d36b9bd9757f32d066134d6ba2372bce47e1cd1e"
+    },
+    {
+      "path": "skills/ucp/agents/openai.yaml",
+      "sha256": "a906ab65c8acc1fe20c85a7eee65a1cc6cc6a65fe30f2a8915f84c96d367abd9"
+    },
+    {
+      "path": "skills/ucp/SKILL.md",
+      "sha256": "823698c95d40b53f2fce4bade4b79bbaa7070495eb0c4b9d67ea38507cd50743"
+    },
+    {
+      "path": "skills/ucp/views/cart.summary.jmespath",
+      "sha256": "1d2e3e21932291a06dd16743a167aaf6a2cd71c41734a8db6ac699297f56d116"
+    },
+    {
+      "path": "skills/ucp/views/catalog.compact.jmespath",
+      "sha256": "7bb40b73e22d2e4923809301649842c9ea02647ba0495100782448b9dfce70a7"
+    },
+    {
+      "path": "skills/ucp/views/catalog.summary.jmespath",
+      "sha256": "6408ea8472ef2aa822d43f4c621a291610762e05e7f562dbfede9c3c301858b4"
+    }
+  ]
+}

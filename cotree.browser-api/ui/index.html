@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>浏览器 API</title><link rel="stylesheet" href="app.css"></head>
+<body class="cotree-plugin-view">
+  <header>
+    <div class="row between"><h1>浏览器 API</h1><div class="row"><button id="open-browser" class="cotree-button">打开浏览器</button><button id="help" class="cotree-button quiet" aria-expanded="true" aria-controls="guide">使用指南</button></div></div>
+    <p id="storage" class="muted">正在连接浏览器…</p>
+    <p id="environment" class="compact"><strong id="environment-name">默认浏览器</strong><span class="muted"> · 登录状态跨工作目录共享</span></p>
+    <div class="row between recording"><label class="check"><input type="checkbox" id="recording"><strong id="recording-label">自动发现接口</strong></label></div>
+    <p class="muted compact">自动记录所有浏览器环境的网页接口；下方只显示当前环境的记录。</p>
+  </header>
+  <div id="notice" role="status" aria-live="polite"></div>
+  <main>
+    <nav class="row" aria-label="工作台视图"><button id="show-workflows" class="cotree-button">操作流程</button><button id="show-apis" class="cotree-button">全部接口</button></nav>
+    <section id="workflows" hidden></section>
+    <div id="api-sections">
+    <section id="directory">
+      <section id="guide" class="guide" aria-label="使用指南">
+        <h2>从网页操作到 Agent 任务</h2>
+        <ol><li><strong>登录网站</strong><span>打开内置浏览器，登录你要使用的网站。</span></li><li><strong>操作并记录</strong><span>开启自动记录，再查询列表、切换筛选或翻页；回到此面板点击“刷新”。</span></li><li><strong>收藏并交给 Agent</strong><span>选择有用的接口，填写用途并收藏。写下任务目标，填入对话后发送。</span></li></ol>
+        <p class="muted compact">自动记录 Fetch / XHR 请求，过滤图片、样式等静态资源和登录提交；浏览器提供登录态，无需复制 cookie。</p>
+      </section>
+      <section class="toolbar" aria-label="接口筛选">
+        <div class="row between"><h2>接口目录 <span id="count" class="muted">0 个接口</span></h2><button id="refresh" class="cotree-button">刷新</button></div>
+        <input id="search" class="cotree-input" placeholder="搜索名称、站点或路径" aria-label="搜索接口">
+        <label class="check"><input type="checkbox" id="favorites">只看收藏</label>
+        <details id="environments"><summary>高级 · 多账号环境</summary>
+          <p class="muted">只用一套网站账号时，无需设置。同一网站需要多个账号时，使用独立环境隔离登录状态与接口记录。</p>
+          <label>选择浏览器环境<select id="profile" class="cotree-select" aria-label="选择浏览器环境"><option value="managed">默认浏览器</option></select></label>
+          <p class="muted compact">选择后会打开对应浏览器。新环境需单独登录，不会复制其他环境的账号。</p>
+          <details id="new-environment"><summary>新建独立环境</summary>
+            <label>环境名称<input id="environment-input" class="cotree-input" maxlength="64" placeholder="例如：公司账号、个人账号"></label>
+            <button id="create-environment" class="cotree-button">创建并打开浏览器</button>
+          </details>
+        </details>
+      </section>
+      <div id="list"></div>
+      <div id="empty" class="empty"><strong id="empty-title">还没有记录到接口</strong><p id="empty-note">保持自动记录开启，在内置浏览器操作网站后刷新。仅打开页面可能不会产生可记录请求。</p></div>
+      <p id="welcome" class="muted footnote">选择一个接口，查看详情、收藏或交给 Agent 使用。</p>
+    </section>
+    <section id="editor" hidden>
+      <div class="row between"><button id="back" class="cotree-button quiet">返回目录</button><span id="seen" class="muted"></span></div>
+      <div class="detail-heading"><span id="method" class="badge"></span><span id="origin" class="muted"></span></div>
+      <label>接口名称<input id="name" class="cotree-input" maxlength="200"></label>
+      <label>用途说明<textarea id="description" class="cotree-textarea" rows="2" maxlength="2000" placeholder="例如：查询订单列表，可按日期筛选"></textarea></label>
+      <div class="row between save-row"><label class="check"><input id="favorite" type="checkbox">收藏，允许复用</label><button id="save" class="cotree-button">保存定义</button></div>
+      <p id="request-note" class="muted compact"></p>
+      <section class="handoff">
+        <h2>交给 Agent 使用</h2>
+        <label for="objective">希望 Agent 完成什么？</label>
+        <textarea id="objective" class="cotree-textarea" rows="3" maxlength="2000" placeholder="例如：查询最近 7 天订单，按状态汇总"></textarea>
+        <button id="agent" class="cotree-button" data-variant="primary">填入当前对话</button>
+        <p id="agent-note" class="muted compact">填入接口引用和任务目标，保留原草稿；由你确认后发送。</p>
+      </section>
+      <details id="advanced"><summary>高级 · 请求参数与手动调用</summary>
+        <label>请求地址<input id="url" class="cotree-input cotree-mono"></label>
+        <p class="muted">认证字段显示为 [REDACTED]，请保留占位符。</p>
+        <label>请求头 · JSON<textarea id="headers" class="cotree-textarea cotree-mono" rows="5"></textarea></label>
+        <label>请求体 · JSON<textarea id="body" class="cotree-textarea cotree-mono" rows="5" placeholder="留空保留原请求体；输入 null 清空"></textarea></label>
+        <p class="muted compact">修改后请先保存。手动调用会真实访问网站。</p>
+        <button id="call" class="cotree-button">调用已保存接口</button>
+        <pre id="result" tabindex="0" aria-label="调用结果">尚未调用接口。</pre>
+        <button id="delete" class="cotree-button quiet">删除接口记录</button>
+      </details>
+    </section>
+    </div>
+  </main>
+  <script type="module" src="app.js"></script>
+</body></html>

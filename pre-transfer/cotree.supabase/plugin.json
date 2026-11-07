@@ -1,0 +1,73 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.supabase",
+  "name": "Supabase",
+  "version": "0.2.0",
+  "description": "项目级 Supabase 数据库、应用集成和 PostgreSQL 性能工作流，默认只读连接。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.supabase.connect",
+      "description": "配置 Supabase 项目范围、只读 MCP 和最小权限身份并检查连接。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.supabase.inspect",
+      "description": "只读检查 Supabase 项目的 schema、迁移状态、策略和必要数据。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.supabase.migrate",
+      "description": "准备并执行用户授权的 Supabase schema / RLS 迁移，保留恢复证据。",
+      "path": "skills/migrate/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.supabase.integrate",
+      "description": "把 Supabase Auth、Storage、Realtime、数据库或 Edge Functions 接入当前应用。",
+      "path": "skills/integrate/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.supabase.diagnose",
+      "description": "根据 Supabase 日志、advisor 和查询计划定位数据库或应用集成故障。",
+      "path": "skills/diagnose/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.supabase.optimize",
+      "description": "审查 PostgreSQL 查询、索引、连接与 RLS 性能，并用实测证据验证改进。",
+      "path": "skills/optimize/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "supabase",
+      "transport": "streamable-http",
+      "url": "https://mcp.supabase.com/mcp?read_only=true&features=database%2Cdocs%2Cdebugging%2Cdevelopment",
+      "headersEnv": {
+        "Authorization": "COTREE_SUPABASE_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "5a8dd7dd7a073f02190f2a41db61375b8dc0313cfee57471322e138f36077b72"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.frontend-design",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "frontend-design",
+    "repository": "claude-plugins-official",
+    "path": "plugins/frontend-design",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "88492e9297e86faad918a742987c3ae2bfc6ddb8ce783e10c1fd976e9669fcad"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/frontend-design/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/frontend-design/SKILL.md",
+      "sourceMetadata": {
+        "name": "frontend-design",
+        "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.",
+        "license": "Complete terms in LICENSE.txt"
+      }
+    }
+  ],
+  "copiedFiles": 4,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "33ce99bdcd6c4bec5ffa6a3fe59d2adf80832f3cd8325a8359ad41777f5152b9"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a5dfe7a64fc7c4b51ed38e6d66e5eb4e1f8ea79e2c518b38f21b74b000faaf39"
+    },
+    {
+      "path": "skills/frontend-design/LICENSE.txt",
+      "sha256": "eb3d7b5485466acbd81f2b496f595ab637d2792e268206b27d99e793bdb67549"
+    },
+    {
+      "path": "skills/frontend-design/SKILL.md",
+      "sha256": "b8009ae690dfa69edc7f08bb8715f32db8817112cfa4388741dbaf876c237df8"
+    }
+  ]
+}

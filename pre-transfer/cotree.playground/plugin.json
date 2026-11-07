@@ -1,0 +1,61 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.playground",
+  "name": "Playground",
+  "version": "0.2.0",
+  "description": "在 CoTree 中制作可独立打开的交互 HTML，探索设计、数据、概念、代码结构和文档修改，并生成可复制的说明。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.playground.create",
+      "description": "创建自包含交互 HTML，包含预设、即时预览和说明输出。",
+      "path": "skills/create/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.playground.design",
+      "description": "制作组件、布局、颜色和排版的交互设计实验。",
+      "path": "skills/design/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.playground.data",
+      "description": "制作有来源、单位和可复查筛选的数据探索页面。",
+      "path": "skills/data/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.playground.map",
+      "description": "根据真实内容制作概念图或代码关系探索页面。",
+      "path": "skills/map/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.playground.review",
+      "description": "制作可选建议的文档评阅或逐行代码差异审阅页面。",
+      "path": "skills/review/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.playground.verify",
+      "description": "验证交互 HTML 的行为、可访问性、复制和导出。",
+      "path": "skills/verify/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "69214dc031f5e335114569bcee485f1a8c597cd64838dac4b687d622a2f89eaf"
+  }
+}

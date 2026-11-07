@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "preparedAt": "2026-10-05T14:51:09.692Z",
+  "purpose": "CoTree offline LSP runtime resources; not an CoTree plugin archive",
+  "platforms": [
+    "windows-x64",
+    "linux-x64",
+    "linux-arm64"
+  ],
+  "artifacts": [
+    {
+      "file": "common/jdt-language-server-1.56.0-202601291528.tar.gz",
+      "size": 51007134,
+      "sha256": "988492f1a4350be52aafbe538dc04f5c4dae08ad0e1f2aa35317622ed2dbe3c6",
+      "kind": "upstream-runtime",
+      "version": "1.56.0",
+      "source": "https://download.eclipse.org/jdtls/milestones/1.56.0/jdt-language-server-1.56.0-202601291528.tar.gz",
+      "upstreamChecksumUrl": "https://download.eclipse.org/jdtls/milestones/1.56.0/jdt-language-server-1.56.0-202601291528.tar.gz.sha256",
+      "targets": [
+        "windows-x64",
+        "linux-x64",
+        "linux-arm64"
+      ]
+    },
+    {
+      "file": "common/node-language-servers.tar.gz",
+      "size": 8888857,
+      "sha256": "89215021f9baed4acfffb0ed67284f89fd53765f42db49ab803c049204fddc84",
+      "kind": "assembled-runtime",
+      "targets": [
+        "windows-x64",
+        "linux-x64",
+        "linux-arm64"
+      ],
+      "versions": {
+        "typescript": "5.9.3",
+        "typescript-language-server": "5.0.0",
+        "pyright": "1.1.414"
+      },
+      "notes": "Complete published npm payloads; optional macOS-only fsevents excluded. Requires Node >=20; CoTree Desktop supplies Node."
+    },
+    {
+      "file": "linux-arm64/gopls",
+      "size": 37984715,
+      "sha256": "1430a218904de2c59dd3be35bb75b74a426f84ebe2efe15a48a2db6c39b81f2d",
+      "kind": "locally-built-official-source",
+      "version": "0.21.1",
+      "source": "https://go.googlesource.com/tools/+/refs/tags/gopls/v0.21.1/gopls/",
+      "target": "linux-arm64",
+      "build": {
+        "toolchain": "go1.26.1",
+        "os": "linux",
+        "arch": "arm64",
+        "cgo": false,
+        "trimpath": true
+      }
+    },
+    {
+      "file": "linux-arm64/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.12.1_1.tar.gz",
+      "size": 205641175,
+      "sha256": "23e37e026f12f3e706f18938ff611db3032d075b09d0879a25d06718c773e223",
+      "kind": "optional-launch-jdk",
+      "version": "21.0.12.1+1-LTS",
+      "source": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.12.1_1.tar.gz",
+      "upstreamChecksumUrl": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.12.1_1.tar.gz.sha256.txt",
+      "target": "linux-arm64"
+    },
+    {
+      "file": "linux-x64/gopls",
+      "size": 40883407,
+      "sha256": "3b2897529db4c0e106c04059380e24361e1e46d9adfa713ae59d63d63c3cb429",
+      "kind": "locally-built-official-source",
+      "version": "0.21.1",
+      "source": "https://go.googlesource.com/tools/+/refs/tags/gopls/v0.21.1/gopls/",
+      "target": "linux-x64",
+      "build": {
+        "toolchain": "go1.26.1",
+        "os": "linux",
+        "arch": "amd64",
+        "cgo": false,
+        "trimpath": true
+      }
+    },
+    {
+      "file": "linux-x64/OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz",
+      "size": 207473347,
+      "sha256": "ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94",
+      "kind": "optional-launch-jdk",
+      "version": "21.0.12.1+1-LTS",
+      "source": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz",
+      "upstreamChecksumUrl": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz.sha256.txt",
+      "target": "linux-x64"
+    },
+    {
+      "file": "sources/gopls-v0.21.1.zip",
+      "size": 2226948,
+      "sha256": "5c72720faf5bb33707f8559db47d33d45788cd2319dc0012835b4eb478a680a1",
+      "kind": "verified-go-module-source",
+      "source": "https://proxy.golang.org/golang.org/x/tools/gopls/@v/v0.21.1.zip",
+      "goModuleSum": "h1:1/o9z5Brdero4jFm9Jr46Uwj8GU9lQdoSXHMlwRHb/w="
+    },
+    {
+      "file": "sources/npm/pyright-1.1.414.tgz",
+      "size": 4226827,
+      "sha256": "bf5f473f6167c0d14175492c3263d783b4489a6956e1c06c18e15228e3a3fa42",
+      "kind": "upstream-source-package",
+      "version": "1.1.414",
+      "source": "https://registry.npmjs.org/pyright/-/pyright-1.1.414.tgz",
+      "integrity": "sha512-FPZZb51jepDX4eP7TEYDeNFtmE3WgwkkEcJpvH3/QmUSsj0EAy3LXu+xB4T/FWDejtsXlCfFr/rbWFjwuwuXww=="
+    },
+    {
+      "file": "sources/npm/typescript-5.9.3.tgz",
+      "size": 4377468,
+      "sha256": "10e108c9cf7d5f2879053dff18515fb405abf2ccef63eaaf017d9c571687a1d3",
+      "kind": "upstream-source-package",
+      "version": "5.9.3",
+      "source": "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz",
+      "integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw=="
+    },
+    {
+      "file": "sources/npm/typescript-language-server-5.0.0.tgz",
+      "size": 491374,
+      "sha256": "2ab4e5445cfd29e42edd2714f651c0b9d6beac4d9473f089de758de77598aeb1",
+      "kind": "upstream-source-package",
+      "version": "5.0.0",
+      "source": "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-5.0.0.tgz",
+      "integrity": "sha512-Glr+4Ss9g6AupBPj3tnk3mrlSH1ROS2Zmr5h0Vmy3DA+MVq+5qq4tv4+SogB8VsEZ13Z9xU01zm54MMyI7Gdzw=="
+    },
+    {
+      "file": "windows-x64/gopls.exe",
+      "size": 41593344,
+      "sha256": "4f84fd910d4dca935397b133f374a46a53ec12771ed70db305094805b6edbd28",
+      "kind": "locally-built-official-source",
+      "version": "0.21.1",
+      "source": "https://go.googlesource.com/tools/+/refs/tags/gopls/v0.21.1/gopls/",
+      "target": "windows-x64",
+      "build": {
+        "toolchain": "go1.26.1",
+        "os": "windows",
+        "arch": "amd64",
+        "cgo": false,
+        "trimpath": true
+      }
+    },
+    {
+      "file": "windows-x64/OpenJDK21U-jdk_x64_windows_hotspot_21.0.12.1_1.zip",
+      "size": 205073461,
+      "sha256": "f9d6e191ab098c0d416e7d588a24420a8621cd2f4720dab2459b8b7b2d2d8b4e",
+      "kind": "optional-launch-jdk",
+      "version": "21.0.12.1+1-LTS",
+      "source": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_x64_windows_hotspot_21.0.12.1_1.zip",
+      "upstreamChecksumUrl": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_x64_windows_hotspot_21.0.12.1_1.zip.sha256.txt",
+      "target": "windows-x64"
+    }
+  ]
+}

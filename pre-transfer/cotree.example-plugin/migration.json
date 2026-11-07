@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.example-plugin",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 26,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "example-plugin",
+      "repository": "claude-plugins-official",
+      "path": "plugins/example-plugin",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "1975aa3766be72354f6782e53e77bde6ed4561670ff91874b89c3ac27b25fa45"
+    }
+  ],
+  "changes": [
+    "示例命令两种来源格式去重，改为真实可运行的CoTree参数回显。",
+    "去除虚构MCP和原宿主权限声明。"
+  ],
+  "limitations": [
+    "演示包只用于教学，不包含实际第三方服务。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "skills/example-skill/SKILL.md": "tour；领域内容完整归档，执行遵循CoTree合同。",
+    "skills/example-command/SKILL.md": "echo；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/example-command.md": "echo；领域内容完整归档，执行遵循CoTree合同。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

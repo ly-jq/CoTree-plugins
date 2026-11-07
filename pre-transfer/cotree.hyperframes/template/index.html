@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Small ideas, in motion</title>
+<style>*{box-sizing:border-box}body{margin:0}#main{width:640px;height:360px;overflow:hidden;background:#11292c;color:#f5f4de;font-family:Arial,sans-serif}.content{width:100%;height:100%;padding:40px 44px;display:flex;flex-direction:column;justify-content:center;gap:16px}h1{font-size:48px;line-height:1.05;margin:0;max-width:530px;letter-spacing:-1px}p{font-size:20px;line-height:1.3;margin:0;color:#d5e9da}.label{font-size:14px;color:#cef389;letter-spacing:3px}.line{height:4px;width:160px;background:#cef389;transform-origin:left}</style></head><body>
+<div id="main" data-composition-id="main" data-width="640" data-height="360" data-duration="3" data-fps="24"><div class="content"><div class="label">COTREE / MOTION STUDY</div><h1>Small ideas.<br>Beautiful motion.</h1><p>From a local HTML file to a finished film.</p><div class="line"></div></div></div>
+<script src="node_modules/gsap/dist/gsap.min.js"></script><script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({paused:true});
+tl.from('.label',{opacity:0,y:10,duration:.4,ease:'power2.out'},.1)
+  .from('h1',{opacity:0,y:20,duration:.6,ease:'power3.out'},.2)
+  .from('p',{opacity:0,y:12,duration:.5,ease:'sine.out'},.5)
+  .from('.line',{scaleX:0,duration:.8,ease:'power2.out'},.7);
+window.__timelines.main=tl;
+</script></body></html>

@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.boltz-api-cli",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "boltz-api-cli",
+    "repository": "plugins",
+    "path": "plugins/boltz-api-cli",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "dc50657463065e4141b3a4051c85f8a92f79e24e3d27fe550506fb83f77b9a1c",
+    "upstreamVersion": "0.1.1"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/boltz-check-status/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/boltz-check-status/SKILL.md",
+      "sourceMetadata": {
+        "name": "boltz-check-status",
+        "description": "Boltz job status and result recovery. Use when listing jobs, checking progress, resuming downloads, recovering results, or downloading an existing job ID. Not for starting new jobs."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/boltz-cli-setup/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/boltz-cli-setup/SKILL.md",
+      "sourceMetadata": {
+        "name": "boltz-cli-setup",
+        "description": "Boltz CLI setup and auth. Use when installing, updating, verifying, or authenticating `boltz-api`, or fixing missing CLI, PATH, sandbox, browser login, or auth errors."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/boltz-protein-design/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/boltz-protein-design/SKILL.md",
+      "sourceMetadata": {
+        "name": "boltz-protein-design",
+        "description": "Design new protein binders with Boltz. Use when generating protein, peptide, antibody, nanobody, or custom binder candidates for a target. Not for screening existing proteins or small molecules."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/boltz-protein-screen/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/boltz-protein-screen/SKILL.md",
+      "sourceMetadata": {
+        "name": "boltz-protein-screen",
+        "description": "Screen existing protein binders with Boltz. Use when ranking a supplied protein, peptide, antibody, nanobody, or binder library against a target. Not for designing new proteins or screening small molecules."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/boltz-small-molecule-adme/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/boltz-small-molecule-adme/SKILL.md",
+      "sourceMetadata": {
+        "name": "boltz-small-molecule-adme",
+        "description": "Predict Tier-1 ADME/ADMET for small molecules with Boltz from bare SMILES — no target, no docking. Use when the user wants solubility, permeability, or lipophilicity/logD for a molecule or list of molecules. Not for ranking molecules against a protein target (use boltz-small-molecule-screen, which already returns ADME free)."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/boltz-small-molecule-design/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/boltz-small-molecule-design/SKILL.md",
+      "sourceMetadata": {
+        "name": "boltz-small-molecule-design",
+        "description": "Design new small-molecule binders with Boltz. Use when generating novel ligands or hits for a target without a fixed compound library. Not for screening existing molecules or one-off docking."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/boltz-small-molecule-screen/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/boltz-small-molecule-screen/SKILL.md",
+      "sourceMetadata": {
+        "name": "boltz-small-molecule-screen",
+        "description": "Screen existing small-molecule libraries with Boltz. Use when docking, scoring, or ranking a supplied SMILES or compound library against a target; also returns free Tier-1 ADME/ADMET (solubility, permeability, lipophilicity/logD) per molecule. Not for de novo molecule design, one-off docking, or ADME on bare SMILES with no target (use boltz-small-molecule-adme)."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/boltz-structure-and-binding/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/boltz-structure-and-binding/SKILL.md",
+      "sourceMetadata": {
+        "name": "boltz-structure-and-binding",
+        "description": "Predict structures and binding for one defined complex with Boltz. Use when folding a protein, RNA, DNA, or ligand complex, docking one ligand, predicting an interface, or scoring binding. Not for screening libraries or design."
+      }
+    }
+  ],
+  "copiedFiles": 42,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "69e894b7058da5204150df2176ed8ed4539f0eb90e5a3bac2e6286668572353c"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "740df6167e01959f2b1cadbcabb6e3d63e9da654d193f29f9d582fe2df02c1c2"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "fc197656a81b7c0b1b99de1f8e1976bdb89fb6355b9b7a5cb8500772d981da9b"
+    },
+    {
+      "path": "skills/boltz-check-status/agents/openai.yaml",
+      "sha256": "be7ae518e8d01944bbe6de456bea8d1385fdf8c13e217f8c67efef6226b43dd5"
+    },
+    {
+      "path": "skills/boltz-check-status/references/api.md",
+      "sha256": "d05195085055474d91c989ad34875680e75032171f6b0965a022832b1945d11b"
+    },
+    {
+      "path": "skills/boltz-check-status/references/resume.md",
+      "sha256": "43a678507bcd98963cf46ae02c29cf4f0c7afd4ab1e9d7450fc5837abd1c4142"
+    },
+    {
+      "path": "skills/boltz-check-status/SKILL.md",
+      "sha256": "688ad3e2e29e3035fbd0a61a3d52bfa40be9a9b5e745d2c8f2bbc9cb9e89195f"
+    },
+    {
+      "path": "skills/boltz-cli-setup/agents/openai.yaml",
+      "sha256": "f058921222f9cd3c1f349b248a4789d7be3fd54c9cd8d38301bc86013af3ab98"
+    },
+    {
+      "path": "skills/boltz-cli-setup/references/sandbox.md",
+      "sha256": "8003319cd71da15b92fa641b512b1a0a60f9e2e18412983abdc0f074e68f03df"
+    },
+    {
+      "path": "skills/boltz-cli-setup/SKILL.md",
+      "sha256": "cc034edcc3919255b1c0b77aa2e8f80aaedaa8d936d8e98d3f5ad0444d90483d"
+    },
+    {
+      "path": "skills/boltz-protein-design/agents/openai.yaml",
+      "sha256": "ec6ff011800221bf7d17a085af89fc32d3b3e8a44b00e1f46b4f33e9c9832a4c"
+    },
+    {
+      "path": "skills/boltz-protein-design/references/api.md",
+      "sha256": "14d7baeb0be65c1ff4736fe2d469ac1f1f5007f0d5cce3b862a703295c6bba85"
+    },
+    {
+      "path": "skills/boltz-protein-design/references/results.md",
+      "sha256": "7b96bab90214aa053df442b6e5e505e8615b8e3ab403c1d5e523241fe529d50f"
+    },
+    {
+      "path": "skills/boltz-protein-design/references/target-exploration.md",
+      "sha256": "bff9683473e77dacde25fb5fe95d25fd3544c694f2f0f237de30072a69523ed2"
+    },
+    {
+      "path": "skills/boltz-protein-design/scripts/_common.py",
+      "sha256": "80c786fe0fa3d363f4dfddc8e86a863ee02a90afc9c555e9976d86e3755d5798"
+    },
+    {
+      "path": "skills/boltz-protein-design/scripts/analyze_results.py",
+      "sha256": "8021b118af4d47c1072807c99a3b5303307b6c2bacc0d39a0c1f3a125ee16cda"
+    },
+    {
+      "path": "skills/boltz-protein-design/scripts/crop_radius.py",
+      "sha256": "ced046d4ac9fafa0fce1ca0a6b685e72c3340daea2aff9cc09789d26e01e1abe"
+    },
+    {
+      "path": "skills/boltz-protein-design/scripts/detect_disorder.py",
+      "sha256": "0c26acef368bbdc80a45d20039987d871452bed9574d67e606796c75068e3f79"
+    },
+    {
+      "path": "skills/boltz-protein-design/scripts/requirements.txt",
+      "sha256": "2745676df80ec3e69b4053b1de561fee1dee6cc286d360024208682a3c322f63"
+    },
+    {
+      "path": "skills/boltz-protein-design/scripts/scan_sites.py",
+      "sha256": "79dd9d75375eba7c0287ecdc0217c066a6474316bf617d45179f70f1862fc066"
+    },
+    {
+      "path": "skills/boltz-protein-design/scripts/terminus.py",
+      "sha256": "b035ec8749786e1569c8bddc188c9d520e17ac7959fc8ea84c5afaef099616f6"
+    },
+    {
+      "path": "skills/boltz-protein-design/SKILL.md",
+      "sha256": "c9b4a26eb2ded6a823ed6e634ba0b187e47fd925edc296b6d81bcf6f4e39c93a"
+    },
+    {
+      "path": "skills/boltz-protein-screen/agents/openai.yaml",
+      "sha256": "5dcd55581139b2eaff1e6978159a3eeef7a5e6e4ade44ef41043bf9efc5cc95b"
+    },
+    {
+      "path": "skills/boltz-protein-screen/references/api.md",
+      "sha256": "e7191430fd6637f53ee890cf7fbf3f6bd3b6b9dc1c3c129be92e549195b58433"
+    },
+    {
+      "path": "skills/boltz-protein-screen/references/results.md",
+      "sha256": "c4d703d8345edfeae67a50bc511659530c2cf2e7b1f44c9c81d40387b445d5a6"
+    },
+    {
+      "path": "skills/boltz-protein-screen/SKILL.md",
+      "sha256": "adde09d1422a4055d48ea4178d51c7c56b412f1b6d435e7bbf2453c7c78a2a5f"
+    },
+    {
+      "path": "skills/boltz-small-molecule-adme/agents/openai.yaml",
+      "sha256": "ed6cac57a684a62e5db3e80b86a6aa22863bc814e41aa0388905ec76a80a7093"
+    },
+    {
+      "path": "skills/boltz-small-molecule-adme/references/api.md",
+      "sha256": "9922e0251cc82a4dfa5c09430b2eda43ae596fd08919b7231517101fbda6cf55"
+    },
+    {
+      "path": "skills/boltz-small-molecule-adme/references/results.md",
+      "sha256": "45ec050748ed5f4aea7cd20acecc496d4fa92a855ccce5e3f8fe11f6489583f8"
+    },
+    {
+      "path": "skills/boltz-small-molecule-adme/SKILL.md",
+      "sha256": "b029adbb63b847dc9de1a7bb5bb87f096c2aa80b4a2db7b362da7d7b43d3d7a7"
+    },
+    {
+      "path": "skills/boltz-small-molecule-design/agents/openai.yaml",
+      "sha256": "971d66ad29724a8cedce02960215a6beb1b1d9f4b30e0f634656346034d81419"
+    },
+    {
+      "path": "skills/boltz-small-molecule-design/references/api.md",
+      "sha256": "662cc1f73fcb3eabda29946559d7bc2968010d97e9d8ea17e6b7da0ab3d7519d"
+    },
+    {
+      "path": "skills/boltz-small-molecule-design/references/results.md",
+      "sha256": "05c3ac948897c7831e514243bc5e1e9e7c658f228e30933998d59ccaef7bcb50"
+    },
+    {
+      "path": "skills/boltz-small-molecule-design/SKILL.md",
+      "sha256": "2d77f173ff628c775147fe3110616a6f5d76efe4c2da782d684ed77f90b709da"
+    },
+    {
+      "path": "skills/boltz-small-molecule-screen/agents/openai.yaml",
+      "sha256": "fcaf4e9db36b90f03e44051c1dc63749b158f3323703769861680897fb729b8f"
+    },
+    {
+      "path": "skills/boltz-small-molecule-screen/references/api.md",
+      "sha256": "cc41ec0a9ab5413e8e33175c2d694c076f74be83d917f2060715fed93adeaba0"
+    },
+    {
+      "path": "skills/boltz-small-molecule-screen/references/results.md",
+      "sha256": "df841ec6c3d73c3582c334847f15e7429bdee92ec1706559ded2323b362783e3"
+    },
+    {
+      "path": "skills/boltz-small-molecule-screen/SKILL.md",
+      "sha256": "e1e6b3af99e5f3806612209e8949a3a901bc636b902d78994b98eaea93eb3b54"
+    },
+    {
+      "path": "skills/boltz-structure-and-binding/agents/openai.yaml",
+      "sha256": "d850103436f2c73e71a13c3f25ea6f921866bae369dd1a27363546633e80ddd2"
+    },
+    {
+      "path": "skills/boltz-structure-and-binding/references/api.md",
+      "sha256": "f18407dec2765bb23b490d33841b9b6250c75ba313c8438ec04bc7eeca068809"
+    },
+    {
+      "path": "skills/boltz-structure-and-binding/references/results.md",
+      "sha256": "f478f296c7b9fefc7565dfde404567dae8a5d8545f346048af1d1a450055bdff"
+    },
+    {
+      "path": "skills/boltz-structure-and-binding/SKILL.md",
+      "sha256": "0528dc26a12ede4401ca48b193119327dfde815873dc1fe5d35bc0df8aaca65d"
+    },
+    {
+      "path": "tests/test_scan_sites.py",
+      "sha256": "223cbe24963dcf58fa1d9ddd6c916e3bcfd3272cef8b2ced1282fc40c2098650"
+    }
+  ]
+}

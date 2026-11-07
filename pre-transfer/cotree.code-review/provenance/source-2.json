@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.code-simplifier",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "code-simplifier",
+    "repository": "claude-plugins-official",
+    "path": "plugins/code-simplifier",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "1953321f7721f5961986ad93e516a3583c61db04cf4992defa0ce1ca5073a25a",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "Agent import.claude.code-simplifier.code-simplifier 保留模型引用 opus；需配置对应 Elyra 模型，不静默改变模型选择。"
+  ],
+  "components": [
+    {
+      "kind": "agent",
+      "source": "agents/code-simplifier.md",
+      "state": "converted",
+      "target": "content/agents/code-simplifier.md"
+    }
+  ],
+  "copiedFiles": 2,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "ede37a18be5e0ce282fb3fcd6bb0e0e039abcae0d6c120999ab68f69f947bccd"
+    },
+    {
+      "path": "agents/code-simplifier.md",
+      "sha256": "0d224f1395ff6d6f3397c0daf8f87ffe36294b24cb57beb658998baa662d1dcb"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    }
+  ]
+}

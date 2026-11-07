@@ -1,0 +1,79 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.security-review",
+  "name": "安全审查",
+  "version": "0.1.1",
+  "description": "安全审查：CoTree 预迁移插件，完整兼容改造待完成。",
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "agents": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "agents": [
+    {
+      "name": "cotree.security-review.explore",
+      "description": "Read-only code explorer that the plugin's other agents dispatch to map a codebase — locate files, trace how a flow is wired, find every caller of a symbol, answer \"where does X happen\".",
+      "tools": [
+        "Read",
+        "Glob",
+        "Grep",
+        "Bash"
+      ],
+      "model": "sonnet",
+      "path": "agents/explore.md"
+    },
+    {
+      "name": "cotree.security-review.scan-inventory",
+      "description": "Restricted read-only repository cartographer dispatched by the Claude Security scan workflow to partition the tree into components and account for every top-level directory; not for direct invocation or vulnerability research.",
+      "tools": [
+        "Read",
+        "Glob",
+        "Grep"
+      ],
+      "model": "sonnet",
+      "path": "agents/scan-inventory.md"
+    },
+    {
+      "name": "cotree.security-review.scan-loader",
+      "description": "Restricted read-only loader dispatched by the Claude Security scan workflow to return one JSON file from the run directory; not for direct invocation.",
+      "tools": [
+        "Read"
+      ],
+      "model": "sonnet",
+      "path": "agents/scan-loader.md"
+    },
+    {
+      "name": "cotree.security-review.scan-redactor",
+      "description": "Restricted agent dispatched by the Claude Security scan jobs to replace the credential values in a finished scan's report files with [REDACTED]; not for direct invocation.",
+      "tools": [
+        "Read",
+        "Edit"
+      ],
+      "model": "sonnet",
+      "path": "agents/scan-redactor.md"
+    }
+  ],
+  "skills": [
+    {
+      "name": "cotree.security-review.claude-security",
+      "description": "Claude Security: scan the codebase (the whole repository or a scoped part of it), scan changes (this branch's or a pull request's diff, or one commit), or suggest patches (findings turned into targeted patch files, each verified by a panel of agents, that you apply when you choose). Use when the user asks to scan, audit or check code with Claude Security, to scan their changes with Claude Security, or to fix or patch Claude Security findings.",
+      "path": "skills/claude-security/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.security-review.setup",
+      "description": "安全审查 的配置与完整度说明。",
+      "path": "skills/setup/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "9c4321aa9c57cd26ac1dfc43da31eb5faf607839bf90bca630c8b22d367ccac2"
+  }
+}

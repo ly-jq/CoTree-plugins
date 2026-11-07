@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-14T07:01:26.924Z",
+  "environment": {
+    "platform": "win32",
+    "node": "v24.13.0",
+    "python": "3.10.11",
+    "accountCalls": false,
+    "modelCalls": false
+  },
+  "coverage": {
+    "apple-development": {
+      "sourceEntries": 23,
+      "nativeSkills": 14,
+      "retainedResourceFiles": 115
+    },
+    "nvidia": {
+      "sourceEntries": 12,
+      "nativeSkills": 11,
+      "retainedResourceFiles": 510
+    },
+    "cwc-makers": {
+      "sourceEntries": 3,
+      "nativeSkills": 4,
+      "retainedResourceFiles": 6
+    }
+  },
+  "results": {
+    "elyra.apple-development": {
+      "packageDigest": "837c807e26a2095ef216d6063c012bb134c8cd566ebb34298cf01eb5fb8d7623",
+      "status": "isolated-apple-mcp",
+      "mcpVersion": "2.7.0",
+      "tools": 57,
+      "calls": [
+        "session_show_defaults",
+        "discover_projs"
+      ],
+      "localPlanValidated": true,
+      "platform": "win32",
+      "xcodeBuildValidated": false,
+      "previewValidated": false,
+      "accountValidated": false,
+      "caveat": "The official server emitted Windows ps availability diagnostics; only independent MCP and filesystem discovery were exercised."
+    },
+    "elyra.nvidia": {
+      "packageDigest": "b21dc6bb835b02267e39d86e3278e7734f13de655be3d75c0dc0ff3e966f5b11",
+      "status": "nvidia-preflight-only",
+      "deviceObservation": "unavailable",
+      "gpuCount": null,
+      "computeValidated": false,
+      "sourceScriptsSyntaxChecked": 2,
+      "accountValidated": false
+    },
+    "elyra.cwc-makers": {
+      "packageDigest": "d636a53350665119e2f30cc1259eb7cd2ffac93402363d034b2b130c7bc46ae1",
+      "status": "isolated-maker-preparation",
+      "python": {
+        "python": "3.10.11",
+        "mpremote": "1.29.0",
+        "esptool": "5.5.0",
+        "pyserial": "3.5"
+      },
+      "cliHelpChecks": 4,
+      "projectCreated": true,
+      "localPlans": 3,
+      "deviceConnected": false,
+      "deviceFlashed": false,
+      "bleBridgeImplemented": false
+    }
+  },
+  "artifacts": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\apple-development-syntax.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\nvidia-syntax.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\cwc-makers-syntax.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\source-coverage.json",
+      "sha256": "0f418473ae90b63a819ad2b87a5765b004e600289eac0644570eff0770fac978",
+      "bytes": 317
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime\\node_modules\\xcodebuildmcp\\package.json",
+      "sha256": "dc85bf6a19b57d5da3244a51b9c9077980b8e86e12d10096731bd8aaf41277de",
+      "bytes": 5935
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime\\package-lock.json",
+      "sha256": "e093b44e6c29b2879689488bb3fca8db8a0ed7839dd71e75b6cbc7f3d2294950",
+      "bytes": 68951
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\xcode-tools.json",
+      "sha256": "c646c9a1d32a6e8806a29b5543f144af74eb0e48d159b4387900c5beb3aef128",
+      "bytes": 60577
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\xcode-session_show_defaults.json",
+      "sha256": "cc7d769cf64b1579fce5d3385b156f7793f884f795b1135e19c8837f373e060d",
+      "bytes": 1466
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\xcode-discover_projs.json",
+      "sha256": "021a1a0db42ead86b4372c6403f0e9c6867ec77d4b020dbf4099fcdeba54f0d0",
+      "bytes": 1343
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\simctl-fixture.json",
+      "sha256": "d59afe90a435c8f5e99d8cd3ad299adbb1af614e9c21f26d5e536a031c3a864b",
+      "bytes": 222
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\apple-selection.json",
+      "sha256": "8e34aa413439c7dd472e84b2292834b1097fec7b6d8aa28c944c62cc78166f3b",
+      "bytes": 204
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\apple-plan-input.json",
+      "sha256": "a9e70c216bf33300e69082ac5fb82b2dcbc8efa3b6cae8adcacdea2c71764e54",
+      "bytes": 315
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\apple-plan-command.json",
+      "sha256": "c22026ed5db10ad10d944aa671c8dfa30e2cf560629b1298110317059db65805",
+      "bytes": 114
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\apple-plan.json",
+      "sha256": "17b7d5d2e476754bd46e9fc4510e3800ad0e689c91a0f1fd2aea5b1074bf51e8",
+      "bytes": 1135
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\gpu-query.txt",
+      "sha256": "7d230337a0725a4633c4460b92544d1875e86b80bffd1c351c3695ccb3054014",
+      "bytes": 50
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\gpu-observation.json",
+      "sha256": "b3779cfb14c965a50c93bf4f3b33fddffd063884bc46c9d36f5d686b2d83a460",
+      "bytes": 380
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\nvidia-source-syntax.json",
+      "sha256": "4f2116126f0b956726edb68de6e3c9f4003b3595e9a76104ad7c5883d036f744",
+      "bytes": 36
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\nvidia-source-1.py",
+      "sha256": "5e9fdca1ab13557ff8b43c8f88bbd8bd783d33c0950bb796548918b0a023b1a6",
+      "bytes": 18943
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\nvidia-source-2.py",
+      "sha256": "edf39e985c1f1d8ee558ef6790c01146b0f4536986eb6b6947c5f83294a7fa9d",
+      "bytes": 13455
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\python-versions.json",
+      "sha256": "e37fba8c0df70b96c2f816b5d6c8da3205cc5cb63873532577b765a7d34dbce6",
+      "bytes": 84
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\python-dependencies.txt",
+      "sha256": "6e73d02c5ac0ba8c43d644a073b43cb7fa8519feb95efbfdbbc642ca132e6f0d",
+      "bytes": 405
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\mpremote-help.txt",
+      "sha256": "d6187bcdededc35a1c12a8f9d8095c2496ed0a188bb310c509567e0ff2bfe5c1",
+      "bytes": 1921
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\mpremote-fs-help.txt",
+      "sha256": "d1db857176102201009b05c15021e9846775ed7591cf8ba83cdc1fc3db352e85",
+      "bytes": 960
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\esptool-help.txt",
+      "sha256": "9c7bbe4a83fa0f7ec882bab87104ba19c1baf7a256d77b7d8f005f5a894c36a5",
+      "bytes": 7699
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\esptool-flash-help.txt",
+      "sha256": "722a257b8f83b8350e09a3f8a8e30b1c962b22bda95202427ef58d16b25cfd96",
+      "bytes": 10793
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\maker-create.json",
+      "sha256": "47e9f8ad6f0d73bfe0da4d8714b6df43bc29432d1f263dd1bae5c17a51f77d1d",
+      "bytes": 199
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\Maker fixture\\elyra_hello.py",
+      "sha256": "d5e8682ee5bb7a9a8d7b6fa0d62552f3b7aaccc301888e2f2148950b99b02321",
+      "bytes": 166
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\Maker fixture\\README.md",
+      "sha256": "a23c40239d2e3f269e0b2798860a239ca80ba02c4b5dcd5fc47c99496a189b1f",
+      "bytes": 530
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\Maker fixture\\requirements.txt",
+      "sha256": "61646aa60a6f3f1e1ad09132b9a03944f806dd44b69f5fcf38dfa2e50390cc4b",
+      "bytes": 32
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\maker-source-syntax.json",
+      "sha256": "638c0f0f2e6e670c203fe17042aedb03ac70f49f1bba13e78ec7c962164b2365",
+      "bytes": 45
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\maker-list-files-input.json",
+      "sha256": "cc6b7c710bfbad79b272a2cc81e67888a4ff89de2b0222b01683cbf2e056882a",
+      "bytes": 50
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\maker-list-files-command.json",
+      "sha256": "3c3bf781b458abc468791f053b2a9bb72e74b24fc14e4ef8786808511f070cc2",
+      "bytes": 125
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\maker-list-files-plan.json",
+      "sha256": "55318e60e9570b462644624212a93c198536e56c2f63aeb160e6be0506d96380",
+      "bytes": 360
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\maker-push-input.json",
+      "sha256": "2c117cbd8aa7059beac58b9902214bbb15ba2524db3acbd4951e5b9fbfab83fc",
+      "bytes": 207
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\maker-push-command.json",
+      "sha256": "f3b20153685c3706543c8152a9c0bf00551c54c8106c52e1e2c17f739ee4883a",
+      "bytes": 119
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\maker-push-plan.json",
+      "sha256": "2ffd5391a10a2df7b35868f487bd03e6fe198c41f0816e744b812dc4752b5ebb",
+      "bytes": 710
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\maker-run-input.json",
+      "sha256": "84024322564a0645e32ebc2de5cc2449a40fb43c2847a9d0ac2be68fd7e032da",
+      "bytes": 168
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\maker-run-command.json",
+      "sha256": "b4614a48983abef80e38ef4e9c1554f96ed26d61d52a19e22d5f70d623b711a2",
+      "bytes": 118
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch25\\runtime-check\\maker-run-plan.json",
+      "sha256": "4f526ba0dc7e2f5a32b757f8d83a9e79ef10eec24e5b324da3914e74a9901aa3",
+      "bytes": 681
+    }
+  ]
+}

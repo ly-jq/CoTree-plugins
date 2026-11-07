@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.asana",
+  "version": "0.2.0",
+  "category": "团队协作与知识",
+  "priority": 0,
+  "batch": 10,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "asana",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/asana",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "092c871731a49c9bda3db5567b2bd7014b053fe44cf948c810fca40080b6a755"
+    }
+  ],
+  "changes": [
+    "来源专属安装命令改为六个 CoTree 工作流，预注册 MCP app 与标准 API 凭据分别说明。",
+    "新增十项固定 REST 操作，处理 Asana data envelope、GID、offset 分页、写入授权开关和有界响应。",
+    "保留来源命令与元数据供追溯，不注册原宿主命令。"
+  ],
+  "limitations": [
+    "MCP OAuth 获取 / 刷新未接入，已有合法 MCP app access token 可绑定完整 Bearer header；标准 API PAT / API OAuth token 不能代替它。",
+    "REST 的独立 PAT 或标准 API OAuth token 使用 COTREE_ASANA_API_TOKEN；真实账户读写与权限仍待验收。",
+    "辅助 REST 每次一页，响应最多 4 MiB、请求 JSON 最多 256 KiB、15 秒超时；不跟随重定向，不自动重试，不支持任意 URL / DELETE。--apply 只是写入开关，不授予权限。其他操作通过已认证 MCP 的实际 schema，不能声称 REST 覆盖全部服务。",
+    "REST 不封装高级搜索、项目写入、依赖 / 自定义字段专用操作、附件与永久删除；按 MCP 实际工具补充。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "asana-setup": "connect：独立 MCP app / OAuth 与 REST PAT 分开；移除 claude mcp add、固定 callback 端口和原宿主密钥链假设。",
+    "MCP / tasks / projects": "find / tasks / projects / collaborate / report：原生工具发现、任务与项目、评论及状态报告；有限 REST 提供独立执行路径。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

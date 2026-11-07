@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.agent-sdk-dev",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 21,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "agent-sdk-dev",
+      "repository": "claude-plugins-official",
+      "path": "plugins/agent-sdk-dev",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "c87649611b15f6a5f67845e8da08381b81a8da9721e6aa17cbbaf4ceea590779"
+    }
+  ],
+  "changes": [
+    "重写四项原生技能与两个可选只读验证 Agent，移除固定模型和自动委派。",
+    "提供固定版本 TS / Python 脚手架，独占新目录、无工具默认值、离线检查与真实调用分开。",
+    "完整保留原命令 / Agent 参考；应用 API 认证独立记录。"
+  ],
+  "limitations": [
+    "实际 Claude 模型调用、工具授权交互、CLI 子进程取消与部署需要独立身份及目标运行时验收。",
+    "离线构造和类型检查不证明模型能力或外部任务成功；原验证 Agent 的判断也不是独立完成凭证。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "new-sdk-app": "create：TS / Python 独占目录脚手架、固定 SDK、环境说明、离线检查与真实运行分别处理。",
+    "agent-sdk-verifier-ts / agent-sdk-verifier-py": "verify + 两个可选原生只读 Agent；保留类型 / 导入 / 权限 / 取消 / 部署审查，取消固定 Sonnet 和自动委派。",
+    "custom tools / MCP / subagents / sessions": "integrate：外部目标应用使用对应 SDK 合同，不替换 CoTree 主循环；部署由 deploy 技能按实际目标执行。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

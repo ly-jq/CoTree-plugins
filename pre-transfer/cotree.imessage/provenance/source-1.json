@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.imessage",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "imessage",
+    "repository": "claude-plugins-official",
+    "path": "external_plugins/imessage",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "86457dfa4ea60acf0a62bf33da4bb54c816822b65b0ba0ef55eb929c2dea2e06",
+    "upstreamVersion": "0.2.0"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "依赖 Claude channel 及 macOS Messages / AppleScript；Windows 无此环境。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/access/SKILL.md",
+      "state": "deferred",
+      "reason": "依赖 Claude channel 及 macOS Messages / AppleScript；Windows 无此环境。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/configure/SKILL.md",
+      "state": "deferred",
+      "reason": "依赖 Claude channel 及 macOS Messages / AppleScript；Windows 无此环境。"
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#imessage",
+      "state": "deferred",
+      "reason": "依赖 Claude channel 及 macOS Messages / AppleScript；Windows 无此环境。"
+    }
+  ],
+  "copiedFiles": 9,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "37d60805f2897610975a658938faabde26dc5f2c97444bf2c829b3957090ca77"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "6ee217f30d9a2d10cbc47ee7bfee53fc89eb5d8e8ba6a9e5974966fc5ec9bbb7"
+    },
+    {
+      "path": ".npmrc",
+      "sha256": "318005a48dd48023832c89a67fcc1f03926da16d5998197d083314a9faa414bb"
+    },
+    {
+      "path": "ACCESS.md",
+      "sha256": "812b83b6ebcee4f65c7bfd25bc62f5b8696298d5ea481d076e82e20b7df740a4"
+    },
+    {
+      "path": "bun.lock",
+      "sha256": "2265715f67a62841e4639fba2851d2af754b568bf9c9e4c71027de934fd3a981"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "b956a5fd00b52133c89b22bdd4e2aaf6627b40f591aa1857525b47c7a6efd47f"
+    },
+    {
+      "path": "package.json",
+      "sha256": "fbd71a8d61c1f7746b97d2a17e531958d30fcc3f189f9265ca6ec958836788a1"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4caa7f32372e020d04bd26cf811be6508978245c58978998a17ef886cacb7f98"
+    },
+    {
+      "path": "server.ts",
+      "sha256": "0ee9ebfca450ff5f7cf2ae1db5f32c1355be1dd30186c8d8bcadf353115b0195"
+    },
+    {
+      "path": "skills/access/SKILL.md",
+      "sha256": "66fa7170138521895f57f62fa3e157f6ec50744b0ec4a90e782da0afaf490480"
+    },
+    {
+      "path": "skills/configure/SKILL.md",
+      "sha256": "e3adcc7276cf18ddfd87e5d5028f2cabc8f729786d6c5286ffa09ecbca81db4e"
+    }
+  ]
+}

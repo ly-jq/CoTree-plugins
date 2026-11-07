@@ -1,0 +1,102 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.firebase",
+  "name": "Firebase",
+  "version": "0.2.0",
+  "description": "在 CoTree 中连接 Firebase 项目，开发后端、管理数据与身份、排查故障并验证授权部署；支持明确目录和功能组。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.firebase.connect",
+      "description": "启动固定版 Firebase MCP，配置独立 CLI / ADC 身份和明确项目目录。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.firebase.inspect",
+      "description": "检查 Firebase 项目、注册应用、SDK 配置与启用服务。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.firebase.initialize",
+      "description": "在明确项目中初始化所需 Firebase 服务，并检查生成配置。",
+      "path": "skills/initialize/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.firebase.data",
+      "description": "查询或维护 Firebase Firestore、Realtime Database、Storage 与 SQL Connect 数据。",
+      "path": "skills/data/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.firebase.auth",
+      "description": "检查或维护 Firebase Authentication 用户与声明，区分管理身份和应用用户。",
+      "path": "skills/auth/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.firebase.rules",
+      "description": "开发和验证 Firebase 数据访问规则，区分语法、模拟器和部署效果。",
+      "path": "skills/rules/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.firebase.diagnose",
+      "description": "使用 Firebase Crashlytics、Functions、App Hosting 和测试结果定位故障。",
+      "path": "skills/diagnose/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.firebase.deploy",
+      "description": "按明确 Firebase 项目与目标产品部署并检查版本和服务行为。",
+      "path": "skills/deploy/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.firebase.messaging",
+      "description": "按授权发送 Firebase Cloud Messaging 测试消息并核对目标与回执。",
+      "path": "skills/messaging/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.firebase.configure",
+      "description": "维护 Firebase Remote Config 的模板、条件与版本。",
+      "path": "skills/configure/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "firebase",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "firebase-tools@15.32.1",
+        "mcp",
+        "--only",
+        "auth,firestore,storage"
+      ],
+      "cwd": ".",
+      "cwdBase": "workspace"
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "9a18cb4922d9e2ea6856ee41fdae0d058b282d9b16ee1d5b1d905d7b52374b22"
+  }
+}

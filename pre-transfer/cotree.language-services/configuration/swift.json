@@ -1,0 +1,10 @@
+{
+  "lsp": {
+    "servers": {
+      "swift": {
+        "command": "sourcekit-lsp",
+        "args": []
+      }
+    }
+  }
+}

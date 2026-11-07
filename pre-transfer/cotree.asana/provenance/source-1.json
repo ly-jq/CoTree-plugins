@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.asana",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "asana",
+    "repository": "claude-plugins-official",
+    "path": "external_plugins/asana",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "092c871731a49c9bda3db5567b2bd7014b053fe44cf948c810fca40080b6a755"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "设置 ELYRA_CLAUDE_ASANA_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "command",
+      "source": "commands/asana-setup.md",
+      "state": "converted",
+      "target": "content/commands/asana-setup.md",
+      "sourceMetadata": {
+        "description": "Set up the Asana V2 MCP server connection (one-time OAuth app + claude mcp add)",
+        "argument-hint": "[client_id]"
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#asana",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/asana"
+    }
+  ],
+  "copiedFiles": 2,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "4334b09a93398e9cf32f28da9df8ec12f6ebf186a430878126439df860960072"
+    },
+    {
+      "path": "commands/asana-setup.md",
+      "sha256": "b4d189fac65c29730454ce2e6e2649f539d2f2ff8f4f3ac1b58f35fcbb8bcc62"
+    },
+    {
+      "path": "README.md",
+      "sha256": "330a3e8bffe98da88f0d721bfa6319a8e058ed7493c73afa6fd467394e886268"
+    }
+  ]
+}

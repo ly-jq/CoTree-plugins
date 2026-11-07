@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.notion",
+  "version": "0.2.0",
+  "category": "团队协作与知识",
+  "priority": 0,
+  "batch": 5,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "notion",
+      "repository": "plugins",
+      "path": "plugins/notion",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "c3f0902613ddedd1e16bf1b7e7230847711a62d010011e1a12af92ccd309d1bb",
+      "upstreamVersion": "0.1.7"
+    }
+  ],
+  "changes": [
+    "四种来源工作流重写为五个 CoTree Skill；保留引用、任务关联、分页和恢复语义。",
+    "增加本地模板与独立认证接入说明，移除来源宿主的固定工具前缀和强制结束会话规则。"
+  ],
+  "limitations": [
+    "托管 Notion MCP 需要 OAuth；普通 Notion integration secret 不等于此端点可用的 access token。",
+    "headersEnv 仅转发独立取得的有效 OAuth Bearer header。CoTree 的 PKCE / discovery / 客户端注册集成及本插件登录 / 刷新仍待完成，不能声称配置变量就已支持登录。",
+    "没有账户工具发现或真实页面 / 数据库读写验收；连接说明见 references/connection.md。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "notion-knowledge-capture": "capture：检索去重、当前页面 / 数据源 schema、带来源的知识条目和读回。",
+    "notion-meeting-intelligence": "meeting：会议背景、议程、预读材料、决定与行动项；模板随包。",
+    "notion-research-documentation": "research：检索 / 获取 / 引证 / 综合，按授权保存。",
+    "notion-spec-to-implementation": "plan：需求、依赖、实施任务和状态证据，防止重复建任务。",
+    "host connector / mandatory reconnect-and-stop": "connect + 原生 MCP；独立 OAuth PKCE / 客户端注册仍待宿主接入，凭据与账户验收另记。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

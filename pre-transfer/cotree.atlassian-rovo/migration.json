@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.atlassian-rovo",
+  "version": "0.2.0",
+  "category": "团队协作与知识",
+  "priority": 0,
+  "batch": 10,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "atlassian-rovo",
+      "repository": "plugins",
+      "path": "plugins/atlassian-rovo",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "e5798afa3e2d66d7254756fd259f5b0204de4ce181d66a8f08c2e57b6154a958",
+      "upstreamVersion": "1.0.6"
+    }
+  ],
+  "changes": [
+    "来源连接器收敛为六个原生工作流，工具 schema 由现有 MCP 动态发现。",
+    "明确 OAuth 与组织管理员启用的非交互 API token 路径，区分 Basic 个人 token 与 Bearer 服务账户 key。",
+    "增加离线 Jira / Confluence 定位器，原图标 / 暗色图标保留；Cloud site 不冒充 cloudId。"
+  ],
+  "limitations": [
+    "独立账户工具发现、Jira / Confluence 读写仍待验收；OAuth 自动登录 / 刷新未实现。",
+    "个人 API token 的 MCP scopes 及组织开关、服务账户可用性、IP / 域访问策略需实际核实，普通 API key 不保证可用。",
+    "本包面向 Atlassian Cloud；不自动接入 Data Center、Compass 或其他私有连接器。定位器只解析标识，不联网、不证明访问权限。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "connector / MCP": "connect + 原生 MCP：OAuth 与管理员启用的非交互 API token 两条路径，保留源图标和暗色图标。",
+    "Jira / Confluence / default task prompt": "search / jira / confluence / link / report：真实 cloudId、JQL / CQL、issue transition、页面版本、任务与文档引用。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

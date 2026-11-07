@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.discord",
+  "version": "0.2.0",
+  "category": "通信与日程",
+  "priority": 0,
+  "batch": 27,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "discord",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/discord",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "e3dec14f3a1e5f78dcd54d51dc7599dc72e7ae6037bb1ee4c571875680261444",
+      "upstreamVersion": "0.0.4"
+    }
+  ],
+  "changes": [
+    "移除私有Claude Channels/Bun依赖，提供独立跨平台官方Bot API入口。",
+    "保留完整访问控制资料、消息操作与附件能力，输入范围和外发权限明确。"
+  ],
+  "limitations": [
+    "账号、频道、反应权限、配额和真实收发尚待账户验收。",
+    "原宿主推送改为当前Session显式历史读取；不自动唤醒模型或接受远程审批。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "configure/access": "connect：独立Bot token、精确频道allowlist与实际权限。",
+    "reply/react/edit_message": "message：单次官方API、禁默认群体mention、返回真实回执。",
+    "fetch_messages/download_attachment": "history/files：指定频道与消息、分页游标、有界下载。",
+    "claude/channel inbound and remote approvals": "当前Session显式读取；不继承私有推送和远程审批。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

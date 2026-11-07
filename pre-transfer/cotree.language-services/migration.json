@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.language-services",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 4,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "clangd-lsp",
+      "repository": "claude-plugins-official",
+      "path": "plugins/clangd-lsp",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "a53dc108e96ecb126537ebabfacaec42b6bf7ea766150c5dd8f1ac0e37033509",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "csharp-lsp",
+      "repository": "claude-plugins-official",
+      "path": "plugins/csharp-lsp",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "e0e8c40d9921d6883610887d9ecda45cfbbf60f24b6245efd69a4e0a1e4e168f",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "gopls-lsp",
+      "repository": "claude-plugins-official",
+      "path": "plugins/gopls-lsp",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "ab4f44529cc09244ff91d932d9811c8c319b6136c0f5e6888ebfb71a2eb93292",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "jdtls-lsp",
+      "repository": "claude-plugins-official",
+      "path": "plugins/jdtls-lsp",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "01e445d7a3ce9a877da865cd19485fd7ad2dfb333128b3ded3e1359ea6aef299",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "kotlin-lsp",
+      "repository": "claude-plugins-official",
+      "path": "plugins/kotlin-lsp",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "e48b6917fb7c777e3c9b90c179096287a2bf69fdb3e5c417beea6fc19467b3c7",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "lua-lsp",
+      "repository": "claude-plugins-official",
+      "path": "plugins/lua-lsp",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "faec2e716f0b6b3e05da7d46781f10dfa743a2f80405bcb5114b040b43f6106d",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "php-lsp",
+      "repository": "claude-plugins-official",
+      "path": "plugins/php-lsp",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "6034cd5e4e660f1f7a4163a49c3f7ec1e59887a1d53b6b78cf62d0a58428fba8",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "pyright-lsp",
+      "repository": "claude-plugins-official",
+      "path": "plugins/pyright-lsp",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "45b70fcfd30919e1740c7f304ed3e7222f99b42556b9f3abf82b7f70ce56a1e9",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "ruby-lsp",
+      "repository": "claude-plugins-official",
+      "path": "plugins/ruby-lsp",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "2ae052d105b759c557867eb9513c891421081491d6b5a4ae66fbbfa61a91b6d4",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "rust-analyzer-lsp",
+      "repository": "claude-plugins-official",
+      "path": "plugins/rust-analyzer-lsp",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "a27b893925d6c65f627d5cbfdceffe8adf998c5537706a14656d0c30381bb58f",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "swift-lsp",
+      "repository": "claude-plugins-official",
+      "path": "plugins/swift-lsp",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "cb267f509356035209208f327b448371071f510ce0936ab7affc2413a7d02ef4",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "typescript-lsp",
+      "repository": "claude-plugins-official",
+      "path": "plugins/typescript-lsp",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "51c4a8ecfe48c98d36099557b45cadae8b2ca9bbb2d962e36415a27f27506445",
+      "upstreamVersion": "1.0.0"
+    }
+  ],
+  "changes": [
+    "十二个来源语言插件合为一个原生 LSP 工作流，提供逐语言配置片段与实际查询方法。",
+    "补齐 C/C++、C#、Kotlin、Lua、PHP、Ruby、Rust、Swift 的宿主语言键、文件识别和工程根；沿用原客户端。"
+  ],
+  "limitations": [
+    "需要包含本批十二类语言合同的 CoTree 构建；旧构建仅接受 TS/JS、Python、Java、Go。",
+    "配置模板不安装服务器。新增八类需要自行准备对应语言服务器与工具链；命令来自已盘点来源版本，目标系统需独立验证。",
+    "状态、协议、真实语言语义、构建测试分别记录；Windows / Linux / macOS 的语言服务器与构建依赖不能互相替代验收。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "12 source LSP packages": "统一 setup / navigate / diagnose；四种既有服务器加八种显式 command 配置，共十二类。C / C++ 共用 clangd 配置。",
+    "host LSP registration": "复用原生 LSP 配置、路径权限、取消、文件同步与生命周期；插件安装不自动修改宿主配置或安装二进制。",
+    "real language semantics": "协议夹具验证不能证明所有真实服务器语义；部署后逐语言使用真实工程验收。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

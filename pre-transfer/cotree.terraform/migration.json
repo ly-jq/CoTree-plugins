@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.terraform",
+  "version": "0.2.0",
+  "category": "代码托管与部署",
+  "priority": 0,
+  "batch": 14,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "terraform",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/terraform",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "dd622210ba1cef45cc396ee359fc6ce5da49d1871ac10ab40df2e14c70c9e301"
+    }
+  ],
+  "changes": [
+    "固定来源 MCP 0.4.0，默认只注册公共 registry 工具；补齐八个原生工作流。",
+    "提供同版本 binary / Docker 与显式云接入配置；修复 stdio 凭据未传递及 argv 暴露风险，使用该版本的 TFE_ADDRESS。"
+  ],
+  "limitations": [
+    "已完成 CoTree 原生入口与集成改造；真实账户读写、权限、过期恢复和业务结果仍待验收。Skill 加载不证明线上任务成功。",
+    "默认需已运行的 Docker daemon；本地二进制替代需自行核实官方 0.4.0 发布校验和，生成器不检查程序内容。",
+    "云工具选择不是只读权限，HCP Terraform / Enterprise token 和基础设施 provider 凭据分开。实际 plan / apply、状态迁移和多平台执行未验收。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "official Docker stdio MCP": "connect / docs：固定 0.4.0，默认仅公共 registry；可选同版本本地二进制。",
+    "TFE_TOKEN source placeholder": "cloud：显式环境绑定，容器仅传变量名，不把 token 放 argv；采用 0.4.0 的 TFE_ADDRESS。",
+    "source contains no domain skills": "develop / validate / plan / apply / state 保留本地 Terraform CLI 与云运行区别，计划成功不等于 apply。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

@@ -1,0 +1,10 @@
+{
+  "lsp": {
+    "servers": {
+      "ruby": {
+        "command": "ruby-lsp",
+        "args": []
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "id": "computer-use.capability-status",
+      "suite": "computer-use",
+      "task": "Use the host ControlScript SDK to inspect browser and desktop capability status. Report the selected provider, readiness, supported operations and any unavailable capability. Do not send browser or desktop input, change plugins, grant trust, or claim a native fallback is Cua. A missing browser host must be reported as unavailable.",
+      "execution": "agent",
+      "maxSteps": 6,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "computer-use.owned-browser-roundtrip",
+      "suite": "computer-use",
+      "task": "In an Electron browser host with Computer Use enabled and trusted, create an isolated loopback HTTP fixture containing a named text input, an Apply button and an output paragraph. Use the host browser SDK and the Cua provider to observe, fill the field, observe again, click Apply once and verify the rendered result. Capture a page screenshot and report whether it actually reached the model. Reuse current observed refs or unique role/name locators, never replay uncertain input, and clean up only the fixture server and tab you created. Do not use a native browser actor, operate existing user pages, or treat unavailable capabilities as a successful roundtrip.",
+      "execution": "agent",
+      "maxSteps": 20,
+      "expectedStatus": "completed"
+    }
+  ]
+}

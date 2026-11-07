@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.agent-sdk-dev",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "agent-sdk-dev",
+    "repository": "claude-plugins-official",
+    "path": "plugins/agent-sdk-dev",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "c87649611b15f6a5f67845e8da08381b81a8da9721e6aa17cbbaf4ceea590779"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "Agent import.claude.agent-sdk-dev.agent-sdk-verifier-py 保留模型引用 sonnet；需配置对应 Elyra 模型，不静默改变模型选择。",
+    "Agent import.claude.agent-sdk-dev.agent-sdk-verifier-ts 保留模型引用 sonnet；需配置对应 Elyra 模型，不静默改变模型选择。"
+  ],
+  "components": [
+    {
+      "kind": "command",
+      "source": "commands/new-sdk-app.md",
+      "state": "converted",
+      "target": "content/commands/new-sdk-app.md",
+      "sourceMetadata": {
+        "description": "Create and setup a new Claude Agent SDK application",
+        "argument-hint": [
+          "project-name"
+        ]
+      }
+    },
+    {
+      "kind": "agent",
+      "source": "agents/agent-sdk-verifier-py.md",
+      "state": "converted",
+      "target": "content/agents/agent-sdk-verifier-py.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/agent-sdk-verifier-ts.md",
+      "state": "converted",
+      "target": "content/agents/agent-sdk-verifier-ts.md"
+    }
+  ],
+  "copiedFiles": 5,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "3ce9c8cf2621cb4cc298555a092908693a518f48b559e9a3e57bac33607766f5"
+    },
+    {
+      "path": "agents/agent-sdk-verifier-py.md",
+      "sha256": "5569a7164be8c1afc37181e636e12a43e5235ad5b94258ddf43ca6410da60dbc"
+    },
+    {
+      "path": "agents/agent-sdk-verifier-ts.md",
+      "sha256": "919beb581120009cc00b6dc3535c253aeed5284504b69f2e4df044de2dd4874c"
+    },
+    {
+      "path": "commands/new-sdk-app.md",
+      "sha256": "daced7cdce8185ff3067d9076b378a9e17144a0120f1c4a307195f160b895d8e"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f4cde5159f06667f50b8d41af0fad6bbc386ebdc961a5dc62363420dca20f192"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "lsp": {
+    "servers": {
+      "python": {
+        "command": "pyright-langserver",
+        "args": [
+          "--stdio"
+        ]
+      }
+    }
+  }
+}

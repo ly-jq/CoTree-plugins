@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.github",
+  "version": "0.2.0",
+  "category": "代码托管与部署",
+  "priority": 0,
+  "batch": 3,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "github",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/github",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "986043096c72314fee60f5c7539bbaaf44a9d2f44b64ba282afabc0a04032667"
+    },
+    {
+      "ecosystem": "codex",
+      "package": "github",
+      "repository": "plugins",
+      "path": "plugins/github",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "b111cc7a985f08ed4ac10713ede9e62f1313731de91869db83cc62a6c83936b0",
+      "upstreamVersion": "0.1.12"
+    }
+  ],
+  "changes": [
+    "合并两个来源的 MCP 和连接器入口，使用一份原生服务身份与独立认证。",
+    "加入连接诊断、仓库检查、Issue、PR、Actions 五个工作流；与 Git 工作流复用本地提交能力。"
+  ],
+  "limitations": [
+    "需要独立 GitHub PAT；完整 Bearer header 放入 COTREE_GITHUB_MCP_AUTHORIZATION，配置方法见 references/connection.md。",
+    "账户权限、组织 SSO、服务工具集决定可用操作；GitHub Enterprise 实例须另行配置验证。",
+    "未实现此插件的交互 OAuth 登录 / 刷新或原宿主账户复用；本批未取得账户，不宣称真实仓库读写已通过。"
+  ],
+  "deduplicated": [
+    {
+      "kind": "mcp",
+      "removed": "import.codex.github.github",
+      "retained": "cotree.github.github"
+    }
+  ],
+  "capabilityCoverage": {
+    "duplicate GitHub MCP endpoints": "保留一个 cotree.github.github 原生服务和一份环境变量绑定。",
+    "host app connector": "用 GitHub 官方 MCP 提供仓库、Issue、PR 与 Actions 入口；不继承原宿主登录状态。",
+    "repository / code / issue / PR / workflow operations": "inspect / issues / pull-requests / actions；按实际工具发现与账户权限执行。",
+    "authentication": "connect 和 references/connection.md；独立 GitHub PAT，真实账户业务待验证。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

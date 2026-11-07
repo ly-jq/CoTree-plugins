@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "id": "deepseek-chat-smoke",
+      "suite": "provider-smoke",
+      "task": "Using the cotree.deepseek-provider.chat model profile, reply with exactly the single lowercase word: pong",
+      "execution": "agent",
+      "maxSteps": 2,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "deepseek-reasoner-smoke",
+      "suite": "provider-smoke",
+      "task": "Using the cotree.deepseek-provider.reasoner model profile, compute 17 * 23 and reply with only the resulting number.",
+      "execution": "agent",
+      "maxSteps": 3,
+      "expectedStatus": "completed"
+    }
+  ]
+}

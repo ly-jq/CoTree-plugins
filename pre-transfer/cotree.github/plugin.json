@@ -1,0 +1,68 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.github",
+  "name": "GitHub",
+  "version": "0.2.0",
+  "description": "通过 GitHub 官方 MCP 查询仓库、处理 Issue / PR 和检查 Actions。",
+  "presentation": {
+    "icon": "resources/source-02/content/assets/github.png",
+    "darkIcon": "resources/source-02/content/assets/github-dark.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.github.connect",
+      "description": "配置或排查 GitHub 插件认证，并只读检查实际可用工具。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.github.inspect",
+      "description": "读取 GitHub 仓库、代码、Issue、PR 和 CI 状态，为实现或审查建立上下文。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.github.issues",
+      "description": "按用户要求创建、更新、关闭 GitHub Issue 或评论，并读回结果。",
+      "path": "skills/issues/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.github.pull-requests",
+      "description": "创建或维护 GitHub PR、回应审查、核对合并条件并执行已授权操作。",
+      "path": "skills/pull-requests/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.github.actions",
+      "description": "检查 GitHub Actions 失败，或执行用户已授权的重跑、取消和 workflow dispatch。",
+      "path": "skills/actions/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "github",
+      "transport": "streamable-http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headersEnv": {
+        "Authorization": "COTREE_GITHUB_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "25996a01b15584e6e292218474142410ceb7e9003abbdf10368428c202dfdd7e"
+  }
+}

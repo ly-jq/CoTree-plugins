@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.consensus",
+  "version": "0.2.0",
+  "category": "研究与专业工具",
+  "priority": 0,
+  "batch": 16,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "consensus",
+      "repository": "plugins",
+      "path": "plugins/consensus",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "9d165a9438a59eb5abadc506112d044c65927c1403048633351135456fc37e89",
+      "upstreamVersion": "4.0.0"
+    }
+  ],
+  "changes": [
+    "保留唯一官方 MCP，补齐七个研究工作流，不沿用原宿主专属展示或工具假设。",
+    "区分匿名试用、独立 OAuth / API key 和实际套餐权限；没有原图标时沿用宿主默认图标。"
+  ],
+  "limitations": [
+    "原生工作流与协议适配已实现；真实账户或本地 Desktop 文献库、模型任务效果及跨平台运行仍待验收。",
+    "官方文档提到匿名试用，但 2026-10-07 本轮匿名 MCP 初始化实测 401，当前 CoTree 路径的匿名检索未验收；使用独立 API key 或 OAuth 继续接入，自动 OAuth 登录 / 刷新未实现。",
+    "错误或撤销的 key 可能退回匿名限制；成功请求或少量结果不证明已认证。全文、DOI、独立 fetch 等仅按实际目录和返回字段使用。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "official MCP / academic search": "独立 HTTP MCP、OAuth 或 API key；无效 key 可能退回匿名额度，目录成功不证明账户身份。",
+    "literature reviews / Boolean strategy / research gaps": "问题拆解、搜索、文献筛选、综合、书目与研究缺口，共七个原生入口；不虚构覆盖量、全文或系统综述完成。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

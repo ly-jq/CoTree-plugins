@@ -1,0 +1,34 @@
+{
+  "manifestVersion": 1,
+  "id": "cotree.mem0-memory",
+  "name": "Mem0 Memory",
+  "version": "1.0.0",
+  "description": "Declarative Mem0 external memory provider for CoTree. The local SQLite store stays authoritative for structured round-trip + evidence chain + provenance; Mem0 (https://mem0.ai) adds a cross-session semantic search layer. Auth via MEM0_API_KEY only - no source fork, no embedded keys.",
+  "minKernelVersion": "0.1.0",
+  "entry": "src/index.ts",
+  "capabilities": {
+    "memoryProviders": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none",
+    "network": {
+      "allowDomains": ["api.mem0.ai"]
+    },
+    "secrets": ["MEM0_API_KEY"]
+  },
+  "memoryProviders": {
+    "providers": {
+      "mem0": {
+        "runtimeProvider": "mem0",
+        "displayName": "Mem0",
+        "description": "Mem0 semantic memory layer over the local authoritative store.",
+        "search": true
+      }
+    }
+  },
+  "evals": ["evals/memory-smoke.json"],
+  "rollback": {
+    "strategy": "previous-active-version"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.outlook-email",
+  "name": "Outlook Email",
+  "version": "0.2.0",
+  "description": "在 CoTree 中检索和整理 Outlook 邮件、读取会话与附件，建立回复或转发草稿并按授权发送。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.outlook-email.connect",
+      "description": "配置 Outlook Email 独立 OAuth 并核实邮箱与读写 / 发送权限。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.outlook-email.search",
+      "description": "限定 Outlook 文件夹、日期、发件人或主题检索邮件并核对分页。",
+      "path": "skills/search/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.outlook-email.read",
+      "description": "读取 Outlook 邮件、会话和附件，提取有依据的结论与待办。",
+      "path": "skills/read/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.outlook-email.draft",
+      "description": "建立 Outlook 新邮件、回复、回复全部或转发草稿并检查内容。",
+      "path": "skills/draft/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.outlook-email.send",
+      "description": "发送用户明确授权的 Outlook 草稿并核查发送状态。",
+      "path": "skills/send/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.outlook-email.organize",
+      "description": "按授权标记、分类、归档或移动 Outlook 邮件。",
+      "path": "skills/organize/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "3a49cda7207e009f44f86f52139911905b7b0778c246f3447fa5151d2f08b11d"
+  }
+}

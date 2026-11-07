@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.context7",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "context7",
+    "repository": "claude-plugins-official",
+    "path": "external_plugins/context7",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "d8f9650bf204d8c6421feb6da9def979e22ff2d349c107fb9d6931eb3d7c5cf7"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#context7",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/context7"
+    }
+  ],
+  "copiedFiles": 1,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "de3ffdd2d0aad507dc5337a87d24ad95b8e96b30dcf7eb116c7097b41f70b1d1"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "08db35592f9d340b2ff0a74df14be66851d4ff625f8ef3e2cc9b83bef8021325"
+    },
+    {
+      "path": "README.md",
+      "sha256": "339bef44b80645a89e5da81e6a46a34a997fe1214a8ac1f9535a11f3ea2c9e96"
+    }
+  ]
+}

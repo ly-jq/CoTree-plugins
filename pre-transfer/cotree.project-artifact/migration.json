@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.project-artifact",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 28,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "project-artifact",
+      "repository": "claude-plugins-official",
+      "path": "plugins/project-artifact",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "7e9413fc5a580f3ea249ee6a838877fb91d198e16a9546da13937b4a1d359d33"
+    }
+  ],
+  "changes": [
+    "原宿主Artifact工具替换为独立HTML生成、刷新、备份与浏览器交付。",
+    "来源引用、时效、软件PR/CI/审查证据和可选领域页完整保留，复用已有部署能力。"
+  ],
+  "limitations": [
+    "原私有Artifact托管URL/权限无法继承；在线部署和仓库账户需独立验收。",
+    "页面是派生状态快照，不能据此自动更新任务完成或冒充外部验收。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "overview/workstreams/next/optional tabs": "create：可独立渲染HTML、来源时效、可访问标签页和精简领域扩展。",
+    "refresh artifact / config / artifact-state": "refresh：保留稳定文件与嵌入快照、前摘要校验及备份，不建立第二任务状态库。",
+    "swe / PRs / CI / reviews": "refresh：显式仓库、真实gh结果、来源归因和缺失观察，不按关键词自动判断任务完成。",
+    "Artifact publishing": "publish：本地文件交付或复用既有CoTree部署插件，原私有URL/权限不虚构。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

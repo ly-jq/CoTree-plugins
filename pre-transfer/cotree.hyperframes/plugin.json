@@ -1,0 +1,74 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.hyperframes",
+  "name": "HyperFrames",
+  "version": "0.2.0",
+  "description": "在 CoTree 中制作 HTML 视频，支持可定位时间线、字幕、声音、组件、网页分镜、本地预览和视频渲染。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.hyperframes.create",
+      "description": "创建或修改 HyperFrames HTML 视频与分镜。",
+      "path": "skills/create/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.hyperframes.animate",
+      "description": "实现可确定性 seek 的 GSAP 动画、节奏与转场。",
+      "path": "skills/animate/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.hyperframes.media",
+      "description": "处理视频、音轨、配音和音频驱动视觉。",
+      "path": "skills/media/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.hyperframes.captions",
+      "description": "导入、转写、校对并制作同步字幕。",
+      "path": "skills/captions/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.hyperframes.registry",
+      "description": "发现并集成 HyperFrames blocks 与 components。",
+      "path": "skills/registry/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.hyperframes.website",
+      "description": "将用户指定网页内容转换为分镜和 HTML 视频。",
+      "path": "skills/website/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.hyperframes.preview",
+      "description": "在实际 HyperFrames 播放器检查时间线、布局和画面。",
+      "path": "skills/preview/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.hyperframes.render",
+      "description": "将 HyperFrames 工程渲染为视频并核对产物。",
+      "path": "skills/render/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "6f83346f25381f1185fec286a03c8428116fe09beb5aab12f155960725021af5"
+  }
+}

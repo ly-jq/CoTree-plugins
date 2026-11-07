@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.security-review",
+  "version": "0.1.1",
+  "category": "开发与质量",
+  "priority": 1,
+  "status": "integration-pending",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "claude-security",
+      "repository": "claude-plugins-official",
+      "path": "plugins/claude-security",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "02df5ca9903d6f1112988c3a0b68b819a3263ba848431ae51eada4dc92d7f46a",
+      "upstreamVersion": "0.12.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "security-guidance",
+      "repository": "claude-plugins-official",
+      "path": "plugins/security-guidance",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "338b87343d08dce526be2e7b712b39de098ae7a92a205b191a183e0f2fc6e622",
+      "upstreamVersion": "2.0.9"
+    },
+    {
+      "ecosystem": "codex",
+      "package": "codex-security",
+      "repository": "plugins",
+      "path": "plugins/codex-security",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "51b1baf55b7a9ad0ec890c2e6fb095c76d4c1b11e147c26ade64c0a3b4a0e3ef",
+      "upstreamVersion": "0.1.24"
+    }
+  ],
+  "changes": [
+    "以稳定 CoTree ID 合并来源，资源分目录保留，重复服务只注册一次。",
+    "将直接加载的 Agent / Skill 提示迁至当前品牌适配层；原 resources / provenance 保持不变，资源路径显式指向保留的 content 目录。"
+  ],
+  "limitations": [
+    "本包已按功能去重并统一身份；完整运行内容仍待逐包适配，不能把来源保留或清单有效当成功能完整。",
+    "通用审查资料已迁移；专有 Workflow / Agent 选择器和权限 Hook 未注册。",
+    "Agent import.claude.claude-security.explore 保留模型引用 sonnet；需配置对应 CoTree 模型，不静默改变模型选择。",
+    "Agent import.claude.claude-security.scan-inventory 保留模型引用 sonnet；需配置对应 CoTree 模型，不静默改变模型选择。",
+    "Agent import.claude.claude-security.scan-loader 保留模型引用 sonnet；需配置对应 CoTree 模型，不静默改变模型选择。",
+    "Agent import.claude.claude-security.scan-redactor 保留模型引用 sonnet；需配置对应 CoTree 模型，不静默改变模型选择。",
+    "依赖 Claude Agent SDK、Stop / SubagentStop 和 asyncRewake。",
+    "Deep Scan 会启动 Codex app-server，不能作为 CoTree 原生扫描器运行。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {},
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

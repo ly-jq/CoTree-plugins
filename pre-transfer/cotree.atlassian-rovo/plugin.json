@@ -1,0 +1,74 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.atlassian-rovo",
+  "name": "Atlassian Rovo",
+  "version": "0.2.0",
+  "description": "在 CoTree 中搜索 Jira 与 Confluence、维护事项和页面，并关联项目进度与知识文档。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "darkIcon": "resources/source-01/content/assets/logo-dark.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.atlassian-rovo.connect",
+      "description": "配置 Atlassian Rovo 的独立 OAuth 或获准的非交互 API token。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.atlassian-rovo.search",
+      "description": "搜索 Jira 与 Confluence，核对站点、查询语法、分页和引用。",
+      "path": "skills/search/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.atlassian-rovo.jira",
+      "description": "创建和维护 Jira 事项、负责人、字段与状态转换。",
+      "path": "skills/jira/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.atlassian-rovo.confluence",
+      "description": "读取、创建和编辑 Confluence 页面，保留结构、版本和权限。",
+      "path": "skills/confluence/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.atlassian-rovo.link",
+      "description": "关联 Jira 工作项与 Confluence 文档，形成可追溯需求和决策记录。",
+      "path": "skills/link/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.atlassian-rovo.report",
+      "description": "用 Jira 和 Confluence 证据生成项目、冲刺或发布进度汇总。",
+      "path": "skills/report/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "atlassian-rovo",
+      "transport": "streamable-http",
+      "url": "https://mcp.atlassian.com/v1/mcp/authv2",
+      "headersEnv": {
+        "Authorization": "COTREE_ATLASSIAN_ROVO_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "8e6db57818cedfde17d301a1b1b2ef3e2ec92a91af6c055fe381b74113c3b69f"
+  }
+}

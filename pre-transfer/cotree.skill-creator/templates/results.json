@@ -1,0 +1,11 @@
+{
+  "runs": [
+    {
+      "scenario": "representative-task",
+      "variant": "baseline",
+      "status": "not-run",
+      "reason": "Supply real inputs and run with the target host before recording results.",
+      "checks": []
+    }
+  ]
+}

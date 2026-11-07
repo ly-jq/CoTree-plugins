@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.apple-development",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 25,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "build-ios-apps",
+      "repository": "plugins",
+      "path": "plugins/build-ios-apps",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "530f50dc8a4dc29c04a923abe481a962523ef513c1425659b2484a394663a283",
+      "upstreamVersion": "0.1.2"
+    },
+    {
+      "ecosystem": "codex",
+      "package": "build-macos-apps",
+      "repository": "plugins",
+      "path": "plugins/build-macos-apps",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "07a37e1678252aa4683c3d34aa272947e0cfde23c7505ce1ec4dd0e94688b0c6",
+      "upstreamVersion": "0.1.4"
+    }
+  ],
+  "changes": [
+    "按能力合并 iOS/macOS 为 14 个原生入口，保留平台专用资料。",
+    "独立固定 XcodeBuildMCP 2.7.0；关闭内部遥测和自动宿主同步。",
+    "增加显式 Simulator 选择与构建 argv 计划，保留完整图标和来源。"
+  ],
+  "limitations": [
+    "Windows 只能验证工具协议与本地准备；macOS/Xcode、Simulator/真机、预览和分发均另验。",
+    "来源 preview/trace 辅助脚本保留，依赖与实际结果需在目标 Mac 核实。",
+    "开发者签名、公证与商店使用独立 Apple 账户，不继承原宿主身份。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "source-01/content/skills/ios-debugger-agent/SKILL.md": "build：原生入口及完整归档参考",
+    "source-02/content/skills/build-run-debug/SKILL.md": "build：原生入口及完整归档参考",
+    "source-02/content/skills/swiftpm-macos/SKILL.md": "build：原生入口及完整归档参考",
+    "source-02/content/commands/build-and-run-macos-app.md": "build：原生入口及完整归档参考",
+    "source-02/content/skills/test-triage/SKILL.md": "test：原生入口及完整归档参考",
+    "source-02/content/commands/test-macos-app.md": "test：原生入口及完整归档参考",
+    "source-01/content/skills/swiftui-ui-patterns/SKILL.md": "swiftui：原生入口及完整归档参考",
+    "source-02/content/skills/swiftui-patterns/SKILL.md": "swiftui：原生入口及完整归档参考",
+    "source-01/content/skills/swiftui-view-refactor/SKILL.md": "refactor：原生入口及完整归档参考",
+    "source-02/content/skills/view-refactor/SKILL.md": "refactor：原生入口及完整归档参考",
+    "source-01/content/skills/swiftui-liquid-glass/SKILL.md": "glass：原生入口及完整归档参考",
+    "source-02/content/skills/liquid-glass/SKILL.md": "glass：原生入口及完整归档参考",
+    "source-02/content/skills/window-management/SKILL.md": "windows：原生入口及完整归档参考",
+    "source-02/content/skills/appkit-interop/SKILL.md": "appkit：原生入口及完整归档参考",
+    "source-01/content/skills/ios-app-intents/SKILL.md": "intents：原生入口及完整归档参考",
+    "source-01/content/skills/swiftui-performance-audit/SKILL.md": "performance：原生入口及完整归档参考",
+    "source-01/content/skills/ios-ettrace-performance/SKILL.md": "performance：原生入口及完整归档参考",
+    "source-01/content/skills/ios-memgraph-leaks/SKILL.md": "memory：原生入口及完整归档参考",
+    "source-01/content/skills/ios-simulator-browser/SKILL.md": "preview：原生入口及完整归档参考",
+    "source-02/content/skills/telemetry/SKILL.md": "telemetry：原生入口及完整归档参考",
+    "source-02/content/skills/signing-entitlements/SKILL.md": "signing：原生入口及完整归档参考",
+    "source-02/content/commands/fix-codesign-error.md": "signing：原生入口及完整归档参考",
+    "source-02/content/skills/packaging-notarization/SKILL.md": "distribute：原生入口及完整归档参考"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

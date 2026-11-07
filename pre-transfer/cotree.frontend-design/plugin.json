@@ -1,0 +1,31 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.frontend-design",
+  "name": "前端设计",
+  "version": "0.2.0",
+  "description": "在现有项目中设计并实现有明确视觉方向、可访问且响应式的前端界面。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.frontend-design.design",
+      "description": "设计、实现或改善网页、应用界面和响应式布局。",
+      "path": "skills/design/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "d3facc218bb17dbb3821a2788d69cc35517ceeeea4b66162a708b63e4e026043"
+  }
+}

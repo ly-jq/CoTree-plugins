@@ -1,0 +1,12 @@
+{
+  "lsp": {
+    "servers": {
+      "php": {
+        "command": "intelephense",
+        "args": [
+          "--stdio"
+        ]
+      }
+    }
+  }
+}

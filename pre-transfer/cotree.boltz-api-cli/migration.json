@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.boltz-api-cli",
+  "version": "0.2.0",
+  "category": "研究与专业工具",
+  "priority": 0,
+  "batch": 24,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "boltz-api-cli",
+      "repository": "plugins",
+      "path": "plugins/boltz-api-cli",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "dc50657463065e4141b3a4051c85f8a92f79e24e3d27fe550506fb83f77b9a1c",
+      "upstreamVersion": "0.1.1"
+    }
+  ],
+  "changes": [
+    "移除Codex/Claude后台会话、强制定时任务及过时ADME下载限制，使用宿主可取消执行与官方CLI实际help。",
+    "新增跨平台只生成argv的任务规划 / 恢复器，绑定payload SHA256并拒绝覆盖计划。",
+    "区分本地身份、真实估价、提交、下载和科学解释，保留独立账户及完整领域资料。"
+  ],
+  "limitations": [
+    "官方CLI的本地help / 未登录检查与本地计划已可验证；账户、估价、计费、远程计算和分子结果未验收。",
+    "本地规划不是API payload schema验证；蛋白辅助脚本与其他OS另测。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "skill:boltz-cli-setup": "connect：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:boltz-check-status": "recover：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:boltz-structure-and-binding": "structure：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:boltz-small-molecule-adme": "adme：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:boltz-small-molecule-screen": "molecule-screen：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:boltz-small-molecule-design": "molecule-design：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:boltz-protein-screen": "protein-screen：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:boltz-protein-design": "protein-design：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

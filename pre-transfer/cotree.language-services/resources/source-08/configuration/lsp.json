@@ -1,0 +1,13 @@
+{
+  "lsp": {
+    "enabled": true,
+    "servers": {
+      "python": {
+        "command": "pyright-langserver",
+        "args": [
+          "--stdio"
+        ]
+      }
+    }
+  }
+}

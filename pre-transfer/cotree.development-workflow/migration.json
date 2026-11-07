@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.development-workflow",
+  "version": "0.2.1",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 2,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "feature-dev",
+      "repository": "claude-plugins-official",
+      "path": "plugins/feature-dev",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "b42236ad5c5b9e15fb2a2616a43d05d77ee98080476e29eacb1ad7c4dddcc3b8"
+    },
+    {
+      "ecosystem": "codex",
+      "package": "superpowers",
+      "repository": "plugins",
+      "path": "plugins/superpowers",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "0ad284953fa7c2c3f6e8f687b1c19603357c9078aedae1293b577f95833fbe1e",
+      "upstreamVersion": "6.3.0"
+    }
+  ],
+  "changes": [
+    "合并功能开发与 Superpowers 的方法，形成一个原生执行入口和按需参考。",
+    "替换强制 Session Hook、独立 runner、固定确认关卡和固定审查轮数；沿用主模型与现有会话权威。",
+    "0.2.1 将重复的 author-skill 入口归并至 cotree.skill-creator.create / evaluate，开发工作流保留十个技能。"
+  ],
+  "limitations": [
+    "可视化脑暴服务器和上游专属会话钩子不移植；使用当前宿主的展示能力。",
+    "真实工程效果仍需在用户任务中按项目执行验证。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "brainstorming": "design",
+    "writing-plans / executing-plans": "plan",
+    "dispatching-parallel-agents / subagent-driven-development": "collaborate",
+    "finishing-a-development-branch": "finish",
+    "receiving-code-review / requesting-code-review": "review-feedback",
+    "systematic-debugging": "debug",
+    "test-driven-development": "test-first",
+    "using-git-worktrees": "worktree",
+    "using-superpowers": "develop；按语义选择适用技能，不用 SessionStart 强制拦截所有会话。",
+    "verification-before-completion": "verify",
+    "writing-skills": "cotree.skill-creator.create / evaluate；独立技能作者能力归属该包。",
+    "feature discovery / explorer / architect / reviewer": "develop 串起探索、架构、实现、审查与交付；专门 Agent 按需从宿主发现，不重复固定模型或角色。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

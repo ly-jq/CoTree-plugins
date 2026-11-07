@@ -1,0 +1,623 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.codex-security",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "codex-security",
+    "repository": "plugins",
+    "path": "plugins/codex-security",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "51b1baf55b7a9ad0ec890c2e6fb095c76d4c1b11e147c26ade64c0a3b4a0e3ef",
+    "upstreamVersion": "0.1.24"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/assess-patch-risk/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/attack-path-analysis/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/deep-security-scan/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/define-security-policy/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/finding-discovery/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/fix-finding/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/propose-security-hardening/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/security-diff-scan/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/security-scan/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/threat-model/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/track-findings/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/triage-finding/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/validation/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/verify-fix/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/vulnerability-writeup/SKILL.md",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#codex-security",
+      "state": "deferred",
+      "reason": "Deep Scan 会启动 Codex app-server，不能作为 Elyra 原生扫描器运行。"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 121,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "e562ff1944a73dcb4dede2d9c818fbb4c8da49f3d22af49b30c04b4b7cc4c330"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "109a89c6fbd74c0c1497525d71dde3eb72e11b5fcb6d33a03a486dab00699352"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "17c3d861954f83304cd77dc03981bfee23fe47a09b1c23a675837228c7a9209c"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "9b9c2b09b2fa064611fb62307d321d5c2ea70cf0789f7ce34cdb0fc0d9190b3a"
+    },
+    {
+      "path": "examples/completed-scan/coverage.json",
+      "sha256": "030cb7bbc2b5daf0ff9bfccbbc1ee74a2fc8c164f05053abe5d121989cfe1a72"
+    },
+    {
+      "path": "examples/completed-scan/findings.json",
+      "sha256": "1706f5c82486c3d5d79997ec070455ab46ebe06b64509718020c303a33753469"
+    },
+    {
+      "path": "examples/completed-scan/report.md",
+      "sha256": "dc276d05ae67b0db3c6fd84f4b82a7ac2feccdbd267acbb63046b056a65a18e3"
+    },
+    {
+      "path": "examples/completed-scan/scan-manifest.json",
+      "sha256": "5093defc510b35b1924c54cdc9b6dde9ffe1ac6dd7514c772daea7616680be4f"
+    },
+    {
+      "path": "mcp/server.mjs",
+      "sha256": "a113bcd2a6c1bfd4359bf94c184878a749f1ef72a760e7b7f721187536ce672f"
+    },
+    {
+      "path": "mcp/server.mjs.br.part-000",
+      "sha256": "c9f68d641ddd85a5a096a47d6180205337fde56dfafd2a4027ac5ac70ef7e030"
+    },
+    {
+      "path": "mcp/server.mjs.br.part-001",
+      "sha256": "d6f4df53ef50dab06af1d0cb26e32f040f178e15ac05cfddf7509bba89608447"
+    },
+    {
+      "path": "OWNERS",
+      "sha256": "e4b184f761107940ff731520375c1152c92af0abc49112663018490a627049d5"
+    },
+    {
+      "path": "preflight/capability-profiles.toml",
+      "sha256": "753170815f01873d8bba77a682bb41425349f0827c23a171bfd70da61d5f4042"
+    },
+    {
+      "path": "references/config-preflight.md",
+      "sha256": "2654872acc68ae7f4e11a3a724a5a3bd0fdf0d3d52085186a41d80a5e0bada91"
+    },
+    {
+      "path": "references/core-scan.md",
+      "sha256": "63be2dfc2456492a7b5b004507f0b352f08df1dbdc73bf0ed39236587afd6c70"
+    },
+    {
+      "path": "references/desktop-config-preflight.md",
+      "sha256": "8b619d2038ee2e2b0c9197dd321327b883b6daf01ac985e0b7bbcb1a9e2a0437"
+    },
+    {
+      "path": "references/final-report.md",
+      "sha256": "cae2ba3f61bc066cfb3c2d584c1cf08ac95878de2d9e7cbd7421fc8184bf7595"
+    },
+    {
+      "path": "references/finding-detail-fields.md",
+      "sha256": "c005679ee5accb81d3cf0b6265b2bceb695887b1a7e470d85b281480bd7592e5"
+    },
+    {
+      "path": "references/sarif-adapter.md",
+      "sha256": "b07d4315aedb3c536a57f0aacd86e68ee943c5673696f126cc31d1d956fa817e"
+    },
+    {
+      "path": "references/scan-artifacts.md",
+      "sha256": "9684946ab74379b161829830b24bc8ba5b7b1e10fe2393f0b11021f0d71cb607"
+    },
+    {
+      "path": "references/scan-contract.md",
+      "sha256": "a760a80af450242e5dd8eb94ecede39e7e83f77cbfe8645600e603ed7708688b"
+    },
+    {
+      "path": "references/scan-prologue.md",
+      "sha256": "0a0b56b314ec5fe2bd05f83aeaa746f1d7fbd0e9aa0d966e4b6462e881a4e581"
+    },
+    {
+      "path": "references/security-guidance.md",
+      "sha256": "67124aae16c89261dd4b9d485c448a1a18940b8f425d388f011766211f409067"
+    },
+    {
+      "path": "references/static-finding-assessment.md",
+      "sha256": "18d3fdd1c14c1bdffb32d49661bd9cf008191eb15ddd2d084689f64939fbf417"
+    },
+    {
+      "path": "references/threat-model.md",
+      "sha256": "067467b4b487312afcb77da8902e3e8bee5cffdaf8f5515f2a54eccb757da1f7"
+    },
+    {
+      "path": "schemas/coverage.schema.json",
+      "sha256": "615df61233583574589012b9092b5e2d8699d3fcb69a0a2abd4c2b9d824fd92d"
+    },
+    {
+      "path": "schemas/definitions/artifact-common.schema.json",
+      "sha256": "a881120994ff5fe8d75ae656e0415278c3a33ba12da1d0b23f1ff274be08b5b6"
+    },
+    {
+      "path": "schemas/definitions/discovery-candidate.schema.json",
+      "sha256": "25c7ae2bfc6fd026b6ee8921504d067ba0d5c0dedcafbc57f62f04ffc95b2655"
+    },
+    {
+      "path": "schemas/findings.schema.json",
+      "sha256": "f87a75e5f60ca7672979b9aa9a8e71b77ecbc9cf1066d9ae8fdfcfb5ed0d98fa"
+    },
+    {
+      "path": "schemas/patch-risk-assessment.schema.json",
+      "sha256": "f383743d21e02abce32aab9e5db81d0d9bf8479e4dd1429e90c57c267d1880ce"
+    },
+    {
+      "path": "schemas/scan-manifest.schema.json",
+      "sha256": "db1f25a237bc846fe7c17b321e06cad9cfcfa8b4d45e0d795b590ac05cba1746"
+    },
+    {
+      "path": "schemas/tools/candidate-attack-paths.schema.json",
+      "sha256": "fcc72bdf386331486d419f5f280446860ddee8bf530cc856edea5f122a957052"
+    },
+    {
+      "path": "schemas/tools/candidate-validations.schema.json",
+      "sha256": "e85a14538d1269f65d36e750ba90626f4cc74849eb0c19fd1369255aa90da743"
+    },
+    {
+      "path": "schemas/tools/deep-reducer.schema.json",
+      "sha256": "f0daba05c2130098e2688b15ae7f6c50cfb250f4f6870167ee6c71077fff4457"
+    },
+    {
+      "path": "schemas/tools/discovery-candidates.schema.json",
+      "sha256": "a41605e08d11620c45109ea1d759ad90449ef164f64fe71d7fb7208f0453d3bc"
+    },
+    {
+      "path": "schemas/tools/review-items.schema.json",
+      "sha256": "12d6ff46be66d29abfd84170f39ad7053c2194487ffe65e670f47c77620eed89"
+    },
+    {
+      "path": "schemas/tools/scan-draft.schema.json",
+      "sha256": "5759109839c75b46bdadc0620a284c7de2e6c6a0b75de355ca5ea8d639dc71c5"
+    },
+    {
+      "path": "schemas/tools/worker-threat-model.schema.json",
+      "sha256": "6472aab6f607012e8b4e75bbaa41032aab8c739984519442288a123f0ea82c41"
+    },
+    {
+      "path": "scripts/config_preflight.py",
+      "sha256": "b5c773a30c8ff452879f79a8cff4f95285ca0a8f3959b32abef52139732a04fb"
+    },
+    {
+      "path": "scripts/deep_scan_config.py",
+      "sha256": "baa6a79b311d2651d476f46ee880f31fa41066dcfe98fda9d824a18529ff1438"
+    },
+    {
+      "path": "scripts/deep_scan_workbench.py",
+      "sha256": "76cfef5593d31afa0462dc0ee7fe78403b5d43e552dac9db69df111cae0e96a4"
+    },
+    {
+      "path": "scripts/filesystem_identity.py",
+      "sha256": "18338ac1cf28102d55340a7b2b71d479b57ee75a5d95262ff52129432b40aff0"
+    },
+    {
+      "path": "scripts/finalize_scan_contract.py",
+      "sha256": "5f7e255ffec5a8fef561a5a6927bc05e319094c8e11835f7e45e2bca7e2aed92"
+    },
+    {
+      "path": "scripts/finding_preview.py",
+      "sha256": "9b48d05e74be2c03b89cbf5d43f381ebd3d98de78d3a7b206e6bcc87eea6b30e"
+    },
+    {
+      "path": "scripts/generate_in_scope_files.py",
+      "sha256": "448b36aa184c98e496592e5e5dab1eb604a3b9179d6021f494aa12c6ed7122ed"
+    },
+    {
+      "path": "scripts/generate_rank_input.py",
+      "sha256": "626b94aa73cc1336f01ef077ca56ab0e6e4f2315b49087d32a5bef7056a17328"
+    },
+    {
+      "path": "scripts/launch_codex_security_mcp",
+      "sha256": "3de9dcc8a15dcf0cce2795a47fb38a757f57272f5ab853f0b11ff257103fa38c"
+    },
+    {
+      "path": "scripts/launch_codex_security_mcp.cmd",
+      "sha256": "d7dd16e20eb79da03991fbb9201a21c324f355bafb5b2381ed617fe17e0b570c"
+    },
+    {
+      "path": "scripts/normalize_candidates.py",
+      "sha256": "67028328cc133ba8d7252dc2d2d2f8103a8fecd2ee1b1d57547440563e710056"
+    },
+    {
+      "path": "scripts/rank_preview.py",
+      "sha256": "a3942cef204c3498f2f42d63b391fe5f15546e0074b7ee46109d4ddcd42ca284"
+    },
+    {
+      "path": "scripts/report_projection.py",
+      "sha256": "8f026c8aabe7f53a79e77d59e1c1d602266617284d55c851db5c9823d0d34c84"
+    },
+    {
+      "path": "scripts/resolve_security_md.py",
+      "sha256": "128e62db89755112b941b4a5330aa2a5f40c2b68563a7053c2d51056e2b66517"
+    },
+    {
+      "path": "scripts/snapshot_sqlite.py",
+      "sha256": "7c03bb87c7ffab755f45d1104210dfa849f089707f1d77bfb393c1591d9896e5"
+    },
+    {
+      "path": "scripts/validate_scan_contract.py",
+      "sha256": "b0a129edc78798b8b4eacfca8a76f18d3e7faeff0ac050c14a896990f70b0d84"
+    },
+    {
+      "path": "scripts/validate_tracking_source.py",
+      "sha256": "8335c0392c49cd8229997c34f7df1c1ebda029b5a185b647ed702d6f91cd840a"
+    },
+    {
+      "path": "scripts/windows_scan_local_files.py",
+      "sha256": "25c4d4fc3e1c7d5d22feccddbe594c55f76d79e31ac73a7bd41a4da20d391d80"
+    },
+    {
+      "path": "scripts/workbench/__init__.py",
+      "sha256": "4fe54d953e899a1c5b59902f0cdbb4fe0537fa5c4e19fe243832439b8687fa74"
+    },
+    {
+      "path": "scripts/workbench/handoff.py",
+      "sha256": "168c25ac240f42f2c2a48506693738e629884feaf3516390af500bb3f104c45c"
+    },
+    {
+      "path": "scripts/workbench_cli.py",
+      "sha256": "290ff59482927b92024a2b210f714839c7d45817b86c02a8ea240fc71ac56042"
+    },
+    {
+      "path": "scripts/workbench_constants.py",
+      "sha256": "a8ee358d041d2d6652ad78c3fdfd8302311867b3f5c0d8ca4756ec54b6f778a2"
+    },
+    {
+      "path": "scripts/workbench_dashboard.py",
+      "sha256": "ed73d41427ed4f92d7e2a85ab8ff060c2032f03f3bf244ca281a5406ccbac5de"
+    },
+    {
+      "path": "scripts/workbench_db.py",
+      "sha256": "ff7589123c275f57cc1dcdbd3bd7a26c724e1dc51ca286a15a098bfe404ff52f"
+    },
+    {
+      "path": "scripts/workbench_feedback.py",
+      "sha256": "507a03a2303d9e5d341f59363f6c9d8eaa53d5f871764d0cab393e615a79ec20"
+    },
+    {
+      "path": "scripts/workbench_finding_index.py",
+      "sha256": "e4a0964da3eb53b7f7caf07d8a6ef9f397ac85bd3755616a45c95c6fb2ed5c4e"
+    },
+    {
+      "path": "scripts/workbench_finding_workflows.py",
+      "sha256": "99b0ee6fc43565a5ab7c58976e6c2bc80c1bfb2f469eb174bf8958a638d00c77"
+    },
+    {
+      "path": "scripts/workbench_findings.py",
+      "sha256": "bc4008dc2fecadf9fdfac671fbd52d7f9128777d40a76183b0d5570dddfc8d52"
+    },
+    {
+      "path": "scripts/workbench_native_indexes.py",
+      "sha256": "b36b9685446402c0d8ef40a53634272e258dbe4df945788082d647da4079a695"
+    },
+    {
+      "path": "scripts/workbench_progress.py",
+      "sha256": "f542b87ef43c3da9eab71f2286ee13c01616b02f48e28f5bd96782445b3cb73c"
+    },
+    {
+      "path": "scripts/workbench_publication.py",
+      "sha256": "89e28640f4f4a6a90cce8a5bdf5ec4e23a6e63514ceafe83482e99dfd355d167"
+    },
+    {
+      "path": "scripts/workbench_remediation.py",
+      "sha256": "9cf67cd2c9aa9f85d196c4c78b9d1b28e33295200580fe3fe537401236ce6207"
+    },
+    {
+      "path": "scripts/workbench_saved_results.py",
+      "sha256": "294bb6a21aaf31fdc8f6502b023ac5e426a156ee7b403795fb1ebb9dc29dec9a"
+    },
+    {
+      "path": "scripts/workbench_scan_history.py",
+      "sha256": "64c08671ad0c7f91fdc9ee0d0fc9c5e50cdfd63e9d2c3a5042a41158895095b5"
+    },
+    {
+      "path": "scripts/workbench_scan_start.py",
+      "sha256": "47d99770476d2617b59cb0b773c3b0ad99d504256627bea613a03bce0a5d0a52"
+    },
+    {
+      "path": "scripts/workbench_scan_usage.py",
+      "sha256": "c6237f75b2751a89747f02dfe9cc15af5a635c3b495621430aa31537c6e57911"
+    },
+    {
+      "path": "scripts/workbench_schema.py",
+      "sha256": "3cb30e1d7ee2383df61947373c49c8531e1191283ff186236407680b6b4cb6d6"
+    },
+    {
+      "path": "scripts/workbench_severity.py",
+      "sha256": "705a6f7299c02b8ef9d0a210fd71bdba68626b00f20f6b87ecf540da533765d1"
+    },
+    {
+      "path": "scripts/workbench_source_excerpt.py",
+      "sha256": "1510d4e64682684316fd1f25f3d3a564724e2cdf4ace25763e1cc5d938bac39d"
+    },
+    {
+      "path": "scripts/workbench_target_state.py",
+      "sha256": "925ce0abd864bd5312b5e2df309de6dd3285793b56af91286eaf2ece29815a0b"
+    },
+    {
+      "path": "scripts/workbench_target.py",
+      "sha256": "a5e0e0892de2a68f7303e58ebea4ae5d0dc829f1ce6bd3508af22fed90ab7451"
+    },
+    {
+      "path": "scripts/workbench_validation.py",
+      "sha256": "e6cc820410432ca54fb692c2e7cb3bc90a9b88a1302fd7d188fc41c265926f92"
+    },
+    {
+      "path": "skills/assess-patch-risk/agents/openai.yaml",
+      "sha256": "b3d598d20792a88d0708bf9d75e4e9e2b0ad562bd127063be813d950764a0868"
+    },
+    {
+      "path": "skills/assess-patch-risk/references/risk-rubric.md",
+      "sha256": "1c2877e8cf87ad5c21c1dbb8a34652e08d6fb5702ac88d5b45145c61fdc0eb66"
+    },
+    {
+      "path": "skills/assess-patch-risk/scripts/validate_patch_risk_assessment.py",
+      "sha256": "463753b45314d86416f8ae59f8f018d9de3a52026914ca5b5d14a12278944510"
+    },
+    {
+      "path": "skills/assess-patch-risk/SKILL.md",
+      "sha256": "2ce9ea2c27d8f0a69a7183fd2d052a4371fa2cfb5e559c4473441a1a2fd34cdf"
+    },
+    {
+      "path": "skills/attack-path-analysis/agents/openai.yaml",
+      "sha256": "3bf1b6f825cd047ec52aea413d9767f7a513dacc2feefe24d9d837a09bb434b2"
+    },
+    {
+      "path": "skills/attack-path-analysis/references/attack-path-facts.md",
+      "sha256": "05bd3efcec6367b5b4b57126f9245a09d20ec1fac7f82bb2d733994978a8c030"
+    },
+    {
+      "path": "skills/attack-path-analysis/references/severity-policy.md",
+      "sha256": "e22f204c52bbb96968a3a1ce067b0c779244ccab7ac8bf3c02ebb94f5ff02b5a"
+    },
+    {
+      "path": "skills/attack-path-analysis/SKILL.md",
+      "sha256": "cde4af45e2f1d6bc88e4a59cba87bb175cd1eedafd363c300e955cc19e359fa9"
+    },
+    {
+      "path": "skills/deep-security-scan/agents/openai.yaml",
+      "sha256": "7ede63ed0baf78fb261ff08f5cd2aaf46ff88c63043490cf5cd1f065eb2f3904"
+    },
+    {
+      "path": "skills/deep-security-scan/SKILL.md",
+      "sha256": "76669678f4336a37ee5006bdbfb02ed84a433f80610b805ac7a2b620bd7d4cd9"
+    },
+    {
+      "path": "skills/define-security-policy/agents/openai.yaml",
+      "sha256": "c7bd6260b47127bb27e94393c7c1793f7e629b3882f7f06482adfb7a559a8833"
+    },
+    {
+      "path": "skills/define-security-policy/SKILL.md",
+      "sha256": "0b274abe6ccad7a35d8bf175d8619b5c7c1493f56dca1ae1cbd80c8bb9fa1587"
+    },
+    {
+      "path": "skills/finding-discovery/agents/openai.yaml",
+      "sha256": "f6e88283e31c81a154616e688f76db5530f4b68ad3b51ce4d5377ffee7ab4199"
+    },
+    {
+      "path": "skills/finding-discovery/SKILL.md",
+      "sha256": "a8aa657c5df8683ca9d12374461aa55830995d691d1ef3fa8b4725d4f0235f16"
+    },
+    {
+      "path": "skills/fix-finding/agents/openai.yaml",
+      "sha256": "a089e4f290c49826d444b0953332a61ab3f2fde33c5505527d83eaf8d11f66de"
+    },
+    {
+      "path": "skills/fix-finding/SKILL.md",
+      "sha256": "15587030bd66f78dc021f491e2208d5d43c772f05a86b20a6d78029b6df7a39c"
+    },
+    {
+      "path": "skills/propose-security-hardening/agents/openai.yaml",
+      "sha256": "27cba9f3c3b1e368d922705fe0777a37ac0711b0586c04c217deefd3ccedd4f4"
+    },
+    {
+      "path": "skills/propose-security-hardening/references/proposal-format.md",
+      "sha256": "23b04a1b31b441efda74a1fa6808bd25b95c3ab4f4141413c2c01f6de87be818"
+    },
+    {
+      "path": "skills/propose-security-hardening/SKILL.md",
+      "sha256": "a4d7a5a48412e8730074ddca01e42babbb1301ac2af1b790873c33bc0e28314b"
+    },
+    {
+      "path": "skills/security-diff-scan/agents/openai.yaml",
+      "sha256": "80040a3a7202a0092049ec59d34fa80aba2dbf1adcc84c9fc918ce88ab6ad52e"
+    },
+    {
+      "path": "skills/security-diff-scan/SKILL.md",
+      "sha256": "16f3d6d1c60f7d6ace890fe4e7c51533524d5e4dd8cc4d063442f228cf1cd171"
+    },
+    {
+      "path": "skills/security-scan/agents/openai.yaml",
+      "sha256": "ef20ccc75fc7d8c4811f9f0d11f2359a64a39c1a40767a0a602928688ecaf545"
+    },
+    {
+      "path": "skills/security-scan/references/desktop-scan.md",
+      "sha256": "01594b490acb26b5cffab8a3d1527a706abe7bb816a618b2e329f29328054145"
+    },
+    {
+      "path": "skills/security-scan/references/scan-artifacts-and-ledger.md",
+      "sha256": "952a9e168a87deed2bdd0bf37afb6d7deb47b3ee49ff2312388f273d25ba014d"
+    },
+    {
+      "path": "skills/security-scan/SKILL.md",
+      "sha256": "7795d27d9e43bd1b427edcf911265008ac89cf4fd608d3af1cb35926227816b5"
+    },
+    {
+      "path": "skills/threat-model/agents/openai.yaml",
+      "sha256": "a8c10bb54c7230591c83f77eb4538e3b4e2a1f308f887f2681104e1f2efa9d9d"
+    },
+    {
+      "path": "skills/threat-model/SKILL.md",
+      "sha256": "7aaedddfee4c3d8fbd3d4f8bec058e6d7c4de340a839b9659ec990565bffad36"
+    },
+    {
+      "path": "skills/track-findings/agents/openai.yaml",
+      "sha256": "40fe17d7ced9e82fe2a45815b986008827c670610ff184e29ca0f807edd67143"
+    },
+    {
+      "path": "skills/track-findings/references/github-security-advisories.md",
+      "sha256": "b4fb2ecbaa050bcebd408484fca80e75a939cae6bfcecdc2c8f2ed17927eb228"
+    },
+    {
+      "path": "skills/track-findings/references/jira.md",
+      "sha256": "70dc4e7b01035cf40e4c7bc168a60dab3ed4ab1fab04066a5f212ffeaf6d44b9"
+    },
+    {
+      "path": "skills/track-findings/SKILL.md",
+      "sha256": "6966c61fd51d45247106d173c1704732732eb6256892db5bcdd6f51ec7878787"
+    },
+    {
+      "path": "skills/triage-finding/agents/openai.yaml",
+      "sha256": "0410d1fe0adcf51222041f578d2aff32a742fd0cee5771b3547d0aa71875c5af"
+    },
+    {
+      "path": "skills/triage-finding/references/github-rest-intake.md",
+      "sha256": "76de48b758adeb8575e2ebc4569a0844c69c804fc2a013e6b197a2cb9fe5870c"
+    },
+    {
+      "path": "skills/triage-finding/references/ticket-intake.md",
+      "sha256": "35ebae1793dee3e72a87909edddd69f6cb16a4748e2cb2eaece63e0f03fac705"
+    },
+    {
+      "path": "skills/triage-finding/references/triage-result-contract.md",
+      "sha256": "6fde856852e1f159ccddc424f8dd9f49ea5631aab65082d5903ddb8913f7e1f3"
+    },
+    {
+      "path": "skills/triage-finding/SKILL.md",
+      "sha256": "1427c813c3041342e4eeec2a97dabcf0ce6f1ea57c1520cc2f68284837d38a6d"
+    },
+    {
+      "path": "skills/validation/agents/openai.yaml",
+      "sha256": "027078ceed703b592d4b1e0a66dd926e2f920d37bd281222938f470f499e6e8c"
+    },
+    {
+      "path": "skills/validation/references/validation-guidance.md",
+      "sha256": "fc95f1dea0f17a885d3d46073f6e7f7ebd0839acdee637a65f0e37662d7ef480"
+    },
+    {
+      "path": "skills/validation/SKILL.md",
+      "sha256": "a2132a2a72cde01466c8c14f590c251f2a56da6b32c17ed3c582d33eed1e278f"
+    },
+    {
+      "path": "skills/verify-fix/agents/openai.yaml",
+      "sha256": "458aadd73d9dd0d3488b67a65cee2b52cada6227be407069010bf192678b1327"
+    },
+    {
+      "path": "skills/verify-fix/SKILL.md",
+      "sha256": "0d3821477807ba4bd814f385f58fa8b9e03a3b66ac1da16229a369e7f104adae"
+    },
+    {
+      "path": "skills/vulnerability-writeup/agents/openai.yaml",
+      "sha256": "98b479d0c04bbec51a3792ac071b95b9ef17daaa1a91c6b514d220dded7482f5"
+    },
+    {
+      "path": "skills/vulnerability-writeup/references/report-format.md",
+      "sha256": "80a09cdccdcabff377d36191edeec2931ee74ac571d56db71ac72a31c3d73d63"
+    },
+    {
+      "path": "skills/vulnerability-writeup/SKILL.md",
+      "sha256": "d3cf315b4c774cfd0118266fd5c55b4805139c4a1331ce5c07ea55e07c490b16"
+    }
+  ]
+}

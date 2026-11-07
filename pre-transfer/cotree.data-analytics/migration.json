@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.data-analytics",
+  "version": "0.2.0",
+  "category": "数据与商业",
+  "priority": 0,
+  "batch": 9,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "data-analytics",
+      "repository": "plugins",
+      "path": "plugins/data-analytics",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "87b947c93cb7f3deb3efb49b46078c9731c0d928fb47301b6f110b3a4f157d74",
+      "upstreamVersion": "0.2.8"
+    }
+  ],
+  "changes": [
+    "15 个顶层及 3 个嵌套方法归并为 12 个原生技能，移除宿主模式、自动分享和账户继承。",
+    "保留 canonical 校验器和完整阅读器，以可审计字面补丁适配路径和元数据，原快照不变。",
+    "原生 MCP 公开四个纯计算 JSON 工具，独立 CLI 生成只读自包含 HTML 并拒绝覆盖。"
+  ],
+  "limitations": [
+    "需要 Node 22+；普通 stdio 子进程不是 OS 沙箱。报告是离线快照，不刷新云数据。",
+    "CoTree 未提供来源 MCP Apps iframe bridge；render_* 返回 JSON，不声称内嵌图形已显示。Sites 导出工具不注册，发布走用户所选平台。",
+    "数据库、Google、发布需独立身份。PDF / Docs / Slides 方法已改造，真实账户、所有格式和模型分析质量需具体任务验收。",
+    "来源许可与第三方通知保留，本地迁移不授予额外对外分发权。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "index": "analyze：语义选择方法，不继承 Chat / Work 停止门。",
+    "gather-business-context": "context：决策者、问题、时间、数据和限制。",
+    "create-data-context": "context：授权的数据字典和口径，不写原宿主私有目录。",
+    "analyze-data-quality": "quality：质量、可比性、缺口和来源冲突。",
+    "design-kpis": "kpis：指标、分母、窗口、目标、守护指标与负责人。",
+    "metric-diagnostics": "diagnose：异常分解、假设与证据。",
+    "product-business-analysis": "analyze：漏斗、留存、分群、实验和上线决策。",
+    "kpi-reporting": "report：周期指标、可比基线、变化解释与行动。",
+    "market-sizing": "market：TAM / SAM / SOM、上下限与敏感性。",
+    "build-report": "report：真实校验器、完整便携 HTML 阅读器和不覆盖 CLI。",
+    "build-dashboard": "dashboard：有时间和状态的离线看板，线上刷新另行实现。",
+    "visualize-data": "visualize：chart / table JSON 校验与图形选择，复杂工程复用网页可视化包。",
+    "jupyter-notebooks": "notebook：可重放 notebook 与明确环境，不假定托管 Jupyter。",
+    "validate-data": "validate：查询、数值、来源一致性，四个纯计算 MCP 工具。",
+    "publish-artifact-to-sites": "export：本地交付或所选平台，原 Sites worker 写入工具不注册。",
+    "build-report/report-to-google-doc": "export：内容转换，复用 Google Drive docs / transfer，账户另验收。",
+    "build-report/report-to-google-slides": "export：版式、渲染，复用 Google Drive slides 与既有 CLI。",
+    "build-report/report-to-pdf": "export：浏览器打印 / 渲染并逐页核验，冻结交互与分页。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

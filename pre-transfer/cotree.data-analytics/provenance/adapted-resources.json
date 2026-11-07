@@ -1,0 +1,44 @@
+{
+  "resources": [
+    {
+      "source": "resources/source-01/content/mcp/server.cjs",
+      "destination": "runtime/analytics-core.cjs",
+      "replacements": [
+        [
+          "const PLUGIN_ROOT = path.resolve(__dirname, \"..\");",
+          "const PLUGIN_ROOT = path.resolve(__dirname, \"../resources/source-01/content\");"
+        ],
+        [
+          "path.join(PLUGIN_ROOT, \".codex-plugin\", \"plugin.json\")",
+          "path.resolve(__dirname, \"../plugin.json\")"
+        ],
+        [
+          "PLUGIN_MANIFEST.interface?.displayName",
+          "PLUGIN_MANIFEST.name"
+        ]
+      ],
+      "sourceSha256": "fea237bc37824d0c7c29090dcbdff97baa4324b1ff5c86af8025873fd6fdc7c6",
+      "sha256": "50e3e7b0c86ec555ccb9cb31ca5301bbd7c4cf24373b4ffe360cedbd9b9c3199"
+    },
+    {
+      "source": "resources/source-01/content/skills/build-report/scripts/build_portable_artifact.mjs",
+      "destination": "runtime/portable-builder.mjs",
+      "replacements": [
+        [
+          "const pluginRoot = resolve(scriptDirectory, \"../../..\");",
+          "const pluginRoot = resolve(scriptDirectory, \"../resources/source-01/content\");"
+        ],
+        [
+          "require(resolve(pluginRoot, \"mcp/server.cjs\"))",
+          "require(resolve(scriptDirectory, \"analytics-core.cjs\"))"
+        ],
+        [
+          "writeFileSync(outputPath, html, \"utf8\");",
+          "writeFileSync(outputPath, html, { encoding: \"utf8\", flag: \"wx\" });"
+        ]
+      ],
+      "sourceSha256": "edba8811aff3b40aed86c917a99ff81d35cd7a4cbd5f2b20b4b0c677fa117ca9",
+      "sha256": "b87604466192e72b9e252530fef15ff14868b1b4e982d38cd3da185a57576e6b"
+    }
+  ]
+}

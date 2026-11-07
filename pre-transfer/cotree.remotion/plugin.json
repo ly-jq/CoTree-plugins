@@ -1,0 +1,91 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.remotion",
+  "name": "Remotion",
+  "version": "0.2.0",
+  "description": "在 CoTree 中编写、预览和渲染 Remotion 视频，处理动画、字幕、媒体、地图和嵌入式播放器。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.remotion.create",
+      "description": "创建或扩展本地 Remotion 视频工程。",
+      "path": "skills/create/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.remotion.compose",
+      "description": "实现可复现的 Remotion 场景、时间线、动画和效果。",
+      "path": "skills/compose/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.remotion.media",
+      "description": "读取视频和音频元数据，修剪、同步和准备素材。",
+      "path": "skills/media/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.remotion.captions",
+      "description": "导入、转写、校对和动画显示字幕。",
+      "path": "skills/captions/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.remotion.maps",
+      "description": "制作静态或动态地图视频并保证逐帧稳定。",
+      "path": "skills/maps/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.remotion.interactive",
+      "description": "使 Remotion Studio 中的属性和时间线可编辑。",
+      "path": "skills/interactive/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.remotion.preview",
+      "description": "启动并检查 Remotion Studio 的实际画面。",
+      "path": "skills/preview/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.remotion.render",
+      "description": "渲染 Remotion 视频或单帧，并核对输出媒体。",
+      "path": "skills/render/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.remotion.app",
+      "description": "将 Remotion Player 和视频渲染集成到应用。",
+      "path": "skills/app/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.remotion.docs",
+      "description": "查找与工程版本匹配的 Remotion API 文档。",
+      "path": "skills/docs/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.remotion.upgrade",
+      "description": "升级 Remotion 依赖并保留 CoTree 原生技能。",
+      "path": "skills/upgrade/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "c1d23d5495509c98326ba05f67a1fef6020d8f80fb72d72420093ffbdc41bf1a"
+  }
+}

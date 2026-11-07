@@ -1,0 +1,73 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.google-calendar",
+  "name": "Google Calendar",
+  "version": "0.2.0",
+  "description": "在 CoTree 中查看 Google 日程、查询忙闲、准备会议并创建或调整事件，含独立 Calendar REST。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.google-calendar.connect",
+      "description": "配置独立 Google Calendar OAuth、REST 与 MCP 预览路径。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.google-calendar.agenda",
+      "description": "读取 Google 日历时间窗口，正确处理重复、全天、取消项与分页。",
+      "path": "skills/agenda/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.google-calendar.availability",
+      "description": "查询 Google 忙闲并按参与者、时区和可见性提出时间方案。",
+      "path": "skills/availability/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.google-calendar.schedule",
+      "description": "创建 Google 日历事件并核实参与者、时区、会议链接和通知范围。",
+      "path": "skills/schedule/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.google-calendar.modify",
+      "description": "调整或删除 Google 事件，区分单次、系列和通知影响。",
+      "path": "skills/modify/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.google-calendar.brief",
+      "description": "按 Google 真实日程生成日简报与会议准备材料。",
+      "path": "skills/brief/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "google-calendar",
+      "transport": "streamable-http",
+      "url": "https://calendarmcp.googleapis.com/mcp/v1",
+      "headersEnv": {
+        "Authorization": "COTREE_GOOGLE_CALENDAR_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "2d83516e6b7967bc7d8c0c7242463d3f2c0c652ddd8f0244229d71ba9ff2bdde"
+  }
+}

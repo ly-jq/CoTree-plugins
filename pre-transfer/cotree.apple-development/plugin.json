@@ -1,0 +1,128 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.apple-development",
+  "name": "Apple 应用开发",
+  "version": "0.2.0",
+  "description": "统一 iOS / macOS 的 SwiftUI、构建调试、性能与分发工作流，通过独立 XcodeBuildMCP 接入。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/app-icon.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.apple-development.build",
+      "description": "发现、构建与运行 iOS / macOS Xcode 和 SwiftPM 工程。",
+      "path": "skills/build/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.test",
+      "description": "运行并诊断 Apple 单元、集成与 UI 测试。",
+      "path": "skills/test/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.swiftui",
+      "description": "实现 iOS 与 macOS SwiftUI 导航、状态、场景和控件。",
+      "path": "skills/swiftui/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.refactor",
+      "description": "重构 SwiftUI View 与场景，保留数据流和可观察行为。",
+      "path": "skills/refactor/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.glass",
+      "description": "按平台 SDK 实现和评估 SwiftUI Liquid Glass。",
+      "path": "skills/glass/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.windows",
+      "description": "调整 macOS 窗口、标题栏、位置、恢复和多窗口行为。",
+      "path": "skills/windows/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.appkit",
+      "description": "通过窄边界连接 SwiftUI 与 AppKit。",
+      "path": "skills/appkit/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.intents",
+      "description": "把 Apple 应用动作和实体暴露给 App Intents 系统入口。",
+      "path": "skills/intents/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.performance",
+      "description": "分析 SwiftUI 性能和 iOS Simulator ETTrace。",
+      "path": "skills/performance/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.memory",
+      "description": "收集和解释 Apple leaks / memgraph 的内存证据。",
+      "path": "skills/memory/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.preview",
+      "description": "预览 SwiftUI 与 iOS Simulator，并验证真实渲染。",
+      "path": "skills/preview/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.telemetry",
+      "description": "添加和核对 macOS Logger 运行时事件。",
+      "path": "skills/telemetry/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.signing",
+      "description": "诊断 Apple 签名、Entitlements、沙箱和 Gatekeeper。",
+      "path": "skills/signing/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.apple-development.distribute",
+      "description": "准备 macOS archive、打包、公证与分发验证。",
+      "path": "skills/distribute/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "cotree.apple-development.xcodebuildmcp",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "xcodebuildmcp@2.7.0",
+        "mcp"
+      ],
+      "env": {
+        "XCODEBUILDMCP_ENABLED_WORKFLOWS": "simulator,macos,swift-package,project-discovery,ui-automation,debugging",
+        "XCODEBUILDMCP_SENTRY_DISABLED": "true",
+        "XCODEBUILDMCP_DISABLE_XCODE_AUTO_SYNC": "true"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "a7c5bc44b7d0d5a9835aee1af774f4d95afc7124ccfa198017c6389d7cf9254e"
+  }
+}

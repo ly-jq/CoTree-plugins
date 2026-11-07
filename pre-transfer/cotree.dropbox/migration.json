@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.dropbox",
+  "version": "0.2.0",
+  "category": "团队协作与知识",
+  "priority": 0,
+  "batch": 12,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "dropbox",
+      "repository": "plugins",
+      "path": "plugins/dropbox",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "fcb2576e10fa35452214b4d3354ac39307587f3881a69c9ec321b5fef8de9d4c",
+      "upstreamVersion": "5.0.1"
+    }
+  ],
+  "changes": [
+    "六个来源技能改为九个原生工作流，保留浅色 / 深色图标、三张预览图和完整来源。",
+    "修订旧的永久缺失结论：恢复、邀请、Paper 等以当前工具目录及实际账户为准；异步工作逐项核实。"
+  ],
+  "limitations": [
+    "已适配原生 Skill 与官方 MCP 声明；真实账户读写、权限 / 过期恢复仍待验收。静态 headersEnv 不实现 OAuth 注册、登录、刷新或撤销，不读取来源宿主会话。",
+    "官方 DCR 只对支持的客户端开放；CoTree 准入未确认。其他客户端需独立 Dropbox 应用及有效 token，真实账户路径待验收。",
+    "内容提取、Paper、恢复、邀请、团队 namespace 和后台任务能力受工具目录 / 套餐 / 权限影响，不保证任意文件可提取或恢复。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "find-dropbox-content / inspect-dropbox-file": "find / inspect：身份与 namespace、分页、元数据、内容提取和分享状态。",
+    "organize-dropbox-folder": "organize：创建、复制、移动；实际后台 job 状态与逐项结果。",
+    "share-dropbox-content": "share：现有链接与实际权限，按当前 schema 支持的邀请能力执行，不沿用旧的永久缺失结论。",
+    "collect-files-with-request": "collect：文件请求 ID、子目录、期限、开放状态与上传去向。",
+    "clean-up-dropbox-content": "cleanup：精确对象、共享影响、可选备份完成后删除和后台状态。",
+    "source recovery limitations / current service": "recover：当前目录有版本 / 恢复工具才执行；旧来源限制只作历史记录。",
+    "current Paper capabilities": "paper：按实际客户端 / 工具能力读写 Paper，缺失时不宣称可用。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

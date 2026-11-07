@@ -1,0 +1,422 @@
+{
+  "observedAt": "2026-10-14T05:37:06.335Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "dependencyVersions": {
+    "@shopify/dev-mcp": "1.16.0",
+    "twilio": "6.2.0"
+  },
+  "scope": "public-developer-docs-offline-schema-and-loopback-webhooks",
+  "credentialsSent": false,
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "results": {
+    "elyra.shopify": {
+      "packageDigest": "6d4dc7f1c32446c5d396fd0d83cb9f886cd765c1ab690e3d3e8957df257dfcac",
+      "status": "isolated-shopify-tools",
+      "tools": [
+        "feedback",
+        "learn_shopify_api",
+        "search_docs_chunks",
+        "validate",
+        "validate_theme"
+      ],
+      "called": [
+        "learn_shopify_api",
+        "search_docs_chunks",
+        "validate",
+        "validate (negative fixture)"
+      ],
+      "validatorResults": [
+        {
+          "api": "admin",
+          "schemaVersion": "2026-04",
+          "positive": "accepted",
+          "negative": "rejected",
+          "queriesExecuted": false
+        },
+        {
+          "api": "customer",
+          "schemaVersion": "2026-04",
+          "positive": "accepted",
+          "negative": "rejected",
+          "queriesExecuted": false
+        },
+        {
+          "api": "partner",
+          "schemaVersion": "2026-04",
+          "positive": "accepted",
+          "negative": "rejected",
+          "queriesExecuted": false
+        },
+        {
+          "api": "payments-apps",
+          "schemaVersion": "2026-04",
+          "positive": "accepted",
+          "negative": "rejected",
+          "queriesExecuted": false
+        },
+        {
+          "api": "storefront-graphql",
+          "schemaVersion": "2026-04",
+          "positive": "accepted",
+          "negative": "rejected",
+          "queriesExecuted": false
+        }
+      ],
+      "sourceCoverage": {
+        "sourceSkills": 20,
+        "nativeSkills": 7,
+        "archivedFiles": 103
+      },
+      "launch": "direct Node entrypoint of isolated official 1.16.0; manifest npx bootstrap and other platforms not exercised",
+      "storeOperations": "not-tested",
+      "ucpShopping": "not-tested"
+    },
+    "elyra.twilio-developer-kit": {
+      "packageDigest": "201f0c57ed29f66356b698b834814429963d9f9c6b7afb7cfe43b5d6dd43259f",
+      "status": "isolated-twilio-webhook",
+      "checks": [
+        {
+          "check": "signed-form-multivalue",
+          "httpStatus": 200
+        },
+        {
+          "check": "changed-body",
+          "httpStatus": 403
+        },
+        {
+          "check": "missing-signature",
+          "httpStatus": 403
+        },
+        {
+          "check": "unsupported-json",
+          "httpStatus": 415
+        },
+        {
+          "check": "untrusted-proxy-host",
+          "httpStatus": 403
+        },
+        {
+          "check": "method-rejected",
+          "httpStatus": 405
+        }
+      ],
+      "externalDelivery": "not-tested",
+      "businessProcessing": false,
+      "sourceCoverage": {
+        "sourceSkills": 55,
+        "nativeSkills": 12,
+        "archivedFiles": 114
+      },
+      "accountAuthentication": "not-tested"
+    },
+    "elyra.zoom": {
+      "packageDigest": "d64d18cfc9053bed5e418abe40167d752a437032e56ddbdcd7dd13e8a271fd5f",
+      "status": "isolated-zoom-webhook",
+      "checks": [
+        {
+          "check": "signed-crc-raw-bytes",
+          "httpStatus": 200
+        },
+        {
+          "check": "changed-whitespace",
+          "httpStatus": 403
+        },
+        {
+          "check": "stale-request",
+          "httpStatus": 403
+        },
+        {
+          "check": "future-request",
+          "httpStatus": 403
+        },
+        {
+          "check": "unsigned-challenge",
+          "httpStatus": 403
+        },
+        {
+          "check": "signed-broken-json",
+          "httpStatus": 400
+        },
+        {
+          "check": "protocol-ack-only",
+          "httpStatus": 200
+        },
+        {
+          "check": "method-rejected",
+          "httpStatus": 405
+        }
+      ],
+      "externalDelivery": "not-tested",
+      "businessProcessing": false,
+      "anonymousStatus": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "sourceCoverage": {
+        "sourceSkills": 27,
+        "nativeSkills": 12,
+        "archivedFiles": 792
+      },
+      "accountAuthentication": "not-tested",
+      "meetingRead": "not-tested"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\source-coverage.json",
+      "sha256": "9019aeccced3458e2bc2ad31a3d840c02e44e191a2207d850b3c90629a182472",
+      "bytes": 291
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\admin-valid.graphql",
+      "sha256": "56bd24d0c49e9b759452bb112b850eccccfad7fc2c48ccc619b14b3e968946c7",
+      "bytes": 24
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\admin-invalid.graphql",
+      "sha256": "7c6c6ce4af3d97a96dff2c3cf1961c4bef33a6398213181fc6629e66d6cf4986",
+      "bytes": 46
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\admin-valid.json",
+      "sha256": "0fe7d52e680ac04e3541d10eb199dd22ee9fff32a0d7b1595a12441991ac4494",
+      "bytes": 204
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\admin-invalid.json",
+      "sha256": "cff6df381eaf3426942f4dac9b363f588880690b59a2fc571c5bb4cc152c384a",
+      "bytes": 260
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\customer-valid.graphql",
+      "sha256": "4ef8d269e7944ef2cd6554ecb3d73164546945cf935806933448905abec554e5",
+      "bytes": 21
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\customer-invalid.graphql",
+      "sha256": "7c6c6ce4af3d97a96dff2c3cf1961c4bef33a6398213181fc6629e66d6cf4986",
+      "bytes": 46
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\customer-valid.json",
+      "sha256": "53b42ec5b29c34a98e985ebb20732ac5a6f245913055d56770892488e26ad216",
+      "bytes": 204
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\customer-invalid.json",
+      "sha256": "f72b380644c890fc7a8d498c9b3a27c1967907b0ddf3e5b7ae0c4b977ea80ecb",
+      "bytes": 260
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\partner-valid.graphql",
+      "sha256": "4ef8d269e7944ef2cd6554ecb3d73164546945cf935806933448905abec554e5",
+      "bytes": 21
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\partner-invalid.graphql",
+      "sha256": "7c6c6ce4af3d97a96dff2c3cf1961c4bef33a6398213181fc6629e66d6cf4986",
+      "bytes": 46
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\partner-valid.json",
+      "sha256": "2fb446e070c8992642d13e1cb5ebb092dee8c538afbc939dd18140e628ccf715",
+      "bytes": 204
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\partner-invalid.json",
+      "sha256": "6f507546cf4b727441eaed6b134d0d680b19f264893138d8c9fbec292931e1c6",
+      "bytes": 260
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\payments-apps-valid.graphql",
+      "sha256": "4ef8d269e7944ef2cd6554ecb3d73164546945cf935806933448905abec554e5",
+      "bytes": 21
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\payments-apps-invalid.graphql",
+      "sha256": "7c6c6ce4af3d97a96dff2c3cf1961c4bef33a6398213181fc6629e66d6cf4986",
+      "bytes": 46
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\payments-apps-valid.json",
+      "sha256": "eb791c523bc89c2b526dd3b6f7c371b5664104dc26f75781ab3f7b2fc9f196aa",
+      "bytes": 204
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\payments-apps-invalid.json",
+      "sha256": "0d5be30e67ecc3ec14e1e28a6b7b0366bc138cd6737a2843c035a161123b7fca",
+      "bytes": 260
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\storefront-graphql-valid.graphql",
+      "sha256": "4ef8d269e7944ef2cd6554ecb3d73164546945cf935806933448905abec554e5",
+      "bytes": 21
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\storefront-graphql-invalid.graphql",
+      "sha256": "7c6c6ce4af3d97a96dff2c3cf1961c4bef33a6398213181fc6629e66d6cf4986",
+      "bytes": 46
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\storefront-graphql-valid.json",
+      "sha256": "e1068f3e6e6458143bfc3ac1b3b75caea975967bf23c8cbdff0833bd8d7622ec",
+      "bytes": 204
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\storefront-graphql-invalid.json",
+      "sha256": "a1dabe70ebbf0ae65f9d3f35ab70f6f37ed392544d63fd064dbb031213dcc1cf",
+      "bytes": 260
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\node_modules\\@shopify\\dev-mcp\\package.json",
+      "sha256": "13a305d0bc6b13379dfa2bfcdaf2edb754bacad819b7a3c1bc53d763697f65f9",
+      "bytes": 2465
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\node_modules\\twilio\\package.json",
+      "sha256": "78e405860f329546cbbed98c4a794774a92bdfcd3059de06c507abf30859da70",
+      "bytes": 2107
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\package-lock.json",
+      "sha256": "4ac6aed0fe8edf2a9539a9ee61d7179cdde77d718a7f37981a06fd2c817756ab",
+      "bytes": 202153
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\shopify-tools.json",
+      "sha256": "6b26e04aa9aefd5b226d13d3fc0ae99b4caa2af19a12d4cfb3358b99df62ddd8",
+      "bytes": 31660
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\shopify-learn.json",
+      "sha256": "2be9b8c304707c289313a69b7c0c22cd60ca6e5a05cb449a2be80c3aa4c1662a",
+      "bytes": 3661
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\shopify-docs.json",
+      "sha256": "b23340b96ef25cbc1a65db2619e0d07b26f38c69a18dbb61b0b2d2d0021d5e46",
+      "bytes": 2056
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\shopify-mcp-validate.json",
+      "sha256": "feb593bd4920a9ac02016e66354aa60991d6c4b102075bb342f4b02810bc18f3",
+      "bytes": 461
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\shopify-mcp-invalid.json",
+      "sha256": "e9eb72e6a3f6753fdda24a20e8b855fd961d7cc525b2b98c9222261661f1d0fb",
+      "bytes": 518
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\twilio-developer-kit-scaffold.json",
+      "sha256": "8370d9b926e4e94de15b5c52be528a9e7973635c6b4d0b02768b19d3b7891647",
+      "bytes": 180
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\probe-twilio-developer-kit-runtime-check-final\\.env.example",
+      "sha256": "702c66636b5ce705d2686dd7fce0016edd7ce9f5ae2c9767fa555e9ec78cb59e",
+      "bytes": 88
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\probe-twilio-developer-kit-runtime-check-final\\.gitignore",
+      "sha256": "f735baee67fea65b81a02e5526237a2b48e92e9b706640ee5f4e12f9de84e071",
+      "bytes": 40
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\probe-twilio-developer-kit-runtime-check-final\\package.json",
+      "sha256": "e07394b7f6f9e852cfb59ea2d66ca3cdd727a2fc37adffee755f01e9525b91b6",
+      "bytes": 311
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\probe-twilio-developer-kit-runtime-check-final\\README.md",
+      "sha256": "26b8dd1082aada81591450aa5ce1cf4202664f12b3fcc9fc114601a622cc081f",
+      "bytes": 1402
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\probe-twilio-developer-kit-runtime-check-final\\server.mjs",
+      "sha256": "783833b7db9fe5bb029e369139cf0687356776014047978d1ae28617fd468dcf",
+      "bytes": 2232
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\probe-twilio-developer-kit-runtime-check-final\\webhook.mjs",
+      "sha256": "99373d72431e5bcdb4f153612f4fcf0e05033a96ec8b6bb0dd6c5eb87e96f0a9",
+      "bytes": 1773
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\twilio-developer-kit-existing-rejected.txt",
+      "sha256": "3f1691a83aeed77362c0971a336e4403833a50896134eb80ea4fa93bacb4da92",
+      "bytes": 140
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\twilio-developer-kit-syntax.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\twilio-developer-kit-http.json",
+      "sha256": "8fecd5e2f18c1f2d696a75e24cfc0f826958acd2b5f66fc9970471f193ef7c35",
+      "bytes": 526
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\zoom-scaffold.json",
+      "sha256": "84b3293a1c88baf86bf76fadd76a0f8d7d1cb8cc0272f4397db0219d5d74d45b",
+      "bytes": 164
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\probe-zoom-runtime-check-final\\.env.example",
+      "sha256": "265924e6e79b7d04fcb141587bd1e5d138e2432d5dbe90e6d64f5da21d48003f",
+      "bytes": 37
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\probe-zoom-runtime-check-final\\.gitignore",
+      "sha256": "f735baee67fea65b81a02e5526237a2b48e92e9b706640ee5f4e12f9de84e071",
+      "bytes": 40
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\probe-zoom-runtime-check-final\\package.json",
+      "sha256": "269cf6dd0f1d1cf04c4417a450c15baaaef5eee00f8dec4b1d08a1126be74a46",
+      "bytes": 262
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\probe-zoom-runtime-check-final\\README.md",
+      "sha256": "9f4242d779be1bc160ddcf05cd5829d8981b3f0902739531562b9252409d244b",
+      "bytes": 1172
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\probe-zoom-runtime-check-final\\server.mjs",
+      "sha256": "783833b7db9fe5bb029e369139cf0687356776014047978d1ae28617fd468dcf",
+      "bytes": 2232
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime\\probe-zoom-runtime-check-final\\webhook.mjs",
+      "sha256": "5bb30508a665e5c254004a1827bca961913809eb5c9f1e0546b11837d1d03e1e",
+      "bytes": 2385
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\zoom-existing-rejected.txt",
+      "sha256": "2b8e85038f28913cb923f97448d5cb9f321eae45bf6dce010b704b210035625b",
+      "bytes": 124
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\zoom-syntax.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\zoom-http.json",
+      "sha256": "3ed93260add4924777e455086aad0a39caf454592793fb981a40a42fc4450293",
+      "bytes": 669
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch23\\runtime-check-final\\zoom-anonymous.json",
+      "sha256": "83c5df59e80ec9aaccd5da6262077379f047f656c65337a4fc5d796a22832ddd",
+      "bytes": 297
+    }
+  ]
+}

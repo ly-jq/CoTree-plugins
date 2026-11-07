@@ -1,0 +1,14 @@
+const [input, ...extra] = process.argv.slice(2);
+if (!input || extra.length) throw new Error('Usage: node parse-target.mjs <Figma file or node URL>');
+const url = new URL(input);
+if (url.protocol !== 'https:' || !['figma.com', 'www.figma.com'].includes(url.hostname) || url.port || url.username || url.password) throw new Error('Expected an HTTPS figma.com URL.');
+const parts = url.pathname.split('/').filter(Boolean);
+const kind = parts[0], fileKey = parts[1];
+if (!['design', 'file', 'board', 'slides', 'proto'].includes(kind) || !fileKey || !/^[A-Za-z0-9]+$/.test(fileKey)) throw new Error('Unsupported Figma file URL.');
+let nodeId = url.searchParams.get('node-id');
+if (nodeId && !/^\d+[:-]\d+$/.test(nodeId)) throw new Error('Unsupported node-id. Read the target from Figma instead of guessing.');
+if (nodeId) nodeId = nodeId.replace('-', ':');
+const branchIndex = parts.indexOf('branch', 2);
+const branchKey = branchIndex >= 0 ? parts[branchIndex + 1] : undefined;
+if (branchIndex >= 0 && (!branchKey || !/^[A-Za-z0-9]+$/.test(branchKey))) throw new Error('Invalid branch key.');
+process.stdout.write(JSON.stringify({ fileKey, ...(branchKey ? { branchKey } : {}), nodeId, editor: kind === 'board' ? 'figjam' : kind === 'slides' ? 'slides' : 'design', url: url.href, verifiedByService: false }, null, 2) + '\n');

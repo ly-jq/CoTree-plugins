@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.magicpath",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 20,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "magicpath",
+      "repository": "plugins",
+      "path": "plugins/magicpath",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "3dc8bb78ae479f9e636e7b910a8f211390c9237921caea168501e671d7bab549",
+      "upstreamVersion": "0.1.2"
+    }
+  ],
+  "changes": [
+    "原综合技能拆为七项原生工作流，覆盖仓库到画布、画布到工程、主题、图片和浏览器。",
+    "固定 magicpath-ai 2.6.1，本地只读命令辅助器按 argv 执行，支持取消、超时和输出限制；默认只展示计划。",
+    "独立 MAGICPATH_TOKEN / CLI 登录与 CoTree 浏览器身份分开；保留原图标和完整三份来源参考。"
+  ],
+  "limitations": [
+    "本机只验证 CLI / 无账户状态 / URL 生成和辅助器，不代表真实团队、组件下载、上传、canvas build 或浏览器账户已验收。",
+    "写入使用固定官方 CLI；add 可能安装依赖，code start 也创建待处理 revision。CLI 版本变更、外部下载内容及服务端约束需再次核对。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "info / login / whoami": "connect：固定 CLI 和独立身份；不安装来源宿主 setup-skills。",
+    "search / projects / components / teams / people / selection": "discover：当前项目、团队、组件、分页与唯一目标。",
+    "inspect / add / framework translation": "integrate：先读源码与 dry-run，React 安装或其他栈翻译，真实应用验证。",
+    "code start / context / submit / status / working-with-repositories": "canvas：状态化工作目录、允许文件边界、待构建 revision 与结果回读；start 也会写远端。",
+    "list-themes / get-theme": "themes：CSS 变量、字体、light / dark 与原工程衔接。",
+    "image list / add / assetPath": "images：先读目标与素材许可，授权上传并核对实际图像回执。",
+    "share / view / embedded browser": "share：生成 URL 与实际访问分开，使用 CoTree 现有浏览器，CLI 身份与浏览器身份独立。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

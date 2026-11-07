@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.frontend-design",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 1,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "frontend-design",
+      "repository": "claude-plugins-official",
+      "path": "plugins/frontend-design",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "88492e9297e86faad918a742987c3ae2bfc6ddb8ce783e10c1fd976e9669fcad"
+    }
+  ],
+  "changes": [
+    "用 CoTree 原生文件 / 浏览器工具执行设计流程，移除宿主命令依赖。",
+    "保留设计、实现、视觉复核的完整交付步骤，遵守已有设计系统。"
+  ],
+  "limitations": [
+    "视觉与交互验收需要项目可运行及实际浏览器能力；无浏览器时明确报告未完成视觉验证。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "design direction / implementation / critique": "design：需求、视觉方向、代码、响应式、可访问性、真实浏览器复核。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

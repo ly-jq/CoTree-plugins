@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.mcp-tunnels",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "mcp-tunnels",
+    "repository": "claude-plugins-official",
+    "path": "plugins/mcp-tunnels",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "f892d9cfad1df512190b4865dab8ecf74916d47447dc81ab003e30b0f6c6e62f"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "依赖 Anthropic 隧道和 Claude 平台配置，不是独立 MCP endpoint。"
+  ],
+  "components": [
+    {
+      "kind": "command",
+      "source": "commands/create-docker-mcp-tunnel.md",
+      "state": "deferred",
+      "reason": "依赖 Anthropic 隧道和 Claude 平台配置，不是独立 MCP endpoint。"
+    }
+  ],
+  "copiedFiles": 3,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "be4390f5fc15ab6a22391be8a3e053d79b18a354d20ae8efeb4e8ee73b263cd5"
+    },
+    {
+      "path": "commands/create-docker-mcp-tunnel.md",
+      "sha256": "081b358152d25e86f0d6dec6ad6457b5e06f4e460fc15c076b404d761a2514ff"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "5d420f1f61885787952e47537102192bc46ff8f5c5fe44b228594a7b5f91c178"
+    }
+  ]
+}

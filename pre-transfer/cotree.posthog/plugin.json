@@ -1,0 +1,78 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.posthog",
+  "name": "PostHog",
+  "version": "0.2.0",
+  "description": "用独立 PostHog MCP 身份分析产品数据、管理开关和实验、调查错误与组织洞察。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "darkIcon": "resources/source-01/content/assets/logo-dark.png",
+    "readme": "README.md",
+    "screenshots": [
+      "resources/source-01/content/assets/screenshot-1.png",
+      "resources/source-01/content/assets/screenshot-2.png"
+    ]
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.posthog.connect",
+      "description": "配置独立身份并核对 PostHog 项目。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.posthog.analyze",
+      "description": "查询产品分析、漏斗、留存和 HogQL。",
+      "path": "skills/analyze/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.posthog.flags",
+      "description": "读取和管理功能开关。",
+      "path": "skills/flags/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.posthog.experiments",
+      "description": "设计和评估 PostHog 实验。",
+      "path": "skills/experiments/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.posthog.observe",
+      "description": "调查错误、会话回放和 LLM 分析。",
+      "path": "skills/observe/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.posthog.manage",
+      "description": "组织调查、洞察、看板与数据仓库。",
+      "path": "skills/manage/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "posthog",
+      "transport": "streamable-http",
+      "url": "https://mcp.posthog.com/mcp?mode=tools&readonly=true",
+      "headersEnv": {
+        "Authorization": "COTREE_POSTHOG_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "6e3779f9372cf63b75617e37b082fb86ac9b122712902bb7c59ee024c6e28b8d"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.temporal",
+  "name": "Temporal",
+  "version": "0.2.0",
+  "description": "在 CoTree 中开发、测试、诊断和运维 Temporal 工作流，区分本地服务与独立云身份。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.temporal.inspect",
+      "description": "识别 Temporal 工程、SDK、服务和任务队列。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.temporal.local",
+      "description": "准备并运行隔离的本地 Temporal 学习或复现环境。",
+      "path": "skills/local/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.temporal.develop",
+      "description": "实现确定性的 Temporal Workflow 与可重试 Activity。",
+      "path": "skills/develop/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.temporal.interact",
+      "description": "按目标启动、查询或发送 Temporal 工作流消息。",
+      "path": "skills/interact/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.temporal.test",
+      "description": "用实际测试、历史回放和版本策略验证 Temporal 改动。",
+      "path": "skills/test/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.temporal.diagnose",
+      "description": "根据历史和服务状态排查 Temporal 执行故障。",
+      "path": "skills/diagnose/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.temporal.tune",
+      "description": "根据 Temporal Worker 指标调整吞吐与延迟。",
+      "path": "skills/tune/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.temporal.operate",
+      "description": "管理或诊断 Temporal namespace、计划与运行对象。",
+      "path": "skills/operate/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.temporal.cloud",
+      "description": "配置独立 Temporal Cloud 身份并验收目标工作流。",
+      "path": "skills/cloud/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.temporal.serverless",
+      "description": "按实际可用的 WCI 能力部署或诊断无服务器 Temporal Worker。",
+      "path": "skills/serverless/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "1e25a36006d3aa44ffa0363e3660ffd9b88ffb7214d660e2add139f429dd106f"
+  }
+}

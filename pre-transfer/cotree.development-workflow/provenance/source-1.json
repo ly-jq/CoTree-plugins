@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.feature-dev",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "feature-dev",
+    "repository": "claude-plugins-official",
+    "path": "plugins/feature-dev",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "b42236ad5c5b9e15fb2a2616a43d05d77ee98080476e29eacb1ad7c4dddcc3b8"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "Agent import.claude.feature-dev.code-architect 保留模型引用 sonnet；需配置对应 Elyra 模型，不静默改变模型选择。",
+    "Agent import.claude.feature-dev.code-explorer 保留模型引用 sonnet；需配置对应 Elyra 模型，不静默改变模型选择。",
+    "Agent import.claude.feature-dev.code-reviewer 保留模型引用 sonnet；需配置对应 Elyra 模型，不静默改变模型选择。"
+  ],
+  "components": [
+    {
+      "kind": "command",
+      "source": "commands/feature-dev.md",
+      "state": "converted",
+      "target": "content/commands/feature-dev.md",
+      "sourceMetadata": {
+        "description": "Guided feature development with codebase understanding and architecture focus",
+        "argument-hint": "Optional feature description"
+      }
+    },
+    {
+      "kind": "agent",
+      "source": "agents/code-architect.md",
+      "state": "converted",
+      "target": "content/agents/code-architect.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/code-explorer.md",
+      "state": "converted",
+      "target": "content/agents/code-explorer.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/code-reviewer.md",
+      "state": "converted",
+      "target": "content/agents/code-reviewer.md"
+    }
+  ],
+  "copiedFiles": 6,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "0ae678a1a25c12ce244624ecf33adffd05ede8e4898748bd7a954c4deb3dde3f"
+    },
+    {
+      "path": "agents/code-architect.md",
+      "sha256": "42a0d2ea0de9594f6a758d79ca5c2c569178b27e143a6f005d1880006fe183cb"
+    },
+    {
+      "path": "agents/code-explorer.md",
+      "sha256": "5153a1c8a46244602deee80bb4bd616fe241258827b8777ae9511ab54a5c4a35"
+    },
+    {
+      "path": "agents/code-reviewer.md",
+      "sha256": "ff937151eb3efa1580fd2c407f7e30119728e4af2ed69d263a4953d3a2b876cf"
+    },
+    {
+      "path": "commands/feature-dev.md",
+      "sha256": "16a6d628c02ee54bfaf662a355d17b14de8da3942a8f4f535086078bc47b75af"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "eb0d1badf0727fd04722b6d522f696487cbf70e8dfe90bd371dec44016e98ec3"
+    }
+  ]
+}

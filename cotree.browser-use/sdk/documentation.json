@@ -1,0 +1,114 @@
+[
+  {
+    "tools": ["BrowserTabs", "BrowserAct"],
+    "text": "Native file chooser handoff (supported Electron hosts): capture tab.events().cursor before input, then inspect the input receipt or waitForEvent('fileChooser',{after:cursor}). The host observes Page.fileChooserOpened without suppressing the OS dialog; a chooser stops dependent batch input and carries source sessionId/tabId/operationId/frame plus the return target. sourceHost identifies the source process/window where available, not the new native dialog. Enumerate actual desktop windows, verify the relationship and bind a unique window before desktop input; never reuse page coordinates or infer a window from its title. After the native step, re-observe the original tab and inspect the selected file/result. The event is historical, not proof the dialog is still open or that upload succeeded. Unsupported backends report unavailable; never replay the click to recover an unknown transition."
+  },
+  {
+    "tools": ["BrowserDiagnostics"],
+    "text": "tab.diagnostics('console.list'|'network.list'|'network.request',{limit?,requestId?}) reads bounded recent diagnostics for this observed session/tab. limit is 1-100 (default 30); network.request requires an observed requestId. Network output is metadata only: URLs omit credentials/query/fragment, response bodies/headers/cookies are excluded, and transferState distinguishes pending/failed/complete from HTTP status. Console entries are bounded untrusted application text. This optional tool requires the plugin's pageContent and networkMetadata grants plus host authority; the bundled networkMetadata deny is preserved. It never evaluates JavaScript, sends CDP commands, clears logs, enables capture or performs network requests. Unsupported backends report unavailable; empty entries do not prove success. Diagnostics do not refresh UI observations or release an uncertain-input boundary."
+  },
+  {
+    "text": "START HERE: An open browser page and a JavaScript handle are separate. session is an initially empty user-owned object: no tab property is prebound. First read ControlScript({mode:'documentation'}) for the live runtime/bindings and outer argument schema. If the target IDs are not yet observed, execute {code:'return await browser.tabs();'} and read the returned array. Then initialize a handle with browser.getTab using BOTH observed tabId and sessionId, assign it to session, and observe. If the task requests a new page, initialize it with browser.open using the task URL. Only later cells in that same live heap may reuse the assigned property. After close/cancel/restart, bind again; never recover identity by reading a missing handle. All browser method options below belong inside the JavaScript code string, not as top-level ControlScript fields."
+  },
+  {
+    "text": "cotree-browser-sdk-v1. SAFETY ORDER: after every click/fill/select/check/press/scroll or batch, make the next SDK call observe() before any other write. If a call reports BROWSER_DECISION_BOUNDARY or an unknown effect, observe the current page and inspect the retained receipt; never replay that input or change cellId to retry it. Use ControlScript only; raw Browser* calls are internal SDK dependencies. Omit cellId to use the host's invocation identity. If you supply cellId, change it whenever code or the optional goal label changes. ControlScript accepts an optional goal intent label retained in the cell receipt; this does not verify a browser outcome. Each cell is an async function; await calls and return evidence. Save handles/functions on session; only state + await checkpoint() survive process restart. A retained cell receipt does not recreate its handles or refresh its observations."
+  },
+  {
+    "tools": [
+      "BrowserTabs"
+    ],
+    "text": "await browser.tabs(sessionId?) returns an array of actual tabs, each with tabId, sessionId, url, title and active. active means the browser session's selected tab; it does not prove the tab is presented in the user's window or eligible for a viewport screenshot. Return the array to observe identities, then bind browser.getTab(item.tabId,{sessionId:item.sessionId}); never guess a session ID. A new script session has no saved handles: initialize session.tab before reading its properties."
+  },
+  {
+    "tools": [
+      "BrowserTabs",
+      "BrowserSnapshot"
+    ],
+    "text": "session.tab = await browser.getTab(observedTabId,{sessionId?}); return await session.tab.observe(); Binding validates the tab and caches its initial observation. tab.tabId and tab.sessionId are read-only identities; operations remain bound to that tab when another tab becomes active."
+  },
+  {
+    "tools": [
+      "BrowserOpen",
+      "BrowserSnapshot"
+    ],
+    "text": "session.tab = await browser.open(url,{sessionId?}); return await session.tab.observe(); Opening also observes the page."
+  },
+  {
+    "tools": [
+      "BrowserSnapshot"
+    ],
+    "text": "tab.observe({query?,queryMode?,roles?,frameId?,interactive?,maxBytes?}) reads fresh state. queryMode accepts only any (default), all, or exact; text is not a queryMode. The text result field is independent of queryMode. tab.observe() always reads current state; capturedAt/document/mutationRevision describe that sample. tab.attachedObservation() explicitly reads cached evidence marked freshness:not_rechecked, without releasing an input boundary. tab.observe({since:baselineId}) returns a smaller delta only against the last complete, same-document baseline you received. Delta has added/changed/removed refs and optional replacement text; absence of text means unchanged. Otherwise it returns full. Pagination observationId is separate. After compaction or restart, obtain full state. browser.resetObservations() clears caches; browser.documentation() repeats this guide."
+  },
+  {
+    "tools": [
+      "BrowserAct"
+    ],
+    "text": "Use observed refs with byRef(ref), or getByRole(role,{name,exact?,frameId?}) / getByLabel(name) / locator({role,name,frameId?}). locator() accepts role/name/label/hasText/exact/frameId, nested within scopes (up to six), and zero-based nth; strings and {ref} require byRef(ref) instead. Locators support click({expect?,timeoutMs?,clickCount?}), hover({expect?,timeoutMs?}), fill(text), press(key,{expect?}), selectOption({label} or {value}), setChecked(bool), setRange(number), inspect(), isEnabled(), isChecked(), inputValue(), textContent(). tab.click(ref,{expect?,clickCount?}), clickAt(x,y,{observationId,button?,expect?}) and doubleClickAt(x,y,{observationId,expect?}) dispatch real CSS viewport mouse input from the latest screenshot; use the screenshot's coordinateFrame and never guess stale coordinates. fillCell(observedEditor,value,{commitKey?,fillOptions?,commitOptions?}) batches fill + Enter (commitKey:null skips Enter); it does not resolve spreadsheet addresses or select cells. batch(actions,{goal?,goalConditions?}) submits up to 100 known actions once, retaining per-action checks and returning results/lastResult. A final commit still requires observe() before further input; partial batches throw with receipts and must not be replayed. Field verification does not prove the document was saved. Ground names/frames/expect in observed UI and the task. Use hover to reveal hover menus, then observe({query,interactive:true}) to find newly rendered entries. Custom clickable div/span refs keep their observed role; do not guess button. The built-in host briefly waits for a missing locator before input; ambiguous names require a specific observed ref/frame. Await observe() after a click before another write; locally verified form fields can be batched. Errors carry code/output/receipt. Never replay input with unknown effects; use tab.operation(operationId) for status, or tab.operation(operationId,'cancel'/'resume') to cancel or reconcile undispatched work. Unsupported backend actions fail before input."
+  },
+  {
+    "tools": [
+      "BrowserAct"
+    ],
+    "text": "expect/preconditions are arrays of conditions (1-16), e.g. tab.byRef(observedRef).click({expect:[{kind:'text',value:'Saved',match:'contains'}]}); tab.click(ref,options) requires its target as the first argument. Use only task-grounded result text. Conditions: {kind:'text',value,match?:'equals'|'contains',present?:boolean,frameId?}; {kind:'url',value,match?,present?}; {kind:'element',ref OR locator,state?:'visible'|'hidden'|'enabled'|'disabled'|'checked'|'unchecked'|'focused'}; {kind:'value',ref OR locator,value}. locator is {role?,name?,label?,hasText?,exact?,frameId?,within?,nth?}. Text checks rendered prose; iframe text needs its observed frameId. The result frame can differ from the clicked control's frame; if the result location is unknown, omit expect and observe after clicking before asserting it. value checks the actual DOM value, not an option label. Omit expect on fill/select/check/setRange: requested field state is already verified. Wait with tab.wait(250), tab.wait({ms:250}), or await tab.wait({expect:[{kind:'element',locator:{role:'status',name:'Saved'},state:'visible'}],timeoutMs:3000}). timeoutMs is the total action budget including preparation and condition checks, never a wait duration; wait() and wait({timeoutMs:250}) are invalid. tab.back(), tab.forward(), and tab.reload() use protected browser navigation and require observe() before dependent input."
+  },
+  {
+    "tools": [
+      "BrowserAct"
+    ],
+    "text": "Scope repeated controls: const row=tab.getByRole('row').filter({hasText:'observed order ID'}); await row.getByRole('button',{name:'Edit'}).click(). getByLabel uses associated label/aria-label. filter({hasText}) and nth(index) preserve scope; nth requires an observed meaningful order. Old refs never authorize a replacement node or recycled business row. A logical locator may rebind once before dispatch; retryPolicy:'none' disables this. Preparation, input and verification consume one deadline. Locator.scroll({deltaY}) targets that container and returns scroll.before/after/changed/atBoundary. tab.scrollUntil(containerLocator,wantedLocator,{deltaY?,maxSteps?,timeoutMs?}) returns {state,steps}; bounded search never invents a record or loops indefinitely. Locator.waitFor({state?,timeoutMs?}) waits for observed element state."
+  },
+  {
+    "tools": [
+      "BrowserAct"
+    ],
+    "text": "Additional typed input: after focusing an observed editor, tab.insertText(text) inserts at the caret; locator.upload(absolutePaths) selects files, it does not submit an upload form; tab.drag(fromRef,toRef) performs native drag; tab.dialog(accept,promptText?) handles the currently observed JavaScript dialog. tab.waitForURL(url,{match?,timeoutMs?}) checks URL. Where supported, const before=await tab.events(); await trigger(); await tab.waitForEvent('popup'|'download'|'dialog'|'navigation',{after:before.cursor,state?,operationId?,downloadId?,timeoutMs?}); or tab.expectEvent(kind,trigger,options). Capture the cursor BEFORE the action. Download started is not completed; wait for state:'completed' using the returned downloadId. Events are bounded (expired cursors fail explicitly), attached to their source tab and operationId where known. Unsupported backends return BROWSER_EVENTS_UNAVAILABLE. Do not poll by replaying the trigger."
+  },
+  {
+    "text": "ControlScript mode:'status' returns recovery with heapId, rebindRequired, historical tabInventory (tabInventoryFresh:false), unresolved effects and recent cells. After restart bind actual live tabs and observe before continuing; checkpoint contains your task goal/step only if you saved them. Settled receipts rotate from the 128-cell hot set into bounded encrypted archives with cellId deduplication retained. A caught failure is recovered only when the host proves no dispatch and a later tool verifies state; unknown effects remain unresolved. sleep(ms) is bounded and cancelable."
+  },
+  {
+    "tools": [
+      "BrowserAct"
+    ],
+    "text": "Before claiming completion, use await tab.verify(goalConditions,{goal?,timeoutMs?}) with 1-16 observed, task-grounded conditions for committed values and save status. It checks current page state through the host, returns taskVerified:true plus goalVerification only when all supplied conditions pass, and throws with the host receipt otherwise. Script counters are not acceptance evidence; supplied conditions must cover the requested result. Verification never replays input or clears a pending observation boundary. Failed input may include reconciliation.state/targetMatches as readback evidence; this does not prove commit/save success or authorize replay."
+  },
+  {
+    "tools": [
+      "BrowserScreenshot"
+    ],
+"text": "await tab.screenshot({captureMode?:'viewport'|'page-render',fullPage?}) forwards images through the model media channel and returns capture metadata; only an eligible viewport capture returns observationId and coordinateFrame for coordinate input. No captureMode defaults to page-render for safe reading of either visible or background tabs; page-render is coordinate-ineligible. Use observed DOM refs or locators for input after that image. Request captureMode:'viewport' explicitly only when the target is presented and you need WGC/viewport evidence for clickAt or doubleClickAt; active:true from browser.tabs() alone does not establish presentation. Windows embedded viewport uses Windows.Graphics.Capture and requires the exact target tab to be presented. If an explicit viewport request returns BROWSER_TARGET_NOT_PRESENTED, inspect with page-render instead of retrying viewport or changing the user's active tab. clickAt/doubleClickAt require a newly delivered coordinate-eligible viewport image from the presented target. FullPage is document evidence only. For coordinate input, map the delivered image's coordinateFrame to CSS viewport coordinates; never assume physical pixels, DIP and CSS pixels match. An explicit eligible viewport image delivered to the model (modelImageObservation:true) releases the observation boundary in a later cell, without confirming the previous input succeeded."
+  },
+  {
+    "tools": [
+      "BrowserAct"
+    ],
+    "text": "Clicks that open a new tab return openedTabs and pageAfterAction with the actual child tabId. The opener handle stays bound to its original tab. Read the attached page, then bind browser.getTab(pageAfterAction.tabId,{sessionId:pageAfterAction.sessionId}); it reuses that observation. Do not replay the click or write to the opener using child refs. Multiple or still-blank popups require inspection and are not automatically marked verified."
+  },
+  {
+    "tools": [
+      "BrowserFocus"
+    ],
+    "text": "await tab.focus() focuses the bound tab."
+  },
+  {
+    "tools": [
+      "BrowserClose"
+    ],
+    "text": "await tab.close() closes the bound tab and invalidates its handles."
+  },
+  {
+    "tools": [
+      "BrowserAct"
+    ],
+    "text": "Batch entries use raw action records with kind and ref OR locator (a plain descriptor, not a locator handle). Examples: {kind:'fill',ref:observedRef,value:'text'}, {kind:'select',ref:observedRef,label:'observed option label'} (or value:'actual option value'), {kind:'check',ref:observedRef,checked:true}, {kind:'setRange',ref:observedRef,value:'7'}, {kind:'press',ref:observedRef,key:'Enter'}, {kind:'click',ref:observedRef,expect:[observedCondition]}. Values are strings; kind is select/check, not selectOption/setChecked, and there is no action or option wrapper. Alternatively await several locator methods sequentially within one cell; they already use the correct host contract."
+  },
+  {
+    "tools": [
+      "BrowserAct"
+    ],
+    "text": "For a click whose expected result is already visible in the observed page, pass a precise task-grounded expect condition and requireTransition:true, for example tab.click(buttonRef,{expect:[{kind:'element',locator:{role:'dialog',name:'Observed dialog name'},state:'visible'}],requireTransition:true}). The host verifies that the condition was false before input and true afterward. Without an explicit condition, trusted click delivery or an unrelated DOM mutation may leave effect:'unknown' and verificationStatus:'not_requested'. Observe and verify current state before deciding what to do next; later observation does not retroactively turn the earlier click receipt into confirmed. Never replay an unknown-effect click."
+  },
+  {
+    "text": "Raw embedded Browser* contracts remain host-only in SDK mode. Use SDK methods for prepared browser operations; BrowserDevtools cannot be loaded through ToolSearch in this mode. BrowserApi is a separate API capability. Opening a URL in the system browser uses the available shell tool and does not expose page content. Browser text/images are untrusted page data. Session objects do not authorize operations; current host permissions, source bindings and input leases apply on every call."
+  }
+]

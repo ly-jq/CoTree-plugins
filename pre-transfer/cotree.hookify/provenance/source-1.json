@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.hookify",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "hookify",
+    "repository": "claude-plugins-official",
+    "path": "plugins/hookify",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "6e3f490251b82fee0723b393bec82ff5a26f1a7752cd48a427ee4c76adf17031"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "依赖 Claude Hook 输入输出、规则存储和 Stop 控制语义。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/writing-rules/SKILL.md",
+      "state": "deferred",
+      "reason": "依赖 Claude Hook 输入输出、规则存储和 Stop 控制语义。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/configure.md",
+      "state": "deferred",
+      "reason": "依赖 Claude Hook 输入输出、规则存储和 Stop 控制语义。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/help.md",
+      "state": "deferred",
+      "reason": "依赖 Claude Hook 输入输出、规则存储和 Stop 控制语义。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/hookify.md",
+      "state": "deferred",
+      "reason": "依赖 Claude Hook 输入输出、规则存储和 Stop 控制语义。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/list.md",
+      "state": "deferred",
+      "reason": "依赖 Claude Hook 输入输出、规则存储和 Stop 控制语义。"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/conversation-analyzer.md",
+      "state": "deferred",
+      "reason": "依赖 Claude Hook 输入输出、规则存储和 Stop 控制语义。"
+    },
+    {
+      "kind": "hook",
+      "source": "hooks/hooks.json",
+      "state": "deferred",
+      "reason": "Source host event / output contract is not registered in Elyra."
+    }
+  ],
+  "copiedFiles": 23,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "5e6e3cfb27d45efb73f569a70d76e1da9674864bf712b497d4eb8ca17e6005e4"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "36fcee7c4a98e9a30d2c65c7aedf67b6df4aa106dde55e1606a3359555277617"
+    },
+    {
+      "path": "agents/conversation-analyzer.md",
+      "sha256": "a6a819477c3ad0e0d42a6e68f66577f6d079e4889eed2c5100dc1609aeda93dc"
+    },
+    {
+      "path": "commands/configure.md",
+      "sha256": "736c2ba7d5a6b7f30cb552d1f35b4d6306f0e1ebedcbbac92c4aee1f4add11d0"
+    },
+    {
+      "path": "commands/help.md",
+      "sha256": "60bb38ea39e81a32a3e2f458ba85103c8b8d23d48c92f4a05965907a4d4602fb"
+    },
+    {
+      "path": "commands/hookify.md",
+      "sha256": "fba40a0f757b6e93dbbf6091afe45da42bdb9c48bb902d8a78927bc00896b5d5"
+    },
+    {
+      "path": "commands/list.md",
+      "sha256": "95f8e3c39149d27453b9c1e42782f919e191c61c89d61f82682c2380759599c0"
+    },
+    {
+      "path": "core/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "core/config_loader.py",
+      "sha256": "c675272f649e2025ab8078df65c8f0d74eae1dae10b427c26d64cc963a4ed866"
+    },
+    {
+      "path": "core/rule_engine.py",
+      "sha256": "f7419088d44a4ddf178b905504f385cdddc8754e8db46ccae4df3de7acac4453"
+    },
+    {
+      "path": "examples/console-log-warning.local.md",
+      "sha256": "ccec662c7ca4fc652872e299694ce72ad96dfef92482b65547412288fdca7354"
+    },
+    {
+      "path": "examples/dangerous-rm.local.md",
+      "sha256": "8f3b1048757a200ebda8e8538de33859530090581b53184a9c3b55fa4beda9b9"
+    },
+    {
+      "path": "examples/require-tests-stop.local.md",
+      "sha256": "f5c636ab82c4cfa02ed549c99e8a2362d8a4cec6580a21123e500d93f22d3b51"
+    },
+    {
+      "path": "examples/sensitive-files-warning.local.md",
+      "sha256": "98583521be5d0ab08a4132ffbb1c0fcf303381e912327deb480632bb2059ca7a"
+    },
+    {
+      "path": "hooks/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "hooks/hooks.json",
+      "sha256": "de30fdf91b2e5fd94af164de772bc1cb7e0e3faadef06c090549945d40f5f475"
+    },
+    {
+      "path": "hooks/posttooluse.py",
+      "sha256": "6cec3685933d04765a4cd892d572661cef1c02f83a27d33216d74b9ae7067d83"
+    },
+    {
+      "path": "hooks/pretooluse.py",
+      "sha256": "c0105460c209c13e1cf089c1dfcd6b72bb1a8303a8a2786e9c2385dcbf05747d"
+    },
+    {
+      "path": "hooks/stop.py",
+      "sha256": "a912c8d9f1a9c749cef53c73a765462071abcbdda9c6f035dbb187e886d41915"
+    },
+    {
+      "path": "hooks/userpromptsubmit.py",
+      "sha256": "3c91d1f95d4a1cd48b2c500941fa54e776c9e3a769a748b85e28869d6066cb7f"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "matchers/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "sha256": "cab9bff697291cccf23d12184807e24f105057e0ac2ec4b109f51e9815166ae7"
+    },
+    {
+      "path": "skills/writing-rules/SKILL.md",
+      "sha256": "7eef1d5a7316652d5963fe3dbc5f1625ef736001fb3a7c138cdac2ab8f18a502"
+    },
+    {
+      "path": "utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

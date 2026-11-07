@@ -1,0 +1,187 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.vercel",
+  "name": "Vercel",
+  "version": "0.2.0",
+  "description": "Vercel 项目开发、部署、AI 应用与运行诊断的原生工作流，复用现有 CoTree 执行能力。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.vercel.connect",
+      "description": "核对 Vercel 团队、项目和 MCP / CLI / REST 接入。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.vercel.bootstrap",
+      "description": "按现有仓库结构准备 Vercel 项目、环境和首个可验证运行。",
+      "path": "skills/bootstrap/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.vercel.deploy",
+      "description": "执行明确目标的 Vercel 部署、生产晋升或回滚，并核对结果。",
+      "path": "skills/deploy/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.vercel.environment",
+      "description": "维护 Vercel 环境变量及环境范围，避免覆盖或泄露现有配置。",
+      "path": "skills/environment/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.vercel.integrations",
+      "description": "配置 Vercel Marketplace、应用登录和第三方服务连接。",
+      "path": "skills/integrations/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.vercel.nextjs",
+      "description": "实现或升级 Next.js 应用，保留当前路由、数据与错误处理契约。",
+      "path": "skills/nextjs/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.react",
+      "description": "审查 React / Next.js 性能、hooks、数据获取和渲染行为。",
+      "path": "skills/react/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.ui",
+      "description": "构建 shadcn、Geist 与 AI 界面组件，保留设计系统及可访问性。",
+      "path": "skills/ui/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.ai",
+      "description": "实现 AI SDK / Gateway 的流式、结构化输出、工具调用和生成结果保存。",
+      "path": "skills/ai/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.agents",
+      "description": "开发或诊断用户项目中的 eve / Vercel Agent 能力。",
+      "path": "skills/agents/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.vercel.chat",
+      "description": "用 Chat SDK 构建平台消息适配器、线程与交互处理。",
+      "path": "skills/chat/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.workflow",
+      "description": "实现持久工作流、队列消费和定时入口，处理重试与恢复。",
+      "path": "skills/workflow/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.functions",
+      "description": "维护 Vercel 函数、路由中间件与多服务应用边界。",
+      "path": "skills/functions/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.cache",
+      "description": "诊断 CDN、框架与运行时缓存，设计一致的失效策略。",
+      "path": "skills/cache/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.data",
+      "description": "接入 Vercel Blob、Edge Config 和 Marketplace 数据服务。",
+      "path": "skills/data/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.vercel.monorepo",
+      "description": "配置多包构建、缓存与微前端边界，验证可复现产物。",
+      "path": "skills/monorepo/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.observe",
+      "description": "以日志、请求链和 Web 指标定位 Vercel 运行故障。",
+      "path": "skills/observe/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.firewall",
+      "description": "检查并维护指定 Vercel 项目的 WAF、限流与 Bot 防护规则。",
+      "path": "skills/firewall/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.vercel.flags",
+      "description": "接入 feature flags 或调整有明确范围的发布策略。",
+      "path": "skills/flags/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.vercel.sandbox",
+      "description": "为已授权任务使用 Vercel Sandbox 并验证生命周期和输出。",
+      "path": "skills/sandbox/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.vercel.content",
+      "description": "集成 CMS 或维护 Geistdocs / MDX 文档应用。",
+      "path": "skills/content/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.media",
+      "description": "生成应用 OG 图片或接入用户选择的 v0 开发流程。",
+      "path": "skills/media/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.commerce",
+      "description": "在应用中集成支付与事务邮件，验证测试模式及事件处理。",
+      "path": "skills/commerce/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.vercel.verify",
+      "description": "核验 Vercel 应用的浏览器、接口和数据完整流程。",
+      "path": "skills/verify/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.vercel.reference",
+      "description": "核对 Vercel 当前文档与来源快照，澄清版本和能力差异。",
+      "path": "skills/reference/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "vercel",
+      "transport": "streamable-http",
+      "url": "https://mcp.vercel.com/",
+      "headersEnv": {
+        "Authorization": "COTREE_VERCEL_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "ba94238d2953f80fd7bdfcd3de9018f363fb27020d10cb36e616c0184a42f052"
+  }
+}

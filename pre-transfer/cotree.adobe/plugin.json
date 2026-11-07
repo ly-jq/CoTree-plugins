@@ -1,0 +1,67 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.adobe",
+  "name": "adobe",
+  "version": "0.2.0",
+  "description": "用 Adobe 网页应用完成照片、肖像、模板、社交尺寸、视频初剪与样机工作流。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.adobe.connect",
+      "description": "接入 Adobe 网页应用及已提供的独立工具。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.adobe.batch-edit",
+      "description": "统一一组照片的色调、曝光、裁切和导出。",
+      "path": "skills/batch-edit/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.adobe.portraits",
+      "description": "保留人物特征的肖像修饰与批量一致性处理。",
+      "path": "skills/portraits/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.adobe.templates",
+      "description": "在 Adobe Express 中选择并修改模板。",
+      "path": "skills/templates/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.adobe.social",
+      "description": "为指定平台生成图像和视频尺寸变体。",
+      "path": "skills/social/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.adobe.quick-cut",
+      "description": "在 Firefly 视频编辑器中完成初剪和导出。",
+      "path": "skills/quick-cut/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.adobe.mockups",
+      "description": "将明确设计制作成品牌一致的产品与场景样机。",
+      "path": "skills/mockups/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "3d6b6699df1225367f13116ae32dafc24c0ed762e848a2b17c432b8dbbeb0a2d"
+  }
+}

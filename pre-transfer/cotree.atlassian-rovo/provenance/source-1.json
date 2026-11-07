@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.atlassian-rovo",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "atlassian-rovo",
+    "repository": "plugins",
+    "path": "plugins/atlassian-rovo",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "e5798afa3e2d66d7254756fd259f5b0204de4ce181d66a8f08c2e57b6154a958",
+    "upstreamVersion": "1.0.6"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_ATLASSIAN_ROVO_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#atlassian-rovo",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/atlassian-rovo"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 4,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "0225085d3296872c9e4476251bf1e9fc3c89696149b185fbf39ec03278e3bd01"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "f817211b02e9d308adb6119ce40ba7c4403a2b653b2894091341dff8c39030ca"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "4baaaa269cadc45ba60f99da9e65306c84aad787b839fa20af62b23b7c9e72b6"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "26e09b61efcb434ed0ade94e633f3bad9335e60e41eff35a59c9f3558c7112a1"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "83d4e0c0b61edf7bd50a51a937b4d1abf72616a3366921c879748937806a7f55"
+    },
+    {
+      "path": "assets/logo-dark.png",
+      "sha256": "eaee0ebb74d0d0958b5c56df9afa80ebe7f76ff3c46ba9d54333bb15c8bd7c2a"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "7205fb2631152725e0aedd16534a020a0bd89a2c1acfc726a2b3fd5b52838722"
+    }
+  ]
+}

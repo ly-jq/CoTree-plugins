@@ -1,0 +1,73 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.gmail",
+  "name": "Gmail",
+  "version": "0.2.0",
+  "description": "Gmail 检索、线程读取、草稿、授权发送与标签管理，含独立 API 和本地 MIME 生成。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/gmail.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.gmail.connect",
+      "description": "配置 Gmail 独立 OAuth、邮箱身份、scopes 和 MCP 预览路径。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.gmail.search",
+      "description": "按邮箱、日期、发件人和标签检索 Gmail，显式处理分页。",
+      "path": "skills/search/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.gmail.read",
+      "description": "读取 Gmail 消息、完整线程与指定附件，保留真实来源和上下文。",
+      "path": "skills/read/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.gmail.draft",
+      "description": "起草、保存或更新 Gmail 草稿，正确处理收件人与回复线程。",
+      "path": "skills/draft/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.gmail.send",
+      "description": "发送用户明确要求的 Gmail 邮件或草稿，核验实际回执与线程。",
+      "path": "skills/send/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.gmail.organize",
+      "description": "管理 Gmail 标签、归档和回收站，保留可恢复的操作边界。",
+      "path": "skills/organize/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "gmail",
+      "transport": "streamable-http",
+      "url": "https://gmailmcp.googleapis.com/mcp/v1",
+      "headersEnv": {
+        "Authorization": "COTREE_GMAIL_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "dd3f41325a5f452a0db267fe88f4e6a79e76cb80bd3ec0874f11aeb16c8f3d36"
+  }
+}

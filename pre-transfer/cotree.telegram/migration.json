@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.telegram",
+  "version": "0.2.0",
+  "category": "通信与日程",
+  "priority": 0,
+  "batch": 27,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "telegram",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/telegram",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "98a37579b3023f492f2ebc3216c59caca87e93f00c6129ed53e50cc0f526f63d",
+      "upstreamVersion": "0.0.7"
+    }
+  ],
+  "changes": [
+    "入站和基础发送归属既有消息Gateway，避免重复轮询和Session权威。",
+    "补齐独立Bot身份检查、关联回复、编辑、反应和有界附件传输。"
+  ],
+  "limitations": [
+    "需要已安装的cotree.messaging-platform才能使用常驻入站；本包补充API客户端可独立使用。",
+    "真实Bot/目标权限、收发和撤销未验收；不继承原宿主远程权限回复。",
+    "入站和普通文本发送复用 cotree.messaging-platform 的 Telegram 适配器；本包补充关联回复、编辑、反应与文件传输，不启动第二个 getUpdates 消费者；不继承原 Channels 远程审批。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "configure/access": "connect：复用已有Gateway/Telegram适配器，独立Bot和身份权限。",
+    "reply/react/edit_message/files": "message/files：原生补充Bot操作与有界文件传输。",
+    "getUpdates / claude channel": "入站仅由现有Gateway消费，不新建轮询/第二个会话权威。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

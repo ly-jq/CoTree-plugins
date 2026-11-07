@@ -1,0 +1,43 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.project-artifact",
+  "name": "project-artifact",
+  "version": "0.2.0",
+  "description": "从项目真实证据生成和刷新可携带的 HTML 状态页，保留来源、时效与版本备份。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.project-artifact.create",
+      "description": "生成有来源和时效的项目状态页面。",
+      "path": "skills/create/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.project-artifact.refresh",
+      "description": "按新的实际证据刷新同一项目页面。",
+      "path": "skills/refresh/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.project-artifact.publish",
+      "description": "交付项目状态页或发布到明确授权目标。",
+      "path": "skills/publish/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "29c2b1d108b1a87a8dd8614b1c3e78a5666e441361dbfc1abca5adb87e19a5e4"
+  }
+}

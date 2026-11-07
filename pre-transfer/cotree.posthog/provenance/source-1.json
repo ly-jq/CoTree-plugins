@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.posthog",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "posthog",
+    "repository": "plugins",
+    "path": "plugins/posthog",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "046a7ae261b3f75dda2f99595169b9750dc0e7befa0b59a38af21704304ec44f",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_POSTHOG_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/posthog/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/posthog/SKILL.md",
+      "sourceMetadata": {
+        "name": "posthog",
+        "description": "Analyze product data and manage product tooling in PostHog. Use when the user wants product analytics or insights, HogQL/SQL queries, feature flags, experiments and A/B tests, error tracking, session replay, surveys, LLM analytics, dashboards, data warehouse, or PostHog documentation."
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#posthog",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/posthog"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 9,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "ef53fe5e313df9e27623d2d04675610f083e49dbca3a9caef5c4ce4dd7180b42"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "bbfcf6682f3bbb5ef0b9defefa60acbc38f3e4a83fe05d0b35921a6ece60ec35"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "9bb6d297df6d7631c5a1239d4297bf1018c3aa9b46ee1ff0a773bfb63bd8c21f"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "8d826173ed9686261f5454f1c14e60faa8823b6bafded68888c2fad9deb0ee46"
+    },
+    {
+      "path": "assets/composer-icon.png",
+      "sha256": "8d826173ed9686261f5454f1c14e60faa8823b6bafded68888c2fad9deb0ee46"
+    },
+    {
+      "path": "assets/logo-dark.png",
+      "sha256": "9a9a8b10a1e479a848af0f1987e059c377ac0ad60b1d32c5799515e79e052bc8"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "9a9a8b10a1e479a848af0f1987e059c377ac0ad60b1d32c5799515e79e052bc8"
+    },
+    {
+      "path": "assets/screenshot-1.png",
+      "sha256": "a0dfbf79e84e5db8c4d1e3835f389d76a9c60be67d48e9bab78588ebeebc5872"
+    },
+    {
+      "path": "assets/screenshot-2.png",
+      "sha256": "4914e3e430043b58e0f7a2993843d1f4a81340a1df7f9fe717c49e41cb231bf2"
+    },
+    {
+      "path": "skills/posthog/agents/openai.yaml",
+      "sha256": "38b151a872f00ba79fad9b097354af841ab65e0b7e681dfe7ea499a4d741f793"
+    },
+    {
+      "path": "skills/posthog/LICENSE.txt",
+      "sha256": "9e23075948a1ccea776c21d2c387c33efc0ee2d47d19ac427f30e1fdc9ef87ea"
+    },
+    {
+      "path": "skills/posthog/SKILL.md",
+      "sha256": "a463367b0767978ea64a52ca264e86f1eb22b91a4da252b440983d218ac58495"
+    }
+  ]
+}

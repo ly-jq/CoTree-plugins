@@ -1,0 +1,111 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.data-analytics",
+  "name": "数据分析",
+  "version": "0.2.0",
+  "description": "完成有证据的数据分析、指标、报告和看板；含本地校验 MCP 与离线 HTML 阅读器。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/datascience.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.data-analytics.analyze",
+      "description": "分析产品与业务数据，形成有依据的决策。",
+      "path": "skills/analyze/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.data-analytics.context",
+      "description": "整理业务问题、数据字典与分析上下文。",
+      "path": "skills/context/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.data-analytics.quality",
+      "description": "评估质量、口径和来源可比性。",
+      "path": "skills/quality/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.data-analytics.kpis",
+      "description": "定义可计算、可维护的指标体系。",
+      "path": "skills/kpis/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.data-analytics.diagnose",
+      "description": "分解指标变化并检验原因。",
+      "path": "skills/diagnose/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.data-analytics.market",
+      "description": "构建可追溯的市场规模估算。",
+      "path": "skills/market/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.data-analytics.report",
+      "description": "生成有来源、可离线阅读的数据报告。",
+      "path": "skills/report/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.data-analytics.dashboard",
+      "description": "构建状态明确的数据看板。",
+      "path": "skills/dashboard/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.data-analytics.visualize",
+      "description": "选择图形并校验图表 / 表格数据。",
+      "path": "skills/visualize/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.data-analytics.notebook",
+      "description": "编写环境明确、可重放的 notebook。",
+      "path": "skills/notebook/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.data-analytics.validate",
+      "description": "复核计算、查询与报告一致性。",
+      "path": "skills/validate/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.data-analytics.export",
+      "description": "交付 HTML、PDF、文档、幻灯片或获准发布内容。",
+      "path": "skills/export/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "analytics",
+      "transport": "stdio",
+      "command": "node",
+      "args": [
+        "scripts/analytics-mcp.cjs"
+      ],
+      "cwd": ".",
+      "cwdBase": "plugin"
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "fc58d560b091c9ec35dbe1a276f12203b5e7cc42f70956b08375a8ace51b87a4"
+  }
+}

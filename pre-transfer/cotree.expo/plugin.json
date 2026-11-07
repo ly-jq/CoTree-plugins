@@ -1,0 +1,104 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.expo",
+  "name": "Expo",
+  "version": "0.2.0",
+  "description": "在 CoTree 中开发和调试 Expo 应用，覆盖导航、原生组件、数据、模块、构建、EAS 流水线和发布。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/expo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.expo.inspect",
+      "description": "确认 Expo 应用根目录、SDK、包管理器与平台依赖。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.expo.run",
+      "description": "在 CoTree 终端启动 Expo 或导出 Web 应用。",
+      "path": "skills/run/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.expo.ui",
+      "description": "实现 Expo Router 导航、屏幕、动画与原生交互。",
+      "path": "skills/ui/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.expo.native-ui",
+      "description": "按 SDK 使用 Expo 的 SwiftUI 或 Jetpack Compose 组件。",
+      "path": "skills/native-ui/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.expo.styles",
+      "description": "配置或维护 Expo 通用样式、NativeWind 与 Tailwind。",
+      "path": "skills/styles/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.expo.data",
+      "description": "实现 Expo 请求、缓存、认证状态和离线恢复。",
+      "path": "skills/data/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.expo.api",
+      "description": "实现 Expo Router API 路由及其服务端边界。",
+      "path": "skills/api/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.expo.modules",
+      "description": "实现 Expo Modules API 模块、视图和配置插件。",
+      "path": "skills/modules/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.expo.dev-client",
+      "description": "构建、安装并调试 Expo 开发客户端。",
+      "path": "skills/dev-client/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.expo.cicd",
+      "description": "编写、核验 EAS Workflows 与项目 CI。",
+      "path": "skills/cicd/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.expo.deploy",
+      "description": "按授权发布 Expo Web、OTA 或应用商店版本。",
+      "path": "skills/deploy/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.expo.upgrade",
+      "description": "按目标版本升级 Expo SDK 并验证平台兼容。",
+      "path": "skills/upgrade/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.expo.dom",
+      "description": "使用 Expo DOM 组件逐步复用网页代码。",
+      "path": "skills/dom/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "83c16b5c898760841444b58cddb0cd67dd245c891f3ffe4427b576fbf0572404"
+  }
+}

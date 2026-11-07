@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>飞书与钉钉 · 消息接入</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <div><div class="eyebrow">COTREE · 消息接入</div><h1>飞书与钉钉</h1><p>在聊天中交办任务，将 CoTree 的回答送回原会话。</p></div>
+    <div class="actions"><button id="refresh" type="button">刷新状态</button><button id="start" type="button" class="primary">启动服务</button><button id="stop" type="button" disabled>停止服务</button></div>
+  </header>
+  <section class="status-strip" aria-label="服务状态">
+    <div><span class="status-dot" id="status-dot"></span><strong id="service-state">正在读取配置</strong><p id="service-detail">正在连接插件服务…</p></div>
+    <div class="metric"><strong id="pending">—</strong><span>待处理消息</span></div>
+    <div class="metric"><strong id="uncertain">—</strong><span>待核查回复</span></div>
+  </section>
+  <div id="feedback" role="status" aria-live="polite" hidden></div>
+  <form id="config-form" autocomplete="off">
+    <fieldset id="configuration">
+      <section class="card connection">
+        <div class="section-heading"><div><h2>连接 CoTree</h2><p>先在「管理台 → 本机 Agent 接入」开启监听，并创建来源 Key。</p></div><span class="step">01</span></div>
+        <div class="grid">
+          <label>CoTree 地址<input id="cotree-url" type="url" value="http://127.0.0.1:19191" required></label>
+          <label>来源 Key <span id="sourceToken-state" class="credential-state">未配置</span><input id="source-token" type="password" placeholder="粘贴来源 Key" autocomplete="new-password" maxlength="4096"></label>
+          <label>目标工作区<select id="workspace" required><option value="">检查连接后选择工作区</option></select></label>
+          <div class="field-action"><button id="check" type="button">检查连接并加载工作区</button><span class="hint">检查 CoTree API；平台连接状态在启动后显示。</span></div>
+        </div>
+      </section>
+      <div class="platforms">
+        <section class="card platform" id="feishu-card">
+          <div class="section-heading"><div><h2>飞书 <span class="badge" id="feishu-status">未启动</span></h2><p>企业自建应用 · 长连接</p></div><label class="toggle"><input id="feishu-enabled" type="checkbox" checked>启用</label></div>
+          <p id="feishu-error" class="platform-error" role="alert" hidden></p>
+          <div id="feishu-fields" class="fields">
+            <label>App ID<input id="feishu-app" placeholder="cli_…" maxlength="256"></label>
+            <label>App Secret <span id="feishuSecret-state" class="credential-state">未配置</span><input id="feishu-secret" type="password" placeholder="粘贴应用密钥" autocomplete="new-password" maxlength="4096"></label>
+            <div class="bot-field">
+              <label for="feishu-bot">机器人 Open ID</label>
+              <div class="input-with-action"><input id="feishu-bot" placeholder="点击右侧自动获取" maxlength="256" aria-describedby="feishu-bot-hint"><button id="feishu-bot-get" type="button">自动获取</button></div>
+              <p id="feishu-bot-hint" class="hint">填写上方 App ID 和 App Secret 后即可获取；仅群聊 @ 识别需要，单聊可留空。</p>
+            </div>
+            <label>允许使用的用户<textarea id="feishu-users" rows="3" placeholder="每行一个用户 open_id"></textarea></label>
+            <p class="hint">只接收允许列表中的用户；留空会拒绝所有消息。</p>
+            <details><summary>群聊范围与接收方式</summary><label>允许的聊天 ID<textarea id="feishu-chats" rows="2" placeholder="每行一个 chat_id；留空不额外限制聊天"></textarea></label><label class="check"><input id="feishu-mention" type="checkbox" checked>群聊仅接收 @ 此机器人的消息</label></details>
+            <p class="setup-note">在飞书开放平台开启机器人，订阅 im.message.receive_v1 并选择长连接，发布应用后加入目标群。</p>
+          </div>
+        </section>
+        <section class="card platform" id="dingtalk-card">
+          <div class="section-heading"><div><h2>钉钉 <span class="badge" id="dingtalk-status">未启用</span></h2><p>企业内部机器人 · Stream</p></div><label class="toggle"><input id="dingtalk-enabled" type="checkbox">启用</label></div>
+          <p id="dingtalk-error" class="platform-error" role="alert" hidden></p>
+          <div id="dingtalk-fields" class="fields" hidden>
+            <label>Client ID<input id="dingtalk-app" placeholder="ding…" maxlength="256"></label>
+            <label>Client Secret <span id="dingtalkSecret-state" class="credential-state">未配置</span><input id="dingtalk-secret" type="password" placeholder="粘贴应用密钥" autocomplete="new-password" maxlength="4096"></label>
+            <label>Robot Code<input id="dingtalk-bot" placeholder="通常与 Client ID 相同" maxlength="256"></label>
+            <label>允许使用的用户<textarea id="dingtalk-users" rows="3" placeholder="每行一个员工 userId（senderStaffId）"></textarea></label>
+            <p class="hint">仅接收同企业且在允许列表中的用户；留空会拒绝所有消息。</p>
+            <details><summary>群聊范围与接收方式</summary><label>允许的聊天 ID<textarea id="dingtalk-chats" rows="2" placeholder="每行一个 conversationId；留空不额外限制聊天"></textarea></label><label class="check"><input id="dingtalk-mention" type="checkbox" checked>群聊仅接收 @ 此机器人的消息</label></details>
+            <p class="setup-note">在钉钉开放平台开启机器人，接收模式选择 Stream，并开通应用机器人单聊和群聊发送权限。</p>
+          </div>
+          <p id="dingtalk-disabled-note" class="setup-note">可单独启用一个平台，也可同时接入两个平台。启用后填写应用信息。</p>
+        </section>
+      </div>
+    </fieldset>
+    <footer><div><strong id="save-hint">配置保存在本机当前工作区的私有目录</strong><p>已保存的密钥不回显，留空保留原值。启动时会先保存当前配置。</p></div><button id="save" type="submit">保存配置</button></footer>
+  </form>
+  <section class="card activity"><div class="section-heading"><div><h2>最近投递</h2><p>暂停审批请在 CoTree 中处理；发送结果未知的回复需先核查原聊天。</p></div></div><div id="receipts" class="empty">启动服务后显示消息收据。</div></section>
+  <p class="lifecycle">关闭此面板后，已启动的服务继续运行。停止服务、停用插件或退出 CoTree 会结束接入；重启 CoTree 后需在此重新启动。</p>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

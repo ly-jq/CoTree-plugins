@@ -1,0 +1,49 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.project-instructions",
+  "name": "项目指令",
+  "version": "0.2.0",
+  "description": "检查和维护 CoTree 项目指令，把用户明确的长期要求交给原生指令服务。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.project-instructions.audit",
+      "description": "审查 CoTree 项目指令的有效范围、引用、冲突和实用性。",
+      "path": "skills/audit/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.project-instructions.maintain",
+      "description": "在授权范围内更新手写 AGENTS.md、COTREE.md 或 CoTree 项目规则，并验证生效。",
+      "path": "skills/maintain/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.project-instructions.remember",
+      "description": "通过 CoTree 原生指令服务记住、修改或撤销用户明确的长期要求。",
+      "path": "skills/remember/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.project-instructions.recommend",
+      "description": "根据项目实际工作流推荐少量有用的 CoTree Skill、Agent、MCP 和配置改进。",
+      "path": "skills/recommend/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "322cb913baa1653b6cdb549f8a5031d89e73a15a0000b3a53f3c905c6cd0ed0a"
+  }
+}

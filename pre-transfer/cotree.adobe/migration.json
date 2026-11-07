@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.adobe",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 29,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "adobe",
+      "repository": "plugins",
+      "path": "plugins/adobe",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "8fde8934ee971c217894c3b6abc8aa22392e7202f205287e5d5138b616612f46",
+      "upstreamVersion": "8.0.0"
+    }
+  ],
+  "changes": [
+    "完整六类创作流程改成独立浏览器可执行的CoTree Skill，保留全部深层领域资料。",
+    "不虚构原Adobe创作连接器MCP，现有浏览器和实际工具发现共同承担执行。"
+  ],
+  "limitations": [
+    "Adobe登录、套餐权益、真实编辑/生成/导出未验收；网页可用功能与原专属API存在差异，按连接文档逐项核实。",
+    "批次改为明确清单逐图执行；原自动预设/深度虚化/Widget只有实际工具提供时可用。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "adobe-batch-edit-photos": "batch-edit：原业务参数与素材规则保留，改为CoTree浏览器/实际可发现工具；原专属连接器不自动继承。",
+    "adobe-retouch-portraits": "portraits：原业务参数与素材规则保留，改为CoTree浏览器/实际可发现工具；原专属连接器不自动继承。",
+    "adobe-design-from-template": "templates：原业务参数与素材规则保留，改为CoTree浏览器/实际可发现工具；原专属连接器不自动继承。",
+    "adobe-create-social-variations": "social：原业务参数与素材规则保留，改为CoTree浏览器/实际可发现工具；原专属连接器不自动继承。",
+    "adobe-edit-quick-cut": "quick-cut：原业务参数与素材规则保留，改为CoTree浏览器/实际可发现工具；原专属连接器不自动继承。",
+    "adobe-create-mockups": "mockups：原业务参数与素材规则保留，改为CoTree浏览器/实际可发现工具；原专属连接器不自动继承。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

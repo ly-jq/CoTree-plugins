@@ -1,0 +1,27 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.computer-use",
+  "name": "Computer Use",
+  "version": "1.8.7",
+  "description": "Cua browser and desktop execution for CoTree's existing control SDK.",
+  "minKernelVersion": "0.1.0",
+  "entry": "index.mjs",
+  "execution": { "runtime": "node", "abi": "cotree.plugin.tool.v2", "isolation": "brokered-process" },
+  "publisher": { "id": "cotree", "displayName": "CoTree" },
+  "computerUse": { "protocol": "cotree.computer-provider.v1", "driverVersion": "0.29.1", "browser": { "embedded": true, "external": true }, "desktop": true, "observationProtocol": 2, "actionProtocol": 4, "driverTools": true },
+  "capabilities": { "services": true, "evals": true, "skills": true },
+  "skills": [{ "name": "Computer Use", "description": "Operate browsers and desktop apps with ControlScript: target binding, continuous input, combined feedback, and recovery using current Driver capabilities.", "path": "skills/computer-use/SKILL.md", "retrievalHints": ["browser interaction", "desktop control", "computer use", "ControlScript", "browser game testing", "浏览器操作", "连续鼠标键盘控制"], "context": "inline" }],
+  "evals": ["evals/control-smoke.json"],
+  "permissions": {
+    "shell": "none",
+    "storage": { "maxBytes": 8388608 },
+    "browser": { "tabs": "allow", "pageContent": "allow", "dom": "allow", "screenshot": "allow", "interaction": "ask", "navigation": "ask", "networkMetadata": "deny", "cookies": "deny" },
+    "nativeModules": ["cua-runtime"], "nativeLibraries": ["cua-sdk"],
+    "hostCapabilities": ["browser.cdp.request", "browser.cdp.events", "desktop.scope", "desktop.windowIdentity", "driver.authorize"],
+    "services": ["computer"]
+  },
+  "services": [{ "id": "computer", "entry": "service.mjs", "runtime": "node", "protocol": "cotree.plugin.service.v1",
+    "idleTimeoutMs": 300000, "nativeModules": ["cua-runtime"], "nativeLibraries": ["cua-sdk"],
+    "hostCapabilities": ["browser.cdp.request", "browser.cdp.events", "desktop.scope", "desktop.windowIdentity", "driver.authorize"],
+    "resources": { "memoryMb": 512, "maxPendingCalls": 32, "maxEventBytes": 262144, "maxStreams": 4, "maxStreamBytesPerSecond": 8388608 } }]
+}

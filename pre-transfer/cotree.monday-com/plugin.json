@@ -1,0 +1,85 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.monday-com",
+  "name": "monday.com",
+  "version": "0.2.0",
+  "description": "在 CoTree 中维护 monday.com 看板、任务和 CRM，处理更新、自动化及平台 Agent，并追溯实际结果。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.monday-com.connect",
+      "description": "连接 monday.com 官方 MCP 并核对账户、工作区和真实工具。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.monday-com.inspect",
+      "description": "查找 monday.com 工作区、看板、任务、文档与 CRM 关系。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.monday-com.items",
+      "description": "创建或维护 monday.com 任务、子项、负责人、时间与依赖。",
+      "path": "skills/items/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.monday-com.columns",
+      "description": "调整 monday.com 看板、分组、列和视图，保留类型与既有数据。",
+      "path": "skills/columns/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.monday-com.updates",
+      "description": "按授权发布 monday.com 更新、回复或文档内容并核实受众。",
+      "path": "skills/updates/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.monday-com.automate",
+      "description": "规划或维护 monday.com board automation、workspace workflow 和可复用代码动作。",
+      "path": "skills/automate/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.monday-com.agents",
+      "description": "按授权管理 monday.com 平台 Agent 的配置、触发器与知识权限。",
+      "path": "skills/agents/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.monday-com.report",
+      "description": "汇总 monday.com 项目、CRM 或冲刺进展并列明证据与覆盖范围。",
+      "path": "skills/report/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "monday-com",
+      "transport": "streamable-http",
+      "url": "https://mcp.monday.com/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_MONDAY_COM_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "570666ec243e31b48568270f132166d663e14ffb0de7c52fb0ebeebc03cf0961"
+  }
+}

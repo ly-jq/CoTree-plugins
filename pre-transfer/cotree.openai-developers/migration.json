@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.openai-developers",
+  "version": "0.2.0",
+  "category": "研究与专业工具",
+  "priority": 0,
+  "batch": 21,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "openai-developers",
+      "repository": "plugins",
+      "path": "plugins/openai-developers",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "f7f1c76c7d8b044fc644b95f179d9df30b539715fe8a8eb193e7104a173914c6",
+      "upstreamVersion": "1.2.3"
+    }
+  ],
+  "changes": [
+    "五项来源能力改写为八项原生技能，保留完整开发 / 评测 / 部署 / 提交参考。",
+    "提供 TS / Python Agents SDK 和自包含 MCP Apps 起点；固定依赖，使用官方 UI bridge，无公网默认监听。",
+    "认证改为独立项目身份；原宿主密钥连接器和本地确认 MCP 仅归档，不注册失效入口。"
+  ],
+  "limitations": [
+    "Platform 连接器的自动创建 / 加密传递 API key 尚未接入 CoTree；目前使用独立官方项目密钥与安全环境注入。",
+    "离线 SDK、loopback MCP 与模拟宿主 UI 检查不证明 API 额度、真实模型、ChatGPT 客户端接入、商店审核或远程部署。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "agents-sdk": "agents-sdk / evaluate / deploy：TS、Python、输入简报、真实工作流评测、可选 Deployment Manager。",
+    "build-chatgpt-app": "build-chatgpt-app：工具计划、官方参考、MCP Apps bridge、工具 / UI / CSP、loopback 样例。七份来源专题参考完整保留。",
+    "chatgpt-app-submission": "submission：实读工具实现与 hints、CSP、outputSchema；生成当前 schema 的本地提交材料，不自动发布或编造测试结果。",
+    "openai-platform-api-key / local destination MCP": "credentials：独立环境检查与官方项目密钥设置；原连接器和 elicitation 不冒充已接入，原加密 helper / 测试完整归档供以后接入。",
+    "openai-api-troubleshooting": "troubleshoot：传输 / 401 / quota / 429 / 模型项目权限，按实际响应诊断，不自动提升权限或换 key。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

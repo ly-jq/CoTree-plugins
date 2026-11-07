@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.openai-developers",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "openai-developers",
+    "repository": "plugins",
+    "path": "plugins/openai-developers",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "f7f1c76c7d8b044fc644b95f179d9df30b539715fe8a8eb193e7104a173914c6",
+    "upstreamVersion": "1.2.3"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "SDK 指导可用；Platform 连接器和 elicitation API key 确认服务不注册。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/agents-sdk/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/agents-sdk/SKILL.md",
+      "sourceMetadata": {
+        "name": "agents-sdk",
+        "description": "Build, run, deploy, and evaluate OpenAI Agents SDK apps from Codex. Use when the user asks to create or adapt an Agents SDK app, build from a prompt or Codex thread, prepare a runnable agent prototype, add a focused eval harness, or deploy locally through the Agents SDK Deployment Manager."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/build-chatgpt-app/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/build-chatgpt-app/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-chatgpt-app",
+        "description": "Build, scaffold, refactor, and troubleshoot ChatGPT Apps SDK applications that combine an MCP server and widget UI. Use when Codex needs to design tools, register UI resources, wire the MCP Apps bridge or ChatGPT compatibility APIs, apply Apps SDK metadata or CSP or domain settings, or produce a docs-aligned project scaffold. Prefer a docs-first workflow by invoking the openai-docs skill or OpenAI developer docs MCP tools before generating code."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/chatgpt-app-submission/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/chatgpt-app-submission/SKILL.md",
+      "sourceMetadata": {
+        "name": "chatgpt-app-submission",
+        "description": "Inspect a ChatGPT Apps MCP server codebase and generate chatgpt-app-submission.json with app info suggestions, tool hint justifications, test cases, and negative test cases, then report review-check findings and outputSchema warnings for submission review."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/openai-api-troubleshooting/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/openai-api-troubleshooting/SKILL.md",
+      "sourceMetadata": {
+        "name": "openai-api-troubleshooting",
+        "description": "Use when an OpenAI API request fails and Codex needs to classify the likely cause, explain the next step, and route to the right follow-up. Covers common runtime failures such as blocked outbound network access, invalid credentials, exhausted API quota or credits, rate limits, and model, project, or organization access issues; delegate key provisioning to openai-platform-api-key and current documentation lookups to openai-docs."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/openai-platform-api-key/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/openai-platform-api-key/SKILL.md",
+      "sourceMetadata": {
+        "name": "openai-platform-api-key",
+        "description": "Use when Codex is asked to build, run, test, debug, or configure an OpenAI-backed or provider-unspecified AI app, UI, script, CLI, generator, or tool, especially requests phrased only as \"using AI\" or generators driven by forms/user input; also use for OPENAI_API_KEY or sk-proj setup. Treat this as the credential gate: inspect safely, ask reuse-vs-new before API work, and never expose plaintext."
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#openai-api-key-local-confirmation",
+      "state": "deferred",
+      "reason": "Requires host elicitation and Platform connector; not registered."
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 27,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "d7416e5765acce21317459de70862da0d619ba65ba9ef6bc5f3c145760f67084"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "6b8a4139d973fdf298087c5e92bd6f0ffedb3c3215aa0677f1c832b60d89b266"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "68bd18f85d34c01e8af6ebe3dda29ae2357ddce34b9de15280440e85e1d5ecce"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "776310bcb0f0f191c616f31a13fcb8de8cc94d920c77625c271b3a034199ac43"
+    },
+    {
+      "path": "assets/openai-platform.png",
+      "sha256": "f2f8832878739a84d60fc6a6acf8dc5681fac3ed8318a70d37aa1f8fffacb537"
+    },
+    {
+      "path": "mcp/server.mjs",
+      "sha256": "7488fe36b5e6120c519ec8c86ea0c0a01d941dc8fdcd8251e88ea55e1b001398"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e9791cf1001f70eb871a3f46d5f484e90468cb7f1576d2d9c8e947fba6bbbeb8"
+    },
+    {
+      "path": "scripts/openai-platform-api-key.mjs",
+      "sha256": "d357e00f5e5cf904fda61e2e9151642a7be60eed9275ebc19b70db0fc4d722a1"
+    },
+    {
+      "path": "skills/agents-sdk/agents/openai.yaml",
+      "sha256": "dc2ca3a57d02bf98a7e91ba821bfc04cbc7f1ee38d23fd507efaab20007fa7e4"
+    },
+    {
+      "path": "skills/agents-sdk/SKILL.md",
+      "sha256": "c7b0f97dafbbba1a6b6a35e6160c57c06a214367dbabf9972c73a87495046a31"
+    },
+    {
+      "path": "skills/build-chatgpt-app/agents/openai.yaml",
+      "sha256": "84bb4e0e2f5307844152e61dc1d8988f2a428f8fe18103e25d4e968707e2826d"
+    },
+    {
+      "path": "skills/build-chatgpt-app/LICENSE.txt",
+      "sha256": "f40b718f40ec4b8f421f87c4abdea9c32b2c76203c176c947ec4ddaaef5b832c"
+    },
+    {
+      "path": "skills/build-chatgpt-app/references/app-archetypes.md",
+      "sha256": "6004f49292f67fba49d62b0bd149f5279eb6f98d4ad1a0b9d2741dab51e11454"
+    },
+    {
+      "path": "skills/build-chatgpt-app/references/apps-sdk-docs-workflow.md",
+      "sha256": "476ee613f6f9ce507c5a4124db2ba92bd865aee27a9ac733a733e026adb048f0"
+    },
+    {
+      "path": "skills/build-chatgpt-app/references/interactive-state-sync-patterns.md",
+      "sha256": "3eb29a7e4be55b2e567a58b25bd1ee666448dff8a3d91a61aab3e30bedff4657"
+    },
+    {
+      "path": "skills/build-chatgpt-app/references/repo-contract-and-validation.md",
+      "sha256": "604e0be1ae54160d6b7890bd3e0000cc3943560931c72a9451b3dce8df1f98e8"
+    },
+    {
+      "path": "skills/build-chatgpt-app/references/search-fetch-standard.md",
+      "sha256": "2d3d3f4c286aba6abf0501a410889032c934775f5a7042a024ce0e283692b2a6"
+    },
+    {
+      "path": "skills/build-chatgpt-app/references/upstream-example-workflow.md",
+      "sha256": "ed8ec87f75da303df2a97ce290616bdc7e6d2ff02b7d3beb4ff83be3a5585498"
+    },
+    {
+      "path": "skills/build-chatgpt-app/references/window-openai-patterns.md",
+      "sha256": "9313351a77ed8fcfbc7cf31f51ccbadda7ddaa87127a620e58f4125640ea99f3"
+    },
+    {
+      "path": "skills/build-chatgpt-app/scripts/scaffold_node_ext_apps.mjs",
+      "sha256": "3952d9012ddd4b7940b69c024809331ba4e1d39944f89d38f5374e2f15f7acd1"
+    },
+    {
+      "path": "skills/build-chatgpt-app/SKILL.md",
+      "sha256": "e3e461185cd472000975e8310e513cb9bc3e334c545475a824b51bc19392bce2"
+    },
+    {
+      "path": "skills/chatgpt-app-submission/LICENSE.txt",
+      "sha256": "f40b718f40ec4b8f421f87c4abdea9c32b2c76203c176c947ec4ddaaef5b832c"
+    },
+    {
+      "path": "skills/chatgpt-app-submission/SKILL.md",
+      "sha256": "5cc43b91564198dbfb3341bd5a96503a04f4691045b8d61db786e6a557828b65"
+    },
+    {
+      "path": "skills/openai-api-troubleshooting/agents/openai.yaml",
+      "sha256": "6932bbff22f66b96705c219f7bde832972b321297cc1a3d4d67e4027b6435f23"
+    },
+    {
+      "path": "skills/openai-api-troubleshooting/references/evals.md",
+      "sha256": "804db3d73ae81e2678a8dc71e93d8c18a064d8327f29141ae0c2a0082a445b92"
+    },
+    {
+      "path": "skills/openai-api-troubleshooting/SKILL.md",
+      "sha256": "ba56e958e3763a69d16e656d02918e960ef60596f0760d4ef9cc0cdd6f10d5be"
+    },
+    {
+      "path": "skills/openai-platform-api-key/agents/openai.yaml",
+      "sha256": "766f471ff5779d1603fadf6fb0569708478a328bc7a2775838d46f5b3f034399"
+    },
+    {
+      "path": "skills/openai-platform-api-key/references/evals.md",
+      "sha256": "8826ace3ff27ce1e9a371d779a054911889067715d418d2890ede9937451fd48"
+    },
+    {
+      "path": "skills/openai-platform-api-key/SKILL.md",
+      "sha256": "26d8b76bd2e8acd1ab3093ec0ee3c12d8cfc7fb426fc281fd39c96f5c39c0ec5"
+    },
+    {
+      "path": "tests/openai-platform-api-key.test.mjs",
+      "sha256": "98f2a3b984c568593658e00cdbfdb8eb8a085daff152cb16a2ac41fdfa91de2a"
+    }
+  ]
+}

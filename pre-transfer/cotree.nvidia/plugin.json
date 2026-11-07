@@ -1,0 +1,92 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.nvidia",
+  "name": "nvidia",
+  "version": "0.2.0",
+  "description": "按 GPU、优化求解、Dynamo、AI-Q、Omniverse 与 Physical AI 组织 NVIDIA 原生工作流。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/nvidia.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.nvidia.environment",
+      "description": "核实 NVIDIA 硬件、驱动与所选工作流前提。",
+      "path": "skills/environment/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.nvidia.cuopt",
+      "description": "建立和验证 cuOpt 路由、LP、MILP 与 QP 优化问题。",
+      "path": "skills/cuopt/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.nvidia.dynamo",
+      "description": "配置 Dynamo 路由并核验 NIXL / UCX / NCCL 互联。",
+      "path": "skills/dynamo/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.nvidia.aiq-deploy",
+      "description": "准备、部署和回收明确范围的 NVIDIA AI-Q 环境。",
+      "path": "skills/aiq-deploy/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.nvidia.aiq-research",
+      "description": "向已部署 AI-Q 提交研究并恢复已有作业。",
+      "path": "skills/aiq-research/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.nvidia.nemoclaw",
+      "description": "准备和诊断独立 NemoClaw / OpenShell 环境。",
+      "path": "skills/nemoclaw/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.nvidia.simready",
+      "description": "分阶段把 CAD / 源资产转为可验证的 SimReady USD。",
+      "path": "skills/simready/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.nvidia.viewer",
+      "description": "开发和调试 Omniverse Realtime Viewer USD 应用。",
+      "path": "skills/viewer/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.nvidia.usd-performance",
+      "description": "分析并优化 USD 场景的加载、内存与帧率。",
+      "path": "skills/usd-performance/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.nvidia.infrastructure",
+      "description": "准备 Physical AI 的本地 / Azure 集群、NIM 与 OSMO。",
+      "path": "skills/infrastructure/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.nvidia.reconstruction",
+      "description": "准备 NuRec / NRE 神经重建、渲染与传感器仿真。",
+      "path": "skills/reconstruction/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "b35554d51730da8d94048278266ee829810c708706695e4f19908f3211938f42"
+  }
+}

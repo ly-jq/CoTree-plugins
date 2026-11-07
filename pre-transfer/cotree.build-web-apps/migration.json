@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.build-web-apps",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 8,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "build-web-apps",
+      "repository": "plugins",
+      "path": "plugins/build-web-apps",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "4bbbc2fa33bfc9c16cd5e3569fad0a407160f8d4886ba5e55402d7e9151dac26",
+      "upstreamVersion": "0.1.2"
+    }
+  ],
+  "changes": [
+    "重写网页构建和浏览器调试入口，移除强制 ImageGen、10/10 自评分、固定 IAB / Sites 和逐阶段批准。",
+    "数据库 / 支付 / React / shadcn 使用现有唯一能力归属，保留来源快照但不重复注册。",
+    "新增跨平台只读工程检查器及可执行的浏览器 / 交付指导，既有工程优先。",
+    "PostgreSQL 规则由 Supabase optimize 统一提供；采用来源 1.1.1 的完整 34 份参考，旧 1.1.0 只归档。独立使用网页开发包的该能力需同时安装 Supabase 包。",
+    "React 最佳实践统一到 Vercel react；两份规则忽略行尾空白后相同，保留完整规则集。网页开发包使用该能力需同时安装 Vercel 包。",
+    "shadcn 统一到 Vercel ui，互补的组件组合、样式、表单及 CLI 参考随 Vercel 独立打包；旧入口不再重复注册。",
+    "Stripe 最佳实践由 Stripe integrate 统一提供，保留较完整的六类领域参考；网页开发较旧副本仅归档，该能力需安装 Stripe 包。"
+  ],
+  "limitations": [
+    "工程检查器只读指定 package.json 和目录存在性，不运行项目、不验证页面或云服务。",
+    "真实页面需要项目依赖、浏览器与测试数据；模型、数据库、支付和部署身份分别验收，当前未执行账户操作。",
+    "复杂设计 / 原型可使用产品设计包，视觉实现可使用前端设计包；缺少可选插件时沿现有项目工具继续，不自动安装或重复注册其入口。",
+    "PostgreSQL 规则由 Supabase optimize 统一提供；采用来源 1.1.1 的完整 34 份参考，旧 1.1.0 只归档。独立使用网页开发包的该能力需同时安装 Supabase 包。",
+    "React 最佳实践统一到 Vercel react；两份规则忽略行尾空白后相同，保留完整规则集。网页开发包使用该能力需同时安装 Vercel 包。",
+    "shadcn 统一到 Vercel ui，互补的组件组合、样式、表单及 CLI 参考随 Vercel 独立打包；旧入口不再重复注册。",
+    "Stripe 最佳实践由 Stripe integrate 统一提供，保留较完整的六类领域参考；网页开发较旧副本仅归档，该能力需安装 Stripe 包。"
+  ],
+  "deduplicated": [
+    {
+      "kind": "skill",
+      "removed": "import.codex.build-web-apps.react-best-practices",
+      "retained": "cotree.vercel.react"
+    },
+    {
+      "kind": "skill",
+      "removed": "import.codex.build-web-apps.shadcn",
+      "retained": "cotree.vercel.ui"
+    },
+    {
+      "kind": "skill",
+      "removed": "import.codex.build-web-apps.stripe-best-practices",
+      "retained": "cotree.stripe.integrate"
+    },
+    {
+      "kind": "skill",
+      "removed": "import.codex.build-web-apps.supabase-postgres-best-practices",
+      "retained": "cotree.supabase.optimize"
+    }
+  ],
+  "capabilityCoverage": {
+    "frontend-app-builder": "build / integrate：真实项目、视觉方向、完整页面与状态、素材、数据服务和浏览器交付。",
+    "frontend-testing-debugging": "debug / deliver：可复现交互、DOM / 控制台 / 截图、失败恢复与实际验收。",
+    "react-best-practices": "cotree.vercel.react，完整规则已有唯一归属，不再次注册。",
+    "shadcn": "cotree.vercel.ui，互补参考已随该包保留。",
+    "stripe-best-practices": "cotree.stripe.integrate，支付 / 账单等领域由该包维护。",
+    "supabase-postgres-best-practices": "cotree.supabase.optimize，数据库规则由该包维护。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

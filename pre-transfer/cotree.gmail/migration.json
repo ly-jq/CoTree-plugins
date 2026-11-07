@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.gmail",
+  "version": "0.2.0",
+  "category": "通信与日程",
+  "priority": 0,
+  "batch": 7,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "gmail",
+      "repository": "plugins",
+      "path": "plugins/gmail",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "7860e4a10897695c7442ada75e923daba6c642f8fbcfc039125204da2c6c9b3d",
+      "upstreamVersion": "0.1.9"
+    }
+  ],
+  "changes": [
+    "为连接器来源补齐六个原生工作流，明确草稿与发送、线程定位、分页及未知结果恢复。",
+    "新增独立 Gmail REST 脚本和 UTF-8 MIME 生成器；收件人 / 标题防换行注入，保留 RFC Message-ID 与线程关系。"
+  ],
+  "limitations": [
+    "Gmail MCP 为开发者预览，需准入、API 启用和独立 OAuth；登录 / 刷新及真实邮箱场景待验收。",
+    "REST 使用 COTREE_GMAIL_ACCESS_TOKEN，scopes 按读取 / 草稿 / 发送 / modify 区分，metadata scope 不能作为完整搜索与正文权限。",
+    "本地 MIME 生成器支持 UTF-8 纯文本、To / Cc / Bcc 和线程回复，不包含 HTML / 附件组合器；API 接受合规完整 MIME，附件读取已封装。没有后台监控、定时发送或永久删除实现。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "connector search / read / threads": "search / read + 独立 Gmail API：真实 ID、范围、分页、MIME / 附件和引用。",
+    "connector draft / compose": "draft + 本地 UTF-8 MIME 生成器和远端 draft create / update。",
+    "connector sending / organization": "send / organize：发送授权、草稿与 message ID、标签、归档 / 移入垃圾箱和结果未知恢复。",
+    "host OAuth": "connect：独立 Google 身份；MCP 开发者预览与 REST scopes 分别登记。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

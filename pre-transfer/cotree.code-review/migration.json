@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.code-review",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 1,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "code-review",
+      "repository": "claude-plugins-official",
+      "path": "plugins/code-review",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "0bb347b20401753166748f890c642604f5aa72690b5348164fd3160407faa65c"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "code-simplifier",
+      "repository": "claude-plugins-official",
+      "path": "plugins/code-simplifier",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "1953321f7721f5961986ad93e516a3583c61db04cf4992defa0ce1ca5073a25a",
+      "upstreamVersion": "1.0.0"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "pr-review-toolkit",
+      "repository": "claude-plugins-official",
+      "path": "plugins/pr-review-toolkit",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "3afe881a7504d17781b615b9f8ece8412bd5b0e952a17ebd0b4d8ae2138d7ba2"
+    }
+  ],
+  "changes": [
+    "三个重叠来源统一为 review / simplify 两个入口，审查维度各保留一份。",
+    "移除固定供应商模型、强制多 Agent、数值自评分和自动发布 PR 评论；以真实证据反馈。"
+  ],
+  "limitations": [
+    "加载与权限测试不证明模型一定能发现所有缺陷；实际审查结果取决于目标代码和执行证据。",
+    "远程 PR 读取需要已授权的 GitHub MCP 或 gh；发布评论必须在用户授权范围内。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "code review / PR review": "review：统一审查范围、证据与反馈；correctness / tests / errors / types / documentation 五个只读 Agent。",
+    "code simplifier": "simplify 显式 Skill 和 simplifier Agent，保持可观察行为。",
+    "model-specific parallelism / auto-comment": "改为按需原生委派；模型继承宿主，发布须符合用户授权。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

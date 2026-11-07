@@ -1,0 +1,61 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.lovable",
+  "name": "lovable",
+  "version": "0.2.0",
+  "description": "通过独立 Lovable MCP 创建、迭代和发布应用，并核对项目、额度与真实预览。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.lovable.connect",
+      "description": "核对 Lovable OAuth、工作区和工具权限。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.lovable.build",
+      "description": "在明确 Lovable 工作区构建新应用。",
+      "path": "skills/build/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.lovable.iterate",
+      "description": "检查并修改已有 Lovable 项目。",
+      "path": "skills/iterate/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.lovable.publish",
+      "description": "发布用户授权的 Lovable 版本并核对实际地址。",
+      "path": "skills/publish/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "lovable",
+      "transport": "streamable-http",
+      "url": "https://mcp.lovable.dev",
+      "headersEnv": {
+        "Authorization": "COTREE_LOVABLE_MCP_AUTHORIZATION"
+      },
+      "timeoutMs": 60000
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "4f3c0d755d88e94f61309092a69a05402d1d0184b380d67aae61ea3fc6861f7b"
+  }
+}

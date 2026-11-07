@@ -1,0 +1,44 @@
+# Dependencies and generated build/runtime state
+node_modules/
+dist/
+build/
+out/
+coverage/
+# Authored skill names, not generated build/coverage output.
+!pre-transfer/*/skills/build/
+!pre-transfer/*/skills/build/**
+!pre-transfer/*/skills/coverage/
+!pre-transfer/*/skills/coverage/**
+*.tsbuildinfo
+.elyra/
+.cache/
+.vite/
+.vitest/
+test-results/
+playwright-report/
+tmp/
+temp/
+*.log
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.cert
+
+# Editor and OS state
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo

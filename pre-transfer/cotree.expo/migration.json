@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.expo",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 17,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "expo",
+      "repository": "plugins",
+      "path": "plugins/expo",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "701b4afabad176b8dd7f3dd3658116641e9693acda3cd77f36847dff411db2f4",
+      "upstreamVersion": "1.0.2"
+    }
+  ],
+  "changes": [
+    "十三个来源 Skill 与运行命令归并为十三个原生工作流，移除 Codex Run 按钮和 Bash 依赖。",
+    "新增只读工程检查与跨平台 Expo 启动器，默认 localhost；只执行项目已安装的 CLI，不自动下载、构建原生工程或连接云账户。",
+    "保留完整参考、脚本、许可与图标，按 SDK 版本校正 Expo Go / development build 和预览依赖限制。"
+  ],
+  "limitations": [
+    "原生工作流、随包工具和安装合同已改造；真实模型任务、用户工程、账户发布及各平台设备效果需分别验收。",
+    "本地 iOS 构建需要 macOS / Xcode，Android 需要相应 SDK / JDK 与设备；Web 导出不证明原生平台通过。EAS、应用商店、推送等需要独立身份与目标权限。",
+    "没有 CoTree 专属 Run 按钮；run Skill 提供终端可执行入口。归档 EAS 脚本只供参考，不在完整性固定的插件内安装依赖或自动执行。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "codex-expo-run-actions / setup-codex-run-actions": "inspect / run：同一跨平台 Node 启动器，使用应用自身 Expo CLI；不生成 .codex 配置或重复 Bash 启动器。",
+    "building-native-ui / expo-ui-swift-ui / expo-ui-jetpack-compose": "ui / native-ui：路由、导航、媒体、存储、动画、SwiftUI / Compose 桥接与版本限制。",
+    "expo-tailwind-setup / use-dom / native-data-fetching / expo-api-routes": "styles / dom / data / api：按已安装依赖适配，客户端公开变量与服务端密钥分离。",
+    "expo-module / expo-dev-client": "modules / dev-client：原生模块、视图、配置插件及实际 native build，不以 Web 预览代替。",
+    "expo-cicd-workflows / expo-deployment / upgrading-expo": "cicd / deploy / upgrade：EAS 工作流、商店 / Web / OTA 发布及版本升级，各自核对身份、产物和环境。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

@@ -1,0 +1,98 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.twilio-developer-kit",
+  "name": "Twilio Developer Kit",
+  "version": "0.2.0",
+  "description": "开发 Twilio 消息、语音、Verify、SendGrid 和会话集成，验证回调与实际通信状态。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.svg",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.twilio-developer-kit.connect",
+      "description": "配置 Twilio / SendGrid 账户、最小权限与开发环境。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.twilio-developer-kit.design",
+      "description": "为消息通知、营销、身份核验和客户服务选择 Twilio 产品。",
+      "path": "skills/design/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.twilio-developer-kit.messaging",
+      "description": "开发 Twilio 多渠道消息、模板、号码与发送者流程。",
+      "path": "skills/messaging/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.twilio-developer-kit.voice",
+      "description": "构建 Twilio Voice、TwiML、会议与录音工作流。",
+      "path": "skills/voice/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.twilio-developer-kit.verify",
+      "description": "接入 Twilio Verify 和 Lookup 并处理身份验证状态。",
+      "path": "skills/verify/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.twilio-developer-kit.email",
+      "description": "开发 SendGrid 发信、模板、抑制列表和投递诊断。",
+      "path": "skills/email/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.twilio-developer-kit.webhooks",
+      "description": "实现 Twilio Webhook 验签、幂等处理与可靠回调。",
+      "path": "skills/webhooks/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.twilio-developer-kit.conversations",
+      "description": "开发 Twilio Conversations、Agent Connect 与跨渠道编排。",
+      "path": "skills/conversations/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.twilio-developer-kit.contact-center",
+      "description": "设计 Twilio TaskRouter 路由和人工接管。",
+      "path": "skills/contact-center/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.twilio-developer-kit.intelligence",
+      "description": "接入 Twilio Conversation Intelligence 和 Enterprise Knowledge。",
+      "path": "skills/intelligence/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.twilio-developer-kit.compliance",
+      "description": "按 Twilio 官方规则准备发送者注册、权限与通信合规资料。",
+      "path": "skills/compliance/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.twilio-developer-kit.debug",
+      "description": "诊断 Twilio 发送失败、回调和账户权限。",
+      "path": "skills/debug/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "5e7a93b782861f96e27aaef210b38b856439f6848652082e311e8b40c08e9aa1"
+  }
+}

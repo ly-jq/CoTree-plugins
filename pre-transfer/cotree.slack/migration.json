@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.slack",
+  "version": "0.2.0",
+  "category": "通信与日程",
+  "priority": 0,
+  "batch": 6,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "slack",
+      "repository": "plugins",
+      "path": "plugins/slack",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "dc7ddf79a26dddcedc9d66a01c65ddd4a0327017f25099f13347fb197c168a6c",
+      "upstreamVersion": "0.1.7"
+    }
+  ],
+  "changes": [
+    "连接器来源补齐六个实际工作流，明确频道、线程、分页、引用、发送与恢复语义。",
+    "不继承来源公开 OAuth client_id；独立应用准入、OAuth 与用户 scope 记入认证清单。",
+    "加入消息链接解析器，保留 message / thread 时间戳字符串和所属会话，不用浮点数转换。"
+  ],
+  "limitations": [
+    "Slack MCP 需要注册的内部应用或 Marketplace 应用；CoTree 的应用身份、管理员授权及 OAuth / PKCE 接入尚待完成，不支持靠来源 client_id 或任意 Bot token 直接接入。",
+    "COTREE_SLACK_MCP_AUTHORIZATION 仅转发独立有效的用户 OAuth Bearer header；实际可用工具受 scopes、频道成员资格与工作区策略限制。",
+    "真实搜索、读取、发送、定时消息、Canvas / Lists 与文件上传均未进行账户验收；本批没有发送消息或创建工作区对象。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "connector / OAuth client": "connect：只转发独立合法 OAuth 身份，不继承来源公开 client_id；应用准入和 OAuth 接入待完成。",
+    "search / users / channels / history / threads": "search / summarize：范围、分页、真实 ID、引用与不完整性。",
+    "messages / schedules / reactions": "message：明确接收人及发送授权、线程定位、回执和去重恢复。",
+    "canvases / lists / files": "documents / files：schema、版本、双阶段上传与权限范围。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

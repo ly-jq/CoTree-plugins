@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "namespace": "browser",
+  "hostProtocol": "cotree.control-sdk.v1",
+  "sdkVersion": "cotree-browser-sdk-v1",
+  "source": "sdk/browser-sdk.js",
+  "documentation": "sdk/documentation.json",
+  "tools": [
+    "BrowserOpen",
+    "BrowserTabs",
+    "BrowserFocus",
+    "BrowserClose",
+    "BrowserSnapshot",
+    "BrowserAct",
+    "BrowserScreenshot",
+    "BrowserDiagnostics"
+  ]
+}

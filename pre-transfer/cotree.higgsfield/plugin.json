@@ -1,0 +1,67 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.higgsfield",
+  "name": "higgsfield",
+  "version": "0.2.0",
+  "description": "用独立 Higgsfield MCP 生成视频素材，并在本地完成旁白、字幕与成片验证。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.higgsfield.connect",
+      "description": "核对 Higgsfield OAuth、订阅及当前生成能力。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.higgsfield.faceless",
+      "description": "制作有明确故事和视觉一致性的无人出镜视频。",
+      "path": "skills/faceless/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.higgsfield.narration",
+      "description": "生成并核对分块或连续旁白。",
+      "path": "skills/narration/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.higgsfield.captions",
+      "description": "按实际词时钟与原稿生成并烧录字幕。",
+      "path": "skills/captions/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.higgsfield.finish",
+      "description": "将明确素材合成视频并检查真实输出。",
+      "path": "skills/finish/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "higgsfield",
+      "transport": "streamable-http",
+      "url": "https://mcp.higgsfield.ai/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_HIGGSFIELD_MCP_AUTHORIZATION"
+      },
+      "timeoutMs": 60000
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "f5d6b2fd1eab5187eccbb84e3a289586fa053db16f28d3884ede7bb5e2d7bd62"
+  }
+}

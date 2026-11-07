@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.creative-production",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 29,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "creative-production",
+      "repository": "plugins",
+      "path": "plugins/creative-production",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "549cb18be5f6700f31c19c8f1ca0ff84b86c69c321739b7b4002d7bad201cd31",
+      "upstreamVersion": "0.1.25"
+    }
+  ],
+  "changes": [
+    "八种模式统一CoTree原生生产流程，保留全部深层知识和素材库。",
+    "用可独立运行的交互review页替换原宿主MCP Apps状态与强制并发。"
+  ],
+  "limitations": [
+    "真实图像生成/Adobe等服务账户另验；本地合成素材只证明看板交互和边界。",
+    "原widget自动回传及持久服务器不继承，选择由当前浏览器/用户反馈读取，派生manifest不是Session状态权威。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "intake": "brief：具体需求和原素材约束，使用当前用户上下文。",
+    "produce:ads": "produce/refine/export：保留该模式全部参考与库，统一原生生成和本地review renderer。",
+    "produce:scenes": "produce/refine/export：保留该模式全部参考与库，统一原生生成和本地review renderer。",
+    "produce:offers": "produce/refine/export：保留该模式全部参考与库，统一原生生成和本地review renderer。",
+    "produce:shots": "produce/refine/export：保留该模式全部参考与库，统一原生生成和本地review renderer。",
+    "produce:logos": "produce/refine/export：保留该模式全部参考与库，统一原生生成和本地review renderer。",
+    "produce:styles": "produce/refine/export：保留该模式全部参考与库，统一原生生成和本地review renderer。",
+    "produce:positioning": "produce/refine/export：保留该模式全部参考与库，统一原生生成和本地review renderer。",
+    "produce:charts": "produce/refine/export：保留该模式全部参考与库，统一原生生成和本地review renderer。",
+    "MCP Apps board / persistent store": "本地浏览器review页与稳定项ID/revision/摘要备份；不读原CODEX_HOME、不新增模型或Session权威。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

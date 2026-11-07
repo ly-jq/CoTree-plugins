@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.serena",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 18,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "serena",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/serena",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "6a43163e24bb9ebe43df0c50e6ab56c91fe7e641a9894615c54ff125a237171b"
+    }
+  ],
+  "changes": [
+    "原通用启动入口改为当前 workspace 的单项目 ide context，移除重复的基础文件 / Shell / 项目切换工具。",
+    "新增六项原生工作流，保留固定上游提交；默认无 dashboard / GUI，使用现有 MCP 生命周期。"
+  ],
+  "limitations": [
+    "本包原生工作流、辅助工具与安装合同已适配；用户工程、真实模型任务、云服务和设备业务分别验收，不由协议夹具或示例代替。",
+    "需要 uv / Python 3.11..3.14、目标语言服务器和可读写的工程缓存目录；首次 uvx / 语言索引可联网下载依赖。固定提交是 2.0.0.dev0 来源快照，不承诺稳定发布版。",
+    "Serena 子进程可能启动语言服务并写入 .serena / 用户缓存；工作区绑定不是 OS 沙箱。不同语言和平台需独立验收，不自动启用或安装。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "source MCP-only plugin": "connect / navigate / edit / diagnose / memory / verify；唯一 stdio 使用固定提交，ide 单项目 context 绑定 workspace。",
+    "basic files / shell / project switching": "ide context 去除重复文件和 Shell 工具，--project . 禁止切项目；复用 CoTree 工具与权限，默认不启动 GUI / dashboard。",
+    "overlap with language-services": "已有 LSP 优先按目标复用；本包提供 Serena 符号编辑、项目导航和辅助笔记，不重复注册语言服务家族或替代 CoTree 会话存储。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

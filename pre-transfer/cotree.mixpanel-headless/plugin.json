@@ -1,0 +1,73 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.mixpanel-headless",
+  "name": "Mixpanel Headless",
+  "version": "0.2.0",
+  "description": "通过独立 Mixpanel Python / CLI 在 CoTree 中发现产品数据、分析五类指标、维护仪表盘和业务上下文。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md",
+    "screenshots": [
+      "resources/source-01/content/assets/screenshot-1.png",
+      "resources/source-01/content/assets/screenshot-2.png",
+      "resources/source-01/content/assets/screenshot-3.png"
+    ]
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.mixpanel-headless.setup",
+      "description": "准备独立 Mixpanel Python 环境并核对实际 API。",
+      "path": "skills/setup/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.mixpanel-headless.connect",
+      "description": "连接独立 Mixpanel 账户并核对项目、区域和工作区。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.mixpanel-headless.discover",
+      "description": "发现真实 Mixpanel 事件、属性、报告和 API 参数。",
+      "path": "skills/discover/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.mixpanel-headless.analyze",
+      "description": "执行 Mixpanel 趋势、漏斗、留存、路径与用户分析。",
+      "path": "skills/analyze/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.mixpanel-headless.dashboards",
+      "description": "读取、解释和维护 Mixpanel 仪表盘、布局与报告。",
+      "path": "skills/dashboards/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.mixpanel-headless.manage",
+      "description": "管理 Mixpanel 报告、cohort、实验及数据治理对象。",
+      "path": "skills/manage/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.mixpanel-headless.context",
+      "description": "读取或更新 Mixpanel 组织与项目的业务上下文。",
+      "path": "skills/context/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "a03151ef68a30b986bf2f74464e07d5e347255c1ee3e9b7b29be005324cbaf28"
+  }
+}

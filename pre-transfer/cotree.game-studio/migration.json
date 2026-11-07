@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.game-studio",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 19,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "game-studio",
+      "repository": "plugins",
+      "path": "plugins/game-studio",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "9fbe92aaf8b862673a8d320d5544003990c74acdcc38af930f8cbf88a0ff4633",
+      "upstreamVersion": "0.1.2"
+    }
+  ],
+  "changes": [
+    "九项来源能力逐项重写为九个 CoTree 原生工作流，统一语义选择和权限边界。",
+    "新增固定 Phaser 3.90.0 的独占目录示例，模拟规则、渲染与 DOM 控件分离，可用键盘和按钮完成游戏。",
+    "保留三个精灵脚本原算法与完整 3D / UI 参考，运行副本补充尺寸约束、帧数约束与禁止覆盖；完整原图标随包展示。"
+  ],
+  "limitations": [
+    "本地示例是 Phaser 3 路径，不代表最新 Phaser 或所有游戏；Three.js、R3F、物理、GLB 和真实用户素材需按目标工程分别验收。",
+    "精灵处理需 Python 3.10+ / Pillow；AI 生成依赖 CoTree 实际提供的图像能力，当前包不含账户、图像生成服务或发布后端。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "game-studio / web-game-foundations": "plan / architecture：语义选择游戏栈，分离模拟、渲染、输入、资产、存档和调试。",
+    "phaser-2d-game / three-webgl-game / react-three-fiber-game": "phaser / three / react-three：保留三条引擎路径及完整技术参考；增加可独立运行的 Phaser 3 示例。",
+    "sprite-pipeline / web-3d-asset-pipeline": "sprites / assets-3d：保留三份图像处理算法并增加独占输出与尺寸约束；GLB、压缩、LOD 和碰撞代理流程。",
+    "game-ui-frontend / game-playtest": "ui / playtest：DOM HUD、相机输入边界、实际键盘 / 触控 / 暂停 / 重置与画面验收。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

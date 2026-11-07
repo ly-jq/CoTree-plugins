@@ -1,0 +1,9 @@
+{
+  "name": "@cotree/plugin-voice-tools",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@cotree/plugin-sdk": "workspace:*"
+  }
+}

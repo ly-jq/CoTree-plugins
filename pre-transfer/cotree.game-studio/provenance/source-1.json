@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.game-studio",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "game-studio",
+    "repository": "plugins",
+    "path": "plugins/game-studio",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "9fbe92aaf8b862673a8d320d5544003990c74acdcc38af930f8cbf88a0ff4633",
+    "upstreamVersion": "0.1.2"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "游戏开发资料可用；原宿主生成、测试和展示能力按实际可用工具替换。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/game-playtest/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/game-playtest/SKILL.md",
+      "sourceMetadata": {
+        "name": "game-playtest",
+        "description": "Run browser-game playtests and frontend QA. Use when the user asks for smoke tests, screenshot-based verification, browser automation, HUD or overlay review, or structured issue-finding in a browser game."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/game-studio/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/game-studio/SKILL.md",
+      "sourceMetadata": {
+        "name": "game-studio",
+        "description": "Route early browser-game work. Use when the user needs stack selection and workflow planning across design, implementation, assets, and playtesting before moving to a specialist skill."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/game-ui-frontend/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/game-ui-frontend/SKILL.md",
+      "sourceMetadata": {
+        "name": "game-ui-frontend",
+        "description": "Design UI surfaces for browser games. Use when the user asks for HUDs, menus, overlays, responsive layouts, or visual direction that must protect the playfield."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/phaser-2d-game/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/phaser-2d-game/SKILL.md",
+      "sourceMetadata": {
+        "name": "phaser-2d-game",
+        "description": "Implement 2D browser games with Phaser. Use when the user wants a Phaser, TypeScript, and Vite stack for scenes, gameplay systems, cameras, sprite animation, and DOM-overlay HUD patterns."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/react-three-fiber-game/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/react-three-fiber-game/SKILL.md",
+      "sourceMetadata": {
+        "name": "react-three-fiber-game",
+        "description": "Build React-hosted 3D browser games with React Three Fiber. Use when the user wants pmndrs-based scene composition, shared React state, and 3D HUD integration inside a React app."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/sprite-pipeline/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/sprite-pipeline/SKILL.md",
+      "sourceMetadata": {
+        "name": "sprite-pipeline",
+        "description": "Generate and normalize 2D sprite animations. Use when the user asks for full-strip generation from approved source frames, consistent anchor and scale normalization, or preview assets for browser-game animation."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/three-webgl-game/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/three-webgl-game/SKILL.md",
+      "sourceMetadata": {
+        "name": "three-webgl-game",
+        "description": "Implement browser-game runtimes with plain Three.js. Use when the user wants imperative scene control in TypeScript or Vite with GLB assets, loaders, physics, and low-level WebGL debugging."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/web-3d-asset-pipeline/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/web-3d-asset-pipeline/SKILL.md",
+      "sourceMetadata": {
+        "name": "web-3d-asset-pipeline",
+        "description": "Prepare and optimize browser-game 3D assets. Use when the user asks for GLB or glTF shipping work, including Blender cleanup and export, collision or LOD setup, compression, texture packaging, and runtime validation."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/web-game-foundations/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/web-game-foundations/SKILL.md",
+      "sourceMetadata": {
+        "name": "web-game-foundations",
+        "description": "Set browser-game architecture before implementation. Use when the user needs engine choice, simulation and render boundaries, input model, asset organization, or save/debug/performance strategy."
+      }
+    }
+  ],
+  "copiedFiles": 39,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "7b6aea066d6ee92a705d9bd876720351af2db75a3b6ed0fa2b6588b2024bf727"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "5b3b083e4acc72b2d905e08b99dff08b811c1140aeb25adfc878a278e6dff20e"
+    },
+    {
+      "path": "assets/game-studio.svg",
+      "sha256": "17ada1c73d58d6445578a4d3cd0cedd10ecb065bcb7851754027ea9ef158b725"
+    },
+    {
+      "path": "references/alternative-3d-engines.md",
+      "sha256": "0d27419aa9413a6a968784fd88b7790742b8cf8f895237fcb320a5acb5f2ba67"
+    },
+    {
+      "path": "references/engine-selection.md",
+      "sha256": "50cc5cdcf17fcfa06657a5f6e02f3015d884a9e223d75b8e33c7fe6d5a6a967a"
+    },
+    {
+      "path": "references/frontend-prompts.md",
+      "sha256": "18bfc4c4ddade553c5aabbe0df4338bb213659e4c25c5d7b52a07276f95f7d76"
+    },
+    {
+      "path": "references/gltf-loading-starter.md",
+      "sha256": "8e6286a8d56d144abf6bc0e4cbb534df389dc937d0985c87234db1111a24a441"
+    },
+    {
+      "path": "references/phaser-architecture.md",
+      "sha256": "5e35678c37b68444ac867a4b57ff8e269aabe0b8ccd927d9dba2f796151fe601"
+    },
+    {
+      "path": "references/playtest-checklist.md",
+      "sha256": "de9cd4ca82271e3d192bdea83a566eb2b73d2ef40005c0ed237449be2f116336"
+    },
+    {
+      "path": "references/rapier-integration-starter.md",
+      "sha256": "546ce641a01f7cbf35d8d13aeccb42b979127b4ffe6610455012bfbf503b8ab1"
+    },
+    {
+      "path": "references/react-three-fiber-stack.md",
+      "sha256": "5ecd05a8e5d7d8868efe03f577776c789fc3241553b99fc467f7f8d46016211d"
+    },
+    {
+      "path": "references/react-three-fiber-starter.md",
+      "sha256": "23d70096e7b36584dbf4b56df1e477a2d7f28c9d3c3f412b4ca0e6d663920892"
+    },
+    {
+      "path": "references/sprite-pipeline.md",
+      "sha256": "3d47237f011c137c9ec770226ce8341d7ec742bc88f3c4abff49c587c01d65ed"
+    },
+    {
+      "path": "references/three-hud-layout-patterns.md",
+      "sha256": "53e1b214ec24e12820bffe82a26d3e74b9083b41dea23fcb14fe62342d8f061c"
+    },
+    {
+      "path": "references/three-webgl-architecture.md",
+      "sha256": "4f8a6f76d14f29cb6ca70330bc9ad9e7813dcc13774f0614b7f92a09856e9674"
+    },
+    {
+      "path": "references/threejs-stack.md",
+      "sha256": "a75d0add07ba39e5f2c9ca2e7269d1bfbe4ea18efe36945e709c2bc995305b7d"
+    },
+    {
+      "path": "references/threejs-vanilla-starter.md",
+      "sha256": "4b279912e3058799a9bc21f3c04dca1dc610614e0b21402c2bfc26b858c13803"
+    },
+    {
+      "path": "references/web-3d-asset-pipeline.md",
+      "sha256": "82b8c7453222d555e97d478cd6f4878630738c8766f0d2bc0c676198bd2e7aa4"
+    },
+    {
+      "path": "references/webgl-debugging-and-performance.md",
+      "sha256": "4d530ac303cfffd1abd9427b9f8cbcb558b0610c5aa7c16ea0ae16d6239c020d"
+    },
+    {
+      "path": "scripts/build_sprite_edit_canvas.py",
+      "sha256": "2e7fc8b1a14a720af69159b4a80cfcd52f1294835a3d616404e3b15dae71e11b"
+    },
+    {
+      "path": "scripts/normalize_sprite_strip.py",
+      "sha256": "799b7d416a6839c6f56afdd12a1de9dc4c465513a4d9d201833a5f888d66dae4"
+    },
+    {
+      "path": "scripts/render_sprite_preview_sheet.py",
+      "sha256": "f2f572d5e29301fd6196cc2142dd854c25b5df7bceb9d48ec0981ceab3bc2b26"
+    },
+    {
+      "path": "skills/game-playtest/agents/openai.yaml",
+      "sha256": "a1986a2462f53602c5a730514d30ced55e5c87619f045a20baa0754953ea276e"
+    },
+    {
+      "path": "skills/game-playtest/SKILL.md",
+      "sha256": "358edd6e387a8e5bfb1c025fc9d98e9d6962864dc5fbad3b737513a7d402bbd8"
+    },
+    {
+      "path": "skills/game-studio/agents/openai.yaml",
+      "sha256": "c7e01fc2f94b85b0541025653f79599439857922e1634dfc92b935188840d990"
+    },
+    {
+      "path": "skills/game-studio/SKILL.md",
+      "sha256": "b76eac4342df15cca37ae26fe5908f11929dabe19596f08636a98a66cf9f2be8"
+    },
+    {
+      "path": "skills/game-ui-frontend/agents/openai.yaml",
+      "sha256": "eceb81ebeccbd4a8eb317849ea0eb37e9015951e9e672b639454635d038d826e"
+    },
+    {
+      "path": "skills/game-ui-frontend/SKILL.md",
+      "sha256": "9847c0dead3981ffdd6fee4e50eabacb537da93228044bcc58523b2c6c67b9b6"
+    },
+    {
+      "path": "skills/phaser-2d-game/agents/openai.yaml",
+      "sha256": "adfcb9888c386a5ee15071e2b890a1cce36d4d58850d90d6245c1265d7b6f6c8"
+    },
+    {
+      "path": "skills/phaser-2d-game/SKILL.md",
+      "sha256": "a1268f00d6ac270fed74bc246358758e9f0ca6cf5764e628be0d5528cae5cff4"
+    },
+    {
+      "path": "skills/react-three-fiber-game/agents/openai.yaml",
+      "sha256": "c24a7efc137cef2a0a73d1841dd921845b111e1ddb74898b871bd4d70dfc6321"
+    },
+    {
+      "path": "skills/react-three-fiber-game/SKILL.md",
+      "sha256": "abb828343f265fc82c6fc292a271da61d33d43ff83ea85d912c33c5d4836c773"
+    },
+    {
+      "path": "skills/sprite-pipeline/agents/openai.yaml",
+      "sha256": "75c05edd820b379506881b147f63f87e03a3856417af6e05f0877fd9f1b4f594"
+    },
+    {
+      "path": "skills/sprite-pipeline/SKILL.md",
+      "sha256": "61078a68d944f72dd0bb671b37df2c7aa5dd1e9b256039d00edab46b62f3625c"
+    },
+    {
+      "path": "skills/three-webgl-game/agents/openai.yaml",
+      "sha256": "3e33377e396b64784eca1d8027304cbaf56c7f0fb4a29fb09c966a6b097ac707"
+    },
+    {
+      "path": "skills/three-webgl-game/SKILL.md",
+      "sha256": "3d718eedf5edc6b8da42e9d64f47e71387e5aa1b744453d1d6262f079202388f"
+    },
+    {
+      "path": "skills/web-3d-asset-pipeline/agents/openai.yaml",
+      "sha256": "5a05c0cfe40cc681cb685fe2eda1230750e826aa80f29efcb61376de908b56d6"
+    },
+    {
+      "path": "skills/web-3d-asset-pipeline/SKILL.md",
+      "sha256": "a0a383fbdd3dac7f77ff65448fad13b91bd39b01d4a95775946edaef743d6e5f"
+    },
+    {
+      "path": "skills/web-game-foundations/agents/openai.yaml",
+      "sha256": "126111fce0c840b8399e9f1742dec1c698613bd1e28c2eb262f1eeb9b7649a81"
+    },
+    {
+      "path": "skills/web-game-foundations/SKILL.md",
+      "sha256": "132445594ae48e2a4205e960da7d53c5ef7df3814dfc931f166c7dd3a779b1e3"
+    }
+  ]
+}

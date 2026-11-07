@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.project-artifact",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "project-artifact",
+    "repository": "claude-plugins-official",
+    "path": "plugins/project-artifact",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "7e9413fc5a580f3ea249ee6a838877fb91d198e16a9546da13937b4a1d359d33"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "依赖 claude.ai Artifact 私有发布、账户和稳定 URL。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/project-artifact/SKILL.md",
+      "state": "deferred",
+      "reason": "依赖 claude.ai Artifact 私有发布、账户和稳定 URL。"
+    }
+  ],
+  "copiedFiles": 5,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "76b2d159699e0bbbf5516050454bf53c3c06ea0f820184a3f81b562be4e9942a"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4262f4dd61d6d66a6428c85ed2a9b8ed2edb7078eb9c6fcbc9ece008ebb34c2a"
+    },
+    {
+      "path": "skills/project-artifact/SKILL.md",
+      "sha256": "47bbdd7c8c023af338310489591e6c43d25a49f5ffcbaa86beb87f028e79faab"
+    },
+    {
+      "path": "skills/project-artifact/swe.md",
+      "sha256": "2451d63726e8f66caa8047dea74f567a252e240a5566af54981991e74f8e66c5"
+    },
+    {
+      "path": "skills/project-artifact/template.html",
+      "sha256": "000daa6bd76ea24fd108b262427bf2dfab77ae6a841f8037a356a66ec0bd6d05"
+    }
+  ]
+}

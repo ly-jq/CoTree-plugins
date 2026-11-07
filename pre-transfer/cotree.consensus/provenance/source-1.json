@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.consensus",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "consensus",
+    "repository": "plugins",
+    "path": "plugins/consensus",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "9d165a9438a59eb5abadc506112d044c65927c1403048633351135456fc37e89",
+    "upstreamVersion": "4.0.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_CONSENSUS_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#consensus",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/consensus"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 0,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "dc8cbb46ae8b871905c675081dc7ae655f3aba91a6f1c8717ab69cb835af8439"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "7326135da053dfada47df58ad5f0822dcfe42582f8c4bcc221d6dadb39257989"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "5a1eca5f511d9099fc1a2cd5650903e7a604514a9b089567bad7bb60f62bd8a0"
+    }
+  ]
+}

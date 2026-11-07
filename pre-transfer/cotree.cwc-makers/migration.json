@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.cwc-makers",
+  "version": "0.2.0",
+  "category": "研究与专业工具",
+  "priority": 0,
+  "batch": 25,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "cwc-makers",
+      "repository": "claude-plugins-official",
+      "path": "plugins/cwc-makers",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "6b662e266bf7700c71792d5e3a8cd101f2b0f2cec478cdc8f7e5a8cb7789a32b",
+      "upstreamVersion": "1.0.0"
+    }
+  ],
+  "changes": [
+    "替换 Claude 专属命令、后台监控和默认板型，用 CoTree 工具与显式 USB 目标。",
+    "新增跨平台工程生成和设备 argv 计划，固件绑定独立 SHA256；不自动执行刷写。",
+    "原 onboarding 技术资料完整保留，明确外部 app bundle 依赖和 BLE 限制。"
+  ],
+  "limitations": [
+    "本包 USB/MicroPython 路径可独立调用，不提供 Claude Desktop Hardware Buddy BLE bridge。",
+    "源码原包不含外部固件/应用 bundle；实际使用需取得正确版本、板型与许可。",
+    "CLI/协议夹具和命令准备不证明实体串口、刷写、屏幕/按键或应用工作正常。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "source-01/content/commands/maker-setup.md": "setup：原生入口及完整归档参考",
+    "source-01/content/skills/m5-onboard/SKILL.md": "flash：原生入口及完整归档参考；debug：原生入口及完整归档参考",
+    "source-01/content/skills/cardputer-buddy/SKILL.md": "apps：原生入口及完整归档参考"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

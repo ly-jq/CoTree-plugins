@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.hyperframes",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 19,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "hyperframes",
+      "repository": "plugins",
+      "path": "plugins/hyperframes",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "71f8061ffd7637a6e378d9651544d711db062356e6875c9914f709702c835e5a",
+      "upstreamVersion": "0.1.2"
+    }
+  ],
+  "changes": [
+    "五项来源技能拆为八个原生工作流，完整保留 GSAP、字幕、声音、转场、配色与七步网页视频参考。",
+    "新增 HyperFrames 0.8.139 / GSAP 3.15.0 本地模板和 argv 执行入口；不执行 init 的宿主技能安装，不更新 CoTree 插件内容。",
+    "实际渲染使用新输出目录和单 worker，默认只返回命令计划；可选转写 / AI 服务身份单列，不从原宿主读取凭据。"
+  ],
+  "limitations": [
+    "需要 Node 22+、工程依赖、兼容 Chrome / Chromium 和 FFmpeg；模板固定版本，其他版本要先核对 CLI help。",
+    "本地 HTML / MP4 验证不证明所有 registry、媒体、声音、外部网站、GPU、云转写或 AI 账户均可用。模板无声音；音画同步需有实际音轨后验收。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "hyperframes / gsap": "create / animate / media / captions：完整 HTML composition、GSAP、媒体、字幕、转场与声音参考。",
+    "hyperframes-cli": "create / preview / render：独立固定版本模板、本地 CLI 计划 / 执行及真实视频交付，不运行上游技能安装器。",
+    "hyperframes-registry": "registry：核对 registry / block / component，保持原文件路径、连接参数与时间线。",
+    "website-to-hyperframes": "website：经用户明确视频任务后，采集页面、设计、文案、分镜、配音、制作和验证；普通 URL 不自动触发整条链。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

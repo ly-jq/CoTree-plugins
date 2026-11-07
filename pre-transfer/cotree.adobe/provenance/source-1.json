@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.adobe",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "adobe",
+    "repository": "plugins",
+    "path": "plugins/adobe",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "8fde8934ee971c217894c3b6abc8aa22392e7202f205287e5d5138b616612f46",
+    "upstreamVersion": "8.0.0"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "Adobe 的原宿主连接器尚未接入 Elyra。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/adobe-batch-edit-photos/SKILL.md",
+      "state": "deferred",
+      "reason": "Adobe 的原宿主连接器尚未接入 Elyra。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/adobe-create-mockups/SKILL.md",
+      "state": "deferred",
+      "reason": "Adobe 的原宿主连接器尚未接入 Elyra。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/adobe-create-social-variations/SKILL.md",
+      "state": "deferred",
+      "reason": "Adobe 的原宿主连接器尚未接入 Elyra。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/adobe-design-from-template/SKILL.md",
+      "state": "deferred",
+      "reason": "Adobe 的原宿主连接器尚未接入 Elyra。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/adobe-edit-quick-cut/SKILL.md",
+      "state": "deferred",
+      "reason": "Adobe 的原宿主连接器尚未接入 Elyra。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/adobe-retouch-portraits/SKILL.md",
+      "state": "deferred",
+      "reason": "Adobe 的原宿主连接器尚未接入 Elyra。"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 24,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "7f0a72790f5f0991e31821c5803dae74183a88ffeee137d0c82f1b3cce24acac"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "0b065814e65fd727fdc14aa7558abc271282a3469155f9c01f43916f505d0bec"
+    },
+    {
+      "path": "skills/adobe-batch-edit-photos/agents/openai.yaml",
+      "sha256": "ab7da9a2ffda55b9534043e8f099f5f209bc7ee9ca166ccaa13398954c63f148"
+    },
+    {
+      "path": "skills/adobe-batch-edit-photos/assets/icon-large.svg",
+      "sha256": "c36cf54f659a64a28208ebc9a0f64547329f1b6f4fdf02dd7309276d5bd30fc5"
+    },
+    {
+      "path": "skills/adobe-batch-edit-photos/assets/icon-small.svg",
+      "sha256": "c36cf54f659a64a28208ebc9a0f64547329f1b6f4fdf02dd7309276d5bd30fc5"
+    },
+    {
+      "path": "skills/adobe-batch-edit-photos/SKILL.md",
+      "sha256": "4d04047a2476ab880eb41c0f9e48017f3b10a04a7f30c04a626b9d507ce4ae10"
+    },
+    {
+      "path": "skills/adobe-create-mockups/agents/openai.yaml",
+      "sha256": "566cc87083806a2ab314597cb839f4f5879cd1d11f11bb218d76198b68c2eb56"
+    },
+    {
+      "path": "skills/adobe-create-mockups/assets/icon-large.svg",
+      "sha256": "c36cf54f659a64a28208ebc9a0f64547329f1b6f4fdf02dd7309276d5bd30fc5"
+    },
+    {
+      "path": "skills/adobe-create-mockups/assets/icon-small.svg",
+      "sha256": "c36cf54f659a64a28208ebc9a0f64547329f1b6f4fdf02dd7309276d5bd30fc5"
+    },
+    {
+      "path": "skills/adobe-create-mockups/SKILL.md",
+      "sha256": "c1af94c35997674b616a7f99a24dd8f75afd25d755bd3e086deced96775bb9fd"
+    },
+    {
+      "path": "skills/adobe-create-social-variations/agents/openai.yaml",
+      "sha256": "bacf10ac1ec519381d9cdb27a920b908539483f829b84f6eb05df1b1cf0608fa"
+    },
+    {
+      "path": "skills/adobe-create-social-variations/assets/icon-large.svg",
+      "sha256": "c36cf54f659a64a28208ebc9a0f64547329f1b6f4fdf02dd7309276d5bd30fc5"
+    },
+    {
+      "path": "skills/adobe-create-social-variations/assets/icon-small.svg",
+      "sha256": "c36cf54f659a64a28208ebc9a0f64547329f1b6f4fdf02dd7309276d5bd30fc5"
+    },
+    {
+      "path": "skills/adobe-create-social-variations/SKILL.md",
+      "sha256": "5669b42bd7d6ac1685ee3e45b9024836e08f244fe01bd6c819442648689a032d"
+    },
+    {
+      "path": "skills/adobe-design-from-template/agents/openai.yaml",
+      "sha256": "a06a4cc8b3280061f86358603fe154d695a4fbca7f65d5198f871baed0175bc4"
+    },
+    {
+      "path": "skills/adobe-design-from-template/assets/icon-large.svg",
+      "sha256": "c36cf54f659a64a28208ebc9a0f64547329f1b6f4fdf02dd7309276d5bd30fc5"
+    },
+    {
+      "path": "skills/adobe-design-from-template/assets/icon-small.svg",
+      "sha256": "c36cf54f659a64a28208ebc9a0f64547329f1b6f4fdf02dd7309276d5bd30fc5"
+    },
+    {
+      "path": "skills/adobe-design-from-template/SKILL.md",
+      "sha256": "116b875eaeba8215dda9a5ea0c79094aefc8b26e77f9a93370ce9d63299ad963"
+    },
+    {
+      "path": "skills/adobe-edit-quick-cut/agents/openai.yaml",
+      "sha256": "d8b1d7ba53d4cbd3677c0507059e610ae4eb0f148046ee77d7935a024f2976eb"
+    },
+    {
+      "path": "skills/adobe-edit-quick-cut/assets/icon-large.svg",
+      "sha256": "c36cf54f659a64a28208ebc9a0f64547329f1b6f4fdf02dd7309276d5bd30fc5"
+    },
+    {
+      "path": "skills/adobe-edit-quick-cut/assets/icon-small.svg",
+      "sha256": "c36cf54f659a64a28208ebc9a0f64547329f1b6f4fdf02dd7309276d5bd30fc5"
+    },
+    {
+      "path": "skills/adobe-edit-quick-cut/SKILL.md",
+      "sha256": "5660013ef3fa2ec0ffcd452e7d91f57bd06b1540a44c65cf179035ade6ea8f0b"
+    },
+    {
+      "path": "skills/adobe-retouch-portraits/agents/openai.yaml",
+      "sha256": "4cda9728fc6925f281c2a7254ece58c43e3b26e2bd6b08d9fef169d7a79e4259"
+    },
+    {
+      "path": "skills/adobe-retouch-portraits/assets/icon-large.svg",
+      "sha256": "c36cf54f659a64a28208ebc9a0f64547329f1b6f4fdf02dd7309276d5bd30fc5"
+    },
+    {
+      "path": "skills/adobe-retouch-portraits/assets/icon-small.svg",
+      "sha256": "c36cf54f659a64a28208ebc9a0f64547329f1b6f4fdf02dd7309276d5bd30fc5"
+    },
+    {
+      "path": "skills/adobe-retouch-portraits/SKILL.md",
+      "sha256": "f96ee0d2609434bbb64a1c652e94df773ac6a4ee99f4c51a421f32dffbd81373"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.ngs-analysis",
+  "version": "0.2.1",
+  "category": "研究与专业工具",
+  "priority": 0,
+  "batch": 24,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "ngs-analysis",
+      "repository": "plugins",
+      "path": "plugins/ngs-analysis",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "eee5069380fcce4791f2f54ce4252996c5958e69e83ac9c7f0b24f1f456dfe1b",
+      "upstreamVersion": "1.0.3"
+    }
+  ],
+  "changes": [
+    "18个技能按13条分析路线归并，保留完整runner、registry、schema与可视化资源。",
+    "29份运行资源按来源摘要适配，移除工作区隐藏.env注入并读取CoTree包身份。",
+    "拒绝空FASTQ，并按请求上限检查配对名；缺FastQC模块/样本ID明确拒绝，UMI标签、细胞注释与结果缺口提供证据归因及下一步。"
+  ],
+  "limitations": [
+    "Windows完成预检和合成数据验证；Nextflow/多数生信工具需Linux、macOS或WSL，具体R/Python/容器依赖与真实样本全流程未验收。",
+    "来源部分runner只完成准备或QC，实际分类/峰调用/变异等须核对具体产物；没有默认自动完成保证。",
+    "云计算、受控样本、商业拆样许可和大reference/database获取分别核对；不自动读取隐藏.env或上传私人数据。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "skill:ngs-analysis-router": "plan：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-runtime-env": "plan：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-bcl-to-fastq": "demultiplex：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-fastq-qc": "fastq：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-bulk-rnaseq": "bulk-counts：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-bulk-rnaseq-counts-qc": "bulk-counts：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-bulk-rnaseq-differential-expression": "differential-expression：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-scrna-seq": "single-cell：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:scrna-seq-qc": "single-cell：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-dna-variant-calling": "germline：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-dna-germline-variants": "germline：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-dna-somatic-variants": "somatic：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-dna-umi-panel-variants": "umi：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-epigenomics-peaks": "atac：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-atacseq-peaks-qc": "atac：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-chip-cutrun-peaks-qc": "chip-cutrun：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-amplicon-microbiome": "amplicon：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。",
+    "skill:ngs-shotgun-metagenomics": "metagenomics：领域知识、脚本和深层参考完整保留，使用 CoTree 原生入口。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

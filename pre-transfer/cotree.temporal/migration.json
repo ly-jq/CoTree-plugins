@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.temporal",
+  "version": "0.2.0",
+  "category": "代码托管与部署",
+  "priority": 0,
+  "batch": 18,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "temporal",
+      "repository": "plugins",
+      "path": "plugins/temporal",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "5b3710e23d18a2a4ab27aa46309573fefe757363065508da3affa78de7131a36",
+      "upstreamVersion": "0.4.0"
+    }
+  ],
+  "changes": [
+    "四份来源 Skill 拆成十项可发现的原生工作流，完整保留多语言与云端参考。",
+    "新增跨平台本地服务参数计划和固定 Python SDK 示例；本地流程不加载云配置，云接入按当前稳定 CLI / 独立身份处理。"
+  ],
+  "limitations": [
+    "本包原生工作流、辅助工具与安装合同已适配；用户工程、真实模型任务、云服务和设备业务分别验收，不由协议夹具或示例代替。",
+    "本地模板固定 temporalio 1.34.0，参数计划验证目标为 Temporal CLI 1.9.1；其他版本需检查实际 --help 与 SDK API。示例仅含内存开发服务与无外部副作用的重试 Activity。",
+    "Cloud / namespace 管理、API key / mTLS、WCI / AWS IAM、生产 batch / failover 和真实 SDK 业务尚需目标账户验收；来源 prerelease 脚本不作为可移植自动开通器。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "temporal-developer": "inspect / local / develop / interact / test，保留 Python、TypeScript、Go、Java、.NET、Ruby、Rust 与集成参考；新本地 Python 示例可独立运行。",
+    "temporal-ops": "diagnose / operate：逐层诊断、事件历史、任务队列、namespace / 身份 / 容量 / batch / schedule / export；按具体目标授权与回查。",
+    "temporal-cloud-setup": "cloud：使用当前稳定 CLI、官方 Cloud 管理入口和独立身份；不把来源 prerelease provision.sh 的固定人机格式作为 CoTree 运行入口。",
+    "temporal-serverless": "serverless：WCI、SDK / 打包 / 版本 / IAM / 可观测性与故障处理，保留 AWS 模板，按当前可用状态核实预览能力。",
+    "worker tuning and missing sibling references": "tune 补齐 worker / poller / slot / latency 证据；缺失的来源 sibling Skill 不伪造注册，官方文档按实际 SDK 版本查询。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

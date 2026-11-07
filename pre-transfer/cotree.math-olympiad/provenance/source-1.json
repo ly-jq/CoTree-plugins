@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.math-olympiad",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "math-olympiad",
+    "repository": "claude-plugins-official",
+    "path": "plugins/math-olympiad",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "d390a7d573ec91c5f289515dfd3689d84b05343f1f82c20b6b662008fb0b791c"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/math-olympiad/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/math-olympiad/SKILL.md",
+      "sourceMetadata": {
+        "name": "math-olympiad",
+        "description": "Solve competition math problems (IMO, Putnam, USAMO, AIME) with adversarial verification that catches the errors self-verification misses. Activates when asked to 'solve this IMO problem', 'prove this olympiad inequality', 'verify this competition proof', 'find a counterexample', 'is this proof correct', or for any problem with 'IMO', 'Putnam', 'USAMO', 'olympiad', or 'competition math' in it. Uses pure reasoning (no tools) — then a fresh-context adversarial verifier attacks the proof using specific failure patterns, not generic 'check logic'. Outputs calibrated confidence — will say 'no confident solution' rather than bluff. If LaTeX is available, produces a clean PDF after verification passes.",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "copiedFiles": 13,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "1c0dceb45f0f1741719e2d730c5185a91ddedd3047a68f90515e0e51c9ac231a"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "9835539b51abe6979c2044932b3fe47d10d0ee3c4152756841381dc8cfbcf5d5"
+    },
+    {
+      "path": "skills/math-olympiad/evals/trigger_eval.json",
+      "sha256": "a1f6a022a885d7fe5821ed9222b7e02f66b2250d9adb9e2f53169ded27dc13b6"
+    },
+    {
+      "path": "skills/math-olympiad/references/adversarial_prompts.md",
+      "sha256": "2b2bd9560fb9e7f6b04bf13103e90c76550989bb1af24dcb8fcd6a0991d5bcd3"
+    },
+    {
+      "path": "skills/math-olympiad/references/attempt_agent.md",
+      "sha256": "97dbf7e49cc53b8f097484e82b7a2651ad492d48dd171e93224cb540200b13e0"
+    },
+    {
+      "path": "skills/math-olympiad/references/known_constructions.md",
+      "sha256": "b953ac02c44fb580283a64c5ec31b5c4ea9013666470eaef39cd069e376c9490"
+    },
+    {
+      "path": "skills/math-olympiad/references/model_tier_defaults.md",
+      "sha256": "ec21bd4811a21e5a66f07c9eb524873027209de8481643bd91a8dd2b58059460"
+    },
+    {
+      "path": "skills/math-olympiad/references/presentation_prompts.md",
+      "sha256": "a7fa503d7e8caec53af25026130da155ae6fa803ecf274b27fd95e178038afda"
+    },
+    {
+      "path": "skills/math-olympiad/references/solver_heuristics.md",
+      "sha256": "cd2d7a405e2ffd30529e081d4c118014db20163eba53f1714b9c0b41fda3bb08"
+    },
+    {
+      "path": "skills/math-olympiad/references/verifier_patterns.md",
+      "sha256": "849d52b765d0ab4737d0c75f12d3aee909268ccf2fa30e4c5b15213f91778327"
+    },
+    {
+      "path": "skills/math-olympiad/scripts/check_latex.sh",
+      "sha256": "8a3451d46c9e22d74efa80684f9957de654b595da8d321fb95d1166e94d23d08"
+    },
+    {
+      "path": "skills/math-olympiad/scripts/compile_pdf.sh",
+      "sha256": "f4ef0da3a0864336ebbe0e169bf17448f8208d444545e7625d4f46c9cbba8a86"
+    },
+    {
+      "path": "skills/math-olympiad/SKILL.md",
+      "sha256": "4a4fd46daebb20756858bec826a6ae425e4003a5349ced46f29190d5aef11c9b"
+    }
+  ]
+}

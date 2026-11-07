@@ -1,0 +1,65 @@
+{
+  "observedAt": "2026-10-06T03:28:47.186Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "results": {
+    "elyra.context7": {
+      "packageDigest": "e21aff621f419212db3960cdf9b5c998c08b405197ef8a80289d76dc604ffaab",
+      "status": "passed",
+      "checks": [
+        "initialize",
+        "tools/list",
+        "resolve-library-id",
+        "query-docs"
+      ],
+      "tools": [
+        "query-docs",
+        "resolve-library-id"
+      ],
+      "libraryId": "/microsoft/typescript",
+      "nonemptyDocs": true
+    },
+    "elyra.playwright": {
+      "packageDigest": "a63581076018fdd85ae2be66d20ec84320e1726f1d469ea125fde79fa05dbddf",
+      "status": "passed",
+      "checks": [
+        "initialize",
+        "tools/list",
+        "browser_navigate",
+        "browser_click",
+        "browser_snapshot",
+        "browser_close"
+      ],
+      "tools": [
+        "browser_click",
+        "browser_close",
+        "browser_console_messages",
+        "browser_drag",
+        "browser_drop",
+        "browser_emulate_media",
+        "browser_evaluate",
+        "browser_file_upload",
+        "browser_fill_form",
+        "browser_find",
+        "browser_handle_dialog",
+        "browser_hover",
+        "browser_navigate",
+        "browser_navigate_back",
+        "browser_network_request",
+        "browser_network_requests",
+        "browser_press_key",
+        "browser_resize",
+        "browser_run_code_unsafe",
+        "browser_select_option",
+        "browser_snapshot",
+        "browser_tabs",
+        "browser_take_screenshot",
+        "browser_type",
+        "browser_wait_for"
+      ],
+      "observedStateChange": true
+    }
+  }
+}

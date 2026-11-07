@@ -1,0 +1,79 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.consensus",
+  "name": "Consensus",
+  "version": "0.2.0",
+  "description": "在 CoTree 中检索学术论文、设计检索策略、筛选和综合研究证据，生成可核对的书目与研究缺口分析。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.consensus.connect",
+      "description": "核对 Consensus 匿名能力、独立认证与套餐范围。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.consensus.question",
+      "description": "把研究问题整理成明确范围和可执行检索策略。",
+      "path": "skills/question/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.consensus.search",
+      "description": "检索相关论文并保留准确的书目和检索边界。",
+      "path": "skills/search/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.consensus.review",
+      "description": "按纳排标准筛选文献并形成证据矩阵。",
+      "path": "skills/review/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.consensus.synthesize",
+      "description": "综合研究发现，呈现一致性、冲突与不确定性。",
+      "path": "skills/synthesize/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.consensus.bibliography",
+      "description": "生成可追溯的阅读清单或参考文献文件。",
+      "path": "skills/bibliography/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.consensus.gaps",
+      "description": "基于检索覆盖与研究限制提出可验证的后续问题。",
+      "path": "skills/gaps/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "consensus",
+      "transport": "streamable-http",
+      "url": "https://mcp.consensus.app/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_CONSENSUS_MCP_AUTHORIZATION"
+      },
+      "timeoutMs": 60000
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "cb867a2bcaab601e74ff637b5dd96b20695750708e8251389a757026b368d057"
+  }
+}

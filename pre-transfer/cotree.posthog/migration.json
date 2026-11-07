@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.posthog",
+  "version": "0.2.0",
+  "category": "数据与商业",
+  "priority": 0,
+  "batch": 9,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "posthog",
+      "repository": "plugins",
+      "path": "plugins/posthog",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "046a7ae261b3f75dda2f99595169b9750dc0e7befa0b59a38af21704304ec44f",
+      "upstreamVersion": "1.0.0"
+    }
+  ],
+  "changes": [
+    "原连接器改为标准 Streamable HTTP 与独立项目级个人 API key。",
+    "默认只读 tools 模式，生成配置固定项目；脚本不读秘密、不写配置、不联网。",
+    "复合技能拆为六个领域工作流，发现真实工具，移除原宿主连接停止门。"
+  ],
+  "limitations": [
+    "真实账户业务未验收。个人 API key 可手动绑定；OAuth 自动授权 / 刷新未由本包实现，来源登录不可继承。",
+    "默认没有用户 project_id，操作数据前须生成应用项目配置；--write 改工具范围，不代替用户授权。",
+    "工具随权限与服务版本变化，CoTree MCP Apps bridge 不可用，使用 tools 模式的标准结果。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "posthog": "connect / analyze / flags / experiments / observe / manage：独立身份、产品分析 / HogQL、开关、实验、错误 / replay / LLM、调查 / insights / dashboard / warehouse。",
+    "host connector": "标准 Streamable HTTP + 独立项目级个人 API key；OAuth 自动授权 / 刷新仍待接入。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

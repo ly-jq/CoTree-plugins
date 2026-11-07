@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.remotion",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 17,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "remotion",
+      "repository": "plugins",
+      "path": "plugins/remotion",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "7e612ea2c324ddb32977917d632c088d9a38c555f638c4994ae13867fd86c810",
+      "upstreamVersion": "1.0.7"
+    }
+  ],
+  "changes": [
+    "十二个来源技能（含路由入口及嵌套副本）收敛为十一项原生工作流，保留完整技术与地图资源。",
+    "新增固定版本的独占新目录模板和本地渲染参数规划器，输出禁止覆盖，透明视频匹配容器、像素格式和编码。",
+    "移除强制 Codex 浏览器、自动上游技能更新与强制停止门，复用 CoTree 的文件、浏览器和执行权限。"
+  ],
+  "limitations": [
+    "原生工作流、随包工具和安装合同已改造；真实模型任务、用户工程、账户发布及各平台设备效果需分别验收。",
+    "模板固定 Remotion 4.0.506 / React 19.2.0，不代表最新版本；实际渲染需要项目依赖、兼容浏览器及该平台 compositor。",
+    "脚手架与参数计划不执行安装、渲染或云发布。字幕转写、配音、地图资源和云渲染为可选独立服务；不能用本地样例验证这些账户能力。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "remotion-best-practices / nested duplicate references": "统一入口按实际任务选十一项技能；嵌套与顶层参考归档保留，不重复注册或自动安装上游技能。",
+    "remotion-create / remotion-markup / remotion-interactivity": "create / compose / interactive：独占新目录模板、确定性动画、可编辑属性与源码读回。",
+    "remotion-multimedia / remotion-captions / remotion-maps": "media / captions / maps：素材元数据、字幕时序和地图稳定性；外部转写 / 配音 / 瓦片身份单列。",
+    "remotion-studio / remotion-render": "preview / render：实际 Studio 与本地渲染计划，显式输出、帧范围、透明编码及禁止覆盖。",
+    "remotion-saas / remotion-docs / remotion-upgrade": "app / docs / upgrade：Player 与渲染服务分层、版本化文档与依赖对齐，不自动更新 CoTree 插件目录。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

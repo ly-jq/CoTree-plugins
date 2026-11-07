@@ -1,0 +1,51 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.chatcut",
+  "name": "chatcut",
+  "version": "0.2.0",
+  "description": "将签名 ChatCut Desktop 通过官方固定版本 stdio 桥接到 CoTree。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.chatcut.connect",
+      "description": "连接或修复 ChatCut Desktop 的官方本地 MCP。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.chatcut.edit",
+      "description": "在 ChatCut 的明确项目上继续授权剪辑。",
+      "path": "skills/edit/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "chatcut_desktop",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "chatcut-desktop-mcp@0.1.1"
+      ],
+      "cwdBase": "plugin",
+      "timeoutMs": 60000
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "f947f07fce36b42281f181a928493bd67c9e2aa119fe87bafb5d4dd543ed3da8"
+  }
+}

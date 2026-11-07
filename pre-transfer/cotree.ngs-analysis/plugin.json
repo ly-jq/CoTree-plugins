@@ -1,0 +1,104 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.ngs-analysis",
+  "name": "NGS 测序分析",
+  "version": "0.2.1",
+  "description": "规划、预检并执行可复现的测序分析，保留样本、参考、运行和科学证据。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/app-icon.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.ngs-analysis.plan",
+      "description": "检查 NGS 环境、输入、参考资源并制定可复现分析。",
+      "path": "skills/plan/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.ngs-analysis.demultiplex",
+      "description": "校验 BCL 样本表、索引与拆样配置并分析 demux 指标。",
+      "path": "skills/demultiplex/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.ngs-analysis.fastq",
+      "description": "校验 FASTQ 配对并运行 QC、必要修剪和 MultiQC。",
+      "path": "skills/fastq/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.ngs-analysis.bulk-counts",
+      "description": "处理 bulk RNA-seq FASTQ 到计数与定量 QC。",
+      "path": "skills/bulk-counts/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.ngs-analysis.differential-expression",
+      "description": "核对实验设计并执行 bulk RNA-seq 差异表达。",
+      "path": "skills/differential-expression/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.ngs-analysis.single-cell",
+      "description": "执行单细胞计数、矩阵 QC、聚类及带证据的注释。",
+      "path": "skills/single-cell/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.ngs-analysis.germline",
+      "description": "制定并执行 DNA 胚系变异分析，核对参考和样本。",
+      "path": "skills/germline/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.ngs-analysis.somatic",
+      "description": "核对肿瘤 / 正常配对并运行体细胞变异工作流。",
+      "path": "skills/somatic/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.ngs-analysis.umi",
+      "description": "核对 UMI / duplex 信息和 consensus 变异分析。",
+      "path": "skills/umi/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.ngs-analysis.atac",
+      "description": "核对 ATAC-seq 输入并执行峰与可及性 QC。",
+      "path": "skills/atac/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.ngs-analysis.chip-cutrun",
+      "description": "处理 ChIP-seq、CUT&RUN 与 CUT&Tag 的对照和峰分析。",
+      "path": "skills/chip-cutrun/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.ngs-analysis.amplicon",
+      "description": "处理扩增子引物、去噪、分类和多样性分析。",
+      "path": "skills/amplicon/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.ngs-analysis.metagenomics",
+      "description": "处理 shotgun 宏基因组的宿主去除和物种 / 功能分析。",
+      "path": "skills/metagenomics/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "8e7aa2fd6d85c00f5530fa4db999cffea7ecbaddf3b97fbead8f7839c036a181"
+  }
+}

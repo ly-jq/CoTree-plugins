@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.canva",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 15,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "canva",
+      "repository": "plugins",
+      "path": "plugins/canva",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "c2e50ecb64e35fbdbb68395598c1c39d61d0adde3e6b0b3853e66141cd8d3c90",
+      "upstreamVersion": "14.0.0"
+    }
+  ],
+  "changes": [
+    "完整保留八类来源 Skill 及原图标，重写为十个 CoTree 原生工作流；归档不重复注册。",
+    "新增离线批量数据规划器、接入说明和导出流程；唯一远端 MCP 使用独立环境绑定。"
+  ],
+  "limitations": [
+    "原生入口、协议或 REST 适配已实现；独立账户授权、真实对象读写、过期恢复和业务结果仍待验收。",
+    "需要 Canva 认可的独立应用与每用户 OAuth；本包不实现 OAuth 客户端注册、回调或刷新。高级模板、品牌和批量功能取决于账户权益及实际工具目录。",
+    "批量规划器仅支持文本和已上传的图片 asset ID，不执行远端任务；图表等结构化字段须按实际 schema 另行处理。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "canva-edit-design / canva-branded-presentation": "edit / presentation：实际 schema、编辑事务、提交和读回；不保留原宿主工具名或固定委派。",
+    "canva-brand-check / canva-design-feedback": "brand-check / feedback：区分元数据与视觉推断，检查后取消只读事务。",
+    "canva-implement-feedback / canva-translate-design": "implement-feedback / translate：评论作为数据、保留原稿、写后验证，不自动发评论。",
+    "canva-resize-for-social-media / canva-bulk-create": "resize / bulk：按目标尺寸去重、准确字段映射和逐行作业账本；离线脚本不冒充远端生成。",
+    "MCP / app onboarding / export": "connect / export：独立应用与逐用户 OAuth、唯一 MCP 服务、实际格式和导出作业。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.hookify",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 26,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "hookify",
+      "repository": "claude-plugins-official",
+      "path": "plugins/hookify",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "6e3f490251b82fee0723b393bec82ff5a26f1a7752cd48a427ee4c76adf17031"
+    }
+  ],
+  "changes": [
+    "Python/Claude Hook替换为CoTree原生受控子宿主Hook。",
+    "新增有界配置验证、六个操作符、前置阻止和后置通知，使用真实工具schema。"
+  ],
+  "limitations": [
+    "需要宿主批准可信代码摘要或签名；不会自行绕过信任。",
+    "无来源Stop和UserPromptSubmit合同；完成通知不重启模型，Hook超时/故障遵循宿主fail-open。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "commands/hookify.md": "configure；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/configure.md": "configure；领域内容完整归档，执行遵循CoTree合同。",
+    "skills/writing-rules/SKILL.md": "configure；领域内容完整归档，执行遵循CoTree合同。",
+    "agents/conversation-analyzer.md": "configure；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/list.md": "inspect；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/help.md": "inspect；领域内容完整归档，执行遵循CoTree合同。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

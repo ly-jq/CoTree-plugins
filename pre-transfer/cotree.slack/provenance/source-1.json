@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.slack",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "slack",
+    "repository": "plugins",
+    "path": "plugins/slack",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "dc7ddf79a26dddcedc9d66a01c65ddd4a0327017f25099f13347fb197c168a6c",
+    "upstreamVersion": "0.1.7"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_SLACK_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#slack",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/slack"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 6,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "815ac5250522a272857a648c0d4ad8a89a004a0aa7d5addd633a76585f86bd71"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "dc7dc809ea221c6a8c9c237c1bb72f080eaf52651342598be829ab4a0fc32b92"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "b0579ce5bd2729a113ed3710884a6705fcf4992e390389ad49cc1568b260e0f7"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "f88b25ee38843be34d0c8bc4a58a9422b4aee14e6b4562bc9323e5b872a6ccd3"
+    },
+    {
+      "path": "assets/composer-icon.png",
+      "sha256": "22860d9a3bdf29402f53345ae9bc8ee0cd057c652eda418ef8433ff0c363fb02"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "22860d9a3bdf29402f53345ae9bc8ee0cd057c652eda418ef8433ff0c363fb02"
+    },
+    {
+      "path": "assets/slack-small.svg",
+      "sha256": "24e80e658c4f022a083058446072025d296bb80a1b04469efc7414489deecc15"
+    },
+    {
+      "path": "assets/slack.png",
+      "sha256": "370cb8e77d6a6802b15d9058f4eb7474f98550eaeab9cc8ac9289cba29da7125"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a68d460df241edcaf5a8aa5402e8bd32a305763994edb06383444b394bc38853"
+    }
+  ]
+}

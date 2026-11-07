@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.openai-ads-conversions",
+  "version": "0.2.0",
+  "category": "数据与商业",
+  "priority": 0,
+  "batch": 30,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "openai-ads-conversions",
+      "repository": "plugins",
+      "path": "plugins/openai-ads-conversions",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "b780eca80edef5fd6f6afd0ccb6cb628179185fdfa1eb3d690791d2b135bc443",
+      "upstreamVersion": "0.1.2"
+    }
+  ],
+  "changes": [
+    "将来源单技能拆成检查、Pixel、CAPI与验证，复用当前应用分析层。",
+    "按官方现行字段更新合同，提供零网络验证器、明确远端发送和可测试Pixel示例。"
+  ],
+  "limitations": [
+    "独立广告账户/Pixel ID/CAPI key及真实事件接收和归因尚未验收，不读取或创建凭据。",
+    "示例只覆盖明确合同子集，接入具体框架与新字段须在目标仓库按官方文档核对。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "openai-ads-conversions-setup": "inspect / pixel / capi / verify：现行Pixel/CAPI合同、已有代码增量集成、去重/同意和本地/真实账户分层验证。",
+    "source reference drift": "保留历史文档；使用2026-10-14官方数组用户字段、obref、app生命周期与consent更新。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

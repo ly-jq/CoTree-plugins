@@ -1,0 +1,132 @@
+{
+  "resources": [
+    {
+      "sourceId": "import.codex.build-web-apps",
+      "sourcePath": "content/skills/shadcn-best-practices/rules/styling.md",
+      "destination": "references/shadcn/rules/styling.md",
+      "sha256": "6e9c6ee8c29cb5930b16d295a45e2109ab8913f2300237448f04fd25deaf15b0",
+      "source": {
+        "ecosystem": "codex",
+        "package": "build-web-apps",
+        "repository": "plugins",
+        "path": "plugins/build-web-apps",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "4bbbc2fa33bfc9c16cd5e3569fad0a407160f8d4886ba5e55402d7e9151dac26",
+        "upstreamVersion": "0.1.2"
+      }
+    },
+    {
+      "sourceId": "import.codex.build-web-apps",
+      "sourcePath": "content/skills/shadcn-best-practices/rules/icons.md",
+      "destination": "references/shadcn/rules/icons.md",
+      "sha256": "08a07baacbbef0926002b88ca1fc410bf70eb7938a3f3521e4d8f643f6621908",
+      "source": {
+        "ecosystem": "codex",
+        "package": "build-web-apps",
+        "repository": "plugins",
+        "path": "plugins/build-web-apps",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "4bbbc2fa33bfc9c16cd5e3569fad0a407160f8d4886ba5e55402d7e9151dac26",
+        "upstreamVersion": "0.1.2"
+      }
+    },
+    {
+      "sourceId": "import.codex.build-web-apps",
+      "sourcePath": "content/skills/shadcn-best-practices/rules/forms.md",
+      "destination": "references/shadcn/rules/forms.md",
+      "sha256": "a5422ccca0bcaa9ccb5e8a3745bacd08eadcf9a96f54e1b39f5ffe725f316feb",
+      "source": {
+        "ecosystem": "codex",
+        "package": "build-web-apps",
+        "repository": "plugins",
+        "path": "plugins/build-web-apps",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "4bbbc2fa33bfc9c16cd5e3569fad0a407160f8d4886ba5e55402d7e9151dac26",
+        "upstreamVersion": "0.1.2"
+      }
+    },
+    {
+      "sourceId": "import.codex.build-web-apps",
+      "sourcePath": "content/skills/shadcn-best-practices/rules/composition.md",
+      "destination": "references/shadcn/rules/composition.md",
+      "sha256": "b8cd03b5343a7a42ff015252b689d573ecd492ff96738888f93c688f4f5bbc6c",
+      "source": {
+        "ecosystem": "codex",
+        "package": "build-web-apps",
+        "repository": "plugins",
+        "path": "plugins/build-web-apps",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "4bbbc2fa33bfc9c16cd5e3569fad0a407160f8d4886ba5e55402d7e9151dac26",
+        "upstreamVersion": "0.1.2"
+      }
+    },
+    {
+      "sourceId": "import.codex.build-web-apps",
+      "sourcePath": "content/skills/shadcn-best-practices/rules/base-vs-radix.md",
+      "destination": "references/shadcn/rules/base-vs-radix.md",
+      "sha256": "d0b66cd55a921602e7ca1f3b8c03a2f744b8d688f843155bbb2d9c7cef08eb0a",
+      "source": {
+        "ecosystem": "codex",
+        "package": "build-web-apps",
+        "repository": "plugins",
+        "path": "plugins/build-web-apps",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "4bbbc2fa33bfc9c16cd5e3569fad0a407160f8d4886ba5e55402d7e9151dac26",
+        "upstreamVersion": "0.1.2"
+      }
+    },
+    {
+      "sourceId": "import.codex.build-web-apps",
+      "sourcePath": "content/skills/shadcn-best-practices/cli.md",
+      "destination": "references/shadcn/cli.md",
+      "sha256": "8b979ba249ec0920a3d75ba3ed8dfa12c4277856e28b08f65044a5fb1df6445f",
+      "source": {
+        "ecosystem": "codex",
+        "package": "build-web-apps",
+        "repository": "plugins",
+        "path": "plugins/build-web-apps",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "4bbbc2fa33bfc9c16cd5e3569fad0a407160f8d4886ba5e55402d7e9151dac26",
+        "upstreamVersion": "0.1.2"
+      }
+    },
+    {
+      "sourceId": "import.codex.build-web-apps",
+      "sourcePath": "content/skills/shadcn-best-practices/customization.md",
+      "destination": "references/shadcn/customization.md",
+      "sha256": "327b0de976b667a7ae8a5b40dbe579594917d2d80f0b4d5f8018e0df1c8ffb2e",
+      "source": {
+        "ecosystem": "codex",
+        "package": "build-web-apps",
+        "repository": "plugins",
+        "path": "plugins/build-web-apps",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "4bbbc2fa33bfc9c16cd5e3569fad0a407160f8d4886ba5e55402d7e9151dac26",
+        "upstreamVersion": "0.1.2"
+      }
+    },
+    {
+      "sourceId": "import.codex.build-web-apps",
+      "sourcePath": "content/skills/shadcn-best-practices/mcp.md",
+      "destination": "references/shadcn/mcp.md",
+      "sha256": "810159e21991304593e62086bcc22e8344e16daa838248dfad9093b404ac24a9",
+      "source": {
+        "ecosystem": "codex",
+        "package": "build-web-apps",
+        "repository": "plugins",
+        "path": "plugins/build-web-apps",
+        "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+        "dirty": false,
+        "digest": "4bbbc2fa33bfc9c16cd5e3569fad0a407160f8d4886ba5e55402d7e9151dac26",
+        "upstreamVersion": "0.1.2"
+      }
+    }
+  ]
+}

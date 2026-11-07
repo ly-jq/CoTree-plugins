@@ -1,0 +1,68 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.notion",
+  "name": "Notion",
+  "version": "0.2.0",
+  "description": "面向 Notion 的知识整理、会议准备、研究文档和需求落地工作流。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/notion.png",
+    "darkIcon": "resources/source-01/content/assets/notion-dark.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.notion.connect",
+      "description": "检查 Notion MCP 接入条件、身份与授权空间，定位 OAuth 或资源权限问题。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.notion.capture",
+      "description": "将讨论或材料整理为 Notion 决策、操作手册、FAQ 或知识条目。",
+      "path": "skills/capture/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.notion.meeting",
+      "description": "用 Notion 背景材料准备议程、预读材料，或整理会议决定和行动项。",
+      "path": "skills/meeting/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.notion.research",
+      "description": "检索 Notion 内容并形成可追溯的摘要、比较或研究报告。",
+      "path": "skills/research/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.notion.plan",
+      "description": "把 Notion 需求文档转为关联的实施计划、任务与证据化进度。",
+      "path": "skills/plan/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "notion",
+      "transport": "streamable-http",
+      "url": "https://mcp.notion.com/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_NOTION_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "77b56aedf65b17746e2b75981d45edfa6ff42a8dd7e16f3c12345a3e6da46dd4"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.dropbox",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "dropbox",
+    "repository": "plugins",
+    "path": "plugins/dropbox",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "fcb2576e10fa35452214b4d3354ac39307587f3881a69c9ec321b5fef8de9d4c",
+    "upstreamVersion": "5.0.1"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_DROPBOX_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/clean-up-dropbox-content/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/clean-up-dropbox-content/SKILL.md",
+      "sourceMetadata": {
+        "name": "clean-up-dropbox-content",
+        "description": "Clean up Dropbox content by identifying obsolete, duplicate, temporary, or unwanted files and deleting only after explicit review. Use when the user explicitly asks to delete, remove, or clean up Dropbox files or folders."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/collect-files-with-request/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/collect-files-with-request/SKILL.md",
+      "sourceMetadata": {
+        "name": "collect-files-with-request",
+        "description": "Create, inspect, and manage Dropbox file requests for collecting uploads from other people. Use when the user asks to collect files, request uploads, create an upload portal, check a file request, or list existing file requests."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/find-dropbox-content/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/find-dropbox-content/SKILL.md",
+      "sourceMetadata": {
+        "name": "find-dropbox-content",
+        "description": "Find Dropbox files and folders relevant to a user request. Use when the user asks to search Dropbox, find a document, locate recent files, browse a folder, identify likely source files, or narrow down where content lives before reading, sharing, organizing, or restoring it."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/inspect-dropbox-file/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/inspect-dropbox-file/SKILL.md",
+      "sourceMetadata": {
+        "name": "inspect-dropbox-file",
+        "description": "Inspect a Dropbox file or folder by checking metadata, shared links, and file content when needed. Use when the user asks what a file is, whether it is shared, when it changed, what access links exist, or asks to read/analyze a Dropbox file."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/organize-dropbox-folder/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/organize-dropbox-folder/SKILL.md",
+      "sourceMetadata": {
+        "name": "organize-dropbox-folder",
+        "description": "Organize Dropbox files and folders by creating folders, copying content, or moving content into a cleaner structure. Use when the user asks to organize, archive, consolidate, restructure, copy, or move Dropbox content."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/share-dropbox-content/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/share-dropbox-content/SKILL.md",
+      "sourceMetadata": {
+        "name": "share-dropbox-content",
+        "description": "Share Dropbox files or folders by creating shared links, inspecting existing shared links, or explaining current shared-link state. Use only when the user explicitly asks to create a shared link, check access, or inspect a Dropbox shared link."
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#dropbox",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/dropbox"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 11,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "853301135c8c0d49d746bb38d5b182aa2b0d4a70971865265beedd7e2a51991f"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "7219612938e360633b896f7a9dfef50e0454b7692d4089555cb3eee8e99365ab"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "10df07abcff2024280a594333a1d8b3f8bdf95cb0ca3e5d85c76b33753ed0a8f"
+    },
+    {
+      "path": "assets/logo-dark.png",
+      "sha256": "6b07b94b46e3cfeb2191233050126b4c2215117d3f47ef3ff86440fa5be57987"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "d543e555eb1c376f21c2b1d08d4fc76e3b348ab6b3ccf10ccc682f8dc2cbe273"
+    },
+    {
+      "path": "assets/screenshot-1.png",
+      "sha256": "5ef3a08876fe450749c02f6a6e661f7dc2affb566f84a44f1c3719e9f37ff0ff"
+    },
+    {
+      "path": "assets/screenshot-2.png",
+      "sha256": "42c56375b84ed70cc845180500184efbb9dc6492674ad142599b61a24a6c03a1"
+    },
+    {
+      "path": "assets/screenshot-3.png",
+      "sha256": "c1194112223f26f2aabe58ae06fe8df86ff1aabc1629cb5b54bbc91741bb08e9"
+    },
+    {
+      "path": "skills/clean-up-dropbox-content/SKILL.md",
+      "sha256": "0e05c393c95ed152d9ed4cc882bf84c725db33379e5544949772c1b9461a3242"
+    },
+    {
+      "path": "skills/collect-files-with-request/SKILL.md",
+      "sha256": "279b374a4ca65dd8f6156890a8355670859e40ec0e420521034631f38606dd41"
+    },
+    {
+      "path": "skills/find-dropbox-content/SKILL.md",
+      "sha256": "d64ff3cbc71390919ec4d6ea5409b40a4321241fa16d401c7673feeafba5ad20"
+    },
+    {
+      "path": "skills/inspect-dropbox-file/SKILL.md",
+      "sha256": "50956b1f56380d0c353afde840e7d8ccb654358f87b3bc76607001b9bf2a8cc1"
+    },
+    {
+      "path": "skills/organize-dropbox-folder/SKILL.md",
+      "sha256": "34e1beaac56bac81dfe3fe714c8531f72bb8f05c9b878251c68ef6fbaf92ef21"
+    },
+    {
+      "path": "skills/share-dropbox-content/SKILL.md",
+      "sha256": "a02408f343a3a7a03be0877780436627c5ce8b28db19d7854c7fc2492687c266"
+    }
+  ]
+}

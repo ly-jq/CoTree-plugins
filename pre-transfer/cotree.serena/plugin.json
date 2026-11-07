@@ -1,0 +1,88 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.serena",
+  "name": "Serena",
+  "version": "0.2.0",
+  "description": "将 Serena 的语义导航、符号编辑与项目笔记接入 CoTree 当前工作区。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.serena.connect",
+      "description": "配置或排查当前工程的 Serena MCP 连接。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.serena.navigate",
+      "description": "用 Serena 定位符号、引用与实现关系。",
+      "path": "skills/navigate/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.serena.edit",
+      "description": "在明确范围内通过 Serena 编辑或重命名符号。",
+      "path": "skills/edit/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.serena.diagnose",
+      "description": "诊断 Serena 工程识别、索引和语言服务器问题。",
+      "path": "skills/diagnose/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.serena.memory",
+      "description": "按用户授权维护 Serena 工程笔记。",
+      "path": "skills/memory/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.serena.verify",
+      "description": "验证 Serena 工程操作的实际结果。",
+      "path": "skills/verify/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "serena",
+      "transport": "stdio",
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena@3155fd67e9b7336a4a4cbf51ac111bba88fa53d7",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide",
+        "--project",
+        ".",
+        "--enable-web-dashboard",
+        "false",
+        "--open-web-dashboard",
+        "false",
+        "--enable-gui-log-window",
+        "false"
+      ],
+      "cwd": ".",
+      "cwdBase": "workspace",
+      "timeoutMs": 120000
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "b05e962965e2ef6c875a3f4c7eaad91ae0e451b2bfd52c683143d42f999828d5"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.build-web-data-visualization",
+  "name": "网页数据可视化",
+  "version": "0.2.0",
+  "description": "实现并验证网页图表、地图、看板、关系图、架构图和数据叙事，保留完整工程参考。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/app-icon.svg",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.build-web-data-visualization.design",
+      "description": "选择图形、交互与交付方式。",
+      "path": "skills/design/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.critique",
+      "description": "评估数据图形是否准确易读。",
+      "path": "skills/critique/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.declarative",
+      "description": "用声明式语法构建统计图。",
+      "path": "skills/declarative/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.svg",
+      "description": "构建精确的 SVG / D3 图形。",
+      "path": "skills/svg/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.canvas",
+      "description": "实现高密度 Canvas2D 图表。",
+      "path": "skills/canvas/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.gpu",
+      "description": "实现有分析价值的 WebGL / Three.js 图形。",
+      "path": "skills/gpu/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.maps",
+      "description": "构建地图与地理图层。",
+      "path": "skills/maps/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.dashboard",
+      "description": "实现联动看板与实时状态。",
+      "path": "skills/dashboard/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.statistics",
+      "description": "表达分布、估计与不确定性。",
+      "path": "skills/statistics/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.schedule",
+      "description": "构建甘特图、里程碑与依赖视图。",
+      "path": "skills/schedule/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.graph",
+      "description": "实现节点布局与关系探索。",
+      "path": "skills/graph/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.architecture",
+      "description": "生成软件架构、UML 与关系图。",
+      "path": "skills/architecture/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.story",
+      "description": "实现滚动叙事与分步解释。",
+      "path": "skills/story/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.react",
+      "description": "将图形集成到 React / Next.js。",
+      "path": "skills/react/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.engineering",
+      "description": "建立类型、运行时校验与保存视图。",
+      "path": "skills/engineering/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.test",
+      "description": "验证数值、交互与导出。",
+      "path": "skills/test/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.accessibility",
+      "description": "提供可访问的数据阅读路径。",
+      "path": "skills/accessibility/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-data-visualization.export",
+      "description": "把图形交付为报告、PDF 或幻灯片。",
+      "path": "skills/export/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "6c6ba01559f883b0f11534c8639a3156e835210b49b770eaa227db0fabc9e958"
+  }
+}

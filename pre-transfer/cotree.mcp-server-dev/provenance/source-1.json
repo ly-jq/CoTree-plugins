@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.mcp-server-dev",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "mcp-server-dev",
+    "repository": "claude-plugins-official",
+    "path": "plugins/mcp-server-dev",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "d10c9285bfde185c06b19076fb3733519b52240634c49feaa1cefad141e7fbab"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "标准 MCP 开发方法可用；Claude 配置、MCPB 安装和 App UI 不代表 Elyra 已支持。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/build-mcp-app/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/build-mcp-app/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-mcp-app",
+        "description": "This skill should be used when the user wants to build an \"MCP app\", add \"interactive UI\" or \"widgets\" to an MCP server, \"render components in chat\", build \"MCP UI resources\", make a tool that shows a \"form\", \"picker\", \"dashboard\" or \"confirmation dialog\" inline in the conversation, or mentions \"apps SDK\" in the context of MCP. Use AFTER the build-mcp-server skill has settled the deployment model, or when the user already knows they want UI widgets.",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/build-mcp-server/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/build-mcp-server/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-mcp-server",
+        "description": "This skill should be used when the user asks to \"build an MCP server\", \"create an MCP\", \"make an MCP integration\", \"wrap an API for Claude\", \"expose tools to Claude\", \"make an MCP app\", or discusses building something with the Model Context Protocol. It is the entry point for MCP server development — it interrogates the user about their use case, determines the right deployment model (remote HTTP, MCPB, local stdio), picks a tool-design pattern, and hands off to specialized skills.",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/build-mcpb/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/build-mcpb/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-mcpb",
+        "description": "This skill should be used when the user wants to \"package an MCP server\", \"bundle an MCP\", \"make an MCPB\", \"ship a local MCP server\", \"distribute a local MCP\", discusses \".mcpb files\", mentions bundling a Node or Python runtime with their MCP server, or needs an MCP server that interacts with the local filesystem, desktop apps, or OS and must be installable without the user having Node/Python set up.",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "copiedFiles": 21,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "d201aadfdae54f57bb3dbcddc1a4d8e25d96eb8594d29a39a2c1ddc674e6583f"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "00c1928ffaa88f33a06d0dba287f955508d7771b6c29cd08018decf057dcad26"
+    },
+    {
+      "path": "skills/build-mcp-app/references/abuse-protection.md",
+      "sha256": "ee41d61c43c31d508bd80948c7ac5c794154745b41a8f2e7fc45575cea6918d8"
+    },
+    {
+      "path": "skills/build-mcp-app/references/apps-sdk-messages.md",
+      "sha256": "4f7f9eab5587ec9adf8bfd29b0527b747178ce70c5d36cf9683080c3c209d1c3"
+    },
+    {
+      "path": "skills/build-mcp-app/references/directory-checklist.md",
+      "sha256": "e4df0cb54ce8b91fb37e6bdcb3db30a639db22d63f5f0e5d63dc066c85f0c45a"
+    },
+    {
+      "path": "skills/build-mcp-app/references/iframe-sandbox.md",
+      "sha256": "f5c6533f5bad153bd50b5d71d9f959a13ce34c47989209829355bc2091f2cfe2"
+    },
+    {
+      "path": "skills/build-mcp-app/references/payload-budgeting.md",
+      "sha256": "f92d114045a15ac93e145465bc98a9bd5859eb62275ff7d15178a47fc7864e23"
+    },
+    {
+      "path": "skills/build-mcp-app/references/widget-templates.md",
+      "sha256": "74193ec6b83c31e63c1c1b0db5d3827da62b0e1f71fe9be8a2edca9227f81932"
+    },
+    {
+      "path": "skills/build-mcp-app/SKILL.md",
+      "sha256": "e772d7ea7193ca146d69b519be86d498a4386f1ec3bb4bc9bd35eebf0ac9cb8d"
+    },
+    {
+      "path": "skills/build-mcp-server/references/auth.md",
+      "sha256": "8a42fa8154a5b09921d20ff67fc3a5781657f4f45be79a78bcc774f28d8fce3e"
+    },
+    {
+      "path": "skills/build-mcp-server/references/deploy-cloudflare-workers.md",
+      "sha256": "05247460e23846bfe3aa5ee31d6e741660731b4f4fc9ad9b38e69ea860adec9c"
+    },
+    {
+      "path": "skills/build-mcp-server/references/elicitation.md",
+      "sha256": "482699a582ba79af771c326e00a9210329a6e454553ea27cdef89dd4c908d580"
+    },
+    {
+      "path": "skills/build-mcp-server/references/remote-http-scaffold.md",
+      "sha256": "a82695ee01e2ba2fe605cf8fb70f6fdd547c1eaea4d6ae3c2fe33768b2b09f00"
+    },
+    {
+      "path": "skills/build-mcp-server/references/resources-and-prompts.md",
+      "sha256": "92e0fef133509af745261739bb210973008e2d010adb8f59eb8b78c417eb656f"
+    },
+    {
+      "path": "skills/build-mcp-server/references/server-capabilities.md",
+      "sha256": "3719c63d136b2e6a005c08cf702619491eaf6b915b4192faee98456c65914c82"
+    },
+    {
+      "path": "skills/build-mcp-server/references/tool-design.md",
+      "sha256": "5fa646d6f847574c9c3f44876087a77ddb2ed31fc9440a448ed11d86f7ba8c4b"
+    },
+    {
+      "path": "skills/build-mcp-server/references/versions.md",
+      "sha256": "e795a0caa47b56ebc02ab50b789657f497d9ae104d99010137e506dcf9121ca6"
+    },
+    {
+      "path": "skills/build-mcp-server/SKILL.md",
+      "sha256": "ab27d1103e7be75d75b99d717cc5b3017c24e398f949959f75638e45974083e8"
+    },
+    {
+      "path": "skills/build-mcpb/references/local-security.md",
+      "sha256": "f48406623fc0b2d58cbbfbc5dd4d67528dfdd06a6b6e3aa7204e17789659b56e"
+    },
+    {
+      "path": "skills/build-mcpb/references/manifest-schema.md",
+      "sha256": "f397354947ae792187e36e55e775000ad6160358010ba0a3dc00422a555d88ea"
+    },
+    {
+      "path": "skills/build-mcpb/SKILL.md",
+      "sha256": "e1b5b3a01e62d40c5a0ba5777654e1b65fa10c5c2aff995747000c6b7fb8d74f"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.shopify",
+  "name": "Shopify",
+  "version": "0.2.0",
+  "description": "开发和校验 Shopify 应用与店面，按独立 CLI 身份管理店铺和 UCP 购物流程。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.shopify.connect",
+      "description": "配置 Shopify 开发工具和独立店铺身份。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.shopify.develop",
+      "description": "开发 Shopify 应用，检索文档并准备审核和自定义数据。",
+      "path": "skills/develop/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.shopify.graphql",
+      "description": "编写并校验 Shopify Admin、Storefront、Customer、Partner 与 Payments GraphQL。",
+      "path": "skills/graphql/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.shopify.extensions",
+      "description": "构建 Shopify Functions、Polaris 与 POS 扩展。",
+      "path": "skills/extensions/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.shopify.storefront",
+      "description": "开发 Shopify Liquid 主题和 Hydrogen 店面。",
+      "path": "skills/storefront/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.shopify.store",
+      "description": "通过 Shopify CLI 管理指定店铺，核对写入对象和结果。",
+      "path": "skills/store/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.shopify.shop",
+      "description": "使用独立 UCP CLI 查询商品、管理购物车并跟踪已授权订单。",
+      "path": "skills/shop/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "dev",
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@shopify/dev-mcp@1.16.0"
+      ],
+      "env": {
+        "OPT_OUT_INSTRUMENTATION": "true"
+      },
+      "cwd": ".",
+      "cwdBase": "workspace",
+      "timeoutMs": 90000
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "62dc80f7d0bab07c716b55752315131b95057082e702c4d5cbfbe52d70490221"
+  }
+}

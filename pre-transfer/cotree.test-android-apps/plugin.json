@@ -1,0 +1,74 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.test-android-apps",
+  "name": "Android 应用测试",
+  "version": "0.2.0",
+  "description": "复用 CoTree Android 设备能力完成应用流程验证、证据采集和 CPU / 帧时间 / 内存分析。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/app-icon.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.test-android-apps.connect",
+      "description": "选择并核对 Android 应用测试的设备与执行能力。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.test-android-apps.build",
+      "description": "构建并安装目标 Android 测试变体。",
+      "path": "skills/build/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.test-android-apps.qa",
+      "description": "在真实 Android 目标上验证用户流程与持久结果。",
+      "path": "skills/qa/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.test-android-apps.locate",
+      "description": "从 Android UI dump 唯一定位节点并核对新鲜度。",
+      "path": "skills/locate/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.test-android-apps.capture",
+      "description": "保存 Android 截图、UI树、应用日志或性能快照。",
+      "path": "skills/capture/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.test-android-apps.cpu",
+      "description": "采集并解释 Android Simpleperf CPU 热点。",
+      "path": "skills/cpu/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.test-android-apps.timeline",
+      "description": "分析 Android 启动、帧时间与 Perfetto / Compose 轨道。",
+      "path": "skills/timeline/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.test-android-apps.memory",
+      "description": "区分 Android PSS、Java泄漏与native allocation证据。",
+      "path": "skills/memory/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "2252fa82ca682cb3802be019258725dd116a67e447c4256cf5e54e6f455211a4"
+  }
+}

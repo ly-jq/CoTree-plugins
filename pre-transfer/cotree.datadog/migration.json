@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.datadog",
+  "version": "0.2.0",
+  "category": "代码托管与部署",
+  "priority": 0,
+  "batch": 14,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "datadog",
+      "repository": "plugins",
+      "path": "plugins/datadog",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "8d07a1ab4d9d04bc29f5ba86b089e40503aff9b9014618df10b94079909f7e0e",
+      "upstreamVersion": "10.0.0"
+    }
+  ],
+  "changes": [
+    "官方服务与图标保留，增加七个原生可观测性工作流。",
+    "补齐 US1 两种 header 身份的离线配置；站点、时区、采样、分页与读写结果独立记录。"
+  ],
+  "limitations": [
+    "已完成 CoTree 原生入口与集成改造；真实账户读写、权限、过期恢复和业务结果仍待验收。Skill 加载不证明线上任务成功。",
+    "配置生成器仅覆盖来源 US1 端点；其他 site 需在官方 setup 页选定站点，核实其端点和准入后同名覆盖。",
+    "不提供 OAuth 注册 / 登录 / 刷新；API / Application key 必须成对，不伪装成 Bearer。未增加 Datadog Code Security 扫描服务。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "official remote MCP": "connect：保持唯一 US1 服务、原图标，分开 Bearer 与 API / Application key 身份。",
+    "source contains no domain skills": "logs / metrics / apm / monitors / dashboards / incident 补足实际可观测性工作流。",
+    "sites / OAuth / write access": "其他 site 核实官方端点后同名覆盖；独立 OAuth、组织准入及账户结果单独跟进，工具目录不视为只读权限。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

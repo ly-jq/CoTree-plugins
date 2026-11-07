@@ -1,0 +1,74 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.boltz-api-cli",
+  "name": "Boltz",
+  "version": "0.2.0",
+  "description": "通过独立 Boltz CLI 规划分子计算、核对成本并恢复已提交任务。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/app-icon.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.boltz-api-cli.connect",
+      "description": "核对 Boltz CLI 版本、独立账户与计算权限。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.boltz-api-cli.recover",
+      "description": "恢复 Boltz 已有任务和下载，保留幂等性。",
+      "path": "skills/recover/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.boltz-api-cli.structure",
+      "description": "预测指定复合物的结构与结合指标。",
+      "path": "skills/structure/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.boltz-api-cli.adme",
+      "description": "预测指定小分子的 ADME 性质并解释范围。",
+      "path": "skills/adme/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.boltz-api-cli.molecule-screen",
+      "description": "筛选已有小分子库并保留目标与化合物映射。",
+      "path": "skills/molecule-screen/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.boltz-api-cli.molecule-design",
+      "description": "按明确目标和约束准备小分子生成计算。",
+      "path": "skills/molecule-design/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.boltz-api-cli.protein-screen",
+      "description": "对已有蛋白候选库进行结合计算筛选。",
+      "path": "skills/protein-screen/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.boltz-api-cli.protein-design",
+      "description": "准备蛋白结合物设计及结构辅助分析。",
+      "path": "skills/protein-design/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "09ca754dc379d4f39b8a38cb398ca6586aff6aee6123bc656ee9400a39b5b068"
+  }
+}

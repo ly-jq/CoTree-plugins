@@ -1,0 +1,44 @@
+{
+  "manifestVersion": 1,
+  "id": "cotree.messaging-platform",
+  "name": "Messaging Platforms (Telegram + WeCom)",
+  "version": "1.0.0",
+  "description": "Declarative messaging platform adapters for CoTree's gateway: Telegram (Bot API long-polling) and WeChat Work / WeCom (企业微信 app messages). Personal WeChat has no official bot API, so the WeChat-family adapter targets WeCom. Auth via environment variables only - no embedded keys.",
+  "minKernelVersion": "0.1.0",
+  "entry": "src/index.ts",
+  "capabilities": {
+    "platformAdapters": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none",
+    "network": {
+      "allowDomains": ["api.telegram.org", "qyapi.weixin.qq.com"]
+    },
+    "secrets": ["TELEGRAM_BOT_TOKEN", "WECOM_CORP_ID", "WECOM_CORP_SECRET", "WECOM_AGENT_ID"]
+  },
+  "platformAdapters": {
+    "adapters": {
+      "telegram": {
+        "runtimeAdapter": "telegram",
+        "displayName": "Telegram",
+        "description": "Telegram Bot API (long-polling inbound + sendMessage outbound).",
+        "media": true,
+        "threads": true,
+        "streaming": false
+      },
+      "wecom": {
+        "runtimeAdapter": "wecom",
+        "displayName": "WeChat Work (企业微信)",
+        "description": "WeCom app messages (webhook callback inbound + access_token send outbound).",
+        "media": true,
+        "threads": false,
+        "streaming": false
+      }
+    }
+  },
+  "evals": ["evals/platform-smoke.json"],
+  "rollback": {
+    "strategy": "previous-active-version"
+  }
+}

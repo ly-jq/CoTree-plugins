@@ -1,0 +1,58 @@
+{
+  "observedAt": "2026-10-06T09:56:17.370Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "packageId": "elyra.product-design",
+  "packageDigest": "884fbdbabbc1e1b5fce92d8227b9e1067cad2f49d83b0c2503f47b9d74f0b990",
+  "scope": "packaged-source-builds-and-local-browser-fixtures",
+  "credentialsUsed": false,
+  "cloudCalls": false,
+  "productImplemented": false,
+  "projects": [
+    {
+      "template": "prototype",
+      "generatedFiles": 10,
+      "retainedSourceFiles": 3,
+      "lockDigest": "0c588ed0c49c05531a403edb577ec31dd96352459c6a5d651dc3c7962dd512ad",
+      "built": true,
+      "buildCommand": "npm run build",
+      "buildLogSha256": "58bf3271d4d7b3394666ba8d02b30a88224103e9651adc40bfe5844f1435c083"
+    },
+    {
+      "template": "mobile-app",
+      "generatedFiles": 42,
+      "retainedSourceFiles": 27,
+      "lockDigest": "e9f5c8b4fef17a817093cc42ce8e1864e43ecd345c5453bea78e433aa5c6f645",
+      "built": true,
+      "buildCommand": "npm run build",
+      "buildLogSha256": "d8c5bcb0af7c0c2b15579a9b30d432f5310e5b1766e2c59f5995ff6f69dc4217"
+    }
+  ],
+  "mobileRuntime": {
+    "startTime": "2026-10-06T09:56:02.196Z",
+    "duration": 12820.939,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0,
+    "command": "node node_modules/@playwright/test/cli.js test --reporter=json",
+    "channel": "msedge",
+    "protectedFiles": 25,
+    "sourceRuntimeBytesPreserved": true,
+    "overlayTestAdaptation": "click within visible rounded screen; keep exit lifecycle assertions"
+  },
+  "browser": [
+    {
+      "template": "prototype",
+      "rendered": true,
+      "pageErrors": [],
+      "screen": "blank React starter"
+    },
+    {
+      "template": "mobile-app",
+      "rendered": true,
+      "pageErrors": [],
+      "screen": "retained FlowStack test fixture"
+    }
+  ]
+}

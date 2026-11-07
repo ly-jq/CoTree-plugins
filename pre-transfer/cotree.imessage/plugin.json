@@ -1,0 +1,43 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.imessage",
+  "name": "imessage",
+  "version": "0.2.0",
+  "description": "在授权 Mac 上读取明确 iMessage 会话并通过 Messages 参数化发送。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.imessage.connect",
+      "description": "核对 iMessage 的 Mac 环境、TCC 权限和允许会话。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.imessage.history",
+      "description": "只读查询允许的 iMessage 会话与消息附件引用。",
+      "path": "skills/history/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.imessage.send",
+      "description": "向明确授权 iMessage 会话发送文字或一个附件。",
+      "path": "skills/send/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "86518e846ad0fd1986278ce3278a90356a00f2b64992c92cc763361f11c53f5b"
+  }
+}

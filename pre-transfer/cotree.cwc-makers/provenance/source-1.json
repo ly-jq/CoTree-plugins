@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.cwc-makers",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "cwc-makers",
+    "repository": "claude-plugins-official",
+    "path": "plugins/cwc-makers",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "6b662e266bf7700c71792d5e3a8cd101f2b0f2cec478cdc8f7e5a8cb7789a32b",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "依赖另外的硬件工程、Cardputer 等设备和串口 / 烧录环境。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/cardputer-buddy/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/cardputer-buddy/SKILL.md",
+      "sourceMetadata": {
+        "name": "cardputer-buddy",
+        "description": "Iterate on the Cardputer-Adv MicroPython app bundle (Claude Buddy, Snake, Hello) after the device is already provisioned via m5-onboard. Use when the user wants to add a new app, push a single changed .py without re-flashing, watch device serial logs, or run a one-shot REPL command. Trigger on \"add an app\", \"push to the cardputer\", \"tail the device\", \"run on the device\", or follow-up work after /maker-setup."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/m5-onboard/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/m5-onboard/SKILL.md",
+      "sourceMetadata": {
+        "name": "m5-onboard",
+        "description": "End-to-end onboarding for a freshly-plugged-in M5Stack ESP32 device (Cardputer, Cardputer-Adv, Core, CoreS3, Stick) — detect on USB, flash UIFlow 2.0 firmware, and install the Claude Buddy MicroPython app bundle. Use whenever the user plugs in or wants to flash/provision/reset an M5Stack or ESP32 board, or says \"m5-onboard go\"."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/maker-setup.md",
+      "state": "converted",
+      "target": "content/commands/maker-setup.md",
+      "sourceMetadata": {
+        "description": "Onboard a Code-with-Claude Makers Cardputer — fetch the build-with-claude repo, flash firmware, and install the Claude Buddy apps.",
+        "disable-model-invocation": true
+      }
+    }
+  ],
+  "copiedFiles": 5,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "dfa4276e93a132f1c8c6eaffe5dc298c09058123deac333fcaf0981a00a7d9d1"
+    },
+    {
+      "path": "commands/maker-setup.md",
+      "sha256": "21c0adad3cf3c3b29047b39cc5ca792b688b5fd6cccc8f731c1a088f9f86d6a9"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e8e91fe9f10a72408bb3a2d1b337d93114cef9607b70701a89702a7febee4453"
+    },
+    {
+      "path": "skills/cardputer-buddy/SKILL.md",
+      "sha256": "37dc5462d651e41ce858ee84560675ff6963c48fa3e46d14a6b8faa321ec7856"
+    },
+    {
+      "path": "skills/m5-onboard/SKILL.md",
+      "sha256": "bb5ac2178720f7ec9d3b96a751729d22f5e7d24f82a383d102953a25494faf90"
+    }
+  ]
+}

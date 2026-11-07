@@ -1,0 +1,68 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.browser-use",
+  "name": "CoTree Browser Use",
+  "version": "1.2.0",
+  "description": "CoTree's direct browser-use plugin. It exposes the browser SDK through the existing broker and does not require MCP.",
+  "minKernelVersion": "0.1.0",
+  "entry": "index.mjs",
+  "execution": {
+    "runtime": "node",
+    "abi": "cotree.plugin.tool.v2",
+    "isolation": "brokered-process",
+    "resources": {
+      "wallTimeMs": 30000,
+      "memoryMb": 64,
+      "maxCapabilityRequests": 16,
+      "maxConcurrentCapabilities": 1,
+      "maxCapabilityOutputBytes": 262144,
+      "maxStdoutBytes": 262144
+    }
+  },
+  "capabilities": { "tools": true },
+  "permissions": {
+    "shell": "none",
+    "browser": {
+      "tabs": "allow",
+      "pageContent": "allow",
+      "dom": "allow",
+      "screenshot": "allow",
+      "interaction": "ask",
+      "navigation": "ask",
+      "networkMetadata": "deny",
+      "cookies": "deny"
+    }
+  },
+  "publisher": { "id": "cotree", "displayName": "CoTree" },
+  "tools": [
+    {
+      "name": "BrowserUse",
+      "agentExposure": "never",
+      "description": "Use the prepared browser capability from a plugin without adding an MCP server. This is a brokered escape hatch; ControlScript remains the preferred multi-step API.",
+      "riskLevel": "high",
+      "idempotent": false,
+      "timeoutMs": 30000,
+      "requiresApproval": false,
+      "resultBudget": { "maxInlineBytes": 262144, "overflow": "artifact" },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "operation": { "type": "string", "enum": ["tabs", "snapshot", "inspect", "devtools", "act", "screenshot"] },
+          "input": { "type": "object", "additionalProperties": true }
+        },
+        "required": ["operation"],
+        "additionalProperties": false
+      },
+      "permissions": [
+        { "name": "browser.tabs" },
+        { "name": "browser.pageContent" },
+        { "name": "browser.dom" },
+        { "name": "browser.screenshot" },
+        { "name": "browser.interaction" },
+        { "name": "browser.navigation" }
+      ],
+      "evidence": { "effectKind": "control", "classificationVersion": "cotree-browser-use-v1" }
+    }
+  ],
+  "evals": ["evals/tool-smoke.json"]
+}

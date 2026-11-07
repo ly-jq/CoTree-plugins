@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.gmail",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "gmail",
+    "repository": "plugins",
+    "path": "plugins/gmail",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "7860e4a10897695c7442ada75e923daba6c642f8fbcfc039125204da2c6c9b3d",
+    "upstreamVersion": "0.1.9"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_GMAIL_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#gmail",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/gmail"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 3,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "c6c2920d8ffc534fb55dc732e8c7705e086074f944cc9d84e71ca891837050c8"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "266dd332a577608dcece7d0c36be91a11bf72e71417000c9701ec5cf54bcfb52"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "ba2d80bb7a9fd000055df139cb5c33345ee21faa2022ef0ecbff0f82180082b2"
+    },
+    {
+      "path": "assets/gmail-small.svg",
+      "sha256": "a15c9f0a8cb579d8d0e63e4b3579bbbf122a4d85fc950f08c48e7b39a21f2fd7"
+    },
+    {
+      "path": "assets/gmail.png",
+      "sha256": "94b90b1c5fca7defb96588f4d7032af87f9514c895cc9f2f3846d829ca9c7cba"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6dde78b694586e0b1c293b1ba71ea72441945f9376f49234bd56395bfbb9ad52"
+    }
+  ]
+}

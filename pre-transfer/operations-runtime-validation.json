@@ -1,0 +1,56 @@
+{
+  "observedAt": "2026-10-06T15:44:23.981Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "isolated-official-runtime-only",
+  "accountCredentialsProvided": false,
+  "activeUserRegistryModified": false,
+  "providerCalls": false,
+  "cleanup": "completed",
+  "results": {
+    "elyra.circleci": {
+      "packageDigest": "1c7ba08737e397a1be46c62f4b2d7217792ec722b49a7b87c3189698590f886d",
+      "status": "isolated-cli-help",
+      "version": "circleci 1.2.0 (6aec145c085f)",
+      "binarySha256": "a549291f5f0fa19362aed7dcc68df683cb466b28859b43d45b1803c13fe92194",
+      "checks": [
+        "version",
+        "--help",
+        "config pack local fixture"
+      ],
+      "cliConfigured": false,
+      "chunkVerified": false,
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.terraform": {
+      "packageDigest": "09ec2574d375ff64dc2417781dc4b28aad3cebcf452ce83a3c2c68a1f161c04c",
+      "status": "isolated-terraform-catalog",
+      "version": "Terraform MCP Server\nVersion: 0.4.0\nCommit: \nBuild Date: 1970-01-01T00:00:01Z",
+      "binarySha256": "c2375bbda9a80c4a0c43182f120d0b0c6d16a4b01fbda3454085c13db4476a08",
+      "launch": "verified-official-binary-0.4.0",
+      "dockerVerified": false,
+      "checks": [
+        "elyra-install",
+        "initialize",
+        "tools/list",
+        "registry-filter"
+      ],
+      "tools": [
+        "get_latest_module_version",
+        "get_latest_provider_version",
+        "get_module_details",
+        "get_policy_details",
+        "get_provider_capabilities",
+        "get_provider_details",
+        "search_modules",
+        "search_policies",
+        "search_providers"
+      ],
+      "toolCount": 9,
+      "toolsCalled": [],
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    }
+  }
+}

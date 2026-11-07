@@ -1,0 +1,72 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.asana",
+  "name": "Asana",
+  "version": "0.2.0",
+  "description": "在 CoTree 中查询 Asana 项目、管理任务、协作评论并汇总进度，含独立 REST 入口。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.asana.connect",
+      "description": "配置 Asana 独立 MCP OAuth 或标准 REST token 并检查身份。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.asana.find",
+      "description": "查找 Asana 工作区、项目与任务，保留范围、分页和原始引用。",
+      "path": "skills/find/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.asana.tasks",
+      "description": "创建或更新 Asana 任务、负责人、到期日与完成状态。",
+      "path": "skills/tasks/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.asana.projects",
+      "description": "梳理 Asana 项目结构、里程碑、分区与依赖关系。",
+      "path": "skills/projects/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.asana.collaborate",
+      "description": "读取 Asana 任务动态并发布用户授权的评论。",
+      "path": "skills/collaborate/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.asana.report",
+      "description": "根据 Asana 实际任务和项目证据汇总进展与风险。",
+      "path": "skills/report/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "asana",
+      "transport": "streamable-http",
+      "url": "https://mcp.asana.com/v2/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_ASANA_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "7ba2c8d931c4eb740b73086848d378644c9ea66daa2f307842862933b83a923f"
+  }
+}

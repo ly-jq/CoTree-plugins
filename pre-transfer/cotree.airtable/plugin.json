@@ -1,0 +1,79 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.airtable",
+  "name": "Airtable",
+  "version": "0.2.0",
+  "description": "在 CoTree 中查询和维护 Airtable 数据、表结构与自动化草稿，按真实 schema 构造筛选并核实结果。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.airtable.connect",
+      "description": "接入 Airtable 独立 PAT / OAuth，核实实际工具和 base 权限。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.airtable.inspect",
+      "description": "检查 Airtable base、表、字段、视图和 interface 的真实结构。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.airtable.search",
+      "description": "按 Airtable 字段类型筛选、搜索并逐页读取记录。",
+      "path": "skills/search/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.airtable.records",
+      "description": "按授权创建、更新或删除 Airtable 记录并核查逐项结果。",
+      "path": "skills/records/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.airtable.schema",
+      "description": "维护 Airtable 表、字段或视图结构，评估现有数据与关联影响。",
+      "path": "skills/schema/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.airtable.automate",
+      "description": "检查或编写 Airtable 自动化草稿，区分草稿、启用与实际运行。",
+      "path": "skills/automate/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.airtable.report",
+      "description": "根据 Airtable 已读取的数据生成可追溯汇总和异常说明。",
+      "path": "skills/report/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "airtable",
+      "transport": "streamable-http",
+      "url": "https://mcp.airtable.com/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_AIRTABLE_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "566ea11b37aa4e88db92afcd2561cb470b084083bbaeebaaacb5b234cd6e3f6b"
+  }
+}

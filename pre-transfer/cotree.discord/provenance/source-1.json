@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.discord",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "discord",
+    "repository": "claude-plugins-official",
+    "path": "external_plugins/discord",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "e3dec14f3a1e5f78dcd54d51dc7599dc72e7ae6037bb1ee4c571875680261444",
+    "upstreamVersion": "0.0.4"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "claude/channel 入站通知及远程审批中继尚无 Elyra 适配。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/access/SKILL.md",
+      "state": "deferred",
+      "reason": "claude/channel 入站通知及远程审批中继尚无 Elyra 适配。"
+    },
+    {
+      "kind": "skill",
+      "source": "skills/configure/SKILL.md",
+      "state": "deferred",
+      "reason": "claude/channel 入站通知及远程审批中继尚无 Elyra 适配。"
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#discord",
+      "state": "deferred",
+      "reason": "claude/channel 入站通知及远程审批中继尚无 Elyra 适配。"
+    }
+  ],
+  "copiedFiles": 9,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "6706802f4886e2843a3cfee11b1fb7bbab0783579cbaa708193bebf4a3b3252a"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "0288ddab02f0260a6ee1aa5c2304619315426523fcc0219d00d27a144cd63918"
+    },
+    {
+      "path": ".npmrc",
+      "sha256": "318005a48dd48023832c89a67fcc1f03926da16d5998197d083314a9faa414bb"
+    },
+    {
+      "path": "ACCESS.md",
+      "sha256": "b61348144934b3a3b09af7464520a71bb06f580c0eaa9d7b268b93786d543cf9"
+    },
+    {
+      "path": "bun.lock",
+      "sha256": "e49e307f30047aba0c7c9209b462a1dd543e60965815271e1234b711733ed99b"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "b956a5fd00b52133c89b22bdd4e2aaf6627b40f591aa1857525b47c7a6efd47f"
+    },
+    {
+      "path": "package.json",
+      "sha256": "7eb80e2d06ad288c5e9323096db79fe84721bfcf732d1dbaa74f732b77928fc3"
+    },
+    {
+      "path": "README.md",
+      "sha256": "12199e6382db262e23d229a054cbee445527b8a1fd5388aa99ac977fdf4e1d6e"
+    },
+    {
+      "path": "server.ts",
+      "sha256": "61365604440d443df645b4f6106c97058da051c69a6acdab95f1d09481000f46"
+    },
+    {
+      "path": "skills/access/SKILL.md",
+      "sha256": "00161ec9a85692725fe795d03a2cf5a2d2640e6cf2e0730fb32de5f767fd78dc"
+    },
+    {
+      "path": "skills/configure/SKILL.md",
+      "sha256": "37d613f31f0b37d823cd8514ca05fd687ec7700c36ea2cd08e54352cd2cf7804"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.outlook-calendar",
+  "version": "0.2.0",
+  "category": "通信与日程",
+  "priority": 0,
+  "batch": 11,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "outlook-calendar",
+      "repository": "plugins",
+      "path": "plugins/outlook-calendar",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "6809454bee8a7a91dad1a7dd38622b45a366ee0e75f4ce5f16929aad479690b1",
+      "upstreamVersion": "0.1.8"
+    }
+  ],
+  "changes": [
+    "来源私有连接器替换为独立 Graph v1.0 委托 REST，新增六个原生工作流和十三项实际操作。",
+    "明确 calendarView 实例窗口、Microsoft 状态语义、组织者取消、参与者回复、通知及 ID 稳定性。"
+  ],
+  "limitations": [
+    "随包 REST 客户端使用固定操作和固定 HTTPS origin，一次一页，1 MiB JSON 输入 / 8 MiB 响应、20 秒超时；不跟随重定向、不自动重试、不存储凭据。真实账户读写与 OAuth 获取 / 刷新仍待验收。",
+    "需要 COTREE_OUTLOOK_CALENDAR_ACCESS_TOKEN 与匹配 Graph 委托权限；无原生 MCP 服务声明，不伪造微软服务端点。",
+    "getSchedule 不支持个人 Microsoft 账户；此包不封装应用身份、共享邮箱、国别云、日历删除、订阅 / delta 或整个系列的高级拆分。",
+    "Graph 的本地 dateTime / timeZone 与 Google RFC3339 不互换；夏令时模糊时刻与 Microsoft 支持的时区需账户 / 具体任务核实。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "connector / Microsoft Outlook app": "connect：独立 Graph 委托 OAuth 与固定 /me REST，来源私有 app 声明只作追溯。",
+    "summarize day / compare availability / prepare meetings": "agenda / availability / brief：calendarView、getSchedule、重复实例、busy / tentative / workingElsewhere 等语义。",
+    "schedule / reschedule / cancel / status semantics": "schedule / respond：创建、修改、组织者取消和参与者回复分别实现，读回与通知影响明确。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

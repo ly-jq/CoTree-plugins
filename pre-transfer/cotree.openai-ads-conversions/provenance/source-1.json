@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.openai-ads-conversions",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "openai-ads-conversions",
+    "repository": "plugins",
+    "path": "plugins/openai-ads-conversions",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "b780eca80edef5fd6f6afd0ccb6cb628179185fdfa1eb3d690791d2b135bc443",
+    "upstreamVersion": "0.1.2"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/openai-ads-conversions-setup/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/openai-ads-conversions-setup/SKILL.md",
+      "sourceMetadata": {
+        "name": "openai-ads-conversions-setup",
+        "description": "Guide Codex through instrumenting or extending repositories with OpenAI Ads Measurement Pixel and optional Conversions API (CAPI). Use when adding Ads conversion tracking, browser pixel events, server-side conversion events, event_id deduplication, CAPI secret placeholders, incremental conversion coverage, or validating Ads conversion setup. Applies to local repositories and PR review contexts; prioritize safe, reviewable diffs and never place API keys or secrets in source code or client bundles."
+      }
+    }
+  ],
+  "copiedFiles": 11,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "cf8c7fe5b17c1e9171cb18cf33d6d60f22bb5b2a404326c5466e87af47bed82d"
+    },
+    {
+      "path": "assets/icon.svg",
+      "sha256": "29fe7d5abd5950eb698d5a3425d8173c2046c7fa3deee9accaaeeef15ca48c40"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e0f83bf2f7737bb45ee3e5a36403ffe189a5e897475ae28bf9abd2a34cfa864b"
+    },
+    {
+      "path": "skills/openai-ads-conversions-setup/agents/openai.yaml",
+      "sha256": "64f8abfcae22916f466f1d653ecfe59e2a194a7c5aba83d94fe8ab86ed37a488"
+    },
+    {
+      "path": "skills/openai-ads-conversions-setup/references/conversions-api.md",
+      "sha256": "af7a1fc315026c2c5b7cfe99318c900c6f5350c9bc7a66137855244b9b79432b"
+    },
+    {
+      "path": "skills/openai-ads-conversions-setup/references/framework-patterns.md",
+      "sha256": "0001bef04fb00f22c7061a746f84beefd1464b7d8126e00a02c2d7b89fa211c4"
+    },
+    {
+      "path": "skills/openai-ads-conversions-setup/references/measurement-pixel.md",
+      "sha256": "79590f03da783ee58350d0210523f3f4dc26b6f597917062236e5c77b82bc0e6"
+    },
+    {
+      "path": "skills/openai-ads-conversions-setup/references/report-schema.md",
+      "sha256": "c42fa1fc4211dd9b4a8bb3301281f1b8dfd8d496022de08e890752392ff26515"
+    },
+    {
+      "path": "skills/openai-ads-conversions-setup/references/verification-checklist.md",
+      "sha256": "fe98167aa1ca93b6db21f9f928fcffb9c57d275dc2209d98d25df4df985be85f"
+    },
+    {
+      "path": "skills/openai-ads-conversions-setup/scripts/verify_ads_setup.py",
+      "sha256": "2dcaeaa7e636ee58a578e08ddf4df1c753474ab1356f8816fe5c6cc05a876572"
+    },
+    {
+      "path": "skills/openai-ads-conversions-setup/scripts/verify_capi_secret_not_exposed.py",
+      "sha256": "85412c287c4cfb797b6f0950dd757cd7087d9f41caad6207ac5a9781dd69e72f"
+    },
+    {
+      "path": "skills/openai-ads-conversions-setup/SKILL.md",
+      "sha256": "8649c9444ee85fb862bf6e21964fba0d89f5050033996362cb3e4da10cd33130"
+    }
+  ]
+}

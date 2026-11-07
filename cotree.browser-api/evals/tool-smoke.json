@@ -1,0 +1,12 @@
+{
+  "cases": [
+    {
+      "id": "browser-api-workbench-smoke",
+      "suite": "browser-api-smoke",
+      "task": "Open the Browser API workbench, inspect its current status, and report it without changing any saved API or browser state.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    }
+  ]
+}

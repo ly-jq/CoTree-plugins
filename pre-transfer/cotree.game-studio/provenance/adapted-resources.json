@@ -1,0 +1,84 @@
+{
+  "resources": [
+    {
+      "source": "resources/source-01/content/scripts/normalize_sprite_strip.py",
+      "destination": "runtime/normalize_sprite_strip.py",
+      "replacements": [
+        [
+          "from pathlib import Path",
+          "from pathlib import Path\nfrom sprite_io import load_rgba, save_new_png"
+        ],
+        [
+          "Image.open(path).convert(\"RGBA\")",
+          "load_rgba(path)"
+        ],
+        [
+          "Image.open(args.input).convert(\"RGBA\")",
+          "load_rgba(args.input)"
+        ],
+        [
+          "    slots = split_strip(strip, args.frames)",
+          "    if args.frames > 256 or args.frame_size > 1024 or args.frames * args.frame_size ** 2 > 16 * 1024 * 1024 or not 0 <= args.alpha_threshold <= 254:\n        raise SystemExit(\"Frame or image budget exceeded, or invalid alpha threshold.\")\n    if strip.width < args.frames or strip.width % args.frames:\n        raise SystemExit(\"Strip width must be divisible by frame count.\")\n    slots = split_strip(strip, args.frames)"
+        ],
+        [
+          "out_dir.mkdir(parents=True, exist_ok=True)",
+          "out_dir.mkdir(parents=True, exist_ok=False)"
+        ],
+        [
+          "frame.save(out_dir / f\"{index:02d}.png\")",
+          "save_new_png(frame, out_dir / f\"{index:02d}.png\")"
+        ]
+      ],
+      "sourceSha256": "799b7d416a6839c6f56afdd12a1de9dc4c465513a4d9d201833a5f888d66dae4",
+      "sha256": "0591470d00740b5276558b9e3ca943f09a3b7ee2fd0249c3e1bce5b4fb92e092"
+    },
+    {
+      "source": "resources/source-01/content/scripts/build_sprite_edit_canvas.py",
+      "destination": "runtime/build_sprite_edit_canvas.py",
+      "replacements": [
+        [
+          "from pathlib import Path",
+          "from pathlib import Path\nfrom sprite_io import load_rgba, save_new_png"
+        ],
+        [
+          "Image.open(args.seed).convert(\"RGBA\")",
+          "load_rgba(args.seed)"
+        ],
+        [
+          "    strip_width = args.frames * args.slot_size",
+          "    if args.frames > 256 or args.canvas_size > 4096:\n        raise SystemExit(\"Frame or canvas budget exceeded.\")\n    strip_width = args.frames * args.slot_size"
+        ],
+        [
+          "canvas.save(out_path)",
+          "save_new_png(canvas, out_path)"
+        ]
+      ],
+      "sourceSha256": "2e7fc8b1a14a720af69159b4a80cfcd52f1294835a3d616404e3b15dae71e11b",
+      "sha256": "ebd64bc7af8e2475b148629465a2d518b0611052356413bdaa761bcb05b79400"
+    },
+    {
+      "source": "resources/source-01/content/scripts/render_sprite_preview_sheet.py",
+      "destination": "runtime/render_sprite_preview_sheet.py",
+      "replacements": [
+        [
+          "from pathlib import Path",
+          "from pathlib import Path\nfrom sprite_io import load_frames, save_new_png"
+        ],
+        [
+          "[Image.open(path).convert(\"RGBA\") for path in frames]",
+          "load_frames(frames)"
+        ],
+        [
+          "    sheet = Image.new(\"RGBA\", (sheet_width, sheet_height), (255, 255, 255, 255))",
+          "    if sheet_width * sheet_height > 16 * 1024 * 1024:\n        raise SystemExit(\"Preview exceeds image budget.\")\n    sheet = Image.new(\"RGBA\", (sheet_width, sheet_height), (255, 255, 255, 255))"
+        ],
+        [
+          "sheet.save(out_path)",
+          "save_new_png(sheet, out_path)"
+        ]
+      ],
+      "sourceSha256": "f2f572d5e29301fd6196cc2142dd854c25b5df7bceb9d48ec0981ceab3bc2b26",
+      "sha256": "6288e29ddb9bb9081ef844c9747e7d2fb686073f7dec79e2ea8c04f29bef2dce"
+    }
+  ]
+}

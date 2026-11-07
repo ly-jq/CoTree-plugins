@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.playwright",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "playwright",
+    "repository": "claude-plugins-official",
+    "path": "external_plugins/playwright",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "40253d6e770cb25fde01ae4a3c31259e3da6c2a66e1f60b371e318965e22c66a"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "需 Node.js、Playwright MCP 与浏览器依赖。",
+    "运行依赖已固定：@playwright/mcp@0.0.83（2026-10-06 查询上游 npm registry / Git；版本锁定不代表已执行验证）。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#playwright",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/playwright"
+    }
+  ],
+  "copiedFiles": 0,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "4d57a6761a6e449792931873d70c3e64acfc11bf261fb6ed112b342e05d59438"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "c87560bac2c0d340b92a392c384f1ba9242559840568dfc85938414d05abbc2f"
+    }
+  ]
+}

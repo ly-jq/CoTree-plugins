@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.sharepoint",
+  "version": "0.2.0",
+  "category": "团队协作与知识",
+  "priority": 0,
+  "batch": 15,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "sharepoint",
+      "repository": "plugins",
+      "path": "plugins/sharepoint",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "afb370aa5c53f5b27cea4132b8fbe13af894740d0154252f4417f5368c91f7fa",
+      "upstreamVersion": "0.1.7"
+    }
+  ],
+  "changes": [
+    "把原宿主连接器声明改为七个原生工作流、15 个 Graph 固定动作与受限文件下载器。",
+    "列表更新要求具体 ETag，下载跳转不转发 Bearer；保留原图标、详情和来源。"
+  ],
+  "limitations": [
+    "原生入口、协议或 REST 适配已实现；独立账户授权、真实对象读写、过期恢复和业务结果仍待验收。",
+    "仅全球 Microsoft Graph 工作 / 学校账户 delegated OAuth，无自动登录 / 刷新。文件下载仅接受观察到的单一 tenant.sharepoint.com 主机，最多 16 MiB；其他 CDN、主权云和大文件需另行适配。",
+    "未实现文件上传、Office 在线编辑、页面发布、共享权限修改或删除；可生成可审查修改稿，不能报告这些操作已经完成。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "source connector-only declaration": "补齐独立 Microsoft Graph REST：15 个固定动作，站点搜索、页面、文档库、列表与列表项写入。",
+    "sites / pages / files / owners / safe updates": "七个原生入口及受限下载器；提取真实责任人与状态，更新前核对列名和 ETag；文件上传与页面发布未实现。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

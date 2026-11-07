@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.build-ios-apps",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "build-ios-apps",
+    "repository": "plugins",
+    "path": "plugins/build-ios-apps",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "530f50dc8a4dc29c04a923abe481a962523ef513c1425659b2484a394663a283",
+    "upstreamVersion": "0.1.2"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "需 macOS、Xcode、模拟器 / 设备和 xcodebuildmcp；Windows 未验证。",
+    "运行依赖已固定：xcodebuildmcp@2.7.0（2026-10-06 查询上游 npm registry / Git；版本锁定不代表已执行验证）。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/ios-app-intents/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ios-app-intents/SKILL.md",
+      "sourceMetadata": {
+        "name": "ios-app-intents",
+        "description": "Design App Intents, app entities, and App Shortcuts for iOS system surfaces. Use when exposing app actions or content to Shortcuts, Siri, Spotlight, widgets, or controls."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ios-debugger-agent/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ios-debugger-agent/SKILL.md",
+      "sourceMetadata": {
+        "name": "ios-debugger-agent",
+        "description": "Build, run, and debug iOS apps on Simulator with XcodeBuildMCP. Use when launching an app, inspecting simulator UI or logs, or diagnosing runtime behavior."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ios-ettrace-performance/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ios-ettrace-performance/SKILL.md",
+      "sourceMetadata": {
+        "name": "ios-ettrace-performance",
+        "description": "Capture and interpret iOS Simulator ETTrace profiles. Use when profiling launch or runtime latency, comparing traces, or finding CPU-heavy stacks."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ios-memgraph-leaks/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ios-memgraph-leaks/SKILL.md",
+      "sourceMetadata": {
+        "name": "ios-memgraph-leaks",
+        "description": "Capture and inspect iOS leaks and memgraphs. Use when debugging leaked objects, retain cycles, memory growth, or before/after leak evidence."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ios-simulator-browser/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ios-simulator-browser/SKILL.md",
+      "sourceMetadata": {
+        "name": "ios-simulator-browser",
+        "description": "Mirror an iOS Simulator into the Codex in-app browser and render SwiftUI previews from importable Swift packages in that simulator with hot reload. Use when a user wants to watch or interact with an iOS app in the browser, see a SwiftUI preview outside Xcode Canvas, iterate live on a preview, or capture browser-visible simulator proof."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/swiftui-liquid-glass/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/swiftui-liquid-glass/SKILL.md",
+      "sourceMetadata": {
+        "name": "swiftui-liquid-glass",
+        "description": "Implement and review iOS 26+ SwiftUI Liquid Glass UI. Use when adopting Liquid Glass or checking its correctness, performance, and design fit."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/swiftui-performance-audit/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/swiftui-performance-audit/SKILL.md",
+      "sourceMetadata": {
+        "name": "swiftui-performance-audit",
+        "description": "Audit SwiftUI runtime performance from code first. Use when diagnosing slow rendering, janky scrolling, expensive updates, or profiling needs."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/swiftui-ui-patterns/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/swiftui-ui-patterns/SKILL.md",
+      "sourceMetadata": {
+        "name": "swiftui-ui-patterns",
+        "description": "Build and refactor SwiftUI UI with component patterns and examples. Use when shaping navigation, state, layouts, controls, or screen composition."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/swiftui-view-refactor/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/swiftui-view-refactor/SKILL.md",
+      "sourceMetadata": {
+        "name": "swiftui-view-refactor",
+        "description": "Refactor SwiftUI view files into stable, testable structure. Use when splitting large views, tightening data flow, or cleaning Observation ownership."
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#xcodebuildmcp",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/xcodebuildmcp"
+    }
+  ],
+  "copiedFiles": 74,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "9bdd76252ccb0f70f51a9e155fff853ff5d23521697a2fb113f6d9c873c22881"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "a074656a427a7815bdb2fd326fadee440061c1fc727de3dab499c1ef8c93e883"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "00ca4af76c8f5a86cee0b85108bababa039d2c62c1a7265801da8cec7897c95c"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "d5389b5252eb373894508c6a8b1f65d8a7837b2672c3955276ee8cdd75780e4d"
+    },
+    {
+      "path": "assets/build-ios-apps-small.svg",
+      "sha256": "9690489dbb683399f642ab02cfd4fab61b5845c796baf1251437751034165657"
+    },
+    {
+      "path": "README.md",
+      "sha256": "3f54a999e33abfe03d2582f0bfd95f38dd9ef7f062f7dd2c3b66bd54f00e6eb7"
+    },
+    {
+      "path": "skills/ios-app-intents/agents/openai.yaml",
+      "sha256": "b052aa894d923f629666d406ea43886f28acea85b0c7b7096963c2c58255b2cc"
+    },
+    {
+      "path": "skills/ios-app-intents/references/code-templates.md",
+      "sha256": "d78a3189d9f6eb40ccc9db5dadd91019dd2b748e5f6ee8c3c2b051043c4cb3e1"
+    },
+    {
+      "path": "skills/ios-app-intents/references/example-patterns.md",
+      "sha256": "9bae6efb4a80e37a3bd922bcaef29df432e46200b3bac5c91cdb8bfaf9d6fb20"
+    },
+    {
+      "path": "skills/ios-app-intents/references/first-pass-checklist.md",
+      "sha256": "c0973d43ba87f0a79d8cde1ca322c1cefb2794ce76e27865d428e9a6be4cc6b5"
+    },
+    {
+      "path": "skills/ios-app-intents/references/system-surfaces.md",
+      "sha256": "7cdcad845aa8e59fb6cf4268f97f7c01ad929a9e430312093a1a3f2e8fb6466f"
+    },
+    {
+      "path": "skills/ios-app-intents/SKILL.md",
+      "sha256": "c8723a65479259b641b2ce5b5e6b103db7c6500c9217126d44ba2ed4aa9b4b33"
+    },
+    {
+      "path": "skills/ios-debugger-agent/agents/openai.yaml",
+      "sha256": "820480fc2a5da6e209d5a2ca1622192105415cd551bbac0bbbbbf55f0f97e929"
+    },
+    {
+      "path": "skills/ios-debugger-agent/SKILL.md",
+      "sha256": "d5edb1e1fc8a5c1e88cdab18d63cefebc7f2b1ae065f0b9f2f781c10d9215267"
+    },
+    {
+      "path": "skills/ios-ettrace-performance/agents/openai.yaml",
+      "sha256": "f36c34f5db88c601178a52031f057301a6a1bc37e824bb760579d841d1263e54"
+    },
+    {
+      "path": "skills/ios-ettrace-performance/scripts/analyze_flamegraph_json.py",
+      "sha256": "67d6188eb6c7e2280bb0e5aa67db20d489fd0e3ff3ef5f3da08c882fa0a10668"
+    },
+    {
+      "path": "skills/ios-ettrace-performance/scripts/collect_ios_dsyms.sh",
+      "sha256": "148dc69a940910f303d26700cceeb2f146ac76de3f7b00151474c3a15b599661"
+    },
+    {
+      "path": "skills/ios-ettrace-performance/SKILL.md",
+      "sha256": "4168abbda20d812f886e2b01bda8db099d7418c0f63bccf8ba1278e550f5ed04"
+    },
+    {
+      "path": "skills/ios-memgraph-leaks/agents/openai.yaml",
+      "sha256": "50b6fc520b5f2f09ccdc8a83000e8836bef58ab5aea670034e6122de091a9e62"
+    },
+    {
+      "path": "skills/ios-memgraph-leaks/scripts/capture_sim_memgraph.sh",
+      "sha256": "18d5f4c72e92727ad1567f5cc3c6a50562f14057b5e90c4369977c79bdae39d7"
+    },
+    {
+      "path": "skills/ios-memgraph-leaks/scripts/summarize_memgraph_leaks.py",
+      "sha256": "09e7b77e5dc03829da7091e43c8fc0adbae09addcfe8eb3e6cc0b97cad6f9792"
+    },
+    {
+      "path": "skills/ios-memgraph-leaks/SKILL.md",
+      "sha256": "4f669a6adf5a146a814e7f47b8b352b3fc5a0dea1a7c36108c73698478e2eb40"
+    },
+    {
+      "path": "skills/ios-simulator-browser/agents/openai.yaml",
+      "sha256": "a2e268fe2a0069f76624cfddc42d12bc4b9fa9e688841a6a39b995c4739ffeab"
+    },
+    {
+      "path": "skills/ios-simulator-browser/scripts/lib/xcode-project.mjs",
+      "sha256": "59b154cb9216822056d04189328913b49e5021f52247934919cecf9980c0fdf7"
+    },
+    {
+      "path": "skills/ios-simulator-browser/scripts/swiftui-preview-browser.mjs",
+      "sha256": "bee9a3fbda8d214e385cca691ac6fa071e9ecb5448da883349b642a2234c5afb"
+    },
+    {
+      "path": "skills/ios-simulator-browser/scripts/templates/FocusedPreviewApp.swift",
+      "sha256": "228fef99a1c66088847104451d3d77ce6979266b3cbecf465d8a97298a29b6a4"
+    },
+    {
+      "path": "skills/ios-simulator-browser/scripts/templates/FocusedPreviewHotReloadRuntime.swift",
+      "sha256": "912cc0c9bd35972b0b7e1c52de9f3dc76c08a0967d90c297c76aaf18a3500ab7"
+    },
+    {
+      "path": "skills/ios-simulator-browser/scripts/templates/PreviewBrowserEntries.swift",
+      "sha256": "6930581475396c20b58887a05f43072652c99bb13f79856e34863f6a295ff5b3"
+    },
+    {
+      "path": "skills/ios-simulator-browser/SKILL.md",
+      "sha256": "a2eb8e2c81f9acdceabe52d25560d60091d278c63b293751c39ba8453bd0492d"
+    },
+    {
+      "path": "skills/swiftui-liquid-glass/agents/openai.yaml",
+      "sha256": "f9855a9f0e82196ba2139a3f4837d8ebe7dd755b8edc285ba78d003c7b7d09d2"
+    },
+    {
+      "path": "skills/swiftui-liquid-glass/references/liquid-glass.md",
+      "sha256": "d2f5e8d12daa3a2bdf3d2660ed2e54fd18dd0c434c15a6edc3756f9b8304031f"
+    },
+    {
+      "path": "skills/swiftui-liquid-glass/SKILL.md",
+      "sha256": "e973e831709cdd4548e9478bf9d056d1681509f0989ca517aaf574b81531de74"
+    },
+    {
+      "path": "skills/swiftui-performance-audit/agents/openai.yaml",
+      "sha256": "6d9edd65d72a555ea6e77e74af53fa0582cd661d44d8c0a1c1b146a2952b2be6"
+    },
+    {
+      "path": "skills/swiftui-performance-audit/references/code-smells.md",
+      "sha256": "21dd4d902b57b7c7304be7116b355bbf4fe6e40751203d3b5c63f357cf7de33a"
+    },
+    {
+      "path": "skills/swiftui-performance-audit/references/demystify-swiftui-performance-wwdc23.md",
+      "sha256": "4e71c60fb6b17517fa635046b8ad223d38a68bc0230887c49431d6b8ba1afff2"
+    },
+    {
+      "path": "skills/swiftui-performance-audit/references/optimizing-swiftui-performance-instruments.md",
+      "sha256": "4c7404096c383897feaeb58d91e981ca77f477ea33517509d45e17f7aa5b3aef"
+    },
+    {
+      "path": "skills/swiftui-performance-audit/references/profiling-intake.md",
+      "sha256": "049cab2533d6c9a816d1895238cee68c11f7dea5b626b45bb0dbec90f492fe27"
+    },
+    {
+      "path": "skills/swiftui-performance-audit/references/report-template.md",
+      "sha256": "062f21da1754db572187f253933396b561869b73ed347b3eb9a7c275574d9de8"
+    },
+    {
+      "path": "skills/swiftui-performance-audit/references/understanding-hangs-in-your-app.md",
+      "sha256": "3844d907e0e3c6ab3d3b862a41152ab4612eda44b3706913836a13e9a4e00be9"
+    },
+    {
+      "path": "skills/swiftui-performance-audit/references/understanding-improving-swiftui-performance.md",
+      "sha256": "2a7171f22536a60fb7a5505c0a2fb8b6c725c8b401a78e0a3cd934bbe120c02b"
+    },
+    {
+      "path": "skills/swiftui-performance-audit/SKILL.md",
+      "sha256": "6df2b3a6da89129507248384e084bc83985626ddd4f70be0e39c6e9c707f366c"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/agents/openai.yaml",
+      "sha256": "ec355fdb95a6de414d71feda7fc41949bdc4bea97b586ba937517b3ed184467b"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/app-wiring.md",
+      "sha256": "b5c6b3ad5622018e641591f3888a22cd31850c2abc0163e9ce646ce2ea0a0473"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/async-state.md",
+      "sha256": "3e4b9010dbc1b4507a3a9769a2a4e483a5ee306acc58a618d05bbe0818295477"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/components-index.md",
+      "sha256": "754133090526eae99304184a46ef42b8496b9a6f5999c455eace95dee9b8edad"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/controls.md",
+      "sha256": "99c5b3b79f13ba0d97ada7ae424eae8c68927b8c55dc5b33d388da71463fa308"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/deeplinks.md",
+      "sha256": "70ee40c0e5d7af25b77aa375903cd319b7742f965f8ff0483967033a5e835f18"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/focus.md",
+      "sha256": "fd58a2ab9bfdfd1f7c1a846f95008fac502ac847d269260e7095981d06ac40f8"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/form.md",
+      "sha256": "e53b6604ed67558e122496b6c50bc8c01f67dde1edf0bdbf0e438da414433e53"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/grids.md",
+      "sha256": "37f9f0042d43108b42c0825bc13948a765e740cd62d5819ff4b34430a7071655"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/haptics.md",
+      "sha256": "75ec68b8adaf45d5b3f035e850232b74f35d79aee18d7f3f782d01c4bea24b9f"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/input-toolbar.md",
+      "sha256": "e45e715e638a475f56386e40d64f5a8f6783b345bcda1e74c37d2642a8255332"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/lightweight-clients.md",
+      "sha256": "227b4ce9c3338a541dbe8dff87713f270ab6789d2aa6c46b96959f8dba89c489"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/list.md",
+      "sha256": "abf681e76654f987df2d268a1112b9e8828cf4dfa1ce2316acd17ca5c9288c80"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/loading-placeholders.md",
+      "sha256": "cc00c8db7448fdb43a29a279e307f6e9868c30885f40c16e5efd4bbc5bcc58cd"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/macos-settings.md",
+      "sha256": "e08f7266afdea27ae01b3c5f88e6d2b84a4d4eb7d082a3d36e33d5a5ac9e0e65"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/matched-transitions.md",
+      "sha256": "5f6bc2b6ec3708cc81fd502473f8576ce4fffb64a9b504a750f373af439242cf"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/media.md",
+      "sha256": "7b9e3025cd6917fdc6e2540a693812767c1fbcf84d5406c17e591488dc1e18d9"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/menu-bar.md",
+      "sha256": "9a74f6907e3eaa20c185f4b2a1bcb1b1b5c0a307120743945bfd374214364198"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/navigationstack.md",
+      "sha256": "2b1931eadce7ad7c4d78c51e16e3a4a970f8ab226587a6577c2b454cf6344d89"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/overlay.md",
+      "sha256": "9b6a59978d87c4bdbcbd27aaf29ba245bbf43d243bfb950dc028b389703e2def"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/performance.md",
+      "sha256": "0378f9c3b9e29ffa264edd23b0f57856512bd6a369c654cc51ef9af23d807de2"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/previews.md",
+      "sha256": "a4d4e3de2fc5553a7b076395fef9b590c37db046c3d28ffaf65449a339b87e62"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/scroll-reveal.md",
+      "sha256": "80dc812ccd73afb8d9f6c566b8c0d7f64f5029d1b3e81bafb22a1d367c2f149d"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/scrollview.md",
+      "sha256": "83ff428483b265085d778fb15365618d31f4a9a111378d8db184b6ffc1029d15"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/searchable.md",
+      "sha256": "09058e8f8a46f04553fc91561492d1f91f7470a5b5c0f1cfffc7212d38f3e657"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/sheets.md",
+      "sha256": "61503e94a0a4c2c7003b24c15962131fb8288d298c90369f95a8a466fd4efb8d"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/split-views.md",
+      "sha256": "a744bcde91c836138fac5a674ad1ef76f1ccce4c4df941abfb535844c986fedf"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/tabview.md",
+      "sha256": "ac6be55a09b16a72f55ce23c2211adff5b6839e77be884472a7d5629fbdfcafb"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/theming.md",
+      "sha256": "6b12f28b027336d1ce1b1afd57df390b41db09893630ede8bf5f1bec9bdb8eab"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/title-menus.md",
+      "sha256": "1b290474f575f9078cf2ef28bd8acf1e90d14ccef7bcd07bd4067151484a9dc8"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/references/top-bar.md",
+      "sha256": "58509325b688268c1408545674363fbb87726091031a5b8fd22bfd1e4a24a364"
+    },
+    {
+      "path": "skills/swiftui-ui-patterns/SKILL.md",
+      "sha256": "298fc724f6b324c6355442170ea2e355563f904969dca054e4181d4cd3fe04bc"
+    },
+    {
+      "path": "skills/swiftui-view-refactor/agents/openai.yaml",
+      "sha256": "61b5062e111721d473297fb8757ffeda28af7c4c5fd65813e56fdc83c7664648"
+    },
+    {
+      "path": "skills/swiftui-view-refactor/references/mv-patterns.md",
+      "sha256": "1d9dee93326e5fb3221984f0e5ef34d6a2a73a94862ec349ad7cf9de581e3181"
+    },
+    {
+      "path": "skills/swiftui-view-refactor/SKILL.md",
+      "sha256": "66fb1bcde84014a24016e82ac50ef68a11f276d2b7c5788fed69e43104ccaafb"
+    }
+  ]
+}

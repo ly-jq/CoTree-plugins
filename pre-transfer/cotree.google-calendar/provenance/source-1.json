@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.google-calendar",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "google-calendar",
+    "repository": "plugins",
+    "path": "plugins/google-calendar",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "716c891d97d34b3e3875357db2fe3c28c39858fd4512ed535f91aa4e0793b93a",
+    "upstreamVersion": "1.2.6"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_GOOGLE_CALENDAR_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#google-calendar",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/google-calendar"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 3,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "765ca8b12ac3a597b7d3a09db93bc5942f70c52adadd983c0cf3fd672fb2da2c"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "7cc815919b3cf6a86e2fc778deae85ed215a10ef063f00b998dd0c02e97bb7e5"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "8f6fb8094710b73c6b9843c3d88d73617392b10f9fc05de8d08102b92f140b9f"
+    },
+    {
+      "path": "assets/icon.png",
+      "sha256": "8f9cb22e47684c0d709a33ee6694d6c991136a75156cf6faf82ed007e430696c"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "57529d8fa96aa62e995d5cf45df9b4835f6121bff93bb28eeb24bf3e4bc2bbc4"
+    },
+    {
+      "path": "tests/test_google_calendar_plugin_contract.py",
+      "sha256": "75cab8ec9e93f5d5cd0f55e2c70fa790f28b81c95a811968a54cb53a87c5f1fb"
+    }
+  ]
+}

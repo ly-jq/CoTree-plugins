@@ -1,0 +1,109 @@
+{
+  "manifestVersion": 2,
+  "id": "cotree.multimodal-tools",
+  "name": "Multimodal Tools",
+  "version": "1.2.0",
+  "description": "Isolated multimodal Code Plugin for image generation and vision description. Credentials are injected only into brokered HTTPS requests.",
+  "minKernelVersion": "0.1.0",
+  "entry": "dist/index.mjs",
+  "execution": {
+    "runtime": "node",
+    "abi": "cotree.plugin.tool.v2",
+    "isolation": "brokered-process",
+    "resources": {
+      "wallTimeMs": 60000,
+      "memoryMb": 256,
+      "maxStdoutBytes": 33554432,
+      "maxStderrBytes": 262144,
+      "maxCapabilityRequests": 4,
+      "maxConcurrentCapabilities": 1,
+      "maxCapabilityOutputBytes": 33554432,
+      "maxFileBytes": 16777216,
+      "maxNetworkRequestBytes": 25165824,
+      "maxNetworkResponseBytes": 25165824
+    }
+  },
+  "capabilities": {
+    "tools": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none",
+    "network": {
+      "allowDomains": ["api.openai.com"],
+      "methods": ["POST"]
+    },
+    "filesystem": {
+      "read": ["*.png", "*.jpg", "*.jpeg", "*.webp", "*.gif", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.webp", "**/*.gif"]
+    },
+    "secrets": ["IMAGE_API_KEY", "OPENAI_API_KEY"]
+  },
+  "tools": [
+    {
+      "name": "ImageGenerate",
+      "description": "Generate one or more images from a text prompt via the OpenAI Images API. Image bytes are returned as bounded rich media instead of being embedded in JSON.",
+      "riskLevel": "medium",
+      "idempotent": false,
+      "timeoutMs": 60000,
+      "requiresApproval": true,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "prompt": { "type": "string", "description": "Text prompt describing the desired image." },
+          "size": { "type": "string", "description": "Image size such as 1024x1024." },
+          "n": { "type": "integer", "minimum": 1, "maximum": 4, "description": "Number of images to generate." },
+          "model": { "type": "string", "description": "Override the image model (default gpt-image-1)." },
+          "responseFormat": { "type": "string", "enum": ["url", "b64_json"], "description": "Return image URLs or base64." }
+        },
+        "required": ["prompt"],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "model": { "type": "string" },
+          "count": { "type": "integer" },
+          "images": { "type": "array", "items": { "type": "object" } }
+        }
+      },
+      "permissions": [{ "name": "network" }],
+      "display": { "label": "Generate Image", "summary": "Text-to-image generation" }
+    },
+    {
+      "name": "ImageDescribe",
+      "description": "Describe or analyze a workspace image, public HTTPS image URL, or inline base64 image via the OpenAI vision API.",
+      "riskLevel": "low",
+      "idempotent": true,
+      "timeoutMs": 60000,
+      "requiresApproval": false,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string", "minLength": 1, "description": "Workspace-relative PNG/JPEG/WebP/GIF path. Prefer this when the image already exists in the workspace." },
+          "imageUrl": { "type": "string", "description": "Public URL of the image to describe." },
+          "imageBase64": { "type": "string", "description": "Base64-encoded image bytes (alternative to imageUrl)." },
+          "mimeType": { "type": "string", "description": "MIME type for imageBase64 (default image/png)." },
+          "prompt": { "type": "string", "description": "Optional question / instruction about the image." },
+          "model": { "type": "string", "description": "Override the vision model (default gpt-4o-mini)." },
+          "detail": { "type": "string", "enum": ["auto", "low", "high"], "default": "auto" },
+          "maxTokens": { "type": "integer", "minimum": 1, "maximum": 16384 }
+        },
+        "oneOf": [{ "required": ["path"] }, { "required": ["imageUrl"] }, { "required": ["imageBase64"] }],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "model": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      },
+      "permissions": [{ "name": "network" }, { "name": "file.read" }],
+      "display": { "label": "Describe Image", "summary": "Image understanding / vision" }
+    }
+  ],
+  "evals": ["evals/tool-smoke.json"],
+  "rollback": {
+    "strategy": "previous-active-version"
+  }
+}

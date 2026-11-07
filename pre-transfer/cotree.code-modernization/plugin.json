@@ -1,0 +1,61 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.code-modernization",
+  "name": "code-modernization",
+  "version": "0.2.0",
+  "description": "盘点、规划和实施遗留系统迁移，以实际输出核对兼容性。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.code-modernization.assess",
+      "description": "盘点遗留系统、依赖、边界和迁移可行性。",
+      "path": "skills/assess/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.code-modernization.rules",
+      "description": "抽取业务规则及边界并关联真实源码与测试。",
+      "path": "skills/rules/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.code-modernization.plan",
+      "description": "形成升级、跨语言替换或重新设计的分阶段迁移方案。",
+      "path": "skills/plan/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.code-modernization.migrate",
+      "description": "实施渐进升级、逐模块重写或架构重建。",
+      "path": "skills/migrate/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.code-modernization.verify",
+      "description": "比较遗留与新系统的真实输出并汇总迁移证据。",
+      "path": "skills/verify/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.code-modernization.status",
+      "description": "恢复迁移计划并标记过期证据和剩余工作。",
+      "path": "skills/status/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "d11a36fa9485dd923ba51464ca2504d3d719bc82b57075c1130257e5b6e304c4"
+  }
+}

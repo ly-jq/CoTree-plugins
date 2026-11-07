@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.outlook-email",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "outlook-email",
+    "repository": "plugins",
+    "path": "plugins/outlook-email",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "6c68823a1146d51c6d70ec85d49be00ec4f787d6b79a8933debc51c487409101",
+    "upstreamVersion": "0.1.7"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "原包只提供 ChatGPT / Codex 专属连接器；需独立 Microsoft 服务适配。"
+  ],
+  "components": [
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 1,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "9a0ff34f9c3ce12172e8e78ef70eddb745c81cb97470aa91e5f213f03cda10a5"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "c749db6cb7dc1d9ef4cb1e670f51819ada5fb2821fe68077dd4df1222836ab97"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "5335d7747d4a58b3a99ece47d142a127fbc4a5acec2e335fab6d17b42f4ec16d"
+    }
+  ]
+}

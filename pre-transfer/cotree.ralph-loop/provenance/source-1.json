@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.ralph-loop",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "ralph-loop",
+    "repository": "claude-plugins-official",
+    "path": "plugins/ralph-loop",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "49fc8f9708b2fb002c3d01d8a0becb404a04b5a99e756907d071b1767d16a417",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "Stop 重入循环不移植；持续任务由 Elyra 现有会话与主模型判断承载。"
+  ],
+  "components": [
+    {
+      "kind": "command",
+      "source": "commands/cancel-ralph.md",
+      "state": "deferred",
+      "reason": "Stop 重入循环不移植；持续任务由 Elyra 现有会话与主模型判断承载。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/help.md",
+      "state": "deferred",
+      "reason": "Stop 重入循环不移植；持续任务由 Elyra 现有会话与主模型判断承载。"
+    },
+    {
+      "kind": "command",
+      "source": "commands/ralph-loop.md",
+      "state": "deferred",
+      "reason": "Stop 重入循环不移植；持续任务由 Elyra 现有会话与主模型判断承载。"
+    },
+    {
+      "kind": "hook",
+      "source": "hooks/hooks.json",
+      "state": "deferred",
+      "reason": "Source host event / output contract is not registered in Elyra."
+    }
+  ],
+  "copiedFiles": 7,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "27c176f9d8f02805f528c026f076950b1f27efc2cc215a2e430e350f78f1fb29"
+    },
+    {
+      "path": "commands/cancel-ralph.md",
+      "sha256": "2094f86be9218120c7fcd37f3c1f53391e233dbf5f9d1660e555f373dc7ea6a1"
+    },
+    {
+      "path": "commands/help.md",
+      "sha256": "d94e074af2980f60091000cd239b206ab2aaee867f66a42bad651c405a78bd6a"
+    },
+    {
+      "path": "commands/ralph-loop.md",
+      "sha256": "a59d072b1b65b1f0e43a1156ffb6d2a0d03b26365cedffea56fd57d4aec75185"
+    },
+    {
+      "path": "hooks/hooks.json",
+      "sha256": "f5725e799f342ae069c854c6dadfb07671a8d520654e1be341d0081b5fed4dd1"
+    },
+    {
+      "path": "hooks/stop-hook.sh",
+      "sha256": "1cf587c001865fa6c2c13c3431acf6a82877e930317d42bfadcd3ab0f26b2840"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d7a598893aba26411c892982fdb35054a9e18a009f1b047e670cf47ee99a6a8a"
+    },
+    {
+      "path": "scripts/setup-ralph-loop.sh",
+      "sha256": "3f2a6efdc3001152d4a14b6030a5024304c08062f9f96556d654ddf0500d099e"
+    }
+  ]
+}

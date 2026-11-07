@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.build-web-data-visualization",
+  "version": "0.2.0",
+  "category": "数据与商业",
+  "priority": 0,
+  "batch": 9,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "build-web-data-visualization",
+      "repository": "plugins",
+      "path": "plugins/build-web-data-visualization",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "23165f78a3a04682313a25df4612933c7dfabb2f7a9ff33d1ca7da67406966b8",
+      "upstreamVersion": "0.1.21"
+    }
+  ],
+  "changes": [
+    "18 个来源技能逐一转为 CoTree 入口，完整技术参考随包保留。",
+    "去除固定宿主、强制视觉审批与自动发布，复用数据分析 / React / Google Drive 能力。",
+    "新增可运行的离线柱状 / 折线起点：筛选、URL 状态、表格、窄屏、深浅主题和打印。"
+  ],
+  "limitations": [
+    "本地起点需 Node 22+，仅柱状 / 折线、1–1000 行，每图最多 60 行；其他图形由原生工作流在目标工程实现。",
+    "完整参考不等于所有框架 / GPU / 导出格式已运行，需按具体版本与设备验收。",
+    "地图瓦片、私有数据和云交付需独立账户；不继承 Sites 或原宿主浏览器，图形本身不证明结论。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "data-visualization": "design：选择图形、交互与交付方式。完整来源参考保留。",
+    "visualization-strategy-and-critique": "critique：评估数据图形是否准确易读。完整来源参考保留。",
+    "grammar-of-graphics-and-declarative-visualization": "declarative：用声明式语法构建统计图。完整来源参考保留。",
+    "d3-data-visualization": "svg：构建精确的 SVG / D3 图形。完整来源参考保留。",
+    "canvas2d-data-visualization": "canvas：实现高密度 Canvas2D 图表。完整来源参考保留。",
+    "threejs-data-visualization": "gpu：实现有分析价值的 WebGL / Three.js 图形。完整来源参考保留。",
+    "geospatial-and-cartographic-visualization": "maps：构建地图与地理图层。完整来源参考保留。",
+    "dashboards-and-real-time-visualization": "dashboard：实现联动看板与实时状态。完整来源参考保留。",
+    "statistical-and-uncertainty-visualization": "statistics：表达分布、估计与不确定性。完整来源参考保留。",
+    "gantt-chart-visualization": "schedule：构建甘特图、里程碑与依赖视图。完整来源参考保留。",
+    "node-link-and-diagram-layout": "graph：实现节点布局与关系探索。完整来源参考保留。",
+    "uml-and-software-architecture-visualization": "architecture：生成软件架构、UML 与关系图。完整来源参考保留。",
+    "scrollytelling-and-parallax-data-visualization": "story：实现滚动叙事与分步解释。完整来源参考保留。",
+    "react-and-nextjs-data-visualization": "react：将图形集成到 React / Next.js。完整来源参考保留。",
+    "typescript-data-visualization-engineering": "engineering：建立类型、运行时校验与保存视图。完整来源参考保留。",
+    "testing-data-visualizations": "test：验证数值、交互与导出。完整来源参考保留。",
+    "accessibility-and-inclusive-visualization": "accessibility：提供可访问的数据阅读路径。完整来源参考保留。",
+    "reports-pdfs-and-slide-automation": "export：把图形交付为报告、PDF 或幻灯片。完整来源参考保留。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.shopify",
+  "version": "0.2.0",
+  "category": "数据与商业",
+  "priority": 0,
+  "batch": 23,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "shopify",
+      "repository": "plugins",
+      "path": "plugins/shopify",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "b1a3d6f5775797668602a821a14e3b6af0ec17844e0ae72c4539598757366d82",
+      "upstreamVersion": "3.0.0"
+    }
+  ],
+  "changes": [
+    "20个技能按开发、API、扩展、店面、店铺与购物归并为7个原生入口，保留全部资源。",
+    "以固定公共Dev MCP替换来源专有setup连接器；CLI和UCP保留独立账户边界。",
+    "五种GraphQL校验器和2026-04 schema按摘要导入，增加默认关闭遥测的跨平台包装。"
+  ],
+  "limitations": [
+    "原生加载和本地schema校验不证明真实店铺身份、权限、订单、支付或发布。",
+    "GraphQL快照固定2026-04，当前API和其余代码验证要使用实际文档/MCP/CLI；UCP真实商家流程未验收。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "skill:shopify-onboarding-dev": "connect：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-onboarding-merchant": "connect：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-dev": "develop：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-custom-data": "develop：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-app-store-review": "develop：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-admin": "graphql：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-storefront-graphql": "graphql：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-customer": "graphql：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-partner": "graphql：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-payments-apps": "graphql：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-functions": "extensions：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-polaris-admin-extensions": "extensions：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-polaris-app-home": "extensions：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-polaris-checkout-extensions": "extensions：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-polaris-customer-account-extensions": "extensions：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-pos-ui": "extensions：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-liquid": "storefront：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-hydrogen": "storefront：保留领域资料，使用 CoTree 原生入口。",
+    "skill:shopify-use-shopify-cli": "store：保留领域资料，使用 CoTree 原生入口。",
+    "skill:ucp": "shop：保留领域资料，使用 CoTree 原生入口。",
+    "setup MCP / app mapping": "改为公开 Dev MCP 与独立 CLI 店铺身份；不复制来源 client_id 或连接器账户。",
+    "validators / telemetry": "五种 GraphQL 原始验证器与 schema 完整导入，本地封装关闭上报；其余验证经当前 Dev MCP / CLI，旧可执行文件不自动运行。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

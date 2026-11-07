@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.supabase",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "supabase",
+    "repository": "plugins",
+    "path": "plugins/supabase",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "7e11a42ed899001472cfb15b115ae6b76437d98ea0fac8cb012de7e7cabb06c2",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_SUPABASE_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/supabase-postgres-best-practices/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/supabase-postgres-best-practices/SKILL.md",
+      "sourceMetadata": {
+        "name": "supabase-postgres-best-practices",
+        "description": "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.",
+        "license": "MIT",
+        "metadata": {
+          "author": "supabase",
+          "version": "1.1.1",
+          "organization": "Supabase",
+          "date": "January 2026",
+          "abstract": "Comprehensive Postgres performance optimization guide for developers using Supabase and Postgres. Contains performance rules across 8 categories, prioritized by impact from critical (query performance, connection management) to incremental (advanced features). Each rule includes detailed explanations, incorrect vs. correct SQL examples, query plan analysis, and specific performance metrics to guide automated optimization and code generation."
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/supabase/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/supabase/SKILL.md",
+      "sourceMetadata": {
+        "name": "supabase",
+        "description": "Use when doing ANY task involving Supabase. Triggers: Supabase products (Database, Auth, Edge Functions, Realtime, Storage, Vectors, Cron, Queues); client libraries and SSR integrations (supabase-js, @supabase/ssr) in Next.js, React, SvelteKit, Astro, Remix; auth issues (login, logout, sessions, JWT, cookies, getSession, getUser, getClaims, RLS); Supabase CLI or MCP server; schema changes, migrations, security audits, Postgres extensions (pg_graphql, pg_cron, pg_vector).",
+        "metadata": {
+          "author": "supabase",
+          "version": "0.1.2"
+        }
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#supabase",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/supabase"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 45,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "de92a7543e386eda07ebed4a3b16a5228d7f00f145483070ba758d2cc0421741"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "96fd6d7b70b45c6e99bdc679f977d7795f3aeba9eadd952e767289ee08bd6f05"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "8d779058e010aae3f8583607832130f805acaf452b93e468e171469134e91edd"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "3fba9515ad8fc71691380d71f2f414285176a077c09eb2e55e170fe5c1c720a7"
+    },
+    {
+      "path": "assets/logo.svg",
+      "sha256": "a2e74c0cf647b678b809d6d65b051dd72bcb71f4cf07efd30eb4abc43f35bae8"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "dd4c8305dc611e5147a2a6d9b91a71db312105a4876827e542719d399dd34224"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "8656b1db538a7e8b94fe73521b6407b252046bfb4de7bc051e164d942ad02fce"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4075e9df129cfd529cb03e1363238b35bfff63c54da1b28b007e3f38daca7589"
+    },
+    {
+      "path": "skills/supabase/assets/feedback-issue-template.md",
+      "sha256": "74b5dfa3a8f7d6584af059a12bae4cd6bb66d1f3205dc306bf31d4f4ae2a13b1"
+    },
+    {
+      "path": "skills/supabase/CHANGELOG.md",
+      "sha256": "859ff510a474f199ee52e751185ae9e901768168928e685da3aaafb9678e7dc1"
+    },
+    {
+      "path": "skills/supabase/references/skill-feedback.md",
+      "sha256": "85e688b56623f9250d23b60ea950dee740fd537980fc72178fe185eab76742b7"
+    },
+    {
+      "path": "skills/supabase/SKILL.md",
+      "sha256": "54a98503afb910f8f01ef4d55691dea939a7d7141e66f972ac5c86ddbad18bc6"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/CHANGELOG.md",
+      "sha256": "9893d8763a86fb92968cb4e760c4e593ab16a260dd92900306aa05eeabdb2f14"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/_contributing.md",
+      "sha256": "b851de03355ea919862b637fdc14fefab648149cf1013b0194a17108b2d8af4c"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/_sections.md",
+      "sha256": "ad2d6f6b0938ff844f7f8971153ab6d08a03ef6511b02fb9cee9336c7b209e93"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/_template.md",
+      "sha256": "39e9fce3c6ae1af110f689e018d4417f3547ed0417a7b6198b207285e60bf9b8"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/advanced-full-text-search.md",
+      "sha256": "0682b713263c5b6b9638a31f810bad07aa179bc4f79bbb787b92ed287e00fe76"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/advanced-jsonb-indexing.md",
+      "sha256": "9bcbf7da33f6fe6fa9525680ca26d4e3412b534104cffb5f8529596d76631e4f"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/conn-idle-timeout.md",
+      "sha256": "cd4386d0b5a2bd6d0148975f0f379016b47c7cf139b9483c4f24619c6a89f5e3"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/conn-limits.md",
+      "sha256": "9ed6e5e3a45458a52f2863a60324a05d80da1d9f3e23bcb83b06f464f6a3cee7"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/conn-pooling.md",
+      "sha256": "60cd5f7942c44bdf6d8622a49a2e9f0f7fd01daf8e62bd1bd66b195cd6942975"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/conn-prepared-statements.md",
+      "sha256": "5ce48ff1e426c9b90c75c5733817fc2dd8feea9e4db3298ec9373b9cd0cf3bf8"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/data-batch-inserts.md",
+      "sha256": "98251b608bb6cfefd28828c9e5fffc705a155f1212fa0cb82904c5bc2e417572"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/data-n-plus-one.md",
+      "sha256": "f5c60f85f208161cd7567bb7cff0f559618814216a4426bb1351b51f75ec334d"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/data-pagination.md",
+      "sha256": "c0bffeb6880c1f5b961e7c2ff36fd16686ebb09e5e49ed17499654beabea3e60"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/data-upsert.md",
+      "sha256": "b366aa7da1e7929fba3011f99d949b2593967920d0c3c8572e07c0407c367054"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/lock-advisory.md",
+      "sha256": "6d6b50c5ec9f85eb7aebbb1466e642e427c1732efa558488a9cae7ef9903febd"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/lock-deadlock-prevention.md",
+      "sha256": "55f2074581d4db4996fc3ea1d3c120295209a70115f773e2c54f6b312405b293"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/lock-short-transactions.md",
+      "sha256": "2538a22231c0dfde9967812b6bd5fb347287b671f72806495f89d0d0764e5fe6"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/lock-skip-locked.md",
+      "sha256": "42c7492ba7f5d2c8ede9a5af072ea63deacf71e5695e022cae15b46b1ce4df13"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/monitor-explain-analyze.md",
+      "sha256": "94881b47194cb164b1d2a004e79f181370af44ec830b9263e990e2710bd02b76"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/monitor-pg-stat-statements.md",
+      "sha256": "812bf181876bacac5a2f914e7ffcf2a0a215b6d18dda752e65e75d926cbbcef4"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/monitor-vacuum-analyze.md",
+      "sha256": "8d35221e676f13b122865d5df947a008c41367bd180010e52fde3c429e8552a9"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/query-composite-indexes.md",
+      "sha256": "7e75d1b4d4431cb874ecc28710e95b7d2d7364511daa5d2c8e9d7de7ce1d0054"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/query-covering-indexes.md",
+      "sha256": "028770393de8c0be6dcc7b9fb017f8209761d1854ebf433f036367e602f2d04d"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/query-index-types.md",
+      "sha256": "5f054ce4f835091bb5ff89875deb5f8ade9e447e2ea62d1ca07382d104af0f2d"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/query-missing-indexes.md",
+      "sha256": "15ddf120c86020612d2713225c850e0e4f022b38021f40f45e5bbe58f245dcc3"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/query-partial-indexes.md",
+      "sha256": "106e2b88ff64115efa0a6b5f448d31788681493eeec05ad373f7c2ce6c8e0381"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/schema-constraints.md",
+      "sha256": "d6e16d565c9832b70f8b1d472f7dc86dafa1351a44e8da72c88b48d337f73d7f"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/schema-data-types.md",
+      "sha256": "df3197b3393f37b065396c2d3d2035d870d5d572ceaf6562e7c85559dcd11871"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/schema-foreign-key-indexes.md",
+      "sha256": "b49a4e74ded6dd2a2bcf82d21fd22470c403b54cc526dc387f95c001c005c5d2"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/schema-lowercase-identifiers.md",
+      "sha256": "e7e3e073df2fd787cc4e58dbfe1b7eb1f80439326042c5e73a69ae8a3b1dd734"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/schema-partitioning.md",
+      "sha256": "d940ee09551e970f97c629e816502989c37f7dcea1df94b4b52f79f6eefc9971"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/schema-primary-keys.md",
+      "sha256": "8e4350d0c4b0034fa843ef74716978729329543ff57fe9fad1d22e31a86ae0c5"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/security-privileges.md",
+      "sha256": "079b20aba6ce8dbea81678fafdd95b4f9785440e91d07eb96029104597cb9693"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/security-rls-basics.md",
+      "sha256": "e1b419ae752d06f6180a0dd61fa21cfdc2b19e34902495bd2827d3e6e350dfe3"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/references/security-rls-performance.md",
+      "sha256": "b9defa5e5815a5dadf792b7c9ad7941eeaa1034082b3b06c9cd56083184022ad"
+    },
+    {
+      "path": "skills/supabase-postgres-best-practices/SKILL.md",
+      "sha256": "be9a8dcecb83376f38ef92aad6ae78f28a23865501aba941fdce213b58f00996"
+    }
+  ]
+}

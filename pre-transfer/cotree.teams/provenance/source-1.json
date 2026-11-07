@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.teams",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "teams",
+    "repository": "plugins",
+    "path": "plugins/teams",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "90dfd02fce468f33ba5922379963afac0d3ea9a91e2c2ecc017561f57041e761",
+    "upstreamVersion": "0.1.8"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "原包只提供 ChatGPT / Codex 专属连接器；需独立 Microsoft 服务适配。"
+  ],
+  "components": [
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 1,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "fbc74ebfd5207726e3c073d4872a699e0dd094e05b48dc5c81412f2313ab8e9c"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "a3c634e007ca3889fdbb9cdee8c52cfe37c70f2d6ec33e17787864750c382715"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "982be6162f987a43a75a220ef890ddf048d657d013141b423598649d44a0b8a8"
+    }
+  ]
+}

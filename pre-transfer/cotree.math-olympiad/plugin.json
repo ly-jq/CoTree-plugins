@@ -1,0 +1,43 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.math-olympiad",
+  "name": "竞赛数学",
+  "version": "0.2.0",
+  "description": "求解、核查并排版竞赛数学题，保留严谨论证、反例与明确的未解决部分。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.math-olympiad.solve",
+      "description": "求解奥赛、Putnam、AIME 等竞赛数学题并给出可核对推导。",
+      "path": "skills/solve/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.math-olympiad.verify",
+      "description": "核查竞赛证明的逻辑缺口、定理前提、分类边界和反例。",
+      "path": "skills/verify/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.math-olympiad.present",
+      "description": "整理自包含数学解答并生成独立 LaTeX 文档。",
+      "path": "skills/present/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "07da0257742e0e8f0b3ff6e39cbfebd8e8b9b092d4c6dfcc1cdcb751a5c7b8d8"
+  }
+}

@@ -1,0 +1,744 @@
+{
+  "schemaVersion": 1,
+  "at": "2026-10-06T04:20:51.771Z",
+  "scope": "real-language-fixtures-not-user-projects",
+  "packageId": "elyra.language-services",
+  "packageDigest": "394542ad3269cb4082acb8504d5286eafb3cf95078c9f21d8f9abf68e0a29f53",
+  "node": "v24.13.0",
+  "platform": "win32",
+  "hostHead": "49f2adf64094405461a1e362f0523255ac97d372",
+  "hostWorktree": "dirty",
+  "command": "pnpm exec tsx scripts/validate-lsp-real.mts --managed",
+  "rawReportSha256": "d5cc087088610c16b9004b88d8ab500dcab676dc13a7541331fc8ad9b9e9f1ac",
+  "codeFiles": [
+    {
+      "path": "packages/core/src/lsp.ts",
+      "sha256": "ca7de8cb91a0e183950b88fd98cb316bc7775b6a29c6032f22c215036a9e04a9"
+    },
+    {
+      "path": "packages/runtimes/src/lsp/server-config.ts",
+      "sha256": "1d466b174d43e9962da1d17a75ab7d7853fa8cf244b12999be975ccdf78c66ea"
+    },
+    {
+      "path": "packages/runtimes/src/lsp/connection.ts",
+      "sha256": "e5bddfd3a9369a413dca8917cd5d3c9a2cee12d3e14205f4fca5dece9bb37776"
+    },
+    {
+      "path": "packages/runtimes/src/lsp/index.ts",
+      "sha256": "18c4f40e29be544919e4a059912080f363aaa94dac4f01878abaa31d5ec8acb1"
+    },
+    {
+      "path": "packages/tools/src/computer/tools/lsp-tool.ts",
+      "sha256": "edd46f9c37932a35b7ad12157dc29e05ebdc327652bb457addf6ebd37679b453"
+    },
+    {
+      "path": "scripts/validate-lsp-real.mts",
+      "sha256": "cad951d2f34bcdcb89f585ad765eb70f3159e66e066c6ac574385256aee42f6a"
+    }
+  ],
+  "realServers": [
+    {
+      "language": "typescript",
+      "server": {
+        "name": "typescript",
+        "version": null
+      },
+      "file": "main.ts",
+      "contentHash": "7535286fa3cef7f84e69133249f3f8103d568ce69c96db77689049fbb799d54c",
+      "statusStartsProcesses": false,
+      "definition": [
+        {
+          "originSelectionRange": {
+            "start": {
+              "line": 2,
+              "column": 15
+            },
+            "end": {
+              "line": 2,
+              "column": 21
+            }
+          },
+          "targetRange": {
+            "start": {
+              "line": 1,
+              "column": 1
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          },
+          "targetFile": "answer.ts",
+          "targetSelectionRange": {
+            "start": {
+              "line": 1,
+              "column": 17
+            },
+            "end": {
+              "line": 1,
+              "column": 23
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "file": "main.ts",
+          "range": {
+            "start": {
+              "line": 1,
+              "column": 10
+            },
+            "end": {
+              "line": 1,
+              "column": 16
+            }
+          }
+        },
+        {
+          "file": "main.ts",
+          "range": {
+            "start": {
+              "line": 2,
+              "column": 15
+            },
+            "end": {
+              "line": 2,
+              "column": 21
+            }
+          }
+        },
+        {
+          "file": "answer.ts",
+          "range": {
+            "start": {
+              "line": 1,
+              "column": 17
+            },
+            "end": {
+              "line": 1,
+              "column": 23
+            }
+          }
+        }
+      ],
+      "hover": {
+        "contents": {
+          "kind": "markdown",
+          "value": "\n```typescript\n(alias) answer(): number\nimport answer\n```\n"
+        },
+        "range": {
+          "start": {
+            "line": 2,
+            "column": 15
+          },
+          "end": {
+            "line": 2,
+            "column": 21
+          }
+        }
+      },
+      "documentSymbols": [
+        {
+          "name": "value",
+          "detail": "",
+          "kind": 14,
+          "range": {
+            "start": {
+              "line": 2,
+              "column": 7
+            },
+            "end": {
+              "line": 2,
+              "column": 23
+            }
+          },
+          "selectionRange": {
+            "start": {
+              "line": 2,
+              "column": 7
+            },
+            "end": {
+              "line": 2,
+              "column": 12
+            }
+          },
+          "children": []
+        }
+      ],
+      "renamePreview": {
+        "changes": [
+          {
+            "file": "main.ts",
+            "edits": [
+              {
+                "newText": "answer as renamedAnswer",
+                "range": {
+                  "start": {
+                    "line": 1,
+                    "column": 10
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 16
+                  }
+                }
+              },
+              {
+                "newText": "renamedAnswer",
+                "range": {
+                  "start": {
+                    "line": 2,
+                    "column": 15
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 21
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "note": "Preview only. Resource operations and edits outside scope are omitted; no files were changed."
+      },
+      "renameApplied": false,
+      "diagnostics": {
+        "freshness": "unversioned",
+        "complete": false,
+        "result": [
+          {
+            "range": {
+              "start": {
+                "line": 2,
+                "column": 7
+              },
+              "end": {
+                "line": 2,
+                "column": 12
+              }
+            },
+            "message": "'value' is declared but its value is never read.",
+            "severity": 4,
+            "code": 6133,
+            "source": "typescript"
+          }
+        ]
+      }
+    },
+    {
+      "language": "python",
+      "server": {
+        "name": "python",
+        "version": null
+      },
+      "file": "main.py",
+      "contentHash": "24c3836d194aa7c899dfeb9a928e64de1faa90a597d88e637a76af56bcd0ab0a",
+      "statusStartsProcesses": false,
+      "definition": [
+        {
+          "file": "answer.py",
+          "range": {
+            "start": {
+              "line": 1,
+              "column": 5
+            },
+            "end": {
+              "line": 1,
+              "column": 11
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "file": "main.py",
+          "range": {
+            "start": {
+              "line": 1,
+              "column": 20
+            },
+            "end": {
+              "line": 1,
+              "column": 26
+            }
+          }
+        },
+        {
+          "file": "main.py",
+          "range": {
+            "start": {
+              "line": 2,
+              "column": 9
+            },
+            "end": {
+              "line": 2,
+              "column": 15
+            }
+          }
+        },
+        {
+          "file": "answer.py",
+          "range": {
+            "start": {
+              "line": 1,
+              "column": 5
+            },
+            "end": {
+              "line": 1,
+              "column": 11
+            }
+          }
+        }
+      ],
+      "hover": {
+        "contents": {
+          "kind": "markdown",
+          "value": "```python\n(function) def answer() -> int\n```"
+        },
+        "range": {
+          "start": {
+            "line": 2,
+            "column": 9
+          },
+          "end": {
+            "line": 2,
+            "column": 15
+          }
+        }
+      },
+      "documentSymbols": [
+        {
+          "name": "value",
+          "kind": 13,
+          "range": {
+            "start": {
+              "line": 2,
+              "column": 1
+            },
+            "end": {
+              "line": 2,
+              "column": 6
+            }
+          },
+          "selectionRange": {
+            "start": {
+              "line": 2,
+              "column": 1
+            },
+            "end": {
+              "line": 2,
+              "column": 6
+            }
+          },
+          "children": []
+        }
+      ],
+      "renamePreview": {
+        "changes": [
+          {
+            "file": "main.py",
+            "edits": [
+              {
+                "range": {
+                  "start": {
+                    "line": 1,
+                    "column": 20
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 26
+                  }
+                },
+                "newText": "renamedAnswer"
+              },
+              {
+                "range": {
+                  "start": {
+                    "line": 2,
+                    "column": 9
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 15
+                  }
+                },
+                "newText": "renamedAnswer"
+              }
+            ]
+          },
+          {
+            "file": "answer.py",
+            "edits": [
+              {
+                "range": {
+                  "start": {
+                    "line": 1,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 11
+                  }
+                },
+                "newText": "renamedAnswer"
+              }
+            ]
+          }
+        ],
+        "note": "Preview only. Resource operations and edits outside scope are omitted; no files were changed."
+      },
+      "renameApplied": false,
+      "diagnostics": {
+        "freshness": "pending",
+        "complete": false,
+        "result": []
+      }
+    },
+    {
+      "language": "go",
+      "server": {
+        "name": "gopls",
+        "version": "v0.21.1"
+      },
+      "file": "main.go",
+      "contentHash": "15db7b780681e4dcf30dc7223175988b10634f38d66097179b9989ddd979a16c",
+      "statusStartsProcesses": false,
+      "definition": [
+        {
+          "file": "answer.go",
+          "range": {
+            "start": {
+              "line": 4,
+              "column": 6
+            },
+            "end": {
+              "line": 4,
+              "column": 12
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "file": "answer.go",
+          "range": {
+            "start": {
+              "line": 4,
+              "column": 6
+            },
+            "end": {
+              "line": 4,
+              "column": 12
+            }
+          }
+        },
+        {
+          "file": "main.go",
+          "range": {
+            "start": {
+              "line": 2,
+              "column": 13
+            },
+            "end": {
+              "line": 2,
+              "column": 19
+            }
+          }
+        }
+      ],
+      "hover": {
+        "contents": {
+          "kind": "markdown",
+          "value": "```go\nfunc Answer() int\n```\n\n---\n\n[`check.Answer` on pkg.go.dev](https://pkg.go.dev/example.com/lspcheck#Answer)"
+        },
+        "range": {
+          "start": {
+            "line": 2,
+            "column": 13
+          },
+          "end": {
+            "line": 2,
+            "column": 19
+          }
+        }
+      },
+      "documentSymbols": [
+        {
+          "name": "Value",
+          "kind": 13,
+          "range": {
+            "start": {
+              "line": 2,
+              "column": 5
+            },
+            "end": {
+              "line": 2,
+              "column": 21
+            }
+          },
+          "selectionRange": {
+            "start": {
+              "line": 2,
+              "column": 5
+            },
+            "end": {
+              "line": 2,
+              "column": 10
+            }
+          }
+        }
+      ],
+      "renamePreview": {
+        "changes": [
+          {
+            "file": "main.go",
+            "edits": [
+              {
+                "range": {
+                  "start": {
+                    "line": 2,
+                    "column": 13
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 19
+                  }
+                },
+                "newText": "renamedAnswer"
+              }
+            ]
+          },
+          {
+            "file": "answer.go",
+            "edits": [
+              {
+                "range": {
+                  "start": {
+                    "line": 4,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 12
+                  }
+                },
+                "newText": "renamedAnswer"
+              }
+            ]
+          }
+        ],
+        "note": "Preview only. Resource operations and edits outside scope are omitted; no files were changed."
+      },
+      "renameApplied": false,
+      "diagnostics": {
+        "freshness": "version-matched",
+        "complete": true,
+        "result": []
+      }
+    },
+    {
+      "language": "java",
+      "server": {
+        "name": "JDT Language Server (Standard)",
+        "version": "1.56.0-SNAPSHOT"
+      },
+      "file": "application/src/main/java/example/Main.java",
+      "contentHash": "5d708cc419020f52be22cbaadad31a8bd5f005f868b6403db55a7309e2059c83",
+      "statusStartsProcesses": false,
+      "definition": [
+        {
+          "file": "library/src/main/java/example/Answer.java",
+          "range": {
+            "start": {
+              "line": 2,
+              "column": 41
+            },
+            "end": {
+              "line": 2,
+              "column": 47
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "file": "application/src/main/java/example/Main.java",
+          "range": {
+            "start": {
+              "line": 2,
+              "column": 47
+            },
+            "end": {
+              "line": 2,
+              "column": 55
+            }
+          }
+        },
+        {
+          "file": "library/src/main/java/example/Answer.java",
+          "range": {
+            "start": {
+              "line": 2,
+              "column": 41
+            },
+            "end": {
+              "line": 2,
+              "column": 47
+            }
+          }
+        }
+      ],
+      "hover": {
+        "contents": [
+          {
+            "language": "java",
+            "value": "int example.Answer.answer()"
+          },
+          "Source: *[library](file:///G:/CommonTools/SEO/ElyDream/.codex-tmp/batch4-lsp-real/projects/java/library/src/main/java/example/Answer.java#2)*"
+        ]
+      },
+      "documentSymbols": [
+        {
+          "name": "example",
+          "kind": 4,
+          "range": {
+            "start": {
+              "line": 1,
+              "column": 1
+            },
+            "end": {
+              "line": 1,
+              "column": 17
+            }
+          },
+          "selectionRange": {
+            "start": {
+              "line": 1,
+              "column": 1
+            },
+            "end": {
+              "line": 1,
+              "column": 17
+            }
+          },
+          "detail": ""
+        },
+        {
+          "name": "Main",
+          "kind": 5,
+          "range": {
+            "start": {
+              "line": 2,
+              "column": 1
+            },
+            "end": {
+              "line": 2,
+              "column": 58
+            }
+          },
+          "selectionRange": {
+            "start": {
+              "line": 2,
+              "column": 14
+            },
+            "end": {
+              "line": 2,
+              "column": 18
+            }
+          },
+          "detail": "",
+          "children": [
+            {
+              "name": "value",
+              "kind": 8,
+              "range": {
+                "start": {
+                  "line": 2,
+                  "column": 21
+                },
+                "end": {
+                  "line": 2,
+                  "column": 56
+                }
+              },
+              "selectionRange": {
+                "start": {
+                  "line": 2,
+                  "column": 32
+                },
+                "end": {
+                  "line": 2,
+                  "column": 37
+                }
+              },
+              "detail": ""
+            }
+          ]
+        }
+      ],
+      "renamePreview": {
+        "changes": [
+          {
+            "file": "library/src/main/java/example/Answer.java",
+            "edits": [
+              {
+                "range": {
+                  "start": {
+                    "line": 2,
+                    "column": 41
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 47
+                  }
+                },
+                "newText": "renamedAnswer"
+              }
+            ]
+          },
+          {
+            "file": "application/src/main/java/example/Main.java",
+            "edits": [
+              {
+                "range": {
+                  "start": {
+                    "line": 2,
+                    "column": 47
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 53
+                  }
+                },
+                "newText": "renamedAnswer"
+              }
+            ]
+          }
+        ],
+        "note": "Preview only. Resource operations and edits outside scope are omitted; no files were changed."
+      },
+      "renameApplied": false,
+      "diagnostics": {
+        "freshness": "unversioned",
+        "complete": false,
+        "result": []
+      }
+    }
+  ],
+  "pendingRealLanguages": [
+    "cpp",
+    "csharp",
+    "kotlin",
+    "lua",
+    "php",
+    "ruby",
+    "rust",
+    "swift"
+  ],
+  "limitations": [
+    "Additional eight adapters have configuration and stdio fixture coverage only; real servers were unavailable.",
+    "Diagnostics freshness is separate from query correctness; unversioned or pending results are not clean-build evidence.",
+    "No Linux, macOS or packaged Desktop validation in this batch."
+  ]
+}

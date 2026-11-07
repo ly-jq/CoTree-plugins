@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.hyperframes",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "hyperframes",
+    "repository": "plugins",
+    "path": "plugins/hyperframes",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "71f8061ffd7637a6e378d9651544d711db062356e6875c9914f709702c835e5a",
+    "upstreamVersion": "0.1.2"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/gsap/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/gsap/SKILL.md",
+      "sourceMetadata": {
+        "name": "gsap",
+        "description": "GSAP animation reference for HyperFrames. Covers gsap.to(), from(), fromTo(), easing, stagger, defaults, timelines (gsap.timeline(), position parameter, labels, nesting, playback), and performance (transforms, will-change, quickTo). Use when writing GSAP animations in HyperFrames compositions."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/hyperframes-cli/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/hyperframes-cli/SKILL.md",
+      "sourceMetadata": {
+        "name": "hyperframes-cli",
+        "description": "HyperFrames CLI tool — hyperframes init, lint, inspect, preview, render, transcribe, tts, doctor, browser, info, upgrade, compositions, docs, benchmark. Use when scaffolding a project, linting, validating, inspecting visual layout in compositions, previewing in the studio, rendering to video, transcribing audio, generating TTS, or troubleshooting the HyperFrames environment."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/hyperframes-registry/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/hyperframes-registry/SKILL.md",
+      "sourceMetadata": {
+        "name": "hyperframes-registry",
+        "description": "Install and wire registry blocks and components into HyperFrames compositions. Use when running hyperframes add, installing a block or component, wiring an installed item into index.html, or working with hyperframes.json. Covers the add command, install locations, block sub-composition wiring, component snippet merging, and registry discovery."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/hyperframes/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/hyperframes/SKILL.md",
+      "sourceMetadata": {
+        "name": "hyperframes",
+        "description": "Create video compositions, animations, title cards, overlays, captions, voiceovers, audio-reactive visuals, and scene transitions in HyperFrames HTML. Use when asked to build any HTML-based video content, add captions or subtitles synced to audio, generate text-to-speech narration, create audio-reactive animation (beat sync, glow, pulse driven by music), add animated text highlighting (marker sweeps, hand-drawn circles, burst lines, scribble, sketchout), or add transitions between scenes (crossfades, wipes, reveals, shader transitions). Covers composition authoring, timing, media, and the full video production workflow. For CLI commands (init, lint, preview, render, transcribe, tts) see the hyperframes-cli skill."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/website-to-hyperframes/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/website-to-hyperframes/SKILL.md",
+      "sourceMetadata": {
+        "name": "website-to-hyperframes",
+        "description": "Capture a website and create a HyperFrames video from it. Use when: (1) a user provides a URL and wants a video, (2) someone says \"capture this site\", \"turn this into a video\", \"make a promo from my site\", (3) the user wants a social ad, product tour, or any video based on an existing website, (4) the user shares a link and asks for any kind of video content. Even if the user just pastes a URL — this is the skill to use.\n"
+      }
+    }
+  ],
+  "copiedFiles": 68,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "62bac68749b25388111208e36647c132a8bced89a46c7f9374eae303dd3d3c68"
+    },
+    {
+      "path": "assets/icon.png",
+      "sha256": "cc97812c2f8b56feb96854141c609cdda17d64502d01da7ad7c0e5649bf8472e"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "0328eb84e11871561739d8541bc30d4bdca81ceae09730be779e5c38ee8b7c60"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a77da9889119db6c7eca9d7f698fbec7a1fc3cd881c0e48aff64c6e7e945370a"
+    },
+    {
+      "path": "skills/gsap/agents/openai.yaml",
+      "sha256": "e5b14ec425a9d5d2edad6cb9763b12d6eab6dd03d8fa6c1aef6e1cf21c282b3f"
+    },
+    {
+      "path": "skills/gsap/references/effects.md",
+      "sha256": "f9901f96f34ef7542850aec7b3eef3335e504c65edc62cc03393758001a80ecd"
+    },
+    {
+      "path": "skills/gsap/scripts/extract-audio-data.py",
+      "sha256": "f2c2bfe8fa982231fce4770872dcbc0b475f981a5950d9c33b3e9295fb364f28"
+    },
+    {
+      "path": "skills/gsap/SKILL.md",
+      "sha256": "0ace76d56e2d2b021a7ee3f2ef7e69895cdef3b8787b58f4586e3959043ace17"
+    },
+    {
+      "path": "skills/hyperframes/agents/openai.yaml",
+      "sha256": "bdad4c3cf2fa3f2987684d1851f12bc167019b077145d6e6c5a844d668886646"
+    },
+    {
+      "path": "skills/hyperframes/data-in-motion.md",
+      "sha256": "4ac0fecf4e1dc30ff29705a3d5187182f907dd9856014201811febf2e836d684"
+    },
+    {
+      "path": "skills/hyperframes/house-style.md",
+      "sha256": "9f0d56e4927e4419cfe74b0f6421770b6d5a212d4fb2f8aba4cde8c8f5db3e71"
+    },
+    {
+      "path": "skills/hyperframes/palettes/bold-energetic.md",
+      "sha256": "d609c6a2c025e301212da3ae22bf3b7bccaf7f99206383c07c088c3fc81902b7"
+    },
+    {
+      "path": "skills/hyperframes/palettes/clean-corporate.md",
+      "sha256": "97a0a529917c6b952ca1a60596213d52ad0a4071d33387a13b194a7ff202c452"
+    },
+    {
+      "path": "skills/hyperframes/palettes/dark-premium.md",
+      "sha256": "2507de6c961dcb0716098bd3d5ab6084afc43a657caa17def0f9d0c3138124d5"
+    },
+    {
+      "path": "skills/hyperframes/palettes/jewel-rich.md",
+      "sha256": "c1e5caeab799c6ee8b26807522c4a054081a477ad5f9c0f43da3452cf08e3c73"
+    },
+    {
+      "path": "skills/hyperframes/palettes/monochrome.md",
+      "sha256": "5a3d31723a8713f2bc858d193f35eedd5351a3d415a46a35955a742f10dc580f"
+    },
+    {
+      "path": "skills/hyperframes/palettes/nature-earth.md",
+      "sha256": "740652b7e904865444b45744ee55c991413b4678e6a942de804ae6788973b4e9"
+    },
+    {
+      "path": "skills/hyperframes/palettes/neon-electric.md",
+      "sha256": "baf9fd4a35d97fe3c9bd9fbb52cd881464ff24735aadb0809a8ddf59e606bad1"
+    },
+    {
+      "path": "skills/hyperframes/palettes/pastel-soft.md",
+      "sha256": "7dae88b52fc70d4f17ba085d14ef692047d634436c0cb7f14e49c840eaef2b47"
+    },
+    {
+      "path": "skills/hyperframes/palettes/warm-editorial.md",
+      "sha256": "0246ba98536fe148c9bd10c2f0838896879283d83c458509d8191c9ab7bc245a"
+    },
+    {
+      "path": "skills/hyperframes/patterns.md",
+      "sha256": "c9d8814fee57f9166902c04ae7e084935cfdb45e0cc76ba12ad0325f4e29ddee"
+    },
+    {
+      "path": "skills/hyperframes/references/audio-reactive.md",
+      "sha256": "574a00edc5ad61980e02d73bc899fbd85b21bf4cc017be763601e97b048a2b49"
+    },
+    {
+      "path": "skills/hyperframes/references/captions.md",
+      "sha256": "9589c33212d289ddcc4ef2b1136edf248ed80a1667fdf172c5978d9489d62a1e"
+    },
+    {
+      "path": "skills/hyperframes/references/css-patterns.md",
+      "sha256": "059a836de7c45982d8f5e449ffbfef4b3b869ccec29f8366167fcb2affedd449"
+    },
+    {
+      "path": "skills/hyperframes/references/dynamic-techniques.md",
+      "sha256": "862d5bddfed5ffc7cf35806159d6701330b9badab6677487f93358fb001d0550"
+    },
+    {
+      "path": "skills/hyperframes/references/motion-principles.md",
+      "sha256": "c5bc5a94e7d23322fb6f5b3044344adf595343c2da52653e4ccb21214514e2a8"
+    },
+    {
+      "path": "skills/hyperframes/references/transcript-guide.md",
+      "sha256": "e18c4568c61376b48aceb89a218978c835d27d1472c100a078d0c2c29a50aac0"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/catalog.md",
+      "sha256": "8257f220b7d94babd32acdf87edb365263b42901c8f480b17d9843e40843058b"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-3d.md",
+      "sha256": "0c1954913c8cbc051c0d12e36c932f75f5c752bc3ced5c4e7c7f51adaf35be0b"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-blur.md",
+      "sha256": "7bb334381c28909f1b2bb8fb298227a541fe1ab8fba270ad772f8890cc4fef30"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-cover.md",
+      "sha256": "9ca06c6e5dfb04009f211111f0bc2b4cef09eed19f13c7f0e37d9eccde00c535"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-destruction.md",
+      "sha256": "5738201d47dd6474c93024666094a99494c819f40571f4336e3e4eae3b1fd9d9"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-dissolve.md",
+      "sha256": "25bede7fd0e257415a2ba90be16502d52dec00c4d9fcf1019792cf2dbaeb78a6"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-distortion.md",
+      "sha256": "92c4f1d2baa46e6574e4b370e0267c898c385c31bd9005da3b2b0623e87c7f63"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-grid.md",
+      "sha256": "1055c82ad2a8464c354f1f4e284ad684c365ed0758184ee9e4cce7f9fbfc9162"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-light.md",
+      "sha256": "dce1bd9db82f58c76d88b2600c391d0bbbe70a4be696494c2e75ecc9505882a7"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-mechanical.md",
+      "sha256": "1152ad766ba6eaea2e9e276ba882f061160d57548ef8df2478276ecab8e9803d"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-other.md",
+      "sha256": "4d430cd13c82000dbbc9a59e3c26076c27fd6b3adc7ad3d43d8a8954dd1f0258"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-push.md",
+      "sha256": "6cf0bc2e55f7796f7e4fa8a92b7f4ab546ffef6ea56b64bde2429933c87b26ad"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-radial.md",
+      "sha256": "525847c89575f1f26c42d9fde9c83474029ad9a2c78249a484623ab523dcf2f5"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions/css-scale.md",
+      "sha256": "da2a02d2c0e3bf1ffa6793e4134474ca973acd1a265840d8b1091ebab30f7b2d"
+    },
+    {
+      "path": "skills/hyperframes/references/transitions.md",
+      "sha256": "e7b67387dc205c8ea02d6e88af88ac22d0f922aba0c1b8ee17b3faa69279f4f8"
+    },
+    {
+      "path": "skills/hyperframes/references/tts.md",
+      "sha256": "7e021e50a022519e692e91c0b8cf679fda4071f99e2a6e09326daa22b2dce6f8"
+    },
+    {
+      "path": "skills/hyperframes/references/typography.md",
+      "sha256": "ccf9aba1334f54d970f0cbeecec74d9b207a29e178ef2ebdcd8a6689dae35408"
+    },
+    {
+      "path": "skills/hyperframes/scripts/animation-map.mjs",
+      "sha256": "012279df878e50f7e0ffe9978ad4b49ba5316868cf584247044cddeaf633f866"
+    },
+    {
+      "path": "skills/hyperframes/scripts/contrast-report.mjs",
+      "sha256": "047c967d3c330690bdac421844be3db2341088953454c2632ea4c21b5291ab13"
+    },
+    {
+      "path": "skills/hyperframes/SKILL.md",
+      "sha256": "b9125909126432cadf6ebe2bf57be78f26439aa5dac5b14e0dfaf7c3d8015da2"
+    },
+    {
+      "path": "skills/hyperframes/visual-styles.md",
+      "sha256": "9c2a479212be40a7c32f397f198f4d70c2a41fc3946d27a68300efe1b54b2f26"
+    },
+    {
+      "path": "skills/hyperframes-cli/agents/openai.yaml",
+      "sha256": "b4370bd9b28eef0f36d467ebc243130aa82c8afe6c618d9d6e0fd1add3549fcf"
+    },
+    {
+      "path": "skills/hyperframes-cli/SKILL.md",
+      "sha256": "4c56ecec7a01e48b31523b81c7819877daff9034509522c7dae76cbbabbf8982"
+    },
+    {
+      "path": "skills/hyperframes-registry/agents/openai.yaml",
+      "sha256": "b13eec897e575c4acb6294919367363933633745b3d0c365c850c9fbfc76f833"
+    },
+    {
+      "path": "skills/hyperframes-registry/examples/add-block.md",
+      "sha256": "54aafdc319321bc547134dcd14d0f6d0d7332701a49a0db63769ed16e7edd308"
+    },
+    {
+      "path": "skills/hyperframes-registry/examples/add-component.md",
+      "sha256": "e07fc854cba28ef16d9d56c7b8fd1aad6dc7cdc744fd802b74889c32cb266c0f"
+    },
+    {
+      "path": "skills/hyperframes-registry/references/demo-html-pattern.md",
+      "sha256": "f224cdc61f6de5e83dd631ab495c2481afd314dc854a43ec3447fe369fcd775d"
+    },
+    {
+      "path": "skills/hyperframes-registry/references/discovery.md",
+      "sha256": "eae5209c6f22dd09c925728d95b31999e6539c81f79bd6d05ab637bd5d881b9f"
+    },
+    {
+      "path": "skills/hyperframes-registry/references/install-locations.md",
+      "sha256": "0beec79866bd5c31e3d5acd97c4a287de4c984135c03e0a422cbe5e3bf75ee38"
+    },
+    {
+      "path": "skills/hyperframes-registry/references/wiring-blocks.md",
+      "sha256": "28338fdbc93a28a5c3f2ae21be2e3fbbf7692af6326a0694f98e51b4f47216fa"
+    },
+    {
+      "path": "skills/hyperframes-registry/references/wiring-components.md",
+      "sha256": "5ad99c7b30a231e15d687b64ac87a605732398373052613786f52599bc1644cf"
+    },
+    {
+      "path": "skills/hyperframes-registry/SKILL.md",
+      "sha256": "ef5008899d6154938f05384e4a51231cf1c20be02494e0c85538c4457fc5829b"
+    },
+    {
+      "path": "skills/website-to-hyperframes/agents/openai.yaml",
+      "sha256": "bbb9d14dc4f0f73db1a52923a31ea38c83e0d93065214db7e8d72ba8f33f640d"
+    },
+    {
+      "path": "skills/website-to-hyperframes/references/step-1-capture.md",
+      "sha256": "88644dcc81df3d6f6af5e99c6ea00fd4098ba6f33db6543cd5d26ca5dc18c6b5"
+    },
+    {
+      "path": "skills/website-to-hyperframes/references/step-2-design.md",
+      "sha256": "ba097482b24374ed213e52c4c62153ecd71b04ac0801a0dce88582a8f1bb1395"
+    },
+    {
+      "path": "skills/website-to-hyperframes/references/step-3-script.md",
+      "sha256": "bf448de4875cb5f166b198c27b097b96bd402627d6d792e9e7f0f02ea8ff87f4"
+    },
+    {
+      "path": "skills/website-to-hyperframes/references/step-4-storyboard.md",
+      "sha256": "bbbde8f3032ba67624c7b9987b64ba388a6bcac9c6a2e5fb4ba854c3747c59d5"
+    },
+    {
+      "path": "skills/website-to-hyperframes/references/step-5-vo.md",
+      "sha256": "8edc55f17e4dd2bfb698a0b929fa881cefa9788eb54ed39bc70480010026c2c5"
+    },
+    {
+      "path": "skills/website-to-hyperframes/references/step-6-build.md",
+      "sha256": "ffa0b18dea8a26fb41054f3be0264dc70b12ecd7754770f394ada2339ee3d629"
+    },
+    {
+      "path": "skills/website-to-hyperframes/references/step-7-validate.md",
+      "sha256": "2c21ceb30d3528c2a9c16b5daf11d5d02e93c614cc0d5544170ff2c8f0d5e417"
+    },
+    {
+      "path": "skills/website-to-hyperframes/references/techniques.md",
+      "sha256": "50fd64288808fa9508bb9697cb2ddd18fd6a4ecc90c4035d4aac1ccb786c943e"
+    },
+    {
+      "path": "skills/website-to-hyperframes/SKILL.md",
+      "sha256": "ac62ba85b8ac6c834c359250e908e14bb18e4e278dcf98b2e9f2b05e3275ec1f"
+    }
+  ]
+}

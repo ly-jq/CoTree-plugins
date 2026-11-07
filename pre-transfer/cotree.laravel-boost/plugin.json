@@ -1,0 +1,76 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.laravel-boost",
+  "name": "Laravel Boost",
+  "version": "0.2.0",
+  "description": "以项目级 Laravel Boost MCP 辅助 CoTree 读取应用结构、查版本文档、开发、调试和验证 PHP / Laravel 工程。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.laravel-boost.connect",
+      "description": "将目标 Laravel 项目的 Boost MCP 接入 CoTree。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.laravel-boost.inspect",
+      "description": "读取 Laravel 应用、路由、依赖和调试信息。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.laravel-boost.docs",
+      "description": "按 Laravel 项目依赖版本检索官方技术文档。",
+      "path": "skills/docs/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.laravel-boost.develop",
+      "description": "沿用 Laravel 项目模式实现功能或修复问题。",
+      "path": "skills/develop/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.laravel-boost.data",
+      "description": "检查 Laravel 数据库结构并按授权处理数据变更。",
+      "path": "skills/data/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.laravel-boost.verify",
+      "description": "用真实测试和应用行为验证 Laravel 改动。",
+      "path": "skills/verify/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "laravel-boost",
+      "transport": "stdio",
+      "command": "php",
+      "args": [
+        "artisan",
+        "boost:mcp"
+      ],
+      "cwd": ".",
+      "cwdBase": "workspace",
+      "timeoutMs": 60000
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "83f623b0492344774ced6e72a275c143f3f7f436007d82fd898650751f0c60b9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.serena",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "serena",
+    "repository": "claude-plugins-official",
+    "path": "external_plugins/serena",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "6a43163e24bb9ebe43df0c50e6ab56c91fe7e641a9894615c54ff125a237171b"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "需 uv / Python、目标工程及语言服务。",
+    "运行依赖已固定：git+https://github.com/oraios/serena@3155fd67e9b7336a4a4cbf51ac111bba88fa53d7（2026-10-06 查询上游 npm registry / Git；版本锁定不代表已执行验证）。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#serena",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/serena"
+    }
+  ],
+  "copiedFiles": 0,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "e2d207a1d017f4aa47e3976ae84978da3838a94d8df5dd9681b183e4591946c9"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "9fe8149aee5e56f3ff41a792d0f218a88a1297387a0703807188c6b323cfe560"
+    }
+  ]
+}

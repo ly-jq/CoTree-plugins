@@ -1,0 +1,50 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.creative-production",
+  "name": "creative-production",
+  "version": "0.2.0",
+  "description": "组织八类创意生产、原素材约束、统一生成与本地交互评审看板。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.creative-production.brief",
+      "description": "整理真实创作目标、素材和品牌约束。",
+      "path": "skills/brief/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.creative-production.produce",
+      "description": "按八种互补模式生产可核对的视觉内容。",
+      "path": "skills/produce/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.creative-production.refine",
+      "description": "通过本地看板比较、选择和迭代创作方向。",
+      "path": "skills/refine/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.creative-production.export",
+      "description": "交付保留精确内容和来源的生产资产。",
+      "path": "skills/export/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "e92021ec3ead6b16dc0227ebd5b2fff0a25031867861b34baabc876788e836b5"
+  }
+}

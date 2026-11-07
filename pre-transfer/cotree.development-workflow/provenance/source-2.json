@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.superpowers",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "superpowers",
+    "repository": "plugins",
+    "path": "plugins/superpowers",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "0ad284953fa7c2c3f6e8f687b1c19603357c9078aedae1293b577f95833fbe1e",
+    "upstreamVersion": "6.3.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "通用开发方法可用；会话、工具、子 Agent 调用以 Elyra 当前 schema 为准。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/brainstorming/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/brainstorming/SKILL.md",
+      "sourceMetadata": {
+        "name": "brainstorming",
+        "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/dispatching-parallel-agents/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/dispatching-parallel-agents/SKILL.md",
+      "sourceMetadata": {
+        "name": "dispatching-parallel-agents",
+        "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/executing-plans/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/executing-plans/SKILL.md",
+      "sourceMetadata": {
+        "name": "executing-plans",
+        "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/finishing-a-development-branch/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/finishing-a-development-branch/SKILL.md",
+      "sourceMetadata": {
+        "name": "finishing-a-development-branch",
+        "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/receiving-code-review/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/receiving-code-review/SKILL.md",
+      "sourceMetadata": {
+        "name": "receiving-code-review",
+        "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/requesting-code-review/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/requesting-code-review/SKILL.md",
+      "sourceMetadata": {
+        "name": "requesting-code-review",
+        "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/subagent-driven-development/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/subagent-driven-development/SKILL.md",
+      "sourceMetadata": {
+        "name": "subagent-driven-development",
+        "description": "Use when executing implementation plans with independent tasks in the current session"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/systematic-debugging/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/systematic-debugging/SKILL.md",
+      "sourceMetadata": {
+        "name": "systematic-debugging",
+        "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/test-driven-development/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/test-driven-development/SKILL.md",
+      "sourceMetadata": {
+        "name": "test-driven-development",
+        "description": "Use when implementing any feature or bugfix, before writing implementation code"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/using-git-worktrees/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/using-git-worktrees/SKILL.md",
+      "sourceMetadata": {
+        "name": "using-git-worktrees",
+        "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/using-superpowers/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/using-superpowers/SKILL.md",
+      "sourceMetadata": {
+        "name": "using-superpowers",
+        "description": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/verification-before-completion/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/verification-before-completion/SKILL.md",
+      "sourceMetadata": {
+        "name": "verification-before-completion",
+        "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/writing-plans/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/writing-plans/SKILL.md",
+      "sourceMetadata": {
+        "name": "writing-plans",
+        "description": "Use when you have a spec or requirements for a multi-step task, before touching code"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/writing-skills/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/writing-skills/SKILL.md",
+      "sourceMetadata": {
+        "name": "writing-skills",
+        "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment"
+      }
+    }
+  ],
+  "copiedFiles": 70,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/assets/composer-icon.svg",
+      "sha256": "54a632d9ee6197ccbc10d43d42217e23d08375bea63ba8eb4b6af757c1535038"
+    },
+    {
+      "path": ".codex-plugin/assets/logo.png",
+      "sha256": "b7477eb39b5109617fe37e51dd65d8bdd8dff6c40fda49adfbc21eec445777ee"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "4d6fccd458bef6d4c6efc3d010c9171af16b5556f902d3cfc7e46a45fed4ca66"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "b7477eb39b5109617fe37e51dd65d8bdd8dff6c40fda49adfbc21eec445777ee"
+    },
+    {
+      "path": "assets/superpowers-small.svg",
+      "sha256": "54a632d9ee6197ccbc10d43d42217e23d08375bea63ba8eb4b6af757c1535038"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "sha256": "81bfdde2f82d97614bcdc33b2ad3d9ba9b4f4e280588abb51ded07e5413e5f1e"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "0da33ed814ee87e72db078f489c4447af72f13d9f25d9e17476f32efd77705fc"
+    },
+    {
+      "path": "README.md",
+      "sha256": "bc9d70c34291ee38b2cee625c09b501e34ff75e421019323685f2462fe5094dc"
+    },
+    {
+      "path": "skills/brainstorming/agents/openai.yaml",
+      "sha256": "f8aecd72b8158839b37abcb6f7a2abf0895a43ae99a14fceb735502fd53a23e6"
+    },
+    {
+      "path": "skills/brainstorming/scripts/frame-template.html",
+      "sha256": "7b9418e9939dded0cf8e6a5549a18162b7c7e5495deeefa83a12f3394b81395d"
+    },
+    {
+      "path": "skills/brainstorming/scripts/helper.js",
+      "sha256": "78c3a22dd5e799623cab8908b0b03e764404efde2d2edc94a8814cf450a09e81"
+    },
+    {
+      "path": "skills/brainstorming/scripts/server.cjs",
+      "sha256": "ee89af11506ac4933324c89a2cfb36b391fe611f82efb9eeb3b814e40825145f"
+    },
+    {
+      "path": "skills/brainstorming/scripts/start-server.sh",
+      "sha256": "526f3fc34bbdc56d97532d84bf861a1113f9f08fec6479c3553c13ec627c2448"
+    },
+    {
+      "path": "skills/brainstorming/scripts/stop-server.sh",
+      "sha256": "6a2f3f3b7ca84fde8ef3c43825d392e1f12126b52a93b42c4d4940779bac884d"
+    },
+    {
+      "path": "skills/brainstorming/SKILL.md",
+      "sha256": "99476557e55f9daa60bee5ba350c2c2800fae621c54f5aca3c32ecb85f803a1a"
+    },
+    {
+      "path": "skills/brainstorming/spec-document-reviewer-prompt.md",
+      "sha256": "793f2546815a28f2712f0dcb926ab96dc4a60145fbea6f9a08d88287ec8e15bc"
+    },
+    {
+      "path": "skills/brainstorming/visual-companion.md",
+      "sha256": "770ba4339dd33b24b11100b20e4343670442764087f32b710390704755f9778a"
+    },
+    {
+      "path": "skills/dispatching-parallel-agents/agents/openai.yaml",
+      "sha256": "3c995554a301bcafdd91b8bf66aae4ff4d8607eaf9f30cb81a40c3b54adf0b16"
+    },
+    {
+      "path": "skills/dispatching-parallel-agents/SKILL.md",
+      "sha256": "fc9875393a1dcd6b649bf22d9ff62f3a02080c0ce365932451bc73e63d87ddab"
+    },
+    {
+      "path": "skills/executing-plans/agents/openai.yaml",
+      "sha256": "ce0e14ec8b43fb3dca69969e9c93c30c9fc00ed5bcdbb2754955b71b41110d6a"
+    },
+    {
+      "path": "skills/executing-plans/SKILL.md",
+      "sha256": "fe85231f6c15b83dfadf1409535d01f304c43b920bc937b1dcc0907ec7824984"
+    },
+    {
+      "path": "skills/finishing-a-development-branch/agents/openai.yaml",
+      "sha256": "94b79074af8e56845dd9ab0652626ecbd231d9f00a91923f4a2f2bf174b3097b"
+    },
+    {
+      "path": "skills/finishing-a-development-branch/SKILL.md",
+      "sha256": "2b8cb8f9cabb1951be2ebb1d72da90d3313f7e3705fd25f5b8f2d0432e139bae"
+    },
+    {
+      "path": "skills/receiving-code-review/agents/openai.yaml",
+      "sha256": "8e9815cb2909162fa062f48ee650d349186e4771ea25c5de787e7fec7f3b0159"
+    },
+    {
+      "path": "skills/receiving-code-review/SKILL.md",
+      "sha256": "bbe7eb200ac9feb97f2620308ba8ecb517837465009a858bc5687695f3d0a6ae"
+    },
+    {
+      "path": "skills/requesting-code-review/agents/openai.yaml",
+      "sha256": "fc2051fe4f199267311cc02eac6254787d3f6e84e26dfc5c37ad347d5bff89a1"
+    },
+    {
+      "path": "skills/requesting-code-review/code-reviewer.md",
+      "sha256": "8bf83519a1cd1c40de0f2c1ee98939d872bf2b151064ea90876dd3a14530c94a"
+    },
+    {
+      "path": "skills/requesting-code-review/SKILL.md",
+      "sha256": "7681db08bd8697f94295c7689e1fc059b7ea76136995b181d8a53f5cbbde7973"
+    },
+    {
+      "path": "skills/subagent-driven-development/agents/openai.yaml",
+      "sha256": "950280dea36a23edaccfe318dfd11177dcf049ea288d12bcbeb94a2af6e4b0bb"
+    },
+    {
+      "path": "skills/subagent-driven-development/implementer-prompt.md",
+      "sha256": "bda42c4969d1578eab92bc1cca864397203329d22dbc143a8c6a896adb548b42"
+    },
+    {
+      "path": "skills/subagent-driven-development/re-review-prompt.md",
+      "sha256": "39bf775586e5be93da98c4f16be5c556195fc806509d22e3f3a79f96c1a0c5d7"
+    },
+    {
+      "path": "skills/subagent-driven-development/scripts/review-package",
+      "sha256": "7cfee68ad5c53dea3532acd4c34d85148d3e591f2f8da94853478ffd57bf4211"
+    },
+    {
+      "path": "skills/subagent-driven-development/scripts/sdd-workspace",
+      "sha256": "36c0cad20d4891dace227110c17624e09a1e607329841b5de02fb84fd37d4207"
+    },
+    {
+      "path": "skills/subagent-driven-development/scripts/task-brief",
+      "sha256": "be4896abf0918da67832e81cad80d39599f85e461e721f4613828a3810f3e493"
+    },
+    {
+      "path": "skills/subagent-driven-development/SKILL.md",
+      "sha256": "ca15b1b17cabe88289d0b30294b8ba5ae83a4199615584a58778b6620b516fb7"
+    },
+    {
+      "path": "skills/subagent-driven-development/task-reviewer-prompt.md",
+      "sha256": "d9a35c4c09034622606061414b988ef618d47940cef1be6bdd91e70a524395c8"
+    },
+    {
+      "path": "skills/systematic-debugging/agents/openai.yaml",
+      "sha256": "9dccbac2e8a6f131e3a58e565f30e5ed804546887350f2f559c9536b71cb7155"
+    },
+    {
+      "path": "skills/systematic-debugging/condition-based-waiting-example.ts",
+      "sha256": "0602407671f97439acc9e3cc2fe27ad42a22eb0dbca62f56d610fb223daadb0f"
+    },
+    {
+      "path": "skills/systematic-debugging/condition-based-waiting.md",
+      "sha256": "02aa854bd9e761f275e1450d7136ba60f1a4d103fe94b552fdce822dd3c99506"
+    },
+    {
+      "path": "skills/systematic-debugging/CREATION-LOG.md",
+      "sha256": "397f122f115f994372a1805e30071fc0ad86c0dc1e427fbf5b5f1b14143399f5"
+    },
+    {
+      "path": "skills/systematic-debugging/defense-in-depth.md",
+      "sha256": "9407efcbd028a5ec45edfdf6692b988716c0a7b34d1fb5e05d60146171d8041e"
+    },
+    {
+      "path": "skills/systematic-debugging/find-polluter.sh",
+      "sha256": "31aa8bbab625ffae398c357de90fe3f4cb8f6dd39b23101bf81ef6dd53638b7c"
+    },
+    {
+      "path": "skills/systematic-debugging/root-cause-tracing.md",
+      "sha256": "cb00878f1b5b79442dc474f0e0d67b44f8175e741ba90abbf5e9778b67ba4854"
+    },
+    {
+      "path": "skills/systematic-debugging/SKILL.md",
+      "sha256": "23f249e47a3a4b06c3a5030e37aaf3ced12a54f406782766b384ed127d21eca4"
+    },
+    {
+      "path": "skills/systematic-debugging/test-academic.md",
+      "sha256": "51e07c1c56052a6c46cde8e7d42d6612598ea076f128086fd85911f4d2d3e8dd"
+    },
+    {
+      "path": "skills/systematic-debugging/test-pressure-1.md",
+      "sha256": "fbf04219c44460e76d96642d7dc16960a2390936e0a6937d0b133e013fa55afb"
+    },
+    {
+      "path": "skills/systematic-debugging/test-pressure-2.md",
+      "sha256": "fc6b2594bed3f2a15ece75d0a211b55cb9a4668d85b9873f2bab5ee54ed31cbf"
+    },
+    {
+      "path": "skills/systematic-debugging/test-pressure-3.md",
+      "sha256": "69ed6a5a59dac92d58d284519991a46b90978bc40a229776dac0ffa3a6123bfe"
+    },
+    {
+      "path": "skills/test-driven-development/agents/openai.yaml",
+      "sha256": "a05e4deb502e60c9365a53a95e6d455a1581ea3a35e74e8ef9c514839a30ab69"
+    },
+    {
+      "path": "skills/test-driven-development/SKILL.md",
+      "sha256": "fad42344223013a560fb3f2a9ad40509c5ea569595bab7f064dbf13149e9c53f"
+    },
+    {
+      "path": "skills/test-driven-development/writing-good-tests.md",
+      "sha256": "87f56d0a4236f804165149ec038787d20062afc9b37aa240a167c394b39d2065"
+    },
+    {
+      "path": "skills/using-git-worktrees/agents/openai.yaml",
+      "sha256": "dba8cb02d35d60b908c26a0476f620065150200c2b28e0be33deea763ff37161"
+    },
+    {
+      "path": "skills/using-git-worktrees/SKILL.md",
+      "sha256": "49ac647dd5a65e0e79f87d346005dde8ce27c6886bccf966164917ee8bb4df80"
+    },
+    {
+      "path": "skills/using-superpowers/agents/openai.yaml",
+      "sha256": "e8ebb4b45c75c134ce06a01b482e72e6269cea1421f4fedeb59f805870eb58ee"
+    },
+    {
+      "path": "skills/using-superpowers/references/antigravity-tools.md",
+      "sha256": "343af08abab2936a4063399ec0908a0d3a129f66a54a42ef1f14e9b9edc0b8fa"
+    },
+    {
+      "path": "skills/using-superpowers/references/codex-tools.md",
+      "sha256": "51d2e878aac90809bfdd0358c974281e2fb88c7d46571e6310587d9df6cd55ea"
+    },
+    {
+      "path": "skills/using-superpowers/references/gemini-tools.md",
+      "sha256": "3e0e732356eaf1780da7cfd93773723a68ff1fe03dbc519aaac38cd7e9b62e87"
+    },
+    {
+      "path": "skills/using-superpowers/references/hermes-tools.md",
+      "sha256": "32c262e22da268ac1bc33f2b318e597e78539f10be170a7453dee07ff432f36b"
+    },
+    {
+      "path": "skills/using-superpowers/references/pi-tools.md",
+      "sha256": "fb6db6991508e958b0117861b6107fb1cafcc752210c7cfe66def13f1e34d371"
+    },
+    {
+      "path": "skills/using-superpowers/SKILL.md",
+      "sha256": "3ff749d00d9baa18813a2ec2a114d09b6c0bf6e9938b030aac617c0ea12added"
+    },
+    {
+      "path": "skills/verification-before-completion/agents/openai.yaml",
+      "sha256": "89dd36f5126a8b2181687cbb68e14e189adf58aa7857a03a75d566ef20d661ee"
+    },
+    {
+      "path": "skills/verification-before-completion/SKILL.md",
+      "sha256": "8f15b9f67e566f286d531b7da77052f4009b5065fd8edfcb659c9f837eebb4a4"
+    },
+    {
+      "path": "skills/writing-plans/agents/openai.yaml",
+      "sha256": "28a392839b558645d3ecb0586f8e2a91b7f1826dd938078f1986182b4ffcac76"
+    },
+    {
+      "path": "skills/writing-plans/plan-document-reviewer-prompt.md",
+      "sha256": "5e9997798714b4e7275a2b87374c75211122b4449a17aee61b936e9097e3c449"
+    },
+    {
+      "path": "skills/writing-plans/SKILL.md",
+      "sha256": "82e7d50b27b5f460a1f30858408483cbbdda55b1b3da78e3fd86fa7b60573081"
+    },
+    {
+      "path": "skills/writing-skills/agents/openai.yaml",
+      "sha256": "15cb7f5489d1fad1d23a946d2ba371110b1966eff5f78cd7ecf3a6afce55256e"
+    },
+    {
+      "path": "skills/writing-skills/anthropic-best-practices.md",
+      "sha256": "26f2fc231b4bea7ad7ec034a61615f8fe8bfff6c436ad77e60d5734be16a6a15"
+    },
+    {
+      "path": "skills/writing-skills/examples/CLAUDE_MD_TESTING.md",
+      "sha256": "3648a10c414546fdea2eae3a8f21345cda2234aca54a084042e5f933a6b332ca"
+    },
+    {
+      "path": "skills/writing-skills/graphviz-conventions.dot",
+      "sha256": "b18a02773875f6c7b92f2a260e88550c92a62549b0009df9d680f7e9541d0ecc"
+    },
+    {
+      "path": "skills/writing-skills/persuasion-principles.md",
+      "sha256": "73ffb3d9d9f510f82296de0e3509bdcc1bae13379ef56354877e3f33303b44bf"
+    },
+    {
+      "path": "skills/writing-skills/render-graphs.js",
+      "sha256": "7f558e910dc0dc1c24a30fda9b0595643399f16014f8cd12b56e1ef1ad113a84"
+    },
+    {
+      "path": "skills/writing-skills/SKILL.md",
+      "sha256": "09de7d4b8e865ab333438520ce772a006b04da6a3a7beb81b4e3b4bbe94d268b"
+    },
+    {
+      "path": "skills/writing-skills/testing-skills-with-subagents.md",
+      "sha256": "134a5d0f695d717f6d34609dff44ec9316a593c2f6db981ec94a61750fcce1bb"
+    }
+  ]
+}

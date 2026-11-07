@@ -1,0 +1,24 @@
+import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { computePluginPackageDigest, validatePluginManifest } from "@cotree/agent-plugins";
+
+const source = fileURLToPath(new URL("../", import.meta.url));
+const root = path.resolve(source, "../..");
+const stageIndex = process.argv.indexOf("--stage-dir");
+if (stageIndex >= 0 && !process.argv[stageIndex + 1]) throw new Error("--stage-dir requires a directory");
+const directory = stageIndex >= 0 ? path.resolve(process.argv[stageIndex + 1]!) : path.join(root, ".cotree/artifacts/browser-use-plugin", `build-${Date.now()}`);
+await mkdir(path.join(directory, "evals"), { recursive: true });
+await mkdir(path.join(directory, "sdk"), { recursive: true });
+await Promise.all(["plugin.json", "index.mjs", "README.md", "evals/tool-smoke.json", "sdk/contract.json", "sdk/browser-sdk.js", "sdk/documentation.json"].map((file) => copyFile(path.join(source, file), path.join(directory, file))));
+const manifest = JSON.parse(await readFile(path.join(directory, "plugin.json"), "utf8"));
+manifest.integrity = { algorithm: "sha256", digest: "0".repeat(64) };
+const manifestPath = path.join(directory, "plugin.json");
+await writeFile(manifestPath, JSON.stringify(manifest, null, 2));
+let checked = validatePluginManifest(manifest);
+if (!checked.ok || !checked.manifest) throw new Error(JSON.stringify(checked.issues));
+manifest.integrity.digest = computePluginPackageDigest(directory, checked.manifest).digest;
+await writeFile(manifestPath, JSON.stringify(manifest, null, 2));
+checked = validatePluginManifest(manifest);
+if (!checked.ok || !checked.manifest || computePluginPackageDigest(directory, checked.manifest).digest !== manifest.integrity.digest) throw new Error("Invalid finalized browser-use package digest");
+console.log(JSON.stringify({ directory, id: manifest.id, version: manifest.version, digest: manifest.integrity.digest }));

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.playground",
+  "version": "0.2.0",
+  "category": "设计与内容",
+  "priority": 0,
+  "batch": 19,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "playground",
+      "repository": "claude-plugins-official",
+      "path": "plugins/playground",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "84472481337b92ab8a6bf0ad86e366b7324e4dd155b11326f581e71802cda392"
+    }
+  ],
+  "changes": [
+    "去除回贴 Claude、固定 dark theme 和 macOS open 命令；改用 CoTree 文件与浏览器能力，主题遵循用户工程。",
+    "完整保留六类专业模板，注册六个原生工作流，避免与网页开发 / 数据分析包重复注册。",
+    "新增无需依赖的单 HTML 设计实验页，包含实时预览、三种预设、重置、复制失败回退与可保留状态的导出。"
+  ],
+  "limitations": [
+    "完整六类模板是供模型按真实任务实现的指导，不是六个已编译产品；当前随包可运行示例验证设计类，其他真实数据 / 文档 / 代码图另验。",
+    "浏览器复制权限和文件下载由宿主控制；复制受限时提供选中文字，页面默认无外部请求或发布。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "playground / self-contained HTML": "create：单文件、即时预览、统一状态、预设、自然语言说明、复制与带状态导出。",
+    "design-playground / data-explorer": "design / data：样式决策、数据筛选与可复查图表。",
+    "concept-map / code-map": "map：概念与代码关系分别依据实际材料，节点、连线、筛选和定位。",
+    "document-critique / diff-review": "review：文档建议选择与代码逐行评审分开实现，不自动修改原件。",
+    "browser open / prompt copy": "verify：CoTree 实际浏览器打开、键盘 / 窄屏 / 导出检查；无权限复制提供选中文字，不伪报成功。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

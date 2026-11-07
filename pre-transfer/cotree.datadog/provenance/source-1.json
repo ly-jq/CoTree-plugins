@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.datadog",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "datadog",
+    "repository": "plugins",
+    "path": "plugins/datadog",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "8d07a1ab4d9d04bc29f5ba86b089e40503aff9b9014618df10b94079909f7e0e",
+    "upstreamVersion": "10.0.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_DATADOG_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#datadog",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/datadog"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 2,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "bd9d0312ca3838551aef151c17fbe8368356ca8fa0ca9de77e5a959685ead880"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "5494b56de214e2e3683ec94c0f83b5d93d2295049ec9fc8bd24565a3ad48363c"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "576f613159953ecd6c31f84ad39ca7422d2437c7e3f6f9e77151f0bea606832c"
+    },
+    {
+      "path": "assets/composer-icon.png",
+      "sha256": "cb4076b5247582608933db2e6f9ad66deeb49951dfd97ad77ac91b317dad6e8f"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "68b0dd3f7a70a6f5ef1d4ca3b2676939e4be1a3b9cca44771e836da3c6a49910"
+    }
+  ]
+}

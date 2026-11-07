@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.google-drive",
+  "version": "0.2.0",
+  "category": "团队协作与知识",
+  "priority": 0,
+  "batch": 7,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "google-drive",
+      "repository": "plugins",
+      "path": "plugins/google-drive",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "9f27a7e65d885648f594ceefc6af9b06c929bab48d979a63ca55572021939063",
+      "upstreamVersion": "0.1.15"
+    }
+  ],
+  "changes": [
+    "五类来源能力收敛为八个原生工作流，保留文档 / 表格 / 演示的互补资源，不拆成重复插件。",
+    "新增固定操作的 Drive / Docs / Sheets / Slides API 客户端、精确 URL 解析、原生导入与有界文件输出。",
+    "移除原宿主私有工具桥、强制生成 ChatGPT 文件夹和无条件重建文档；版本、结构及真实工具能力优先。"
+  ],
+  "limitations": [
+    "官方 Drive MCP 为开发者预览，需要准入、Cloud 项目启用和独立 OAuth；CoTree 登录 / 刷新尚待接入。MCP 当前工具集不等于原宿主完整编辑连接器。",
+    "独立 REST 使用 COTREE_GOOGLE_DRIVE_ACCESS_TOKEN，需启用目标 Drive / Docs / Sheets / Slides API 并授予匹配 scopes；真实文件读写未验收。",
+    "原宿主私有 dropdown / trusted-read / Perl 传输桥不执行。公开 API 不支持的控件必须保留并单独确认可用 UI 能力，不能以文本替换冒充原生控件。",
+    "辅助脚本分页显式推进，JSON 响应最多 8 MiB，下载最多 20 MiB，本地 Office 导入最多 10 MiB；Google files.export 自身上限 10 MB。大文件流式 / 可恢复传输和永久删除未封装。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "google-drive": "discover / organize / transfer：文件定位、元数据、组织权限、导入导出、版本与原生类型核验。",
+    "google-docs": "docs：多 Tab、内容与样式、revision 保护；独立 Docs API。原宿主私有 dropdown 执行桥只归档，按现有公开 API / UI 能力单独处理。",
+    "google-sheets": "sheets：范围、公式、结构、图表、格式、导入后的原生类型与读回。",
+    "google-slides": "slides：模板 / 母版 / 布局 / 元素、图表和全稿检查；保留可独立运行的来源结构解析与问题检查器。",
+    "google-drive-comments": "comments：文件、引文、tab / range / slide 证据，评论 / 回复 / resolve 与读回。",
+    "connector / host bridge": "connect + 原生 MCP + 固定操作的独立 Google REST 脚本；预览准入、OAuth / API scopes 待验收。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

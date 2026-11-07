@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.receipts",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "receipts",
+    "repository": "claude-plugins-official",
+    "path": "plugins/receipts",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "374437e59d46fbb3df9f332e814d6bf6d8f679973a30496add9c99fb7a245074"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "当前分析既有 Claude JSONL；读取 Elyra 会话数据的适配器尚未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/receipts/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/receipts/SKILL.md",
+      "sourceMetadata": {
+        "name": "receipts",
+        "description": "Generate a personal Claude Code usage & impact report (\"receipts\") from this machine's local session transcripts — for justifying Claude Code usage/spend to a manager, self-review, or \"what have I been using this for\" check-ins. Mines ~/.claude/projects locally (no extra API calls beyond one final write-up), cross-references local git history, and writes a markdown report plus a self-contained HTML receipt to your home directory. Use when the user asks for \"receipts\", an \"impact report\", \"usage report\", wants to \"show my Claude Code activity\", \"prove the value of Claude Code\", or runs `/receipts`."
+      }
+    }
+  ],
+  "copiedFiles": 6,
+  "sourceFiles": [
+    {
+      "path": "assets/make-sample.mjs",
+      "sha256": "57c47450dcf52d0ae5e29d58c6d46ada58409fc15e58bca03d5e6a3f1dd8cd6a"
+    },
+    {
+      "path": "assets/sample-receipt.png",
+      "sha256": "1021f09c2b067e7a4bd9c9cce936672f7a0d1256992e952955dd7c759de71b42"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d8f2584996bb998c00b3a61d23721da96eb68365eef1319c8802a86bc220c061"
+    },
+    {
+      "path": "skills/receipts/scripts/mine-transcripts.mjs",
+      "sha256": "c50842504068b7ead3dcd94f938bfea1348e4bece9861bd41f3fb3d6717b9e26"
+    },
+    {
+      "path": "skills/receipts/SKILL.md",
+      "sha256": "75585f758e4f987dbb70c5b7681b41b2c8842e35d4e18efda5e50cff5ccc50a5"
+    }
+  ]
+}

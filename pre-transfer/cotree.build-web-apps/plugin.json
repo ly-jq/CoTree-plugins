@@ -1,0 +1,50 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.build-web-apps",
+  "name": "网页开发",
+  "version": "0.2.0",
+  "description": "在真实项目中构建、接入和调试网页应用，复用已有设计及领域插件。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/app-icon.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.build-web-apps.build",
+      "description": "构建新网页应用或维护现有界面，覆盖完整任务流程。",
+      "path": "skills/build/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-apps.integrate",
+      "description": "将网页连接到已选定的后端、身份、数据库、模型或支付服务。",
+      "path": "skills/integrate/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-apps.debug",
+      "description": "复现和修复前端交互、渲染、响应式或数据状态问题。",
+      "path": "skills/debug/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.build-web-apps.deliver",
+      "description": "核对网页的构建、真实交互与交付状态，并按任务发布。",
+      "path": "skills/deliver/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "23469e09882e67361b4955fd604928a8b32def5fd364189cc50f09e5ea5dd342"
+  }
+}

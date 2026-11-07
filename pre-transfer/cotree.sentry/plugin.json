@@ -1,0 +1,61 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.sentry",
+  "name": "Sentry",
+  "version": "0.2.0",
+  "description": "Sentry 问题分诊、事件读取和故障关联，附独立 GET-only API 客户端。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/sentry.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.sentry.connect",
+      "description": "选择 Sentry MCP OAuth 或只读 API，核对组织、项目和权限。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.sentry.triage",
+      "description": "读取有明确项目、环境和时间范围的 Sentry Issues 并整理优先级。",
+      "path": "skills/triage/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.sentry.inspect",
+      "description": "获取 Sentry Issue 详情、事件列表或单个事件并保护诊断数据。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.sentry.diagnose",
+      "description": "关联 Sentry 事件、发布与当前代码，形成可复现的故障诊断。",
+      "path": "skills/diagnose/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "sentry",
+      "transport": "streamable-http",
+      "url": "https://mcp.sentry.dev/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_SENTRY_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "fbd50f2c442c3263f539491f8f040f8d9c1ef6f88d8620cf9041e4e8408a272d"
+  }
+}

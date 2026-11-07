@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.linear",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "linear",
+    "repository": "plugins",
+    "path": "plugins/linear",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "8e8adacd13617727029cd3d59e980bf1ed74478097fb45f2265eb920b3c2ceeb",
+    "upstreamVersion": "5.0.1"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_LINEAR_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#linear",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/linear"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 5,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "f1dc7c212ff577c648f05928f2b973d2579e01371ea401db5170b44021cf492b"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "0465e60bcd48ba5daf0e1be8249e79ce6afab569deb1e05452fa415cbef79d52"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "f4d8d0a8c5ce8e2e0ff192788899739834738dfca77f06532a3e7c94e060517b"
+    },
+    {
+      "path": "assets/composer-icon.svg",
+      "sha256": "69c952d70cd35d072ce73edddbe291d5f893db83a7a2076d49d69bc516a62da5"
+    },
+    {
+      "path": "assets/linear-icon.svg",
+      "sha256": "69c952d70cd35d072ce73edddbe291d5f893db83a7a2076d49d69bc516a62da5"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "c5114902ad243dbb36ebd4e250f318871bfafd152d346b7ffea027124133b879"
+    },
+    {
+      "path": "assets/logo.svg",
+      "sha256": "69c952d70cd35d072ce73edddbe291d5f893db83a7a2076d49d69bc516a62da5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f711ed1d0d553f82ecbbd0709ba96299a04b0f1ae97ad917a3282ceab7b85580"
+    }
+  ]
+}

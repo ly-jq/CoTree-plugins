@@ -1,0 +1,68 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.sharepoint",
+  "name": "SharePoint",
+  "version": "0.2.0",
+  "description": "在 CoTree 中搜索 SharePoint 站点、读取页面与文件、整理责任人与状态，并在授权范围创建或更新列表项。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.sharepoint.connect",
+      "description": "配置独立 SharePoint Graph OAuth 并核对租户和范围。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.sharepoint.discover",
+      "description": "搜索 SharePoint 站点并定位文档库与列表。",
+      "path": "skills/discover/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.sharepoint.pages",
+      "description": "读取 SharePoint 现代站点页面与实际内容。",
+      "path": "skills/pages/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.sharepoint.files",
+      "description": "定位并下载授权的 SharePoint 文件进行本地分析。",
+      "path": "skills/files/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.sharepoint.lists",
+      "description": "读取 SharePoint 列定义与列表项并提取实际状态。",
+      "path": "skills/lists/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.sharepoint.update",
+      "description": "创建或更新已授权 SharePoint 列表项并读回。",
+      "path": "skills/update/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.sharepoint.summarize",
+      "description": "汇总 SharePoint 页面、文档和列表的责任人与状态。",
+      "path": "skills/summarize/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "2c6d5514e95a038d1291ced75665a4333db91515b0a55f0725554c42e45f55b3"
+  }
+}

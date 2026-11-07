@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.context7",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 2,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "context7",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/context7",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "d8f9650bf204d8c6421feb6da9def979e22ff2d349c107fb9d6931eb3d7c5cf7"
+    }
+  ],
+  "changes": [
+    "加入原生查库、取文档、引用出处和失败处理流程；服务器与凭据命名不带来源宿主。"
+  ],
+  "limitations": [
+    "默认使用匿名连接，受服务认证策略与限流影响；账户授权路径需单独配置和验证。不传项目源码或秘密到查询服务。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "resolve-library-id / query-docs": "docs + cotree.context7.context7 原生 MCP 声明；匿名路径已可独立验证，账户授权单列。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

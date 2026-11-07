@@ -1,0 +1,12 @@
+{
+  "lsp": {
+    "servers": {
+      "cpp": {
+        "command": "clangd",
+        "args": [
+          "--background-index"
+        ]
+      }
+    }
+  }
+}

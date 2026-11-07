@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.skill-creator",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 4,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "skill-creator",
+      "repository": "claude-plugins-official",
+      "path": "plugins/skill-creator",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "9582b84523029dbe033ddafc40f177ff4e58e84f3c127e361d35cc230f6658bc"
+    }
+  ],
+  "changes": [
+    "把作者、评估和描述优化重写为原生 SkillManage / Skill / SkillInstall 工作流。",
+    "统一跨家族的单技能写作与评估入口；统计脚本仅汇总已提供的真实记录，不调用外部宿主或模型。"
+  ],
+  "limitations": [
+    "Skill 加载验证不证明模型行为质量；实际场景需要可用模型和独立输入。",
+    "评估脚本不启动会话、不读取用量凭据、不计算虚构总分；未知 token 保持未知，未执行任务不能计为通过。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "skill creation / progressive disclosure / packaging": "create：SkillManage 或插件内 SKILL.md；资源与原生加载合同。",
+    "evals / grading / benchmark / variance / report": "evaluate 与 scripts/summarize.mjs；比较真实场景和用量，不制造运行回执。",
+    "description optimization / improvement loop": "improve：正反例选择、真实失败驱动修订、版本冲突检查，不用字符串规则替代模型判断。",
+    "cross-family authoring duplicates": "原 development-workflow.author-skill 与 plugin-development 的单技能作者 / 评估入口收敛到本包。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

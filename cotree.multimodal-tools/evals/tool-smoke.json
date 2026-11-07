@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "id": "image-generate-smoke",
+      "suite": "multimodal-smoke",
+      "task": "Use the PluginCoTreeMultimodalToolsImageGenerate tool to create a 1024x1024 image of a red panda coding at a laptop, then confirm the tool returned at least one image.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "image-describe-smoke",
+      "suite": "multimodal-smoke",
+      "task": "Use the PluginCoTreeMultimodalToolsImageDescribe tool to describe a provided sample image URL and confirm a non-empty description is returned.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    }
+  ]
+}

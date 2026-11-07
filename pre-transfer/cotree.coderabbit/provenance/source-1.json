@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.coderabbit",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "coderabbit",
+    "repository": "plugins",
+    "path": "plugins/coderabbit",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "f607826a30c1e0da018a8a89bbc1e3d53640de0e633b84c6ab18a1e34b906a11",
+    "upstreamVersion": "1.1.4"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/coderabbit-review/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/coderabbit-review/SKILL.md",
+      "sourceMetadata": {
+        "name": "code-review",
+        "description": "Reviews code changes using CodeRabbit AI. Use when user asks for code review, PR feedback, code quality checks, security issues, or requests fix-review cycles."
+      }
+    }
+  ],
+  "copiedFiles": 6,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "dca682ef743adc3db3bd67252118a3dc26c8b04a55175304b59dd9fefeae65aa"
+    },
+    {
+      "path": "assets/coderabbit-small.png",
+      "sha256": "9f0fd676b07e89d3602f3c78d8dbfe94b4087b72569e4db13c8eeaaf983503db"
+    },
+    {
+      "path": "assets/coderabbit.png",
+      "sha256": "09f7d5c7a9f1fb9b0ae339286fd293de502adcefee4a6424d53504d0277b3464"
+    },
+    {
+      "path": "assets/logo-dark.png",
+      "sha256": "9df4118b6c9c4a163dec67485090ad783b6e06bc4241c52d6ce470702e7c3012"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "d985c31648830e07899c7b28c92f29e021bcfb230a64b6b07cc48031ecdd741d"
+    },
+    {
+      "path": "skills/coderabbit-review/agents/openai.yaml",
+      "sha256": "22aba10da866f5832a22239fc11092d41115c233b68d4569a71b8e23a4843648"
+    },
+    {
+      "path": "skills/coderabbit-review/SKILL.md",
+      "sha256": "412f292e682ca67d6453e3f1bdb9c2c59d5ac2bf8ac20bd8f6f0eb2a37edb987"
+    }
+  ]
+}

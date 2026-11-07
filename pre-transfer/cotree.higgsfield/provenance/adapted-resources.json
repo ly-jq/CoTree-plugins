@@ -1,0 +1,32 @@
+{
+  "resources": [
+    {
+      "source": "resources/source-01/content/skills/subtitles/scripts/audio_to_captions.py",
+      "destination": "runtime/audio_to_captions.py",
+      "replacements": [
+        [
+          "    words, provider = get_words(arguments.audio, arguments.model)",
+          "    words, provider = _words_faster(arguments.audio, arguments.model), \"local-faster-whisper\""
+        ]
+      ],
+      "sourceSha256": "a1aa0e80f8927980872f09a8f5687a77e3a06790ea9bacf7c1024215864c1a3f",
+      "sha256": "8dc3daf27beef85a221a0cf089d97a50f04bfbb63c305257a3dfceb392193f5c"
+    },
+    {
+      "source": "resources/source-01/content/skills/subtitles/scripts/subtitle_paper_burn.py",
+      "destination": "runtime/subtitle_paper_burn.py",
+      "replacements": [
+        [
+          "    W,H=probe_wh(a.inp)",
+          "    if not a.font or not os.path.isfile(a.font):\n        ap.error(\"Elyra requires --font with an existing licensed font file\")\n    if os.path.exists(a.out):\n        ap.error(\"Output already exists; choose a new path\")\n    W,H=probe_wh(a.inp)"
+        ],
+        [
+          "cmd=[\"ffmpeg\",\"-y\",\"-loglevel\"",
+          "cmd=[\"ffmpeg\",\"-n\",\"-loglevel\""
+        ]
+      ],
+      "sourceSha256": "0271e202fbe6e83f4df6beaf2a8c0b9a38551bd75a58f76605d3291a7783a211",
+      "sha256": "0b57c708f14f54dbc754e5e47466ff2b73196b16ba7b6dfd3a1991eb8bf30510"
+    }
+  ]
+}

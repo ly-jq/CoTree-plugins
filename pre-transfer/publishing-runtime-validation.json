@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-10-14T08:03:28.617Z",
+  "results": {
+    "elyra.lovable": {
+      "packageDigest": "d6c1a2de1d7852bd683cc2902e0b10c3b16e9e97a7d9b1f4de6e073812eae3a4",
+      "status": "isolated-publishing-runtime",
+      "skills": 4
+    },
+    "elyra.mcp-tunnels": {
+      "packageDigest": "ee747ecaf0271a1f6c9b55469d68e66014a1c8431753b90b8d52c0da7d890551",
+      "status": "isolated-publishing-runtime",
+      "skills": 2
+    },
+    "elyra.project-artifact": {
+      "packageDigest": "607399f314760a4f699533b87d510c21091e13221e27d838f6d49beb1e54323a",
+      "status": "isolated-publishing-runtime",
+      "skills": 3
+    }
+  },
+  "artifacts": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch28\\runtime-final\\lovable-public-metadata.json",
+      "sha256": "a57bd5ba31a116ba4d27a70d0216bc375bedd8190744423bd6fcc8a74a28fb88"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch28\\runtime-final\\lovable-anonymous.json",
+      "sha256": "802d80b8a1547635643d81b5705c8ca1e966011800713f84164249bbe56a877e"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch28\\runtime-final\\known hosts",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch28\\runtime-final\\tunnel-plan.json",
+      "sha256": "19663edf80642888dbd3e97f035fac85731feeaab5d7251f0d7cc307769a6b6d"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch28\\runtime-final\\ssh-config.txt",
+      "sha256": "17cb8770b748169188288db2958b6ca6f5e2bb0ee7592a6a5ea3fa7630f6ce31"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch28\\runtime-final\\ssh-observation.json",
+      "sha256": "836540db7bf58e57ef4bb02a4aa063ed22ef1e936dfe0bb133515e310e88d7c3"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch28\\runtime-final\\project.html",
+      "sha256": "3828f16f0a15cc52ca1ee5792c8993ae42e34761a60880b05d2588cc9189871f"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch28\\runtime-final\\project.html.3919b72daa182d9a1b6bfec7d78093a89549b8df19596590df5dd38901a42f91.bak",
+      "sha256": "3919b72daa182d9a1b6bfec7d78093a89549b8df19596590df5dd38901a42f91"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch28\\runtime-final\\artifact-refresh.json",
+      "sha256": "86fd77c3fcb3c39c751979550593d30016053c1ee848a981b91258dba3e38498"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch28\\runtime-final\\desktop.png",
+      "sha256": "7b13166fb3a19aa2f44b9d732dc3ba52575b2e11e7314fad2e3ea877114b4cd7"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch28\\runtime-final\\mobile.png",
+      "sha256": "0419fc8e1f8f61ad6b037f075b688d6574c9b548df6f9797f5b9cb04eea34b52"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch28\\runtime-final\\browser.json",
+      "sha256": "cf61f20d72b4e82c59e8d29f952acd4790095036c004b1774d404ab8b4e656d4"
+    }
+  ],
+  "realAccounts": false,
+  "externalWrites": 0,
+  "limitations": [
+    "Lovable anonymous metadata and 401 do not prove OAuth or projects.",
+    "OpenSSH -G parses local config only; no private host connected.",
+    "HTML uses synthetic project evidence; no actual PR data or publication."
+  ]
+}

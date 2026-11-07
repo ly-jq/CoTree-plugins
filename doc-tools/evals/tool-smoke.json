@@ -1,0 +1,86 @@
+{
+  "name": "doc-tools tool smoke",
+  "description": "Agent smoke cases for six document CLI commands and four specialist Code Plugin tools.",
+  "cases": [
+    {
+      "id": "archive-list-runtime-declared",
+      "suite": "doc-tools-smoke",
+      "task": "Use Bash or PowerShell to run cotree extension run cotree.doc-tools.archive-list with matching --input-json and --workspace on a ZIP-compatible fixture and report the entry names. Follow the existing approval/resume flow if required and verify the returned command status and result.ok.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "archive-extract-runtime-declared",
+      "suite": "doc-tools-smoke",
+      "task": "Use Bash or PowerShell to run cotree extension run cotree.doc-tools.archive-extract with matching --input-json and --workspace on a ZIP-compatible fixture and confirm the selected entries were written inside the requested workspace destination. Follow the existing approval/resume flow if required and verify the returned command status and result.ok.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "archive-create-runtime-declared",
+      "suite": "doc-tools-smoke",
+      "task": "Use Bash or PowerShell to run cotree extension run cotree.doc-tools.archive-create with matching --input-json and --workspace to package two workspace fixtures and confirm the archive was created. Follow the existing approval/resume flow if required and verify the returned command status and result.ok.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "office-docx-read-runtime-declared",
+      "suite": "doc-tools-smoke",
+      "task": "Use Bash or PowerShell to run cotree extension run cotree.doc-tools.docx-read with matching --input-json and --workspace on a DOCX fixture and confirm non-empty text is returned. Follow the existing approval/resume flow if required and verify the returned command status and result.ok.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "office-docx-edit-runtime-declared",
+      "suite": "doc-tools-smoke",
+      "task": "Use Bash or PowerShell to run cotree extension run cotree.doc-tools.docx-edit with matching --input-json and --workspace to replace known fixture text with backup enabled, then confirm the edit completed. Follow the existing approval/resume flow if required and verify the returned command status and result.ok.",
+      "execution": "agent",
+      "maxSteps": 5,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "office-document-edit-runtime-declared",
+      "suite": "doc-tools-smoke",
+      "task": "Use Bash or PowerShell to run cotree extension run cotree.doc-tools.office-edit with matching --input-json and --workspace to replace known text in an Office Open XML fixture and confirm the edit completed. Follow the existing approval/resume flow if required and verify the returned command status and result.ok.",
+      "execution": "agent",
+      "maxSteps": 5,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "office-document-inspect-runtime-declared",
+      "suite": "doc-tools-smoke",
+      "task": "Use PluginCoTreeDocToolsOfficeDocumentInspect on an Office fixture and report its format plus extracted text summary.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "office-document-verify-runtime-declared",
+      "suite": "doc-tools-smoke",
+      "task": "Use PluginCoTreeDocToolsOfficeDocumentVerify on a fixture with required text and confirm verification passes.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "pdf-read-runtime-declared",
+      "suite": "doc-tools-smoke",
+      "task": "Use PluginCoTreeDocToolsPdfRead on a text PDF fixture and confirm non-empty embedded text is returned.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "pdf-ocr-runtime-declared",
+      "suite": "doc-tools-smoke",
+      "task": "Use PluginCoTreeDocToolsPdfOcr on a scanned fixture and confirm non-empty recognized text is returned.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    }
+  ]
+}

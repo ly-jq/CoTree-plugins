@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.linear",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "linear",
+    "repository": "claude-plugins-official",
+    "path": "external_plugins/linear",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "88a25ffffb001cf389af28ec9cf0a59cd06d00a192395749bc52ec5970addb48"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "设置 ELYRA_CLAUDE_LINEAR_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#linear",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/linear"
+    }
+  ],
+  "copiedFiles": 0,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "bde4598ae8d2fe047544ca71c49754409d114db2c57c8848ec27848a1c738743"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "1ea2360574a7d1cd2c8a5b4b85826acb85d51b344fa509f2a5d9ad31e2452a22"
+    }
+  ]
+}

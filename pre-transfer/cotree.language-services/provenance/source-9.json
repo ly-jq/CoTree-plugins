@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.ruby-lsp",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "ruby-lsp",
+    "repository": "claude-plugins-official",
+    "path": "plugins/ruby-lsp",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "2ae052d105b759c557867eb9513c891421081491d6b5a4ae66fbbfa61a91b6d4",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "当前 Elyra 未支持该 LSP 语言；仅保留服务资料，不能通过安装本包启用语言能力。"
+  ],
+  "components": [
+    {
+      "kind": "lsp",
+      "source": "marketplace.json#lspServers",
+      "state": "deferred",
+      "reason": "Language is not supported by the current Elyra LSP runtime."
+    }
+  ],
+  "copiedFiles": 2,
+  "sourceFiles": [
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d417dde6e724f000cd2716285d9cb12fccda8552657c7d7a0e4a83f99c1200df"
+    }
+  ]
+}

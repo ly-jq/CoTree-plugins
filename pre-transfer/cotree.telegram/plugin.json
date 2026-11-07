@@ -1,0 +1,43 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.telegram",
+  "name": "telegram",
+  "version": "0.2.0",
+  "description": "复用 CoTree Telegram 网关，并补充 Bot 回复关联、编辑、反应和文件操作。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.telegram.connect",
+      "description": "接入现有 CoTree Telegram 消息网关。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.telegram.message",
+      "description": "关联回复、编辑或回应 Telegram Bot 消息。",
+      "path": "skills/message/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.telegram.files",
+      "description": "传输 Telegram Bot 授权文档和消息文件。",
+      "path": "skills/files/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "449f5e84893a45ab1a47ea186d1184ae44f736d96a74801825b19fbe5211ba86"
+  }
+}

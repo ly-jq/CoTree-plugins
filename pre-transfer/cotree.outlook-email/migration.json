@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.outlook-email",
+  "version": "0.2.0",
+  "category": "通信与日程",
+  "priority": 0,
+  "batch": 11,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "outlook-email",
+      "repository": "plugins",
+      "path": "plugins/outlook-email",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "6c68823a1146d51c6d70ec85d49be00ec4f787d6b79a8933debc51c487409101",
+      "upstreamVersion": "0.1.7"
+    }
+  ],
+  "changes": [
+    "私有 Outlook app 连接器改为独立 Graph v1.0 委托 REST，新增六个工作流和十四项操作。",
+    "草稿与发送分离、按 conversationId 查会话、稳定 ID、文件夹分页、正文 / 附件内容和写后核实纳入原生流程。"
+  ],
+  "limitations": [
+    "随包 REST 客户端使用固定操作和固定 HTTPS origin，一次一页，1 MiB JSON 输入 / 8 MiB 响应、20 秒超时；不跟随重定向、不自动重试、不存储凭据。真实账户读写与 OAuth 获取 / 刷新仍待验收。",
+    "需要 COTREE_OUTLOOK_EMAIL_ACCESS_TOKEN；Mail.Read、Mail.ReadWrite、Mail.Send 与 User.Read 按实际操作分开授权。",
+    "脚本只支持当前用户邮箱；未封装大附件上传会话、原始 MIME、S/MIME、共享 / 代理发信、国别云、订阅 / delta 与永久删除。附件通过受限大小 JSON 读取，类型不等同文件内容。",
+    "发送的 202 和 Sent Items 副本不等于收件人实际收讫；不会自动重发或把草稿保存当发送成功。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "connector / triage inbox": "connect / search / organize：Graph OAuth、文件夹、范围搜索、分页、标记、分类与移动。",
+    "summarize threads / extract actions": "read：conversationId、完整正文、附件 / 引用和不可见范围。",
+    "draft replies / forwards / write": "draft / send：原生新建 / 回复 / 回复全部 / 转发草稿，单独发送入口、收件人与返回状态核实。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

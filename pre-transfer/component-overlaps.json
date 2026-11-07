@@ -1,0 +1,139 @@
+{
+  "scope": "cross-family-source-skills",
+  "unresolved": [],
+  "resolved": [
+    {
+      "name": "react-best-practices",
+      "items": [
+        {
+          "source": "import.codex.build-web-apps",
+          "family": "elyra.build-web-apps",
+          "path": "skills/react-best-practices/SKILL.md",
+          "sha256": "d206b66626a0a7088550a735c46c4f727b6422db561a133826e752348a3ea758"
+        },
+        {
+          "source": "import.codex.vercel",
+          "family": "elyra.vercel",
+          "path": "skills/react-best-practices/SKILL.md",
+          "sha256": "1830491e1a7e6fe5359cbba485394bf8fca42bc5ec7b818c92ad94a1dde7ab66"
+        }
+      ],
+      "resolution": "React 最佳实践统一到 Vercel react；两份规则忽略行尾空白后相同，保留完整规则集。网页开发包使用该能力需同时安装 Vercel 包。",
+      "retained": "elyra.vercel.react"
+    },
+    {
+      "name": "shadcn",
+      "items": [
+        {
+          "source": "import.codex.build-web-apps",
+          "family": "elyra.build-web-apps",
+          "path": "skills/shadcn-best-practices/SKILL.md",
+          "sha256": "95ee97b9e79c4d25ad274017bb528ccf7b92c1d442bbfc540a46f3c9197263df"
+        },
+        {
+          "source": "import.codex.vercel",
+          "family": "elyra.vercel",
+          "path": "skills/shadcn/SKILL.md",
+          "sha256": "3acfc1f7f1f0cc19380d641a894db8b54552f0bd47c97a786e85ae74f748e6e0"
+        }
+      ],
+      "resolution": "shadcn 统一到 Vercel ui，互补的组件组合、样式、表单及 CLI 参考随 Vercel 独立打包；旧入口不再重复注册。",
+      "retained": "elyra.vercel.ui"
+    },
+    {
+      "name": "stripe-best-practices",
+      "items": [
+        {
+          "source": "import.codex.build-web-apps",
+          "family": "elyra.build-web-apps",
+          "path": "skills/stripe-best-practices/SKILL.md",
+          "sha256": "7f720061479d380ae9cf6c8ea9f33ef8d84961bc31f100b938f42110b736493c"
+        },
+        {
+          "source": "import.codex.stripe",
+          "family": "elyra.stripe",
+          "path": "skills/stripe-best-practices/SKILL.md",
+          "sha256": "23f8eb77aa1adaa82b202e958d118a80d2ced3809deff052a4ebbe37420790d5"
+        }
+      ],
+      "resolution": "Stripe 最佳实践由 Stripe integrate 统一提供，保留较完整的六类领域参考；网页开发较旧副本仅归档，该能力需安装 Stripe 包。",
+      "retained": "elyra.stripe.integrate"
+    },
+    {
+      "name": "supabase-postgres-best-practices",
+      "items": [
+        {
+          "source": "import.codex.build-web-apps",
+          "family": "elyra.build-web-apps",
+          "path": "skills/supabase-best-practices/SKILL.md",
+          "sha256": "d454ecdb939d26490f829a8198cdd40048114312a282e44b28b96438bbf8cd7a"
+        },
+        {
+          "source": "import.codex.supabase",
+          "family": "elyra.supabase",
+          "path": "skills/supabase-postgres-best-practices/SKILL.md",
+          "sha256": "be9a8dcecb83376f38ef92aad6ae78f28a23865501aba941fdce213b58f00996"
+        }
+      ],
+      "resolution": "PostgreSQL 规则由 Supabase optimize 统一提供；采用来源 1.1.1 的完整 34 份参考，旧 1.1.0 只归档。独立使用网页开发包的该能力需同时安装 Supabase 包。",
+      "retained": "elyra.supabase.optimize"
+    },
+    {
+      "name": "agents-sdk",
+      "items": [
+        {
+          "source": "import.codex.cloudflare",
+          "family": "elyra.cloudflare",
+          "path": "skills/agents-sdk/SKILL.md",
+          "sha256": "d377772ee7d8a7261a1636634e876a496f885b16b5edcb95d13c2f13320a0192"
+        },
+        {
+          "source": "import.codex.openai-developers",
+          "family": "elyra.openai-developers",
+          "path": "skills/agents-sdk/SKILL.md",
+          "sha256": "c7b0f97dafbbba1a6b6a35e6160c57c06a214367dbabf9972c73a87495046a31"
+        }
+      ],
+      "resolution": "不同 SDK 的领域能力，分别保留：Cloudflare agents 使用 Workers / Durable Objects、RPC 和持久状态，归于 elyra.cloudflare 的开发工作流；OpenAI Agents SDK 使用 @openai/agents / openai-agents，归于 elyra.openai-developers.agents-sdk。不因名称相同删除任一能力，也不重复注册归档入口。",
+      "retained": "separate-domain-capabilities"
+    },
+    {
+      "name": "index",
+      "items": [
+        {
+          "source": "import.codex.data-analytics",
+          "family": "elyra.data-analytics",
+          "path": "skills/index/SKILL.md",
+          "sha256": "7437b64da908521f3321568ae3ef682b324f1f57b6276d11a6fde16e28b7c2c2"
+        },
+        {
+          "source": "import.codex.product-design",
+          "family": "elyra.product-design",
+          "path": "skills/index/SKILL.md",
+          "sha256": "43a269c1d50b950cae44624a53e05335e85cdacfe5cd4d1398961909968860fc"
+        }
+      ],
+      "resolution": "不同领域的入口，不合并：产品设计 index / get-context 归为 elyra.product-design.brief；数据分析 index 归为 elyra.data-analytics.analyze。分析证据与可视化工程分工保留，不重复注册同一来源入口。",
+      "retained": "separate-domain-capabilities"
+    },
+    {
+      "name": "user-context",
+      "items": [
+        {
+          "source": "import.codex.product-design",
+          "family": "elyra.product-design",
+          "path": "skills/user-context/SKILL.md",
+          "sha256": "e029a9a619fa9b7cad7e72c7fe6973a3f4e25cd3f905a26124c74f0b59316c5f"
+        },
+        {
+          "source": "import.codex.public-equity-investing",
+          "family": "elyra.public-equity-investing",
+          "path": "skills/user-context/SKILL.md",
+          "sha256": "c5906d3303e2f1aabf26f5bc36ed025cb1611c4c7c4675cab103ab0545e1b145"
+        }
+      ],
+      "resolution": "不同领域的保存上下文，不共享存储或合并：产品设计归为 elyra.product-design.context；投资领域偏好与研究来源由elyra.public-equity-investing.context按用户要求使用现有Memory管理，不建立第二状态库。",
+      "retained": "separate-domain-capabilities"
+    }
+  ]
+}

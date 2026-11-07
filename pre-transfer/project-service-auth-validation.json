@@ -1,0 +1,56 @@
+{
+  "observedAt": "2026-10-06T12:14:30.928Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "live-unauthenticated-boundary-only",
+  "credentialsSent": false,
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "results": {
+    "elyra.asana": {
+      "packageDigest": "302058220694291c79286a92950ede8aefa78a2511c943f4f9a1553f6553fcd5",
+      "endpoint": "https://mcp.asana.com/v2/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.atlassian-rovo": {
+      "packageDigest": "c34cad1f6776b6fbd0e6b1c543f6683a738ef6cb0e599e29c1936d55fbacd4a1",
+      "endpoint": "https://mcp.atlassian.com/v1/mcp/authv2",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.clickup": {
+      "packageDigest": "7f3b5308eafe788436e054c862033d46d1a8597e351365ec78de27c49aa0275f",
+      "endpoint": "https://mcp.clickup.com/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    }
+  }
+}

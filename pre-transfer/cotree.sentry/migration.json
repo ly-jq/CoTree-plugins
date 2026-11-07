@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.sentry",
+  "version": "0.2.0",
+  "category": "代码托管与部署",
+  "priority": 0,
+  "batch": 6,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "sentry",
+      "repository": "plugins",
+      "path": "plugins/sentry",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "f60e81163e6dde965bb3413d8b4d4245ac0a24502eaba0ac6ad0fde5a8710088",
+      "upstreamVersion": "0.1.2"
+    }
+  ],
+  "changes": [
+    "来源只读工作流重写为 connect / triage / inspect / diagnose，MCP OAuth 与 API token 分开。",
+    "Python 辅助脚本迁移为独立 Node 脚本：GET 固定端点、正确时间筛选、项目范围校验、有界分页、重试、重定向拒绝和输出脱敏。"
+  ],
+  "limitations": [
+    "MCP 要独立 OAuth；本包不实现登录 / 刷新。只读 API 可用 COTREE_SENTRY_API_TOKEN，不能直接将该 token 当作 MCP OAuth。",
+    "真实组织、项目、事件及错误环境未验收；使用 --base-url 时须先核对实际 Sentry 地区或自托管 HTTPS 地址。",
+    "辅助脚本不写入、不解决 / 删除 Issue、不触发 Seer。默认省略事件 entries；基础脱敏不构成完整匿名化保证。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "sentry/list-issues": "triage + 项目范围的组织 Issues GET；修正源脚本 statsPeriod 仅统计而非时间筛选的问题。",
+    "sentry/short-ID / issue-detail / issue-events / event-detail": "inspect + 独立 Node GET 脚本，分页、脱敏、时间范围及真实 ID。",
+    "sentry/production-health": "diagnose：发布、环境、时间和事件证据关联，不冒充写入修复。",
+    "host MCP / Python environment": "connect + 原生 MCP；只读 API 改用仓库已有 Node，API token 与 MCP OAuth 独立。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

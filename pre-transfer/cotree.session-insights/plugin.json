@@ -1,0 +1,43 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.session-insights",
+  "name": "会话分析",
+  "version": "0.2.0",
+  "description": "从明确选择的 CoTree 本机账本生成用量分析与活动记录，保留证据覆盖率并避免重复计数。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.session-insights.report",
+      "description": "生成 CoTree 本机用量与会话交互报告。",
+      "path": "skills/report/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.session-insights.receipt",
+      "description": "把 CoTree 会话统计整理为有证据的工作记录。",
+      "path": "skills/receipt/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.session-insights.investigate",
+      "description": "核查 CoTree 高用量会话、缓存记录与证据缺口。",
+      "path": "skills/investigate/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "139bcaf2e14b658fb1b2ae86bdf930c4409b2623606a45ea4feb602b646d7305"
+  }
+}

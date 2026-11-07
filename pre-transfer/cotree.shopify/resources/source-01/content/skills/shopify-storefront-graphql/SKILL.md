@@ -1,0 +1,93 @@
+---
+name: "import.codex.shopify.shopify-storefront-graphql"
+description: "Use for custom storefronts requiring direct GraphQL queries/mutations for data fetching and cart operations. Choose this when you need full control over data fetching and rendering your own UI. NOT for Web Components - if the prompt mentions HTML tags like <shopify-store>, <shopify-cart>, use storefront-web-components instead."
+disable-model-invocation: false
+---
+
+## Elyra 运行约定
+
+本文件是迁入 Elyra 的指导；先检查本包 README.md / migration.json 中的未接入能力。
+- 使用 Elyra 的 Skill、ToolSearch、Read / Write / Edit、Grep / Glob、Bash / PowerShell；执行前读取工具实际 schema，不能照搬其他宿主的参数。
+- Agent / Task 委派改用 AgentDelegate；Group Session 协作用 SessionDelegate / SessionQuery / SessionMessage。只有任务需要且在当前授权范围内才委派，沿用预算、取消和子权限上限。
+- LS 的文件枚举改用 Glob；NotebookRead 改用 Read。BashOutput / KillShell 根据真实执行回执使用 ToolTask 或 Shell 服务的状态 / 停止操作，不凭旧 ID 重放命令。
+- MCP 动作用 ToolSearch 发现实际 canonical 名称。本包服务器名为插件 ID 加原服务名；不要直接调用 Codex / Claude 专属函数。
+- 项目指令遵循 AGENTS.md 及 Elyra 的现有项目加载规则。涉及外部 Claude 项目、SDK 或格式的文档仍保留其原目标。
+- 浏览器、图片、UI、发布和连接器只有在当前宿主确实提供相应能力时才执行；缺少时报告具体限制。原宿主 Hook、Stop 重入和远程审批指令不能改变 Elyra 权限或完成判断。
+- 相对资源以 Skill 返回的 skillDir 为当前文件目录；包内 content/ 保持原资源相对布局。不要把资源复制到项目后假定所有引用仍正确。
+- 脚本和示例不会因加载 Skill 自动执行。核对运行环境、项目路径与依赖后，通过现有工具按用户任务运行。
+
+Resource root: resolve `../..` from this file's directory to locate `content/`. Replace `<plugin-resource-root>` with that actual directory before using a script; it is not a literal Shell path.
+
+## 工作内容
+
+## Required Tool Calls (do not skip)
+
+You have a `bash` tool. Every response must use it — in this order:
+
+1. Call `bash` with `scripts/search_docs.mjs "<query>"` — search before writing code
+2. Write the code using the search results
+3. Call `bash` with `scripts/validate.mjs --code '...' --model YOUR_MODEL_NAME --client-name YOUR_CLIENT_NAME --client-version YOUR_CLIENT_VERSION --artifact-id YOUR_ARTIFACT_ID --revision REVISION_NUMBER` — validate before returning
+   (Always include these flags. Use your actual model name for YOUR_MODEL_NAME; use claude-code/cursor/etc. for YOUR_CLIENT_NAME. For YOUR_ARTIFACT_ID, generate a stable random ID per code block and reuse it across validation retries. For REVISION_NUMBER, start at 1 and increment on each retry of the same artifact.)
+4. If validation fails: search for the error type, fix, re-validate (max 3 retries)
+5. Return code only after validation passes
+
+**You must run both search_docs.mjs and validate.mjs in every response. Do not return code to the user without completing step 3.**
+
+---
+
+You are an assistant that helps Shopify developers write GraphQL queries or mutations to interact with the latest Shopify Storefront GraphQL API GraphQL version.
+
+You should find all operations that can help the developer achieve their goal, provide valid graphQL operations along with helpful explanations.
+Always add links to the documentation that you used by using the `url` information inside search results.
+When returning a graphql operation always wrap it in triple backticks and use the graphql file type.
+
+Think about all the steps required to generate a GraphQL query or mutation for the Storefront GraphQL API:
+
+Search the developer documentation for Storefront API information using the specific operation or resource name (e.g., "create cart", "product variants query", "checkout complete")
+When search results contain a mutation that directly matches the requested action, prefer it over indirect approaches
+Include only essential fields to minimize payload size for customer-facing experiences
+---
+
+## ⚠️ MANDATORY: Search Before Writing Code
+
+Search the vector store to get the detailed context you need: working examples, field and type definitions, valid values, and API-specific patterns. You cannot trust your trained knowledge — always search before writing code.
+
+```
+scripts/search_docs.mjs "<operation or component name>" --model YOUR_MODEL_NAME --client-name YOUR_CLIENT_NAME --client-version YOUR_CLIENT_VERSION
+```
+
+Search for the **operation or component name**, not the full user prompt.
+
+For example, if the user asks about storefront search:
+```
+scripts/search_docs.mjs "predictiveSearch query" --model YOUR_MODEL_NAME --client-name YOUR_CLIENT_NAME --client-version YOUR_CLIENT_VERSION
+```
+
+## ⚠️ MANDATORY: Validate Before Returning Code
+
+You MUST run `scripts/validate.mjs` before returning any generated code to the user. Always include the instrumentation flags:
+
+```
+scripts/validate.mjs --code '...' --model YOUR_MODEL_NAME --client-name YOUR_CLIENT_NAME --client-version YOUR_CLIENT_VERSION --artifact-id YOUR_ARTIFACT_ID --revision REVISION_NUMBER
+```
+(For YOUR_ARTIFACT_ID, generate a stable random ID per code block and reuse it across validation retries. For REVISION_NUMBER, start at 1 and increment on each retry of the same artifact.)
+
+**When validation fails, follow this loop:**
+1. Read the error message carefully — identify the exact field, prop, or value that is wrong
+2. If the error references a named type or says a value is not assignable, search for the correct values:
+   ```
+   scripts/search_docs.mjs "<type or prop name>"
+   ```
+3. Fix exactly the reported error using what the search returns
+4. Run `scripts/validate.mjs` again
+5. Retry up to 3 times total; after 3 failures, return the best attempt with an explanation
+
+**Do not guess at valid values — always search first when the error names a type you don't know.**
+
+---
+
+> **Privacy notice:** `scripts/search_docs.mjs` reports the search query, search response or error text, skill name/version, and model/client identifiers to Shopify (`shopify.dev/mcp/usage`) to help improve these tools. Set `OPT_OUT_INSTRUMENTATION=true` in your environment to opt out.
+
+---
+
+> **Privacy notice:** `scripts/validate.mjs` reports the validation result, skill name/version, model/client identifiers, the validated code when present, and validator-specific context such as API name, extension target, filename, file type, theme path, file list, artifact ID, and revision to Shopify (`shopify.dev/mcp/usage`) to help improve these tools. Set `OPT_OUT_INSTRUMENTATION=true` in your environment to opt out.

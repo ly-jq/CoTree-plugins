@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.security-guidance",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "security-guidance",
+    "repository": "claude-plugins-official",
+    "path": "plugins/security-guidance",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "338b87343d08dce526be2e7b712b39de098ae7a92a205b191a183e0f2fc6e622",
+    "upstreamVersion": "2.0.9"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "依赖 Claude Agent SDK、Stop / SubagentStop 和 asyncRewake。"
+  ],
+  "components": [
+    {
+      "kind": "hook",
+      "source": "hooks/hooks.json",
+      "state": "deferred",
+      "reason": "Source host event / output contract is not registered in Elyra."
+    }
+  ],
+  "copiedFiles": 17,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "46739adaf22780f7f9247e72b98ceeb11d976bc47b29d320ca7688563db8c6bb"
+    },
+    {
+      "path": "hooks/_base.py",
+      "sha256": "b2d8bcafdba49815c55c3fed120fdb30eb98d2f50a52d9adbdcb9649d24b129d"
+    },
+    {
+      "path": "hooks/diffstate.py",
+      "sha256": "4881bfed3f6209b5db97713c6bca2e9264b4ef57f7d7babb22bda9c687747c9a"
+    },
+    {
+      "path": "hooks/ensure_agent_sdk.py",
+      "sha256": "6311faff370031579dbe3ad5b91a0ebdff6afe7f4a3ca8ca143734a56e966e76"
+    },
+    {
+      "path": "hooks/extensibility.py",
+      "sha256": "5678f88dc969732eb894ea20f1567aebda903109312e0e1c6c264efe66bb164f"
+    },
+    {
+      "path": "hooks/gitutil.py",
+      "sha256": "33e725ad3da3c378ad8e49db99a25f83a150cc0697ddf0afebb00e0890f737d5"
+    },
+    {
+      "path": "hooks/hooks.json",
+      "sha256": "b6072dd8448da519c392ef6143fec29b42ab68d83bf5a5c36783966310bc1fb8"
+    },
+    {
+      "path": "hooks/llm.py",
+      "sha256": "4368e975b0d88a63bcfc09af741105c0f87917542e5eaa46f8ae24713c1dc15e"
+    },
+    {
+      "path": "hooks/patterns.py",
+      "sha256": "77442fdca683b662b67612c31306b5d1bb427fc43fd7477d5c2cb29448d4d82e"
+    },
+    {
+      "path": "hooks/reporesolve.py",
+      "sha256": "992cb36fe6a3167333e9ad84df73d667627f9b0755f3a217dd9cea2cd0dabe07"
+    },
+    {
+      "path": "hooks/review_api.py",
+      "sha256": "fb25f0767d1348e1d7c195aa294f69bc45a80110630297a37470642316638d74"
+    },
+    {
+      "path": "hooks/security_reminder_hook.py",
+      "sha256": "4d19ff19b5cb9cfcd287a640cd49d5e49d7d7232f4eb3d790ce73e70459d3aa2"
+    },
+    {
+      "path": "hooks/session_state.py",
+      "sha256": "aaf9cbfcf609f6841824bb3c4867aa82c440c72724dccf97fc9f480a211f3bf4"
+    },
+    {
+      "path": "hooks/sg-python.sh",
+      "sha256": "e4f2a24cb96e4d359a2d9ee33d50a06256343a2d6e19ad9f805fca376644e593"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "32909b71accf56f615d2280f3549623e15ffa0f9f03ea611b64ce89075a10d46"
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "05c66a417743ec134e941c3cbd06828019bc9b04d1c275741ffa197761307dde"
+    },
+    {
+      "path": "tests/test_repo_resolution.py",
+      "sha256": "575d294b733b968edbd2f54e3e5db08dbb4b14fb33593a321730a9df23df5d5c"
+    },
+    {
+      "path": "tests/test_review_model.py",
+      "sha256": "911c73adcad54c72c75c9e5366d6a40d3a0c8d9923abee08e15f8f0fcff56ac9"
+    }
+  ]
+}

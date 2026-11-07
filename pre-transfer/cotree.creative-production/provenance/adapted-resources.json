@@ -1,0 +1,20 @@
+{
+  "resources": [
+    {
+      "source": "resources/source-01/content/scripts/review_renderer.py",
+      "destination": "runtime/review_renderer.py",
+      "replacements": [
+        [
+          "raise ValueError(f\"Unknown review preset '{value}'. Available presets: {available}\")",
+          "raise ValueError(f\"Unsupported review preset '{value}'. Available presets: {available}\")"
+        ],
+        [
+          "    files = image_files(out_dir)\n    if files:\n        cards = _image_cards_from_files(",
+          "    files = []  # Elyra uses only the explicitly validated manifest assets.\n    if files:\n        cards = _image_cards_from_files("
+        ]
+      ],
+      "sourceSha256": "a9a4b989969d638ca66ebc066da1f37fbd7a7a32a91e2961d7a1d6ecfc36ac41",
+      "sha256": "c6c1b8ea233f6f578e4c7818a9f512014a5c24f12f3ba7c0e82158b3a8cdad4d"
+    }
+  ]
+}

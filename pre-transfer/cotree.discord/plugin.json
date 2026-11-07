@@ -1,0 +1,49 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.discord",
+  "name": "discord",
+  "version": "0.2.0",
+  "description": "在明确频道范围内读取 Discord 消息并使用独立 Bot 回复、编辑与处理附件。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.discord.connect",
+      "description": "配置独立 Discord Bot 和精确频道范围。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.discord.history",
+      "description": "读取指定 Discord 频道的有界消息历史。",
+      "path": "skills/history/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.discord.message",
+      "description": "按授权发送、编辑或回应 Discord 消息。",
+      "path": "skills/message/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.discord.files",
+      "description": "上传明确文件或下载指定 Discord 消息附件。",
+      "path": "skills/files/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "160c435d33783618ff7448500dcb743eb3d3abe383d9cded0b49ac57055af817"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.context7",
+  "name": "Context7",
+  "version": "0.2.0",
+  "description": "通过 Context7 MCP 查询版本对应的库文档和代码示例。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.context7.docs",
+      "description": "查询库或框架当前版本文档，核实 API 和使用示例。",
+      "path": "skills/docs/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "context7",
+      "transport": "streamable-http",
+      "url": "https://mcp.context7.com/mcp"
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "593cbfb33247d4873e6d99589ed2ac38fe1192a24fa5c1e7dc5184eabb2cc34f"
+  }
+}

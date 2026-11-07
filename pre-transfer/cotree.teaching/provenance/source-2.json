@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.learning-output-style",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "learning-output-style",
+    "repository": "claude-plugins-official",
+    "path": "plugins/learning-output-style",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "c4d90767302935a1cbf71b9ed4d6600afb6947b5c0f5e3602c924b6e33bf7e06",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "hook",
+      "source": "hooks/hooks.json",
+      "state": "converted",
+      "target": "skills/output-style/SKILL.md",
+      "reason": "Static additionalContext converted to an explicit Skill; no Hook process."
+    }
+  ],
+  "copiedFiles": 3,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "a9b2a34dc446b3934137559e63398858fdbcfb9963b03d63e3dabd1cea29753c"
+    },
+    {
+      "path": "hooks/hooks.json",
+      "sha256": "0c7f8a23968e7cae9a74c266837575fb0bd7fc38c42b2c62bcfe781a3aa6f6ef"
+    },
+    {
+      "path": "hooks-handlers/session-start.sh",
+      "sha256": "1caa982b2ee14a7662b4d5caed05474b727b8e1ffc405e3d551ff18886aec5fc"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "62fedb2b8180299802a6a9da0950dc78db137d59042fe5c4dd0d2065afa0a120"
+    }
+  ]
+}

@@ -1,0 +1,2423 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.nvidia",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "nvidia",
+    "repository": "plugins",
+    "path": "plugins/nvidia",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "db7e03f99347fa83190715d287e3b5571669832109575d46cfc8633b98b8471b",
+    "upstreamVersion": "1.0.4"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "需兼容的 NVIDIA GPU、驱动、CUDA 及相应工具链。",
+    "skills/aiq-research/SKILL.md 的上游工具 / 环境声明作为迁移记录保留；Elyra Skill 不授予执行权限，实际工具与环境由宿主检查。",
+    "skills/omniverse-cad-to-simready/SKILL.md 的上游工具 / 环境声明作为迁移记录保留；Elyra Skill 不授予执行权限，实际工具与环境由宿主检查。",
+    "skills/omniverse-realtime-viewer/SKILL.md 的上游工具 / 环境声明作为迁移记录保留；Elyra Skill 不授予执行权限，实际工具与环境由宿主检查。",
+    "skills/omniverse-usd-performance-tuning/SKILL.md 的上游工具 / 环境声明作为迁移记录保留；Elyra Skill 不授予执行权限，实际工具与环境由宿主检查。",
+    "skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md 的上游工具 / 环境声明作为迁移记录保留；Elyra Skill 不授予执行权限，实际工具与环境由宿主检查。",
+    "skills/physical-ai-neural-reconstruction/SKILL.md 的上游工具 / 环境声明作为迁移记录保留；Elyra Skill 不授予执行权限，实际工具与环境由宿主检查。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/aiq-deploy/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/aiq-deploy/SKILL.md",
+      "sourceMetadata": {
+        "name": "aiq-deploy",
+        "description": "Use when asked to install, deploy, run, validate, troubleshoot, or stop NVIDIA AI-Q Blueprint infrastructure.\n",
+        "license": "Apache-2.0",
+        "compatibility": "Designed for Claude Code, OpenCode, Codex, and Agent Skills-compatible tools. Requires Git, network\naccess to GitHub, and one selected runtime path: Docker Compose v2 for the default local deployment,\nPython 3.11+ and uv for local process or CLI mode, Node.js 20+ and npm for local web UI mode, or\nkubectl 1.28+ and Helm 3.12+ for Kubernetes and Helm mode.\n",
+        "metadata": {
+          "version": "2.1.0",
+          "author": "NVIDIA AI-Q Blueprint Team <aiq-blueprint@nvidia.com>",
+          "github-url": "https://github.com/NVIDIA-AI-Blueprints/aiq",
+          "tags": [
+            "nvidia",
+            "aiq",
+            "blueprint",
+            "deploy",
+            "operations",
+            "agent-skills"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/aiq-research/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/aiq-research/SKILL.md",
+      "sourceMetadata": {
+        "name": "aiq-research",
+        "description": "Use when asked to run deep research or AI-Q research through a reachable NVIDIA AI-Q Blueprint backend.\n",
+        "license": "Apache-2.0",
+        "permissions": {
+          "env": [
+            "AIQ_SERVER_URL"
+          ],
+          "network": [
+            "http://localhost:8000"
+          ]
+        },
+        "compatibility": "Designed for Claude Code, OpenCode, Codex, and Agent Skills-compatible tools. Requires Python 3.11+ and network\naccess to a running local AI-Q Blueprint server at `http://localhost:8000` by default. Non-local backends must be\nexplicitly trusted by the user and granted by the host tool outside this public skill.\n",
+        "metadata": {
+          "version": "2.1.0",
+          "author": "NVIDIA AI-Q Blueprint Team <aiq-blueprint@nvidia.com>",
+          "github-url": "https://github.com/NVIDIA-AI-Blueprints/aiq",
+          "tags": [
+            "nvidia",
+            "aiq",
+            "blueprint",
+            "deep-research",
+            "research-agents",
+            "agent-skills"
+          ],
+          "languages": [
+            "python",
+            "bash"
+          ],
+          "domain": "research-agents"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/cuopt-user-rules/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/cuopt-user-rules/SKILL.md",
+      "sourceMetadata": {
+        "name": "cuopt-user-rules",
+        "version": "26.08.00",
+        "description": "Base rules for end users calling NVIDIA cuOpt (routing/LP/MILP/QP/install/server). Not for cuOpt internals — use cuopt-developer for those.",
+        "license": "Apache-2.0",
+        "metadata": {
+          "author": "NVIDIA cuOpt Team",
+          "tags": [
+            "cuopt",
+            "user-rules",
+            "guidelines"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/dynamo-interconnect-check/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/dynamo-interconnect-check/SKILL.md",
+      "sourceMetadata": {
+        "name": "dynamo-interconnect-check",
+        "description": "Validate that a Dynamo deployment's NIXL/UCX/NCCL interconnect is ready for disaggregated serving over RDMA/NVLink. Use after recipe-runner brings a deployment up (especially disagg/multi-node) to confirm the KV transport is correct; use troubleshoot for diagnosing already-failed pods.",
+        "license": "Apache-2.0",
+        "metadata": {
+          "author": "Dan Gil <dagil@nvidia.com>",
+          "tags": [
+            "dynamo",
+            "nixl",
+            "rdma",
+            "disagg",
+            "validation"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/dynamo-router-starter/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/dynamo-router-starter/SKILL.md",
+      "sourceMetadata": {
+        "name": "dynamo-router-starter",
+        "description": "Start or patch Dynamo router modes and run router endpoint smoke checks. Use for round-robin, KV-aware, least-loaded, or device-aware routing setup; use recipe-runner for recipe deployment and troubleshoot for failure diagnosis.",
+        "license": "Apache-2.0",
+        "metadata": {
+          "author": "Dan Gil <dagil@nvidia.com>",
+          "tags": [
+            "dynamo",
+            "router",
+            "smoke-test",
+            "bring-up"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/nemoclaw-user-get-started/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/nemoclaw-user-get-started/SKILL.md",
+      "sourceMetadata": {
+        "name": "nemoclaw-user-get-started",
+        "description": "Installs NemoClaw, launches a sandbox, and runs the first agent prompt. Use when onboarding, installing, or launching a NemoClaw sandbox for the first time. Trigger keywords - nemoclaw quickstart, install nemoclaw openclaw sandbox, nemohermes quickstart, hermes agent nemoclaw, run hermes openshell sandbox, nemoclaw prerequisites, nemoclaw supported platforms, nemoclaw hardware software, nemoclaw windows wsl2 setup, nemoclaw install windows docker desktop.",
+        "license": "Apache-2.0"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/nvidia-skill-finder/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/nvidia-skill-finder/SKILL.md",
+      "sourceMetadata": {
+        "name": "nvidia-skill-finder",
+        "description": "Use for NVIDIA-related requests where an NVIDIA skill might help, even if the user did not ask for a skill. Trigger on NVIDIA products, hardware, software, SDKs, GPUs, Jetson/JetPack/L4T/BSP/SDK Manager/driver/flashing/setup, CUDA, NIM, NeMo, Omniverse/OpenUSD/SimReady, RAPIDS/cuDF, cuPyNumeric, cuOpt, Dynamo, Holoscan, TensorRT, DeepStream, VSS, TAO, NGC/NVCF. Do not use for generic non-NVIDIA route, optimize, deploy, AI, video, data, or infrastructure tasks.",
+        "license": "CC-BY-4.0 AND Apache-2.0",
+        "metadata": {
+          "author": "NVIDIA",
+          "tags": [
+            "nvidia",
+            "skills",
+            "discovery",
+            "catalog",
+            "router"
+          ],
+          "domain": "agent-skills"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/omniverse-cad-to-simready/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/omniverse-cad-to-simready/SKILL.md",
+      "sourceMetadata": {
+        "name": "omniverse-cad-to-simready",
+        "description": "Coordinate the end-to-end CAD/source-asset to SimReady workflow. Use for broad requests such as CAD to SimReady, source asset to simulation-ready USD, or prop packaging that require conversion, material/physics assignment, SimReady conformance, validation, and optional package creation; deploy or verify Content Agents services first when property assignment is enabled; route single-stage work through nested references.",
+        "version": "0.1.0",
+        "license": "Apache-2.0",
+        "tools": [
+          "Read",
+          "Shell"
+        ],
+        "compatibility": "Orchestrator skill. Managed Content Agents deployment requires NVIDIA_API_KEY (build.nvidia.com), Docker + NVIDIA Container Toolkit + GPU, Python 3.12, and an upstream checkout of nvidia-omniverse/content-agents on branch main. Reused/provided endpoints may instead use explicit endpoint and usage-token environment variables. Linux/macOS only.\n",
+        "metadata": {
+          "author": "Omniverse",
+          "tags": [
+            "physical-ai",
+            "simready",
+            "workflow",
+            "cad",
+            "conversion"
+          ],
+          "domain": "ai-ml",
+          "languages": [
+            "python"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/omniverse-realtime-viewer/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/omniverse-realtime-viewer/SKILL.md",
+      "sourceMetadata": {
+        "name": "omniverse-realtime-viewer",
+        "description": "Use as the top-level router for Omniverse Realtime Viewer USD app requests and focused viewer reference documents.",
+        "version": "0.1.0",
+        "license": "Apache-2.0",
+        "tools": [
+          "Read",
+          "Shell",
+          "Write"
+        ],
+        "compatibility": "Orchestrator skill. Downstream focused references may require NVIDIA GPUs, ovrtx, ovstream, ovui, OpenUSD, Python, Node/React, Tauri, Electron, C++, or cloud GPU deployment access depending on the selected viewer path.\n",
+        "metadata": {
+          "author": "NVIDIA Omniverse",
+          "tags": [
+            "omniverse",
+            "usd",
+            "viewer",
+            "workflow"
+          ],
+          "domain": "ai-ml",
+          "languages": [
+            "python",
+            "typescript",
+            "cpp"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/omniverse-usd-performance-tuning/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/omniverse-usd-performance-tuning/SKILL.md",
+      "sourceMetadata": {
+        "name": "omniverse-usd-performance-tuning",
+        "description": "Top-level workflow skill for USD performance diagnosis and optimization. Use for slow loading, high memory, low FPS, or 'optimize my scene' requests; delegates auth/runtime setup to Phase 0 owners.",
+        "version": "0.1.0",
+        "license": "Apache-2.0",
+        "tools": [
+          "Read",
+          "Shell",
+          "Write"
+        ],
+        "compatibility": "Orchestrator skill. Downstream phases may require Kit, Scene Optimizer, Asset Validator, USD Python, writable output paths, and omniverse:// authentication selected by setup-usd-performance-tuning.\n",
+        "metadata": {
+          "author": "NVIDIA Omniverse",
+          "tags": [
+            "triage",
+            "performance",
+            "usd",
+            "profiling"
+          ],
+          "domain": "ai-ml",
+          "languages": [
+            "python"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md",
+      "sourceMetadata": {
+        "name": "physical-ai-infrastructure-setup-and-resilient-scaling",
+        "description": "Use when the user wants to set up, scale, validate, or harden NVIDIA physical AI infrastructure for synthetic data generation workflows across local MicroK8s or Azure AKS, including Kubernetes clusters, inference endpoint deployment, OSMO deployment, workload submission readiness, and infrastructure failure recovery. Trigger keywords: physical ai infrastructure, resilient scaling, SDG infrastructure, microk8s, azure aks, NVCF deployment, NIM Operator, OSMO deploy, workflow scaling. Don't trigger for: OSMO log summarization or workload-only operations unless infrastructure setup, scaling, validation, or recovery is requested.",
+        "license": "Apache-2.0",
+        "version": "1.0.0",
+        "tools": [
+          "Read",
+          "Shell"
+        ],
+        "compatibility": "Requires the selected component prerequisites, usually kubectl plus either MicroK8s or Azure CLI/Terraform, and OSMO or inference credentials for the chosen target.",
+        "metadata": {
+          "author": "NVIDIA Physical AI",
+          "tags": [
+            "physical-ai",
+            "infrastructure",
+            "kubernetes",
+            "azure",
+            "microk8s",
+            "osmo",
+            "nim-operator",
+            "scaling"
+          ],
+          "domain": "ai-ml",
+          "languages": [
+            "bash",
+            "hcl",
+            "yaml"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/physical-ai-neural-reconstruction/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/physical-ai-neural-reconstruction/SKILL.md",
+      "sourceMetadata": {
+        "name": "physical-ai-neural-reconstruction",
+        "description": "Router for NVIDIA NuRec/NRE: USDZ rendering, NCore conversion, 3DGS, gRPC sensor sim, PhysicalAI HF datasets. Do NOT use for SimReady or infra setup.",
+        "license": "Apache-2.0",
+        "version": "0.3.0",
+        "tools": [
+          "Read",
+          "Shell"
+        ],
+        "compatibility": "Router skill; downstream sibling skills require Docker, NVIDIA Container Toolkit, GPU, NGC API key, Hugging Face token with PhysicalAI gated licenses accepted, Python 3.10+, and `huggingface_hub`. Optional: CARLA / Isaac Sim 5.1 / AlpaSim for simulator integration over `serve-grpc`.",
+        "metadata": {
+          "author": "NVIDIA Physical AI",
+          "tags": [
+            "physical-ai",
+            "nurec",
+            "neural-reconstruction",
+            "router",
+            "sensor-sim"
+          ],
+          "upstream": {
+            "repo": "https://github.com/NVIDIA/nurec-skills",
+            "branch": "main",
+            "skills_dir": ".agents/skills/",
+            "skills_dir_alias": "skills/",
+            "index_skill": ".agents/skills/SKILL.md",
+            "index_skill_name": "nurec-index",
+            "sibling_skills": {
+              "physical-ai-datasets": {
+                "folder": "physical-ai-datasets/",
+                "upstream": "https://huggingface.co/nvidia"
+              },
+              "ncore": {
+                "folder": "ncore/",
+                "upstream": "https://github.com/NVIDIA/ncore"
+              },
+              "nre": {
+                "folder": "nre/",
+                "upstream": "nvcr.io/nvidia/nre/nre"
+              },
+              "asset-harvester": {
+                "folder": "asset-harvester/",
+                "upstream": "https://github.com/NVIDIA/asset-harvester"
+              },
+              "nurec-fixer": {
+                "folder": "nurec-fixer/",
+                "upstream": "https://github.com/NVIDIA/harmonizer",
+                "hf_model": "https://huggingface.co/nvidia/DiffusionHarmonizer"
+              }
+            }
+          },
+          "upstream_clone_path": "${PHYSICAL_AI_SKILL_HUB_UPSTREAM_ROOT:-$HOME/.physical-ai-skill-hub/upstreams}/nurec-skills",
+          "upstream_override_env": "NUREC_SKILLS_UPSTREAM_ROOT"
+        }
+      }
+    }
+  ],
+  "copiedFiles": 510,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "83320802e12f5871c43c11b3cf9ec00e83b08e54fb80076fdc8dbf162afedb4b"
+    },
+    {
+      "path": "assets/nvidia.png",
+      "sha256": "df380ee7463646f242f3da851f1754f31fc1d9dafb65fcb9ebe55c6c19fb6bf3"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f22d1306e1d257b0ff14c70770f31374c642cff8a9dc4b606328f883ef6d37d4"
+    },
+    {
+      "path": "skills/aiq-deploy/agents/openai.yaml",
+      "sha256": "2f4e1fe7adace916b08b226b1d680262dd7fecc316359b771de8b720226cf243"
+    },
+    {
+      "path": "skills/aiq-deploy/BENCHMARK.md",
+      "sha256": "796648a5a2f83c1a94ed5ab7e3188ecad8c1b6ae0e76686f5b757c61d40974ac"
+    },
+    {
+      "path": "skills/aiq-deploy/evals/evals.json",
+      "sha256": "18b22b1c3a1f4e24a48d9bbf257539914293854e542e5faf6a17ac5a16435c9b"
+    },
+    {
+      "path": "skills/aiq-deploy/references/configs.md",
+      "sha256": "a3f5e2425676f04b194a6ec1ef58c3dc8577743d9fb40e419ca1f56b992d0643"
+    },
+    {
+      "path": "skills/aiq-deploy/references/docker-compose.md",
+      "sha256": "7f98c1d2625f266425bd629e218a532498634b85fb10468fcce8cfd56ca5d8ce"
+    },
+    {
+      "path": "skills/aiq-deploy/references/end-to-end-validation.md",
+      "sha256": "9cd416d81b2d3754015958506e57f848803ca0da93ac7002dea9cf8b0bb0731e"
+    },
+    {
+      "path": "skills/aiq-deploy/references/env-and-secrets.md",
+      "sha256": "a6291c2d330040d95c36436075328eec5ae9c340b8777c3688da65127dc96a6e"
+    },
+    {
+      "path": "skills/aiq-deploy/references/frag.md",
+      "sha256": "e4330a6f446f8a4057f494abb6951216e3bb82119b31c12893527b7823f9e64d"
+    },
+    {
+      "path": "skills/aiq-deploy/references/kubernetes-helm.md",
+      "sha256": "fa0af8cc73b15dba6e30f1269d8877de5cbbfe42a995c4de04a9aded9f75207e"
+    },
+    {
+      "path": "skills/aiq-deploy/references/local-web.md",
+      "sha256": "60b234727c2b141096dd269869227dbfc4501055d9696e187a08d0f1c19835c4"
+    },
+    {
+      "path": "skills/aiq-deploy/references/locate-or-clone.md",
+      "sha256": "3e638ee1974c76c637b6912b5c06e954e716e7dcfad20876e140eb948c059c43"
+    },
+    {
+      "path": "skills/aiq-deploy/references/shutdown.md",
+      "sha256": "3b3d2f70581f95c130eff7ed15887dd4041db9dfcd2d75531489bde068dd8d0b"
+    },
+    {
+      "path": "skills/aiq-deploy/references/skill-backend.md",
+      "sha256": "3814abb1d895a7aa8ec4b927654583a98a6355f772b76f8b139743a458003c01"
+    },
+    {
+      "path": "skills/aiq-deploy/references/terminal-cli.md",
+      "sha256": "3c243d2b63fe257e58fd8be091f883a8f9247ae5a04dd9ba1cf5ba71866d1550"
+    },
+    {
+      "path": "skills/aiq-deploy/references/troubleshooting.md",
+      "sha256": "af95181587dc1d3bb3d1b11717c6aece445e66af72f0f406e30d866cfe7a3bf5"
+    },
+    {
+      "path": "skills/aiq-deploy/references/validation.md",
+      "sha256": "4e1d57690714f0425e5d48372f2df32d4d0a12513bc80cfed31d82c6572bb0d2"
+    },
+    {
+      "path": "skills/aiq-deploy/skill-card.md",
+      "sha256": "48419453bd4ca6b77d7b74ac5c6a9a2f29b3f4ff307eb5b8c79762ecb95874da"
+    },
+    {
+      "path": "skills/aiq-deploy/SKILL.md",
+      "sha256": "438179376ae6f6070df58f14a8cb9d78a5afd0d4095198484fb7fb29de424cf9"
+    },
+    {
+      "path": "skills/aiq-deploy/skill.oms.sig",
+      "sha256": "b64a14efd045e703d643d31473464ba051244df1134c553f90a7195598dfcc72"
+    },
+    {
+      "path": "skills/aiq-research/agents/openai.yaml",
+      "sha256": "c289d887f9943511a6000ca6cd4813a5876f63571643586c591db5b538ada310"
+    },
+    {
+      "path": "skills/aiq-research/BENCHMARK.md",
+      "sha256": "d0541d53ea70150a9076e141bdc4ef7dc0ef14c7327aa18acb00b4563376cd13"
+    },
+    {
+      "path": "skills/aiq-research/evals/evals.json",
+      "sha256": "1cae6e2f2a96a7f7422cdc5ed5458ea843fc1e248e639141852d1e8b7ad8e64d"
+    },
+    {
+      "path": "skills/aiq-research/scripts/aiq.py",
+      "sha256": "5e9fdca1ab13557ff8b43c8f88bbd8bd783d33c0950bb796548918b0a023b1a6"
+    },
+    {
+      "path": "skills/aiq-research/skill-card.md",
+      "sha256": "6a292070ffaf06fb701612d97eb9e278846480aa73b2470fe3688c39555b41d6"
+    },
+    {
+      "path": "skills/aiq-research/SKILL.md",
+      "sha256": "a13cdf3988247418e236c6ac470a1ade1bdf00bb83940b07c63280e206c55941"
+    },
+    {
+      "path": "skills/aiq-research/skill.oms.sig",
+      "sha256": "dfe1fa14c22c8719317bd0edbc9122fa40e4115132b2374e070b42e49add83b9"
+    },
+    {
+      "path": "skills/cuopt-user-rules/agents/openai.yaml",
+      "sha256": "12076bfbeb85791026fa8fd0f528957763ddf859d2d0ba9d1e6dff7d8cf78ce4"
+    },
+    {
+      "path": "skills/cuopt-user-rules/BENCHMARK.md",
+      "sha256": "5db33f37707f7a69eac21bc88bd35a3146f23efa02deaee6101939456c6105fa"
+    },
+    {
+      "path": "skills/cuopt-user-rules/evals/evals.json",
+      "sha256": "d58d395b8b8164a1716b665e02c005e325ea8811a842f00cfdce9dee73008038"
+    },
+    {
+      "path": "skills/cuopt-user-rules/skill-card.md",
+      "sha256": "1b6be3c671a281bdbfbd89c51730701c67a0be68b7aef4ced59991d3f4209125"
+    },
+    {
+      "path": "skills/cuopt-user-rules/SKILL.md",
+      "sha256": "c6f859af390233487f1d0a1a449e243006b3d953181c423a11411b4e5868087b"
+    },
+    {
+      "path": "skills/cuopt-user-rules/skill.oms.sig",
+      "sha256": "1b0cdfec63ef3168f5b5be8f5fd484ee54025c4e565d7fd2005a71c637590228"
+    },
+    {
+      "path": "skills/dynamo-interconnect-check/agents/openai.yaml",
+      "sha256": "224b2950186859e6f7d29ff1a5ec47d99bcc959deed8393022a843e8ba6ebac1"
+    },
+    {
+      "path": "skills/dynamo-interconnect-check/BENCHMARK.md",
+      "sha256": "f86ca0f3e450b3ef62e53b7c78f98ea668bdb9728d6058306bfda536ec69600f"
+    },
+    {
+      "path": "skills/dynamo-interconnect-check/evals/evals.json",
+      "sha256": "7381418a23da24423e3316e6cf75fd2038401f140582144258a9eae5c8fe62b3"
+    },
+    {
+      "path": "skills/dynamo-interconnect-check/references/interconnect-env-vars.md",
+      "sha256": "dc676e278e35eb939d8e24d7dc8ff86affa6c5824c091962dca209d48f288db2"
+    },
+    {
+      "path": "skills/dynamo-interconnect-check/scripts/check_interconnect.py",
+      "sha256": "edf39e985c1f1d8ee558ef6790c01146b0f4536986eb6b6947c5f83294a7fa9d"
+    },
+    {
+      "path": "skills/dynamo-interconnect-check/skill-card.md",
+      "sha256": "fa85041d10a6ef53c5c68995017858c595d5d925a0ba4921546cc5cd6c807568"
+    },
+    {
+      "path": "skills/dynamo-interconnect-check/SKILL.md",
+      "sha256": "727bff57fc862ddc99b8542dd19a391fdb2f5586f134ccab8302b8054789e2ea"
+    },
+    {
+      "path": "skills/dynamo-interconnect-check/skill.oms.sig",
+      "sha256": "bbdd19e98d02306913fa4a8edca9c414eb0efe9206052953b9285cae78cbc820"
+    },
+    {
+      "path": "skills/dynamo-router-starter/agents/openai.yaml",
+      "sha256": "e5ab8ebd51de88081271697ae73da36c22c638026654a0202671bedc75a7c719"
+    },
+    {
+      "path": "skills/dynamo-router-starter/BENCHMARK.md",
+      "sha256": "33949cae1c87c307da6781556c25d5f380c3d27a5ecd1e37a8798b58e05d39fb"
+    },
+    {
+      "path": "skills/dynamo-router-starter/evals/evals.json",
+      "sha256": "9dbe3fdfe92de5055b622a3b4c7bc2ff7458ebb12d8ef4ee58748039a050198a"
+    },
+    {
+      "path": "skills/dynamo-router-starter/references/router-modes.md",
+      "sha256": "c408ddc639ffa34bcb3dd23e47b741a41c8adf68785b0718b861c3c00704e507"
+    },
+    {
+      "path": "skills/dynamo-router-starter/scripts/check_router_health.py",
+      "sha256": "cdb8b0c2424526b87b857f1b3f0e06b393ee00b26f9751f413ebc5db9d7eb789"
+    },
+    {
+      "path": "skills/dynamo-router-starter/skill-card.md",
+      "sha256": "6e5293e20df9e7017f2b44bd66e7c91ac1f5bef872af412fc03b3ec23b650fa8"
+    },
+    {
+      "path": "skills/dynamo-router-starter/SKILL.md",
+      "sha256": "5278203f4d8866b95cfeacf444d0a31e49e80d9ab7f290673c9c536ee24b4d99"
+    },
+    {
+      "path": "skills/dynamo-router-starter/skill.oms.sig",
+      "sha256": "6254bde9ee3876f148e0a951569988774c4230dc15228983ad7f840c4c029d0b"
+    },
+    {
+      "path": "skills/nemoclaw-user-get-started/agents/openai.yaml",
+      "sha256": "12fcd7057751928d83df0137190abe331615a9d1dd9c3307a7e832aef90476b9"
+    },
+    {
+      "path": "skills/nemoclaw-user-get-started/BENCHMARK.md",
+      "sha256": "7b9c344a5951aa20c4ca8662816f6821f760d185f26fa1bd65a1aed7fc8f7a5f"
+    },
+    {
+      "path": "skills/nemoclaw-user-get-started/evals/evals.json",
+      "sha256": "f931ff4d9685fff152c204b51612363ae195fcf7693c591f654fdc4672fc0d66"
+    },
+    {
+      "path": "skills/nemoclaw-user-get-started/references/prerequisites.md",
+      "sha256": "769fe10bf422fc61605c2981f3f17ecf1dd7307fd966821a67c2cabb97f029d0"
+    },
+    {
+      "path": "skills/nemoclaw-user-get-started/references/quickstart-details.md",
+      "sha256": "4e92b66fba3c8c9ad5b0c79961da18590b93d3a93dcf78b03ff0cd42e4533d7e"
+    },
+    {
+      "path": "skills/nemoclaw-user-get-started/references/quickstart-hermes.md",
+      "sha256": "a882c64de093a5d6f263af59d6fefa269722babf184d6351fdb0e486c05d8efa"
+    },
+    {
+      "path": "skills/nemoclaw-user-get-started/references/windows-preparation.md",
+      "sha256": "4494742107939f47b74a0077a87863fc944fc2d648f4150c8fef980685fed2bb"
+    },
+    {
+      "path": "skills/nemoclaw-user-get-started/skill-card.md",
+      "sha256": "91cfe69132e09d402e6e0c2aaa3b8ace4ccafe661c1a4f7e59a26818392bdbc3"
+    },
+    {
+      "path": "skills/nemoclaw-user-get-started/SKILL.md",
+      "sha256": "87381efc993adfbc3c7cac001a0f419930d8342cf5df5ed6cab90d284f442709"
+    },
+    {
+      "path": "skills/nemoclaw-user-get-started/skill.oms.sig",
+      "sha256": "69258e1d9ffef0ebf53e722b82ee69d36f6e0f85afb5a3b763de37bca789b587"
+    },
+    {
+      "path": "skills/nvidia-skill-finder/agents/openai.yaml",
+      "sha256": "be0e7bd9b45dee02fd26c9b53d3476be355929e0491e7c31640e38ccc00a4a78"
+    },
+    {
+      "path": "skills/nvidia-skill-finder/BENCHMARK.md",
+      "sha256": "1c714c0b1e621f6c5f6711406c45d5b76927b9c86cee738b5869ca751d023d71"
+    },
+    {
+      "path": "skills/nvidia-skill-finder/evals/evals.json",
+      "sha256": "a786c551b3912bdfe7c5bdc0428a3c71d77af40269098a893c343034f6a4dc68"
+    },
+    {
+      "path": "skills/nvidia-skill-finder/references/taxonomy-routing.md",
+      "sha256": "589f2d49e23f77768f7534cd622a4839150e7fd1f82ce106752e180bee9b9299"
+    },
+    {
+      "path": "skills/nvidia-skill-finder/skill-card.md",
+      "sha256": "4045aa6aefc38fdc5be54f871e082dade6098754658bd76e949896f35d13b2ed"
+    },
+    {
+      "path": "skills/nvidia-skill-finder/SKILL.md",
+      "sha256": "48ce6f95a3fc8c5a4b78c3cb6e7d8c4a2f656945d4ee6ce13e5be7f4b31123e9"
+    },
+    {
+      "path": "skills/nvidia-skill-finder/skill.oms.sig",
+      "sha256": "ba4d4fbe21b3c24f4a55d9ef6aebc53d311c9961a32a7d635c745b8abcd9198d"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/agents/openai.yaml",
+      "sha256": "aa4eff61d61b9c5802a7614c1130b11797dc735ece49cef1e2ed4bc3095fba07"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/BENCHMARK.md",
+      "sha256": "2b09c567881f1098541142d171fb1a7363d799bbf6b3b9d8551e0bf1e13e3fb4"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/evals/evals.json",
+      "sha256": "e318d0bb39a4af99ae4bb325183722d5c5be0dd4625be62a010ce22cc8034410"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/evals/files/minimal_mesh.stl",
+      "sha256": "89c748968f948cd28169c25b30b625695b9268a1ef904b11f7168d7d7ad4a82b"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/assemble-package-source/README.md",
+      "sha256": "636b9ef33044908aa2281ecdb8971b1145d3bda7f5537c955ff50e7ed678a42a"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/assemble-package-source/scripts/check_dependencies.py",
+      "sha256": "c63f4c19fd1f2c62a344b90e1fbf3c6639362bcae5c3fb856e30fc159b840bf7"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/assemble-package-source/scripts/report_schema.json",
+      "sha256": "8069242cc01644cd72f2df210eaaa6aad14ce74fa208f79ab575d446f981dc70"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/assemble-package-source/scripts/run.py",
+      "sha256": "604cdfa291e1091b7fc6e8dc0fedbad0a043b7489f45f9981aaa417c649b5714"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/commands.md",
+      "sha256": "ed56fa49538ff5e9d73b0a1224570e9ab16aac4048e40562cc337616a41b5c3e"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/README.md",
+      "sha256": "05d1e2dce183814b1efc0f9f95960ac2dd729be3bb88821981aec24591b04ea8"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/references/material-agent-client/README.md",
+      "sha256": "a32c60396f387f764561c3fc19b828d54730837cf8843dbab1f991960f8a40c2"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/references/material-agent-client/scripts/check_dependencies.py",
+      "sha256": "811e030d6a5942f485f17877df63232a2b4618c750d4d6db1537a44c9aeaa351"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/references/material-agent-client/scripts/report_schema.json",
+      "sha256": "a6118ab1dbc43db38e80b7849d047c7864dcf314f59526fbbc9357bcc66031f8"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/references/material-agent-client/scripts/run.py",
+      "sha256": "5efc80d4aac817891eec4d634fc8f28f78744ec1cd7d53d3ed8649c42f3f68b6"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/references/physics-agent-client/README.md",
+      "sha256": "694c61a206aa6057b059d448376570dac71a7f83264c20973f09116895cc9d41"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/references/physics-agent-client/scripts/check_dependencies.py",
+      "sha256": "811e030d6a5942f485f17877df63232a2b4618c750d4d6db1537a44c9aeaa351"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/references/physics-agent-client/scripts/report_schema.json",
+      "sha256": "a6118ab1dbc43db38e80b7849d047c7864dcf314f59526fbbc9357bcc66031f8"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/references/physics-agent-client/scripts/run.py",
+      "sha256": "5efc80d4aac817891eec4d634fc8f28f78744ec1cd7d53d3ed8649c42f3f68b6"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/references/texture-agent-client/README.md",
+      "sha256": "e10521b64a8411d028f3f41f91b69ddf7f834e04d790b6bff9d84e419e7d4706"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/references/texture-agent-client/scripts/check_dependencies.py",
+      "sha256": "811e030d6a5942f485f17877df63232a2b4618c750d4d6db1537a44c9aeaa351"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/references/texture-agent-client/scripts/report_schema.json",
+      "sha256": "a6118ab1dbc43db38e80b7849d047c7864dcf314f59526fbbc9357bcc66031f8"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/references/texture-agent-client/scripts/run.py",
+      "sha256": "5efc80d4aac817891eec4d634fc8f28f78744ec1cd7d53d3ed8649c42f3f68b6"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/scripts/check_dependencies.py",
+      "sha256": "85e020a2471b04a60abf7ea466c14c1a9560769582c9f1091067cba647a7100b"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/scripts/content_agent_check_dependencies.py",
+      "sha256": "9458edf49e4ec80fdca5a96812b9de5f295f88922327e7ab0f2e941ed502ef1b"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/scripts/content_agent_client.py",
+      "sha256": "6a4271c4836f33635a01bbbccd2171f40f21fde37807bdf7c3b07215dc528e98"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/scripts/content_agent_material_cleanup.py",
+      "sha256": "fd4775be701bdc74db9fc5e803c889f812d4430bd04f98d8ccd757d42053e069"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/scripts/content_agent_report_schema.json",
+      "sha256": "a6118ab1dbc43db38e80b7849d047c7864dcf314f59526fbbc9357bcc66031f8"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/scripts/report_schema.json",
+      "sha256": "14752ddbd8498b3f0a4f82b0804747fb25e8b950e14c66d14b3a343733914740"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/content-agents/scripts/run.py",
+      "sha256": "22b0d5ae400ea67fd73d02f3fb7ea12a2bac942e5718e91b25b1ad1107243749"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/README.md",
+      "sha256": "e2275f95ff7d3b392983414eb3c158c248a2190e9987d250230cb40be68e6096"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/mujoco-usd-converter/README.md",
+      "sha256": "6f207b18a0dd9efb1eddb94b07d4bc6795ee45012117c11c1207660b1d74e460"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/mujoco-usd-converter/scripts/check_dependencies.py",
+      "sha256": "05f3be56d562c85ff0b9866b070fc3188772d845fd87fff27f72111cac61078e"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/mujoco-usd-converter/scripts/report_schema.json",
+      "sha256": "46e8b91d29d04420354cb136b401bc6eb159f11ab6c56485554348fcf40ec306"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/mujoco-usd-converter/scripts/run.py",
+      "sha256": "66e493e416d8330ad4d8e91be7b22b2e2a96a409d78ac5ebdd4c57bf8dfc8f94"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/openusd-exchange-sdk-usdex/README.md",
+      "sha256": "81eae2a1e79a47789263b677bb96c1e9f12ed52e1f13c852e4b6339b7d75b398"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/urdf-usd-converter/README.md",
+      "sha256": "6870eb141f5110fe2a26e8b04c9e4df227f0497a25931c2c12097a9099e59376"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/urdf-usd-converter/scripts/check_dependencies.py",
+      "sha256": "dcebe1fbcbc302ef79ba988c6088c909c5a056105dc83a73ae5eaf01b7093206"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/urdf-usd-converter/scripts/report_schema.json",
+      "sha256": "83e5d5288716a5c1cc0a820b6669539ae16bb3bba6d2a87f6bc8b5a48864fbb9"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/urdf-usd-converter/scripts/run.py",
+      "sha256": "63370edd39e013e01f6fc1c654af5645c0e9b602ecb688de104026cd57adc9c4"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/usd-convert-cad/README.md",
+      "sha256": "327b15cd61137a967ca50edcbff14b8a711369524b8be1d5c85cad54bb56fce8"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/usd-convert-cad/scripts/check_dependencies.py",
+      "sha256": "91ccfa49ef2e3015933bcf42bfb17d6e59aa2796cf683190186d1848442b5868"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/usd-convert-cad/scripts/kit_app_template_cad.py",
+      "sha256": "0c3f1e824aac0d2745580e58cac92f189c4e8d5317448142daf2d51b4a59bfbe"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/usd-convert-cad/scripts/report_schema.json",
+      "sha256": "8a7c5172a1ea194acd10dc6111e7222154731b1283bb018c6bf723dd025ad753"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/usd-convert-cad/scripts/run.py",
+      "sha256": "d907a01971c027ce15cf4d6470dc641b83d1c583b17f47e4e8f02b922287bfaa"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/usd-convert-gsplat/README.md",
+      "sha256": "981e380852e530c0388fd8a517b6bf92e5c6cb5a5dc8da82e69e71440c6f40de"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/usd-convert-gsplat/scripts/check_dependencies.py",
+      "sha256": "7c552be3935a622dc999c4e9996e7b2424d53e4969cf43f4080ca129af48a29a"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/usd-convert-gsplat/scripts/report_schema.json",
+      "sha256": "aa3c92bbae1d4e4127874af234475137fc39d9cdc6094c8c76e6f9d9aa81d0db"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/references/usd-convert-gsplat/scripts/run.py",
+      "sha256": "ff8fbe06a7f5b2c48e92254cefa7c475beceae53ad7294c967ec5efe0ab49d81"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/scripts/check_dependencies.py",
+      "sha256": "118b82669cc437c4c5ae1231868b08f38c6e7ca72d34e1eb6427e9a082530a34"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/scripts/report_schema.json",
+      "sha256": "dac1420f7a3c85785050f30616258c54073edf187b049520bafec651c9fd1801"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/convert-to-usd/scripts/run.py",
+      "sha256": "0a4893bccb13a89d06fb8975380e70f1cb12088e5487300cbc3d49f6bd262deb"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/deploy-content-agents/README.md",
+      "sha256": "bb735bb47049d56a0f97a4d240260d5ee74722312b36a771ed820a02704a68e3"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/deploy-content-agents/references/deploy-material-agent-docker.md",
+      "sha256": "313786bd3d0c4e536585416750c2329f2bc4422e26aa64ffa91f57158401a727"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/deploy-content-agents/references/deploy-ovrtx-docker.md",
+      "sha256": "cfdea0e3d6145f3c82f5a95f322e9993996ab14d92677350a49547e38b6807fd"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/deploy-content-agents/references/deploy-physics-agent-docker.md",
+      "sha256": "691cfbd268f02db4153d2d267bd72d5d4022d7f2fc455cdbcf8159dd9989debe"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/deploy-content-agents/references/deploy-texture-agent-docker.md",
+      "sha256": "ac39299e27d557344bffe1dfa44bdd529701969aaae35c2e7394c46d22174eb9"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/identify-asset-context/README.md",
+      "sha256": "076ebe5f3310bd6998d00562f29459e2162dbc25805a786789948c0b3b50ad98"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/identify-asset-context/scripts/check_dependencies.py",
+      "sha256": "065cd7a467108b6a7b35403620b8cb5926d124263038afc8040f0ac19c5bc201"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/identify-asset-context/scripts/report_schema.json",
+      "sha256": "bbd3c3e15ea3a595db96f63167154e92dd8ff1905942ffe9349c21f330180594"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/identify-asset-context/scripts/run.py",
+      "sha256": "4eaf8383f11a51c0e4d7b83034b27f17a8ae1e0b904064fb620bddad731da8ce"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/nv-core-package-sample/README.md",
+      "sha256": "326473f644ae04903d0592da8b21732cca92e8f5d324f7d5aa6a056416184058"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/nv-core-package-sample/scripts/check_dependencies.py",
+      "sha256": "39359d8f0190612bae962759460deba6c5ee42bbf2b4d48811f33f4d19dfc0b5"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/nv-core-package-sample/scripts/report_schema.json",
+      "sha256": "25d639e9396aa8ff3d7fdb02e60ad8523caa1a2cd2e59850902c8c6c2ad16a2a"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/nv-core-package-sample/scripts/run.py",
+      "sha256": "ed79ce9bf57ad51d3b4aa1ef7cc147f368aba0ab43d83ee47fe7604637112c5b"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/nv-core-package-sample-validation/README.md",
+      "sha256": "402a86130803e068c6ff81152a4025e1401c75ea4bc5ade7909513584d7f24a3"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/nv-core-package-sample-validation/scripts/check_dependencies.py",
+      "sha256": "39359d8f0190612bae962759460deba6c5ee42bbf2b4d48811f33f4d19dfc0b5"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/nv-core-package-sample-validation/scripts/report_schema.json",
+      "sha256": "25d639e9396aa8ff3d7fdb02e60ad8523caa1a2cd2e59850902c8c6c2ad16a2a"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/nv-core-package-sample-validation/scripts/run.py",
+      "sha256": "ed79ce9bf57ad51d3b4aa1ef7cc147f368aba0ab43d83ee47fe7604637112c5b"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/omni-asset-validate/README.md",
+      "sha256": "cbb1a86a6326355c6ed65608bf023eceafb708c8230ea407c85300f20602c9f7"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/omni-asset-validate/scripts/check_dependencies.py",
+      "sha256": "f40466e4e351d5761a77e97c5ac5281430e96c08f02bab1918d79968b40e6066"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/omni-asset-validate/scripts/report_schema.json",
+      "sha256": "f21a36f74c77c0f02a5c9ffe970fa1bd68bed0f78592782708ca6829d7249111"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/omni-asset-validate/scripts/run.py",
+      "sha256": "2b2f41865d6bf6541aca83bbaca2703f2bb960fc77ab068516f37870947915d1"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/omni-asset-validate-geometry/README.md",
+      "sha256": "62c83365fbfe6bef362b7a2e114f7b14f54de68dbdf3985c6636731738eb28d8"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/omni-asset-validate-geometry/scripts/check_dependencies.py",
+      "sha256": "682ff1359980a542424ac2ba1f997d61cdb4fa72fd9675c9c7a322f36775bdce"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/omni-asset-validate-geometry/scripts/report_schema.json",
+      "sha256": "cd548a4ce1de0b78488ade28ba9d3edb3132442f892ad667facad9d3a4717888"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/omni-asset-validate-geometry/scripts/run.py",
+      "sha256": "764cce9e3cfd60643af828c83dc35cd0b081468d4f6539f4fd161f821178fcc8"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/omni-asset-validate-physics/README.md",
+      "sha256": "107c126bb73343f2eff71f4a27f96ca174fc347dc7342a86de5b66a6769f13e4"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/omni-asset-validate-physics/scripts/check_dependencies.py",
+      "sha256": "5b9909fd83f0d87ee68cbd7d149a1d9ab455328b998ad5f800e15a52e74373d9"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/omni-asset-validate-physics/scripts/report_schema.json",
+      "sha256": "be6ad739254491db2e37f0a24c8607d988eec22e95504e9f82e15a3d1cd2ce02"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/omni-asset-validate-physics/scripts/run.py",
+      "sha256": "daf656c770425c78780e41be63bba9ed78588f1bbb975b2bbd9b700b39f71bb0"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/ovrtx-render-service/README.md",
+      "sha256": "2bd1b32f09ae6c82f6ec503a206ce3b48dbcfff54e9f69925a17b1d8f829a120"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/ovrtx-render-service/scripts/check_dependencies.py",
+      "sha256": "0aa1311202c88c02fc9b1ad1f03889483564fb052666ed00f8c11054fb4c2c96"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/ovrtx-render-service/scripts/report_schema.json",
+      "sha256": "de50675dc1cd6754573615144de6bb72e5532020f580db27f63bd44108d6095a"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/ovrtx-render-service/scripts/run.py",
+      "sha256": "05b80cb27ff0dd37319d5bd2c5f20434228c1d553d3b57cfd08e91478f236957"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/ovrtx-render-service/scripts/stage_prep.py",
+      "sha256": "6d8295ed819402f01f2abdde0d5294491808712ac316d901e788fac119264093"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/ovrtx-render-service/scripts/turntable.py",
+      "sha256": "88cefa96b17315b5bf5dce4e498533187d1dc9e8209411e70800fb2f0a64c18e"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/preflight/README.md",
+      "sha256": "08f99dc2886cd477a0d42c630bc0f5d2f2aa35e5673d725d0506c96fe7c7db98"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/preflight/scripts/preflight.ps1",
+      "sha256": "19d7ac08de2c2cfc81036e9f99532b0c7e18ec6f09c71d427a1e592e829d663e"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/preflight/scripts/preflight.py",
+      "sha256": "5788cbec608b19ed03400993d84d011f38feb2815cd3419e7b9fc1fd7c9ace7c"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/preflight/scripts/preflight.sh",
+      "sha256": "644a547d58cac812f3ed992bdac197c9554e26201deaf5ea8f5fdbdb3dc4f318"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/README.md",
+      "sha256": "3ce8d3c1813b50ff895ad07b46a218e679717903d0fefdf241bd801ce028eb44"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_000_CORE/README.md",
+      "sha256": "49c825fb896888251a2b186cd1f07de69c73862856c344d2a48ccaf707cb31a3"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_000_CORE/scripts/check_dependencies.py",
+      "sha256": "ba7c2f57267eb13014236f8d57b410d614401898d69295ad9e660ecd726af6c2"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_000_CORE/scripts/report_schema.json",
+      "sha256": "3662fb202f843063ca2c9164436f9399008ca6de08ca84e88f2a088a5340b755"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_000_CORE/scripts/run.py",
+      "sha256": "0a502c57b1d7b15c16fa66de1e40b2c35e836ebca921e437cefb91406f1afa8b"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_001_MINIMAL/README.md",
+      "sha256": "9b7b6e018582fc15a2374be7dc70733332a1fc7ee97eb078dfb241b4558f5e54"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_001_MINIMAL/scripts/check_dependencies.py",
+      "sha256": "9e3d8374ba99c66893786b67f1be634221e518a0eecab30cf29c9be2c0d91ebb"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_001_MINIMAL/scripts/report_schema.json",
+      "sha256": "e1518ea4a04a638085010cfb041e4076e7176cfc1ed256cac2bba03d1e2c30c3"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_001_MINIMAL/scripts/run.py",
+      "sha256": "701febb963ba1e4a002d0218ce3b3f5569412ceebe8d4db6b1855e3533801753"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_004_SIMULATE_MULTI_BODY_PHYSICS/README.md",
+      "sha256": "7ee4930f7794a56d013c36cfede134d22321d895fb6393d2c6f393cad3f17d73"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_004_SIMULATE_MULTI_BODY_PHYSICS/scripts/check_dependencies.py",
+      "sha256": "123b717893eab262334b0aedb72d827f0c0399c1b1e565d0a2049f7e02f76dc8"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_004_SIMULATE_MULTI_BODY_PHYSICS/scripts/report_schema.json",
+      "sha256": "c17115487ba715615703a119ac97d372cbadb3cd07ff8d1a09d779eb7577f621"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_004_SIMULATE_MULTI_BODY_PHYSICS/scripts/run.py",
+      "sha256": "649543f54086e05ef693d49dd56391acef284a85236f22cc464bb064979409d5"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_005_SIMULATE_GRASP_PHYSICS/README.md",
+      "sha256": "ac188c783def940579e2b082d5b0f6fce30ecf21ad733a1db810d7faee014e7d"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/references/FET_005_SIMULATE_GRASP_PHYSICS/scripts/author_grasp_line.py",
+      "sha256": "594dcc0b27c9bed5d79c68458a2ecb1404a68dc4a5dd878ca053579453ce0868"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/scripts/check_dependencies.py",
+      "sha256": "e4d7e69b1ef7ac3efc6c8f563f3a47c5409f17e94b7b98413ade40430748812f"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/scripts/report_schema.json",
+      "sha256": "edffed3f491d36ad5fdb9ebb481ccad677218728aa91b890094827105fa66167"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-conform-profile/scripts/run.py",
+      "sha256": "5ec6c8e165ca7c8f1906f0c3970addc119dfb92c7ac4bdf81c76f30b74c5580d"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-validate/README.md",
+      "sha256": "a7af251595cfaad613e43ef278dcfbe5d96ad37f2dc8393ef0c4d462879f6556"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-validate/scripts/check_dependencies.py",
+      "sha256": "f02510a53416f88366f220ee6a21a932d7a6f31850e713bf6d1f31162f8f46ef"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-validate/scripts/report_schema.json",
+      "sha256": "81a090e0290ae75f9db867c338180c78a6cb4833911dc6c4cbbfffc5ae4fb512"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/simready-validate/scripts/run.py",
+      "sha256": "11c6764b6a9ae533a86c71e6650b09b92574a30c7676341286a25b06a2fc3460"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/validate-usd-minimum/README.md",
+      "sha256": "f6ec29cdde21a8ac4687ed0d9832beb5fd5f8d0099b6db4bea2c3cee848ee477"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/validate-usd-minimum/scripts/check_dependencies.py",
+      "sha256": "f117c11777fa840ee7474f4d74593749082fa6010497e6d8996f16a00b3a578e"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/validate-usd-minimum/scripts/report_schema.json",
+      "sha256": "d260b8247ae85d75d9af8b9d55245c469028d54506f858d6b6db506127430ae7"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/validate-usd-minimum/scripts/run.py",
+      "sha256": "7f8d37b5526c04da23098e34620804946928ef1da9cfbeec0f056978b9747a34"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/references/workflow.md",
+      "sha256": "af1e9e3f1e20455ba5dcbba309d807a3454bdde6efd811e96bb7e0016d1222a7"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/shared/preflight_manifest.py",
+      "sha256": "96f55dad55753b22c5fa3dfafda864c0e607820607f313098730e4c325d0de68"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/shared/script_utils.py",
+      "sha256": "8ba77f98143668574ba4aed75cf4d346c89e5723c7201e07e38dc839addab165"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/shared/simready_package_check_dependencies.py",
+      "sha256": "f5e60890cc6752aaa8ef3b7c8d6fcebaf80abcab3ce494e80323cf047c9aa205"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/shared/simready_package_report_schema.json",
+      "sha256": "25d639e9396aa8ff3d7fdb02e60ad8523caa1a2cd2e59850902c8c6c2ad16a2a"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/shared/simready_package.py",
+      "sha256": "cd62e50b44af2a3b62fd087b37dd3acd2b4cc574278c7b56c31b0855b9b59d16"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/shared/usd_convert_cad_diagnostics.py",
+      "sha256": "69c4e673396c30a92094cfa59ddb25e66cf4aad3fbb41fac863d9065b53c7a98"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/skill-card.md",
+      "sha256": "cbbc5d3dfd3ca27d7e2c248fac325001ab182fd2e1e6a23b84161ea54abaa33c"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/SKILL.md",
+      "sha256": "36a20a52589cc23e59f225e8796c3819217b0da7cc1aa301c610dca779c2c90e"
+    },
+    {
+      "path": "skills/omniverse-cad-to-simready/skill.oms.sig",
+      "sha256": "7e91b63d877c4e116e7079bd2c8b8c8b0f9521b42bf4e002316141fa53cbf999"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/agents/openai.yaml",
+      "sha256": "56fece2031e05ee15d2b2b6d95c194fb5d803fa41aa84658b0d00e199377c052"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/BENCHMARK.md",
+      "sha256": "45132016d766fc9b676afef4ffddd7dfba54ae2724bba9a7e46b62b8b3da3017"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/evals/evals.json",
+      "sha256": "88b8d38c5fcbec873c338614604d2508ec12ed282a41823c67dfaac8d7f229d9"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/aov-switching/README.md",
+      "sha256": "533df826ba719ce673bd346e070314cff5efe101ffe886cf75b86c9fd68e0a4b"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/camera-auto-select/README.md",
+      "sha256": "5ab6a2b41731d21541252776479dfddcfdd33bbef3c4294a30db343e4558f55a"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/camera-controls/README.md",
+      "sha256": "e8df9fe282f89c9c7ee511a82b136af45181c8958a491cc97df99e08beefc80b"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/camera-picker/README.md",
+      "sha256": "8e5c9b17c3b12d7750b675d5325b518145a191e83a7fdf28872bd0ae732f68bb"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/cloud-assets/README.md",
+      "sha256": "4ef2e94056b61a0afc93768a8eb0bb1f4ab1bec9f0862b66ad136afce1723272"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/cloud-deployment/README.md",
+      "sha256": "54a7be0c96a9f7bb21062832d69f4fcc744561cf1535c0ae46949b1d1b816fea"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/conventions.md",
+      "sha256": "3e0af039758eb2c0490512f97223ac35540ccc2ad2a1e076e115cb704ac0105a"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/cpp-native-viewer/interaction-features.md",
+      "sha256": "eb042a059a881018635ff4f1b0b9c673728972fb622a3b65a500ba59cf80375c"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/cpp-native-viewer/presentation-loop.md",
+      "sha256": "731ab0fe77da080d601952e00288c118fa362f0de26df40db27ef841d272a2b9"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/cpp-native-viewer/project-build.md",
+      "sha256": "905b5a800112e040fc753f00658f3044ba8e9678a38f45f3076b91eb6c26551f"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/cpp-native-viewer/README.md",
+      "sha256": "582dd346bde12738637722061d7cf1904c00136c1af87280091fd2c3af9b0d10"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/cpp-native-viewer/renderer-session.md",
+      "sha256": "48f68b9b8a65237c9f23d773b914feefb7920e42c55dc72951b32a8e82e98869"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/cpp-native-viewer/validation.md",
+      "sha256": "88696a3ef84d10e491b1a8a51e9e465f47f0efc08fd1ecff120bdfe1878c3217"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/dependencies/electron-shm.md",
+      "sha256": "c381d6f7e6e9bd111401a9af5acaa721e1a368ec3a6e65380d3cfeed28a70f8a"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/dependencies/environment-validation.md",
+      "sha256": "6a6e4c8050f85f27c59e7bb351a39782505afad2b83f0f03315fd50e8a9ab744"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/dependencies/frontend.md",
+      "sha256": "86e6d2f784f5439e64e716d389b2055479e5d1cecfbfbcb3646fbe0c9b0d6382"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/dependencies/local-openusd-gpu.md",
+      "sha256": "678d8c1944f6fc68749c3de44be5e80fc5d1a15ce7a21c2b9a3fba9c53cea21f"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/dependencies/nvidia-runtime.md",
+      "sha256": "ae4a560c4c1ba71ba6653a091174de0d363e39a374527b78689ac5b60d0a64f0"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/dependencies/ovrtx.md",
+      "sha256": "0b2ac0d49f710a4f0db27ca9f2eb26436988929c8c6852b095c8847793ba9b50"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/dependencies/ovstream.md",
+      "sha256": "778e833a9e6b3ba0c45ed2d9ad99997aaca1ac7141442e3831f4e6093aecd475"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/dependencies/quick-setup.md",
+      "sha256": "758293062ed3c06c01d3c4e2b2dd1e57faf7f10b82b60358c8b70160bbe2e84e"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/dependencies/README.md",
+      "sha256": "0a062500193ebaa75cd1061ae5a6e55c83fc63006c72dfe5513d85f1fe9a8ce4"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/electron-shm-viewer/architecture-project.md",
+      "sha256": "6ecad1f731c97b9cd27f2a55066c4f20e77f281a6008fc494e2a593a0ebf346d"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/electron-shm-viewer/electron-client.md",
+      "sha256": "d083103637dd3e604f720c6e7572ff5dfbdcb2fd5c9237dc2a8147652894ff72"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/electron-shm-viewer/protocol-interaction-lifecycle.md",
+      "sha256": "20f05f47306253fe6c5a41193ac0d10ed9849b563601d798a7518b7bf516df2b"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/electron-shm-viewer/python-shm-server.md",
+      "sha256": "d9aebbe5f3fd15876af78c4210bd4a222a1b18eb31817bd9d4699f2a9c6ad83a"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/electron-shm-viewer/README.md",
+      "sha256": "585cf3fb2331c5ff52b921d716346ae2f772414c048c352b17a6b29f65629be1"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/electron-shm-viewer/validation.md",
+      "sha256": "3d88f3574c28d4de9b80d3f2b094b28e8245e0f64c1ae8d728a9d8eb3e4bf3bb"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/gl-viewport-overlay/architecture.md",
+      "sha256": "0cbb3e35eddfd0311c76bb1f8fd253f54e138dffe9e2c4798d7832b980fbd68b"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/gl-viewport-overlay/example-gizmo.md",
+      "sha256": "185d865309adb20bfbf57d971feffd921ed64b2165249ddddd1df9d158ecdddb"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/gl-viewport-overlay/interaction-pattern.md",
+      "sha256": "d456918a4c1e7d2a7fcc8e69722b2361316274ee9a1dcce9ae5d3d91732f48e1"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/gl-viewport-overlay/projection-alignment.md",
+      "sha256": "16dba5abf083f994af84455ffd6207cc1631c7250fa3e1090ad2c359afdbec4c"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/gl-viewport-overlay/README.md",
+      "sha256": "794d1a3817ebc85e9de08a0686765f804c866801bd91e385a106c4fe512ea24a"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/headless-shm-cli/README.md",
+      "sha256": "62a89e5dde6e7f292a548442d02780af0de2417d9608adb20dc3b09ce5dea4f0"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/huggingface-usd/README.md",
+      "sha256": "18b3c55ebead4350e1e64599d8ae9e3d9b56366f4b53b7a13f5cb46277bd2c29"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/local-viewer/README.md",
+      "sha256": "95be69087f42fbe8d89f72ea8cb02f576859f6127bf7f2ac9374ed589feac4d2"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/native-picking-selection/README.md",
+      "sha256": "61bbc43a148970df495509beaa8884f27a4f76f04f64f064898886cad8f45f54"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/object-selection/README.md",
+      "sha256": "a5adafa691f3988d81977fc7903727accdcd0d5249d79f945b6270e1cc69a5b1"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/ovrtx-rendering/README.md",
+      "sha256": "021b7c6d0c60b02630486713f789cf2cfa384712adff2cc48850da72bbe1041f"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/ovui-library/api-reference.md",
+      "sha256": "f88596826d9658a11f526dcf50c326b9a4246b2f8d7922adaa705d3b4a678530"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/ovui-library/extending.md",
+      "sha256": "7b29b8295de068f60faea5c62b15b5a1f7ac7e5c48aeb753d1016e6fedade880"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/ovui-library/README.md",
+      "sha256": "bed5aaf7005d5a64197e0cd35c54c3df4e4f74224a8637b3948cf0888190ab05"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/ovui-local-viewer-recipe/interaction-features.md",
+      "sha256": "b04aa74daa98b424878fc5189fb8fab28865f0c115f16bfd21657a418e7dd2ec"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/ovui-local-viewer-recipe/project-structure.md",
+      "sha256": "2b7dd6305e6c2314cdf290178721c20c9cfe5976dba50a28ff207bcc4472b3b3"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/ovui-local-viewer-recipe/README.md",
+      "sha256": "0a7ddc23839e75413e684084032caeabd346cfc50c4a35092093e69bf4b82a9d"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/ovui-local-viewer-recipe/setup-shell-renderer.md",
+      "sha256": "098ced4b1f7247f45003b92fbe6621f63862d04f92b368b4c2b343dbe2614899"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/ovui-local-viewer-recipe/validation-build-order.md",
+      "sha256": "20b3dab410b5380ac689d19d1113d44085d568e694bdb8a255ea50354b90c547"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/ovwidgets-editor-shell/README.md",
+      "sha256": "06b6053d232de07d24864c60095490219c1188b62e6548d4b7d0bdfff9effc80"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/prim-info-display/README.md",
+      "sha256": "991849ff9d3af459a13bc1757fa0da0cc041cd81a7a412da3a548aad51ef9bb3"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/prim-pick-effects/README.md",
+      "sha256": "cc7703e27dc4226a41b9bcc15e38494365f49cb2cfe5c6c071e9e4ed5f5a3d7b"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/prim-transform-safety/README.md",
+      "sha256": "f4be2b0bd2432dafd1cf42f671c421cb69e4b7e15681f8e5ec3c31fc8932e6f0"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/render-settings/README.md",
+      "sha256": "cf284b48dc496a692ff05907fd7508a5b3cf5292ffbc49c36a73c850bbdabad2"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/routing.md",
+      "sha256": "82f2bd900488dcf1e9c514db15c99de3aa28c607848e15a5ba12054e5ee50a02"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/seg-outline-highlight/README.md",
+      "sha256": "7550671ed7ba798d7fcb5e6bee27683c194b0edd1caf90f604a75016df3c8d16"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/selection-animation/README.md",
+      "sha256": "53b735c9fc4e3fbde0947470d392f21ba701e96536c91ba57492ba0b42ec8859"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/selection-feedback/README.md",
+      "sha256": "4e48576c876021728fbb67475d426233cd7583aa2cc0b19c58d44553f2147e86"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/stage-attribute-reads/README.md",
+      "sha256": "2bc99d753f1daad2301276452bfd96dfd3b960b88a890ea91d8cecdb84a5ef7d"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/stage-hierarchy/fallback-worker-protocol.md",
+      "sha256": "1cee7dd157abf744f988f7730d18bb9d85989b3d0d5fd4f4e1224c62acc9f496"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/stage-hierarchy/README.md",
+      "sha256": "d8db03ee3c6736507a46f51c2a9034260751c5f3fefdaca0bb1c4784f929f7c3"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/stage-loading/README.md",
+      "sha256": "fd3645af4bbc57878441f9d1566715738932945ec155106299f84259bf0ad1fc"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/stage-management/README.md",
+      "sha256": "4e0baa537ea19df83665998cd602c4534062bf271ef0207893e131f508279147"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/stage-queries/README.md",
+      "sha256": "d7f646193d1c91ce8fba7a4fb2f886de42112d87b4ef106b527438170eb92b7a"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-client/README.md",
+      "sha256": "c4cba426f9bd767599a2b61ad770ad9c09bb56c37abd05c310da20178be76d6b"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-lifecycle/README.md",
+      "sha256": "2928a5db2b0f6f3a5d6beb06ad177ca343a99169f1990dc2bfb2055e874b7ce2"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-messages/README.md",
+      "sha256": "3ed4a104b3697065835a05c466f4ec959b48c93ac839fd7698a23e0687b30b11"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-messages/server-handler-map.md",
+      "sha256": "c03fa444e387fd8e0d9cf07e96a809a12cd006f82d676581840a399e504609e5"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-server/frame-loop-and-continuity.md",
+      "sha256": "10f8c185af3419fa016aa58783851b310a71272c5938b995825a5ec54d2b0616"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-server/README.md",
+      "sha256": "b5e444582d04c52bd8c9e66714bc2b8c7b2ce197049646409b6e72635f272e23"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-viewer-recipe/client-protocol.md",
+      "sha256": "177e579f9f0da5ca90b6065d2bd44d5aa57201354afe970211a3f25d21ff5c62"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-viewer-recipe/interaction-features.md",
+      "sha256": "8d97a5dfb76e3c7e7a47f09a7ea8b35b2bf994cec4b7b1826f89d33d9460eeef"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-viewer-recipe/project-structure.md",
+      "sha256": "9623e2fd7ffec5a9849b37bc402dcc85162949faf704d3c817a5f6d63f05b855"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-viewer-recipe/README.md",
+      "sha256": "1865b7b4d8a725de676c7cfc3875bc383bcd5f007f5f523b05547822bf1862f8"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-viewer-recipe/server-runtime.md",
+      "sha256": "4e78d0b3357387526d5576a6c1da3fae40eccbaa512d7092a5cff84cd2bb5863"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-viewer-recipe/validation-build-order.md",
+      "sha256": "2c77e17630ff5e6c13144d18d70c8d69429143c552fd53c5a163cef46b0825f5"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/streaming-vs-local/README.md",
+      "sha256": "35ebd42ebb596ed7a491963b659ed46a05a882fb1ceb21cdb7ac88dda464b85c"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/tauri-local-viewer/README.md",
+      "sha256": "9ad25fb5e21e055ab6da8ce50378220d189e2402f89d1d2117f3ca96a0fa0e92"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/tauri-shm-transform-gizmo/README.md",
+      "sha256": "89aa6b391e6b58ae70d30f3ae44cb9c3e56af1c169a4bbdf3a139dc79c4be222"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/transform-manipulator/README.md",
+      "sha256": "e43df0c2f467570941644734ee155e55b36464010d4bc14686f4598fbf4c5d8b"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/troubleshooting/README.md",
+      "sha256": "a4467b191acb055a0f0c6fd340a71ab1c38094d5d7058636a4fe659e1def1fcf"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/troubleshooting/scenario-playbooks.md",
+      "sha256": "b7e8440b2a15957d1bb0ed51af718f067e3e16d514a62f69693ea2e2512527c9"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/usd-sample-data/README.md",
+      "sha256": "181ef7ed912c0819b96e70c24d0d6dc860a5aeb7fcf63c6dcd82f6d6e2c7a17a"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/usd-viewer-app/README.md",
+      "sha256": "aa89e16149b55c6b49f27c0383491b2e490da4bbb5309e1be52b00e1e96d8201"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/validation.md",
+      "sha256": "9844e659e92be61036b228802aac08e154bf81f98036a8cb5f9c59fa9a60edb8"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/viewer-backend-interface/README.md",
+      "sha256": "94d705a87cde58d3612d307a95294f82b1f2fb88099a075c2693f04a08f8163a"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/viewer-control-patterns/README.md",
+      "sha256": "6e2501cc2e65f483ec07ccc4b52277202b431270e9371956091755b401e73cbb"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/viewer-data-view-patterns/README.md",
+      "sha256": "7b1fabc13351cb8739f61128bed1975edeffde88863b67b800bb6ebe2c528753"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/viewer-feedback-status/README.md",
+      "sha256": "8ae38337b71dbaea718bceae91b19eb2df6ed890703cd7b225142f244b755976"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/viewer-input-routing/README.md",
+      "sha256": "61245b8e4157d25aef1bfdaa9f192d4c05f7b3f18194d744dd2a5c4b5e93dfc1"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/viewer-layout-patterns/README.md",
+      "sha256": "f1c7827a512ca7f22440ffa6c317a5349d79c12fc939209beb92194e68a34f0b"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/viewer-ux-workflow/README.md",
+      "sha256": "5875de746455c34b55bdee2c0ee23976e5679e769903d289c409f02702d2a005"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/viewport-overlays/README.md",
+      "sha256": "96e4a379019d450529e87649480961c5ac8e9282e1db0582382bb15db62a6697"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/viewport-resize/README.md",
+      "sha256": "2178a0a63d49d322628a0877a8bf7b48b8dd6da612ceecc8bcfbf0744cd874d1"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/webgl-shm-transport/README.md",
+      "sha256": "24a9f79cc13ddd1bbaa33c38d4ab8de873479566c66ac6825d69935a4649cf9b"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/references/windows-native-setup/README.md",
+      "sha256": "071be0d99808fad4dcdfe9e109517bed0136bd49120d5410a919dfcf10722528"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/skill-card.md",
+      "sha256": "1f7ea603f8fb32eb37789032d354cae78e160eb5109bd8ecbaedad1fc56264e7"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/SKILL.md",
+      "sha256": "bc3fadb94ab21e5a8439e58e80681468a286a97421e67284c964ce203705a161"
+    },
+    {
+      "path": "skills/omniverse-realtime-viewer/skill.oms.sig",
+      "sha256": "017746afc89ed12c5e975d7c6eccaec16003c440a1d8c1bdd3c7b34d6760b9ec"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/agents/openai.yaml",
+      "sha256": "65db277eef93c54710e11a49cdb3f41959bef6714d4f6f21673a7365ca905a6f"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/BENCHMARK.md",
+      "sha256": "9bbf49747ba888a4ea1ff79073d67c2adc66b86e232ac0e8b01b69cad74eb1ec"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/evals/evals.json",
+      "sha256": "0a1dd20a62f74184bbf7283f11e1d7c34ecba09d559560ac4d6caa4143871f63"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/cad-conversion/README.md",
+      "sha256": "aef2aa7c330a4d8c5b35530e8f13b3b236e47de1cb6109cbf486e58f7aeb612b"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/cad-conversion/scripts/conversion-report.schema.json",
+      "sha256": "7ad872c15fa289824f01f4bf8124bff7d60c42a51a316540b6f8cd10f1516d7d"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/compare-profiles/README.md",
+      "sha256": "5f150222bdf7ad23683949a48916fefb2d052514400ec2f14b3a8b02bf68dd05"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/compare-profiles.md",
+      "sha256": "4711f0e746d6603d0ffa1ba8468d2a63105682f1b7afeadc28c12e72ae498351"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/omniverse-authentication/README.md",
+      "sha256": "6fc6d07f018c8dd4632547c93f9e2c41f25d42ebbcc571990f4f610fa604fd94"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/_curation.json",
+      "sha256": "8a59d4702e4947a7ad035c3dbd775a160ce95c9a160e863157fe2e1eea9f9bf5"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/_template.md",
+      "sha256": "d794f3b410767b73a1e5ed943e1d71e387987771ed88fe81ff1a5c9982eb1cae"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/boxClip.md",
+      "sha256": "338ea41ff0fb54c6f81f7901445078526274ff9f9c9f46284cf8700ea0ed6247"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/CLASSIFICATION.md",
+      "sha256": "1a4f46fcc3e40748691aca64556db66a5ea8895dbbb512b1353e4faefdc60309"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/computeExtents.md",
+      "sha256": "0e8eceee7c21372df1fa74515d4e85c86aaaf907f0469f04e6918a8c7b712bdf"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/countVertices.md",
+      "sha256": "3d6d070bdf6879240944492fd88d1d6c6ec6caa0b880c22240c11ca4ceae12c5"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/decimateMeshes.md",
+      "sha256": "312c9ca41a189aa153e4472f35789d6fa9d9ba5d15a2071c94d6722c39261026"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/deduplicateGeometry.md",
+      "sha256": "7dec5d87e292629cd8fe19e8418dc7935cdca45217f87fd5a28d57fb97ea12cf"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/deduplicateHierarchies.md",
+      "sha256": "729f5b772e360471be7ed4ec499ac5a08503a984855a9f800e075d774be31d64"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/deleteHiddenPrims.md",
+      "sha256": "fed91f0de05ce1372047470cb7ff4c1fb01b4a5ab50d3df23a67d401f8d5441b"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/deletePrims.md",
+      "sha256": "18eb2a4aa172204474c1d7dfae8f56a7d729aee257a600ad7e512230913f983b"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/diceMeshes.md",
+      "sha256": "fee2167f293b14c00c9881220edcac9acfba086cefbe768bad9dac7f0d862f57"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/editStageMetrics.md",
+      "sha256": "4dc58316bfd58084397f86739508da539cc7c7a41dbbcf9a577f384d7abd3ab4"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/EXECUTION.md",
+      "sha256": "be607a336529453ca42c711354768d66ff48b29a222a28ca583a7c9bf34ed74e"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/findCoincidingGeometry.md",
+      "sha256": "8e883538069aa5cf4adda26366dd09706f237b045d179ef701032d36d95e8262"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/findFlatHierarchies.md",
+      "sha256": "f5fbe30b8e107750b1dbc4f8b12587dfb918884cb6265939ec4c8a441c0fccbe"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/findOccludedMeshes.md",
+      "sha256": "c62929af5d53e74d2d2333d7aaac47c61b14036353ecaae2d5e6f9ec943f14a4"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/findOverlappingMeshes.md",
+      "sha256": "17bfd48938f17dd22448d76bcda23bc12a85d45c24a5164e7ef56ccc5af78494"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/fitPrimitives.md",
+      "sha256": "9c41f8a809d45d778dccb792d08dde70415ef4ca7081c3867b291ac29f91785d"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/flattenHierarchy.md",
+      "sha256": "98104856fad86a6efbf215368c1f2daa3cde1d10bdaf16baa98c9be700037367"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/generateAtlasUVs.md",
+      "sha256": "71f8fad31b853f8fc735d2de5a6730db56ca2543ae71a7871a46f30f85aa8179"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/generateNormals.md",
+      "sha256": "a424db3521d8e32f364e0f6f096d85f5e9f68a525321cd997490b8d417f91adf"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/generateProjectionUVs.md",
+      "sha256": "dcf1fa55bfbeaf2e0aebe96d1d84e098c111632c72d3bf4a9da4d467537b5553"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/generateScene.md",
+      "sha256": "3ebd970fdce290a171957467947606313c96da9060504e3bffaf8204cdd2f4c9"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/manifest.json",
+      "sha256": "00d15a5d9eecc87ead9a7d2577b4545a08a7b3235dd18dfc32c0e7d3df2a822a"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/manifoldMeshes.md",
+      "sha256": "423d87fd9168de2d5cb9952fb45657ac4bf29881f955f9f24f5269603b7dd7bd"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/merge.md",
+      "sha256": "9b6580f42d8654caff7f4cc7e4117617e29bc90d51d6264f9b68dfd0230fa46a"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/mergeVertices.md",
+      "sha256": "714f16f215790bb4eadb3130249672fe17264b894ffe5efa77f5f4f91dbdabc6"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/meshCleanup.md",
+      "sha256": "1465cc30ef0875caba2de785814c72368e437ba6e2df2507c1c92037686860c5"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/optimizeMaterials.md",
+      "sha256": "a7200af0795810896692796cd25f8ca9b4420d3c1d70c566f20546bbee456aba"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/optimizePrimvars.md",
+      "sha256": "2621fc8c661014f13fd1fdd599a2fa33e313f77ea4b29d22a2bad8e2a0d7e8b9"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/optimizeSkelRoots.md",
+      "sha256": "f7ad13de6a0735a7641924cd28755278cdea5ff056d1129d05de6ea1312b7880"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/optimizeTimeSamples.md",
+      "sha256": "27609204a978c8aa061a6f22d3e5b0020a478b2bac1d7f0ae96b47af184a3cbb"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/organizePrototypes.md",
+      "sha256": "6d34fadd7ca309a10653a0e205db48bfd4eceed42ff243cc46754455aa4a59de"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/pivot.md",
+      "sha256": "c35389a22c3e75df86e1e4c0e10bed2e66eaba88fa5efc883a686b8c7f0b8532"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/primitivesToMeshes.md",
+      "sha256": "f6071e1609a1361d4dffde71b2d40eef6ee34b8381491bb34a352b1ecd690983"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/printStats.md",
+      "sha256": "e63f66b243c84aaa52a34dc8b02172c373f6de4b5a77f50fe7333833aab05f14"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/probe-snapshots/so-110.0.4.json",
+      "sha256": "e02e383cca257514d7fc73c198c3a04725d7b0d523881252c29ce2b1e4974633"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/pruneLeaves.md",
+      "sha256": "b4e8e6c6e3ec9f91efd82f4f32f5f0c46b499cdc963ce500e12f8457add1c125"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/pythonScript.md",
+      "sha256": "6029fc54dcb6278ef2af83aa92847dfb31dfa5c8dad8d888e3d7c88a50c116e0"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/README.md",
+      "sha256": "0487aeda0ca9df4eda6412ee7f25e0e83ae0b917ca3f4b66c50b86b9aea3ec90"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/remeshMeshes.md",
+      "sha256": "1159c1f8738f957610a767727dab41ffe9a6de5d900466bc0a577a3f100f842b"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/removeAttributes.md",
+      "sha256": "d30acca33261255ca88066f8272cd5539b960e4d287fbb386f8fc91cb374a93d"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/removePrims.md",
+      "sha256": "6b5d5c2cb5a2a15826d0d34c155c091f0552d6b376a673f865b355b056ecd17d"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/removeSmallGeometry.md",
+      "sha256": "027e3e864a6bb5ba43a0020df94ddac233ddc0878b9f7527a05b4a98c72fc861"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/removeUntypedPrims.md",
+      "sha256": "f84762a78f76bc042b6ba5744fb653865d9fa4261995524983cf75e48fd0c7d4"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/removeUnusedUVs.md",
+      "sha256": "34133bfd4b82b0dda3d94dfc1e7ac36559b14e8acdf104f4a1aacdf5cd288eca"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/rtxMeshCount.md",
+      "sha256": "c2521423a0e2482fe446df39946358aaa25deefe3bcd9a4b08eed77bf7d70c90"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/scripts/operation-curation.schema.json",
+      "sha256": "80bd7e12e27cd1e8824b3c736864bd60e75fdb81db0ef5b69f73f94d365fa4d8"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/scripts/operation-manifest.schema.json",
+      "sha256": "70aa5d5ed2032da5fd6bcedb0b271004809aae2094317ad07e3c5e9d66245a3b"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/shrinkwrap.md",
+      "sha256": "ff85e0a8b1ee63fe97bfa05db70bc4c0f2ea5897139e77c887f9502d298fa11b"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/sparseMeshes.md",
+      "sha256": "c21fcc87686f1a16dcade75bd95864957c1f50616facecaace8ea23edd96da5b"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/splitMeshes.md",
+      "sha256": "79902b77e9cda5ee0a1eb4d893eb4e9d3100f1e3f7f24b67a9b1f3098eff938e"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/subdivideMeshes.md",
+      "sha256": "d9ed7c94fc18d3aad5163560c4f650a41ec91b6766c1044c9fd3d59f68b72113"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/triangulateMeshes.md",
+      "sha256": "cd400a581e1ed06af36990b599f736550d17cdeeebbb1ceb818527cee9a130c4"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/operations/utilityFunction.md",
+      "sha256": "d8d7589c2dfa4a53e24530272a0babb6dca0d2fb1a7778bacd756d13e23f43e0"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/optimization-report/README.md",
+      "sha256": "1a1754415d5d7335977fd9b3270da0caa2dc0dd9d7729859e908f8c8428b2b82"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/optimization-report/references/optimization-report-template.md",
+      "sha256": "3f228a7bfa4e1ed24a8c947d957d6820345f9b53809f6d814a24f6a8c95322dc"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/optimization-report/scripts/optimization-report.schema.json",
+      "sha256": "5ab2549d4d7cee707a77fda6071455feeed6e406e005dfd2b60541da7fbbf84c"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/output-workspace.md",
+      "sha256": "1fc92aad67cc21ce61e10f0baa9416d317b6506c560cbbd89c9898d2327bd8b6"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/profile-stage/README.md",
+      "sha256": "1b258843bcfeb6387fafe36bdb6b396948767b8bd0de749c0250cd0afb6e9e72"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/report-templates/optimization-report.design-fixture.json",
+      "sha256": "ac8091197f66b0add79a234bdce47c7410b71925fdaf5f157b98cd1355dc5e5a"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/report-templates/optimization-report.html.template",
+      "sha256": "4b028443369b4c7cadc209e2017ff982c12b71b7f929601ce531b95031a96fd7"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/report-templates/optimization-report.md.template",
+      "sha256": "418e2b135b5bd3032443b5807718df41d1b86e5e004b55f44798febbcd16f922"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/report-templates/README.md",
+      "sha256": "ade36f98b61c6c8bb595372a7577e2bf36dccdb287b893504021f4c5ca223264"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/report-templates/render_preview.py",
+      "sha256": "adb25e4b3b895b85d7b281212c589c5ff005972b5066e556cd6387fa42935b32"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/runtime-artifact-token-budget.md",
+      "sha256": "c8f909d7029e8b7ec0e8b32ae2196f0246bfc7dec5fd148722eb327e1b530151"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/setup-usd-performance-tuning/README.md",
+      "sha256": "ddc69be12f378a53aabb8d277e23dfcaf96d9afbdfb29591f314c4a160d826b0"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/setup-usd-performance-tuning/references/install-asset-validator-standalone/README.md",
+      "sha256": "36f3382286d28592a64168eb587d83ab7fe89524b12d5cedddebcbbf3513d555"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/setup-usd-performance-tuning/references/install-kit/README.md",
+      "sha256": "73621664b2f1f9694a28774c47f255a761e2b239c1cbd4183cebb53672ff9c05"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/setup-usd-performance-tuning/references/install-so-standalone/README.md",
+      "sha256": "4fb88c8ad5b0b4c05790012c5d42079c8fd553c98570fb0f04b532a3fd7d7894"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/setup-usd-performance-tuning/references/install-so-via-kit/README.md",
+      "sha256": "aad6e028fb87c33296ca24f22205c16b43d6e0f72678a4877a3dc0c5ba666ccb"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/setup-usd-performance-tuning/references/kit-discovery.md",
+      "sha256": "2ebba866348cb188601bf5a09cce2fe90582571e3006b75acc7790159d6efd09"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/setup-usd-performance-tuning/references/runtime-context-header.md",
+      "sha256": "e4db68423ddb08352b8e55aaecc9dced41d99fa2fb5e9feefb1f3aa963423950"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/setup-usd-performance-tuning/references/runtime-probe.md",
+      "sha256": "36d8bcf183390e5f54a9caee4655f0546cf53fe8a4be32b623911638174dadbc"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/setup-usd-performance-tuning/references/standalone-runtime.md",
+      "sha256": "f5d613add7888b2581ddd25eaf3af23dc888ba91a0df9c5f46be59aaaf44df10"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/setup-usd-performance-tuning/scripts/probe-snapshot.schema.json",
+      "sha256": "04bc8a5f67f50594ed9493c11fd0a6208e5080dc9d22938a8655a48c4b876f16"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/setup-usd-performance-tuning/scripts/setup-preflight.schema.json",
+      "sha256": "bcb05cbcbc471a4d70f437e9d97156f15838bada6d460422823bef644fea5fd7"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/skill-map.md",
+      "sha256": "74603b61bd6f752b10001846f63e12b4afc08c060b7660a15e61511b708429a3"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/so-run-operations/README.md",
+      "sha256": "8d85627a084dbe443ca35f7310b16d463edf5ea435b2c9d937510d0947d0b37b"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/so-run-operations/references/batch-mode.md",
+      "sha256": "a31502ae87f7cff141f90e5cb0630cdd33db71a91764bd7a00583a41b49835bf"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/so-run-operations/references/config-from-evidence.md",
+      "sha256": "d1de9c841e9f739a70d458ff71473fe16f4989bb76b627cead34dec17877b420"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/so-run-operations/references/invocation.md",
+      "sha256": "e27dcc4e108516a714cb2731b2729bdae9fe0f82f7dc030cab2e695b151acf46"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/so-run-operations/references/operation-safety.md",
+      "sha256": "051c1682021754478e434f5eb6b508348084149746fc5e998ab93f5df28ec048"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/so-run-operations/references/pipelines.md",
+      "sha256": "8e603ba14379b616e3f572300c1f4a9093a0133c2a946c5a77d5b13cdd1df3f1"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/so-run-operations/references/so-create-proxy/README.md",
+      "sha256": "302583a9cc06949e06b982561b5712d37492437b871cbefdf30586956cfb88c8"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/so-run-operations/references/so-create-proxy/references/bounding-box-proxy-modes.md",
+      "sha256": "09363b4a9ae84cc6594ed116c273a3bc43b8785b5b1127a9ca18003a176109ad"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/so-run-operations/references/so-create-proxy/references/decimate-step-recipes.md",
+      "sha256": "9ea1d7aaff2c9072dc47155bcffa839c9b22563fd219cabf0a18ba5132d80766"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/so-run-operations/references/so-create-proxy/references/decimation-tuning.md",
+      "sha256": "bb852bb0df1b1e2962b21f0fd8da6b5995a6a7a8763a9e1111f648c0b839f680"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/so-run-operations/references/so-create-proxy/references/proxy-config-recipes.md",
+      "sha256": "217a6325611f7eadc942a29ae942916fdcecdc0b7c0a575569a8a8f7f88f106e"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/so-run-operations/references/units-and-tolerances.md",
+      "sha256": "18d5b72ad31b7420e79f791587c959d7db00b086baa5e415965ace0b7957ab22"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/upstreams/usd-optimize.md",
+      "sha256": "48ce03e7334ece13aa00f20466aacbdee7e5cc1ae902fc5d34f368dd0a7f91c0"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/README.md",
+      "sha256": "ad57f7c5c1f2d3d5e15b8bdbfda63aafd6147407b434fb60a761600dbbf68b5b"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/apply-restructure/README.md",
+      "sha256": "7258b570f1d869d5c97a6e397c4f3066114dba8f8d320d168e7c7a29988170c3"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/apply-restructure/references/hierarchy-dedupe-rewrite-tool-spec.md",
+      "sha256": "0706294e0a309249be91d28a91ccc08337775218bfa04f90797b203dfd464f8a"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/apply-restructure/references/ref-remap-mode.md",
+      "sha256": "5182739786afb3ca4412a52f57128e09f19ab18622e970614809ea7259181f99"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/apply-restructure/references/restructure-mode.md",
+      "sha256": "dccf37c12bb274c1a2fa9a74909d139b49b6db57bcee471936518c175da1d954"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/asset-structure-principles.md",
+      "sha256": "c28aca550f52922104eed742d97bb21029355a28f6aeab3ccd9ff83d08fb9b67"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/composition-audit.md",
+      "sha256": "b91b162d86854e2dea82691ec3287dc67c7c3cb4b60b705f39ede4f1573e1ead"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/factory-level-structuring.md",
+      "sha256": "7e7a4025e3b83e53a3d5b35a43eb329fffe38a7fecf63ee4e9ce497da5ad17e6"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/instancing-readiness/README.md",
+      "sha256": "3996e36f2e30031305cedd947dfc068bb274d5d7515d48bdc658e28b1e83f10a"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/instancing-readiness/references/instancing-guide.md",
+      "sha256": "2056c0ac7e3dc1b0ad9103d024497a0e7d09bd5dcb1d9d061772f02271172a39"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/instancing-readiness/references/instancing-tradeoffs.md",
+      "sha256": "b86f3c0e6f35cb5906faadf4cd5bce74817a75116291e81b7145cd6bdc949eae"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/layer-health.md",
+      "sha256": "d2b9d7ab873b50c69ee25143e91777a943e97eac11eef8f4fb59239422edcad9"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/optimization-tradeoffs.md",
+      "sha256": "2e06a03cf31c401a799f7265f00945dab6f4f01c4ca0d4629bea1d236ec0266f"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/restructure-decision/README.md",
+      "sha256": "a71bd11389651620651f803eda736720de22e229efdfefff4da6ba72ef5b1293"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/usd-edit-target-planner/README.md",
+      "sha256": "032cec653d1216c92e86f8a44a5dc5c0e0e6fb5b4e64ee476936b53eb450d258"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/usd-edit-target-planner/references/output-saving.md",
+      "sha256": "e9d19b3de87c897c085283889d34f6210e3018884f9ab4858a24b5566203e1c0"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/usd-edit-target-planner/references/variants-payloads.md",
+      "sha256": "595f35d9c3557c6b07b4e38aa692edff628374070295b0fe8106d71f638f8e6b"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/usd-hierarchy-dedupe-candidates/README.md",
+      "sha256": "8b0ca8b3cd1d332348f0f75e8537880b53b18b15857ad4cb6685a27faa1b7e7a"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/references/usd-hierarchy-dedupe-candidates/references/instance-candidate-finder-spec.md",
+      "sha256": "63ce5e59421cd865f1311581cd88279c9472b1b548eb8ad98cf0c3dec85b9783"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/scripts/audit-report.schema.json",
+      "sha256": "a6c0a7f51abd8190f1c4563901a347d0ad370628922cb247ee142bb1b99f9318"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/scripts/optimization-plan.schema.json",
+      "sha256": "a27a2e3f2f6e1d23c0423df691c035f5d420002c92c531dd088bb6d3c7ce9bc8"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-structure-assessment/scripts/usd-structure-assessment-report.schema.json",
+      "sha256": "88d0ced122f96b996e70f3d0e4a516fae7b2cc13db608f0843422fc1a4fb25c2"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-validation-runner/README.md",
+      "sha256": "9e773af07621893b5da685fa1929dacd302d58d371446408b34a53554689fea8"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-validation-runner/references/so-interpret-validators/README.md",
+      "sha256": "f45e4b38798928bce5d0c5a1bb52cdbdfd952e650f16fdba3e7a9bda20f805d3"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-validation-runner/references/so-interpret-validators/references/follow-up-queries.md",
+      "sha256": "5515c2a08b639a6768c06b76feaca74ce80da1b10b479d566138e494a68f55a5"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-validation-runner/references/so-interpret-validators/references/rule-reference.md",
+      "sha256": "ae2e33188a0fd024f379818220f295fe75eeffda827566bf54c32815e2076df2"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-validation-runner/references/so-run-validators/README.md",
+      "sha256": "491220dc8684b0835961525d5da4c74e621d1b6f7725ce3267e726c2d2e47ba5"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-validation-runner/references/so-run-validators/references/infrastructure.md",
+      "sha256": "ab708a6274dd96cc908e98b96568c63cadd3542694745aaedd16134aa13b2de8"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-validation-runner/references/validate-usd-asset-validator.md",
+      "sha256": "6970560fcb79442850ed16b0181c3c23a30e0d474b1b772e4edf02e0c09c1330"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-validation-runner/references/validation-scoping.md",
+      "sha256": "10b5a554e0cf2c0fa3f0fa4347427ce103cc088709c36ccaace428cbbb898ead"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-validation-runner/scripts/asset-validator-validation-report.schema.json",
+      "sha256": "db0fa3bcf01690e13aada4ca304bb5874b6c3ea4efa5ac7e6ded19ca213bb531"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/usd-validation-runner/scripts/validation-report.schema.json",
+      "sha256": "1e88207310c86dd98668eb020be3d4220a2949f2a110b430b47513c66645cf7d"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/references/workflow.md",
+      "sha256": "f0ebdb73e20ee90c35524bbf2ce15c62a751c8d7ad4ebfbfb66d927c1dffd2c9"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/skill-card.md",
+      "sha256": "46c6faa6a89f79554ea66b0209f2834ad62b5c7bca1d482f0535b2010be4b3cc"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/SKILL.md",
+      "sha256": "cb5b66e4a265fe6875baced4ea0078a998b93aba80f81361261b3cd407b21324"
+    },
+    {
+      "path": "skills/omniverse-usd-performance-tuning/skill.oms.sig",
+      "sha256": "6488d670ae3a911112d880637e1bcf6b4225830981a566df352f56daaaf5f3e0"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/agents/openai.yaml",
+      "sha256": "90274884f9045273fb8448b4c55e861933dd8ebc4ca3f7618bb556b2f83aca30"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/BENCHMARK.md",
+      "sha256": "7959e15ca1f1f2a71af2abe1257ca90638ec6ce737c9a81a1a0c4d4d9877ca65"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/azure-access/reference.md",
+      "sha256": "7a033920d62c92bec09d461b7919bc565c78787a45e2b8d5529b2c06dbc7f343"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/.gitignore",
+      "sha256": "d4a216e90e5377fc50aa7fda61f1bfdb3d8eb996c134a23e61d7e766d218f71b"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/reference.md",
+      "sha256": "71a8fa3b55a75d1bfc2ca190ea62587d169f3711e8ec142999843844ecd7809a"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/scripts/helmfile.yaml",
+      "sha256": "5d2b6f4d1cd987bf759d1205616e564b41d880ae6d138741eecd1adffacff43b"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/scripts/main.tf",
+      "sha256": "9fb16d92dd85b47b9f9b7342a0678fec0b70d2d3a7029ce94cf8d300ec2a21a1"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/scripts/outputs.tf",
+      "sha256": "5b65e74408157be60a0eea7d1799a7971e97093e29b54ff2729ae05dd79df47c"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/scripts/preflight.sh",
+      "sha256": "841dc195aeec25c5d4734ca7b9dc9c5bdde8feac926e864225984a0a5f1289e5"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/scripts/setup.sh",
+      "sha256": "3b454e3fecf765267b0df82d61c48205feb844a3fd338cc29b404f957d1c7fcb"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/scripts/storage-class-nfs.yaml",
+      "sha256": "62afb398245232aeaea8b58dd2db87c092909ca6c1b5e41654eeae6c88e90413"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/scripts/system_node_capacity_test.sh",
+      "sha256": "23be5a4b24e16e727380a7ad7e59345d4c4607d5b96debff86b125aae637f09d"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/scripts/terraform.tfvars.example",
+      "sha256": "92f350c20c96398d937f06d5be34d5de3c8d14f7aba23a3732400aa05cfd118c"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/scripts/variables.tf",
+      "sha256": "53b483863457a2f014748faae0c6ce4eed423cd01e7c083c294159d1a08d92f3"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/scripts/versions.tf",
+      "sha256": "74c9ce470e07727a342e76cb8cdc898710680b28d630b20b17c765ffd65b87b5"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/terraform/main.tf",
+      "sha256": "a378c5c58d376c392a954f167765e3e818151ae6622a60fd675f568afdaedb38"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/terraform/modules/README.md",
+      "sha256": "a10338dfd44f4aa3151ed562717fabd7715c894129306587c7c99a7d853131fc"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/terraform/outputs.tf",
+      "sha256": "b3f02690da4adf7e65fea1806550f639cbcf48e97f3cd8f808608ff69e44c3e8"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/terraform/prerequisites/az-sub-init.sh",
+      "sha256": "efa3b85b4191b235a226b915e413249cff6dbee2c6119c69f38d9b559cefdf95"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/terraform/prerequisites/install-terraform.sh",
+      "sha256": "23a969fbb349d1ea653d4348df88dce6ea8ded49aff8272ec37f335f5d38dcce"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/terraform/prerequisites/register-azure-providers.sh",
+      "sha256": "22dfacb6a0c80d5371253e58f7f0b9b8015e5bb75ddbf8223642e11b8b12019f"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/terraform/prerequisites/robotics-azure-resource-providers.txt",
+      "sha256": "ea18c6fafe51cb16e3f6762fcbbf64c55c34778ab6713e770799f06b2f689c54"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/terraform/terraform.tfvars.example",
+      "sha256": "d482db0e0e2d61779d16d8056d6512d8065a1154217d04505fc2d34d46c65684"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/terraform/variables.tf",
+      "sha256": "09f29befc7368500d06838b8220ba299d8961f180761564deea2905eaadea172"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-azure/terraform/versions.tf",
+      "sha256": "29e224787be6a7d0afc9dd0cce3607c766944b417969badc5b5dbe66d900f724"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-microk8s/reference.md",
+      "sha256": "69bc5b3868a5115cf1dc52440a8db46d8f55937aadaade7c5123aab70fd890dd"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-microk8s/runtimeclass-nvidia-runc.yaml",
+      "sha256": "920220557f7512ae8d68a8bbe2b148b8f92258a19702438d5ba45d3eadfebfe3"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/cluster-microk8s/scripts/preflight.sh",
+      "sha256": "059c889c0bb2d8f23af58eed34eaf6b440f5b681a7abed54567608040650da28"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/driver/reference.md",
+      "sha256": "978382e76b2085691c029d0bc70c69fdda312de8fe2bcc3adc83f8d92c18466a"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-azure/reference.md",
+      "sha256": "5a84c0cee2b84db77639471d88a03c9398ce6db1dfe737c1839ace394ee94415"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-azure/scripts/install.sh",
+      "sha256": "a4ff0d196902cc06282aef5331f20460df08401eeda963f91dc64c7ea0967a4b"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-azure/scripts/preflight.sh",
+      "sha256": "c043766261e948a90a84d0e29b63c12eb0ba51faa85c51713324c07c6c048f9c"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/cosmos-predict/nimservice.yaml",
+      "sha256": "54628e8842b0dc80d26186a2d6a07a4669470487c7b944547f3eb32b564a2cbe"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/cosmos-reason/nimservice.yaml",
+      "sha256": "cf93b31cfe1d212b7e613ee5995fadad717dae12fd52c1121511ef67393e813b"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/cosmos-transfer/nimservice.yaml",
+      "sha256": "c17f847e249b200aaeac1379118117a0c3e7c34fdc81f0614a909921588f248e"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/qwen-image-edit/nimservice.yaml",
+      "sha256": "2ed2ba0f70ee664a85b47275a6b7f7adbda04361a8e893a6312b2de74322df12"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/qwen-image-edit-nvpcb-ovsl2sl/nimservice.yaml",
+      "sha256": "09bff855d8fd6d48ec1a7e54a524f2e61f28393baeb1caebd1b2695662e05281"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/qwen25-14b/hf-download-job.yaml",
+      "sha256": "3bb3d3dbba87a5ed56ed12116dd703d95b5ac17decf364c958d6dcf7e294c243"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/qwen25-14b/nimservice.yaml",
+      "sha256": "ce26edd0f0b0db5b979ab93e7fe0dc5b33f4d77a9e1673697827a61c6afe9e33"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/qwen25-14b/pvc.yaml",
+      "sha256": "4104dc612caead9ef86aadbfeb10a055131f01ee20f89f8d951d0c2dfd0b33e9"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/qwen3-235b/hf-download-job.yaml",
+      "sha256": "573e024b552ed3e8346f69bfc4733e5b3484278b17497bb18a6b8e94022d1ccc"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/qwen3-235b/nimservice.yaml",
+      "sha256": "dca9c240d451c9ddeb432115c107cae6ad21fa9fb8c9b3e59b264a69b8a39dfd"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/qwen3-235b/pvc.yaml",
+      "sha256": "66f317c6926314627b3bff6b5ebcc9135fcdd2f42e793a4ce8652bb82d137c6f"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/qwen3-vl/hf-download-job.yaml",
+      "sha256": "96f6571feedcd104d0d9629a5a34dbd028b3f019cee9ef60ae543d5ea263b1dd"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/qwen3-vl/nimservice.yaml",
+      "sha256": "7c35ba1d48c5ce09e4542c48158bf1489e094263b419c28b84d9ed5ce7b25439"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/nims/qwen3-vl/pvc.yaml",
+      "sha256": "f46f01841152ae7c64ef518e32634f8022dbb1bd85f6e03b79d6cf7d04910103"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/reference.md",
+      "sha256": "35cb906c4adf883b82249d24377d42e82fbc819e4bac008746b79301dad29e93"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/scripts/install.sh",
+      "sha256": "56faa60e3f5fc2b41c3006afac42ed5998f58f255a43811bd22be91283436ba5"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nim-operator/scripts/preflight.sh",
+      "sha256": "2585ac67061f7d4b39c4489641230f68c01b7b0fd7acecaf5ef0650bf1dbdc33"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nvcf/reference.md",
+      "sha256": "47c0358be297dacc62772bdc1b5f2bd04e5d08264f84c7a9e00dc163c8df9e21"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/inference-nvcf/scripts/preflight.sh",
+      "sha256": "3ae038c303d631da1376b66d8aed84c142532662cb7c5ab70f848b82052babc9"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/openclaw-azure-login/reference.md",
+      "sha256": "0c7b4986a3e483b8e043e2a1503752dd2bbfb67c9cec110d33ca9b84658c9888"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-azure/reference.md",
+      "sha256": "fcb019e1e3269d0e05a0d34166cebe121dc67a6e16f0091d46de46228afc000a"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-azure/scripts/preflight.sh",
+      "sha256": "07834d2ecf9fc73bbd5d5078a6a3417596fffaae1b25138c067caa65a84b53ea"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-cli/agents/logs-reader.md",
+      "sha256": "1725bd75f53da3813151140bf6b36ba4cd04d40c4dac6dd3ca342d43e8ae80c7"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-cli/agents/workflow-expert.md",
+      "sha256": "988b6892ed8eaf453b9b6c40077664d36a2e88250fd1470c60c497a1398cc192"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-cli/reference.md",
+      "sha256": "0e10eccf44d42bd3d7d88685543a3be41093aff28c393c4705284f474ed039b8"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-cli/references/advanced-patterns.md",
+      "sha256": "5a1ffa1c2b5adc4a3a16ef022a3499e638d05858bad56fa48aa07f322b375f36"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-cli/references/cli-commands.md",
+      "sha256": "db56a656912c56431db1bc439350a6ef35faa4370da1ca6ec0096f47fdff3005"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-cli/references/workflow-patterns.md",
+      "sha256": "57c9e2519be6b309632d86dd2511d41de79a28175373fed8778a2ee24149fd6c"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-cli/references/workflow-spec.md",
+      "sha256": "bd302be43206cc827a1091ac6bc2f880434d8fcc17e145d62b715e1674c4795e"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-cli/scripts/preflight.sh",
+      "sha256": "37294a08a6eb037f87ebeb0300fac44e94fe9ab5795f48092024a1dc7339a28c"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-cli/tests/orchestrator-runtime-failure.md",
+      "sha256": "bf58efbd7eaa636c6f84649f76dbde26b569a8531a61b83942e056587e3a7a0c"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-k8s/reference.md",
+      "sha256": "d7153357b5b14b58046f4eb6aeeb685739482114b899ffd9fb0d21d5b4b449d3"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/components/osmo-k8s/scripts/preflight.sh",
+      "sha256": "1a91d0dcd4ce4d4b75d753caa23567254f4fc187552471d32cc8ad61b5eacaea"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/evals/evals.json",
+      "sha256": "18031bcd1ef5f5ee1b36f5fbd2692e956959fa40e8809c660bb902eee0813f80"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/skill-card.md",
+      "sha256": "e09a52b957905a02d95337e2c376135e3330cb0c4cd1c5b63e9844a71c31feb8"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md",
+      "sha256": "dfee683cda96f69ccf5b629f83c8cf5c943e0b7f502b9434733d0262fe9c7698"
+    },
+    {
+      "path": "skills/physical-ai-infrastructure-setup-and-resilient-scaling/skill.oms.sig",
+      "sha256": "d88667da53a233c00a8cc4c65b8945bfe6eaf8f901e1d44b2839809dcdcf91df"
+    },
+    {
+      "path": "skills/physical-ai-neural-reconstruction/agents/openai.yaml",
+      "sha256": "3753a39b7928b82bf72d80d661be707703981df3171b868ec39170454a82cf41"
+    },
+    {
+      "path": "skills/physical-ai-neural-reconstruction/BENCHMARK.md",
+      "sha256": "75eeb03b4ecb134ed99ef90eccc285216bb71eec63def5b13f9b962ff8c2d9cc"
+    },
+    {
+      "path": "skills/physical-ai-neural-reconstruction/evals/evals.json",
+      "sha256": "f09b3ddb79cd5aaf1db918dcfd373ca2ed4648b129c2c747f97df9ce0af55a47"
+    },
+    {
+      "path": "skills/physical-ai-neural-reconstruction/references/maintenance.md",
+      "sha256": "f5bd3e44ef7b0f8868a71a99ba0c1147eaede378509ffb29b3495fd709d5258e"
+    },
+    {
+      "path": "skills/physical-ai-neural-reconstruction/references/mix-ups.md",
+      "sha256": "25a7720096725f74f6c917b2b7e020781f9760acbad576ab977f080848434383"
+    },
+    {
+      "path": "skills/physical-ai-neural-reconstruction/references/secrets-handling.md",
+      "sha256": "a4646b45ca44b85bdd3c35dae5ebcd8cfdaf2634d56194a10b497e0500fd3eab"
+    },
+    {
+      "path": "skills/physical-ai-neural-reconstruction/references/teardown.md",
+      "sha256": "732c89f6cc36a5d4a47cdc96ec2b28ce6cca25be3c63a98e7272bc49f1729446"
+    },
+    {
+      "path": "skills/physical-ai-neural-reconstruction/references/upstream-fetch.md",
+      "sha256": "9345a3709f49bee93cbe0d367b3b0ab273ab501c6310c45052f53132494b5ce3"
+    },
+    {
+      "path": "skills/physical-ai-neural-reconstruction/references/workflows.md",
+      "sha256": "cca48e4680af456aa91cbdf94d83514b133537558b80ff98bd811eb772c362f7"
+    },
+    {
+      "path": "skills/physical-ai-neural-reconstruction/skill-card.md",
+      "sha256": "b17baa10b8239a030fa4310f40a9b771bf11a37c778eb26287ab7db153f6794c"
+    },
+    {
+      "path": "skills/physical-ai-neural-reconstruction/SKILL.md",
+      "sha256": "05e782c13c513092a300a099f2ddceb4216fa0f2a9fe0a118256d254588287ac"
+    },
+    {
+      "path": "skills/physical-ai-neural-reconstruction/skill.oms.sig",
+      "sha256": "c24e8af96ff697c5e86a182cc3e52b3169081e9a777cdaaf0ac719b517aa41f9"
+    }
+  ]
+}

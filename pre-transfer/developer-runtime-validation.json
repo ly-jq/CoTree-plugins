@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-10-14T07:35:25.846Z",
+  "results": {
+    "elyra.code-modernization": {
+      "status": "isolated-developer-runtime",
+      "packageDigest": "5ba7bdb24d0e7502b6da7e79f315efd0e3c35dd95d9b1ac14684f40b4c9b7029",
+      "nativeSkills": 6,
+      "sourceReferences": 21
+    },
+    "elyra.hookify": {
+      "status": "isolated-developer-runtime",
+      "packageDigest": "9f3f8152f372514b62720c18b1f23eec60005df4923afd6400712fe2bd3e2e5e",
+      "nativeSkills": 2,
+      "sourceReferences": 6
+    },
+    "elyra.ralph-loop": {
+      "status": "isolated-developer-runtime",
+      "packageDigest": "7370134569a5b70634439169f14541c45c82aa4dfa398f27668ab4fd79c1706c",
+      "nativeSkills": 3,
+      "sourceReferences": 4
+    },
+    "elyra.example-plugin": {
+      "status": "isolated-developer-runtime",
+      "packageDigest": "4c2e461af1b443904ca347f896a9cff767b2350cac9670a098076e999aa0ea4e",
+      "nativeSkills": 2,
+      "sourceReferences": 3
+    }
+  },
+  "artifacts": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch26\\runtime-check\\source-coverage.json",
+      "sha256": "7fe1370f98c4b48a1c123a37f52e2aa99dea570c71e8c495a5e6656b39c09ac5"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch26\\runtime-check\\host-hook-child.mjs",
+      "sha256": "48ad81f0f5090ca20849070cd04a9abd1f8d03b51997f8ab0118e2247f0c5d6a"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch26\\runtime-check\\hook-blocked.json",
+      "sha256": "9a4d34a1236664a42d9e7d22618a1f0e5a3722493c0f355e2c85782304ce4126"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch26\\runtime-check\\hook-allowed.json",
+      "sha256": "c863b796116534f57ec6b0c352623468bc01eb195f6ef8cf7d53c1537e990fc6"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch26\\runtime-check\\hook-events.json",
+      "sha256": "0746f1131c537a05ad1f8bbf9e2c266545715a74657f848cadc964c43d3b660c"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch26\\runtime-check\\old.out",
+      "sha256": "ab13b6d5e7bebc2b6a26734d02c2480287f724b12c797f0c0f0f8a0ff019fcaa"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch26\\runtime-check\\new.out",
+      "sha256": "653af06f6edc1c2d1efecaff19d5ac5568fb2a99e8b96c0a0b230a72e2134ea0"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch26\\runtime-check\\cases.json",
+      "sha256": "56d17a5d4c38652a4e7dd6804094a8b920ddc9b0655bef690596877c28ec5122"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch26\\runtime-check\\comparison-receipt.json",
+      "sha256": "a375c6f0e860301184c52a6d3e32c20a01958a8a2af13b08340e4fa764fba8bc"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch26\\runtime-check\\comparison\\report.html",
+      "sha256": "3ab8d690da277bf56912c5f0a4cb912f9ea381e30ec6fb6685ec00790c99fb2d"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch26\\runtime-check\\comparison\\comparison.json",
+      "sha256": "a375c6f0e860301184c52a6d3e32c20a01958a8a2af13b08340e4fa764fba8bc"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch26\\runtime-check\\example-echo.json",
+      "sha256": "18e349d8c3a6945746d64c0b32427a2c4344e926844a13e090b19e3122e0feb6"
+    }
+  ],
+  "hostValidation": {
+    "bundledChild": true,
+    "directWorkspaceReadGranted": false,
+    "exactDigestTrust": "temporary isolated profile",
+    "hooksBlockedAndAllowed": true
+  },
+  "externalRequests": 0,
+  "realModelTasks": false,
+  "limitations": [
+    "Ralph uses the existing Session contract; no independent loop or background wakeup was started.",
+    "Modernization fixtures compare supplied bytes, not a real migrated application."
+  ]
+}

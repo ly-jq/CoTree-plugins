@@ -1,0 +1,43 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.language-services",
+  "name": "语言服务",
+  "version": "0.2.0",
+  "description": "用 CoTree 原生 LSP 配置和查询十二类本地语言服务器，核对真实语义与诊断。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.language-services.setup",
+      "description": "配置或排查 CoTree 本地语言服务的服务器、工程根和工具链。",
+      "path": "skills/setup/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.language-services.navigate",
+      "description": "通过真实 LSP 获取定义、引用、类型、符号、调用关系或重命名预览。",
+      "path": "skills/navigate/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.language-services.diagnose",
+      "description": "解释语言服务器诊断，区分版本匹配、索引未完成和工具链故障。",
+      "path": "skills/diagnose/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "9ed83fef0c4f30c06cb38e3fb80e9afb442ee1de715faae790c331dde20835d5"
+  }
+}

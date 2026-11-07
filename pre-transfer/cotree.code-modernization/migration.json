@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.code-modernization",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 26,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "code-modernization",
+      "repository": "claude-plugins-official",
+      "path": "plugins/code-modernization",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "1de783f8dbc3a281d2baf1f7e7d3e551c50992a2c23d26dffaf7bf55749cd923",
+      "upstreamVersion": "1.0.0"
+    }
+  ],
+  "changes": [
+    "13命令和8角色归并为6个原生工作流，保留完整领域和资源。",
+    "新增跨平台有界证据比较与HTML，去除原宿主强制审批/多代理编排和独立完成门。"
+  ],
+  "limitations": [
+    "本地对比和CoTree入口可验证，真实遗留系统、目标技术栈及生产切换需项目级验收。",
+    "原宿主可视化面板改为可分享本地HTML；不复制其状态库和强制签署流程。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "commands/modernize.md": "assess；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/modernize-preflight.md": "assess；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/modernize-assess.md": "assess；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/modernize-map.md": "assess；领域内容完整归档，执行遵循CoTree合同。",
+    "agents/legacy-analyst.md": "assess；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/modernize-extract-rules.md": "rules；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/modernize-review.md": "rules；领域内容完整归档，执行遵循CoTree合同。",
+    "agents/business-rules-extractor.md": "rules；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/modernize-brief.md": "plan；领域内容完整归档，执行遵循CoTree合同。",
+    "agents/architecture-critic.md": "plan；领域内容完整归档，执行遵循CoTree合同。",
+    "agents/version-delta-analyst.md": "plan；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/modernize-uplift.md": "migrate；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/modernize-transform.md": "migrate；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/modernize-reimagine.md": "migrate；领域内容完整归档，执行遵循CoTree合同。",
+    "agents/uplift-migrator.md": "migrate；领域内容完整归档，执行遵循CoTree合同。",
+    "agents/scaffolder.md": "migrate；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/modernize-verify.md": "verify；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/modernize-harden.md": "verify；领域内容完整归档，执行遵循CoTree合同。",
+    "agents/test-engineer.md": "verify；领域内容完整归档，执行遵循CoTree合同。",
+    "agents/security-auditor.md": "verify；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/modernize-status.md": "status；领域内容完整归档，执行遵循CoTree合同。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

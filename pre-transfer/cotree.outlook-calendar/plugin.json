@@ -1,0 +1,62 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.outlook-calendar",
+  "name": "Outlook Calendar",
+  "version": "0.2.0",
+  "description": "在 CoTree 中读取 Outlook 日程和忙闲，准备会议，安排、改期、取消或回复邀请。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.outlook-calendar.connect",
+      "description": "配置 Outlook Calendar 的独立 Graph OAuth 并确认账户权限。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.outlook-calendar.agenda",
+      "description": "读取 Outlook 时间窗口和重复实例，解释忙闲与邀请状态。",
+      "path": "skills/agenda/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.outlook-calendar.availability",
+      "description": "比较 Outlook 组织账户的空闲时间与会议约束。",
+      "path": "skills/availability/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.outlook-calendar.schedule",
+      "description": "创建或改期 Outlook 事件，保留重复规则、参与者和时区。",
+      "path": "skills/schedule/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.outlook-calendar.respond",
+      "description": "按组织者或参与者身份取消、接受、暂定或拒绝 Outlook 邀请。",
+      "path": "skills/respond/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.outlook-calendar.brief",
+      "description": "生成 Outlook 每日简报、会议准备与冲突说明。",
+      "path": "skills/brief/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "89abf5e62f48d8652d0aad13fde2bb447c2e0808cd51d3d1305e8d344296df8b"
+  }
+}

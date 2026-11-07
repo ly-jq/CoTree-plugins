@@ -1,0 +1,97 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.dropbox",
+  "name": "Dropbox",
+  "version": "0.2.0",
+  "description": "在 CoTree 中查找和整理 Dropbox 文件、管理分享与收集请求，按实际服务能力恢复版本或编辑 Paper。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "darkIcon": "resources/source-01/content/assets/logo-dark.png",
+    "readme": "README.md",
+    "screenshots": [
+      "resources/source-01/content/assets/screenshot-1.png",
+      "resources/source-01/content/assets/screenshot-2.png",
+      "resources/source-01/content/assets/screenshot-3.png"
+    ]
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.dropbox.connect",
+      "description": "配置 Dropbox 独立应用身份并核实用户、团队及 namespace。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.dropbox.find",
+      "description": "查找 Dropbox 文件与目录，保留分页、身份和匹配依据。",
+      "path": "skills/find/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.dropbox.inspect",
+      "description": "读取 Dropbox 元数据、实际内容及分享状态。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.dropbox.organize",
+      "description": "按授权创建 Dropbox 目录、复制或移动文件，并跟踪后台工作。",
+      "path": "skills/organize/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.dropbox.share",
+      "description": "检查或创建 Dropbox 分享链接，核实生效受众和邀请结果。",
+      "path": "skills/share/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.dropbox.collect",
+      "description": "创建或检查 Dropbox 文件请求，核对上传目的地与截止时间。",
+      "path": "skills/collect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.dropbox.cleanup",
+      "description": "按精确清单清理 Dropbox 对象并记录共享影响与后台结果。",
+      "path": "skills/cleanup/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.dropbox.recover",
+      "description": "按实际工具和保留窗口查询历史并恢复 Dropbox 指定版本或目录。",
+      "path": "skills/recover/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.dropbox.paper",
+      "description": "在当前服务支持时读取或编辑 Dropbox Paper 文档与评论。",
+      "path": "skills/paper/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "dropbox",
+      "transport": "streamable-http",
+      "url": "https://mcp.dropbox.com/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_DROPBOX_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "243d4e4f5f2f18425dc6826877c78388b3e7d26241d0a8e6c3b536f3152c62c8"
+  }
+}

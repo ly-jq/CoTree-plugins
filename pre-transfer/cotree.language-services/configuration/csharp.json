@@ -1,0 +1,10 @@
+{
+  "lsp": {
+    "servers": {
+      "csharp": {
+        "command": "csharp-ls",
+        "args": []
+      }
+    }
+  }
+}

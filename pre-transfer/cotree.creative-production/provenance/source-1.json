@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.creative-production",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "creative-production",
+    "repository": "plugins",
+    "path": "plugins/creative-production",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "549cb18be5f6700f31c19c8f1ca0ff84b86c69c321739b7b4002d7bad201cd31",
+    "upstreamVersion": "0.1.25"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "内容方法与 MCP 文本工具可保留；MCP Apps UI 桥未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/intake/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/intake/SKILL.md",
+      "sourceMetadata": {
+        "name": "intake",
+        "description": "Use when Creative Production is explicitly invoked or mentioned without a concrete request, when the user asks what Creative Production can do, or when the user wants help getting started without enough context to choose a workflow."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/produce/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/produce/SKILL.md",
+      "sourceMetadata": {
+        "name": "produce",
+        "description": "Use when the user wants to create, explore, adapt, refine, polish, or review visual creative such as campaigns, ads, social posts, product imagery, scenes, offers, logos, brand systems, styles, charts, decks, or related marketing and design assets."
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#creative_production_mcp",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/creative_production_mcp"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "reference",
+      "reason": "Empty upstream app declaration; no connector to migrate."
+    }
+  ],
+  "copiedFiles": 103,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "45cc192f4b495f7556e8ff04bf34697325ba08fadadc35fb63366202298d5c9e"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "179c50aab7103411d18e16153491ba0000778dc195bc62e4052733017e824588"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "cf50d31113c064b12b6e5f97de778d1c86b67d75ba1f94b22961c7a47bab765a"
+    },
+    {
+      "path": "assets/composerIcon.svg",
+      "sha256": "317d375f98ab7b5e31a81d8921f869b71f395b6aa0dcd241d21b3142c174ce80"
+    },
+    {
+      "path": "assets/image-ad-library/packs/digital-product-core-ad-prompts.json",
+      "sha256": "ffb18dba8e5cfa2067693abc3684437d7aaceda420c6f46c51a23a21e8a4faf8"
+    },
+    {
+      "path": "assets/image-ad-library/packs/diverse-image-ad-archetypes.json",
+      "sha256": "f9fa4cbcf4acf4490ccb6240918cf3ab51dd81a541e7635afc071dde3d3923c2"
+    },
+    {
+      "path": "assets/image-ad-library/README.md",
+      "sha256": "355c2c1a4c13ddd096918bbaf2ff878d2b2db064a910ddce8460adca229da4e0"
+    },
+    {
+      "path": "assets/image-ad-library/registry-index.json",
+      "sha256": "b8c68fb4b650f6e324c59cf07cfab545672a24a267debac668561ccb87349c22"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "86aa0eec7dfe1379b699a3ac05421f1b9447752634817c44105eeab583c1ce97"
+    },
+    {
+      "path": "assets/offer-library/packs/cross-industry-product-ad-archetypes.json",
+      "sha256": "7fca936ac16e1f9ce67f36d03374102c5a13354e1e7f12b65b6d6cc331f50540"
+    },
+    {
+      "path": "assets/offer-library/README.md",
+      "sha256": "48828a26937dda78b103aa0742c7e6f5849595e18904cb71580be36e9ad67cc1"
+    },
+    {
+      "path": "assets/offer-library/registry-index.json",
+      "sha256": "504ef154b039418d689a20ec1fded7b301eccd43558d6d4422d2c79005d98cda"
+    },
+    {
+      "path": "assets/scene-library/packs/business-point-of-sale-scenes.json",
+      "sha256": "9bbbb29b85e5cfd2d62d8c8d7d45bf1066236c1f4e8a3268b49497777f35251a"
+    },
+    {
+      "path": "assets/scene-library/README.md",
+      "sha256": "bc56d9b6be2aede076002470288ec14982451ffd8d1e73c76cc833ec555801ea"
+    },
+    {
+      "path": "assets/scene-library/registry-index.json",
+      "sha256": "1e9f6c273607b730e91b410768f3ef913dca6ff79e9689606b6cecdc262b2ee0"
+    },
+    {
+      "path": "mcp/README.md",
+      "sha256": "56d880ab88a20adcb10e527dc20a448f019ec1fb405b04acdf08c54971921a4b"
+    },
+    {
+      "path": "mcp/server.bundle.mjs",
+      "sha256": "31e4af0ed402cdca2a588c3abebb9724be4b9b18e6d2e8b9e016a882e98f2884"
+    },
+    {
+      "path": "mcp/vendor/ext-apps-app-with-deps.js",
+      "sha256": "481165663faaecd905d7042bbdbc5d167164977a380f6091aa5d529ac63ed37f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4b824d47fede5a118a2d6f8740f32d23df9f320fc613779975c8714e24a17b16"
+    },
+    {
+      "path": "references/artifact-contracts.md",
+      "sha256": "a74713bbd8c54a95206897ab2047bdff842cc45de918e7f463dfed9ba0787354"
+    },
+    {
+      "path": "references/experience-contract.md",
+      "sha256": "4fc11a234397cde86658f8d694e62fed22c7a413eb3d16a16160ebc6e7d2a667"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "a053dd0560c9a82a7aa3d3e05b999520f1eee535beadbc57706c0668569ec78c"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "72d906fd4563cfe37cc05c3815f7ea8989de5caacd14c2b153fcac0fc3cf634c"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "sha256": "60721c66859f7de857c1045e2050648cdd4d10debfe28510256a69ed3aaf98ed"
+    },
+    {
+      "path": "scripts/probe-mcp.mjs",
+      "sha256": "d42af17eddfdf170aaa12f44c63f17742b802248e35dbf2b6842741f355a7723"
+    },
+    {
+      "path": "scripts/review_renderer.py",
+      "sha256": "a9a4b989969d638ca66ebc066da1f37fbd7a7a32a91e2961d7a1d6ecfc36ac41"
+    },
+    {
+      "path": "skills/intake/agents/openai.yaml",
+      "sha256": "dda0237eb6c9e5960e98c6bfb2b691fd50b2b9e0e696041a1c175a73bea91202"
+    },
+    {
+      "path": "skills/intake/SKILL.md",
+      "sha256": "eabab50443081a54cf2a5650a6e664bad18e7bf0bdbdbfc418d522e91a9155ff"
+    },
+    {
+      "path": "skills/produce/agents/openai.yaml",
+      "sha256": "f5e88dfccb755e874c5967a046b0b8cd1628cba89bc2661b76d5942f0d872c0a"
+    },
+    {
+      "path": "skills/produce/helpers/ads/scripts/build_ads_explorer.py",
+      "sha256": "41be59fb1614a3414aa02bf327a1714f3b3f665f2ff04ee5f736a1eb1285b9c9"
+    },
+    {
+      "path": "skills/produce/helpers/logos/assets/logo-explorer-app/app.js",
+      "sha256": "bd3a4cb0195c8b09e1cb6b92b9b04e6f4e53a8b9cf59788960ee6b209ca66f7e"
+    },
+    {
+      "path": "skills/produce/helpers/logos/assets/logo-explorer-app/index.html",
+      "sha256": "0ca0280f4a10848de4c19c7973e20baf7090036cdfd44e643b0c8b6a29901dc7"
+    },
+    {
+      "path": "skills/produce/helpers/logos/assets/logo-explorer-app/server.mjs",
+      "sha256": "dc4abec78bc097b33d61434bde0f28b9ea6092216125c76570d7e23371d53787"
+    },
+    {
+      "path": "skills/produce/helpers/logos/assets/logo-explorer-app/styles.css",
+      "sha256": "ad76fb565635c74633a985d7190044d702800ced2d05677a064761ed91295b19"
+    },
+    {
+      "path": "skills/produce/helpers/logos/scripts/create_logo_explorer.py",
+      "sha256": "98d04a69a30f8c95d17c2f1967a7dd8901e36a87646fd3edabd36e94f029cdcc"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/app.js",
+      "sha256": "db8a539a4741388a4c1c3a25ebb1ac59010115ad32b499122f3d17cb52ff9662"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/codex-theme.css",
+      "sha256": "4ec6f3de2989714761c9657487a6d16c90b88ffb393fb8ead7b2d81fc73279b5"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-campaign-ideas-01.svg",
+      "sha256": "2795035373b6d9aea90b93ade597627c1cd37690e591e8e7d3dac398ee0a372f"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-campaign-ideas-01.webp",
+      "sha256": "2b3e4fb8d4536412e063234c31259f5b82f9b12cacf5083d8377929538112ac7"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-images-in-a-style-01.svg",
+      "sha256": "176348fc66c8f5963426e9392c737a848129d8c12a60bae87993499f6ea662b4"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-images-in-a-style-01.webp",
+      "sha256": "94c5485cbe9fb0ccfaf873fdcd0e582d6e0e72f9be220c3892b29c58fd0757fa"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-make-logo-from-scratch-01.svg",
+      "sha256": "56e0569932a86cc5b2695ac06324f7e58e4aae079601065d99be49ced228414f"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-make-logo-from-scratch-01.webp",
+      "sha256": "440fe643361a040ca7736e85933e86ec5dbe67111184be0f74e8d78f88cf739a"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-place-in-screen-01.webp",
+      "sha256": "10282b51191fcc6f4493a24b47b789c2a241e814996fda1a368e705f7a9c266c"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-place-product-01.svg",
+      "sha256": "1547e69715281d23d0fd1b02d519d5428cfb260af425c7d10ef0fedd5225b635"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-place-product-01.webp",
+      "sha256": "c03b030f20bd8f937f7104c872232c4d1f7c82407a78ac9c8184de17283dd895"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-product-detail-images-01.svg",
+      "sha256": "80437e73aa2234a49f68694f229bac1cd791c3a1dcb576d0eba0cbbf80ea9ed0"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-product-detail-images-01.webp",
+      "sha256": "3c7694bace7d33e34ea631514dddfe13db93ff61cdd4b19c1c643f6fa47a30e2"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-social-ads-01.svg",
+      "sha256": "e8b35ba6e1685ff8e206e234655a755a1d5f1b1ce94f9cc7229dc538dd32a025"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-social-ads-01.webp",
+      "sha256": "9cb49e809a3d75a230146d76df57d07a1a5af506505d77e5c45b4816f8c13f56"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-social-post-series-01.svg",
+      "sha256": "42f763e6dc11b4c180e89cdbf8b3948e76fa4ad2aadb90d959522664c137f121"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-social-post-series-01.webp",
+      "sha256": "b0736bae56b9d14f2791af924cce548498209f2b38bfebe2c9e0bda07df46210"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-template-assets-01.svg",
+      "sha256": "641b976d4b39a61741b3e785b1157700157ce48df36f0a817eb6834423443e5b"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/assets/bg-template-assets-01.webp",
+      "sha256": "09bf637dc200627c310af216ce7ed37f0c1f17cd846fb3a96c39b4bfc8aa8d3f"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/empty-state-grid.css",
+      "sha256": "4c375dccb4cfbcd935a5406db1689219550e1624bcc49a8ed4eea2d30d13b14c"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/empty-state-grid/empty-state-grid.js",
+      "sha256": "908aee2a3f99301e8f79993328c4a27220b4a65d668af4d054011cfaa6685464"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/generation-tile-state/generation-tile-state.css",
+      "sha256": "8537e938e0248b0f9af72c95a603c2034d2bec0b932262e7081a14de3e837150"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/generation-tile-state/generation-tile-state.js",
+      "sha256": "531a834df9ab5c6a20e434cb9eba76b15347185416267f2a60ee179baaff0384"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/starter-intake/starter-intake.css",
+      "sha256": "bbecf3ecf7de97c63a4649fa5c429c10a241ab2e6c0d834e02dfd875605e9a1f"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/components/starter-intake/starter-intake.js",
+      "sha256": "0a81f9e517630f2b16f879f22e2faf0e9d6fcf45cf280925752976ba4df24d49"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/generation-halftone-runtime.js",
+      "sha256": "fe519984856a2e47a2f1036d78e666cf1d1433224baa2d798c2b2144ae1c6545"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/index.html",
+      "sha256": "0f0282d45ccb3aab6a0861f9e6e2d789161a4a5ed346a1d5bbf794c240803a92"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/platform-icons.js",
+      "sha256": "f300a86e38bb0e2471cde18c47840fb4f3c3823403db397aa8aa9d96f61ae68a"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/server.mjs",
+      "sha256": "2f9d1e426db0188dbf1ffa5c4597de267bd62cd505858da2cfd313b19b4575ca"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-all-social-source-asset.jpg",
+      "sha256": "fdfdf8ce3a117e9737030255eaf6add75dbf0dbf766ef6cfa581bfe4676f0ef3"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-anvil-logo.jpg",
+      "sha256": "34aca907d0e50a2261b584874d100da123cde00fd7a75a31c07ed6a377541e6c"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-boutique-product-staged-photo.jpg",
+      "sha256": "7cc4d8237c91753a097a6920840cdbd2690664441edc0c21a12d24fadcc87cdb"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-cowboy-hat-phone-photo.jpg",
+      "sha256": "34cd226e46c6b8be43eeb365be2d516f6106e1b5844238799648e9abda2b7bed"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-device-staged-photo.jpg",
+      "sha256": "3bf6acfdcd35e7089faf2717c78ce711fec881885f0e46a581b927427f61d66a"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-multilingual-social-ad.jpg",
+      "sha256": "62a87d49bdf1311cb08c0cc1e5b7ddd2db01fb10ddb60d53becf04da6264eede"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-place-in-screen-hero.jpg",
+      "sha256": "b2119f1d0b37716b4cddd38fdc2c303b8757f0977ffce1f392708510b518699c"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-place-in-screen-laptop.jpg",
+      "sha256": "d2fcafade7980e9fac3429ab26428ab4d0364faef4e4057353e86d316e9b9d85"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-place-in-screen-phone.jpg",
+      "sha256": "a25bd56063616929d596c3dd0a6d6d267e2497ccd1bffeaff23d8355a9969641"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-product-swap-social-ad.jpg",
+      "sha256": "c9d20208a327d9fbc4485be398886bec5337406af5b0e78bec07fc325446458d"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-seasonal-social-ad.jpg",
+      "sha256": "b9c85fa3d6d0642a40984191074f419689698c780bf39411c9697e424dd76aa2"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-square-launch-graphic.jpg",
+      "sha256": "c613a2af4bb8b9506612ea624961f344f6b9a7dcfba6372e0113b1e14027bebe"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-suit-phone-photo.jpg",
+      "sha256": "54897f8a5a5bb963ba959fed25c2b81763ad807b6d605dd4ae5601ac14d4ea33"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-waterslide-product-phone-photo.jpg",
+      "sha256": "e0882414ed9f1564ba6aabbd77ef151f56f6bb55de23db140e2241cec06691c6"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-assets/suggestion-youtube-banner-source-asset.jpg",
+      "sha256": "95fe1c38c2a84aa6d5d8ce2fd51863650757f9a537e99aa3d8885dc07da2e921"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/starter-intake-runtime.js",
+      "sha256": "550d2d96e6a99f1c0fdc9de690f0b0b89944a60ed3835a566d814c74fcf3ef99"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/styles.css",
+      "sha256": "fc2b1478662f050805dd1b684326706173c1b18acbe9bcbb6010ca2bbb7d6d6a"
+    },
+    {
+      "path": "skills/produce/helpers/moodboards/assets/mood-board-app/theme.js",
+      "sha256": "d3d1130fec021f5d77c9f763e959fbc5b0d33ff6765ea493b37c79d626eabbe2"
+    },
+    {
+      "path": "skills/produce/helpers/offers/references/packs/digital-product-placements.json",
+      "sha256": "447a7c8d03f05197bd9bef27ad3fff2b1e8cb0c876171ecd2cbd7092c84e90db"
+    },
+    {
+      "path": "skills/produce/helpers/offers/scripts/build_offer_explorer.py",
+      "sha256": "3f3688671eea8f0ca12643d90639d21e6c2762317f7272495a24938d791f8c65"
+    },
+    {
+      "path": "skills/produce/helpers/README.md",
+      "sha256": "6743a9725af484d7b8abcf121fcd22d2acf3b7dde11ca7f143de3d9be753bfc7"
+    },
+    {
+      "path": "skills/produce/helpers/shots/scripts/create_shot_explorer.py",
+      "sha256": "e28cf9dd8652ed38c5fd8f657253625535578554c2d95982661397c913347c9c"
+    },
+    {
+      "path": "skills/produce/helpers/styles/assets/style-explorer-app/app.js",
+      "sha256": "07ab2dd7df47e49c47d4924048ae49a1829f3854417bc8fee352552983e250dd"
+    },
+    {
+      "path": "skills/produce/helpers/styles/assets/style-explorer-app/index.html",
+      "sha256": "02b8e63a749cfbb72c3598f1e122f5a00d60a5f9020d24c2871d34957b588c50"
+    },
+    {
+      "path": "skills/produce/helpers/styles/assets/style-explorer-app/server.mjs",
+      "sha256": "db00c66071fdf0504f0ce8db1b46262dc9614ecd956be51c99c8ffdf5cf04155"
+    },
+    {
+      "path": "skills/produce/helpers/styles/assets/style-explorer-app/styles.css",
+      "sha256": "c6e6ed2decd385c5024ff0fbf65653b78db424c14f805233386f840a2705467d"
+    },
+    {
+      "path": "skills/produce/helpers/styles/scripts/create_style_explorer.py",
+      "sha256": "860548d7a22251dca21f0e6842c0564bdecb57ce2165a80fe1342b018a6070ef"
+    },
+    {
+      "path": "skills/produce/references/board-runtime.md",
+      "sha256": "9e9c41b2eb60e26c2f6948e90a74c079ca5cdfa5fbbdc5a299a801ea2acd69d0"
+    },
+    {
+      "path": "skills/produce/references/contracts/deterministic-exports.md",
+      "sha256": "53f2b5e224fe77b1c5480777cf38ca0fc964012b88b076d6f50eb1f69ff4c6bc"
+    },
+    {
+      "path": "skills/produce/references/contracts/exact-content.md",
+      "sha256": "926b1ecfb71d7eac04459c386958498e2919fa6e41b43de2def71e9830d1f7f8"
+    },
+    {
+      "path": "skills/produce/references/contracts/source-preservation.md",
+      "sha256": "a430d78007b49d9eb1479a5faa8c8f57604e638b6429c4f0368a86de1fe4de37"
+    },
+    {
+      "path": "skills/produce/references/generation/image-building-strategy.md",
+      "sha256": "ceb0ef11dc25973ec8dcf367e65da2ce513dc164c33fcbbeed3c64650c00eacb"
+    },
+    {
+      "path": "skills/produce/references/modes/ads.md",
+      "sha256": "d113e9c0aa47954acd0770932814007bb1dae5482408fe62e10e0dd192ef1ffe"
+    },
+    {
+      "path": "skills/produce/references/modes/charts.md",
+      "sha256": "9dd0c827a672123451bc297e648ec311609ddcceda192a6e9120128d5f764f65"
+    },
+    {
+      "path": "skills/produce/references/modes/logos.md",
+      "sha256": "ca1b2119d049e2358d381c430b8fad458b45c556b9b2a118fed81ac337b8a920"
+    },
+    {
+      "path": "skills/produce/references/modes/offers.md",
+      "sha256": "d6421db78497eb84fd1d4440b69eab05dd3120329c6444ac274c8a794b08105a"
+    },
+    {
+      "path": "skills/produce/references/modes/positioning.md",
+      "sha256": "f89645d694ce081deeabb32e11b9e3baad279e3c5b07b281bd1c95123abdb5eb"
+    },
+    {
+      "path": "skills/produce/references/modes/scenes.md",
+      "sha256": "d393d219bc8f5585284edbcc7c511d984c7bce1804f89e9184857d68acde8c3c"
+    },
+    {
+      "path": "skills/produce/references/modes/shots.md",
+      "sha256": "6088ef45730ef4efd231cfb7ba14c2afa8545e09e1057ea800c5a94a8cbb89e9"
+    },
+    {
+      "path": "skills/produce/references/modes/styles.md",
+      "sha256": "4a67a9c75a112d3a3a055ec994ac5440198dd6da69382f2bfea052ed0a208e40"
+    },
+    {
+      "path": "skills/produce/references/review-renderer.md",
+      "sha256": "33f66082a490b20e1dd4e393fc981a1fc834ba68f98cb35416cffb1453a00157"
+    },
+    {
+      "path": "skills/produce/SKILL.md",
+      "sha256": "dcb7f7a1d4693805b5572e4b117e6bff853bab451935620c48f59e287411c34c"
+    }
+  ]
+}

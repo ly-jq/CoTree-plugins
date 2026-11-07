@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.airtable",
+  "version": "0.2.0",
+  "category": "团队协作与知识",
+  "priority": 0,
+  "batch": 12,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "airtable",
+      "repository": "plugins",
+      "path": "plugins/airtable",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "eb49b280ce1ab14fe2095e386b1408fa7e6872d68f6e5d344c0cf48a6075bc86",
+      "upstreamVersion": "6.0.1"
+    }
+  ],
+  "changes": [
+    "三个来源技能改为七个 CoTree 工作流，移除来源专用 CLI 安装和固定 client_id，唯一官方 MCP 直接接入。",
+    "保留原数据模型 / 筛选方法，补齐字段 ID、choice ID、界面权限、批量读写及离线筛选准备器。"
+  ],
+  "limitations": [
+    "已适配原生 Skill 与官方 MCP 声明；真实账户读写、权限 / 过期恢复仍待验收。静态 headersEnv 不实现 OAuth 注册、登录、刷新或撤销，不读取来源宿主会话。",
+    "自动化、接口和 schema 操作取决于实际 MCP 工具、套餐和用户权限；离线筛选准备不证明远端接受或查询结果完整。",
+    "本地筛选准备器只覆盖记录筛选的已知运算符子集，服务新增 schema 仍需读取实际工具，不把本地不支持等同远端不支持。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "airtable-cli / dynamic discovery / auth": "connect：唯一官方 MCP，独立 PAT 或 OAuth；ToolSearch 替代来源 CLI，未复制 client_id。",
+    "airtable-overview / bases tables records views interfaces": "inspect / schema：真实 base / table / field / view 与界面权限模型。",
+    "airtable-filters / nested conditions / field types": "search + filter-guide.md + 离线 schema 筛选准备器；保留完整来源方法。",
+    "read write / table field management": "records / schema：批量边界、选择与关联字段、只改授权字段、读回及失败恢复。",
+    "automations / analysis": "automate / report：草稿与启用分离，来源数据、分页及汇总口径可追溯。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.ralph-loop",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 26,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "ralph-loop",
+      "repository": "claude-plugins-official",
+      "path": "plugins/ralph-loop",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "49fc8f9708b2fb002c3d01d8a0becb404a04b5a99e756907d071b1767d16a417",
+      "upstreamVersion": "1.0.0"
+    }
+  ],
+  "changes": [
+    "原Stop重入循环改为CoTree主模型持续工作与原生取消恢复。",
+    "保留来源教学，移除完成口令判定和第二份循环状态。"
+  ],
+  "limitations": [
+    "工作持续性受宿主运行预算、可用工具和用户取消约束；无自动后台唤醒。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "commands/ralph-loop.md": "continue；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/help.md": "continue；领域内容完整归档，执行遵循CoTree合同。",
+    "README.md": "status；领域内容完整归档，执行遵循CoTree合同。",
+    "commands/cancel-ralph.md": "cancel；领域内容完整归档，执行遵循CoTree合同。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

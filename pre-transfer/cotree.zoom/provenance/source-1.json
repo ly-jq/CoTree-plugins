@@ -1,0 +1,3731 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.zoom",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "zoom",
+    "repository": "plugins",
+    "path": "plugins/zoom",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "081617146893bb17c4fa80037915b24e308a765ce002460da3a2a999f489f8f1",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_ZOOM_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/build-zoom-bot/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/build-zoom-bot/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-zoom-bot",
+        "description": "Use when building bots."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/build-zoom-meeting-app/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/build-zoom-meeting-app/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-zoom-meeting-app",
+        "description": "Use when embedding meetings."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/choose-zoom-approach/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/choose-zoom-approach/SKILL.md",
+      "sourceMetadata": {
+        "name": "choose-zoom-approach",
+        "description": "Use when choosing architecture."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/cobrowse-sdk/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/cobrowse-sdk/SKILL.md",
+      "sourceMetadata": {
+        "name": "zoom-cobrowse-sdk",
+        "description": "Use when using Cobrowse."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/contact-center/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/contact-center/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-zoom-contact-center-app",
+        "description": "Use when using Contact Center."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/debug-zoom-integration/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/debug-zoom-integration/SKILL.md",
+      "sourceMetadata": {
+        "name": "debug-zoom-integration",
+        "description": "Use when isolating failures."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/debug-zoom/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/debug-zoom/SKILL.md",
+      "sourceMetadata": {
+        "name": "debug-zoom",
+        "description": "Use when debugging issues."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/general/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/general/SKILL.md",
+      "sourceMetadata": {
+        "name": "zoom-general",
+        "description": "Use when comparing products."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/meeting-sdk/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/meeting-sdk/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-zoom-meeting-sdk-app",
+        "description": "Use when using Meeting SDK."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/oauth/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/oauth/SKILL.md",
+      "sourceMetadata": {
+        "name": "zoom-oauth",
+        "description": "Use when implementing OAuth."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/phone/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/phone/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-zoom-phone-integration",
+        "description": "Use when building Phone."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/plan-zoom-integration/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/plan-zoom-integration/SKILL.md",
+      "sourceMetadata": {
+        "name": "plan-zoom-integration",
+        "description": "Use when planning Zoom integrations."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/plan-zoom-product/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/plan-zoom-product/SKILL.md",
+      "sourceMetadata": {
+        "name": "plan-zoom-product",
+        "description": "Use when choosing products."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/probe-sdk/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/probe-sdk/SKILL.md",
+      "sourceMetadata": {
+        "name": "probe-sdk",
+        "description": "Use when using Probe SDK."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/rest-api/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/rest-api/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-zoom-rest-api-app",
+        "description": "Use when calling REST APIs."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/rivet-sdk/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/rivet-sdk/SKILL.md",
+      "sourceMetadata": {
+        "name": "rivet-sdk",
+        "description": "Use when using Rivet SDK."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/rtms/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/rtms/SKILL.md",
+      "sourceMetadata": {
+        "name": "zoom-rtms",
+        "description": "Use when using RTMS."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/scribe/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/scribe/SKILL.md",
+      "sourceMetadata": {
+        "name": "scribe",
+        "description": "Use when using Scribe."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/setup-zoom-oauth/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/setup-zoom-oauth/SKILL.md",
+      "sourceMetadata": {
+        "name": "setup-zoom-oauth",
+        "description": "Use when setting up OAuth."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/start/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/start/SKILL.md",
+      "sourceMetadata": {
+        "name": "start",
+        "description": "Use when starting Zoom work."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/team-chat/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/team-chat/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-zoom-team-chat-app",
+        "description": "Use when building Team Chat."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ui-toolkit/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ui-toolkit/SKILL.md",
+      "sourceMetadata": {
+        "name": "ui-toolkit",
+        "description": "Use when using Zoom UI Toolkit."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/video-sdk/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/video-sdk/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-zoom-video-sdk-app",
+        "description": "Use when using Video SDK."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/virtual-agent/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/virtual-agent/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-zoom-virtual-agent",
+        "description": "Use when using Virtual Agent."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/webhooks/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/webhooks/SKILL.md",
+      "sourceMetadata": {
+        "name": "setup-zoom-webhooks",
+        "description": "Use when building Zoom webhooks."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/websockets/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/websockets/SKILL.md",
+      "sourceMetadata": {
+        "name": "setup-zoom-websockets",
+        "description": "Use when building Zoom WebSockets."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/zoom-apps-sdk/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/zoom-apps-sdk/SKILL.md",
+      "sourceMetadata": {
+        "name": "zoom-apps-sdk",
+        "description": "Use when using Apps SDK."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/_conventions.md",
+      "state": "converted",
+      "target": "content/commands/_conventions.md",
+      "sourceMetadata": {}
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-apps-sdk-app.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-apps-sdk-app.md",
+      "sourceMetadata": {
+        "description": "Implement a Zoom Apps SDK app that runs inside the Zoom client with the right running context, auth path, and backend integration."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-bot.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-bot.md",
+      "sourceMetadata": {
+        "description": "Implement a Zoom meeting bot, recorder, or real-time media workflow in the current codebase."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-cobrowse-app.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-cobrowse-app.md",
+      "sourceMetadata": {
+        "description": "Implement a Zoom Cobrowse integration with session lifecycle, privacy controls, and support workflow wiring."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-contact-center-app.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-contact-center-app.md",
+      "sourceMetadata": {
+        "description": "Implement a Zoom Contact Center integration for web, mobile, or backend workflows with the right auth and event handling."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-meeting-app.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-meeting-app.md",
+      "sourceMetadata": {
+        "description": "Implement an embedded or managed Zoom meeting flow in the current codebase with the right SDK and auth path."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-meeting-sdk-app.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-meeting-sdk-app.md",
+      "sourceMetadata": {
+        "description": "Implement a Zoom Meeting SDK integration with the right platform-specific join or start flow, auth path, and verification loop."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-phone-integration.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-phone-integration.md",
+      "sourceMetadata": {
+        "description": "Implement a Zoom Phone integration around APIs, Smart Embed, calling flows, and event handling."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-probe-flow.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-probe-flow.md",
+      "sourceMetadata": {
+        "description": "Implement readiness checks with Zoom Probe SDK before users join meetings or sessions."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-rest-api-app.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-rest-api-app.md",
+      "sourceMetadata": {
+        "description": "Implement a Zoom REST API integration with the right resources, auth path, and verification loop."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-rivet-app.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-rivet-app.md",
+      "sourceMetadata": {
+        "description": "Implement a server-side Zoom integration with Rivet modules for auth, APIs, webhooks, and deployment-safe composition."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-rtms-app.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-rtms-app.md",
+      "sourceMetadata": {
+        "description": "Implement a Zoom RTMS workflow for live media, transcript, or event-stream processing with the right stream lifecycle and backend handling."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-scribe-app.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-scribe-app.md",
+      "sourceMetadata": {
+        "description": "Implement a Zoom Scribe transcription pipeline for uploaded or stored media with the right processing mode and callback flow."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-team-chat-app.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-team-chat-app.md",
+      "sourceMetadata": {
+        "description": "Implement a Zoom Team Chat integration or chatbot flow with the right auth, eventing, and message handling."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-ui-toolkit-app.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-ui-toolkit-app.md",
+      "sourceMetadata": {
+        "description": "Implement a Zoom Video SDK UI Toolkit integration for a prebuilt web session UI with the right auth, mount strategy, and session lifecycle."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-video-sdk-app.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-video-sdk-app.md",
+      "sourceMetadata": {
+        "description": "Implement a custom Zoom Video SDK session workflow with the right auth, session lifecycle, and verification path."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-zoom-virtual-agent.md",
+      "state": "converted",
+      "target": "content/commands/build-zoom-virtual-agent.md",
+      "sourceMetadata": {
+        "description": "Implement a Zoom Virtual Agent integration for web or mobile wrapper environments with the right lifecycle and event handling."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/debug-zoom-auth.md",
+      "state": "converted",
+      "target": "content/commands/debug-zoom-auth.md",
+      "sourceMetadata": {
+        "description": "Isolate and fix Zoom authentication failures across OAuth, SDK signatures, and token refresh paths."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/debug-zoom-webhook.md",
+      "state": "converted",
+      "target": "content/commands/debug-zoom-webhook.md",
+      "sourceMetadata": {
+        "description": "Diagnose Zoom webhook issues across endpoint validation, signature verification, event delivery, retries, and handler logic."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/debug-zoom.md",
+      "state": "converted",
+      "target": "content/commands/debug-zoom.md",
+      "sourceMetadata": {
+        "description": "Triage a broken Zoom integration when the failing layer is not yet obvious."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/plan-zoom-integration.md",
+      "state": "converted",
+      "target": "content/commands/plan-zoom-integration.md",
+      "sourceMetadata": {
+        "description": "Turn a Zoom product idea into a practical build plan with auth, architecture, milestones, and risk calls."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/plan-zoom-product.md",
+      "state": "converted",
+      "target": "content/commands/plan-zoom-product.md",
+      "sourceMetadata": {
+        "description": "Choose the right Zoom product surface for a use case and explain the tradeoffs clearly."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/setup-zoom-oauth.md",
+      "state": "converted",
+      "target": "content/commands/setup-zoom-oauth.md",
+      "sourceMetadata": {
+        "description": "Inspect the repository and set up the correct Zoom OAuth path with the right app type, scopes, redirect handling, and token lifecycle."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/setup-zoom-webhooks.md",
+      "state": "converted",
+      "target": "content/commands/setup-zoom-webhooks.md",
+      "sourceMetadata": {
+        "description": "Implement or correct a Zoom webhook receiver with endpoint validation, signature verification, and reliable delivery handling."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/setup-zoom-websockets.md",
+      "state": "converted",
+      "target": "content/commands/setup-zoom-websockets.md",
+      "sourceMetadata": {
+        "description": "Implement or correct a Zoom WebSocket event stream with connection lifecycle, auth handling, and reconnect behavior."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/zoom-integration-doctor.md",
+      "state": "converted",
+      "target": "content/commands/zoom-integration-doctor.md",
+      "sourceMetadata": {
+        "description": "Run a read-first audit of a Zoom integration and report the most important architecture, auth, eventing, and SDK risks."
+      }
+    },
+    {
+      "kind": "agent",
+      "source": "agents/zoom-integration-reviewer.md",
+      "state": "reference",
+      "reason": "Reference Markdown; not an Agent definition."
+    },
+    {
+      "kind": "agent",
+      "source": "agents/zoom-oauth-scope-auditor.md",
+      "state": "reference",
+      "reason": "Reference Markdown; not an Agent definition."
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#zoom",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/zoom"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 792,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "87e59f8c5626eb8c79db1ec5867fb2e12cc9d44b05463ee2d1ac0d900fb0418c"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "02dae0f266f38bc18187c492862093f0f13a180666ea30794a49750f455825f0"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "46146228491be0bf3766022e5b7c37d6c78c03732d08ffcd37ee2a19be7216c1"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "9670a9aab8e7fba7d56b4f00c4f0779554fc862c8bc0af4c0a7a227d1acb22b8"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "a350a8a38be37531147501413baedf187639dd3004913db2036a81784b20ee22"
+    },
+    {
+      "path": "agents/zoom-integration-reviewer.md",
+      "sha256": "514020ba4f642086628f3619bf657eb6dbf4973e9819152625d692653a74530a"
+    },
+    {
+      "path": "agents/zoom-oauth-scope-auditor.md",
+      "sha256": "0fa1e47f087445cb7a4d6dd92648629aa914d75dfc4413b0ce5debee301691f3"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "6632c3523fb0b61e98d689724ceaa19fd3f7d9dc50aff78c5e4c891a441ee3de"
+    },
+    {
+      "path": "assets/app-icon.svg",
+      "sha256": "5b2ad1b58ab5aface8b76b43a79de27a8a900a9827ac751175a47ed52b64a37d"
+    },
+    {
+      "path": "assets/composer-icon.svg",
+      "sha256": "a741f0779e6f090b9d41b69b206b80a62d427664f17c0524dae8e1b6ba59d8b0"
+    },
+    {
+      "path": "assets/logo-dark.jpg",
+      "sha256": "41efa89aafc51c7e09fdfc48e35447df365e72dc67618d28b29613f1b269ab8d"
+    },
+    {
+      "path": "assets/logo.jpg",
+      "sha256": "41efa89aafc51c7e09fdfc48e35447df365e72dc67618d28b29613f1b269ab8d"
+    },
+    {
+      "path": "assets/screenshot-1.png",
+      "sha256": "cc90b16921df6c0790c1d64bb44aacd98624ec0e8c9f2606c5a0cf1ad5fa1514"
+    },
+    {
+      "path": "assets/screenshot-2.png",
+      "sha256": "9991824ec4bc2192bb290ac136806ea6a8f30d20f52f767d84fe35909d3806d7"
+    },
+    {
+      "path": "assets/screenshot-3.png",
+      "sha256": "7d5bf0383d3a7bb52d5b00bd5290d476d9cc0b1a0c780e3abde5af7575f28ae0"
+    },
+    {
+      "path": "assets/screenshot-4.png",
+      "sha256": "2ad7cf26258e55e92dd2520cd3609a88e32556c451209ee3ac65a4073febea07"
+    },
+    {
+      "path": "assets/zoom-small.svg",
+      "sha256": "a741f0779e6f090b9d41b69b206b80a62d427664f17c0524dae8e1b6ba59d8b0"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "c91225ea4d908ad39a6cdd528c92fa57c43c491a43e33218d5880656859ae36c"
+    },
+    {
+      "path": "commands/_conventions.md",
+      "sha256": "02905027997cfbbf9245c0e818211081cc28796ff83073260bc8d80d5e18b681"
+    },
+    {
+      "path": "commands/build-zoom-apps-sdk-app.md",
+      "sha256": "736aef8d5509a543b01429bd2fe2114aca4964cef6d1852cd8f1bdc9662d15fd"
+    },
+    {
+      "path": "commands/build-zoom-bot.md",
+      "sha256": "7ac6e3e5a1160f6d5b6e6cab7bb762f8dca1e31cf495f45a4de7fb62b92b7c2b"
+    },
+    {
+      "path": "commands/build-zoom-cobrowse-app.md",
+      "sha256": "1bc5da56e7773b2adc77a58c22efa1b4a5296550c68546302090721b548828ad"
+    },
+    {
+      "path": "commands/build-zoom-contact-center-app.md",
+      "sha256": "e39531b6506900d4b34748df0570c80d82ebe96d19f3845bc87493f346e74a3c"
+    },
+    {
+      "path": "commands/build-zoom-meeting-app.md",
+      "sha256": "72ab39e9d7da7ac24561fd5dff3d4521ec86300ada6b3e6656e98ec464e089dd"
+    },
+    {
+      "path": "commands/build-zoom-meeting-sdk-app.md",
+      "sha256": "a8aa4663fd9ce841e1c1fda525bede7de34ed96935ae44a23eabf02a66f936ab"
+    },
+    {
+      "path": "commands/build-zoom-phone-integration.md",
+      "sha256": "ed985eabea1cfb1b7109589348a391ef03e0ee7d54b5aff8ea7e445b3627295f"
+    },
+    {
+      "path": "commands/build-zoom-probe-flow.md",
+      "sha256": "2b9d9557de38844c239e739f949c447eb28757a20b71c735bc1770e6462dc21f"
+    },
+    {
+      "path": "commands/build-zoom-rest-api-app.md",
+      "sha256": "1979c00e2b94eb526386193916a79f33c44e7b7a91ba43b0609e2b50e9bb8da8"
+    },
+    {
+      "path": "commands/build-zoom-rivet-app.md",
+      "sha256": "f9c83b4028836070c1c10af4ad41e6c70126edeaf35fb70e09d4bcf8beda8f72"
+    },
+    {
+      "path": "commands/build-zoom-rtms-app.md",
+      "sha256": "78925ae822f14804ec15949f2b6b2c9c54e28c418cdad282a1c60d2279c5fe1b"
+    },
+    {
+      "path": "commands/build-zoom-scribe-app.md",
+      "sha256": "f0ef3427d9376890d93085c07d0255996cb26d139612d04da758c8f620601f8a"
+    },
+    {
+      "path": "commands/build-zoom-team-chat-app.md",
+      "sha256": "ef267624259baf08ce8f3ee2db4fedfae433dd37e397e8ee57bb1538bd8fec02"
+    },
+    {
+      "path": "commands/build-zoom-ui-toolkit-app.md",
+      "sha256": "b633c273fff4362fa8635e3601d788d46ff5bdf8f208d026868c8d7df286c514"
+    },
+    {
+      "path": "commands/build-zoom-video-sdk-app.md",
+      "sha256": "44e1ec1b741249810efee7d8410830cebc6dfe29bdb7b4c44b0be8c21d476710"
+    },
+    {
+      "path": "commands/build-zoom-virtual-agent.md",
+      "sha256": "9e554ae06a4da0bae641c43a55747e21961703144a436a033f414dcbc8d3073a"
+    },
+    {
+      "path": "commands/debug-zoom-auth.md",
+      "sha256": "f10a21ac9868ff734fccc9ac4f01ebc0fa88845b8f81814524c634a3d94b94bf"
+    },
+    {
+      "path": "commands/debug-zoom-webhook.md",
+      "sha256": "2c5cf5c878b896807cb116956e4f245b360e6a1e48e997203162b348f239979b"
+    },
+    {
+      "path": "commands/debug-zoom.md",
+      "sha256": "ef1b7184127964f0b5a29138da467f026c61c70581a4f0ac4299f6ba59e3232a"
+    },
+    {
+      "path": "commands/plan-zoom-integration.md",
+      "sha256": "a25484b52e09ae66abf2335dd7756b8e3f6c4a07a23b32d582b77c3d7a718c17"
+    },
+    {
+      "path": "commands/plan-zoom-product.md",
+      "sha256": "7dc9487581fba643ff087d74d7743f89d9aaf34f7e88576cf6288f6de0743559"
+    },
+    {
+      "path": "commands/setup-zoom-oauth.md",
+      "sha256": "4a19ad37fb395bf3b4fc8dd3acee7c6d61c41784656596bedcdff17e33f0a13c"
+    },
+    {
+      "path": "commands/setup-zoom-webhooks.md",
+      "sha256": "b155a415d0e389cca403eff977673a6304b9becbf2c6198d1a08c10f87357663"
+    },
+    {
+      "path": "commands/setup-zoom-websockets.md",
+      "sha256": "af6c448b81b9d7dab7de794e2228a01308ffa50ac25a412f980faf81c31b2295"
+    },
+    {
+      "path": "commands/zoom-integration-doctor.md",
+      "sha256": "befc3a2f7fc54488065342bfd668c30dfdb58eda2c2fce1251de3ec89d24ad50"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "2baa83fc137921d37a03dc65590ee7af16eccf3ec133963b003d5c4c7326d42f"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "d7991b07b944c0b8d31757261189381cf55bbc6e16703089797a670fbd3a6ee3"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b0ef63fef3027cec598c7d89e57f284969e366d894cac5a7fec083d79a600ef3"
+    },
+    {
+      "path": "skills/build-zoom-bot/agents/openai.yaml",
+      "sha256": "6fdb05ccad826bbabd04cd3e039585dcf1c04ba06ed66230e3aa4b291a816b59"
+    },
+    {
+      "path": "skills/build-zoom-bot/SKILL.md",
+      "sha256": "5877c4a221b90764f3f5d201dc3143b4871dfac86df326ddc9d97eb5091b1012"
+    },
+    {
+      "path": "skills/build-zoom-meeting-app/agents/openai.yaml",
+      "sha256": "3a4b91118b41c52e701aec7c3a161e13cf21fbe8d7e7f3ec78a7d3178e017e41"
+    },
+    {
+      "path": "skills/build-zoom-meeting-app/SKILL.md",
+      "sha256": "7aff7f82fdc6365db51afded00f093643378eb7be60a70e213d4c038f720bd66"
+    },
+    {
+      "path": "skills/choose-zoom-approach/agents/openai.yaml",
+      "sha256": "080feac59919ef08dd5fc9adb9091b08ac6198a103a47ae8ae2684bf4c586f01"
+    },
+    {
+      "path": "skills/choose-zoom-approach/SKILL.md",
+      "sha256": "e2d22fb2323209d8621ffbe15181131c22fb1ba90258a80eebfd9a73506f7e4b"
+    },
+    {
+      "path": "skills/cobrowse-sdk/agents/openai.yaml",
+      "sha256": "14ed15799dc4920db747dc82e01d57ce3457a413ce8b2bc768c3dcc8ec89671e"
+    },
+    {
+      "path": "skills/cobrowse-sdk/concepts/distribution-methods.md",
+      "sha256": "153b8e3fc56300eb01d23ebeda60d37503dcce0a039888fa753452cdc9c4c2c5"
+    },
+    {
+      "path": "skills/cobrowse-sdk/concepts/jwt-authentication.md",
+      "sha256": "b0a9879df7ab15b4f280bc7fba59ae77d2872127a8efe06bcd49e5611b73b32d"
+    },
+    {
+      "path": "skills/cobrowse-sdk/concepts/session-lifecycle.md",
+      "sha256": "ab4c7074aa9de58d92a4bbef0bf62b7d198f4afb970eee47f7709bf045f49688"
+    },
+    {
+      "path": "skills/cobrowse-sdk/concepts/two-roles-pattern.md",
+      "sha256": "bf261abcb5a926efb45c95eb42034003c3f9a27439122fe1fe78089d9669d8f3"
+    },
+    {
+      "path": "skills/cobrowse-sdk/examples/agent-integration.md",
+      "sha256": "2fe386341e83fadc56c151fc506578b5538c70f19f386bcf14b0d1abfd4ad1a6"
+    },
+    {
+      "path": "skills/cobrowse-sdk/examples/annotations.md",
+      "sha256": "03cf752156c384287bb6b02c55b7dfaa5cf4930fb90e8ebf00bf1f8b6306db58"
+    },
+    {
+      "path": "skills/cobrowse-sdk/examples/auto-reconnection.md",
+      "sha256": "8a303e75cb19d731dc7b7350e128e54e800386e0f95656ffd48164522967408a"
+    },
+    {
+      "path": "skills/cobrowse-sdk/examples/byop-custom-pin.md",
+      "sha256": "c2c7a190d169c1975f154d83674a4a5e9605fc3090b8675b4441ab61de53fc51"
+    },
+    {
+      "path": "skills/cobrowse-sdk/examples/customer-integration.md",
+      "sha256": "0676da53d4b8f9b7103a18e172eae7a329a429008cea85076c17c0e7960d89c7"
+    },
+    {
+      "path": "skills/cobrowse-sdk/examples/multi-tab-persistence.md",
+      "sha256": "5551c2ee5cd9c15d30ebddcabedabf7cddabbc313b54916b5581bbfb230bc3bb"
+    },
+    {
+      "path": "skills/cobrowse-sdk/examples/privacy-masking.md",
+      "sha256": "49122e6b3ba52ddbc4aa3d4d828af217652b4f3d68a23daf26b28edcaf9799b5"
+    },
+    {
+      "path": "skills/cobrowse-sdk/examples/remote-assist.md",
+      "sha256": "914ef29c4f6ba621d2915ec0a77d3c0118d7995423d8a8be2189b68c23e71d2b"
+    },
+    {
+      "path": "skills/cobrowse-sdk/examples/session-events.md",
+      "sha256": "715a8677096632841f1a6413952882adc2535d45d92893ca541d695b08e87f70"
+    },
+    {
+      "path": "skills/cobrowse-sdk/get-started.md",
+      "sha256": "294fa87c8bb914ab4f1e02405bf3a5700733f44d350c6ae592d647ed83efd575"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/api-official.md",
+      "sha256": "d9576931f404265e769e9f4564eac4cd240a9a53881eb5fa32a8304f888657f3"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/api-reference.md",
+      "sha256": "0bb53a20823587d5ee6cda805f009f404dde2782b3bb076a21c93ba0250429d9"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/api.md",
+      "sha256": "24c0e85a5ddfd0c481abbd9ab266725860cb627252063a73a628ad4d6296c0ef"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/authorization-official.md",
+      "sha256": "f2938380570edd0471887b0c4312d01964a1d1b858dc518745f42660a8cb2ace"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/authorization.md",
+      "sha256": "bb9f9fdd3b15bc7fd7764096b303c0ba79f9b6b11828d2da7ebc06ac2151129f"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/environment-variables.md",
+      "sha256": "510668bfc4da231f8bb1d3a493eaa83e4307335db7393e15e6b3bf9ae87b8747"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/error-codes.md",
+      "sha256": "0921185816ca077aafb4908018e5fb069c0b9797972c5dc538fcee27d0eae850"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/features-official.md",
+      "sha256": "9e517a1c2276b65e0a60d73ddfa606d4311ae3e56be5c5c7efe0b41fc9570710"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/features.md",
+      "sha256": "fd94bb6e6ceaaade140f9fc9bbaa49bf1cbd9618a01223b9df5ecd17280256bd"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/full-guide.md",
+      "sha256": "e734b0be2b84ef6fe4b078c3b234496734364fbdc3c4a082734e0cd7ba574863"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/get-started-official.md",
+      "sha256": "6b3d0e7bcc9920530341c85f2dc2e3fd43e326d87e2b893850b114619d3138f0"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/get-started.md",
+      "sha256": "068f67ea50ff52fa92d0e7460e06f9eb3c6ef23871c3c140b2f6b37427f085f6"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/session-events.md",
+      "sha256": "f518076f64988ec8547825857eb16af8044c83011dbfd351f97e3c2035877ed6"
+    },
+    {
+      "path": "skills/cobrowse-sdk/references/settings-reference.md",
+      "sha256": "4be3d73822f73bac971d90dbba817d1dea8d04a7439f934508bb7fd1c4a9049e"
+    },
+    {
+      "path": "skills/cobrowse-sdk/RUNBOOK.md",
+      "sha256": "3cb98e574c7f72d5a30b373c4ab12d354c9e85e92cabfdbe04b370dafc5b9c99"
+    },
+    {
+      "path": "skills/cobrowse-sdk/SKILL.md",
+      "sha256": "e20ef6dd04d7b9a83e6d02e88e1f69320f9ed7164b7ed4abcdf4f9ca8e16be33"
+    },
+    {
+      "path": "skills/cobrowse-sdk/troubleshooting/browser-compatibility.md",
+      "sha256": "af69614973402538cbc7a3c998940e42404284cf6a3bc001bff093c2ffe096e1"
+    },
+    {
+      "path": "skills/cobrowse-sdk/troubleshooting/common-issues.md",
+      "sha256": "68be7fd4a8c2aa258a113aaa6b64c1b1e5fb4e77e5896b637f30768a9c47d97d"
+    },
+    {
+      "path": "skills/cobrowse-sdk/troubleshooting/cors-csp.md",
+      "sha256": "9191d3eacf7e4fa5ef74d8b77dbb3d8ec475ce733714d7784958f38b0ec29280"
+    },
+    {
+      "path": "skills/cobrowse-sdk/troubleshooting/error-codes.md",
+      "sha256": "7193bc27c63d8b2fbc34abf1a13f27fcc91e647b0095096ce528d07f1b189f95"
+    },
+    {
+      "path": "skills/contact-center/agents/openai.yaml",
+      "sha256": "be423476a7dfd9ce2545b89a0dd0487713ca49ff0ac029077e649f97cee3814a"
+    },
+    {
+      "path": "skills/contact-center/android/agents/openai.yaml",
+      "sha256": "d62fe23383c9aead99cbc86129a4042575386e15291e11edbbd04336890ddbb5"
+    },
+    {
+      "path": "skills/contact-center/android/concepts/sdk-lifecycle.md",
+      "sha256": "b6ef658dc925cbecb56f3b27c89fdf5cd77965261f412b2fdca7e5a58b96c594"
+    },
+    {
+      "path": "skills/contact-center/android/examples/service-patterns.md",
+      "sha256": "da3e33b9d753a269845516acbb371aca9406cee7439930f146e41974cc9116cb"
+    },
+    {
+      "path": "skills/contact-center/android/references/android-reference-map.md",
+      "sha256": "2268d114f26992789508294cff9fa027a1dd52eeba666c209046ec2be005046f"
+    },
+    {
+      "path": "skills/contact-center/android/RUNBOOK.md",
+      "sha256": "f51479d16b4f21eb4417c2af2eaa1e67adadf5af17ac718ed5ededc2a901c993"
+    },
+    {
+      "path": "skills/contact-center/android/SKILL.md",
+      "sha256": "c99d3b68a75891c86b948e20d043e24825b185f5d6c3f76a16080f5f5507efb6"
+    },
+    {
+      "path": "skills/contact-center/android/troubleshooting/common-issues.md",
+      "sha256": "65d8191b5baddb0311dc4ac6e63d0cebb5d0189acac90803d86af6b7a2d849b9"
+    },
+    {
+      "path": "skills/contact-center/concepts/architecture-and-lifecycle.md",
+      "sha256": "93e9a01361998ff06f1aab9d0fe6d8949d206301c765e11a818c8f961507df4b"
+    },
+    {
+      "path": "skills/contact-center/ios/agents/openai.yaml",
+      "sha256": "475ebe9a53ae17e0ee74e29538ad03bea831501a864cdb56908e80cdd1569651"
+    },
+    {
+      "path": "skills/contact-center/ios/concepts/sdk-lifecycle.md",
+      "sha256": "61c2253422253e51bfa685da721d7f554c3b8597c54a42c4918c1efbc298a992"
+    },
+    {
+      "path": "skills/contact-center/ios/examples/service-patterns.md",
+      "sha256": "5746b9e1b58b788cae52edab459eed4fb277ecb39c960b62774824f5f623d898"
+    },
+    {
+      "path": "skills/contact-center/ios/references/ios-reference-map.md",
+      "sha256": "f661c7cc3641342c0aa3b8337742a00ca8be1d97a09e1a9e895d6eba7ce8946d"
+    },
+    {
+      "path": "skills/contact-center/ios/RUNBOOK.md",
+      "sha256": "144501400c91806a5c1a729ffa1c8b755d8cf329865783c70a6ac18affbecfe5"
+    },
+    {
+      "path": "skills/contact-center/ios/SKILL.md",
+      "sha256": "b77234f0c96e398675d485fadbf8b4dabd09ca5d4253b1c43f75a4e3bec984e8"
+    },
+    {
+      "path": "skills/contact-center/ios/troubleshooting/common-issues.md",
+      "sha256": "0fd5d2ff8bd93282fd66e4b16405c9318935560e4c1ced19158c3509bc534217"
+    },
+    {
+      "path": "skills/contact-center/references/environment-variables.md",
+      "sha256": "56617654db4db018fea6c6dd294bc9cbc25c4ea3d5ed03fffc962e74a8b0cee8"
+    },
+    {
+      "path": "skills/contact-center/references/forum-top-questions.md",
+      "sha256": "501eb93f24769264c1aa666f1db545bd46c00f409dff30fed4d3c35ea9b1b9f4"
+    },
+    {
+      "path": "skills/contact-center/references/full-guide.md",
+      "sha256": "ec20a38d895da773d9c83ac987c4af16edb3cf16491e67b6ce8839a01a0f01d7"
+    },
+    {
+      "path": "skills/contact-center/references/samples-validation.md",
+      "sha256": "d4f740daea607bb6f72cf00965d8d3891c19ad52737e9d97dbcd6d2cca414621"
+    },
+    {
+      "path": "skills/contact-center/references/versioning-and-compatibility.md",
+      "sha256": "69dff3cdd9c0633467d04a2da166f50a77e4c7e260bc6d1b2a138704bac72729"
+    },
+    {
+      "path": "skills/contact-center/RUNBOOK.md",
+      "sha256": "feb17c1085f1d185b261a01255a91a29dd119af43370826b59cd7683bd52d354"
+    },
+    {
+      "path": "skills/contact-center/scenarios/high-level-scenarios.md",
+      "sha256": "401b34e4ed79f7fc43efe93e8e2bd0aa8f63a25986c827a2f48ad1ddb31a5d38"
+    },
+    {
+      "path": "skills/contact-center/SKILL.md",
+      "sha256": "e847106518fe6910d47cc363f064b6caacbd5d7fc9bba8585c478936450f5276"
+    },
+    {
+      "path": "skills/contact-center/troubleshooting/common-drift-and-breaks.md",
+      "sha256": "89b5fb5f1439146be2e6fdf0c3fd797e3cc19c54163256b06a2adb9419454825"
+    },
+    {
+      "path": "skills/contact-center/web/agents/openai.yaml",
+      "sha256": "842f3f7db038ed2a36259c633520d9fcdbc225bc693b572314c0911b65bf8f36"
+    },
+    {
+      "path": "skills/contact-center/web/concepts/lifecycle-and-events.md",
+      "sha256": "615427badd8bbeb21f4464c568ae74e9668f7beb86d08aed9771346af4d92668"
+    },
+    {
+      "path": "skills/contact-center/web/examples/app-context-and-state.md",
+      "sha256": "c8fa06b9186ddad427ee63dd1eb95a60e4801747de3de08320b5d99eaf1662cd"
+    },
+    {
+      "path": "skills/contact-center/web/references/web-reference-map.md",
+      "sha256": "d28d5e1291b1e4bcad6c485df2fa9393e3e55a3ef31af7f5e6efc099ae25150a"
+    },
+    {
+      "path": "skills/contact-center/web/RUNBOOK.md",
+      "sha256": "f31c9864711626de0748502654b7c8319dfaf58f391dde2e9e32f747468d66ec"
+    },
+    {
+      "path": "skills/contact-center/web/SKILL.md",
+      "sha256": "3a53a5556e89c100b8eba72eb2e80c4ea25edc7947723a06120c1ea74f67c76a"
+    },
+    {
+      "path": "skills/contact-center/web/troubleshooting/common-issues.md",
+      "sha256": "450e4b79fe3bb2b11925bdbfc042b0d57889893baed7f87992573bb9befd0780"
+    },
+    {
+      "path": "skills/debug-zoom/agents/openai.yaml",
+      "sha256": "ce386d177cdf173970c73dfff09f365f2c5ba18046656d0b90560d1a839dc1f0"
+    },
+    {
+      "path": "skills/debug-zoom/SKILL.md",
+      "sha256": "e5cf9fb38710fefc00734bb22c4cf1228f016c9ba9c4f4417620481160acdf3c"
+    },
+    {
+      "path": "skills/debug-zoom-integration/agents/openai.yaml",
+      "sha256": "9d53e381311525bb22b99b7e81216368dacee40483aeb18ddbaafceaa673a509"
+    },
+    {
+      "path": "skills/debug-zoom-integration/SKILL.md",
+      "sha256": "8b813c5a5d4ec4875096a1b763846c4434319c6f13e9e198327019f69af3834b"
+    },
+    {
+      "path": "skills/general/agents/openai.yaml",
+      "sha256": "1480fbba894f7c3c9b34df1dde16d9cb08ec4edabaa851e1d20d10ebb8f8e484"
+    },
+    {
+      "path": "skills/general/references/app-types.md",
+      "sha256": "0f360c176bce762be39829248ea642f88dd20f4a4696a01b5f0cc6efd9a56122"
+    },
+    {
+      "path": "skills/general/references/authentication.md",
+      "sha256": "c3a521e89b2275a8e1e6a66813a761e051dbaa0fb5d6ced1a1dc784eebbdccb7"
+    },
+    {
+      "path": "skills/general/references/authorization-patterns.md",
+      "sha256": "f9c2f485030c0521c54bb7b27d3d2d02d0a88b4cde857e7b740c0a5f616a025d"
+    },
+    {
+      "path": "skills/general/references/automatic-skill-chaining-rest-webhooks.md",
+      "sha256": "3ad35e6514150ab0f7064a382dd9e3060f431e9fe5b7957790fc160f10f86c64"
+    },
+    {
+      "path": "skills/general/references/community-repos.md",
+      "sha256": "306d52e88546a274ff873e53068b896f5af568f660fe02c0adac064086e0ae99"
+    },
+    {
+      "path": "skills/general/references/distributed-meeting-fallback-architecture.md",
+      "sha256": "287c95845969be8c4256fa2d56ef909b5c08f2e603cca54530d7610cd2916cfc"
+    },
+    {
+      "path": "skills/general/references/environment-variables.md",
+      "sha256": "504dfb4fa0cd29697b0e7ac23a029581e3053ebf5d5c17f6dc6d93d18845b6be"
+    },
+    {
+      "path": "skills/general/references/full-guide.md",
+      "sha256": "8f891765212ef6a16bce3ef6f6288a33a6ed7557de13a0812aa8a8c933450599"
+    },
+    {
+      "path": "skills/general/references/interview-answer-routing.md",
+      "sha256": "75e5c54b052a49ea86b46ee870c3d6ea5435664d1780031de2cd72c649e377b9"
+    },
+    {
+      "path": "skills/general/references/known-limitations.md",
+      "sha256": "b73305565dfe8ac2f2a02ad09d96701b3db241f36f69906ecc3650356a1c284c"
+    },
+    {
+      "path": "skills/general/references/marketplace.md",
+      "sha256": "078b5daf434aefa07c3e61913c137b6c68908712bb66527a9aecda9a59c90534"
+    },
+    {
+      "path": "skills/general/references/meeting-webhooks-oauth-refresh-orchestration.md",
+      "sha256": "9a8f905abd307c59500d7b92a1a9c069407c2abbb90544f8585ba0c151e3a704"
+    },
+    {
+      "path": "skills/general/references/query-routing-playbook.md",
+      "sha256": "4ae2844341c824d521aea8d5b17b6da4e5456a27e29898953cbb7e56ea5e524e"
+    },
+    {
+      "path": "skills/general/references/routing-implementation.md",
+      "sha256": "51761a8ab9be300fd7a408365e880f2a3c9e0f57ae563ea695679194eee2fa69"
+    },
+    {
+      "path": "skills/general/references/scopes.md",
+      "sha256": "f1d50a1c78fc0e8c25d4b89dd56402e5968339d569f64673eb486508e68384a0"
+    },
+    {
+      "path": "skills/general/references/sdk-logs-troubleshooting.md",
+      "sha256": "4e1c666185f6b84c282119147e36d24634accb5bc913fd7ad7415eb9398a25a1"
+    },
+    {
+      "path": "skills/general/references/sdk-upgrade-guide.md",
+      "sha256": "f2e2b7f89d76d7c936ca9186abd7fde712c84dccf51021ae50cfb83500264686"
+    },
+    {
+      "path": "skills/general/references/sdk-upgrade-workflow.md",
+      "sha256": "12f7274e6e8ea64f49d2f5885ac3e84c7ad43e29e2074e866cb43f19703e7135"
+    },
+    {
+      "path": "skills/general/RUNBOOK.md",
+      "sha256": "02fe541f06cf4bdb0fb490098be68f91dbd6713e6e14d5520cdb22d7719c6dda"
+    },
+    {
+      "path": "skills/general/SKILL.md",
+      "sha256": "e2509fe9b92eb1a3d31d3ba7539d9534c2524d1d96d66566874dc3c90eb2437d"
+    },
+    {
+      "path": "skills/general/use-cases/ai-companion-integration.md",
+      "sha256": "2492b02973261bf6cc190f5ce4c519de7ba41e62a6980f07c75fd67399477f6c"
+    },
+    {
+      "path": "skills/general/use-cases/ai-integration.md",
+      "sha256": "e85a18cd434ce1e60ff5c5302f087e5f0965c25a92f037cbac65b82b67ea2902"
+    },
+    {
+      "path": "skills/general/use-cases/backend-automation-s2s-oauth.md",
+      "sha256": "5b49c63357cd24c153786b804f90011a81cfd04b78f3d308bcaef707a86051f4"
+    },
+    {
+      "path": "skills/general/use-cases/collaborative-apps.md",
+      "sha256": "8fa884dba5270b3e26afc41d073d84edcdf9d49a404e15164b1e5d6e0d3da094"
+    },
+    {
+      "path": "skills/general/use-cases/contact-center-app-lifecycle-and-context-switching.md",
+      "sha256": "41f29a35768affab312e7cfde1a9b6942a028a70f4154080213a250979a707e4"
+    },
+    {
+      "path": "skills/general/use-cases/contact-center-integration.md",
+      "sha256": "826d1b7d9ae90c05992d490ac21470480a921b99d64f93d6be361e8152a6d41c"
+    },
+    {
+      "path": "skills/general/use-cases/custom-meeting-ui-web.md",
+      "sha256": "25f90ad57c0aba16bd51957beca664896d0f349d2fa4ad62323bdbdbb824b419"
+    },
+    {
+      "path": "skills/general/use-cases/custom-video.md",
+      "sha256": "dffdcd4627a678767d6dca47a9d3c4ec806c6c20eae44f4fa6d09072dd785e3a"
+    },
+    {
+      "path": "skills/general/use-cases/customer-support-cobrowsing.md",
+      "sha256": "5810b4ce46d9d1e56cec8798d250c251eb2642ecc00a363b458b9a4c0967e9ca"
+    },
+    {
+      "path": "skills/general/use-cases/electron-meeting-embed.md",
+      "sha256": "46f815c1f7a1efd05021b1526923a251960607618b1012e0adfc4adcec29786b"
+    },
+    {
+      "path": "skills/general/use-cases/embed-meetings.md",
+      "sha256": "45f5340a1402a01b8f129fd32afead0fe134facb06c6976412b247d74bede07f"
+    },
+    {
+      "path": "skills/general/use-cases/enterprise-app-deployment.md",
+      "sha256": "a30fee7275c91f97b70ae60950a2436d413ef16665a7c507394814b3c59cbf69"
+    },
+    {
+      "path": "skills/general/use-cases/flutter-video-sessions.md",
+      "sha256": "210eb6a8bea17dccf42895814353c2d60c7237b8e8b3cb160a4b456693258656"
+    },
+    {
+      "path": "skills/general/use-cases/form-completion-assistant.md",
+      "sha256": "bd81d1f1de976f9efcc5d70193c4742cc486d3787e1d56492f3703b056bed014"
+    },
+    {
+      "path": "skills/general/use-cases/hd-video-resolution.md",
+      "sha256": "5ea48e459bcbe6e70d3cc271b6fbeb7c4754d0d79dc3e74a953b16f410329d69"
+    },
+    {
+      "path": "skills/general/use-cases/high-volume-meeting-platform.md",
+      "sha256": "909f85ad769cde51ebbd95a5d7ababf512c5015fc482c32f1285fe0b9728be1f"
+    },
+    {
+      "path": "skills/general/use-cases/immersive-experiences.md",
+      "sha256": "b684033bb2e689655dc028c986098cd3dbad3fda25bdcae59b76f496a1527318"
+    },
+    {
+      "path": "skills/general/use-cases/in-meeting-apps.md",
+      "sha256": "f20b4e0b4313faf5554319d4dd90d6218dc492f125dbd3ed2b467cb88f9e86b2"
+    },
+    {
+      "path": "skills/general/use-cases/marketplace-publishing.md",
+      "sha256": "7da3e6831265e267b39127cd6110d922eaf8ed6d4b13681e99cef7219f1a5fa5"
+    },
+    {
+      "path": "skills/general/use-cases/meeting-automation.md",
+      "sha256": "b8207c30cddf083cb796d304ae9ba5a8c181489822181b21695741a83fe0148e"
+    },
+    {
+      "path": "skills/general/use-cases/meeting-bots.md",
+      "sha256": "5a16980a23abc03d2f6bf4e241f28744e341f21302e52e6e064ad80af79a258b"
+    },
+    {
+      "path": "skills/general/use-cases/meeting-details-with-events.md",
+      "sha256": "e32eb8532b5c9c32098403f480eb3c8196396582c07e6f4239aa65ca773fcb66"
+    },
+    {
+      "path": "skills/general/use-cases/meeting-links-vs-embedding.md",
+      "sha256": "3dd2cdab436916e14c65a2ebd4bd9874f38c5d8e99edc5dd9c7c32a470f3cd2c"
+    },
+    {
+      "path": "skills/general/use-cases/minutes-calculation.md",
+      "sha256": "54506fd8f177a9883c5fea524b33e3d12831db2404ce0f4137f5ff9cba896e36"
+    },
+    {
+      "path": "skills/general/use-cases/native-meeting-sdk-multi-platform.md",
+      "sha256": "4cdf09a2217913442d71550545b2336bc7c9936a023a023cecc01e0535dcf8fe"
+    },
+    {
+      "path": "skills/general/use-cases/native-video-sdk-multi-platform.md",
+      "sha256": "6a7732447c4fd1cff99b7d9b7daefe00d58bcf0e9c162cefbb1f39f72fd72d81"
+    },
+    {
+      "path": "skills/general/use-cases/prebuilt-video-ui.md",
+      "sha256": "3b96529c50e69e50bd1a88a6cb4ee84a5c45bb0eb6bfbe6ee19aeb3133775b6e"
+    },
+    {
+      "path": "skills/general/use-cases/probe-sdk-preflight-readiness-gate.md",
+      "sha256": "88ee26c6b448db0b7b1d458da291e664ad6c9e77f60726c9f70c2e2ce4e5002c"
+    },
+    {
+      "path": "skills/general/use-cases/qss-monitoring.md",
+      "sha256": "3c3ba80dc4993b507c99d0a457685ebf6e68b29b6e295d5d9e7d2e0160a5ae48"
+    },
+    {
+      "path": "skills/general/use-cases/raw-recording.md",
+      "sha256": "c0f68d6c501a653103feb926b3129741ed49e2b4b7719ac071d7553b38139824"
+    },
+    {
+      "path": "skills/general/use-cases/react-native-meeting-embed.md",
+      "sha256": "b6b3abd3f7317da237594fef5583e8b1a51de16d858fb60756834430bf026ad5"
+    },
+    {
+      "path": "skills/general/use-cases/react-native-video-sessions.md",
+      "sha256": "9b49d5caeea4729fd0c14f5c134fee938635423e482ecf66dc9a6cc0508cf586"
+    },
+    {
+      "path": "skills/general/use-cases/real-time-media-streams.md",
+      "sha256": "55d2139f5c9d3ac177773210fddc3a5c0d860bee5182f2a35f8115d1c170d5d8"
+    },
+    {
+      "path": "skills/general/use-cases/recording-download-pipeline.md",
+      "sha256": "5411b9f98fce3bbd125b61a0b6a9342daa01841c6ec278501c986df9aa49ed37"
+    },
+    {
+      "path": "skills/general/use-cases/recording-transcription.md",
+      "sha256": "613c172c09a13dfddfa521ac540bff335b807f13d7e420eb745fc7e1cc0f63d3"
+    },
+    {
+      "path": "skills/general/use-cases/retrieve-meeting-and-subscribe-events.md",
+      "sha256": "97ebbf61f189c2f491aaa9187a8aae4aa113c6373518210504633b11ead0edd9"
+    },
+    {
+      "path": "skills/general/use-cases/rivet-event-driven-api-orchestrator.md",
+      "sha256": "e5da6e267dc492be1d00e5521b6c453d95846af251d1f8d996ef0684ed242cc5"
+    },
+    {
+      "path": "skills/general/use-cases/saas-app-oauth-integration.md",
+      "sha256": "9126c9807384d7cb98bd21b61c16e67cd64f89b399d6895644e6bf1c09c65d38"
+    },
+    {
+      "path": "skills/general/use-cases/scribe-transcription-pipeline.md",
+      "sha256": "e23a49a5958ce09dfaf9003b1116fa555e2a09a849e5a29a276a982fe87a2e11"
+    },
+    {
+      "path": "skills/general/use-cases/sdk-size-optimization.md",
+      "sha256": "ced565d1b34acb272453c2462c866ec2759f3a9daeb976f540b5d356e01ee5b5"
+    },
+    {
+      "path": "skills/general/use-cases/sdk-wrappers-gui.md",
+      "sha256": "2048fa0ade876164d743d2c930f5d2cf36b11e14f18547e0fc2aa4d27224b3e7"
+    },
+    {
+      "path": "skills/general/use-cases/server-to-server-oauth-with-webhooks.md",
+      "sha256": "929fffd7606108de635dc5be6b9a6c827911fb7fdca7e5c400fde70bcb8e5f24"
+    },
+    {
+      "path": "skills/general/use-cases/team-chat-llm-bot.md",
+      "sha256": "90b7582ae549f41fbe71269b48ef953954480f117e70af3fad869e8b3e852853"
+    },
+    {
+      "path": "skills/general/use-cases/testing-development.md",
+      "sha256": "baeba76cfbb86b5255ce55720e16b8b17246142a08a253b42a6a65f1083a5499"
+    },
+    {
+      "path": "skills/general/use-cases/token-and-scope-troubleshooting.md",
+      "sha256": "d9dbbbb335bab5b29cf2a8dacbe3b6e3f2f0d5a8d0e1a30976eb9fb566126771"
+    },
+    {
+      "path": "skills/general/use-cases/transcription-bot-linux.md",
+      "sha256": "4e5ed8882dcc727c6eb6e7d71035fa27a93ae7dc45943988be1e7a390d60536c"
+    },
+    {
+      "path": "skills/general/use-cases/usage-reporting-analytics.md",
+      "sha256": "32b2743c7fa8f53412915b5d78b4ff4d6fd3e74cfeea7297cb727a1133ca89b1"
+    },
+    {
+      "path": "skills/general/use-cases/user-and-meeting-creation.md",
+      "sha256": "1d0650dcd9206f40cd987c1698a108e17d66f70480fd64d0281d8d1ab49fa834"
+    },
+    {
+      "path": "skills/general/use-cases/video-sdk-bring-your-own-storage.md",
+      "sha256": "e7154b28b822676d7ba0100889fd8b8271907f0091298876673e456fd909cb0d"
+    },
+    {
+      "path": "skills/general/use-cases/virtual-agent-campaign-web-mobile-wrapper.md",
+      "sha256": "f9c5d980fd0d686f1b50dce548d8777cc720eba48d9cad0e0e991fd20ac168a0"
+    },
+    {
+      "path": "skills/general/use-cases/virtual-agent-knowledge-base-sync-pipeline.md",
+      "sha256": "e7d4b63190395b9a9015068ad7cbc507e21c686dbfcfcff628af89b09007d73d"
+    },
+    {
+      "path": "skills/general/use-cases/web-sdk-embedding.md",
+      "sha256": "7a03e741cde67be22f0f9dccdd03bf91c4feb56b34cc17fd2daad9d9f2d22f19"
+    },
+    {
+      "path": "skills/general/use-cases/zoom-phone-smart-embed-crm.md",
+      "sha256": "b983677fc6fb096cc824b4b5c7ea07528bc014c09942225718ef7dfdbdefb5cc"
+    },
+    {
+      "path": "skills/meeting-sdk/agents/openai.yaml",
+      "sha256": "d144b6e655743621fc6a84d15bde3079b04f00f5020fa960216d993c5d485e23"
+    },
+    {
+      "path": "skills/meeting-sdk/android/agents/openai.yaml",
+      "sha256": "17ffc2807651291563f3993c0504bcc050f2bb2c3d37e86f2a413313320c76fc"
+    },
+    {
+      "path": "skills/meeting-sdk/android/android.md",
+      "sha256": "e93690dacadef970255d6a056ae26044f239bb65a85bfc218e9ef11ee9d1041c"
+    },
+    {
+      "path": "skills/meeting-sdk/android/concepts/architecture.md",
+      "sha256": "a46a9b32f9782cf538908379577a427e7bb061c1aa5bebffb3f15fe6ab1f3688"
+    },
+    {
+      "path": "skills/meeting-sdk/android/concepts/lifecycle-workflow.md",
+      "sha256": "30c36b6b469e4d8ac01261bbc96059a88ef98f93c6dc4bfa71a797c4fb3989c3"
+    },
+    {
+      "path": "skills/meeting-sdk/android/examples/join-start-pattern.md",
+      "sha256": "586b94ea611dc5deefc4e6359dc538d4d48d4e30858383ffa19e7c0d83156b20"
+    },
+    {
+      "path": "skills/meeting-sdk/android/references/android-reference-map.md",
+      "sha256": "e14ded8f918fba30abcecbc53b89f37c87e1b4895ec8970d8f0d8b442c7f712c"
+    },
+    {
+      "path": "skills/meeting-sdk/android/references/environment-variables.md",
+      "sha256": "a57df7052ca59f94c54e21e947627a4bcbbb04fef38d1cc739ee10dc7d75a665"
+    },
+    {
+      "path": "skills/meeting-sdk/android/references/versioning-and-compatibility.md",
+      "sha256": "d84194335ca0e09b4e6c77c4d001fcb21e17e4885676f68ccc8cddc701fe6139"
+    },
+    {
+      "path": "skills/meeting-sdk/android/RUNBOOK.md",
+      "sha256": "382db1a1cd86773b432efa6a31743da1edde3ac47a9bc0168c06f13b8b0d144c"
+    },
+    {
+      "path": "skills/meeting-sdk/android/scenarios/high-level-scenarios.md",
+      "sha256": "9e0d58cf83c542dce83128f7912f4f2ee93102a0b580433e97ce38aed30d23e7"
+    },
+    {
+      "path": "skills/meeting-sdk/android/SKILL.md",
+      "sha256": "06c3d20088eac1187ea6b06e9edfabf4ae92f62083a525b0d6ee3c1ec256c0a3"
+    },
+    {
+      "path": "skills/meeting-sdk/android/troubleshooting/common-issues.md",
+      "sha256": "b52179af7351ca24ecc7c817f394f4b63b2d0882529ad7155c00111c3fd22d76"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/agents/openai.yaml",
+      "sha256": "3c91248874721ed48ad897683c30b8a481700839e64c3b2cb469214e21a7aaa9"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/concepts/high-level-scenarios.md",
+      "sha256": "471c43da4aeb0818a5a3b3d19cd2ca7c92b1b3e2d3f9f94bf316cbdb5ec3b3aa"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/concepts/lifecycle-workflow.md",
+      "sha256": "a0cdd27162ff0997583988f931fa04e7fa009b57aa5187f533b2c42fe23b645f"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/concepts/sdk-architecture-pattern.md",
+      "sha256": "77b07e3d22aeecb6c625c85a59ca26294af20928ad26c60abff91986f9407185"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/examples/authentication-pattern.md",
+      "sha256": "d21b5e3af750538bb1cfe8a1210c52e92910b78659cc75266f871f7094d11b34"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/examples/join-meeting-pattern.md",
+      "sha256": "9fb80395f71479071bc25e0c8953b4fbafb15c1f0f48408a6a6585ab72e3ad5b"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/examples/raw-data-pattern.md",
+      "sha256": "cb2f0a0d400aac0e171d1bf14e0d3e66c5a67087164985a7a3c25032ea8071ed"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/examples/setup-guide.md",
+      "sha256": "99a0e04bb95a3fdbc4a992b7799ddf7a08b8665f937911e48d89094bab07e4a7"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/references/electron-reference.md",
+      "sha256": "6b3721deeef889285753c4895dab6b665f4e6a9bd85eb810f46f9dbaece032f0"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/references/module-map.md",
+      "sha256": "765e0ed44e7b8cda530deab1764313f216874a42835a2185d1deafe45b96342a"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/RUNBOOK.md",
+      "sha256": "1326b7d1e8b87311b27756d3f86c7cfc1f3bf124a1f57fdbc3a59e03bf29b6ec"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/SKILL.md",
+      "sha256": "131a0726d28cb40a6876a82476f23d7e9a051d55e46877251ba773025b384c70"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/troubleshooting/common-issues.md",
+      "sha256": "712a36a25288189455f78a967f674d53d1e2b1cf84aac46dd280cd297159a637"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/troubleshooting/deprecated-and-contradictions.md",
+      "sha256": "3f45becf5fd112dfac94628161030a3cfbd267bc45fda344af1db0459f992b6e"
+    },
+    {
+      "path": "skills/meeting-sdk/electron/troubleshooting/version-drift.md",
+      "sha256": "d59aaa887f4f13bcff3e2e87dc0bea9ebe883073a0720728074dad349a4dad0b"
+    },
+    {
+      "path": "skills/meeting-sdk/ios/agents/openai.yaml",
+      "sha256": "36fb852f451ad3a3e7d206fb9fa29b01bcd0faa39dbe3e6c3a8a6b8ace1f4571"
+    },
+    {
+      "path": "skills/meeting-sdk/ios/concepts/architecture.md",
+      "sha256": "1879845fef7c45052ae79a772f8cde4a9c72adc574eeae43f690094c9ad32be4"
+    },
+    {
+      "path": "skills/meeting-sdk/ios/concepts/lifecycle-workflow.md",
+      "sha256": "62cd11659fc41eae85f463e4a4ac3d3a4fd5a53d2852c1ccb2ecca4879eb4e1d"
+    },
+    {
+      "path": "skills/meeting-sdk/ios/examples/join-start-pattern.md",
+      "sha256": "20289e8b053f9e7867f07c6d81cb29dca47671f65b76790af2499271066e03f5"
+    },
+    {
+      "path": "skills/meeting-sdk/ios/ios.md",
+      "sha256": "cbed6b56df1fb1b3f3a160fcdad4be86f1e12f5fc77b1711873587fc5cd7f98b"
+    },
+    {
+      "path": "skills/meeting-sdk/ios/references/environment-variables.md",
+      "sha256": "6852102b3404b399a559d1fdecc241cec006e637f9eee868c20759a4962ab62c"
+    },
+    {
+      "path": "skills/meeting-sdk/ios/references/ios-reference-map.md",
+      "sha256": "2b8d5bc68109273d84cc3288d666e1a72d8970ad6cc40db032e2d481d6ff2dcb"
+    },
+    {
+      "path": "skills/meeting-sdk/ios/references/versioning-and-compatibility.md",
+      "sha256": "8e08946856f6c0666a647fb8443a1f2d0b51d44e553c5a08b75957fcc87bd23b"
+    },
+    {
+      "path": "skills/meeting-sdk/ios/RUNBOOK.md",
+      "sha256": "2c57425b7e4cf05435557c082f00885cc27ef13cb53e6f1c19c48a5b478fb120"
+    },
+    {
+      "path": "skills/meeting-sdk/ios/scenarios/high-level-scenarios.md",
+      "sha256": "44160050175d0067e61b5a371b447c395fca0a01c2555dd9556a32d97ad3f5a2"
+    },
+    {
+      "path": "skills/meeting-sdk/ios/SKILL.md",
+      "sha256": "8e8ac2aa137c05368b1c0d752a42f7e92bcf836bb26256dfaf7179f83eef34bf"
+    },
+    {
+      "path": "skills/meeting-sdk/ios/troubleshooting/common-issues.md",
+      "sha256": "ba88f96b465143d58318f2c096b17481042ad3b278580b11bd01e5e0f7fa3cae"
+    },
+    {
+      "path": "skills/meeting-sdk/linux/agents/openai.yaml",
+      "sha256": "af7577b1a2da8647a53d4b54d4285fe2ede4d6a572fdb07af912341f4c30d95b"
+    },
+    {
+      "path": "skills/meeting-sdk/linux/concepts/high-level-scenarios.md",
+      "sha256": "6a970ac89f2fd43d3de36564152a293e739991cc1e0ccb89a07be5e37c8b4137"
+    },
+    {
+      "path": "skills/meeting-sdk/linux/linux.md",
+      "sha256": "b6cf8268453d3da6913c46c96c0701bd457b596c31303d630d48007b5d69511d"
+    },
+    {
+      "path": "skills/meeting-sdk/linux/meeting-sdk-bot.md",
+      "sha256": "91901e249582fdfdad3ffb62a457c5ee7f87b3545c203d046b5a48e13cc897af"
+    },
+    {
+      "path": "skills/meeting-sdk/linux/references/linux-reference.md",
+      "sha256": "4a6f16428a83aab3c48f7e9a4d61babe2b861470cc55339e011d7e6a6289a91d"
+    },
+    {
+      "path": "skills/meeting-sdk/linux/RUNBOOK.md",
+      "sha256": "7555c06a56126e01eb9b9bad959c5cc614044f565bdc1fa6c0d4250d28051dbf"
+    },
+    {
+      "path": "skills/meeting-sdk/linux/SKILL.md",
+      "sha256": "8ed0b8e710f25ec2cf7759bc88c2a4e447f5d07cd924d5ad68a21831eada1d29"
+    },
+    {
+      "path": "skills/meeting-sdk/macos/agents/openai.yaml",
+      "sha256": "690021ac9601a8a06a2573dfe42d6f76a81df0a962470bcb36932f9061af9537"
+    },
+    {
+      "path": "skills/meeting-sdk/macos/concepts/architecture.md",
+      "sha256": "28d3464eb1fc5bf6a0ce0b65e63e9e2c1535085f78c7484627d7ff14ab73318b"
+    },
+    {
+      "path": "skills/meeting-sdk/macos/concepts/lifecycle-workflow.md",
+      "sha256": "d6eb5f722714db8d491f141ccf19bdecfb92ea005fe4a619d065f1b7282ae29b"
+    },
+    {
+      "path": "skills/meeting-sdk/macos/examples/join-start-pattern.md",
+      "sha256": "7f1e4c956c599318ffccd422aa81957a87852d1d8f885042cf31d9e2c1490e69"
+    },
+    {
+      "path": "skills/meeting-sdk/macos/macos.md",
+      "sha256": "62633ff6ed0dd854c31e749eb439aeeeddd163847658b868cc32c405fd9b1758"
+    },
+    {
+      "path": "skills/meeting-sdk/macos/references/environment-variables.md",
+      "sha256": "3b52c9bd217ec819b29c759d1b3f8ba5d5060988d008c3280ecee35ac45531da"
+    },
+    {
+      "path": "skills/meeting-sdk/macos/references/macos-reference-map.md",
+      "sha256": "89ddda905e1aaa943e65e55d560455858fc3b8fc0c2950991a88e59bec411b1b"
+    },
+    {
+      "path": "skills/meeting-sdk/macos/references/versioning-and-compatibility.md",
+      "sha256": "66578772545d6bcb967ac29a6dd8537ee4dc71765bcea3028e580b2a6d0316ac"
+    },
+    {
+      "path": "skills/meeting-sdk/macos/RUNBOOK.md",
+      "sha256": "d2852b9ca529143761823b0a23d7159905b66e1a44dc6a3d1a468ce3547841c6"
+    },
+    {
+      "path": "skills/meeting-sdk/macos/scenarios/high-level-scenarios.md",
+      "sha256": "a09c051f0a7f37c0037ccd2d0df9a0da9ca94b56dedd1ed7f3399cd85bb3dfd1"
+    },
+    {
+      "path": "skills/meeting-sdk/macos/SKILL.md",
+      "sha256": "7e24972ce6e29fe4147648512c7553392e2bf73478ce7eb9781fd531820f731c"
+    },
+    {
+      "path": "skills/meeting-sdk/macos/troubleshooting/common-issues.md",
+      "sha256": "f49dc41f8e95f690e7448e90fe365bab44bab8c81aa2f9e8b94c2caf8c8c0518"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/agents/openai.yaml",
+      "sha256": "7df61a043c92b5f350d005cad2c708280d7de3949d486581e7019ac5b805d7f4"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/concepts/architecture.md",
+      "sha256": "c93c94ad6fa53d54b56092f5d7a6b3aff9a6e978b1cd34515adee8a0596af7fd"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/concepts/auth-and-token-model.md",
+      "sha256": "975ca7d3aabbb8f2c059a0d65b187a7867b2a73787f1d0a6df78b9bd777359d2"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/concepts/high-level-scenarios.md",
+      "sha256": "66deb3e78e202b8a7e85402fd3fc6a4d4a34b0f2f75ff31b72a5dfdcf4930a30"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/concepts/lifecycle-workflow.md",
+      "sha256": "eb92084b93da6f2c93b751913314c093933cec7456175f2228676cbcd9670f65"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/examples/join-meeting-pattern.md",
+      "sha256": "d3ad9a75157f1dfa0233bfe95192c0c154c248fa7379bbf4d7cc21a131bc2503"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/examples/provider-hook-pattern.md",
+      "sha256": "a4e60eebcec077bfa9b9b017bb5e075318ea571cc7b562eac6f24bb95cc2e70a"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/examples/setup-guide.md",
+      "sha256": "15a661f66deed65864264d7970a339beec8730e8fd2aa24f514337f6dc0a353c"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/examples/start-meeting-pattern.md",
+      "sha256": "ad719aa187422e5363b5a1b66fd3305c25a01f1f6a3a9a0bdd26ca62b81fb3cf"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/references/android-setup.md",
+      "sha256": "bf50caed7a88509adb029fb2456d0a0e5f464271d8ba100f1cd11e76afa47c3c"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/references/ios-setup.md",
+      "sha256": "f1140ff9db303c9d7883f135b9829196a9e296ac2987c668a9b9744661f21225"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/references/native-bridge-notes.md",
+      "sha256": "f631b5b9611db4d83370fb354c763319f579426be0d9a5b0e84549b10ad0ba1b"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/references/official-sources.md",
+      "sha256": "25d80d148e47f1649bff1bc1c6c7b3ec30ac7c01cc8c97980033857c927fe730"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/references/wrapper-api.md",
+      "sha256": "aaac239a77ca5a1589043a81a62bb699509bc82817b9443f38205889ed683ab1"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/RUNBOOK.md",
+      "sha256": "00a4f895af31150c8cf1650aeb95f17b26ca3a74fc3125095d117227e7626f1f"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/SKILL.md",
+      "sha256": "eb2e2f7af2e5d2236d7bd74d36d7204de860a7e676a9f4670fdd88d6a21db24a"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/troubleshooting/common-issues.md",
+      "sha256": "a8c01770359dc8f1f2d070e23262ce25fcf4a3d432d93a63e71810dd086b777e"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/troubleshooting/deprecated-and-contradictions.md",
+      "sha256": "3890018880e45bad8e6760dcd04d86673eb48ad6d1f9fdca6084792f32bd3469"
+    },
+    {
+      "path": "skills/meeting-sdk/react-native/troubleshooting/version-drift.md",
+      "sha256": "dfb16a55a475aa9c3bc69534315ea7da649d27f8ea8549268c6441c46d2f3d97"
+    },
+    {
+      "path": "skills/meeting-sdk/references/ai-companion.md",
+      "sha256": "e00b6c0afcee4783ffb6fb8c48373b275848cdb5020c2f056b54d7dd3ed81d48"
+    },
+    {
+      "path": "skills/meeting-sdk/references/android.md",
+      "sha256": "cd4b23aa0685da395e64dbf8f930c77b7393966a5cbae18843518de9967cc0cb"
+    },
+    {
+      "path": "skills/meeting-sdk/references/authorization.md",
+      "sha256": "f0820222f842f5b6847c2f8f464434a996909f665069ecd07c9b045ea4ebe25d"
+    },
+    {
+      "path": "skills/meeting-sdk/references/bot-authentication.md",
+      "sha256": "f7317f0dbab04e4ce3e97e7aa9a5f2a57069398c47136e223ad8f0a2c20b7f95"
+    },
+    {
+      "path": "skills/meeting-sdk/references/breakout-rooms.md",
+      "sha256": "d46f0e1b0f78d2fbb8f5cc8c99cbf198775997bb8127126e0aaa64480997159d"
+    },
+    {
+      "path": "skills/meeting-sdk/references/environment-variables.md",
+      "sha256": "2c958955bf3ea64437797b89dd43fe6596c50146184edea04ae790f223c0ab8c"
+    },
+    {
+      "path": "skills/meeting-sdk/references/forum-top-questions.md",
+      "sha256": "542087e1e09e821f5a90339ff39888933b4bf9bff18d9a7bbb37190d3774e094"
+    },
+    {
+      "path": "skills/meeting-sdk/references/full-guide.md",
+      "sha256": "a3569d5d0cecd6f163f51066bf08c239c37b17330c258f9fdbc761e2d6d943b6"
+    },
+    {
+      "path": "skills/meeting-sdk/references/ios.md",
+      "sha256": "a2f17bc77a7b60797cebca472282403cf7d6ee0211506f113d1be828a041bf30"
+    },
+    {
+      "path": "skills/meeting-sdk/references/macos.md",
+      "sha256": "c2a91ddb13d8f8ebca46cdcad54ef2d32f986d3ca4720aaab49f5c0afe3de217"
+    },
+    {
+      "path": "skills/meeting-sdk/references/multiple-meetings.md",
+      "sha256": "96c69dadd32e16ee98182f7d31f5fdb187aa2e8024e7d008299b64613c710c50"
+    },
+    {
+      "path": "skills/meeting-sdk/references/signature-playbook.md",
+      "sha256": "fc1c988b7af492a2cb10231fa280c82892f931311d9081dda4d979fc45847753"
+    },
+    {
+      "path": "skills/meeting-sdk/references/triage-intake.md",
+      "sha256": "67831537fd98dbb36002ae9f8dc51ecde2014f15ee1e74db2d94145008a9fc30"
+    },
+    {
+      "path": "skills/meeting-sdk/references/troubleshooting.md",
+      "sha256": "e0add7ee2df6ce3d769b44f378bcec4124f0a0cdb934b5c5e3ee9354a1555cb4"
+    },
+    {
+      "path": "skills/meeting-sdk/references/unreal.md",
+      "sha256": "d9b894ddab64f8e4178863518dd9e63154b49615667aa5de4c222ca2c8106d23"
+    },
+    {
+      "path": "skills/meeting-sdk/references/webinars.md",
+      "sha256": "17dfbd2dfdc90a62f1ad2f825b3410d7e8fce45d3030de2795e3f2f749eca749"
+    },
+    {
+      "path": "skills/meeting-sdk/RUNBOOK.md",
+      "sha256": "9979cef3f445766cc499c3cd07014f171d0ea23aa647efd1dbdc7c550dc9beb1"
+    },
+    {
+      "path": "skills/meeting-sdk/SKILL.md",
+      "sha256": "d4ba0052b2684f6324ea9eafc748d9d14cbd8447794797017a2b67b86d17c778"
+    },
+    {
+      "path": "skills/meeting-sdk/unreal/agents/openai.yaml",
+      "sha256": "5cf563c61518a8a501fed2e2e779d2cd7ee49ff60c5db64b5f3e6e051e36b585"
+    },
+    {
+      "path": "skills/meeting-sdk/unreal/concepts/architecture.md",
+      "sha256": "e9c225b98a7df52e37b7fbb134ddc8adcb31553ea0d70c2d546362b66450a028"
+    },
+    {
+      "path": "skills/meeting-sdk/unreal/concepts/lifecycle-workflow.md",
+      "sha256": "78b1e25180467db888625eb84b151d1382e398a5e6b1def566fefc016fe4f8d8"
+    },
+    {
+      "path": "skills/meeting-sdk/unreal/examples/join-start-pattern.md",
+      "sha256": "90a035e36591188f655433819da2d9e9fc8a956658e963045c3f3071c58943fa"
+    },
+    {
+      "path": "skills/meeting-sdk/unreal/references/environment-variables.md",
+      "sha256": "6374809b9ff198b59241ca854caa9ff0b997c1cf1b6d34c798f0781753dedf3a"
+    },
+    {
+      "path": "skills/meeting-sdk/unreal/references/unreal-reference-map.md",
+      "sha256": "7abc5a7ef1d471af4a4b4a7199b4280fb071da9d8dcad5caa08ad0949be7c595"
+    },
+    {
+      "path": "skills/meeting-sdk/unreal/references/versioning-and-compatibility.md",
+      "sha256": "0c8ccb562ca4212005e5697a98af39e6545eb4afc87187f1336c49a2840c8f24"
+    },
+    {
+      "path": "skills/meeting-sdk/unreal/RUNBOOK.md",
+      "sha256": "cbab734e5f251a1cee51d362714c0b9a5a17569488cb20bc7a91eb828d6644bd"
+    },
+    {
+      "path": "skills/meeting-sdk/unreal/scenarios/high-level-scenarios.md",
+      "sha256": "173c418a77bb8bac9c5ccde3d1d484134439c39054c53efa1375e4f94553737b"
+    },
+    {
+      "path": "skills/meeting-sdk/unreal/SKILL.md",
+      "sha256": "54ea3a33ca2848c64490a842612f58f9172da5af3a203389c12007269cb3b34d"
+    },
+    {
+      "path": "skills/meeting-sdk/unreal/troubleshooting/common-issues.md",
+      "sha256": "a1d8e3da28c0e7fa3e85942a2319d1be33a7785c8c9e36f5eb08306178021213"
+    },
+    {
+      "path": "skills/meeting-sdk/unreal/unreal.md",
+      "sha256": "d24060b59a03c964309d160933342035f058130fc76f0351232f09f8eab9d7b3"
+    },
+    {
+      "path": "skills/meeting-sdk/web/agents/openai.yaml",
+      "sha256": "aca10f308b2ad86f8efaec4b6074bf7af272284aab821b118c8e0171f9d96c26"
+    },
+    {
+      "path": "skills/meeting-sdk/web/client-view/agents/openai.yaml",
+      "sha256": "baaebbd9df3b50b94a953f3b91fc4260689f545b52647dd517a56e00a3927095"
+    },
+    {
+      "path": "skills/meeting-sdk/web/client-view/references/index.md",
+      "sha256": "1cf4a3a2cf626a8e8d4557deab735e4e56580addf0bf841493200f1639c6a68d"
+    },
+    {
+      "path": "skills/meeting-sdk/web/client-view/RUNBOOK.md",
+      "sha256": "832c13027fb585e4d5998d7077bee21b2d03279da83f2f05c25b84f5863a8854"
+    },
+    {
+      "path": "skills/meeting-sdk/web/client-view/SKILL.md",
+      "sha256": "f90c98006d86e86fff513cfb066b214f6be22fa39fb04d392c9edfe02e702b34"
+    },
+    {
+      "path": "skills/meeting-sdk/web/component-view/agents/openai.yaml",
+      "sha256": "af5844b8d34496dafe31f8d72623157f75073437157d9ba72d5e84b3b95530dc"
+    },
+    {
+      "path": "skills/meeting-sdk/web/component-view/references/index.md",
+      "sha256": "747a2d965a77770658f0cc2cea03bba5a056ea816101284a1802a1b17c5fde82"
+    },
+    {
+      "path": "skills/meeting-sdk/web/component-view/RUNBOOK.md",
+      "sha256": "563e28d9338aafe503a2a36c1f383512be3b9b52b1a837cd70de3eddc92cf94f"
+    },
+    {
+      "path": "skills/meeting-sdk/web/component-view/SKILL.md",
+      "sha256": "92c8012cf7163db75949410806280f1b4faed570a8c8a93016a3f1a6e0c641e0"
+    },
+    {
+      "path": "skills/meeting-sdk/web/concepts/browser-support.md",
+      "sha256": "a0eceb090df4d73fef54894524b7f959d1c29b3cb71bd15f6446c648b49cc32f"
+    },
+    {
+      "path": "skills/meeting-sdk/web/concepts/sharedarraybuffer.md",
+      "sha256": "4c2729876e2fa8d121726c756a08bc9cb6765b90e8892c7991ee055e0478c878"
+    },
+    {
+      "path": "skills/meeting-sdk/web/examples/client-view-basic.md",
+      "sha256": "237425933a4a5d8fe3fd2165a0362f8230c9baa5b851fad2038fed6820463beb"
+    },
+    {
+      "path": "skills/meeting-sdk/web/examples/component-view-react.md",
+      "sha256": "c09f250841301fda1a14165cfccbf900691f48abc1ff00ce49fd7e54d74fee4f"
+    },
+    {
+      "path": "skills/meeting-sdk/web/references/component-view-breakout-rooms.md",
+      "sha256": "173af11127176b13e74220df2990f2f3fb237d34aff518e1ee0f97adb92b47e4"
+    },
+    {
+      "path": "skills/meeting-sdk/web/references/component-view-ui-customization.md",
+      "sha256": "14cfe4642d8cb93cca47627a02b161c1341cc006a579eecd1d4f07a883fd028b"
+    },
+    {
+      "path": "skills/meeting-sdk/web/references/sharedarraybuffer-gallery-view.md",
+      "sha256": "efdd16ba9e6b8dd4aefc6149dbe13d9fa3ef10794c95574b433817cc81a02da4"
+    },
+    {
+      "path": "skills/meeting-sdk/web/references/web-performance-cpu.md",
+      "sha256": "dc5dd7d97df4c4fbfaab511542ec26be9a0ac90e9e31f66133aca6b05221ba1e"
+    },
+    {
+      "path": "skills/meeting-sdk/web/references/web-timeout-browser-restriction.md",
+      "sha256": "1ff15f20a3a407c4dd6dc8fb761c4f33dce82e0e037014ef9f9164231da79085"
+    },
+    {
+      "path": "skills/meeting-sdk/web/references/web-tracking-id.md",
+      "sha256": "af44fdfd0727d9e7d9b33baa6a86a28c8fceae245ed81d427fd4b12daacd68d7"
+    },
+    {
+      "path": "skills/meeting-sdk/web/references/web.md",
+      "sha256": "f4f230b49dd96e1a08da85b7db9344851d691886fe4bf553f6a1c54f94751045"
+    },
+    {
+      "path": "skills/meeting-sdk/web/RUNBOOK.md",
+      "sha256": "3770e03e4bd795256f958a676d5889626a1baa7526e3b4acf9d0edddd380e229"
+    },
+    {
+      "path": "skills/meeting-sdk/web/SKILL.md",
+      "sha256": "5d6368211239de1c6e649c2f80d31669172111f923397877f068816b2766ebdb"
+    },
+    {
+      "path": "skills/meeting-sdk/web/troubleshooting/common-issues.md",
+      "sha256": "b6509121f55b11d442ea541e66445d511ac428276c46baceb56998607e36e74a"
+    },
+    {
+      "path": "skills/meeting-sdk/web/troubleshooting/error-codes.md",
+      "sha256": "567fb50689e33e893fcf9f8c761dc7630fa534064e67860d39c75030e9c99ec5"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/agents/openai.yaml",
+      "sha256": "9684eba91d2e4b57eb88ba4ccb1720f81e66237192b75bd06517872f9e7e79e6"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/concepts/custom-ui-architecture.md",
+      "sha256": "d60576839c0e657e699a6133bce649677423912b8fe7cd6b117764535443a163"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/concepts/custom-ui-vs-raw-data.md",
+      "sha256": "1e76c0bcd92240268609b59a7913c55e2039e6bb2a22de34c2be67ea8153a377"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/concepts/sdk-architecture-pattern.md",
+      "sha256": "abb3065e5747f05465181707a8568fe852b94d35a570209fe0f6f5420a7b7ee3"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/concepts/singleton-hierarchy.md",
+      "sha256": "1cf4e781b5142e82c4320f22f5ca6749d76b43f82fc39bcd56fac00929579bea"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/examples/ai-companion.md",
+      "sha256": "5e5cf779179fe07d568c3c6310ef0616102fea3cc7703902b75996f9ab534e61"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/examples/authentication-pattern.md",
+      "sha256": "c1cdb606183229fc45098c0c1c3582ffd65d56c4848ee0ef4d9c85cfd4d423d1"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/examples/breakout-rooms.md",
+      "sha256": "576ebc2961ae445f1aad6e983205daaf5df288b80971a01c527233b974b9f8bf"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/examples/captions-transcription.md",
+      "sha256": "e607b7605fc282b8535c01b3363273dfc20f47f3eb48859635b8f40e3bf3ab11"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/examples/chat.md",
+      "sha256": "78208d1c044f54aa21fba636d8a4ed44a0b9af3274edf2776b77341b9f380ef9"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/examples/custom-ui-video-rendering.md",
+      "sha256": "494ba9072ee437f553d23000f2278427b2ec717dcf3c9888f7bbe08f529a0d01"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/examples/local-recording.md",
+      "sha256": "875400d8307e28bf5466e4aed913f412ea6073d6eeab305ce869ef1eabb052ee"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/examples/raw-video-capture.md",
+      "sha256": "ffe4e0414e37d9ce5861a9537c473087ac51d63b13014e618dd94f70cf61cb0b"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/examples/send-raw-data.md",
+      "sha256": "ccdab5a8e62e65f774e923e11a303f1cde52ee1c49ead040680180c27799850a"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/examples/service-quality.md",
+      "sha256": "e8a4d106cc57bfd173b59bb9b09c80900a95b0ca28e99ee20e023e1a2a558e7b"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/examples/share-raw-data-capture.md",
+      "sha256": "be252288aacf4a7f5a6d1a92166eeb2d9a6deb5b32a448ddabc2c1ebd9527c24"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/examples/video-advanced.md",
+      "sha256": "e3ea10a35fab7beb0925110b52d92fdb6dd6e17fc14b57d26a6efce528bd1713"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/references/deployment.md",
+      "sha256": "9dc1e392cd11e0f1f983c3dac9b0d5d2c443bbaab450c9824b871b1c038b6620"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/references/interface-methods.md",
+      "sha256": "e36f4fd02ba021623142e777431847ab3ce9f694fd9cab468e30715638dcb8e8"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/references/windows-reference.md",
+      "sha256": "97033a294d122da8a72782dff52c76ed802b94aea0a9633eff9ce283873d0edc"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/RUNBOOK.md",
+      "sha256": "ae5ffc78df74c1a2d2ec86bfc11379f8d222f50eed6d4488fbe01eb4adeb9766"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/SKILL.md",
+      "sha256": "2e83ff73312da1bf2ee84f24d1678c1fb6c23acba8820b310dc94400c6336519"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/troubleshooting/build-errors.md",
+      "sha256": "34ecc5433c0eceb630ad57bd0682a58a1a442da24a4b2e29e349d7fec4a52fd9"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/troubleshooting/common-issues.md",
+      "sha256": "6d07b3fe9d7f20a48b1a0c2d1c3a6b958b444f20c9330234a5779569253abad2"
+    },
+    {
+      "path": "skills/meeting-sdk/windows/troubleshooting/windows-message-loop.md",
+      "sha256": "ef927474cfcec55b8171799226118ece3e3dc17f4a4252d29bb68b1140850c84"
+    },
+    {
+      "path": "skills/oauth/agents/openai.yaml",
+      "sha256": "165761a0ec2c8355076ad1a87e99a742dd64349014ded7a340947e0716749467"
+    },
+    {
+      "path": "skills/oauth/concepts/oauth-flows.md",
+      "sha256": "fde45ec268c337389d935e7622a3377e7986c43dd0ad825e26c9479e5262a4f6"
+    },
+    {
+      "path": "skills/oauth/concepts/pkce.md",
+      "sha256": "018cad0052b6573126c46717df4b9c6d33cd9f60850c3bc304603827a5470fc8"
+    },
+    {
+      "path": "skills/oauth/concepts/scopes-architecture.md",
+      "sha256": "0c65d56de9ce88aadbf6289f345c254cfaa2311f121edd9b0244639b0192b634"
+    },
+    {
+      "path": "skills/oauth/concepts/state-parameter.md",
+      "sha256": "8f3e1010cec428771a8b346c979be3a73212ade36ddccc6c9ee5a14dcf758571"
+    },
+    {
+      "path": "skills/oauth/concepts/token-lifecycle.md",
+      "sha256": "7d1873730c59022e405bd83e14e775460c0aeef765447ecec6690a7273f6ae44"
+    },
+    {
+      "path": "skills/oauth/examples/device-flow.md",
+      "sha256": "8331593823bdb7380a6f9a32daac93bb26edf2f7f2db87e491d18449136a1a3e"
+    },
+    {
+      "path": "skills/oauth/examples/pkce-implementation.md",
+      "sha256": "fc808cd517437bd46b200e0b0afea837caafe7ccec2bf18cefaf37b8375f4102"
+    },
+    {
+      "path": "skills/oauth/examples/s2s-oauth-basic.md",
+      "sha256": "c69cdd92d1a96ac9d738a348612556597947d5e26cc25b31f1284fa95e14393c"
+    },
+    {
+      "path": "skills/oauth/examples/s2s-oauth-redis.md",
+      "sha256": "36839998d6194d57890bacb83fd2bd9ecb29a9def96b2c165b915bc31624a2ef"
+    },
+    {
+      "path": "skills/oauth/examples/token-refresh.md",
+      "sha256": "e8d58ae46379ee619ff0dd20887f8bfb44af67d359d74f5a032982932c0ce3b5"
+    },
+    {
+      "path": "skills/oauth/examples/user-oauth-basic.md",
+      "sha256": "22acdd4cfdc1ccb83fae272b6c0ac97a379d843aeb685dbd75920fdd8599ccc1"
+    },
+    {
+      "path": "skills/oauth/examples/user-oauth-mysql.md",
+      "sha256": "5315d0e09cd35aaf7e7d006a0b51eecf639049205a6eba2c81d4d1a58c99d9f7"
+    },
+    {
+      "path": "skills/oauth/references/classic-scopes.md",
+      "sha256": "cf84060e78aa37783c8cc2d2af3f16ae6eee10422a1803a1ebd0cfb6d48234b4"
+    },
+    {
+      "path": "skills/oauth/references/environment-variables.md",
+      "sha256": "d55bbdf23b60759cae1f2ce4ee8e85dc309482bbb0c0639dd313c11357fc7833"
+    },
+    {
+      "path": "skills/oauth/references/full-guide.md",
+      "sha256": "2691eef14e5b68b38280d72171233cabf12ebb4dd8fbbe19e19be73a985b82b0"
+    },
+    {
+      "path": "skills/oauth/references/granular-scopes.md",
+      "sha256": "6be93eb1a75059d32152e8796f0b83a040dbc252640f5fb568fbae65d5aa0057"
+    },
+    {
+      "path": "skills/oauth/references/oauth-errors.md",
+      "sha256": "26b31891bc117b4389404f31cfb23e6618575bb82d5faac8e124f75ddf38476a"
+    },
+    {
+      "path": "skills/oauth/RUNBOOK.md",
+      "sha256": "d448e2e382f7fc55593a6beea015a3e54ca3bd6db2676a0d938e3bd1c5061dd5"
+    },
+    {
+      "path": "skills/oauth/SKILL.md",
+      "sha256": "0a36b64fe5b58243ddd588c6e4e7b52d2e826ff3ec86b451d866575c1cc18eb3"
+    },
+    {
+      "path": "skills/oauth/troubleshooting/common-errors.md",
+      "sha256": "188ffbfade671fbbefbdeb29d7701e6221f4afa75c9d09cdcc3594c2026265e2"
+    },
+    {
+      "path": "skills/oauth/troubleshooting/redirect-uri-issues.md",
+      "sha256": "d338e6a8895272b5dfc3d3209b822dde90c2ee79d862708b7970c3d53a9d5992"
+    },
+    {
+      "path": "skills/oauth/troubleshooting/scope-issues.md",
+      "sha256": "4fc5ef421ebc3197f495fa92f6e0816df6522918e27e691001b0cddebfd93114"
+    },
+    {
+      "path": "skills/oauth/troubleshooting/token-issues.md",
+      "sha256": "df4be242b9c857c21071cbb83d862cc13c7af926467abcad49442c1e1273cc65"
+    },
+    {
+      "path": "skills/phone/agents/openai.yaml",
+      "sha256": "8fa7842cb8f08e0326b546d048a44e6a9d365730ff42b43de94c6754f5b8f65a"
+    },
+    {
+      "path": "skills/phone/concepts/architecture-and-lifecycle.md",
+      "sha256": "5951da42248ebf62f67c9e0e415304b943402ee9f311d34bf3af204bb3fd5fb0"
+    },
+    {
+      "path": "skills/phone/examples/phone-api-service-pattern.md",
+      "sha256": "097e29e5a5dfaf4e789d8913799b8e38c5b36577717e9324309d71d387d49295"
+    },
+    {
+      "path": "skills/phone/examples/smart-embed-postmessage-bridge.md",
+      "sha256": "721b8d9c03dc0a61c3994719efb177acc51e68723beae280a4107bf2bbaddc64"
+    },
+    {
+      "path": "skills/phone/references/call-handling-patterns.md",
+      "sha256": "f92229b698e151808b506c31b20c98f926089bc82604d32e0f32ac747a0493a8"
+    },
+    {
+      "path": "skills/phone/references/crm-sample-validation.md",
+      "sha256": "fed5be3e79aa4aeb5fc8077eeeb0bf3b41c0e10b8b1ebf58080eed75a63c4978"
+    },
+    {
+      "path": "skills/phone/references/deprecations-and-migrations.md",
+      "sha256": "db0a935f9766462a3ae0ac863fd00dca655296b5e828bc7c557eef5868fcb4f8"
+    },
+    {
+      "path": "skills/phone/references/environment-variables.md",
+      "sha256": "b608fdf69ab2918123c58e3fb62f444f6768942cd9428049c560c8a4edeecea3"
+    },
+    {
+      "path": "skills/phone/references/forum-top-questions.md",
+      "sha256": "a99439934034d6b8f1ed874cc1fa520b157b578a21a89a6f4d6110714954af75"
+    },
+    {
+      "path": "skills/phone/references/full-guide.md",
+      "sha256": "bf75151a82724b302448c1a449adcf935914929f857224e751d8508e8d30b9ee"
+    },
+    {
+      "path": "skills/phone/references/smart-embed-event-contract.md",
+      "sha256": "caeadf3f10adf454545b354f44231aa17588eb714da8e91095f8828d69efc8f7"
+    },
+    {
+      "path": "skills/phone/references/source-map.md",
+      "sha256": "743e2178feeed9388ad070fa2e57bb038de333bbfca8b89f3d109c4fd238e456"
+    },
+    {
+      "path": "skills/phone/RUNBOOK.md",
+      "sha256": "c9626c6cca4dba15903edee5d737d38b1593cac511a037b1844466f6b8e6368d"
+    },
+    {
+      "path": "skills/phone/scenarios/high-level-scenarios.md",
+      "sha256": "588b256f49c1bae3335490e918b1fe92669b67b478493402658be6b1b631e8fb"
+    },
+    {
+      "path": "skills/phone/SKILL.md",
+      "sha256": "5efa7e4e426cb9c58abf79682c66a776c16281b86d35c608dfd86b81ed12a4fc"
+    },
+    {
+      "path": "skills/phone/troubleshooting/common-issues.md",
+      "sha256": "74b1f6539923394177c6c427c84ceb18851ee78b4bf3001fa83a16bc1b8e614e"
+    },
+    {
+      "path": "skills/plan-zoom-integration/agents/openai.yaml",
+      "sha256": "d22de4e41909c1b092134e8eb26912470ba262249dbbc37c353dfb19c732af2b"
+    },
+    {
+      "path": "skills/plan-zoom-integration/SKILL.md",
+      "sha256": "1940ee7f2da4ab852dcb35323775ec69af2a0eab85316d9aadc264f5219db7b8"
+    },
+    {
+      "path": "skills/plan-zoom-product/agents/openai.yaml",
+      "sha256": "43681e18a4013656bb54f27f967a58b1c443823d441a51e5ab6aaecdc5e77238"
+    },
+    {
+      "path": "skills/plan-zoom-product/SKILL.md",
+      "sha256": "e8ed4cd674c11521edcdc34736711239bb7d1ba58788e550d9849d0597b39177"
+    },
+    {
+      "path": "skills/probe-sdk/agents/openai.yaml",
+      "sha256": "2dd9e306a2b91f5eb57460c0420b21a7c6c5cb37bdc3b5cfa155c9ea254290aa"
+    },
+    {
+      "path": "skills/probe-sdk/concepts/architecture-and-lifecycle.md",
+      "sha256": "c6d64ca3641d296f5482e820767a48cdf4cad2d8a094426995b7b92b258d01a1"
+    },
+    {
+      "path": "skills/probe-sdk/examples/comprehensive-network-pattern.md",
+      "sha256": "f52120d926c0788ecf1c0338d980daa4b764fabb02ab2974a1176f3665411234"
+    },
+    {
+      "path": "skills/probe-sdk/examples/diagnostic-page-pattern.md",
+      "sha256": "b28498e1d0fc98f602bf12b9b7b995816f503f49c60dbbe225c2bb7da9b828a5"
+    },
+    {
+      "path": "skills/probe-sdk/probe-sdk.md",
+      "sha256": "f01216c69be71eb4f5fa6edf40886b40cc3981994fd3a1249cf89b952107bbd4"
+    },
+    {
+      "path": "skills/probe-sdk/references/environment-variables.md",
+      "sha256": "9ef37e95ac0864ad5ebaba16aec6ccda993bd5a3d9ba4dad3f91c6a0d0b5314a"
+    },
+    {
+      "path": "skills/probe-sdk/references/full-guide.md",
+      "sha256": "d09fb5e4301c9d1c2ee55b6308cec787ff688ec1cefb49ccdf0538641843cd34"
+    },
+    {
+      "path": "skills/probe-sdk/references/probe-reference-map.md",
+      "sha256": "4757c8fb623627f9580d89ecd40041e14f6d748e303fe074066db17b5d7065e7"
+    },
+    {
+      "path": "skills/probe-sdk/references/samples-validation.md",
+      "sha256": "30293303845e133356a4dbb2fd34a16a65785e567e11dce1dfc0ebd4f60f5914"
+    },
+    {
+      "path": "skills/probe-sdk/references/source-map.md",
+      "sha256": "393ccf8a38ff6ae527a74829b51a68de9b50e9805a6feac69f1767ba8b1c5b9c"
+    },
+    {
+      "path": "skills/probe-sdk/references/versioning-and-compatibility.md",
+      "sha256": "fb64cf1378a7d9356fb26cb1b02296e21f5039739a62acadfb704bb865c9f859"
+    },
+    {
+      "path": "skills/probe-sdk/RUNBOOK.md",
+      "sha256": "3f81b27935900afcd4c1cfb2df9153f2fb083bbfa574160554cf4901cb5c2438"
+    },
+    {
+      "path": "skills/probe-sdk/scenarios/high-level-scenarios.md",
+      "sha256": "9031949e4159eda2c46c42873416acacca60a3051d12c76b2d27dc2943b28d96"
+    },
+    {
+      "path": "skills/probe-sdk/SKILL.md",
+      "sha256": "e15813625ae5efd107c36bdd738b3133bebbfb50779e86d1c0029358360cf582"
+    },
+    {
+      "path": "skills/probe-sdk/troubleshooting/common-issues.md",
+      "sha256": "ddb50b8b0da89adf867c0897dde8c1b4ec3e42022d8220b1f633563ca268c95a"
+    },
+    {
+      "path": "skills/rest-api/agents/openai.yaml",
+      "sha256": "01484c84d36e10032287264b88fd08c3ffe73fdb39d4494b18ffd01e3c6ce6fe"
+    },
+    {
+      "path": "skills/rest-api/concepts/api-architecture.md",
+      "sha256": "964d5b0cba41b6ab838abcf13f3add26b58d1e5ce6574ddf126f849e8070f5ea"
+    },
+    {
+      "path": "skills/rest-api/concepts/authentication-flows.md",
+      "sha256": "30c1ee0e4cb830515ad7bf18688f3c9af27f9c8e3d9087276d26a4e4adbbfe8a"
+    },
+    {
+      "path": "skills/rest-api/concepts/meeting-urls-and-sdk-joining.md",
+      "sha256": "b1910de97589f06c5ff93e7d65e1281f134f1693813d8ba085170aad349e70e8"
+    },
+    {
+      "path": "skills/rest-api/concepts/rate-limiting-strategy.md",
+      "sha256": "8e9b0f55e9d5725f4757c961f0720fb1fa8c200661fabc85e3e479ab859f53b7"
+    },
+    {
+      "path": "skills/rest-api/examples/graphql-queries.md",
+      "sha256": "4fedc5b38e1badb7a54291350d60ecf055557d40d3271086ae2abbc3748a367c"
+    },
+    {
+      "path": "skills/rest-api/examples/meeting-lifecycle.md",
+      "sha256": "f6d741bfaed6c2832cff0bfb7fa9eafab43b01d493b8583507e76b3802f1715e"
+    },
+    {
+      "path": "skills/rest-api/examples/recording-pipeline.md",
+      "sha256": "ad232bfaf53dc44a7df8f9c559b398e2b47c8fdc502011c52c10f11826dcc0b6"
+    },
+    {
+      "path": "skills/rest-api/examples/user-management.md",
+      "sha256": "a93b8232c1b4b77bc06c058a581216bcd98b9ef2eb22d54d488c325dff544f37"
+    },
+    {
+      "path": "skills/rest-api/examples/webhook-server.md",
+      "sha256": "48b656b9318cb85b61b4f4064274eda225e5a07441dc3db0b6f5607372b6c778"
+    },
+    {
+      "path": "skills/rest-api/references/accounts.md",
+      "sha256": "1b08fbb51d8d9bdac7443e730ec63ca41783f6be5465b26e76d5171c4163a43d"
+    },
+    {
+      "path": "skills/rest-api/references/ai-companion.md",
+      "sha256": "9ef5f7da11dfa555a8b9118f2bf0c5368cd8b77b401215eb7c19e7178f5f4b7b"
+    },
+    {
+      "path": "skills/rest-api/references/ai-services.md",
+      "sha256": "443f756bafc751c1ea0aca4c32eb74e28bb7f1fe7dfe0943f3f2da8c9bd6e410"
+    },
+    {
+      "path": "skills/rest-api/references/authentication.md",
+      "sha256": "e74f084757f4fe779eb75db9055421e5fe485186065bc4d520c46d62e1467ec6"
+    },
+    {
+      "path": "skills/rest-api/references/auto-dialer.md",
+      "sha256": "7aac1533d03bebf6f00173b72fe5cf4fd72c0817c6874ef027cd525d0680faca"
+    },
+    {
+      "path": "skills/rest-api/references/calendar.md",
+      "sha256": "09ba3816152398a0fe6df26dafbaecf481a617b6b8d97092107de001e4239fb0"
+    },
+    {
+      "path": "skills/rest-api/references/chatbot.md",
+      "sha256": "e0a3dddb6deb07fae60d1b3d88ad29cf1f268927a05cee177abed5363ddf2a12"
+    },
+    {
+      "path": "skills/rest-api/references/clips.md",
+      "sha256": "4fe06b6083040e368d616fa91f567cf23d07ade670ff2f785a83162148a2d158"
+    },
+    {
+      "path": "skills/rest-api/references/cobrowse-sdk-api.md",
+      "sha256": "d0881e097f3ec5252de7235091475cc42fae7ef348f29132397431cc76166d77"
+    },
+    {
+      "path": "skills/rest-api/references/commerce.md",
+      "sha256": "ba7a402984fbcd4f935e4edb572307e646c5bf8defbc8a22fcdf16dfcc7c6784"
+    },
+    {
+      "path": "skills/rest-api/references/contact-center.md",
+      "sha256": "b70e9db343309c25a7fbc38d3278470a9794c4c322f80e1a498512b576070fd2"
+    },
+    {
+      "path": "skills/rest-api/references/crc.md",
+      "sha256": "438b4e7d6065f6e8b0bab1e4275b93dfdb4d6696d097619aa77639c1e4db356a"
+    },
+    {
+      "path": "skills/rest-api/references/environment-variables.md",
+      "sha256": "9b7df65efb0d1d5d77755ca644825e014c68d2b7aecac70bdafb9af297982487"
+    },
+    {
+      "path": "skills/rest-api/references/events.md",
+      "sha256": "23a238fddc568acc638776e9262c9418914d9decf70eaac6966f53cf876bed48"
+    },
+    {
+      "path": "skills/rest-api/references/full-guide.md",
+      "sha256": "8b532336f6e2312716b2991763dc9e366d7edd0343772bbfc3a8385a939426fc"
+    },
+    {
+      "path": "skills/rest-api/references/graphql.md",
+      "sha256": "dc3db61ef424e8f202026685e48fd9f775616137d0284aa3e7f923cccb08325b"
+    },
+    {
+      "path": "skills/rest-api/references/healthcare.md",
+      "sha256": "b80a30fc853c33b979b57c0678ef6a3922ea70dcedab71208d61ec8e05dfa552"
+    },
+    {
+      "path": "skills/rest-api/references/mail.md",
+      "sha256": "69e9d1d161560ad1786239cc7c8a0d3ac3a05daa626f518b7345c16dcc691a17"
+    },
+    {
+      "path": "skills/rest-api/references/marketplace-apps.md",
+      "sha256": "46221a558dcb26e4b45d673bd665db3b9fb8839d136599af2f499909724a3982"
+    },
+    {
+      "path": "skills/rest-api/references/meetings.md",
+      "sha256": "1f723df44a9f72534db13312d015dbbc89a687f60c9016588805431375356c04"
+    },
+    {
+      "path": "skills/rest-api/references/number-management.md",
+      "sha256": "ba534d6e905de5ecf24f2d56b147009d488c20ddfa438d2cd9dbf60eec77f48e"
+    },
+    {
+      "path": "skills/rest-api/references/openapi.md",
+      "sha256": "9d5869191e02a1d3dc6eaff43ae89613739dcc755a3c17c932aebc5ee67c2518"
+    },
+    {
+      "path": "skills/rest-api/references/phone.md",
+      "sha256": "55bc6e7e114c824abde073b46cdeb589fb97f64932ab8311956da34ebb1c4201"
+    },
+    {
+      "path": "skills/rest-api/references/qss.md",
+      "sha256": "684171f249d94131b4344d139898bc6851c70efb48ad84c9fb4ba5753279487a"
+    },
+    {
+      "path": "skills/rest-api/references/quality-management.md",
+      "sha256": "827f734027248b5b86a56166fa35c1206052dece8b8867748e22f58e54389a06"
+    },
+    {
+      "path": "skills/rest-api/references/rate-limits.md",
+      "sha256": "eb3ac409a1e01e246a98aea508a17874a0491d779180bf5aa068107c598f13d0"
+    },
+    {
+      "path": "skills/rest-api/references/recordings.md",
+      "sha256": "86729d632e9365a339d304a4b6209a000fc3de953cb51f020cee6282abe158bc"
+    },
+    {
+      "path": "skills/rest-api/references/reports.md",
+      "sha256": "df5e1b1d9986bf00570207703fa990536deb42f0f450c9c41f5f939f56d25ebc"
+    },
+    {
+      "path": "skills/rest-api/references/revenue-accelerator.md",
+      "sha256": "656d1f6206add39cc1f6efbd2f689e0c051000238c4bd70526fca9834d4d8352"
+    },
+    {
+      "path": "skills/rest-api/references/rooms.md",
+      "sha256": "46a0bd9132a06159a1d8e6d12b6f6908d0767134ba2e55fae0baaab794409d1e"
+    },
+    {
+      "path": "skills/rest-api/references/scheduler.md",
+      "sha256": "d86071c95f5d06b0b68eb71e8cdbcb5863a0808c360eca4b6c594c67d2952be5"
+    },
+    {
+      "path": "skills/rest-api/references/scim2.md",
+      "sha256": "2f9a239c75b1728c236f6af3c2e231dd60250f8361caab5822868345b8fc7652"
+    },
+    {
+      "path": "skills/rest-api/references/tasks.md",
+      "sha256": "5593de909716e017dde1ca2ef52bb938f60a198ace1d3bb58e178b05d78965ac"
+    },
+    {
+      "path": "skills/rest-api/references/team-chat.md",
+      "sha256": "5805474037d89e469c08e699f2d695b6a4d8c23d4ffa49f7f3fa40d89627bbbf"
+    },
+    {
+      "path": "skills/rest-api/references/users.md",
+      "sha256": "8bb5052df089c5132e0a0a453c919c7d8e55f4fe816246c1aacc53139a3f802c"
+    },
+    {
+      "path": "skills/rest-api/references/video-management.md",
+      "sha256": "b8931d5a0c7809e5a8cc7b3ebe1df6d35fb3b7a966be3cb95ea047b3f9899422"
+    },
+    {
+      "path": "skills/rest-api/references/video-sdk-api.md",
+      "sha256": "d3736efcbf1454be31606e7f9d52d62cfa5061a1d91fda0b6e3ea99a620bba17"
+    },
+    {
+      "path": "skills/rest-api/references/virtual-agent.md",
+      "sha256": "abe36fdcb65b329944ff116e00702e579deda31dec6d95244b3a72bade3a14c8"
+    },
+    {
+      "path": "skills/rest-api/references/webinars.md",
+      "sha256": "540853ff6b6874322869795465114732c8d7106a48badf667f13227d4cc11aae"
+    },
+    {
+      "path": "skills/rest-api/references/whiteboard.md",
+      "sha256": "12fc7ce871c02dd58dc8aa4de1cc7c561752f49c6d46d93da75460bf2faa917a"
+    },
+    {
+      "path": "skills/rest-api/references/workforce-management.md",
+      "sha256": "3285df04b35582b76ff1b78b0d1bf9e133b1b6578fbe68398be50cd5f4bd5828"
+    },
+    {
+      "path": "skills/rest-api/references/zoom-docs.md",
+      "sha256": "21122a7e672ea54ed57bc0271abc57f4d12258c977042ca4e31f5263cd655436"
+    },
+    {
+      "path": "skills/rest-api/RUNBOOK.md",
+      "sha256": "9d88b6690c4baa9bd95ccce8929469068cd7536547375437903142168e74cb64"
+    },
+    {
+      "path": "skills/rest-api/SKILL.md",
+      "sha256": "dd3104a819f9c17c90d4aefc489229a55f5498159280060c75e2179ace55e202"
+    },
+    {
+      "path": "skills/rest-api/troubleshooting/common-errors.md",
+      "sha256": "b2fa177c8dfbf42ee192c6aedcbbc1529ae956b09f1870438552cfee1f055be8"
+    },
+    {
+      "path": "skills/rest-api/troubleshooting/common-issues.md",
+      "sha256": "9cff4639cc02aaff3468556d985b627cebeb78c088707498033758c43a6571a1"
+    },
+    {
+      "path": "skills/rest-api/troubleshooting/forum-top-questions.md",
+      "sha256": "3c744facca90cd31d5e8cb5a47a23a7e395c0ee917b1f341da4fc0218e80914f"
+    },
+    {
+      "path": "skills/rest-api/troubleshooting/token-scope-playbook.md",
+      "sha256": "1c59aad826f58c393b1173a0508dd0592e0be1be3e0bda61ed57b9b66d63f11a"
+    },
+    {
+      "path": "skills/rivet-sdk/agents/openai.yaml",
+      "sha256": "80860a582f3da0d3c291a03de19c8c2642d2e2267aff7ec3a729f79aefe22b9c"
+    },
+    {
+      "path": "skills/rivet-sdk/concepts/architecture-and-lifecycle.md",
+      "sha256": "5d26ad0bbbb6b58072a966279b3c7e3eaadf247814d630361219537e3521dab7"
+    },
+    {
+      "path": "skills/rivet-sdk/examples/getting-started-pattern.md",
+      "sha256": "a9ae83816a0502cca4e806d0359c747fee6b5010e83e031a02c30980e3fde85e"
+    },
+    {
+      "path": "skills/rivet-sdk/examples/multi-client-pattern.md",
+      "sha256": "b5a095b3e21d62134fc20eb292158a736a255a18fe852ca45508d7f97c8f5905"
+    },
+    {
+      "path": "skills/rivet-sdk/references/environment-variables.md",
+      "sha256": "114dea5825e3cd83614b130c20becc8ab4d1d2200915ffe31021471244ab6cb3"
+    },
+    {
+      "path": "skills/rivet-sdk/references/full-guide.md",
+      "sha256": "bfda8f21c5a2e10717e207c4801853565ebfe2d61914393e187f3b9f04df782b"
+    },
+    {
+      "path": "skills/rivet-sdk/references/rivet-reference-map.md",
+      "sha256": "507fe43f45b6944617b7343f8f39f3dddf3411d333a438ebb7544722d93cf79f"
+    },
+    {
+      "path": "skills/rivet-sdk/references/samples-validation.md",
+      "sha256": "f68747a757270728edf4be0930b4ac917f6de68bcee5f3d344cc4d411aef8d0d"
+    },
+    {
+      "path": "skills/rivet-sdk/references/source-map.md",
+      "sha256": "87af29d275f4404b604c671f37a53d00d1817490d2caaad4b6e90ac510826b2a"
+    },
+    {
+      "path": "skills/rivet-sdk/references/versioning-and-compatibility.md",
+      "sha256": "c594b8017edced6abb2eaa4aed2c29e92556b133238fff0d0a94dca6b38f8c44"
+    },
+    {
+      "path": "skills/rivet-sdk/rivet-sdk.md",
+      "sha256": "69861ccc5f6e78aee2b6e5c9ce4757e619b61bac86c846d3c335dd04f1f01697"
+    },
+    {
+      "path": "skills/rivet-sdk/RUNBOOK.md",
+      "sha256": "b61fef25ceee990d66bb653ab3af32db5252de49b52ec60a41a44f9a2066fa28"
+    },
+    {
+      "path": "skills/rivet-sdk/scenarios/high-level-scenarios.md",
+      "sha256": "81506f7acad59fe4ddedd9d7b87503ac99e2b4d93f58a3f9558d4216bf2be339"
+    },
+    {
+      "path": "skills/rivet-sdk/SKILL.md",
+      "sha256": "a4cad2699bd565c57b2568e32ff36c9f5373bc5bb7e30edf4ba0560d3a8e669f"
+    },
+    {
+      "path": "skills/rivet-sdk/troubleshooting/common-issues.md",
+      "sha256": "78603018408bc2cdff6426126af028a7f53eacd33f39c3f6b4b87e78c5fa860f"
+    },
+    {
+      "path": "skills/rtms/agents/openai.yaml",
+      "sha256": "eac3e8a429b56fc8c71d19983b3eac4d4fa911163943b4bb04b2661d03d1e32c"
+    },
+    {
+      "path": "skills/rtms/concepts/connection-architecture.md",
+      "sha256": "d71eb8506c98253d876ae3f92f6be2d5c028041552a7ffb79b6fb275d8a08377"
+    },
+    {
+      "path": "skills/rtms/concepts/lifecycle-flow.md",
+      "sha256": "3fbe8138e1d9d5e4e8f5beb76b1a9a792b9f943ad54d00bac2fcc3ec81631b5f"
+    },
+    {
+      "path": "skills/rtms/examples/ai-integration.md",
+      "sha256": "5d640b82aa83e828e977e6e10cd4cfed18c032fb8d67a3fe22c9a5735485c4b9"
+    },
+    {
+      "path": "skills/rtms/examples/manual-websocket.md",
+      "sha256": "4d0a2ba196ed6cf50f663d7be4536eba1766e448f660172c8db1ce447cccf83f"
+    },
+    {
+      "path": "skills/rtms/examples/rtms-bot.md",
+      "sha256": "f4df9cf60e3c470ac348e29414b998feb160922b1285bed2f24192c646113ea9"
+    },
+    {
+      "path": "skills/rtms/examples/sdk-quickstart.md",
+      "sha256": "0260923063f296574be796526fa1b7b4ea05584e7af2ad79cd1187e167c9fccf"
+    },
+    {
+      "path": "skills/rtms/references/connection.md",
+      "sha256": "5b62ad3d149921fcae367695bc2486cd3b6ce0b65c0086cd7cc02b455199e82d"
+    },
+    {
+      "path": "skills/rtms/references/data-types.md",
+      "sha256": "67247b4c28fac3bb268f0b9f6c9119575392674f2611eab1051ff17c8359727d"
+    },
+    {
+      "path": "skills/rtms/references/environment-variables.md",
+      "sha256": "d49c8ca6c97aaac74ac0ee47dab3cb2f21aa48acd8c54eb00398cbe1751cf2d2"
+    },
+    {
+      "path": "skills/rtms/references/full-guide.md",
+      "sha256": "9cc0699b22d87acb2b6d1d42dc7128256ad366c69f093eb1e57bffab5197e22c"
+    },
+    {
+      "path": "skills/rtms/references/media-types.md",
+      "sha256": "d225f9d3a73820b7dde0a008c037bbccd94189fcd76beef1c01b5123b26bf3c9"
+    },
+    {
+      "path": "skills/rtms/references/quickstart.md",
+      "sha256": "0fc8679305c898dfecffc4519e284195569f8c93d9f69c23863dc10ba983d19b"
+    },
+    {
+      "path": "skills/rtms/references/webhooks.md",
+      "sha256": "fbcb53c173c2407efc183ff0e70838a48fc4da4caf3f1aa25473f00140ef5114"
+    },
+    {
+      "path": "skills/rtms/RUNBOOK.md",
+      "sha256": "b0482ab00e6a7151f03c93b70bff9515f58036f1727d655a9bb20a86ed4f5e05"
+    },
+    {
+      "path": "skills/rtms/SKILL.md",
+      "sha256": "e8b2c51d98999192e397eabe68b7fdcf37f2376d4180efa8d86d3c5c7c267f03"
+    },
+    {
+      "path": "skills/rtms/troubleshooting/common-issues.md",
+      "sha256": "4368ddd631a29276601c9c922891eeb7f009421ef83e219782011697ad804bd3"
+    },
+    {
+      "path": "skills/scribe/agents/openai.yaml",
+      "sha256": "6b36c7657edd6d8b58c49db5792e999b09184d66754984f3be33ee68f9ba413f"
+    },
+    {
+      "path": "skills/scribe/concepts/auth-and-processing-modes.md",
+      "sha256": "93501448d239c80223b0fe3dab745467446093b60dd0deea0c676eaacdb51dc5"
+    },
+    {
+      "path": "skills/scribe/examples/batch-webhook-pipeline.md",
+      "sha256": "b6b45ab044411819ce37e19c359437a33728043e11ed4e56a3caaa1f7c314ba0"
+    },
+    {
+      "path": "skills/scribe/examples/fast-mode-node.md",
+      "sha256": "ccb415cdec78681ca54fb6cbe5ed14611807ad66f4495c15789b8e6bdcd8cbdb"
+    },
+    {
+      "path": "skills/scribe/references/api-reference.md",
+      "sha256": "a2aa8bb96bbaaeb78b45daf5e0f72a212177e7c1269e9f6871534240a261ee80"
+    },
+    {
+      "path": "skills/scribe/references/environment-variables.md",
+      "sha256": "93ff2d9a3bd9800c93a473b2146b46ed9ea0ec8b771237805efb9fa967f6bd21"
+    },
+    {
+      "path": "skills/scribe/references/full-guide.md",
+      "sha256": "b29d5b8164928a49096d324c3af98a809781571b9044fcc1d3d592a23f5e3000"
+    },
+    {
+      "path": "skills/scribe/references/samples-validation.md",
+      "sha256": "58e45c5aa8cfcfb503c69a37420e3aeeff5dc8893f36edfa1e85c31a52431146"
+    },
+    {
+      "path": "skills/scribe/references/versioning-and-drift.md",
+      "sha256": "e63791fdd3647f079528dd3f2aa83ed7d56c92b0528531283fd8030183d4376b"
+    },
+    {
+      "path": "skills/scribe/RUNBOOK.md",
+      "sha256": "cd5964e54679923d5081237a0d0e74f0202ae182c03b44dbbd3e67fd04cc4381"
+    },
+    {
+      "path": "skills/scribe/scenarios/high-level-scenarios.md",
+      "sha256": "fc36e869680ede5bf62b00c8dbe688509be56783fd592d38688b4c0e21687a7b"
+    },
+    {
+      "path": "skills/scribe/SKILL.md",
+      "sha256": "34021ec6571b57ef3b05ff61acef0f1961263e0c23d973d2b46abdf12d24d527"
+    },
+    {
+      "path": "skills/scribe/troubleshooting/common-drift-and-breaks.md",
+      "sha256": "ed17eb7c967c14db3affa6aa6d8e10968752ff178592755532a6c61765b5da3e"
+    },
+    {
+      "path": "skills/setup-zoom-oauth/agents/openai.yaml",
+      "sha256": "149fbb6c2328c5c1331b272f19eb15a0dfc1990c0238bca521ac259c653b7378"
+    },
+    {
+      "path": "skills/setup-zoom-oauth/SKILL.md",
+      "sha256": "a46ac47ce538a8c2a2eedf35a640a36365292399a400379ce8cce7b29f497114"
+    },
+    {
+      "path": "skills/start/agents/openai.yaml",
+      "sha256": "bc7b8ccf8552b3de7338cad326172bb3b25cfd90b6b8dad96c248a329fbfa8a6"
+    },
+    {
+      "path": "skills/start/SKILL.md",
+      "sha256": "7d0d88efdcc2cbca3d5bbcf7b230f7f03ed9077993613c36bf19fc0ff24923ce"
+    },
+    {
+      "path": "skills/team-chat/agents/openai.yaml",
+      "sha256": "dccb887d47422e4f8f47e284eb4d421e10f9a1682ca8a74fa8c14fa0310032bd"
+    },
+    {
+      "path": "skills/team-chat/concepts/api-selection.md",
+      "sha256": "af6e5ef6d5d3f488f3f68db803ec45814a24e09c12f3f6c4b3b3e3b2ec5e4e39"
+    },
+    {
+      "path": "skills/team-chat/concepts/authentication.md",
+      "sha256": "2240adcd26aed0d8867229964e9feecbe3dc8fc1ff111bc108987006a088fb20"
+    },
+    {
+      "path": "skills/team-chat/concepts/deployment.md",
+      "sha256": "bf2fe287aa714d7d45f5d26d2e834f08c1fb2ad574b28edbb1d77e38c5516ea4"
+    },
+    {
+      "path": "skills/team-chat/concepts/environment-setup.md",
+      "sha256": "f7fd054083ba68e13013de014f71bb7bb35f79e20412b8630e013bb979e454ca"
+    },
+    {
+      "path": "skills/team-chat/concepts/message-structure.md",
+      "sha256": "f1fff48d450c4f1d6be62575e4e051026381dd660fb32e5191c7c290616309c9"
+    },
+    {
+      "path": "skills/team-chat/concepts/security.md",
+      "sha256": "4ed0a69e5d1cffe94c94121fd60fcf9d31ecd96bb2519a8109b7e6efaf3a3076"
+    },
+    {
+      "path": "skills/team-chat/concepts/webhooks.md",
+      "sha256": "a1f5fa82f8d8ea66cb84814761c46a28e86dbed6a7bd220807179cd055ed9db1"
+    },
+    {
+      "path": "skills/team-chat/examples/button-actions.md",
+      "sha256": "f6997b9e53d71c97cb8acdec3578305bdc8e5273a40ea2aa67fa33dd04ac417d"
+    },
+    {
+      "path": "skills/team-chat/examples/channel-management.md",
+      "sha256": "70b9fdb55c92adf5bcdcba76067cd69a90a806ec78655d03dd54d07cdbc11c38"
+    },
+    {
+      "path": "skills/team-chat/examples/chatbot-setup.md",
+      "sha256": "498bee39a5ce2da71682950b089cabb6a1e7387ed651c9d811c4888a140ad258"
+    },
+    {
+      "path": "skills/team-chat/examples/database-integration.md",
+      "sha256": "84ea5cc66bb61dbcba231a6cb9c082ac32f835ebdeefcaa76cff3aa76019b508"
+    },
+    {
+      "path": "skills/team-chat/examples/dropdown-selects.md",
+      "sha256": "c2e7dc1d9c8be5543117cb496043440ddfa6b3625a411eab73db0a5cbdc188ba"
+    },
+    {
+      "path": "skills/team-chat/examples/form-submissions.md",
+      "sha256": "308641c077f08ced03687660dc495fec875eba35bb1e6eee635fe2bd71b6ef38"
+    },
+    {
+      "path": "skills/team-chat/examples/llm-integration.md",
+      "sha256": "217db1461b3d138c62aee8e03a9054ed91a73d78cd38830eec527494b826f065"
+    },
+    {
+      "path": "skills/team-chat/examples/multi-step-workflows.md",
+      "sha256": "07dc285c571cbcc799f3465ef2c20abcfd520549f0440f3a9f8e191f099058cd"
+    },
+    {
+      "path": "skills/team-chat/examples/oauth-setup.md",
+      "sha256": "ca187d714bd93c0a0e89fb96a2f2146867307c8ca5c323395cac628f03045311"
+    },
+    {
+      "path": "skills/team-chat/examples/scheduled-alerts.md",
+      "sha256": "f5f31edae1b46ba1292e52ea939bf7b1acc0764317c5e259774fbfe576c22f6c"
+    },
+    {
+      "path": "skills/team-chat/examples/send-message.md",
+      "sha256": "855ec866468077d2720ca55e773ebd19bdcd2b2240920806ca40319ff6191d35"
+    },
+    {
+      "path": "skills/team-chat/examples/slash-commands.md",
+      "sha256": "346c2e5ab337122f577372eaeaa4825748d09d919ad6334f307c3d8e1611f54c"
+    },
+    {
+      "path": "skills/team-chat/examples/token-management.md",
+      "sha256": "b7b4cb403d70862c8d016376de03c7e1aa76dfec643c324232a0755535f1d0a6"
+    },
+    {
+      "path": "skills/team-chat/get-started.md",
+      "sha256": "ef9dd595e2ce32baa9609a245b5f8e71f43246649671be8f53cce3824dde4ec0"
+    },
+    {
+      "path": "skills/team-chat/references/api-reference.md",
+      "sha256": "051b32d1700a6a283849a50b22843a8e3bcfee789e176f06ab8145ae99c983e7"
+    },
+    {
+      "path": "skills/team-chat/references/environment-variables.md",
+      "sha256": "763eef08c8eca92177160b55fbda36802c9be536f73c4bba80700ba97f03c2fc"
+    },
+    {
+      "path": "skills/team-chat/references/error-codes.md",
+      "sha256": "c813160c517937abf5c9e7e16ef2683c1896f2e1afa8cda71e132341b4020957"
+    },
+    {
+      "path": "skills/team-chat/references/full-guide.md",
+      "sha256": "f5d3406b8620034a8b4ca2dbfe3c0768db46b9c486175726da7ca2e0539d6928"
+    },
+    {
+      "path": "skills/team-chat/references/jid-formats.md",
+      "sha256": "1d8a2c9f79d24da43ba91d49af08e6db541b14a9b7f0a39bfb2c215363a22666"
+    },
+    {
+      "path": "skills/team-chat/references/message-cards.md",
+      "sha256": "9019273984faf906b20dd30f37cd823b6eff9787c25385aae303120bdd0901f3"
+    },
+    {
+      "path": "skills/team-chat/references/rate-limits.md",
+      "sha256": "94c2e72cba36058f761f747998d8b7d598ab9d28f51ffa5b162aeb263f05d556"
+    },
+    {
+      "path": "skills/team-chat/references/sample-comparison.md",
+      "sha256": "cc4fcfa54c9291db745b647d2e1359bdb01970aba523249337d44de5736ba819"
+    },
+    {
+      "path": "skills/team-chat/references/samples.md",
+      "sha256": "f274aeab2fae00c1af0e325cbd66be1e19c54f7e01259d974b76aff6160e28e0"
+    },
+    {
+      "path": "skills/team-chat/references/scopes.md",
+      "sha256": "040e7c92f0f16d8f448780fe533e6904d68f0afda91168439dcfbe799b9db51f"
+    },
+    {
+      "path": "skills/team-chat/references/webhook-events.md",
+      "sha256": "44d2aaa49509e87ac8f5d9ea4f11cdbbc90a9544f0e0d48fbfc1ee318572ab75"
+    },
+    {
+      "path": "skills/team-chat/RUNBOOK.md",
+      "sha256": "5c304ea3790b91d466dfb4da82bee9559f56e393f4794136d288af53ca064474"
+    },
+    {
+      "path": "skills/team-chat/SKILL.md",
+      "sha256": "889e1b93c9d8d23ca386265c91ee54bd8dd735a37e477fb931fa7fe5303c1822"
+    },
+    {
+      "path": "skills/team-chat/troubleshooting/common-issues.md",
+      "sha256": "4aeaca65afd403e7dbaf986fab0a7e51f7296a7c87615c1e1e7cdbcf2c3a7957"
+    },
+    {
+      "path": "skills/team-chat/troubleshooting/deployment-issues.md",
+      "sha256": "202055fe02f5911246de14c998d0b6481b3b41facf702420e952c1990190bcaf"
+    },
+    {
+      "path": "skills/team-chat/troubleshooting/message-issues.md",
+      "sha256": "de1568625518e095377f16de4191f740222198d7bfe44ded29b4f95d71733377"
+    },
+    {
+      "path": "skills/team-chat/troubleshooting/oauth-issues.md",
+      "sha256": "6ec9bc3f1881d4ab79ad57e9399013a59e513de24709ccfe765385b75c907030"
+    },
+    {
+      "path": "skills/team-chat/troubleshooting/webhook-issues.md",
+      "sha256": "b61a10ff7bb03bdfaaa9c8cc776e8d590be6dbc797306983af74f611cf295f6f"
+    },
+    {
+      "path": "skills/ui-toolkit/agents/openai.yaml",
+      "sha256": "e90ba316e60285a4151e5a3909897de4101165e9e97b3553ef8334cac4c6d2fd"
+    },
+    {
+      "path": "skills/ui-toolkit/references/environment-variables.md",
+      "sha256": "ef6956d9c1f30587d2dbbec145bb6aae71f197490d0a5c3ea0f76af9e95e2d9b"
+    },
+    {
+      "path": "skills/ui-toolkit/references/full-guide.md",
+      "sha256": "48c60579f6143e0f916ef1d9eae50c31e12ed3805d748b53400817df68ae97c7"
+    },
+    {
+      "path": "skills/ui-toolkit/RUNBOOK.md",
+      "sha256": "24fad2d624b8abdd1c2e98cb9eb48b8bd0b4290cd4ab915d9ddc9681dc9dd8c3"
+    },
+    {
+      "path": "skills/ui-toolkit/SKILL.md",
+      "sha256": "15d8f29c330741d1946e6c8343d077cae230480f0a5e1f96cc973784f8838af9"
+    },
+    {
+      "path": "skills/ui-toolkit/troubleshooting/common-issues.md",
+      "sha256": "32522b5e3c683d68abeeb1af513897e931418cd150d4b570557f0f798f53b853"
+    },
+    {
+      "path": "skills/video-sdk/agents/openai.yaml",
+      "sha256": "cb8a16fdb3247f536dadbe4399caac68716abb7a9f537baa2bc3f7604467e160"
+    },
+    {
+      "path": "skills/video-sdk/android/agents/openai.yaml",
+      "sha256": "7c4a3737b7304e54c960857a9571c56f1477041a6db9132fbeb1cf308396e215"
+    },
+    {
+      "path": "skills/video-sdk/android/android.md",
+      "sha256": "260f4fc3db0c77c3c4ed25aff066f882cb4273a02663f8bf78e23f18e8724b61"
+    },
+    {
+      "path": "skills/video-sdk/android/concepts/architecture.md",
+      "sha256": "c06cc0e3414fa2ad433dde22564b0551aa0ed2cbab7b78b8edf54b0c2eafd4ab"
+    },
+    {
+      "path": "skills/video-sdk/android/concepts/lifecycle-workflow.md",
+      "sha256": "9c3e9801387ac13714e89bbd6d1a3d663858d0732c4f42cd8bc9dae9438031b7"
+    },
+    {
+      "path": "skills/video-sdk/android/examples/session-join-pattern.md",
+      "sha256": "a19cca0dbde4cfe76e1082c89c4a7cd17c5da3d71e7562ccd84a848288f99074"
+    },
+    {
+      "path": "skills/video-sdk/android/references/android-reference-map.md",
+      "sha256": "7ca2bcd7e43c7c61ea50a14f710fbb88e1a71f6d332ba6e7d0d6cf2ec2f29ffb"
+    },
+    {
+      "path": "skills/video-sdk/android/references/environment-variables.md",
+      "sha256": "7eab4bf7c5848a453c8c3207d4a5d272fb1c36705900da538ee6a8022a93ec94"
+    },
+    {
+      "path": "skills/video-sdk/android/references/versioning-and-compatibility.md",
+      "sha256": "94d195ad0054f36c4a3e96d48f8c7889eb69c60036d84d45e8abf48e45ecfe48"
+    },
+    {
+      "path": "skills/video-sdk/android/RUNBOOK.md",
+      "sha256": "be38d07291df36ae08b96763164ea1af90ada698487abb85264376e11591e971"
+    },
+    {
+      "path": "skills/video-sdk/android/scenarios/high-level-scenarios.md",
+      "sha256": "eb3459069683bf9808d205c2a1e762051a8dd55f8fa8806fd423943331cb41a3"
+    },
+    {
+      "path": "skills/video-sdk/android/SKILL.md",
+      "sha256": "9b90933c735fffe55a0ace9a89221ae9cc359569ddd77b7ea0cc6e0100ebfb3a"
+    },
+    {
+      "path": "skills/video-sdk/android/troubleshooting/common-issues.md",
+      "sha256": "3a087201fb21aceb2d513bac83b1a731ac4ca9cfc7914ea6de66a516e40c26f4"
+    },
+    {
+      "path": "skills/video-sdk/flutter/agents/openai.yaml",
+      "sha256": "57be562bb35569cdedeca1f426f8188bb725a3ae8304493d2a7c6100abd09e9f"
+    },
+    {
+      "path": "skills/video-sdk/flutter/concepts/high-level-scenarios.md",
+      "sha256": "35e139e83f00d20944799895c1f8a78b8b7b3bf34889b65c1bf2ab65f98c81e6"
+    },
+    {
+      "path": "skills/video-sdk/flutter/concepts/lifecycle-workflow.md",
+      "sha256": "b7aa1989f5026350f362aa34286fb69c514bf8aa5363f1c880ebe9b9beb35be1"
+    },
+    {
+      "path": "skills/video-sdk/flutter/concepts/sdk-architecture-pattern.md",
+      "sha256": "9fa45f3e2d48d6f82c007069c056a2b619b0fbf3be9a1f2833fa59bfd443ae06"
+    },
+    {
+      "path": "skills/video-sdk/flutter/examples/event-handling-pattern.md",
+      "sha256": "4804d88a746b22f2cb4134d1b7f021ea9812d24aaab6791b032657acb26c4577"
+    },
+    {
+      "path": "skills/video-sdk/flutter/examples/session-join-pattern.md",
+      "sha256": "1c441f9b4609f9bbf1d06cf0e6ae2b57b3f9d79b9eec42a748c5b6c5ec403968"
+    },
+    {
+      "path": "skills/video-sdk/flutter/examples/setup-guide.md",
+      "sha256": "20808291987b531853b5c0fcb4e260528382978ccb89a90c306c9d0f4185f5f3"
+    },
+    {
+      "path": "skills/video-sdk/flutter/references/flutter-reference.md",
+      "sha256": "b85c303841e52d9b8084dd2c7fb6ffeaa8ed59827653e151ab1901448caf7226"
+    },
+    {
+      "path": "skills/video-sdk/flutter/references/module-map.md",
+      "sha256": "ba96c9cc4977471f7f333d1149da266ea0c5abdd443a7a64cfb468a5e8ee7d7d"
+    },
+    {
+      "path": "skills/video-sdk/flutter/references/official-sources.md",
+      "sha256": "c09ae16d70c222364881e99deb3298d4f4e95b01c95276bc85e3723f5692792d"
+    },
+    {
+      "path": "skills/video-sdk/flutter/RUNBOOK.md",
+      "sha256": "45dfd3fea8bbd563db6453816b6cb5a4df5b35ceb559f1881d37624fbe0df254"
+    },
+    {
+      "path": "skills/video-sdk/flutter/SKILL.md",
+      "sha256": "715472979904a0911d2017d9c25131f8f87bdf79db4c199d288a5fae0f170c5f"
+    },
+    {
+      "path": "skills/video-sdk/flutter/troubleshooting/common-issues.md",
+      "sha256": "c7dbf527dc72ad9575f684c2c19450a53cbf8cfbcc0b09dea23ea090afc3cd1e"
+    },
+    {
+      "path": "skills/video-sdk/flutter/troubleshooting/deprecated-and-contradictions.md",
+      "sha256": "bf3b8c3c01eebb61b104065be1e26e1668fbc19e9b9f04180556dd17bd4c0ba6"
+    },
+    {
+      "path": "skills/video-sdk/flutter/troubleshooting/version-drift.md",
+      "sha256": "f4e887ba764b9d8dc82f83d8785e58aa199b5981f898c2dae7af784808644893"
+    },
+    {
+      "path": "skills/video-sdk/ios/agents/openai.yaml",
+      "sha256": "ff5e4ed306c3348d248f97885b64c18b444f68dbae70bcbbcacaf79882fb10e6"
+    },
+    {
+      "path": "skills/video-sdk/ios/concepts/architecture.md",
+      "sha256": "7b1f3950bddd092b7024a09446f7b56596bb4c20b9a46148c2227f0eb7aaebd8"
+    },
+    {
+      "path": "skills/video-sdk/ios/concepts/lifecycle-workflow.md",
+      "sha256": "84ec3c261dfca39017377d1cfc3ac0e04ba7b48e0cbcbf9e4ff590c2e064c6f5"
+    },
+    {
+      "path": "skills/video-sdk/ios/examples/session-join-pattern.md",
+      "sha256": "b4b3b18247d24f9aacecd2360bcbacf7b8e11d5db26737f9ed2940b9fa701b6e"
+    },
+    {
+      "path": "skills/video-sdk/ios/ios.md",
+      "sha256": "68c9875f951057d3fe9e686d2f5a4e994c404635aaeddabb8140c5772c2e08e2"
+    },
+    {
+      "path": "skills/video-sdk/ios/references/environment-variables.md",
+      "sha256": "6f266687cdb2aa390a4606fe697e864300c5ce9e3efa88f418f35d4c836a384d"
+    },
+    {
+      "path": "skills/video-sdk/ios/references/ios-reference-map.md",
+      "sha256": "f42e2d020c9aee2bbfa4cdd309e6d53160c6f63b3ceb062e2c3808f8a3ab441b"
+    },
+    {
+      "path": "skills/video-sdk/ios/references/versioning-and-compatibility.md",
+      "sha256": "f4416045f628884babd66e5ab2894ede7b35ae5336d5a1017c4013f88e12ba40"
+    },
+    {
+      "path": "skills/video-sdk/ios/RUNBOOK.md",
+      "sha256": "ed365cfef2be260d5f71b35152ac5b69b9dd5e23565cb60d994742dd3a7e8323"
+    },
+    {
+      "path": "skills/video-sdk/ios/scenarios/high-level-scenarios.md",
+      "sha256": "b7f8b1b6dab1f0f1ccc22f9d6852a08fa6b3278c71937087ab61683220c3286d"
+    },
+    {
+      "path": "skills/video-sdk/ios/SKILL.md",
+      "sha256": "e5da2572b00b895a48dc9c43fe83431c96797ea030f36a46e91db03809d38c01"
+    },
+    {
+      "path": "skills/video-sdk/ios/troubleshooting/common-issues.md",
+      "sha256": "43efe4d0b2d02844d6649e6dbf2fa8704a22c892a27d784bdbbd795b2316268c"
+    },
+    {
+      "path": "skills/video-sdk/linux/agents/openai.yaml",
+      "sha256": "7ac516cb51fa9a58da3e5987ecbd2f02a5c0f041cc8126682e9ba5842e73a2db"
+    },
+    {
+      "path": "skills/video-sdk/linux/concepts/raw-data-vs-canvas.md",
+      "sha256": "d43e30ec8b7647409976cd67124a8e5efea34e9e5889c473d12bee13d7c7b465"
+    },
+    {
+      "path": "skills/video-sdk/linux/concepts/sdk-architecture-pattern.md",
+      "sha256": "1bd470d54e24d573f011f1a9f4dee04a469c7c3a368b74cbcffed800a7fc91db"
+    },
+    {
+      "path": "skills/video-sdk/linux/concepts/singleton-hierarchy.md",
+      "sha256": "bdf67758ed34fbcca9283c43a81cdcf7f96380a0f904b8ba4943a55eef633bdc"
+    },
+    {
+      "path": "skills/video-sdk/linux/examples/chat.md",
+      "sha256": "4b8d887df5abdcb9728a2535d869ae7dc8c1c53b2a94b03f82c698cdccf34a02"
+    },
+    {
+      "path": "skills/video-sdk/linux/examples/cloud-recording.md",
+      "sha256": "bd1a308f4a508164e70d9ee5e4c800b7964edb949620df8883e9779a26e85972"
+    },
+    {
+      "path": "skills/video-sdk/linux/examples/command-channel.md",
+      "sha256": "19b1972e5fcceb8bccd2706e806a2f98996f468f73a093873b8a95b3c0b1550c"
+    },
+    {
+      "path": "skills/video-sdk/linux/examples/live-streaming.md",
+      "sha256": "621d70db1c3787a8d8323c741d1c3f72d237063286bc7715d22cb14e8387a8d6"
+    },
+    {
+      "path": "skills/video-sdk/linux/examples/qt-gtk-integration.md",
+      "sha256": "f440108690eb64d76ae388957e55b338cb2d72016ac7cdfc52680064618eb606"
+    },
+    {
+      "path": "skills/video-sdk/linux/examples/raw-audio-capture.md",
+      "sha256": "405d36c5c86c9b5223f4c8ccbd2d23b0497eaca8b8b8cfa2403bdecafdc11779"
+    },
+    {
+      "path": "skills/video-sdk/linux/examples/raw-video-capture.md",
+      "sha256": "bf4cee4bc29769043a4f2a331365ae2e8ebf20eb93cabf4faa7d6d38afe05a13"
+    },
+    {
+      "path": "skills/video-sdk/linux/examples/session-join-pattern.md",
+      "sha256": "18795ca28ff635f402d1aa7ff2bdbeec6ffbb3ec5e55e33cf36e6019f0228e55"
+    },
+    {
+      "path": "skills/video-sdk/linux/examples/transcription.md",
+      "sha256": "94517fbb4263e28b83038d1529b300733e758488995c2a77154b109ae6fd4e2b"
+    },
+    {
+      "path": "skills/video-sdk/linux/examples/virtual-audio-video.md",
+      "sha256": "394fd7e916ffbc6b5f3f3d405127a47241eb86407491be9ace910d8c5fad8720"
+    },
+    {
+      "path": "skills/video-sdk/linux/linux.md",
+      "sha256": "87810ea9496cc530b877ef9e66d843d1ed0fabbe168f87a252bbc1a2f110cfb6"
+    },
+    {
+      "path": "skills/video-sdk/linux/references/linux-reference.md",
+      "sha256": "d8e62b896667168066f0af24c08cf25ca61913e9f25104dbb73a85c3576c2592"
+    },
+    {
+      "path": "skills/video-sdk/linux/RUNBOOK.md",
+      "sha256": "cfdc1f08784179c0bc10b6e56e4b7a45d6d782525a86dfde957151b54cf4bc6a"
+    },
+    {
+      "path": "skills/video-sdk/linux/SKILL.md",
+      "sha256": "a087e762849e0350116d9e50d73ae93fe345d382977ddb13f3b36ab2461fb255"
+    },
+    {
+      "path": "skills/video-sdk/linux/troubleshooting/build-errors.md",
+      "sha256": "bd49eacd634856093a4c1768e73951cdd0c0d8556154b7391db2ae6093fc0055"
+    },
+    {
+      "path": "skills/video-sdk/linux/troubleshooting/common-issues.md",
+      "sha256": "d3fac693984877f98c230e683d002f131472a2d74629fd2ef4fc87abd14ea1f6"
+    },
+    {
+      "path": "skills/video-sdk/linux/troubleshooting/pulseaudio-setup.md",
+      "sha256": "696c20dedd81e8926d9afceec1adcc57c26e719e3ce4ea224d539be0f807931c"
+    },
+    {
+      "path": "skills/video-sdk/linux/troubleshooting/qt-dependencies.md",
+      "sha256": "fca777611b2fbbf41ce3d06bd3a844624b003ac0d6aa9ee75a29832245eabac6"
+    },
+    {
+      "path": "skills/video-sdk/macos/agents/openai.yaml",
+      "sha256": "ee0d9e0357b27d0c0eeeccd09484df367ff9e51297d8de9752c94f71807a9360"
+    },
+    {
+      "path": "skills/video-sdk/macos/concepts/architecture.md",
+      "sha256": "ad20ecc8266ddb8dd0e4efa8f700e8482ce4a812589dd38fa893bae0867f72a3"
+    },
+    {
+      "path": "skills/video-sdk/macos/concepts/lifecycle-workflow.md",
+      "sha256": "68e7924fabdbe862f8262faee0df42d14773e6aa5d8638b57ebd074ceb7bcf02"
+    },
+    {
+      "path": "skills/video-sdk/macos/examples/session-join-pattern.md",
+      "sha256": "38473e9f0d64ada189b714f626fc3abc7efcee9690e606ed5ab9dfd30e54520a"
+    },
+    {
+      "path": "skills/video-sdk/macos/macos.md",
+      "sha256": "09ba995bb3fa17d86b2663293458a31003db8f2be547deac46f3ef983c7b1069"
+    },
+    {
+      "path": "skills/video-sdk/macos/references/environment-variables.md",
+      "sha256": "2b967793b47cce5c955d0dd1797bb86399dca36104aadbc756f6963d425445b5"
+    },
+    {
+      "path": "skills/video-sdk/macos/references/macos-reference-map.md",
+      "sha256": "e4a83ec0942f0585f055ccb50ce80bc519f31d60ff34ddfdcce38418f957cdf2"
+    },
+    {
+      "path": "skills/video-sdk/macos/references/versioning-and-compatibility.md",
+      "sha256": "4eeefb6a03c7f714f38331f9f39fbd681849ec11ce7aaa81bc1e3fbbb80608e1"
+    },
+    {
+      "path": "skills/video-sdk/macos/RUNBOOK.md",
+      "sha256": "9774579950eae61b83039fac1f7de43c05d04b260b50f299375aa2255f0be7e1"
+    },
+    {
+      "path": "skills/video-sdk/macos/scenarios/high-level-scenarios.md",
+      "sha256": "87dbd40d285c9aded1d3ac9ddf79ad092159c6510228c2a49de3f6b6716f272b"
+    },
+    {
+      "path": "skills/video-sdk/macos/SKILL.md",
+      "sha256": "25c38d48aa96e505713aa9adebfc31f5612c85db6f2a4df0863d5728adb11b34"
+    },
+    {
+      "path": "skills/video-sdk/macos/troubleshooting/common-issues.md",
+      "sha256": "8d3c0a8c9dd31352a081d15471edecf39a879629909d50fdfb665403f56328d4"
+    },
+    {
+      "path": "skills/video-sdk/react-native/agents/openai.yaml",
+      "sha256": "be246bb209476482a1caa81ff634858650e496d370152e55d8a15763ae1d99e2"
+    },
+    {
+      "path": "skills/video-sdk/react-native/concepts/high-level-scenarios.md",
+      "sha256": "b4a926e2dcc603887fa5c6527dbd060c969ae76b749d8ba96d21b83f574f7ead"
+    },
+    {
+      "path": "skills/video-sdk/react-native/concepts/lifecycle-workflow.md",
+      "sha256": "2664ba0aa8b68cee2f3bb1dcd72e4fc019e48b33239edc1eab6ac737c518295f"
+    },
+    {
+      "path": "skills/video-sdk/react-native/concepts/sdk-architecture-pattern.md",
+      "sha256": "976fbf8fb5b2892e4a12e3668d246245486a473883475c4d16504ffaa7317822"
+    },
+    {
+      "path": "skills/video-sdk/react-native/examples/event-handling-pattern.md",
+      "sha256": "f56ab0710097c665819c9b5496fc5d963a1e169138795f49760c0d03ab55b1ab"
+    },
+    {
+      "path": "skills/video-sdk/react-native/examples/session-join-pattern.md",
+      "sha256": "c97f3deffd82b9bd0f342820d1a9edf512a0efcc48f6d2687b983df542cab054"
+    },
+    {
+      "path": "skills/video-sdk/react-native/examples/setup-guide.md",
+      "sha256": "8cf28bbd2090e3a53381fbea3029c772b8bda578be88147562233fbb60d93f17"
+    },
+    {
+      "path": "skills/video-sdk/react-native/references/module-map.md",
+      "sha256": "81b74b2b35f5f1740bc4ddc164cba141d7a32914287a068881df2b2cf1b50ae7"
+    },
+    {
+      "path": "skills/video-sdk/react-native/references/official-sources.md",
+      "sha256": "45bd1efa0fa12f6ac3526cb4e01a9cad2a5a097709070dd7a9c8fa23ce210b2e"
+    },
+    {
+      "path": "skills/video-sdk/react-native/references/react-native-reference.md",
+      "sha256": "99b8db94948271c89568b8fd023bab2fc080f2cd0b418151e72e1a70cc299398"
+    },
+    {
+      "path": "skills/video-sdk/react-native/RUNBOOK.md",
+      "sha256": "8f0a2e0798226ef056bd351ebd35b13fbed574f7f0f1a643556d3cca7fef71b6"
+    },
+    {
+      "path": "skills/video-sdk/react-native/SKILL.md",
+      "sha256": "473be70c1b82f7eded6555caa5a5acb81b5da1f43c5b066516396462140dba57"
+    },
+    {
+      "path": "skills/video-sdk/react-native/troubleshooting/common-issues.md",
+      "sha256": "30966863acf4bf455da21e633052d906e84b4a0bc6170d95c2b1969474623b4d"
+    },
+    {
+      "path": "skills/video-sdk/react-native/troubleshooting/deprecated-and-contradictions.md",
+      "sha256": "6e3dbd05faa17bffd91b051f364285b5602d7b66e96fd3211feec03802830084"
+    },
+    {
+      "path": "skills/video-sdk/react-native/troubleshooting/version-drift.md",
+      "sha256": "143f570549f379ca0960cc67453dae6a310ecb27c9578d4b1556e23a32d1f265"
+    },
+    {
+      "path": "skills/video-sdk/references/authorization.md",
+      "sha256": "a7c720c723e361e15b3fc5648676fd40350a79b7aa5532db7438728f12a859ad"
+    },
+    {
+      "path": "skills/video-sdk/references/environment-variables.md",
+      "sha256": "2cfbe6ba44ea96d5ad1bdb313b33ad8b7f01275b8344a66f3b1377928c7653c6"
+    },
+    {
+      "path": "skills/video-sdk/references/forum-top-questions.md",
+      "sha256": "9df3092d6a11cc4aaceec7e2c2932d76dca9f8d10bb322033e75a95269d7e59c"
+    },
+    {
+      "path": "skills/video-sdk/references/full-guide.md",
+      "sha256": "4e2516b7a57d2b485ce8163cedddf1fa8c40dec196676ffd4adde0a2e475faba"
+    },
+    {
+      "path": "skills/video-sdk/references/licensing-and-entitlements.md",
+      "sha256": "b4e0b640397b8ea54dc585ab2cf5ac119c953ffbb1170fe75db4c52e42727ca0"
+    },
+    {
+      "path": "skills/video-sdk/references/session-lifecycle.md",
+      "sha256": "0367b082989202cf56cc643804b17a12686e9284a3fc200215af2552b1b0f75a"
+    },
+    {
+      "path": "skills/video-sdk/references/token-contract-test-spec.md",
+      "sha256": "8371e96acb954507370da7fff67ea8eede6797217eaeead714001010db0d37eb"
+    },
+    {
+      "path": "skills/video-sdk/references/triage-intake.md",
+      "sha256": "59349ceb83ae2ec3a0a211b33e184ad4c81ddfccc6f677f221c705d45fde6416"
+    },
+    {
+      "path": "skills/video-sdk/references/troubleshooting.md",
+      "sha256": "f47feb0f929f56d2fbabdeca5f8e4167de074edb976465a52aec84e3cec18eef"
+    },
+    {
+      "path": "skills/video-sdk/references/ui-toolkit.md",
+      "sha256": "04476b766c1a7bde8d5f9f39e68b0058e1c7f49d28f62d864f4a190a59052eff"
+    },
+    {
+      "path": "skills/video-sdk/RUNBOOK.md",
+      "sha256": "57a3b164910f151c14d9f7f018606e11bb41b3146f7cd0ebe05fa8f058715f8f"
+    },
+    {
+      "path": "skills/video-sdk/SKILL.md",
+      "sha256": "1a85a02f8c4da6b3331fbd99ebfc07fcb8179d13e2cbc678257aaaefeee027e9"
+    },
+    {
+      "path": "skills/video-sdk/unity/agents/openai.yaml",
+      "sha256": "f19f3cea466c886e697a9f57c544ca69b7bb364761fa0dbf5611dac90bbebfaa"
+    },
+    {
+      "path": "skills/video-sdk/unity/concepts/architecture.md",
+      "sha256": "fddcbde5a6ab2e66f9f9dd68b3f8d6b75d2698a8debd41ce08ff086bae709c9e"
+    },
+    {
+      "path": "skills/video-sdk/unity/concepts/lifecycle-workflow.md",
+      "sha256": "0578ea18ffb853a31abdf8a1481e351cf17ebe17e69d6ccac40a6ed388358ae9"
+    },
+    {
+      "path": "skills/video-sdk/unity/examples/session-join-pattern.md",
+      "sha256": "4f4c6c9df1d7c229b0a7fac6da4bd3a46698a981bb54057ca65d370e1caac07d"
+    },
+    {
+      "path": "skills/video-sdk/unity/references/environment-variables.md",
+      "sha256": "5a8da4de7cc67f41126217c2cea6c3c8acf6929bf2b88782bc2f5b25d48695e2"
+    },
+    {
+      "path": "skills/video-sdk/unity/references/unity-reference-map.md",
+      "sha256": "866dee414fd9c380c7298639f204468449b5358c06dbb7696715d0d2bebbdfd5"
+    },
+    {
+      "path": "skills/video-sdk/unity/references/versioning-and-compatibility.md",
+      "sha256": "41bdaa60e2f708a1c920ef6c5d09dc3a0c57d8a1700b113ce26a1f113c336928"
+    },
+    {
+      "path": "skills/video-sdk/unity/RUNBOOK.md",
+      "sha256": "11c7d56f92a27cdbaecc1f42b5e9d91d358a522e6aa44cdd6393816f4a5a983e"
+    },
+    {
+      "path": "skills/video-sdk/unity/scenarios/high-level-scenarios.md",
+      "sha256": "477be85e7cc9366900208405c8cc275eef06184b12c97d0aa0c707940b477f58"
+    },
+    {
+      "path": "skills/video-sdk/unity/SKILL.md",
+      "sha256": "da2fdd1785dd863ba0a818510aa8c78b7fbe80729d6d1ee90f1ce33b9faaff34"
+    },
+    {
+      "path": "skills/video-sdk/unity/troubleshooting/common-issues.md",
+      "sha256": "1074914b5f5d693d0e987fb4378dc6845046043014abde617cf551085b3d2a22"
+    },
+    {
+      "path": "skills/video-sdk/unity/unity.md",
+      "sha256": "903fdf63f11a4398aa49d5e0d488207409ee9966aa943ab54afc9aad98d01c90"
+    },
+    {
+      "path": "skills/video-sdk/web/agents/openai.yaml",
+      "sha256": "6bfdccd5d7a6b2e1ae83a9bfa66a78774ebb39b98e0c1cf4f19eb03c09497986"
+    },
+    {
+      "path": "skills/video-sdk/web/concepts/sdk-architecture-pattern.md",
+      "sha256": "c2c6d501eae351968b54da5264b7aa0ea7b3f5669b5f16266bb0980334d33dd1"
+    },
+    {
+      "path": "skills/video-sdk/web/concepts/singleton-hierarchy.md",
+      "sha256": "a8aef28a2d041815f859c3fcb90f95401c6dcd2bf6aebd6ba1763eaad0d4008b"
+    },
+    {
+      "path": "skills/video-sdk/web/examples/chat.md",
+      "sha256": "086a76281ef9288354d0fde0856ecccbec365012c1e9f44dee3c26f49332127d"
+    },
+    {
+      "path": "skills/video-sdk/web/examples/command-channel.md",
+      "sha256": "555dd2b668ad54c916214cbfec57147c91c05d17b68f775695b937968a4ce655"
+    },
+    {
+      "path": "skills/video-sdk/web/examples/event-handling.md",
+      "sha256": "dee46d599655ce9dc2476fc29a8f7e057f2791b6a965dcb06a262aa5e434ac1a"
+    },
+    {
+      "path": "skills/video-sdk/web/examples/framework-integrations.md",
+      "sha256": "aeb3d5b36ae7f621e8ab4901a66b135a1ebfdc4d5131bff3d629764088fd092f"
+    },
+    {
+      "path": "skills/video-sdk/web/examples/react-hooks.md",
+      "sha256": "a4bc12fc40265a3811639a0b3a31f2fca1f2415420246c510930ee56ec8b6c01"
+    },
+    {
+      "path": "skills/video-sdk/web/examples/recording.md",
+      "sha256": "0df858b757cb9d70f305d37ecca0ca575c8cf9fbe7d1bd9e954dbafb14c3ebf4"
+    },
+    {
+      "path": "skills/video-sdk/web/examples/screen-share.md",
+      "sha256": "3a7b9e140c0bacc56576de830cdad36a583eaf263bff74d632070f0f620b00f8"
+    },
+    {
+      "path": "skills/video-sdk/web/examples/session-join-pattern.md",
+      "sha256": "26fc7c21e68a65834974252bdcb73f00d34d9fb5dc8b9a588afa818b38343c1a"
+    },
+    {
+      "path": "skills/video-sdk/web/examples/transcription.md",
+      "sha256": "a86115ef3860fd2a69fd8f0c0873d2b80b7bdffc276ce432ab01e7d0e3c78c93"
+    },
+    {
+      "path": "skills/video-sdk/web/examples/video-rendering.md",
+      "sha256": "25e11e176353477ae8453df86c760b3bf87a60ded78fc3505c0c1c1044f34d32"
+    },
+    {
+      "path": "skills/video-sdk/web/references/events-reference.md",
+      "sha256": "7d4755b182ab1814b4be2601519e678d56b6191a94e08e4be76684a044069fd7"
+    },
+    {
+      "path": "skills/video-sdk/web/references/web-reference.md",
+      "sha256": "8cc2773a3bee0a6b4159f4110d6b7f6b0f674f8e8c1e0b303e27a3179a5c6e61"
+    },
+    {
+      "path": "skills/video-sdk/web/references/web.md",
+      "sha256": "24a304e9bf4b17c50f72cb656f9c455b3fac20e8256244412337f11d55e48fa1"
+    },
+    {
+      "path": "skills/video-sdk/web/RUNBOOK.md",
+      "sha256": "93335e8f32e1b34f9329311e817ba7ec639ef67349ad22fb3da552b89dd58538"
+    },
+    {
+      "path": "skills/video-sdk/web/SKILL.md",
+      "sha256": "d98a73ab7fec07f18c5f26b48bb4acdb463d4a0687cbfc16c3983fbe6e112138"
+    },
+    {
+      "path": "skills/video-sdk/web/troubleshooting/common-issues.md",
+      "sha256": "e3b6fca7c7e0148e3b94937f28851459f7cb2ee22e9516ab0c8ed965b47ea5c8"
+    },
+    {
+      "path": "skills/video-sdk/windows/agents/openai.yaml",
+      "sha256": "0bea42fe614b75af1b8087c4e8cec435082c3fa279fcd9cf8a0f913f5181d09a"
+    },
+    {
+      "path": "skills/video-sdk/windows/concepts/canvas-vs-raw-data.md",
+      "sha256": "725a8ffff5969fdc96b22fda7f74a440c7ec342624eeb3b7fb5d530569d7412a"
+    },
+    {
+      "path": "skills/video-sdk/windows/concepts/sdk-architecture-pattern.md",
+      "sha256": "856e8789eef78f091f5cce6e163e062d371edefead38a6ce88aadc362f2d7965"
+    },
+    {
+      "path": "skills/video-sdk/windows/concepts/singleton-hierarchy.md",
+      "sha256": "362ab94d9a193db772fda240ce37bec380c5f9af9464365aec9a1ccf77f8195c"
+    },
+    {
+      "path": "skills/video-sdk/windows/examples/cloud-recording.md",
+      "sha256": "363935093dc72dc83223bbd2ee0bcbba269e201bad1c3e2f02d81c042478dd99"
+    },
+    {
+      "path": "skills/video-sdk/windows/examples/command-channel.md",
+      "sha256": "0f44d3e9e925bb3b6d09ee13a75931e05a83bb286ef345447dd62f6ebf4592d7"
+    },
+    {
+      "path": "skills/video-sdk/windows/examples/dotnet-winforms/guide.md",
+      "sha256": "ce10cdf783f15e15f8e6f90ec9a1bb32c26038c8757a32bda0fa27858ff9fbb5"
+    },
+    {
+      "path": "skills/video-sdk/windows/examples/raw-audio-capture.md",
+      "sha256": "314aa51202383578ffd4110e876163af4e8c25551dee4b96f5105d265c560bed"
+    },
+    {
+      "path": "skills/video-sdk/windows/examples/raw-video-capture.md",
+      "sha256": "7a1cd6ec9e28d7968de7ec50f0b641164e62dd8d4a36e753e4c0591161737b48"
+    },
+    {
+      "path": "skills/video-sdk/windows/examples/screen-share-subscription.md",
+      "sha256": "7e0e4e6939bd85de8858001db9b627ff0abb74bcdcbd91ed3b00854e0173a107"
+    },
+    {
+      "path": "skills/video-sdk/windows/examples/send-raw-audio.md",
+      "sha256": "09a97111e598f5c87ce5dc9c62e955e974bccb0883bd7eae945c5c0eb7350bec"
+    },
+    {
+      "path": "skills/video-sdk/windows/examples/send-raw-video.md",
+      "sha256": "cb0faddf48bd4df3eb7e52f610b00783824bfd7e2057f9fa2a7d268a150c9722"
+    },
+    {
+      "path": "skills/video-sdk/windows/examples/session-join-pattern.md",
+      "sha256": "c957bb16eb0041835d48146dacde233dee50d778386f86cf8ab12bc172a37a0f"
+    },
+    {
+      "path": "skills/video-sdk/windows/examples/transcription.md",
+      "sha256": "b42a3058cfc515dfa6027e1988ef4c6f1a3b61f90093441111ddcf57cf2ed1f2"
+    },
+    {
+      "path": "skills/video-sdk/windows/examples/video-rendering.md",
+      "sha256": "780369699c50727d04fd77fc4b8bbb9b291e4e961684c0333351d0c75e45c5db"
+    },
+    {
+      "path": "skills/video-sdk/windows/references/delegate-methods.md",
+      "sha256": "d461079ceecf18a6c1502d52794c6483806ff1954164ade75c20726f78a1671c"
+    },
+    {
+      "path": "skills/video-sdk/windows/references/samples.md",
+      "sha256": "1e1a6edc7089f0b353a6b8a957d363516a0649bd70e21dbc99deeca222e454b3"
+    },
+    {
+      "path": "skills/video-sdk/windows/references/windows-reference.md",
+      "sha256": "ac25bd063c03633bd683a9e767b71107143f675ef60e63b39ee3393fd17de7dd"
+    },
+    {
+      "path": "skills/video-sdk/windows/RUNBOOK.md",
+      "sha256": "68a33a71e163bef2eefe989c856ab6583b94ebaec149fe765fd74aceb9a03e91"
+    },
+    {
+      "path": "skills/video-sdk/windows/SKILL.md",
+      "sha256": "deaeb17918ccf5534d56bacf379aeae2ae8c7f5645570c3924f41c633725766d"
+    },
+    {
+      "path": "skills/video-sdk/windows/troubleshooting/build-errors.md",
+      "sha256": "0e86651a80e420030d66f5a31a28370f86f26bb8fa1c9cfae8c1157f6eb20493"
+    },
+    {
+      "path": "skills/video-sdk/windows/troubleshooting/common-issues.md",
+      "sha256": "15dd48804354975790a58757babf30e2ca2f89a8ca556f148e8fe17f12988727"
+    },
+    {
+      "path": "skills/video-sdk/windows/troubleshooting/windows-message-loop.md",
+      "sha256": "15492f2064624a33c08854cd7292b28eccaa834bbb4f3ec4d2366cf7dbf78ce4"
+    },
+    {
+      "path": "skills/video-sdk/windows/windows.md",
+      "sha256": "b9ecee17acc64c928520e989f1f4390ca5e4bab6786b09b09a149aa8261b9cc7"
+    },
+    {
+      "path": "skills/virtual-agent/agents/openai.yaml",
+      "sha256": "766741fd3cf0bce0f01cc844895fb40f0a92a9e02ec874c9433405ac6ce55330"
+    },
+    {
+      "path": "skills/virtual-agent/android/agents/openai.yaml",
+      "sha256": "3a5eb7fbc79b4712921553a924a5d86bd6caa7cfb1b842ebd6e9659667e1fd7d"
+    },
+    {
+      "path": "skills/virtual-agent/android/concepts/webview-lifecycle.md",
+      "sha256": "ba52c91c38533881b471b8ccfc6b0abe32640dfdbf68599a45c3d9c87761bf3b"
+    },
+    {
+      "path": "skills/virtual-agent/android/examples/js-bridge-patterns.md",
+      "sha256": "61ca5f6b5129eb0c460e6ddf2d7fa698ba5bb6b4716d747228f59d5447689a74"
+    },
+    {
+      "path": "skills/virtual-agent/android/references/android-reference-map.md",
+      "sha256": "1fc25800eec59143f6937efa2506567ed76d65b8b3e8be19fe4a1241e4549193"
+    },
+    {
+      "path": "skills/virtual-agent/android/SKILL.md",
+      "sha256": "46b2b972f1f338b01315042be55539fe48a6d7f63c456bb54f13378728f90848"
+    },
+    {
+      "path": "skills/virtual-agent/android/troubleshooting/common-issues.md",
+      "sha256": "9672aa37304606a74a6efd5dce3e7367a0c68978da57c5a327170706fd5108c2"
+    },
+    {
+      "path": "skills/virtual-agent/concepts/architecture-and-lifecycle.md",
+      "sha256": "a9c193bc6267a980366e8fb163893d95c943c6a653c254732ac9d0eb183bb312"
+    },
+    {
+      "path": "skills/virtual-agent/ios/agents/openai.yaml",
+      "sha256": "7ca23828312e9be9a73b4065eb799463898a3b6ae1d62afdb5455923d8d643f8"
+    },
+    {
+      "path": "skills/virtual-agent/ios/concepts/webview-lifecycle.md",
+      "sha256": "161d2098d33066566ebf168fa2a19023c7e6230699f18a4cc2a2388b724530e3"
+    },
+    {
+      "path": "skills/virtual-agent/ios/examples/js-bridge-patterns.md",
+      "sha256": "c5f2165ab5fd5028be2a0d4c84db04059426ed690199c9be26aed70580036303"
+    },
+    {
+      "path": "skills/virtual-agent/ios/references/ios-reference-map.md",
+      "sha256": "0a60d7f665a8203bfade69cc2388150ba4854454f14528ff3cc89b091cebd481"
+    },
+    {
+      "path": "skills/virtual-agent/ios/SKILL.md",
+      "sha256": "5dd5fe1a5fdbad229006e25be256221d5db35f0babedd404626d364de37324e2"
+    },
+    {
+      "path": "skills/virtual-agent/ios/troubleshooting/common-issues.md",
+      "sha256": "60fbf08a221ceb43a1f6e0586d0326d201145ded7e6c6e58a2e2cfb3061d791d"
+    },
+    {
+      "path": "skills/virtual-agent/references/environment-variables.md",
+      "sha256": "43fda48a7c4b1301e9cb335fdc736a9e66d8e0eaeb54f98909a330840abfecbf"
+    },
+    {
+      "path": "skills/virtual-agent/references/full-guide.md",
+      "sha256": "abb12da8f01f90c4fb68119c9ae35ba39b626e2f8497d9c4716ecb77cb40e0a0"
+    },
+    {
+      "path": "skills/virtual-agent/references/samples-validation.md",
+      "sha256": "ab7df6fb3f1a53281b64aacd4b79aeaa4e10fd7769ea7b93b261768ba2cd5cc6"
+    },
+    {
+      "path": "skills/virtual-agent/references/versioning-and-drift.md",
+      "sha256": "5152215e0a43def3168f7bab8e487b7c43f618ca231a6b9af7e3304705cb3a34"
+    },
+    {
+      "path": "skills/virtual-agent/RUNBOOK.md",
+      "sha256": "56c6fd522b70e137c8aca82338f9a5a6aa2253b6ea12becde003943970f8255d"
+    },
+    {
+      "path": "skills/virtual-agent/scenarios/high-level-scenarios.md",
+      "sha256": "0e72d1169091f7fbf35490c78a85085dcb9eeb48cc2bfb18913246f8653c06c7"
+    },
+    {
+      "path": "skills/virtual-agent/SKILL.md",
+      "sha256": "2e406d15b333d40ce58a4d27ce971adb1e86407f4ac5748cc1032a326c6c93e5"
+    },
+    {
+      "path": "skills/virtual-agent/troubleshooting/common-drift-and-breaks.md",
+      "sha256": "2d32fbdac1100a65a2c58c228475ef64e52576c1735a4a2600db63fdeec21253"
+    },
+    {
+      "path": "skills/virtual-agent/web/agents/openai.yaml",
+      "sha256": "9974aa746f04aa4675e91577a586f318188723eecd31d73f227091e92b2d93ab"
+    },
+    {
+      "path": "skills/virtual-agent/web/concepts/lifecycle-and-events.md",
+      "sha256": "5eaadb20a38564e4b3f0c95e3249a3267f0f125fd1d5c5a56f02e9be7279420e"
+    },
+    {
+      "path": "skills/virtual-agent/web/examples/campaign-and-entry-patterns.md",
+      "sha256": "108e94618d9964a82f805a08d268576c9b5d5341248f3902c2db559dde0dd2db"
+    },
+    {
+      "path": "skills/virtual-agent/web/references/web-reference-map.md",
+      "sha256": "5d3e6a7b032847a04ae081556a7375cef825307f57135af6268108bc9e5fbe3b"
+    },
+    {
+      "path": "skills/virtual-agent/web/SKILL.md",
+      "sha256": "5c579f56420c11ed8d082adc211245500a473845abd7c630121b17fcc978ed24"
+    },
+    {
+      "path": "skills/virtual-agent/web/troubleshooting/common-issues.md",
+      "sha256": "3d2f9c2eb7c2e516daf2fff18ea8b50325780cc927963e6457119adb43786c97"
+    },
+    {
+      "path": "skills/webhooks/agents/openai.yaml",
+      "sha256": "cd9812c0751c95a1c35236e40a8fc1c402a2b794206808c85e33e680d2b25017"
+    },
+    {
+      "path": "skills/webhooks/references/environment-variables.md",
+      "sha256": "4a20ad6c762c172ee73c1e3e98f7bb9db92871a2db52b5456fc342e9692e22b8"
+    },
+    {
+      "path": "skills/webhooks/references/events.md",
+      "sha256": "ad5679d3f45bbeaa8ec57ca3e9d29f51b2bb00d44f76ae1244edd4ab9a314918"
+    },
+    {
+      "path": "skills/webhooks/references/full-guide.md",
+      "sha256": "53b4ee77fd220dfbcb306e605e85bd3fed286952b3549c01d5a7f410d568adf8"
+    },
+    {
+      "path": "skills/webhooks/references/signature-verification.md",
+      "sha256": "2da75bcb483d56db3779f94cfe121e4a385c37d43856cccf90983d720fbe866b"
+    },
+    {
+      "path": "skills/webhooks/references/subscriptions.md",
+      "sha256": "a68ec5509e359e542c0fcbc9c354c8502d4ededa75ad2cc1ddb8c01f8f6dddc0"
+    },
+    {
+      "path": "skills/webhooks/references/verification.md",
+      "sha256": "ae1d54e5749a115ccbb638bb3c4034a9dac2e07d23f62132ff5218e2c4720908"
+    },
+    {
+      "path": "skills/webhooks/RUNBOOK.md",
+      "sha256": "e1f440aad4b4b600612f4e2c680c41e9fd873b5004e1e9281b2d099d2a65d992"
+    },
+    {
+      "path": "skills/webhooks/SKILL.md",
+      "sha256": "7420747e913675495ed2f8ee0a2d0ec5ba8b687370aa6e05b5c11cc1593f030d"
+    },
+    {
+      "path": "skills/webhooks/troubleshooting/common-issues.md",
+      "sha256": "b357c3ccef6cb61c0bc685cb031950c3e0865b7e43c2ede76006f4a7cb76f20c"
+    },
+    {
+      "path": "skills/websockets/agents/openai.yaml",
+      "sha256": "3f64f421a73b939a515c6bfbccad1200b142c3aea6f4c7ec75b1782416431d33"
+    },
+    {
+      "path": "skills/websockets/references/connection.md",
+      "sha256": "87e06cb8fa5b074e3fa5281f326d73b299b97115f233e6798856511dc38595cf"
+    },
+    {
+      "path": "skills/websockets/references/environment-variables.md",
+      "sha256": "87ac05398525ede86d192767c06428118d74e13c579a0c5f2f02cab8d17acbd8"
+    },
+    {
+      "path": "skills/websockets/references/events.md",
+      "sha256": "016ea13cc40b9281491fc481441e4326aac2cd41f0b90630f43b3c18239b0813"
+    },
+    {
+      "path": "skills/websockets/references/full-guide.md",
+      "sha256": "ecaca82277124a0712892b8f1be2c68a80e85a92d0f4e2e079811431e7dc1767"
+    },
+    {
+      "path": "skills/websockets/RUNBOOK.md",
+      "sha256": "88e9eedf1ef499aa2d456aa0eece067bd1fe1e383c4339ad40f057d06c4d751e"
+    },
+    {
+      "path": "skills/websockets/SKILL.md",
+      "sha256": "c623321a5395e128b8cea1ee7b31a7acc57d0e31384ebab92d5a06c8b195dd15"
+    },
+    {
+      "path": "skills/websockets/troubleshooting/common-issues.md",
+      "sha256": "f97916adeced58d9b7c3b76444dd8611ca65838a47e2e8fa4eb4d454878ee95d"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/agents/openai.yaml",
+      "sha256": "8559fc322e8646d60ec6d9963814dcadb79c24bdeb2a1b10acf06ab3a81f9243"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/concepts/architecture.md",
+      "sha256": "c4f74a6e2cc6d4719b4e71f83dfb593bd77464b80ddde7ec9ed5e2b2ff960b7c"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/concepts/meeting-sdk-vs-zoom-apps.md",
+      "sha256": "16b7abf2bdc5748512788188e9fe162d5cd38a57e53f1c8a3131b47cf3fc1e5f"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/concepts/running-contexts.md",
+      "sha256": "e44e1458939fdef703803ad9f3ef5e8e3f1f61a4c37a4bd65307b2c13555ecaa"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/concepts/security.md",
+      "sha256": "87a51835da74fd76383bc7d97569fa2e1b75ab5165212ff95ac6114cabba8a20"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/examples/app-communication.md",
+      "sha256": "0966b70f040c0fb2b9ec7b54d614ddc29f4ae838d9e7752fabe4af9a7cbb6a3b"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/examples/breakout-rooms.md",
+      "sha256": "e60bda44f4a4aec7cfb9529a20c1066d7edd7cbd7e8f60aa5abcb50b43ef4356"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/examples/collaborate-mode.md",
+      "sha256": "8006b8947645d154eed7e7955545c6d0a4cab94fa8a494c2134b2308c9db4e85"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/examples/guest-mode.md",
+      "sha256": "40a9737653fdd81a68e1a87cabafd0de0868ba235ac95321a9f6cc7e2b7fa6bf"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/examples/in-client-oauth.md",
+      "sha256": "bdabd4b4ebc6494fefa07d9714c646268a7f1fd0ef3c39b941ee083716424308"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/examples/layers-camera.md",
+      "sha256": "11229c31f66eea1229174081d75c761aa2d27bff36d8394d43180426200463b3"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/examples/layers-immersive.md",
+      "sha256": "055e6d7b23e5959406f4ecd3afd286c6b8ded28089d95aa9ea529090412d65d7"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/examples/quick-start.md",
+      "sha256": "fdb309afaea313ef100e3201ab3920fb7649ace91384776618be5c92ccb87cf9"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/references/apis.md",
+      "sha256": "11a0dac61a483c6264e7143b0d49c98d9e695f4b587c674e7c3f07c635278ab9"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/references/environment-variables.md",
+      "sha256": "193d639fcc683ada8a97aad1b5011cac76dbe731398ff603476679137d70ce97"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/references/events.md",
+      "sha256": "e56084936cdccc1493657ce0fd29a9fb5e9f5dab7d5929e99490609b8c39472d"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/references/full-guide.md",
+      "sha256": "a0ffa2bf706b05d29a008cf981dd7ae66f7b0bcadb3f771508cc3418e9ca554f"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/references/layers-api.md",
+      "sha256": "0212db4fb8fee9fa686e79d3671ad1f8480cd7d88e96ad3d6eeced5c880d8258"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/references/oauth.md",
+      "sha256": "207acca2b40abf54015a8566d3d30e660332ca45b4155bb81fcc049593a9e7d8"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/references/zmail-sdk.md",
+      "sha256": "7e2db1fa9f4e2f2a912821b31ba8c0991d27882c11eebfdfb3e75c7bbad3a48e"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/RUNBOOK.md",
+      "sha256": "f092368bd722be612efd0f7473aa2a0c338a884bb0644b16818e5cb859be239f"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/SKILL.md",
+      "sha256": "93c4878f309bd8cca8f14717e740a15a104bad104191aa5970233333fae0a004"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/troubleshooting/common-issues.md",
+      "sha256": "edb27551a0554f6abe8df830515dd28d25bb719e5a27c5dfc61d6031c96df83c"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/troubleshooting/debugging.md",
+      "sha256": "ec7c3e112100e00d0f0aaf5f251b4ddcfebd5c2862564bb8e039957372fa66ff"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/troubleshooting/forum-top-questions.md",
+      "sha256": "bd82f5df9c2750f5cebf1cf4ba41588c4698088a7e536b2ae173326d9ed763d2"
+    },
+    {
+      "path": "skills/zoom-apps-sdk/troubleshooting/migration.md",
+      "sha256": "105838d3d63503c0190a5ab05cae4fc4fddb338ce30aee8386525355997b0759"
+    }
+  ]
+}

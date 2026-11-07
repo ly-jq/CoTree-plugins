@@ -1,0 +1,97 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.stripe",
+  "name": "Stripe",
+  "version": "0.2.0",
+  "description": "Stripe 集成、账单、Connect、Apps、升级与账户排查的原生工作流，统一支付最佳实践。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.stripe.connect",
+      "description": "配置 Stripe 独立 MCP / CLI 身份，确认账户、沙箱与权限。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.stripe.integrate",
+      "description": "设计或维护 Stripe 支付、保存支付方式、税和资金服务集成。",
+      "path": "skills/integrate/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.stripe.billing",
+      "description": "维护 Stripe 订阅、发票、用量与客户门户，并验证生命周期。",
+      "path": "skills/billing/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.stripe.platforms",
+      "description": "为 Stripe Connect 平台选择和实施账户、支付路由与责任配置。",
+      "path": "skills/platforms/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.stripe.apps",
+      "description": "开发或维护 Stripe Apps，依据实际扩展面、认证和发布合同。",
+      "path": "skills/apps/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.stripe.upgrade",
+      "description": "升级 Stripe SDK、API 或 Webhook 版本并验证兼容性。",
+      "path": "skills/upgrade/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.stripe.inspect",
+      "description": "只读排查 Stripe 账户、支付、事件、账单和资金状态。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.stripe.reference",
+      "description": "查阅与当前项目版本相符的 Stripe 官方文档和 API 合同。",
+      "path": "skills/reference/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.stripe.directory",
+      "description": "使用 Stripe Directory 查找并比较服务，分开处理发现与采购。",
+      "path": "skills/directory/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.stripe.projects",
+      "description": "按授权使用 Stripe Projects 供应商目录、资源和环境配置。",
+      "path": "skills/projects/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "stripe",
+      "transport": "streamable-http",
+      "url": "https://mcp.stripe.com",
+      "headersEnv": {
+        "Authorization": "COTREE_STRIPE_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "6be0f2506f9de9bde871832e51360fda09dc04a9def651c38418ecdad456869e"
+  }
+}

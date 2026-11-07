@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.circleci",
+  "version": "0.2.0",
+  "category": "代码托管与部署",
+  "priority": 0,
+  "batch": 14,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "circleci",
+      "repository": "plugins",
+      "path": "plugins/circleci",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "44d483c3be5e8e6abd8bfb21452b3943d724c9ab653ef93587e8c7b02fbe1203",
+      "upstreamVersion": "1.0.4"
+    }
+  ],
+  "changes": [
+    "四个来源 Skill 整理为七个原生工作流，完整保留七份专项参考，不重复注册归档指令。",
+    "复用 CoTree Shell / 浏览器；按实际 CircleCI CLI 版本发现命令，Chunk 是独立可选服务。"
+  ],
+  "limitations": [
+    "已完成 CoTree 原生入口与集成改造；真实账户读写、权限、过期恢复和业务结果仍待验收。Skill 加载不证明线上任务成功。",
+    "需要独立安装 CircleCI CLI；远程流水线需要个人身份和项目权限，配置 validate / process 也可能访问服务。",
+    "Chunk 的登录、平台支持、组织准入和云任务结果待验收；归档安装示例不保证适用于当前 Windows。本包没有新增 CircleCI MCP。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "circleci-config / four references": "config / tests / artifacts 保留完整缓存、持久化、拆分及审批参考。",
+    "circleci-builds / transient classification": "builds：按首个失败证据区分确定性、偶发和外部错误。",
+    "circleci-cli": "connect / cli：真实 CLI help、独立身份及准确对象范围，不沿用旧命令限制。",
+    "chunk / UI and CLI references": "chunk：保留可选云任务和 UI / CLI 两条路径；不自动安装来源 hooks 或 Skill，不绕过 CoTree 的委派与权限。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

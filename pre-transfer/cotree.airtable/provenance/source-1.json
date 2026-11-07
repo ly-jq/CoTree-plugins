@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.airtable",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "airtable",
+    "repository": "plugins",
+    "path": "plugins/airtable",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "eb49b280ce1ab14fe2095e386b1408fa7e6872d68f6e5d344c0cf48a6075bc86",
+    "upstreamVersion": "6.0.1"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_AIRTABLE_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/airtable-cli/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/airtable-cli/SKILL.md",
+      "sourceMetadata": {
+        "name": "airtable-cli",
+        "description": "Lists bases, reads and writes records, manages tables and fields, filters and searches data in Airtable via the `airtable-mcp` CLI. Use when the task involves Airtable data or the user mentions airtable-mcp, bases, tables, records, or fields."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/airtable-filters/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/airtable-filters/SKILL.md",
+      "sourceMetadata": {
+        "name": "airtable-filters",
+        "description": "Use this skill when the user wants to find, filter, or narrow down Airtable records by field values, even when they don't explicitly say \"filter.\"",
+        "license": "MIT",
+        "metadata": {
+          "version": "1.0.0",
+          "author": "airtable"
+        }
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/airtable-overview/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/airtable-overview/SKILL.md",
+      "sourceMetadata": {
+        "name": "airtable-overview",
+        "description": "Explains what Airtable is and how data is structured — bases, tables, fields, records, views, automations, and interfaces. Use when you need context about the Airtable data model.",
+        "license": "MIT",
+        "metadata": {
+          "version": "1.0.0",
+          "author": "airtable"
+        }
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#airtable",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/airtable"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 8,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "f48d14fee9676d29b29741859e3dc4f2e9eeb4cb950516471bbbb40fa347bf42"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "6eb234616adf6d085feff552d3ca47f4f503e029e0983334bb9438c03fdbbbde"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "6f7f650629e53b3e04c50a91810643a3ef167b19abdaed333e673b59a3c503e8"
+    },
+    {
+      "path": "assets/composer-icon.svg",
+      "sha256": "fd486bbd530e98c3eb213726bedede4f48067de3076fb8337a56dcf07ef15d99"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "96fd36205f1a420a5289b833b9427af71237b004c54474a3ad30492865979103"
+    },
+    {
+      "path": "skills/airtable-cli/agents/openai.yaml",
+      "sha256": "4c1b513d344023535902ebe1cb2bee37a8588be08c33e054401091d986ad3002"
+    },
+    {
+      "path": "skills/airtable-cli/SKILL.md",
+      "sha256": "6eb17c13153078a280fec4fbde0f1def2ccc83530b751bf06e10f62d3cc72a87"
+    },
+    {
+      "path": "skills/airtable-filters/agents/openai.yaml",
+      "sha256": "848cee1925393b675d44636da8a512e5c6fb31a0e1069ebbec9696161ba7ecf5"
+    },
+    {
+      "path": "skills/airtable-filters/SKILL.md",
+      "sha256": "e06ee6a50ca2586582c5666b1a5095845bc857549e1b2c86c8a52587d8d61845"
+    },
+    {
+      "path": "skills/airtable-overview/agents/openai.yaml",
+      "sha256": "f61a1f35a10dd901c205754a00ef745a0ef625864a15da3f7d5be3f11eb878f9"
+    },
+    {
+      "path": "skills/airtable-overview/SKILL.md",
+      "sha256": "d8e243136f6821c9d483b7dc995aafd227472e0b673d5d7c3ae008d6336ad028"
+    }
+  ]
+}

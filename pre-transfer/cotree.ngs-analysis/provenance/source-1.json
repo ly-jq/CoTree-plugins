@@ -1,0 +1,529 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.ngs-analysis",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "ngs-analysis",
+    "repository": "plugins",
+    "path": "plugins/ngs-analysis",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "eee5069380fcce4791f2f54ce4252996c5958e69e83ac9c7f0b24f1f456dfe1b",
+    "upstreamVersion": "1.0.3"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "需对应科研数据、Python / R / 生物信息工具链。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/ngs-amplicon-microbiome/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-amplicon-microbiome/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-amplicon-microbiome",
+        "description": "Kick off public 16S, 18S, ITS, COI, or other marker-gene amplicon microbiome workflows using nf-core/ampliseq, QIIME2, DADA2, and Cutadapt."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-analysis-router/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-analysis-router/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-analysis-router",
+        "description": "Route BCL, FASTQ, BAM/CRAM, count-matrix, or VCF sequencing requests to the right public NGS analysis skill and ask only the missing assay-specific setup questions."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-atacseq-peaks-qc/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-atacseq-peaks-qc/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-atacseq-peaks-qc",
+        "description": "Run or plan ATAC-seq QC, alignment, TSS enrichment, fragment-size, blacklist, peak-calling, consensus peak, and differential accessibility workflows."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-bcl-to-fastq/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-bcl-to-fastq/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-bcl-to-fastq",
+        "description": "Validate Illumina BCL run folders and sample sheets, plan demultiplexing, review index/UMI/lane choices, run BCL-to-FASTQ conversion, and interpret demux metrics while surfacing license/download boundaries."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-bulk-rnaseq-counts-qc/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-bulk-rnaseq-counts-qc/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-bulk-rnaseq-counts-qc",
+        "description": "Run or plan bulk RNA-seq FASTQ-to-count processing with sample-sheet, strandedness, genome annotation, alignment or pseudoalignment, MultiQC, and count-matrix QC checks."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-bulk-rnaseq-differential-expression/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-bulk-rnaseq-differential-expression/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-bulk-rnaseq-differential-expression",
+        "description": "Run or plan bulk RNA-seq differential-expression analysis from count matrices with replicate, design formula, contrast, batch, normalization, QC plot, and result-table checks."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-bulk-rnaseq/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-bulk-rnaseq/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-bulk-rnaseq",
+        "description": "Dispatch bulk RNA-seq requests to FASTQ-to-count QC or count-matrix differential-expression skills using nf-core/rnaseq, STAR, Salmon, featureCounts, MultiQC, and R/Bioconductor workflows."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-chip-cutrun-peaks-qc/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-chip-cutrun-peaks-qc/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-chip-cutrun-peaks-qc",
+        "description": "Run or plan ChIP-seq, CUT&RUN, or CUT&Tag QC, control handling, spike-in, peak calling, broad-vs-narrow target selection, replicate, bigWig, and differential binding workflows."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-dna-germline-variants/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-dna-germline-variants/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-dna-germline-variants",
+        "description": "Run or plan deep germline WGS, WES, targeted-panel, cohort, or trio variant-calling workflows with reference-build, known-sites, QC, joint-calling, and annotation checks."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-dna-somatic-variants/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-dna-somatic-variants/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-dna-somatic-variants",
+        "description": "Run or plan tumor-normal, tumor-only, WGS, WES, or cancer-panel somatic variant workflows with pairing, contamination, panel-of-normals, purity, QC, and annotation checks."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-dna-umi-panel-variants/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-dna-umi-panel-variants/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-dna-umi-panel-variants",
+        "description": "Run or plan targeted DNA panel variant workflows that use UMIs, duplex consensus reads, molecular barcodes, low-frequency calling, target coverage, and panel-specific QC."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-dna-variant-calling/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-dna-variant-calling/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-dna-variant-calling",
+        "description": "Dispatch WGS, WES, or targeted DNA variant requests to germline, somatic, or UMI-panel skills, then plan public nf-core/sarek, GATK4, DeepVariant, samtools, or bcftools workflows."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-epigenomics-peaks/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-epigenomics-peaks/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-epigenomics-peaks",
+        "description": "Dispatch ATAC-seq, ChIP-seq, CUT&RUN, or CUT&Tag requests to assay-specific QC, alignment, signal-track, peak-calling, consensus, and differential peak workflows."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-fastq-qc/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-fastq-qc/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-fastq-qc",
+        "description": "Validate FASTQ inputs, run local FastQC/MultiQC QC, interpret QC signals, and optionally execute fastp or Cutadapt trimming branches without overwriting raw reads."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-runtime-env/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-runtime-env/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-runtime-env",
+        "description": "Check whether public NGS tools and packages already exist before downloading, installing, or running a sequencing pipeline."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-scrna-seq/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-scrna-seq/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-scrna-seq",
+        "description": "Route single-cell or single-nucleus RNA-seq FASTQs to public count-generation workflows and defer post-count matrix QC, annotation, clustering, and UMAP analysis to the embedded scrna-seq-qc skill."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/ngs-shotgun-metagenomics/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/ngs-shotgun-metagenomics/SKILL.md",
+      "sourceMetadata": {
+        "name": "ngs-shotgun-metagenomics",
+        "description": "Kick off public shotgun metagenomics QC, host-depletion, taxonomic profiling, and functional profiling workflows using nf-core/taxprofiler, Kraken2, Bracken, MetaPhlAn, and HUMAnN."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/scrna-seq-qc/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/scrna-seq-qc/SKILL.md",
+      "sourceMetadata": {
+        "name": "scrna-seq-qc",
+        "description": "Process, quality-control, annotate, and visualize single-cell or single-nucleus RNA-seq datasets across tissues and species. Use when Codex needs to build, adapt, or review a general scRNA-seq QC pipeline; choose dataset-appropriate cell-level filters from QC distributions; run required scDblFinder-based doublet and ambient-RNA filtering; annotate cells with matched references or marker-based fallbacks; or generate global and per-group UMAP visualizations for large scRNA-seq datasets."
+      }
+    }
+  ],
+  "copiedFiles": 80,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "d43ecec27fc2209b159d738e6a960030b1a216726fc9cdc9b806cd4059403dd8"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "de2f5931b97d9b2ce6325208dd514c69ee9bf13201af635d8fb17345a5ef4737"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d7e13ca15fe28baa160964e834a614713ba05e1133d46b7075fef419aa82cb50"
+    },
+    {
+      "path": "references/database-registry.json",
+      "sha256": "8ef2b5415a4691db0e9f760f7fcc1c3bebcc20ba057026c74680fac1b67a1dc7"
+    },
+    {
+      "path": "references/intake-schema.json",
+      "sha256": "c2aa6620546b461259df2fa91a7033c8183b445552d8dc92b720c2d95c4182a0"
+    },
+    {
+      "path": "references/pipeline-registry.json",
+      "sha256": "8de5c1bb19bce2632379a58facb8b55b9addb3b3c3ee20531f6441308f575dd2"
+    },
+    {
+      "path": "references/reference-registry.json",
+      "sha256": "39294c685a86f9bd066345911f239985be131b6e070f75893ed25142f18bad58"
+    },
+    {
+      "path": "references/run-envelope-schema.json",
+      "sha256": "09b88dfbc12707f49a0169a1f73af12f2ea8edc8a925452d205e1358af2a7aa5"
+    },
+    {
+      "path": "references/runtime-install-guidance.md",
+      "sha256": "4465b98f765a751f1b3610d981b55dd4005e276d8587d8b4f4ab3d281e8b0994"
+    },
+    {
+      "path": "scripts/ngs_epigenomics_utils.py",
+      "sha256": "76f2f11b4bdd3a9389d8f674091593454c561ee7cdf70df09abd0adcd979cbc8"
+    },
+    {
+      "path": "scripts/ngs_planner_utils.py",
+      "sha256": "5f8d234f469f81ec60f40178828769aab490d369aa1d7614a970549acfc9c4f0"
+    },
+    {
+      "path": "scripts/ngs_preflight.py",
+      "sha256": "36d60ad166534e5e10fad2ee59f447e6f84b36802457fedb68c01a600c220de2"
+    },
+    {
+      "path": "scripts/ngs_reference_manager.py",
+      "sha256": "61c0637671727a310924ab478825a443a68072f964e3c5f1e337152124890332"
+    },
+    {
+      "path": "scripts/ngs_resource_gate.py",
+      "sha256": "e5ed3625d0e9573a6f127800943a7e786dafca856082d39b702cd5b5bb82721d"
+    },
+    {
+      "path": "scripts/ngs_run_utils.py",
+      "sha256": "3ac6dc9760b83e2e359fddc7ae681b41beaa0c31f941343282449010094c631d"
+    },
+    {
+      "path": "scripts/ngs_visualization_utils.py",
+      "sha256": "05d74d57b511ae28576546e90724f741e2751bfd841b25cf6043ece66054f611"
+    },
+    {
+      "path": "scripts/run_amplicon_microbiome.py",
+      "sha256": "f1f283f0694d6932816fb65393d4e6323576d62af16c1aeb5e3625d659ec4e8b"
+    },
+    {
+      "path": "scripts/run_atacseq_peaks_qc.py",
+      "sha256": "08ac374d9a8c8226a2f0afafbb21bcf46347b2aac5951a3e1c6a4e0796ea3eb8"
+    },
+    {
+      "path": "scripts/run_bcl_to_fastq.py",
+      "sha256": "1972ef6ea74a7cad61d1b5eed6b2fbe79275b9ee645a0349cedee1ca5f3943d2"
+    },
+    {
+      "path": "scripts/run_bulk_rnaseq_counts_qc.py",
+      "sha256": "f580e17035842c15d7d42cadc772b41825d3de14e2ed940bfda73e5648442af5"
+    },
+    {
+      "path": "scripts/run_bulk_rnaseq_de.py",
+      "sha256": "e292397049eccbdd99effcbe312ecafb7a43fc44e205f692ace32711521bf9fc"
+    },
+    {
+      "path": "scripts/run_chip_cutrun_peaks_qc.py",
+      "sha256": "90dd959129c6b8afb3e72b61a42b1a656e2bfe0b43df285fcb5477eff56f79d7"
+    },
+    {
+      "path": "scripts/run_dna_germline_variants.py",
+      "sha256": "0a9d33e2add8fbdf111bf37446a503c4149e02ba96da796cf6cbc8ba65f6a617"
+    },
+    {
+      "path": "scripts/run_dna_somatic_variants.py",
+      "sha256": "7411f3752024893d5b1f543d91a2e1790e85a3a34e5b5a331172aa4d158be289"
+    },
+    {
+      "path": "scripts/run_dna_umi_panel_variants.py",
+      "sha256": "956969231fbbf165b5b07ebfafb49bdd8fe4d973affa9b93d2565c28f6ac21fc"
+    },
+    {
+      "path": "scripts/run_dna_variant_calling.py",
+      "sha256": "93d89c5fff48aee62cbfc9c7f1147cea182431958811054e352bf978e36b3817"
+    },
+    {
+      "path": "scripts/run_fastq_assay_package.py",
+      "sha256": "2fa0b59d3e64cbb0af5b362ad1ccdb63a5873834c590be7708fb5fcba469fc84"
+    },
+    {
+      "path": "scripts/run_fastq_qc.py",
+      "sha256": "53ea95a9cc97e8fc900b8d3379eb0204bb002eb1ac02141530f27d87f446b0c1"
+    },
+    {
+      "path": "scripts/run_nfcore_pipeline.py",
+      "sha256": "59873e94808ff369fc8b40e4171122b5a8ef388a54e2fd5eecd78b295476146e"
+    },
+    {
+      "path": "scripts/run_scrnaseq_fastq_to_count.py",
+      "sha256": "73bb81f81976c089c10dcc3a1e7e69293d998feb51afa134aabed7437a4fc987"
+    },
+    {
+      "path": "scripts/run_scrnaseq_post_count_qc.py",
+      "sha256": "947e5f2a5e8b7cf8a8bbf7b426114a2d1805ea019f8cdca6eb6ab7687668c8c8"
+    },
+    {
+      "path": "scripts/run_shotgun_metagenomics.py",
+      "sha256": "d9cc8089d175a8b768b187cabefc401028ad25ede5d493e0518e31c1f2012c28"
+    },
+    {
+      "path": "skills/ngs-amplicon-microbiome/agents/openai.yaml",
+      "sha256": "c6be84e899448dd3e9632e7cede3b3fe53468fb8e51f17f66248fa81e2ec1ceb"
+    },
+    {
+      "path": "skills/ngs-amplicon-microbiome/SKILL.md",
+      "sha256": "8383e16ec86084bf68e42fbcc3696b11129c342d200734c846c312355bda058e"
+    },
+    {
+      "path": "skills/ngs-analysis-router/agents/openai.yaml",
+      "sha256": "d3eb41a7650eb297a06d664b25903a26146a72b86e7cb71c1c1664af89eb7ed5"
+    },
+    {
+      "path": "skills/ngs-analysis-router/SKILL.md",
+      "sha256": "48e5903036c638c7d914a3f5123ac51775e124ed50e619cbbef202f986efcbbf"
+    },
+    {
+      "path": "skills/ngs-atacseq-peaks-qc/agents/openai.yaml",
+      "sha256": "dcfc0b27c3950ee40c613558a89294fe72ef6322704704e0e05dc0113b0e314e"
+    },
+    {
+      "path": "skills/ngs-atacseq-peaks-qc/SKILL.md",
+      "sha256": "76ced2a3dd52df24d87fda191958718c1dc6a874dcf3953bb8571abd60de64a9"
+    },
+    {
+      "path": "skills/ngs-bcl-to-fastq/agents/openai.yaml",
+      "sha256": "b6a0bb92bc57f0a15c6d7f4408845ed9345845d4ee18f75c91add33943de77f7"
+    },
+    {
+      "path": "skills/ngs-bcl-to-fastq/SKILL.md",
+      "sha256": "b6381aeb9f28014205a893189a1ca4f7e0408bfeecd37425b245c4379cfe0f8b"
+    },
+    {
+      "path": "skills/ngs-bulk-rnaseq/agents/openai.yaml",
+      "sha256": "5952a6eeb96a4297aa2576f0ce192e39ea3f53ca0a707ccae1950f44288084fe"
+    },
+    {
+      "path": "skills/ngs-bulk-rnaseq/SKILL.md",
+      "sha256": "46e5b7adf93dbd8e504d9c90417a9cd980d351d42229de6a47fa0a4ee0c21f04"
+    },
+    {
+      "path": "skills/ngs-bulk-rnaseq-counts-qc/agents/openai.yaml",
+      "sha256": "e41610aee303ad41bfad44aa8ed5550bb197c4ec56add065528cbff4facf5664"
+    },
+    {
+      "path": "skills/ngs-bulk-rnaseq-counts-qc/SKILL.md",
+      "sha256": "996b2e02bedf8802cccadf7efe50f76a21a0455a3343f6f305b1610e2aa9ab1c"
+    },
+    {
+      "path": "skills/ngs-bulk-rnaseq-differential-expression/agents/openai.yaml",
+      "sha256": "78fe60bb530604fbde2dbef7837d53885efbd2f72a4b704e54432217d7cf9ff1"
+    },
+    {
+      "path": "skills/ngs-bulk-rnaseq-differential-expression/SKILL.md",
+      "sha256": "3cbdc0a1394ed1bede53d6dfae5eef5dc61eee0e9eea7cb5740530b32346ce80"
+    },
+    {
+      "path": "skills/ngs-chip-cutrun-peaks-qc/agents/openai.yaml",
+      "sha256": "0613709444b33524c708943dd1cd3313df238054e0086a9718a4e351c662be82"
+    },
+    {
+      "path": "skills/ngs-chip-cutrun-peaks-qc/SKILL.md",
+      "sha256": "08e9375382093eb8d52f3d24436bc853e0d5e70184a5f8757e1933216db9d253"
+    },
+    {
+      "path": "skills/ngs-dna-germline-variants/agents/openai.yaml",
+      "sha256": "167b6cb1bbb66de666970fa00e5d4897e685b0ce93c5c18dd4fc6a07ce7a79ee"
+    },
+    {
+      "path": "skills/ngs-dna-germline-variants/SKILL.md",
+      "sha256": "8a473caaa96bdbed43ffdb38e20e0e87db84063bd3bf699c29ccc608ea792301"
+    },
+    {
+      "path": "skills/ngs-dna-somatic-variants/agents/openai.yaml",
+      "sha256": "6a587084aaa8304e9e0e39991725eea53cdf74aff24ce810a5afcb11660ca4a6"
+    },
+    {
+      "path": "skills/ngs-dna-somatic-variants/SKILL.md",
+      "sha256": "250271ff76ea318d9c96c0ceb92a119018c400c819f46007359af06a342a1af9"
+    },
+    {
+      "path": "skills/ngs-dna-umi-panel-variants/agents/openai.yaml",
+      "sha256": "5d36eb4aef778d7228216446351d7f40db72656af1c8499cb95f02a090dc9424"
+    },
+    {
+      "path": "skills/ngs-dna-umi-panel-variants/SKILL.md",
+      "sha256": "c833f832f33fb23c723fac8ab264ad416191c575ba4acba436e50d5b63a09a96"
+    },
+    {
+      "path": "skills/ngs-dna-variant-calling/agents/openai.yaml",
+      "sha256": "e2dbbf9530ff48f58821fe56b2b0170ce7c07aee0883fd6c2d6672b576f4ecb3"
+    },
+    {
+      "path": "skills/ngs-dna-variant-calling/SKILL.md",
+      "sha256": "05083568a03b44acda3799b6cb954a74a8e7048ecc5e8676c1f6ca92c4c22eb3"
+    },
+    {
+      "path": "skills/ngs-epigenomics-peaks/agents/openai.yaml",
+      "sha256": "0264b8b111121f933e446916e716b516edd6b48fb8186d0eb2a23ca24e55847b"
+    },
+    {
+      "path": "skills/ngs-epigenomics-peaks/SKILL.md",
+      "sha256": "28003ac99d143538a37e5ace724eada6258121da7c30e412cba9c4b5e1c82b3e"
+    },
+    {
+      "path": "skills/ngs-fastq-qc/agents/openai.yaml",
+      "sha256": "73ec73de60266ace1d13018e9567d6edeb4e811b2eaaebff0f4dcdf21ed0815c"
+    },
+    {
+      "path": "skills/ngs-fastq-qc/SKILL.md",
+      "sha256": "15282e1f0d9d7755192819e1227ee15b7e74f829effd88949c2fa91fc09fd773"
+    },
+    {
+      "path": "skills/ngs-runtime-env/agents/openai.yaml",
+      "sha256": "9f0c4774960367070b8ef80c2de30ed8e7fa182cb04d63d1daf3cf9b32a6a342"
+    },
+    {
+      "path": "skills/ngs-runtime-env/SKILL.md",
+      "sha256": "03bf97f1a7d3c282023d3891a0b4c2f90bc6f4c20304fac58836bb06fb1e27f3"
+    },
+    {
+      "path": "skills/ngs-scrna-seq/agents/openai.yaml",
+      "sha256": "28fdcb156c7034521b622408094f597aef221d42cf8e3f1883ba5964914ad004"
+    },
+    {
+      "path": "skills/ngs-scrna-seq/SKILL.md",
+      "sha256": "27d67c888d0e87d330c5e79b24646bcdfbe496c9e1d193650ae8ae0d067e0562"
+    },
+    {
+      "path": "skills/ngs-shotgun-metagenomics/agents/openai.yaml",
+      "sha256": "da621a5f4e10516a8654ac60e515f497fcfadf755399b155cae7149f15288152"
+    },
+    {
+      "path": "skills/ngs-shotgun-metagenomics/SKILL.md",
+      "sha256": "a18f6e22e6ae9d02b60d85b6bb23873eda0a6e1def5850d91bbca4294699eb57"
+    },
+    {
+      "path": "skills/scrna-seq-qc/agents/openai.yaml",
+      "sha256": "2d296f7d558436d4ca500f3b91eea46d80abc7ed41b4efcc6768ba5d981964b2"
+    },
+    {
+      "path": "skills/scrna-seq-qc/references/qc-annotation-umap-heuristics.md",
+      "sha256": "c0134fbf9e907cda7aabeaddec91b07841e1760755e4711b6355e76987881e50"
+    },
+    {
+      "path": "skills/scrna-seq-qc/SKILL.md",
+      "sha256": "af2a2316e13480bbc8e0ba353001a130225d8bbc2f5b64d69ae2a849fa8b550a"
+    },
+    {
+      "path": "tests/test_bcl_to_fastq_runner.py",
+      "sha256": "f92ea7809c0a751a8c41049a6cb328932b1deb17f8b3e3c0010dd8e37d9d7052"
+    },
+    {
+      "path": "tests/test_bulk_rnaseq_counts_qc_runner.py",
+      "sha256": "88642e6fea47a2e42f3034d291ae64e6387f3b8efe5df23158e647846e9be4d2"
+    },
+    {
+      "path": "tests/test_new_backend_planners.py",
+      "sha256": "cbcfbaece0e9dc1715c353ba29fc72146477087e0cadfc8ce0382b9f5bebdbd6"
+    },
+    {
+      "path": "tests/test_ngs_preflight.py",
+      "sha256": "fcce9bb2a3e3bcade6a3baa0853dbe3a22cc1aa74f3307ec8574c2434cf3de61"
+    },
+    {
+      "path": "tests/test_scrnaseq_post_count_qc_runner.py",
+      "sha256": "189113fa47be78cf191f66683af4f9b72ef640ce628584e4af640da21662ebff"
+    },
+    {
+      "path": "workflows/amplicon_microbiome/run_dada2_backend.R",
+      "sha256": "bf0396ce154a69dc883f58bf33dddfb9dd7e52e441d4a90476d6c2e88550fddc"
+    },
+    {
+      "path": "workflows/bulk_rnaseq_counts_qc/aggregate_salmon_quant.py",
+      "sha256": "f0f555c8421016207916be50006f07b74f842325625255b7838c6a8510c27d1f"
+    },
+    {
+      "path": "workflows/bulk_rnaseq_counts_qc/Snakefile.smk",
+      "sha256": "94f942c95c28796f580e0cc17a71692b9536d5dc99871a5c9a2c35187a1db3b2"
+    },
+    {
+      "path": "workflows/bulk_rnaseq_differential_expression/run_bulk_de.R",
+      "sha256": "d44efa43d1bb56420c1457fc815eaacac1b9073770652a75b29b25b85ad6d451"
+    },
+    {
+      "path": "workflows/scrnaseq_fastq_to_count/run_star_genome_generate.py",
+      "sha256": "300822f7fe753b5f7dc2a6ffa73dc336d5d0c9b05555cf39028425b175f7eebc"
+    },
+    {
+      "path": "workflows/scrnaseq_fastq_to_count/run_starsolo.py",
+      "sha256": "1205d9fd4bb8a0f0aef6fd24123857a77c4b2da354412e19ca16cec8084b229e"
+    },
+    {
+      "path": "workflows/scrnaseq_fastq_to_count/Snakefile.smk",
+      "sha256": "d636367d08c2025b6bd719c9406185530cb17de4b9aa3887ec4e07c85e060698"
+    }
+  ]
+}

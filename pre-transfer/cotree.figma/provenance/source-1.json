@@ -1,0 +1,668 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.figma",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "figma",
+    "repository": "plugins",
+    "path": "plugins/figma",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "723370f8a9207315e130f9e0fca65747272eea7a4ee65ed612a77991ca856206",
+    "upstreamVersion": "2.0.20"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_FIGMA_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/figma-code-connect/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/figma-code-connect/SKILL.md",
+      "sourceMetadata": {
+        "name": "figma-code-connect",
+        "description": "Creates and maintains Figma Code Connect template files that map Figma components to code snippets. Use when the user mentions Code Connect, Figma component mapping, design-to-code translation, or asks to create/update .figma.ts or .figma.js files.",
+        "disable-model-invocation": false
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/figma-create-new-file/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/figma-create-new-file/SKILL.md",
+      "sourceMetadata": {
+        "name": "figma-create-new-file",
+        "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `create_new_file` tool call. NEVER call `create_new_file` directly without loading this skill first. Trigger whenever the user wants a new blank Figma file — a new design, FigJam, or Slides file — or when you need a fresh file before calling `use_figma`. Usage — /figma-create-new-file [editorType] [fileName] (e.g. /figma-create-new-file figjam My Whiteboard, /figma-create-new-file slides Q3 Review)",
+        "disable-model-invocation": false
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/figma-design-to-code/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/figma-design-to-code/SKILL.md",
+      "sourceMetadata": {
+        "name": "figma-design-to-code",
+        "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE calling the `get_design_context` Figma MCP tool. You MUST trigger this skill whenever the user wants to implement, build, port, or code up a Figma design as code. Example prompts (not exhaustive) are 'implement this Figma design', 'build this screen from Figma', 'turn this Figma into code', 'design to code'. This skill provides critical instructions and steps to the agent on how to correctly implement Figma designs in code and must NOT be skipped.",
+        "disable-model-invocation": false
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/figma-generate-design/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/figma-generate-design/SKILL.md",
+      "sourceMetadata": {
+        "name": "figma-generate-design",
+        "description": "Use this skill alongside figma-use when the task involves translating an application page, view, or multi-section layout into Figma. Triggers: 'write to Figma', 'create in Figma from code', 'push page to Figma', 'take this app/page and build it in Figma', 'create a screen', 'build a landing page in Figma', 'update the Figma screen to match code', 'convert this modal/dialog/drawer/panel to Figma'. This is the preferred workflow skill whenever the user wants to build or update a full page, modal, dialog, drawer, sidebar, panel, or any composed multi-section view in Figma from code or a description. Discovers design system components, variables, and styles from Code Connect files, existing screens, and library search, then imports them and assembles views incrementally section-by-section using design system tokens instead of hardcoded values.",
+        "disable-model-invocation": false
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/figma-generate-diagram/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/figma-generate-diagram/SKILL.md",
+      "sourceMetadata": {
+        "name": "figma-generate-diagram",
+        "description": "MANDATORY prerequisite — load this skill BEFORE every `generate_diagram` tool call. NEVER call `generate_diagram` directly without loading this skill first. Trigger whenever the user asks to create, generate, draw, render, sketch, or build a diagram — flowchart, architecture diagram, sequence diagram, ERD or entity-relationship diagram, state diagram or state machine, gantt chart, or timeline. Also trigger when the user mentions Mermaid syntax or wants a system architecture, decision tree, dependency graph, API call flow, auth handshake, schema, or pipeline visualized in FigJam. Routes to type-specific guidance, sets universal Mermaid constraints, and tells you when to use a different diagram type or skip the tool entirely (mindmaps, pie charts, class diagrams, etc.)."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/figma-generate-library/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/figma-generate-library/SKILL.md",
+      "sourceMetadata": {
+        "name": "figma-generate-library",
+        "description": "Build or update a professional-grade design system in Figma from a codebase. Use when the user wants to create variables/tokens, build component libraries, create individual components with proper variant sets and variable bindings, set up theming (light/dark modes), document foundations, or reconcile gaps between code and Figma. Also use when the user asks to create or generate any component in Figma — even a single one — since components require proper variable foundations, variant states, and design token bindings to be production-quality. This skill teaches WHAT to build and in WHAT ORDER — it complements the `figma-use` skill which teaches HOW to call the Plugin API. Both skills should be loaded together.",
+        "disable-model-invocation": false
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/figma-implement-motion/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/figma-implement-motion/SKILL.md",
+      "sourceMetadata": {
+        "name": "figma-implement-motion",
+        "description": "Translates Figma motion and animations into production-ready application code. Use when implementing animation/motion from a Figma design — user mentions \"implement this motion\", \"add animation from Figma\", \"animate this component\", provides a Figma URL whose node is animated, or when `get_design_context` returns motion data or instructs you to call `get_motion_context`.",
+        "disable-model-invocation": false
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/figma-swiftui/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/figma-swiftui/SKILL.md",
+      "sourceMetadata": {
+        "name": "figma-swiftui",
+        "description": "SwiftUI ↔ Figma translation. Use whenever the user mentions Swift, SwiftUI, iOS, iPhone, or iPad — in EITHER direction — translating a Figma design into SwiftUI (design → code), or pushing SwiftUI views / screens / tokens back into a Figma file (code → design). Triggers on phrases like 'implement this Figma design in SwiftUI', 'build this screen in Swift', 'push this SwiftUI view to Figma', 'mirror my Swift code in a Figma file', or whenever a Figma URL appears alongside `.swift` files / an `.xcodeproj`. Routes to a direction-specific reference doc; loads alongside `figma-use` for the code → design path.",
+        "disable-model-invocation": false
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/figma-use-figjam/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/figma-use-figjam/SKILL.md",
+      "sourceMetadata": {
+        "name": "figma-use-figjam",
+        "description": "This skill helps agents use Figma's use_figma MCP tool in the FigJam context. Can be used alongside figma-use which has foundational context for using the use_figma tool.",
+        "disable-model-invocation": false
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/figma-use-motion/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/figma-use-motion/SKILL.md",
+      "sourceMetadata": {
+        "name": "figma-use-motion",
+        "description": "Motion / animation context for the `use_figma` MCP tool — animating Figma nodes via manual keyframes, animation styles, easing, and timeline duration. Load alongside figma-use whenever a task involves adding, editing, or inspecting animation on a node.",
+        "disable-model-invocation": false
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/figma-use-slides/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/figma-use-slides/SKILL.md",
+      "sourceMetadata": {
+        "name": "figma-use-slides",
+        "description": "This skill helps agents use Figma's use_figma MCP tool in the Slides context. Can be used alongside figma-use which has foundational context for using the use_figma tool.",
+        "disable-model-invocation": false
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/figma-use/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/figma-use/SKILL.md",
+      "sourceMetadata": {
+        "name": "figma-use",
+        "description": "**MANDATORY prerequisite** — you MUST invoke this skill BEFORE every `use_figma` tool call. NEVER call `use_figma` directly without loading this skill first. Skipping it causes common, hard-to-debug failures. Trigger whenever the user wants to perform a write action or a unique read action that requires JavaScript execution in the Figma file context — e.g. create/edit/delete nodes, set up variables or tokens, build components and variants, modify auto-layout or fills, bind variables to properties, or inspect file structure programmatically.",
+        "disable-model-invocation": false
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/connect-figma-components.md",
+      "state": "converted",
+      "target": "content/commands/connect-figma-components.md",
+      "sourceMetadata": {}
+    },
+    {
+      "kind": "command",
+      "source": "commands/create-design-system-rules.md",
+      "state": "converted",
+      "target": "content/commands/create-design-system-rules.md",
+      "sourceMetadata": {}
+    },
+    {
+      "kind": "command",
+      "source": "commands/implement-from-figma.md",
+      "state": "converted",
+      "target": "content/commands/implement-from-figma.md",
+      "sourceMetadata": {}
+    },
+    {
+      "kind": "command",
+      "source": "commands/review-design-parity.md",
+      "state": "converted",
+      "target": "content/commands/review-design-parity.md",
+      "sourceMetadata": {}
+    },
+    {
+      "kind": "agent",
+      "source": "agents/design-parity-review-agent.md",
+      "state": "reference",
+      "reason": "Reference Markdown; not an Agent definition."
+    },
+    {
+      "kind": "agent",
+      "source": "agents/design-system-rules-agent.md",
+      "state": "reference",
+      "reason": "Reference Markdown; not an Agent definition."
+    },
+    {
+      "kind": "agent",
+      "source": "agents/figma-code-connect-agent.md",
+      "state": "reference",
+      "reason": "Reference Markdown; not an Agent definition."
+    },
+    {
+      "kind": "agent",
+      "source": "agents/figma-implementation-agent.md",
+      "state": "reference",
+      "reason": "Reference Markdown; not an Agent definition."
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#figma",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/figma"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 109,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "fd7670045722d71ba0421771f8c9aaa6732bca0d4a767a69ca16fa016ebc4832"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "64334f82496ac1237c717ff74f48913b2ffdbb9d6f826e80e5d0c13f6009febd"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "bd2347716b5d9377f9ef9812350db78afa7444d4ebac8b30d362df0c5e1ce943"
+    },
+    {
+      "path": "agents/design-parity-review-agent.md",
+      "sha256": "a6fbb25d44da9d144747066574cf28bb30916711f399ef910f7576935d538778"
+    },
+    {
+      "path": "agents/design-system-rules-agent.md",
+      "sha256": "ff8232e5050ab74da6b0db46fd4193cc7dc7597bfe96ef2c73e8b18a730d8d3b"
+    },
+    {
+      "path": "agents/figma-code-connect-agent.md",
+      "sha256": "1439ca19efb676f262c00f885f7e648a96c356f212e1363ad14123dec5571f73"
+    },
+    {
+      "path": "agents/figma-implementation-agent.md",
+      "sha256": "470bffae9c8c48ab4844a8d4c42ffad7504eea9b7df5aa491c634ec1a6a28a14"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "dbe3a51bd0b1e4c100f538da88a0208c492463ad17650da438531ccd53a40eb8"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "591b8e9dcd71c2639de71d29e57966483aade636f3af29109f7fa0fa96bca9be"
+    },
+    {
+      "path": "assets/figma-plugin-large.svg",
+      "sha256": "1fd973c6366ad0d2e26102045bd748748bd3b48347156a4485b474561484ed51"
+    },
+    {
+      "path": "assets/figma-plugin-small.svg",
+      "sha256": "510be1160e9994ee0f719d910f91c61f8039f581f656fd4c39cc2da63111bfbb"
+    },
+    {
+      "path": "assets/figma-small.svg",
+      "sha256": "9cf98b6ad28b265f45233be82597120026cacb29d89c808ac3bc36c352f82713"
+    },
+    {
+      "path": "assets/figma.png",
+      "sha256": "4333d5598517c4a0e20daf7daab5352aff8260392abc804d9a73b225d22993fd"
+    },
+    {
+      "path": "assets/icon.svg",
+      "sha256": "a90f70c6630aebea5cf6bcf011448e1d8e947a728b9bb305b03ab290ec2bd5c4"
+    },
+    {
+      "path": "assets/logo-padded.png",
+      "sha256": "a971e2841f6f8edf8b9c6e0b0c4904658f8f466d4cd0a1fc07d1c6f6db4e110f"
+    },
+    {
+      "path": "commands/connect-figma-components.md",
+      "sha256": "f6f295d4f782449b502052604564576e002973af668abff821a7a4fd9582e031"
+    },
+    {
+      "path": "commands/create-design-system-rules.md",
+      "sha256": "f85690b52d63708b90f2d982cf12ea2b045ad94710743810b21eb2c8a45f68d6"
+    },
+    {
+      "path": "commands/implement-from-figma.md",
+      "sha256": "002030c8413be3f323cab58967e44047ee366fdc565d788c8fbd51083b18318e"
+    },
+    {
+      "path": "commands/review-design-parity.md",
+      "sha256": "ee74fecfed61b74fe29a6dd1315807bdeb5f78722a8f0139dc8db1df6204dec3"
+    },
+    {
+      "path": "hooks.json",
+      "sha256": "ec4561c1fa485d34002e4f847953dccd39ff8d8543f5dcf7b0c4d93b4e977251"
+    },
+    {
+      "path": "LICENSE.txt",
+      "sha256": "71cf878e9bc3ccbbda6468a297e17568a934c1c2e90592b49b3d0477ff371db4"
+    },
+    {
+      "path": "plugin.lock.json",
+      "sha256": "19a5b553f23acbaa76b53abf7762cec497f0ce0ce4b286e5b06e3be085e0ff92"
+    },
+    {
+      "path": "README.md",
+      "sha256": "76329df1cc8b79a69028e41a9bc3388877dc4a7006387e928470b98ec9bf934e"
+    },
+    {
+      "path": "scripts/post_write_figma_parity_check.sh",
+      "sha256": "55e4638bd728b485444ba4455e62c984812a071d189b609996b8169bc7e966fa"
+    },
+    {
+      "path": "skills/figma-code-connect/references/advanced-patterns.md",
+      "sha256": "b3b58314ce041d753bb2725732c68f6c5fd5b1271b6713995c92c1558fb5ea1f"
+    },
+    {
+      "path": "skills/figma-code-connect/references/api.md",
+      "sha256": "c094af3a606e9ddb678c4ffe30dd6e0e01ba68431fbcd1a13db90b6b3ccc8110"
+    },
+    {
+      "path": "skills/figma-code-connect/SKILL.md",
+      "sha256": "8ab45f7f158f9695ff58627ae950e89859abc58e99cd080ccacf384aca286485"
+    },
+    {
+      "path": "skills/figma-create-new-file/SKILL.md",
+      "sha256": "3cf3be0571e342b3c8f13a969b2671294df857ab2b917d0e7b79d932c3daff29"
+    },
+    {
+      "path": "skills/figma-design-to-code/SKILL.md",
+      "sha256": "d025dd9783e261359f42aa230d85a882d8bb1aeed0336fa48aa3a564f3c6096c"
+    },
+    {
+      "path": "skills/figma-generate-design/references/componentization.md",
+      "sha256": "c4cb88692ef5486e2f40b9324c16f0838a082dc9dcaaaa09b4e26c7249e52543"
+    },
+    {
+      "path": "skills/figma-generate-design/references/discover-product-font.md",
+      "sha256": "f21c522e622db6e5f6917ed081595ddb876bd293bd8efbdb378f3aa4c312ddb6"
+    },
+    {
+      "path": "skills/figma-generate-design/SKILL.md",
+      "sha256": "6aef0197c169193c5947e95cf20c14d806d8ee49c4bd82b628e281ec8a37d74f"
+    },
+    {
+      "path": "skills/figma-generate-diagram/references/architecture.md",
+      "sha256": "0039f45b985e4e82278260ba1d99ed340d5ed6e02f6dcda59a56a849332ecf25"
+    },
+    {
+      "path": "skills/figma-generate-diagram/references/erd.md",
+      "sha256": "91a1b5d22b4c733d9de2a495bfb853df4eb3ece09152cc91aa9fedf8c6629716"
+    },
+    {
+      "path": "skills/figma-generate-diagram/references/flowchart.md",
+      "sha256": "36802229c843ab3714006e78c6d7ab3a8a08cecd1b5c9f591bc9e5e39375f8ce"
+    },
+    {
+      "path": "skills/figma-generate-diagram/references/gantt.md",
+      "sha256": "911a060792277ab218f27ceec0def53d8cf0080267d553a5749c88b43ec3e0e9"
+    },
+    {
+      "path": "skills/figma-generate-diagram/references/sequence.md",
+      "sha256": "7ec7c603a44b5230580aee40812edaba0194aede9b980c443814ca764d8081c6"
+    },
+    {
+      "path": "skills/figma-generate-diagram/references/state.md",
+      "sha256": "3305b0cd12cc97d43b3d0d10ac0e1e80893be22ebe69b9580ca63cbabe3a2092"
+    },
+    {
+      "path": "skills/figma-generate-diagram/references/workflow.md",
+      "sha256": "736ff274fd99fba569f11c4238ecefe7066edd85a2179ec2e6d9901f31ef8149"
+    },
+    {
+      "path": "skills/figma-generate-diagram/SKILL.md",
+      "sha256": "0f2eab1454fac3c1fcde539fe07277cba248e2e79bc558601487e4195fd63570"
+    },
+    {
+      "path": "skills/figma-generate-library/references/code-connect-setup.md",
+      "sha256": "732ed6a8ef13818f2326bc7197de7ce63fee2afd4e8ada15f3b4f3b222561b4e"
+    },
+    {
+      "path": "skills/figma-generate-library/references/component-creation.md",
+      "sha256": "c2cf37fb525692e52d709238d7ec345ce023f81d961265fc75c8e1dd6780588e"
+    },
+    {
+      "path": "skills/figma-generate-library/references/discovery-phase.md",
+      "sha256": "f6f624d9865ae22da5183be3ad9ab9c9fc5cc59fa5c405318ca0c0f98db3ea7a"
+    },
+    {
+      "path": "skills/figma-generate-library/references/documentation-creation.md",
+      "sha256": "0dc3b51e3ff5f4cea759c84f56ef87e94c90cbbaef2e6885f4f35973397120cb"
+    },
+    {
+      "path": "skills/figma-generate-library/references/error-recovery.md",
+      "sha256": "a1c7441c9cc2e8317bdcc60c37084bcca21bd7e3051176878aa2588cfad89c4b"
+    },
+    {
+      "path": "skills/figma-generate-library/references/naming-conventions.md",
+      "sha256": "5304928075cba3f478e7c75974ee47749cbbcdf68b2b2e14c33417fbd7d49063"
+    },
+    {
+      "path": "skills/figma-generate-library/references/token-creation.md",
+      "sha256": "902457de9dcf58e52ed679955a15ecd02cabe8462be9da8a4e7b44a3f12af0be"
+    },
+    {
+      "path": "skills/figma-generate-library/scripts/bindVariablesToComponent.js",
+      "sha256": "f5c75ef731b219780b9aa91ec5e89546c0585fab1a115200a85d652dc903793f"
+    },
+    {
+      "path": "skills/figma-generate-library/scripts/cleanupOrphans.js",
+      "sha256": "4c034839db14ce2a6f375e03c81e73992ec64e4009818b2a8f5ad49dcec7f38d"
+    },
+    {
+      "path": "skills/figma-generate-library/scripts/createComponentWithVariants.js",
+      "sha256": "0faabb2dd37a3e497ca1928a446695f24ba46457bf12e4f08e7c1634082a28f7"
+    },
+    {
+      "path": "skills/figma-generate-library/scripts/createDocumentationPage.js",
+      "sha256": "13e8f361d7707fbc23d5bd172537272ce88c0cb172307a09b83f52a77845fd60"
+    },
+    {
+      "path": "skills/figma-generate-library/scripts/createSemanticTokens.js",
+      "sha256": "e06002d20e66738f2e3042d51d9137b30eeede797eb5a5138d89f45edbbc4cb7"
+    },
+    {
+      "path": "skills/figma-generate-library/scripts/createVariableCollection.js",
+      "sha256": "6877cbc9927fec349fe9d9bc0943879e60eb2f21f6b2835e56a2cac14ace4862"
+    },
+    {
+      "path": "skills/figma-generate-library/scripts/inspectFileStructure.js",
+      "sha256": "72fe64a64c958200139c5daa291422416801241a2cba1e76d155937c283bf54a"
+    },
+    {
+      "path": "skills/figma-generate-library/scripts/validateCreation.js",
+      "sha256": "80cf05f02cc34c7fbf9ca99bdd83bca29adedb8a320f9d05740f157323530cc1"
+    },
+    {
+      "path": "skills/figma-generate-library/SKILL.md",
+      "sha256": "30ec309c6615064b04f7fc50452da5e8d66714fceae795b249a1c9ada87f4032"
+    },
+    {
+      "path": "skills/figma-implement-motion/references/examples-and-anti-examples.md",
+      "sha256": "0fa646f4f7bd4987e6c02d5df0b20ebcc558454e765c7807ab9fa0161eba20a2"
+    },
+    {
+      "path": "skills/figma-implement-motion/references/framework-recommendations.md",
+      "sha256": "d990199bbd7e8681b886f523c687e8ab3e114e8930d4415b91c68239ff942d29"
+    },
+    {
+      "path": "skills/figma-implement-motion/references/gotchas.md",
+      "sha256": "bf1a0b0d91279010645f0412428356fde9b9fc30c6b0e96b90c02201c4b80bda"
+    },
+    {
+      "path": "skills/figma-implement-motion/references/motion-lint-rules.md",
+      "sha256": "1b82bdc2e443543de249cd67841679ad963d2cdd88463636740fefa877ee5218"
+    },
+    {
+      "path": "skills/figma-implement-motion/references/svg-and-path-motion.md",
+      "sha256": "5e7de316b11428b425a43459b17ac3ae43dd34d08325ce3cb4b1459c8449dfce"
+    },
+    {
+      "path": "skills/figma-implement-motion/references/unsupported-and-fallbacks.md",
+      "sha256": "5dd3ee4fd30bbd1aa392355cf270d183f768c3e5ec2c81d596d529932f123b67"
+    },
+    {
+      "path": "skills/figma-implement-motion/SKILL.md",
+      "sha256": "9276a50fd7e38be8abf932ec13372f26e508210fe1f0ec83a7c0b32098c7ad10"
+    },
+    {
+      "path": "skills/figma-swiftui/references/code-to-design.md",
+      "sha256": "c63f681ba6462cfc0287bf8453642ef7fec70ce551349083073cb253b102c5c6"
+    },
+    {
+      "path": "skills/figma-swiftui/references/design-to-code.md",
+      "sha256": "e4ac9965c8b901108ee03113f6331094ea2a375895b34db028aa0adfb2f3fc25"
+    },
+    {
+      "path": "skills/figma-swiftui/SKILL.md",
+      "sha256": "7100d677b8a996823e494ae8976cf420d4920e09ff1123c61f00a8f4f41a7467"
+    },
+    {
+      "path": "skills/figma-use/references/api-reference.md",
+      "sha256": "bcce29f18a9fbf36f8561fe90df43a8ae18e65936e6a3940f2c56e184f23776d"
+    },
+    {
+      "path": "skills/figma-use/references/common-patterns.md",
+      "sha256": "6f282ad432209d05408110369f620d09cafc31c223de76458a6b2ff47bafaa87"
+    },
+    {
+      "path": "skills/figma-use/references/component-patterns.md",
+      "sha256": "8962f70fafdc269244f451ae5b01aa36bd4e19d367433c9fd77508d2cf8532f6"
+    },
+    {
+      "path": "skills/figma-use/references/effect-style-patterns.md",
+      "sha256": "159813a10024b2ce4694ec0c41c9689e79372b2ba38609114b50fd7c3273aed6"
+    },
+    {
+      "path": "skills/figma-use/references/gotchas.md",
+      "sha256": "25593b3c61959408956e9188364d8449ded2e4c7e6516167226273a667672ef1"
+    },
+    {
+      "path": "skills/figma-use/references/plugin-api-patterns.md",
+      "sha256": "d5f7a5fccdbf9dcf4ad4e4519b6adfc37abd4ca6bee302179a5cfd4247ff4d6c"
+    },
+    {
+      "path": "skills/figma-use/references/plugin-api-standalone.d.ts",
+      "sha256": "1209dc7446cd975cd376c11b54577c3c2f260a31523fb4a8c2db611e8bd7079c"
+    },
+    {
+      "path": "skills/figma-use/references/plugin-api-standalone.index.md",
+      "sha256": "5ec49cd5a26515f4b11bc622d3d242d1db99d4ef33a44abc9124ef53cb8f5cf0"
+    },
+    {
+      "path": "skills/figma-use/references/text-style-patterns.md",
+      "sha256": "2ab8c62042ba00b05cd3bbcae39c0642b099781b1ce0e1cce14d215a560e35d8"
+    },
+    {
+      "path": "skills/figma-use/references/validation-and-recovery.md",
+      "sha256": "f41bf3154d3facfaa7ad9420aedd06f9214400eb5660db61401b1a84d56f467e"
+    },
+    {
+      "path": "skills/figma-use/references/variable-patterns.md",
+      "sha256": "f49cca1a45335dc46eba27b74c392fada72ec22f4e691cfe28d2186878566def"
+    },
+    {
+      "path": "skills/figma-use/references/working-with-design-systems/wwds-components--creating.md",
+      "sha256": "15386a2bc623ba2ed767a970b0c31ce4d36f10ed9c1570e493b285c33635bbd0"
+    },
+    {
+      "path": "skills/figma-use/references/working-with-design-systems/wwds-components--using.md",
+      "sha256": "b4fb203d3496abf8ee9abc99c8024844bb1add90f87cd573419adc8f07ae5c6f"
+    },
+    {
+      "path": "skills/figma-use/references/working-with-design-systems/wwds-components.md",
+      "sha256": "9dcc6724e729f0a444023eb7e80595217f123eb915b5fa3563f7e702af94e2fc"
+    },
+    {
+      "path": "skills/figma-use/references/working-with-design-systems/wwds-effect-styles.md",
+      "sha256": "7eda2176ae2734f54c1562cae76a683110e54933b7eda285fe3f3c6a0454a7d6"
+    },
+    {
+      "path": "skills/figma-use/references/working-with-design-systems/wwds-text-styles.md",
+      "sha256": "32c3c26c0a965d57aa374b7f648b831f051f314474046b34c7ed0d6190ce9ec7"
+    },
+    {
+      "path": "skills/figma-use/references/working-with-design-systems/wwds-variables--creating.md",
+      "sha256": "82da32a5623535c56d8c0ef5c7509404f6c4c561581e5cb3e906a2f717228146"
+    },
+    {
+      "path": "skills/figma-use/references/working-with-design-systems/wwds-variables--using.md",
+      "sha256": "4ed56e5945c583c54771f716a1ff6cd4f7cd874d6de7a0d43565d53d2583fe24"
+    },
+    {
+      "path": "skills/figma-use/references/working-with-design-systems/wwds-variables.md",
+      "sha256": "45fe9ae6b23282e79459cbf4cd77052bb524ba4269c8beba71d5896c55994ba2"
+    },
+    {
+      "path": "skills/figma-use/references/working-with-design-systems/wwds.md",
+      "sha256": "ed5d22ba62bf53121a60d43cd51bd753facdac03190b6bf1afd86b76f2096c80"
+    },
+    {
+      "path": "skills/figma-use/SKILL.md",
+      "sha256": "c3178f445f85e6a64c858acd0c6d7ef9c6ad0bc323360167335f6aef0bbf699d"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/batch-modify.md",
+      "sha256": "ef9aee3dd0d2680bd5c51cb7255a094072baf56aad39e1ad6e97306d070fe456"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/create-code-block.md",
+      "sha256": "876c2ec6c74778ab01ef287a35ced055f25af7d3f08b01428104c1de02171682"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/create-connector.md",
+      "sha256": "17d0dde0b799620280b63040998fc028c002148604356a0c75f4a604c294c8a0"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/create-label.md",
+      "sha256": "7cdfeb30590e93d084698c7fa1f15461f00b33be4c09cce62a58d0d486a831cc"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/create-section.md",
+      "sha256": "e6c3a3f9d93d859c1b100c4fc5fbb582a0ec1db28ab60d3a873e4f06fa827cb8"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/create-shape-with-text.md",
+      "sha256": "76a1fc691477e1ae6cfaaa9662d15ffab10e09fa535faf2ce78fa9e0500c1a66"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/create-sticky.md",
+      "sha256": "37681972fa34d53b8e3004e022aacce0b2944466ee6029c4ab29063c42719658"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/create-table.md",
+      "sha256": "cb0d7da3f9a1fb3da5cf7d2152d9d297cf6f2ae1951db4254c54835f76610932"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/create-text.md",
+      "sha256": "943fd158aaf5ca81d763a01e0523e907204476969cedb0f38b9f71ed5445ef2c"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/edit-text.md",
+      "sha256": "083a3cb3bbe670426e7ba631d835bccfcbfd2348dfa9c3674808b92b1903d124"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/figjam-colors.md",
+      "sha256": "931b4ebfbf31898b9dbdc64f801f4c35fdd85d2a42105388dafdb7816d5fb267"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/plan-board-content.md",
+      "sha256": "7edf93418e4f08aa23f29e5393a489746ebb584309ba6d42a6412227f44f8a5e"
+    },
+    {
+      "path": "skills/figma-use-figjam/references/position-figjam-nodes.md",
+      "sha256": "f65c212c3fc628b800d093d4ee9407d7be181b77236a992f0703c41725c96d8f"
+    },
+    {
+      "path": "skills/figma-use-figjam/SKILL.md",
+      "sha256": "78d705531f8ba9cc17aaa9c16877701d15484a98bfc8ea422682cdddf61b3ebf"
+    },
+    {
+      "path": "skills/figma-use-motion/references/motion-easing.md",
+      "sha256": "49ffcb79bb71fd31f74ca3187a7d907afba0ef6f1ba71c2d8a60f5bc6def429e"
+    },
+    {
+      "path": "skills/figma-use-motion/references/motion-patterns.md",
+      "sha256": "9e00df6a72e148b13fee8769a14426822f0d8d4c90ad511a7037a8b73adf66ae"
+    },
+    {
+      "path": "skills/figma-use-motion/SKILL.md",
+      "sha256": "73f9c883b04ecdb52d2ce573a81b7973624c85e9f61223b6f4ea811dad3161d2"
+    },
+    {
+      "path": "skills/figma-use-slides/references/slide-content.md",
+      "sha256": "766887283013584aff26b557549c90b01bce5fa2d1743be4710b6da0065addf9"
+    },
+    {
+      "path": "skills/figma-use-slides/references/slide-design.md",
+      "sha256": "ffac3d99fae017aa5a2791c79aab3e2a774f636551da47bae88f5eab655b76c5"
+    },
+    {
+      "path": "skills/figma-use-slides/references/slide-gotchas.md",
+      "sha256": "c85076df64383ad56735e5bbb5ab217b04eadb45588c155e4221229e98bdde47"
+    },
+    {
+      "path": "skills/figma-use-slides/references/slide-grid.md",
+      "sha256": "9c8cc765745e76188914f972c2b85a3c60774842499cb44645144ddcc7137ad3"
+    },
+    {
+      "path": "skills/figma-use-slides/references/slide-lifecycle.md",
+      "sha256": "3804ad7397c836ceceedea83e743e3509760eea32b02e08795b11e96122328fb"
+    },
+    {
+      "path": "skills/figma-use-slides/references/slide-properties.md",
+      "sha256": "aad36fa890b725ad0228a5fc9d4321406dd9a5384e7ab8b12fb718e6eaec63d1"
+    },
+    {
+      "path": "skills/figma-use-slides/SKILL.md",
+      "sha256": "a318c8b57b84b7f5ecdf3f747c0ee184338093bee270077498fa2281688cfab1"
+    },
+    {
+      "path": "ui/figma-workbench.html",
+      "sha256": "f57ef907880e0888335bc0a20f8eebeb906e2c6247bbdcd3b1f70d6b13dacfa2"
+    }
+  ]
+}

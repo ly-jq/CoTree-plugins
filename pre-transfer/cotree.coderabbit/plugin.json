@@ -1,0 +1,45 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.coderabbit",
+  "name": "CodeRabbit",
+  "version": "0.2.0",
+  "description": "通过独立 CodeRabbit CLI 审查指定代码变更，识别未完成结果并核实、修复实际问题。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo.png",
+    "darkIcon": "resources/source-01/content/assets/logo-dark.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.coderabbit.connect",
+      "description": "检查 CodeRabbit CLI 环境并配置独立账户接入。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.coderabbit.review",
+      "description": "使用 CodeRabbit 审查明确的 Git 差异并解释结构化结果。",
+      "path": "skills/review/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.coderabbit.fix",
+      "description": "核对并修复已授权范围内的 CodeRabbit 问题。",
+      "path": "skills/fix/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "50236ab911ca607400b8fd6f4d50dd0aaa203aa2de05bc5d50f12a6243accb88"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.claude-code-setup",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "claude-code-setup",
+    "repository": "claude-plugins-official",
+    "path": "plugins/claude-code-setup",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "7d86741fc5b1e30e1fedb2fd08c620c89733d7d9e0d0776c04eb63c57beba2cd",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "内容仍面向外部 Claude 项目；不要将 .claude 配置当作 Elyra 配置。",
+    "skills/claude-automation-recommender/SKILL.md 的上游工具 / 环境声明作为迁移记录保留；Elyra Skill 不授予执行权限，实际工具与环境由宿主检查。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/claude-automation-recommender/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/claude-automation-recommender/SKILL.md",
+      "sourceMetadata": {
+        "name": "claude-automation-recommender",
+        "description": "Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills, plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their Claude Code setup, mentions improving Claude Code workflows, asks how to first set up Claude Code for a project, or wants to know what Claude Code features they should use.",
+        "tools": "Read, Glob, Grep, Bash"
+      }
+    }
+  ],
+  "copiedFiles": 9,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "acb399dcc8054f9caf3fc2cc707bf3d0cdac8144240bb7c1baf3f97351d3beac"
+    },
+    {
+      "path": "automation-recommender-example.png",
+      "sha256": "fc81926b540b89be2d10eea6d9d5758fa3ae4d747ab4cd3e34c0238ecc190431"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e0b4ba718543116c76b2c116e64d88e80f18ad8ff45da7d147f91a31aaaba354"
+    },
+    {
+      "path": "skills/claude-automation-recommender/references/hooks-patterns.md",
+      "sha256": "6221f7f6d10b99ded96f0bfb06fdf4a52390c12c6686ceff186d2b77a03308ce"
+    },
+    {
+      "path": "skills/claude-automation-recommender/references/mcp-servers.md",
+      "sha256": "02708e0abef64a3f118c8e64744f5c9dbba48c7c526f316e7896d6e837bb5b92"
+    },
+    {
+      "path": "skills/claude-automation-recommender/references/plugins-reference.md",
+      "sha256": "a5058f4f4550b9ca6bce02182f63164502454319d38442d4c624ba4f8d298448"
+    },
+    {
+      "path": "skills/claude-automation-recommender/references/skills-reference.md",
+      "sha256": "45c3d96339966e75d2617068e51a8a8df8dadc6e3dbef8e43c3fca23b7614291"
+    },
+    {
+      "path": "skills/claude-automation-recommender/references/subagent-templates.md",
+      "sha256": "6367e703c0649a173d9c0d769d3da9f8bfa8f68b81fa18c1538f2862a0fdffae"
+    },
+    {
+      "path": "skills/claude-automation-recommender/SKILL.md",
+      "sha256": "f8d4ac5f3460495fca3f81a4284dd9b81f692c5774289d6aaf8e1a200a8f39c2"
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.build-macos-apps",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "build-macos-apps",
+    "repository": "plugins",
+    "path": "plugins/build-macos-apps",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "07a37e1678252aa4683c3d34aa272947e0cfde23c7505ce1ec4dd0e94688b0c6",
+    "upstreamVersion": "0.1.4"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "需 macOS / Xcode 工具链。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/appkit-interop/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/appkit-interop/SKILL.md",
+      "sourceMetadata": {
+        "name": "appkit-interop",
+        "description": "Bridge macOS SwiftUI into AppKit narrowly. Use when implementing representables, reaching NSWindow or panels, handling menus, or using the responder chain."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/build-run-debug/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/build-run-debug/SKILL.md",
+      "sourceMetadata": {
+        "name": "build-run-debug",
+        "description": "Build, run, and debug macOS apps with shell-first Xcode and Swift workflows. Use when launching apps or diagnosing build, startup, or runtime failures."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/liquid-glass/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/liquid-glass/SKILL.md",
+      "sourceMetadata": {
+        "name": "liquid-glass",
+        "description": "Implement and review macOS SwiftUI Liquid Glass UI. Use when adopting system glass, removing conflicting custom chrome, or building glass surfaces."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/packaging-notarization/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/packaging-notarization/SKILL.md",
+      "sourceMetadata": {
+        "name": "packaging-notarization",
+        "description": "Prepare macOS packaging and notarization workflows. Use when archiving apps, validating bundles, or explaining distribution-only failures."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/signing-entitlements/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/signing-entitlements/SKILL.md",
+      "sourceMetadata": {
+        "name": "signing-entitlements",
+        "description": "Inspect macOS signing, entitlements, and Gatekeeper issues. Use when diagnosing code signing, sandbox, hardened runtime, or trust failures."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/swiftpm-macos/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/swiftpm-macos/SKILL.md",
+      "sourceMetadata": {
+        "name": "swiftpm-macos",
+        "description": "Build, run, and test SwiftPM macOS packages and executables. Use when the repo is package-first or has no Xcode project."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/swiftui-patterns/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/swiftui-patterns/SKILL.md",
+      "sourceMetadata": {
+        "name": "swiftui-patterns",
+        "description": "Build macOS SwiftUI scenes and components with desktop patterns. Use when shaping windows, commands, toolbars, settings, split views, or inspectors."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/telemetry/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/telemetry/SKILL.md",
+      "sourceMetadata": {
+        "name": "telemetry",
+        "description": "Add and verify lightweight macOS runtime telemetry. Use when wiring Logger events or inspecting logs for windows, sidebars, menus, and actions."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/test-triage/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/test-triage/SKILL.md",
+      "sourceMetadata": {
+        "name": "test-triage",
+        "description": "Triage macOS tests across Xcode and SwiftPM. Use when narrowing failures, explaining assertions or crashes, or separating setup from regressions."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/view-refactor/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/view-refactor/SKILL.md",
+      "sourceMetadata": {
+        "name": "view-refactor",
+        "description": "Refactor macOS SwiftUI views and scenes into stable structure. Use when splitting large views, tightening scene state, or narrowing AppKit escapes."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/window-management/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/window-management/SKILL.md",
+      "sourceMetadata": {
+        "name": "window-management",
+        "description": "Customize macOS SwiftUI windows and scene behavior. Use when tuning window chrome, drag regions, placement, restoration, launch behavior, or borderless windows."
+      }
+    },
+    {
+      "kind": "command",
+      "source": "commands/build-and-run-macos-app.md",
+      "state": "converted",
+      "target": "content/commands/build-and-run-macos-app.md",
+      "sourceMetadata": {}
+    },
+    {
+      "kind": "command",
+      "source": "commands/fix-codesign-error.md",
+      "state": "converted",
+      "target": "content/commands/fix-codesign-error.md",
+      "sourceMetadata": {}
+    },
+    {
+      "kind": "command",
+      "source": "commands/test-macos-app.md",
+      "state": "converted",
+      "target": "content/commands/test-macos-app.md",
+      "sourceMetadata": {}
+    }
+  ],
+  "copiedFiles": 41,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "7c87e21446ef57840e4ecf4452432f946385b40642539ceff4ed650ec92dc32f"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "4d0c663f4e582025aeff6df27a63ecfc9e019e33334eb6ac833911d2e5a43902"
+    },
+    {
+      "path": "assets/app-icon.png",
+      "sha256": "d5389b5252eb373894508c6a8b1f65d8a7837b2672c3955276ee8cdd75780e4d"
+    },
+    {
+      "path": "assets/build-macos-apps-small.svg",
+      "sha256": "51c1a43fe53ccdc7b0927422bc4c6237e3ec5c1080c5af19304e65dfc872f615"
+    },
+    {
+      "path": "commands/build-and-run-macos-app.md",
+      "sha256": "d033c67a366858b973c6a3bce6ec1b5101ed61d8cb9767351e03ed23f27d6927"
+    },
+    {
+      "path": "commands/fix-codesign-error.md",
+      "sha256": "f5bf5b13f5e0cf1323ffd0f31b6f89da04b32ebfef5657ab592cb637b85f9ca1"
+    },
+    {
+      "path": "commands/test-macos-app.md",
+      "sha256": "0fd1119a9f43b226d7a375331b1840635e55a06441be06beb879d5d5a863e2c7"
+    },
+    {
+      "path": "README.md",
+      "sha256": "5308d3e56b5d817c928a9f32cd46e01245e839964770fc1d855094894221a870"
+    },
+    {
+      "path": "skills/appkit-interop/agents/openai.yaml",
+      "sha256": "6d41dc60a93ed7e6e119194e255e3aef7404a84b32b338ca4d01dfe8828ce5b4"
+    },
+    {
+      "path": "skills/appkit-interop/references/drag-drop-pasteboard.md",
+      "sha256": "aaa35a1b7d12de9f0fd147dabdc11aa1dbe0bca83f60ff2e3fa9a1eb7e351ac1"
+    },
+    {
+      "path": "skills/appkit-interop/references/representables.md",
+      "sha256": "0c3aeee84928c32dcb0f14a29e5dab6bcd2869a36f9931952dbfc149820fa52d"
+    },
+    {
+      "path": "skills/appkit-interop/references/responder-menus.md",
+      "sha256": "37cb03f9cb32359f159baeb90a806ee5e058c14d68b293b08ec993319d11a71e"
+    },
+    {
+      "path": "skills/appkit-interop/references/window-panels.md",
+      "sha256": "fb8bcbd8892c43a6ff92d71bfac6dd09a8b679a057bc71cade1e3869c4981f6e"
+    },
+    {
+      "path": "skills/appkit-interop/SKILL.md",
+      "sha256": "9793d062b2e25ee184c8d92637c8519d2598daa193c34e0984d418de20f5cc27"
+    },
+    {
+      "path": "skills/build-run-debug/agents/openai.yaml",
+      "sha256": "d5fb7e8c35a7d7cf86fd2fce9552193933c5137d244c3e7de6facdde12987c34"
+    },
+    {
+      "path": "skills/build-run-debug/references/run-button-bootstrap.md",
+      "sha256": "63b6733d4acb25b4761a3f69c7731bb69d953c74f0396eeeb7d75a22dd8104d2"
+    },
+    {
+      "path": "skills/build-run-debug/SKILL.md",
+      "sha256": "075dc88d5c9722c00a857d341138ca1fbb22e70923e683c825df4a13cbf4f41a"
+    },
+    {
+      "path": "skills/liquid-glass/agents/openai.yaml",
+      "sha256": "a877d6c9f01b3116d5cc802fc9a8e423ff3c01b06458a91e5a23ccfc605ef3b2"
+    },
+    {
+      "path": "skills/liquid-glass/SKILL.md",
+      "sha256": "eb19fdb94ce30af1d9a1ca9036c836ed5116d3a1590100fe6b05b55e596abcac"
+    },
+    {
+      "path": "skills/packaging-notarization/agents/openai.yaml",
+      "sha256": "93a45faaf5232a1770840263129b6a8be65532508cbd64004aeb8e67fd8580c0"
+    },
+    {
+      "path": "skills/packaging-notarization/SKILL.md",
+      "sha256": "7deefd23dfa64328397e25a4d7be03945454a4d6736737415b49b2f565cb2b03"
+    },
+    {
+      "path": "skills/signing-entitlements/agents/openai.yaml",
+      "sha256": "3a494908e95df7ee266675673293403785378fb0c7d794064cb0caa450032e99"
+    },
+    {
+      "path": "skills/signing-entitlements/SKILL.md",
+      "sha256": "e147e41ad12c6b1f199e5d299d2151fe69a3602f49c234e7ae79331b9dc60336"
+    },
+    {
+      "path": "skills/swiftpm-macos/agents/openai.yaml",
+      "sha256": "9f818b4d57609f85d1c0f84efc1b8de46cc403b93dc5c3ccdfa3faa1268f12cb"
+    },
+    {
+      "path": "skills/swiftpm-macos/SKILL.md",
+      "sha256": "2909dc3fb6087e1c122a95e6d930ed1683719bb6a9f9f07466d16ece06ba0430"
+    },
+    {
+      "path": "skills/swiftui-patterns/agents/openai.yaml",
+      "sha256": "164b8b0021ac8aede94ffe403fb0ea77ca39390a2399aba487d1ff44280846a7"
+    },
+    {
+      "path": "skills/swiftui-patterns/references/commands-menus.md",
+      "sha256": "3f6c0fb1a5cc038a024c4088eb14377cb9d3ff13bdd694b5659b73595deb99bb"
+    },
+    {
+      "path": "skills/swiftui-patterns/references/components-index.md",
+      "sha256": "e57b2b73ff2c82333141675a1b711d958d69d492c143d3a155ee2f848409d4a4"
+    },
+    {
+      "path": "skills/swiftui-patterns/references/menu-bar-extra.md",
+      "sha256": "b86620eb26448f20515998b9d49b1aea3d0f7dd646f7018f8c42ae99d72ba8d8"
+    },
+    {
+      "path": "skills/swiftui-patterns/references/settings.md",
+      "sha256": "88142b46efb5dc0230ce22a37acdd6811cdbd3736c4c675d32cd01e8b910505b"
+    },
+    {
+      "path": "skills/swiftui-patterns/references/split-inspectors.md",
+      "sha256": "f5cf2736387022e10425d2e0e463977cb85539da4212e76048b0b40c94aa4eb9"
+    },
+    {
+      "path": "skills/swiftui-patterns/references/windowing.md",
+      "sha256": "88511167d371f6897dda82da4a2c80af9b9623690d78e83d5c58553e10b1815f"
+    },
+    {
+      "path": "skills/swiftui-patterns/SKILL.md",
+      "sha256": "a9c757d7b8b8ebe19d4772aaecf2142a98726f05bc07b5079d533a6ff0a77e90"
+    },
+    {
+      "path": "skills/telemetry/agents/openai.yaml",
+      "sha256": "2ada97429def032cd302978546d79210373478f4326cb36de6e94178f55f4c22"
+    },
+    {
+      "path": "skills/telemetry/SKILL.md",
+      "sha256": "c457cd7ca3bf82edda4d13b82638f6c6527ee033328b471fa9fc7fb20f9963df"
+    },
+    {
+      "path": "skills/test-triage/agents/openai.yaml",
+      "sha256": "05f4d8cc60595e4f01a590a58475ce50441bafc577a2c14d5e9d202155334ba3"
+    },
+    {
+      "path": "skills/test-triage/SKILL.md",
+      "sha256": "4ebfb570de6cd61abe9fed9440dfdfe8ae003c95cbcf2741e5e515799fbc0b6b"
+    },
+    {
+      "path": "skills/view-refactor/agents/openai.yaml",
+      "sha256": "90ac18c7eec93070201a80c75ad930a9f2e02a0942164593f31ec7d325afbd2f"
+    },
+    {
+      "path": "skills/view-refactor/SKILL.md",
+      "sha256": "121db7d9dbf1da93bedaa00e41e0ddccc1415016bc24e37481feb8aa9e42aad6"
+    },
+    {
+      "path": "skills/window-management/agents/openai.yaml",
+      "sha256": "015c8965b3e57e26cb7eff2200c278d2fb72e11e0a2990d74a7236d7b9a099a7"
+    },
+    {
+      "path": "skills/window-management/references/api-snippets.md",
+      "sha256": "1a82eb1f6f64ad0c3e5dd737ac4be534a78adfa0de739f3593baab1d814c2601"
+    },
+    {
+      "path": "skills/window-management/SKILL.md",
+      "sha256": "95cb8fb0d49e7967b8d9e5fa7029f7ee277749e3c63c7605cd17ffa7e627a215"
+    }
+  ]
+}

@@ -1,0 +1,2513 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.public-equity-investing",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "public-equity-investing",
+    "repository": "plugins",
+    "path": "plugins/public-equity-investing",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "d57d876ef317bdb03418d7f2408e880d699fbb8e220e49214cba4c4943aed246",
+    "upstreamVersion": "0.1.31"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "分析方法可用；行情、数据源和专有工具需配置并验证。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/catalyst-calendar/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/catalyst-calendar/SKILL.md",
+      "sourceMetadata": {
+        "name": "catalyst-calendar",
+        "description": "Use when building public-equity-investing catalyst calendars. Do not use for full event underwriting; use event-driven-analyzer."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/company-tearsheet/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/company-tearsheet/SKILL.md",
+      "sourceMetadata": {
+        "name": "company-tearsheet",
+        "description": "Use when creating source-backed public issuer tearsheets. Do not use for private diligence, fund diligence, vendors, or market maps."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/comps-valuation/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/comps-valuation/SKILL.md",
+      "sourceMetadata": {
+        "name": "comps-valuation",
+        "description": "Produce Public Equity Investing comparable-company valuation in report or workbook mode. Use for peer selection, multiple analysis, valuation read-throughs, implied prices, comps dashboards, Excel or Sheets comps, refreshable peer tables, model updates, and comps workbook QA. Do not use for DCF-only, credit-security, or generic market commentary requests."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/dcf-model-builder/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/dcf-model-builder/SKILL.md",
+      "sourceMetadata": {
+        "name": "dcf-model-builder",
+        "description": "Use when building public-equity DCF valuation workbooks. Default to the banker formula workbook path for new model builds; use deterministic exports only for controlled support calculations or explicit lightweight runs. Do not use for standalone workbook audits; use model-audit-tieout."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/deck-report-qc/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/deck-report-qc/SKILL.md",
+      "sourceMetadata": {
+        "name": "deck-report-qc",
+        "description": "Use when running first-pass QC on Public Equity Investing decks or reports. Do not use as external-circulation certification."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/earnings-deep-dive/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/earnings-deep-dive/SKILL.md",
+      "sourceMetadata": {
+        "name": "earnings-deep-dive",
+        "description": "Use when analyzing public-company earnings after results, guidance, transcript, or call commentary. Do not use for pre-print previews."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/earnings-preview/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/earnings-preview/SKILL.md",
+      "sourceMetadata": {
+        "name": "earnings-preview",
+        "description": "Use when preparing full pre-earnings preview reports with executive summary, expectation bar, guidance credibility, KPI dashboard, scenarios, and call questions. Do not use after results or for short summaries unless the user explicitly asks for a summary/short version."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/economic-impact-report/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/economic-impact-report/SKILL.md",
+      "sourceMetadata": {
+        "name": "economic-impact-report",
+        "description": "Use when translating a specific event, policy change, macro shock, or industry development into public-equity issuer, sector, earnings, valuation, positioning, and portfolio implications. Do not use for standalone macro strategy, rates, FX, credit, futures, or generic market commentary."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/equity-model-update/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/equity-model-update/SKILL.md",
+      "sourceMetadata": {
+        "name": "equity-model-update",
+        "description": "Safely update public-company Excel model copies from source-to-model maps; emits XLSX as the hero artifact and CSV/log/manifest as support. Do not use for pure earnings notes or broad workbook audits."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/event-driven-analyzer/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/event-driven-analyzer/SKILL.md",
+      "sourceMetadata": {
+        "name": "event-driven-analyzer",
+        "description": "Use when analyzing dated public-equity event paths, probabilities, payoffs, and expected returns. Do not use for generic catalyst lists, risk sizing, hedges, capital structure, covenants, or credit recovery."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/financials-normalizer/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/financials-normalizer/SKILL.md",
+      "sourceMetadata": {
+        "name": "financials-normalizer",
+        "description": "Use when normalizing public-company financials from source materials. Do not use for private data rooms or non-financial cleanup."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/idea-generation/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/idea-generation/SKILL.md",
+      "sourceMetadata": {
+        "name": "idea-generation",
+        "description": "Use when triaging public-equity idea candidates. Do not use for final trade recommendations, pitches, memos, or models."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/initiating-coverage/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/initiating-coverage/SKILL.md",
+      "sourceMetadata": {
+        "name": "initiating-coverage",
+        "description": "Use when building public-equity-investing initiating coverage reports. Do not use for trade pitches, memos, earnings notes, models, or tearsheets."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/long-short-pitch/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/long-short-pitch/SKILL.md",
+      "sourceMetadata": {
+        "name": "long-short-pitch",
+        "description": "Use when building PM-facing Public Equity Investing trade pitches, including sparse-context or partial-section requests. Do not use for formal memos; use memo-builder."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/meeting-prep/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/meeting-prep/SKILL.md",
+      "sourceMetadata": {
+        "name": "meeting-prep",
+        "description": "Use when creating Public Equity Investing meeting prep briefs. Do not use for private diligence, IB, FP&A, legal, or scheduling-only tasks."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/memo-builder/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/memo-builder/SKILL.md",
+      "sourceMetadata": {
+        "name": "memo-builder",
+        "description": "Use when drafting or reviewing formal public-equity investment memos. Do not use for live trade construction or credit-first memos; use long-short-pitch or Credit Markets as appropriate."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/model-audit-tieout/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/model-audit-tieout/SKILL.md",
+      "sourceMetadata": {
+        "name": "model-audit-tieout",
+        "description": "Use when auditing existing Public Equity Investing models or spreadsheets. Do not use to build a new model from scratch."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/portfolio-risk-management/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/portfolio-risk-management/SKILL.md",
+      "sourceMetadata": {
+        "name": "portfolio-risk-management",
+        "description": "Use when sizing Public Equity Investing positions, finding equity hedges, or building an integrated position-and-hedge risk plan from a listed-equity thesis. Do not use for thesis construction, standalone event underwriting, trade execution, personal investment advice, or credit-instrument risk."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/public-equity-investing/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/public-equity-investing/SKILL.md",
+      "sourceMetadata": {
+        "name": "public-equity-investing",
+        "description": "Route Public Equity Investing workflows for listed-company and public-security research, earnings analysis, valuation, model updates, long/short pitches, catalysts, thesis tracking, ETF/index and constituent diligence, position sizing, hedging, dashboards, and investment memos. Use when the user is evaluating a public company, ticker, sector, portfolio position, event, earnings setup, or investment thesis through an investor lens, including what is priced in, what is mispriced, what proves or kills the thesis, and what to watch next. Do not use for private-company diligence, credit-first analysis, personal financial advice, generic company summaries, or generic document drafting with no public-equity investment context."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/scenario-sensitivity-generator/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/scenario-sensitivity-generator/SKILL.md",
+      "sourceMetadata": {
+        "name": "scenario-sensitivity-generator",
+        "description": "Use when turning a public-equity base case, model, thesis, event, or catalyst into scenario skew, sensitivity, breakpoint, and PM action-threshold analysis. Do not use for first-pass model builds, credit-security valuation, or generic planning."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/thesis-tracker/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/thesis-tracker/SKILL.md",
+      "sourceMetadata": {
+        "name": "thesis-tracker",
+        "description": "Use when building or updating Public Equity Investing thesis trackers. Do not use for generic news summaries, trade pitches, or first-pass memos."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/three-statement-model-builder/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/three-statement-model-builder/SKILL.md",
+      "sourceMetadata": {
+        "name": "three-statement-model-builder",
+        "description": "Use when building public-equity three-statement operating model workbooks. Default to the banker formula workbook path for new model builds; use deterministic exports only for controlled support calculations or explicit lightweight runs. Do not use for standalone workbook audits."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/user-context/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/user-context/SKILL.md",
+      "sourceMetadata": {
+        "name": "user-context",
+        "description": "Initialize, inspect, save, update, forget, export, or explicitly reset the Public Equity Investing plugin's local user context, source setup, or optional automation setup. Use only when the user explicitly asks to manage Public Equity Investing saved preferences, source pointers, context storage, or recurring automation."
+      }
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 561,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "23d6bb39a75a64f824be44013cf9741d257fc3604d7c4f27c5291dae89bb560c"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "7a1f64846e5758f2041aec72ccc14ff540aaab95f7116fa6cea6ccede1da5f05"
+    },
+    {
+      "path": "assets/composerIcon.svg",
+      "sha256": "96bd6ca081b136385fbccf528ecea56ce77aaf9eab3da204e5b1c1692302ac1e"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "dc1a228daed9bbcd5ce9266f79353f2ff40558e5cda9af41407bd812d29f9014"
+    },
+    {
+      "path": "README.md",
+      "sha256": "47b09532592d1a5548d717f20be124d89d7367bac5d44482ee08fe80640f2790"
+    },
+    {
+      "path": "schemas/plugin_routing_map.schema.json",
+      "sha256": "b44707d2b678e0d4ae0d7cdf3535e63f58b7cb6fabd43843082b48f1e3ba6a1d"
+    },
+    {
+      "path": "shared/__init__.py",
+      "sha256": "f5078400c53e563602c8ac4f766437dff6b8e3f30daaef91d80ddaae2d879aa4"
+    },
+    {
+      "path": "shared/artifact_packager.py",
+      "sha256": "3bf60415f8ea65c8f690def2fee9d5413e9c57339234d816bbb2fc3e00db0dbd"
+    },
+    {
+      "path": "shared/artifacts.py",
+      "sha256": "8bebb668db24875639d881d2985e92e3943264dbd10b304e2dde0adc3fad17a1"
+    },
+    {
+      "path": "shared/credit-markets-handoff.md",
+      "sha256": "1a73677181bdc6b5892a46e21c5c6a610fcddc121e7e4ae159a913675a1b8c65"
+    },
+    {
+      "path": "shared/dashboard/__init__.py",
+      "sha256": "db5cb1f3914ce24b13170c50b3ba2d8ba98d972efccffd3e36a3196ac2c33939"
+    },
+    {
+      "path": "shared/dashboard/assets/dashboard.css",
+      "sha256": "9704dd76b5857e860745f72407711bac4dcb899589f962fef93499ae0182f4b1"
+    },
+    {
+      "path": "shared/dashboard/assets/dashboard.js",
+      "sha256": "78fa51e9644498c7f40a4d1e8b28ea337141f4284a2bc97248a2f3cb0bb95883"
+    },
+    {
+      "path": "shared/dashboard/module_registry.py",
+      "sha256": "64e5cfc342f1e0959393781337bfb5a12f2cc477a4b5b394dda2789bb1c17bf6"
+    },
+    {
+      "path": "shared/dashboard/qa.py",
+      "sha256": "92b0114a58550780dbc6a4ec5de29a9666c5c314896e3c32fbcbc3055b710b53"
+    },
+    {
+      "path": "shared/dashboard/renderer.py",
+      "sha256": "ef81c99ee5c302009ab821c6a8da7f27c361f9d652ba6c05a4ba7f7fff377684"
+    },
+    {
+      "path": "shared/dashboard/schema/dashboard_payload.schema.json",
+      "sha256": "33a892adcd63bb9ea94bdef578ff10316fd3a2e3af81d0055c6674ffe3a0aa4b"
+    },
+    {
+      "path": "shared/dashboard/templates/base.html",
+      "sha256": "5bf808b22971aa9269859b7648a6ab6aa6efeb612636c8cf7ef7e4eed9b0d330"
+    },
+    {
+      "path": "shared/deliverable-intake-policy.md",
+      "sha256": "03fd4d8d549a4fadc9e2329689ce627113777993b6e32460222d98861aa2c376"
+    },
+    {
+      "path": "shared/equity-research-support-standard.md",
+      "sha256": "3f8a8e3623e6b15e4a23fe5fa7117ed670fa29b74ed625fbfaabdace11fe2446"
+    },
+    {
+      "path": "shared/equity-valuation-pm-standard.md",
+      "sha256": "932610fcb40c1e70c5e4dfd8a89c508564bddaf83061dedf52774eb0d0477c2f"
+    },
+    {
+      "path": "shared/final-deliverable-framework.md",
+      "sha256": "a47d537dc00472077b36b3c4436632d5f94dd32134530213764ab979b0ef3050"
+    },
+    {
+      "path": "shared/html-artifact-standard.md",
+      "sha256": "f8675a8adb73a67da0be7961da20617953d2e14f18666346090f739253dd190e"
+    },
+    {
+      "path": "shared/invocation-policy.md",
+      "sha256": "fb50e0e165ef2ef5cc1ad291ece74de423469480156a6500189b7f617cd007d9"
+    },
+    {
+      "path": "shared/model_citations.py",
+      "sha256": "a17ba6adea6ff03a5368b2e786f243e4dab5bf533fa3c3601dae19ac126d6c1f"
+    },
+    {
+      "path": "shared/office_artifacts.py",
+      "sha256": "42657f6256cae0a838f0fe4c75df9bccdc85e612f6f73bfcb7f3d6a09afe1a3f"
+    },
+    {
+      "path": "shared/plugin-routing-map.json",
+      "sha256": "9c25393b6e0d9f995d6c92d8dfd29ab067e8e5bd4fb80221aaf4aa1b6813b98d"
+    },
+    {
+      "path": "shared/plugin-routing-playbook.md",
+      "sha256": "37c559f909ecd26066e11c0ea243474c0deaa31f35b5e5cca041b4abc118abbd"
+    },
+    {
+      "path": "shared/pm-judgment-heuristics.md",
+      "sha256": "7c4d2b86305b142293eaf2958b50f5386d9d3dda84e0336e179b4cec9ea15458"
+    },
+    {
+      "path": "shared/support-layer-routing-contract.md",
+      "sha256": "f20868f08958ede55b9e4e1f598d9ed235441a8f52f59bebd79a870081b1d081"
+    },
+    {
+      "path": "shared/workbook_artifacts.py",
+      "sha256": "f5fa97f26ed2b9c61ba1511947515d0a7eda2a019c7580fc11fe0d67e9f0d916"
+    },
+    {
+      "path": "shared/workbook_inspection.py",
+      "sha256": "358e7b9c958cc34a4536c70e2d01ac029cb9eaaa82a1a61b2413f04224ceca50"
+    },
+    {
+      "path": "shared/workbook-artifact-standard.md",
+      "sha256": "a3419f58da21e56837afce476e8e33a269511b51aab9aed54ac0b023bd193b77"
+    },
+    {
+      "path": "shared/workflow-source-resolution.md",
+      "sha256": "d5084a6e4b9423c8058fe428193cfcc1c3d9a1811f22b3e498a55efcfa972dc4"
+    },
+    {
+      "path": "skills/catalyst-calendar/agents/openai.yaml",
+      "sha256": "a61206faf8f3011ba8f43f8d526f455b28e1d059ac9fab0e0f253d98caae4902"
+    },
+    {
+      "path": "skills/catalyst-calendar/references/catalyst-taxonomy-and-fields.md",
+      "sha256": "00abc5d5b01af1815c321a0b0fd4ce4f3022a0b5e047109cff0184020848b63a"
+    },
+    {
+      "path": "skills/catalyst-calendar/references/event-scoring-framework.md",
+      "sha256": "128db1eeb211ab6653956372b8d178d90c303c20aee9cea1185eafee24351ecf"
+    },
+    {
+      "path": "skills/catalyst-calendar/references/output-templates.md",
+      "sha256": "469d63d8bb0d8a3789dc96086714c23573a77e334b811e7daa59bd96c303955e"
+    },
+    {
+      "path": "skills/catalyst-calendar/references/pm-action-playbook.md",
+      "sha256": "ca18824605c6cb953960fd69752de7b8643c4e81ab02e3e74779a3780b791c37"
+    },
+    {
+      "path": "skills/catalyst-calendar/references/pm-review-checklist.md",
+      "sha256": "ac3500c41959fb50d64117786649efe439d60711129aa446c0cd97b1e9202569"
+    },
+    {
+      "path": "skills/catalyst-calendar/references/portfolio-pm-playbook.md",
+      "sha256": "7c10ecf73a69e3f4dbb8b27b8f860ac540b544fb9b5083026f29553ce899e9a6"
+    },
+    {
+      "path": "skills/catalyst-calendar/references/sector-and-asset-overlays.md",
+      "sha256": "f691399b6c306d860d376cb83b386cdaa34bbcb4d176204422a1710eca1b3864"
+    },
+    {
+      "path": "skills/catalyst-calendar/references/source-and-data-protocol.md",
+      "sha256": "dd46a844cf78ac652e7e75e8beced6665d5757f7878a2ca0603d6b7314a5e7c6"
+    },
+    {
+      "path": "skills/catalyst-calendar/scripts/create_catalyst_calendar_workbook.py",
+      "sha256": "eda60b3f9888613685058d6119d0bccf040b2eeffbbb921773572df6906a99d7"
+    },
+    {
+      "path": "skills/catalyst-calendar/scripts/workbook_writer.py",
+      "sha256": "bf625b4c8db3e17cdb6e561172580fe32566fea63ba448db4d56dbbb2850dc2c"
+    },
+    {
+      "path": "skills/catalyst-calendar/SKILL.md",
+      "sha256": "515e22752709138fa821b04ce610b2fbadd4b6f64a9b8aa9c6e12babfba17f16"
+    },
+    {
+      "path": "skills/company-tearsheet/agents/openai.yaml",
+      "sha256": "aa6b2830c1c2d935618e731987da28ef6b60b24b99f3ff3cc9c62518c5e6b218"
+    },
+    {
+      "path": "skills/company-tearsheet/assets/icon.svg",
+      "sha256": "1415b5c585946f594a34e6e357b0522af80467d5afab3f9b591c2aabb20e8acb"
+    },
+    {
+      "path": "skills/company-tearsheet/references/DASHBOARD_PACK.md",
+      "sha256": "151be2a7bb34199e0be11ffaf40bf420a36a7d6b6771e83eed8845ff9036b167"
+    },
+    {
+      "path": "skills/company-tearsheet/references/integration-guide.md",
+      "sha256": "9f31bf23218d60f1bec9d36bcc3d0940337db943ce7f3745096e3dc812f5d29c"
+    },
+    {
+      "path": "skills/company-tearsheet/references/metric-library.md",
+      "sha256": "73d8c574e312c2ff1f45a6a69fdacdb85fb286b6b50f718298a0fdbaae3624cf"
+    },
+    {
+      "path": "skills/company-tearsheet/references/profile-templates.md",
+      "sha256": "89d6ff0bc356f0f5691e45be1315c2cd9d9a50a2e75599d1b7651598096d85be"
+    },
+    {
+      "path": "skills/company-tearsheet/references/quality-checks.md",
+      "sha256": "f72ef289cabca4f100e3cd76fbb2488d6c575f11a30f97e9695e6278040f81e3"
+    },
+    {
+      "path": "skills/company-tearsheet/references/source-and-evidence.md",
+      "sha256": "6b4c44297c860a1fd622ddc53fec38bcd51e8e73049c105b06d6b2442c0666e5"
+    },
+    {
+      "path": "skills/company-tearsheet/scripts/build_source_checklist.py",
+      "sha256": "c89741b785d81459c8092f40686fb2b9738b511420c1207191b84fd56720a86a"
+    },
+    {
+      "path": "skills/company-tearsheet/scripts/build_tearsheet_markdown.py",
+      "sha256": "d54f22a5f79520c96314109f650deaa6c3a53267f6520969234a0c9bcbc43eef"
+    },
+    {
+      "path": "skills/company-tearsheet/scripts/validate_tearsheet_json.py",
+      "sha256": "5ac27a646018259a40541c6ddcc8b8647b584e2f402dbd00078e7754210eceaf"
+    },
+    {
+      "path": "skills/company-tearsheet/SKILL.md",
+      "sha256": "38d439b5dc59fa98611a6b25f91d123426b9ecdd05d052f5e35bf451fc9816b1"
+    },
+    {
+      "path": "skills/comps-valuation/agents/openai.yaml",
+      "sha256": "e360485f963ae8ec0546831ca4a8f529deb8bd8faeeb98e78f05bf7811f6f180"
+    },
+    {
+      "path": "skills/comps-valuation/references/DASHBOARD_PACK.md",
+      "sha256": "ad7c16f2d3384f09cfc272b62766742e589441a37ca4e037113c34e67daec53e"
+    },
+    {
+      "path": "skills/comps-valuation/references/module-rules.md",
+      "sha256": "3c88a03cdeea05020421d31a11d22f59f4173d2d8b378fa7852cafda6a7ea7b4"
+    },
+    {
+      "path": "skills/comps-valuation/references/output-templates.md",
+      "sha256": "7ceb8df3eca041ec504cad33c672e71b576c4e7528f27b1d59330b82eb197d0e"
+    },
+    {
+      "path": "skills/comps-valuation/references/p0-integrations.md",
+      "sha256": "629f195ef689864c0a6b7e593a6e12742e50e061c7de0babe99254d96532e1d7"
+    },
+    {
+      "path": "skills/comps-valuation/references/peer-selection.md",
+      "sha256": "35d093fc65a40cbf0b369ea405dd3aab4f4b7da206e7697c08ed17f7cb4cd116"
+    },
+    {
+      "path": "skills/comps-valuation/references/source-and-staleness-rules.md",
+      "sha256": "88f54be59607db254f4b1394b83d00a4f0670734eb7ac47a7c4083eae5a30681"
+    },
+    {
+      "path": "skills/comps-valuation/references/valuation-readthrough.md",
+      "sha256": "5985279f02ca97c2e5945edf9f9dfbc3f78c6c409243feb1b5c613df81ef8859"
+    },
+    {
+      "path": "skills/comps-valuation/references/workbook/comps-framework.md",
+      "sha256": "13dd4f95b5fafc5382471fde4ad2d200d97b316363b22d0105414602a1fe3a17"
+    },
+    {
+      "path": "skills/comps-valuation/references/workbook/dashboard-map.md",
+      "sha256": "6266bec8aa8dc828586233e177d1327ceec64cf0db11e302298057632ac33126"
+    },
+    {
+      "path": "skills/comps-valuation/references/workbook/data-sourcing-and-connectors.md",
+      "sha256": "80de808bf50c4770e7d7927cc8035694aa673e814559c021a3c7f258ca27bc8d"
+    },
+    {
+      "path": "skills/comps-valuation/references/workbook/model-workbook-spec.md",
+      "sha256": "46dc21783b1f258eff7eccaf5bd20764f1ec41a11b08d9d0e7ff4143b08108ee"
+    },
+    {
+      "path": "skills/comps-valuation/references/workbook/qa-and-pressure-testing.md",
+      "sha256": "285b94ea7f6f8516b0a16e1d845ea87f2f20ebaee4de1aa0afaed128e4b0a664"
+    },
+    {
+      "path": "skills/comps-valuation/references/workbook/review-memo-template.md",
+      "sha256": "2877c5fc1f4b8d1a2bb7b3969b561df1c0bd2929559d3e57452bca219aef2be5"
+    },
+    {
+      "path": "skills/comps-valuation/references/workbook-mode.md",
+      "sha256": "403d10082608c4f5b19b535e26ce0975ecbdab2f5d9e3dad2d92b8e901e0e211"
+    },
+    {
+      "path": "skills/comps-valuation/scripts/audit_comps_workbook.py",
+      "sha256": "570299f0c50b0cdde652b1c9326d4b8e51bb8d1724b218f8f6fbb79e12a35572"
+    },
+    {
+      "path": "skills/comps-valuation/scripts/create_comps_template.py",
+      "sha256": "3e20bdb420224a99371ea26ccfd5b1e6adf8d088129120645fd9a268fab97088"
+    },
+    {
+      "path": "skills/comps-valuation/scripts/materialize_screening_comps.py",
+      "sha256": "95d210172645af98b975e48ccc3d450b8408f691ef41566071059fff4f8d7a0e"
+    },
+    {
+      "path": "skills/comps-valuation/scripts/requirements.txt",
+      "sha256": "e3ce01ea6800cb0717a56725d68447c1eec054da9f326fceab4cb43985bafeba"
+    },
+    {
+      "path": "skills/comps-valuation/SKILL.md",
+      "sha256": "72764f16523c0f46355a84d45abc5d3ba6d38536a19d1cbd4575f3f778145d11"
+    },
+    {
+      "path": "skills/dcf-model-builder/agents/openai.yaml",
+      "sha256": "c2b4f2b8571d28f61e9d367dd41f6e568037b0941e0089984d03faa7486d0775"
+    },
+    {
+      "path": "skills/dcf-model-builder/assets/plan_template.json",
+      "sha256": "6396bf5acf7f016c907333b79f638bb8c5e5e0efe50555a5e153779aea4a84a2"
+    },
+    {
+      "path": "skills/dcf-model-builder/assets/templates/banker_formula_workbook_template.xlsx",
+      "sha256": "b28160a8400094f2b1c7af0c472074e9649f0a55d455269c646b076a420f856a"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/banker-formula-workbook-contract.md",
+      "sha256": "fe52ea43dd5e5f4228fa7725b0e0b5528124e57cccc903bdd907e0fd09dd1457"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/cash-flow-methods.md",
+      "sha256": "f6d1759264307fbb6adcaea727f2fb7768a398b1391923230ef864f8d52d2670"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/dashboard-map.md",
+      "sha256": "134fd011a77b6b63e34310a29c69ae7df03101e2f645d11b5abf95a279cee59f"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/dcf-architecture.md",
+      "sha256": "0146245e1e28f41d7adef480ce8d62459dfddd4af0d479405e054f9050834876"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/industry-playbooks.md",
+      "sha256": "52c07663ec1f242499d2b24d872405ce7a22ce1a56f551fd6aeccc61e6986eb1"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/integrity-controls.md",
+      "sha256": "03700d3e90bb1d2d4c16791f229475afff34691cc3e1a8c675da436b424e7772"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/model-math.md",
+      "sha256": "e7f82d7e57d7a112e5c29acfd5044599c4a9d29dd116996703fb66ba8e25d41f"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/output-and-review.md",
+      "sha256": "4047e9f576fa19b9878537abd4d5dff430bf2d355f29ddf66f883db59b95cd6b"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/output-spec.md",
+      "sha256": "af334d8a32c0e2580da0ca66dac33ba0e4a7a02864c431a5a0965475ca527020"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/p0-integrations.md",
+      "sha256": "cd322a069b4af8901866ade7a0c7c7ab949caf6bf16915e0b326b2abb93c1b9b"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/plan-schema.md",
+      "sha256": "380c50dc82dd81f57ffc438aa41960394057724e46ba90d60dec6a7c4cf3a5d0"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/qa-checks.md",
+      "sha256": "959692cf5a3bd8da952cf999709679b19e3d7255b8dac8764a7f75ff32e4f264"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/reference-router.md",
+      "sha256": "a84ec6ed1746b6b0802cc4ea8112f7d2ae13e3d633e7cd901b9bea517fbf0569"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/sensitivity-and-scenarios.md",
+      "sha256": "a7f4a02aa04713f39d679c70910d4afc1435c09e344af45100fc64bacb356de2"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/valuation-judgment.md",
+      "sha256": "51f19181c39766d74f334460d5c171d63514ea364a5658b7387cc89317274acb"
+    },
+    {
+      "path": "skills/dcf-model-builder/references/wacc-terminal-value.md",
+      "sha256": "dc8827368c010b7000f79c422ccb42c13e9ccea5705df285e2c43bbaa2f04a45"
+    },
+    {
+      "path": "skills/dcf-model-builder/scripts/build_banker_formula_workbook_runtime",
+      "sha256": "30b4810980ded12d4f01e588a59fe3dbc081a2898e18ce1dfbcbbd96ae4574ea"
+    },
+    {
+      "path": "skills/dcf-model-builder/scripts/build_banker_formula_workbook.py",
+      "sha256": "3633d21d3ddd2aae6029fc5328e4d95c71f608a28744b17cd263c7d4d5fd17b1"
+    },
+    {
+      "path": "skills/dcf-model-builder/scripts/plan_validation.py",
+      "sha256": "66cc5260d11fbd2e8b4ff39b21fc76b8d35cef8f095d3efb3bfb7a48f9df4856"
+    },
+    {
+      "path": "skills/dcf-model-builder/scripts/run_pipeline.py",
+      "sha256": "f658e53eaee8a3567db0213b1daf58bda52999e241388646ea2941cbf6e06f98"
+    },
+    {
+      "path": "skills/dcf-model-builder/scripts/runtime_loader.py",
+      "sha256": "d940563eac4aeadde84e3bf9463b6f334a5bb8691e6d4e40fe568789a67271c4"
+    },
+    {
+      "path": "skills/dcf-model-builder/scripts/skill_core.py",
+      "sha256": "e65bd1d418a5aa44791f93eb59993675c0e7e92492e91a64d55a697f52b1b6d2"
+    },
+    {
+      "path": "skills/dcf-model-builder/scripts/validate_plan.py",
+      "sha256": "9234657f94b721095472dff14a290ea5d06805ea7007df850189023e2ed7ff08"
+    },
+    {
+      "path": "skills/dcf-model-builder/scripts/xlsx_writer.py",
+      "sha256": "1f0483b881341de1043920127a5d28631113ac3bc35e5d0168408b6bc1d3fb39"
+    },
+    {
+      "path": "skills/dcf-model-builder/SKILL.md",
+      "sha256": "b1b6611792f1fcc6fc2f1eb97bd05da0762f62cf4c15ebf507c9b667c8e2bd14"
+    },
+    {
+      "path": "skills/deck-report-qc/agents/openai.yaml",
+      "sha256": "61a5b599a1c51bd2b55462a9eebc5569d96780aec859d15b115b881b09104aa1"
+    },
+    {
+      "path": "skills/deck-report-qc/references/DASHBOARD_PACK.md",
+      "sha256": "e76fd746dcd70de244ef5290547305422994a585761955f34794a1d855266883"
+    },
+    {
+      "path": "skills/deck-report-qc/references/dashboard-map.md",
+      "sha256": "0acf8fe9d66044e328dada8557fe41020c62a7785c3e29bd972584602ca7b1a5"
+    },
+    {
+      "path": "skills/deck-report-qc/references/extraction-and-tieout.md",
+      "sha256": "b5f21efe6a20469b1149f6d0010f12db45baf11a2ef9b03afbe49c42e4cad963"
+    },
+    {
+      "path": "skills/deck-report-qc/references/issue-taxonomy.md",
+      "sha256": "fac23ef67cae0fb7d481c9e55c334b680e7a55d2feca967c74528d6039ebed04"
+    },
+    {
+      "path": "skills/deck-report-qc/references/output-templates.md",
+      "sha256": "7540ba0de5b6ab1b4b984a730168241bf055e47f96e6a95f3443e68d39c4b1d5"
+    },
+    {
+      "path": "skills/deck-report-qc/references/p0-integrations.md",
+      "sha256": "d76853a297dcad40e621083d1d977a5d92ce95a06b7d1349d13d3e5736edac65"
+    },
+    {
+      "path": "skills/deck-report-qc/references/qc-playbook.md",
+      "sha256": "78786799c222f4dd39d99bc3b5c28fb4eb649c9e550fbe03c14d148909dc9433"
+    },
+    {
+      "path": "skills/deck-report-qc/scripts/inspect_deck_report.py",
+      "sha256": "8c3cb58d21f1505c8c570c7a578dbbb90f94308cba1e2d90683d8ea96e88d8b0"
+    },
+    {
+      "path": "skills/deck-report-qc/scripts/qc_analysis.py",
+      "sha256": "258c3d59e4f7534df1a9434741fd6b79b3f6dfb929b42a073363c4624dddef32"
+    },
+    {
+      "path": "skills/deck-report-qc/SKILL.md",
+      "sha256": "e4f7f4984583cde541b80bd7af95401aaf7069b8e1abc5b2bb51eeae52e21d92"
+    },
+    {
+      "path": "skills/earnings-deep-dive/agents/openai.yaml",
+      "sha256": "b68536558cd2950e0e92feb2f3f8941ba3bfcd2f83b7b541bc04586b5ec6d272"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/artifact_index.csv",
+      "sha256": "f0d790e6f6ebe9c07ebe02376ee02f623d6686d5bdf971ce60eb503255a35c86"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/changelog.csv",
+      "sha256": "91cc506696a6c1e4e41c591c6d55c0dc066ddafdcc7c1a2f3b0b92dc0bf6417d"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/deep_dive.md",
+      "sha256": "0ea97e0dc18f191885aac994143e37c4b063a18d7abbc07191783733ecabd1ac"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/driver_registry.csv",
+      "sha256": "a55b87e20c5fd78fdc1449824c9011ab354c0a413b1099498451636672fc333f"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/driver_updates.csv",
+      "sha256": "a88aef1a37424efcf18b74243c5f16943742c18bf07ca0e91d14c9ed47e93885"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/executive_overview.md",
+      "sha256": "f087f1a9815cf50813159903f77fcd0bce7b6a487ac21e2b9e6353a4733c688c"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/normalized_estimates.csv",
+      "sha256": "8248f57e2d11ac9ce2ed6d1e6c9cc671177be42da8bcc4518df29a72d392fd42"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/normalized_guidance.csv",
+      "sha256": "ca998d6fa91caa8d7ff05acc2449bef18bf5cd8600f41eab98d71c0cd94001d2"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/normalized_metrics.csv",
+      "sha256": "f3fbb1c3ed73da78ccfea8fc30f274888777c313e34bf93af47f94dcf5c71c36"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/normalized_quotes.csv",
+      "sha256": "6cb77fe23357ee925c999bde8d2f13c24114a464114c8881a4f92785d09a8f16"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/output_registry.csv",
+      "sha256": "1122efdb786066a93781842b316a3e6da050592cde60f413a5464f1698937b5c"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/plan.template.json",
+      "sha256": "cbd30f09561fd9b40056649d580005b6bbd87c479751432042050ee341bf82ff"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/tear_sheet.md",
+      "sha256": "953ad3793fd897fad66211eef60c4a9a4b297163a71da73d54a387b723deae82"
+    },
+    {
+      "path": "skills/earnings-deep-dive/assets/templates/what_changed_diff.csv",
+      "sha256": "7a569467be9777559024d82e69291c57f1a4ca3487f21b24a931b5230e58bd16"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/CHAT_REPORT_CONTRACT.md",
+      "sha256": "22eb765f5d319b67f1b8bc4b6deccaaa9446c0b4aad15bdae24231db114f266a"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/DASHBOARD_PACK.md",
+      "sha256": "f7fc28212391500c7d21f4d735e3101ac498b1c95410a28db94714d2be940e61"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/EXAMPLES.md",
+      "sha256": "54a52f7b0ffe5a7db1f8655f9be20d98b6aaff938c11ecdf96e47f525dd1fc27"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/INDEX.md",
+      "sha256": "5e6febe0ff066f52222218005b12aaa9d21ee623e496e34da97f45417680f697"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/METRIC_CATALOG.md",
+      "sha256": "46a8d514e4438227280bd09f2d07d7aae46da0dfd1918c27a35a92d2faac7033"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/MODEL_DIFF_GUIDE.md",
+      "sha256": "3728bd88bd1d211d4ed0c196759e82b4f0fe5cde995152a4587d668597b4f8b7"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/OUTPUT_MODES.md",
+      "sha256": "efc8435fea0fe06e5711d4dd5257105cb7f1a505fa3fbf085a5b5ba3ab4371b7"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/PLAYBOOK.md",
+      "sha256": "f2787515600df7026b591a065fd1630ce760ed127bbdc84bf739fd44b3e14030"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/QUALITY_CHECKS.md",
+      "sha256": "727105582b5cb782a7ffbaa6b71cf0bab991dbb28362930a888d7ac927fc5f8b"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/REFERENCE_ROUTER.md",
+      "sha256": "5bc35cdefd29421ea89d24b6daed46b763a20727fdcafc1154af672c51fd62fc"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/SCHEMAS.md",
+      "sha256": "7cc712b1a4c6ea0964de0b39d3b6b81b6711a0af54b84919b1f81e4b351c5e06"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/SCRIPT_QUICKSTART.md",
+      "sha256": "69683d40037b8855f9ad0371ee37d162bb44b4ba8b7d2bfc515cf248b7bd88d6"
+    },
+    {
+      "path": "skills/earnings-deep-dive/references/SOURCE_TAGGING.md",
+      "sha256": "32aa5d8d0e52a4e35a669a4f2fa6228874ec47c4e758a8d8b55b7f0d39e419a4"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/__init__.py",
+      "sha256": "f83942c22b8ca93eecb1cf33fe33dbb74557f1ac87ae0260b73e1a279d70900e"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/apply_model_updates.py",
+      "sha256": "8cc73f17f52153b13269acb923f29b206e51c5b3ad437766aa13434fbd0c9640"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/model_diff.py",
+      "sha256": "ca0a0a52aa5c7dd74a44241a372c121b7d7f08def9def52cfa3ca7470c34906f"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/requirements.txt",
+      "sha256": "b918b4f2f2877da694da166a31d899d79672f7e72b3cc0a7bf23c9d6653005a5"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/run_plan.py",
+      "sha256": "7f63ab4c66934c76df50ede552c6758df71b6e17168bfab0a4ae025ee3dd7b65"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/utils/excel_utils.py",
+      "sha256": "1af486104b654f7a702fa7a8e5f751e8677fc82ae215088e46885a1953dba573"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/utils/io_utils.py",
+      "sha256": "52eb9fd235d3dadf066b4b411e89d21c1286fa0e8cf1d9ae141187cb191a80de"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/utils/math_utils.py",
+      "sha256": "5f7047e08ef9ae6bbf07df7f23fe5e654b4e18d48ae392a90cda215b689f15a0"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/utils/validation_utils.py",
+      "sha256": "dc8eb5113df8fba6e49d241ced0e336f7c441a1b29f7db264e39e801263258ed"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/validate_normalized_inputs.py",
+      "sha256": "d2bd67daadf5261260c8cf24c9a95965564a04b235cf375f350c31eb5674bbe2"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/validate_plan.py",
+      "sha256": "4b24d1e5fd0771a6a712002f7ea9e374bb8b2fba4e9b787f4599c923b7dffa88"
+    },
+    {
+      "path": "skills/earnings-deep-dive/scripts/verify_tearsheet.py",
+      "sha256": "6d5e9cc2e2d508540367d51c2b5e57942061bfe3282970097934e8eabef00cbc"
+    },
+    {
+      "path": "skills/earnings-deep-dive/SKILL.md",
+      "sha256": "dd0c51bd10fa65f92ce7b0d29b8bfd60e3da10c16fd3a51ed23be573bc864785"
+    },
+    {
+      "path": "skills/earnings-preview/agents/openai.yaml",
+      "sha256": "e6abbd52ce870064202ead5dedfe2e62de417f73777e81ac6df2d3efab934ba8"
+    },
+    {
+      "path": "skills/earnings-preview/assets/plan_schema.json",
+      "sha256": "ce6e976015085ca5b8d852b853626daba91fa8b45f086db5c18a53cd69cd75b3"
+    },
+    {
+      "path": "skills/earnings-preview/assets/sector_kpi_packs.yaml",
+      "sha256": "7a6d65c6a2cbe7beb8417d0728ea10ed816c725ec2fdd575717610d5a7aa666d"
+    },
+    {
+      "path": "skills/earnings-preview/assets/templates/driver_model_templates.yaml",
+      "sha256": "37162ade45c9f7aa9c3bde87ea2860e13650b6f6a0a1d68e099261811e3b9a65"
+    },
+    {
+      "path": "skills/earnings-preview/assets/templates/preview_note_template.md",
+      "sha256": "f6395a072d80b31cda04715016012ece3e8586946ca5843abe81b24ee1ff0fd1"
+    },
+    {
+      "path": "skills/earnings-preview/assets/templates/scenario_assumptions_template.csv",
+      "sha256": "f9f6ca53e6e0f27fbdc66a19b63e07581d332a32a69cf8c9dcdf7f1c5d916130"
+    },
+    {
+      "path": "skills/earnings-preview/LICENSE.txt",
+      "sha256": "3621b93682d3de1af8b21aac612c4cbc64833e673c6a3f11c2b34462383f760d"
+    },
+    {
+      "path": "skills/earnings-preview/references/CALL_QUESTION_BANK.md",
+      "sha256": "6773f1538189a9d6ceb0ff06d5fb8e13bc1514fe642b303c146805c5b7dff620"
+    },
+    {
+      "path": "skills/earnings-preview/references/DASHBOARD_PACK.md",
+      "sha256": "b0312528017838a37c361c21e005714009d9a1b4e1f24eaa4cc4001d364e47a1"
+    },
+    {
+      "path": "skills/earnings-preview/references/EXECUTION_PLAYBOOK.md",
+      "sha256": "25ea055e10c0cf153135a0f5bbdbe7a06a793b107e6c7a3f3a4f722c40ef67e3"
+    },
+    {
+      "path": "skills/earnings-preview/references/METRICS_LIBRARY.md",
+      "sha256": "d6bccff84c0efaa4c6c9f0d8633560e95d9135e8be50f78c9a4cebc75ec30d83"
+    },
+    {
+      "path": "skills/earnings-preview/references/OUTPUT_SPEC.md",
+      "sha256": "5b15e142465d631b34ddb39d0cda9ce5bbb6e3251e022920d056b35ddf3649f8"
+    },
+    {
+      "path": "skills/earnings-preview/references/QA_RULES.md",
+      "sha256": "1ac41ff75266aac575ec1e7d122e492090231aec4cf57d2808290a84566339fa"
+    },
+    {
+      "path": "skills/earnings-preview/references/quickstart.md",
+      "sha256": "46082e85614d84aeae7ba13ea5a219b0f68a034c06fee726706de387e4cfb5d8"
+    },
+    {
+      "path": "skills/earnings-preview/references/REFERENCE_ROUTER.md",
+      "sha256": "04230640a4efc1641307db815513cf10dbf628aa99946f80b8dbff7a0b8d3fac"
+    },
+    {
+      "path": "skills/earnings-preview/references/SCHEMAS.md",
+      "sha256": "e84916451241b1ab47d0ef0a88423129dc4cc0626ac31c660e7383ff3f42cb11"
+    },
+    {
+      "path": "skills/earnings-preview/references/SECTOR_KPI_PACKS.md",
+      "sha256": "e295927e352d77b0e1bd0ffc16c8fbe1445d70cd22fd0b12021a0829c672e46e"
+    },
+    {
+      "path": "skills/earnings-preview/requirements.txt",
+      "sha256": "75ffb40492d85c84b2820e86f4a166590e4357e738e0d9dda7297dc185d9535a"
+    },
+    {
+      "path": "skills/earnings-preview/scripts/lib/__init__.py",
+      "sha256": "b1c491fb1a711b32cb3507d9de94a05a612d9e585853885469a948a44c79a567"
+    },
+    {
+      "path": "skills/earnings-preview/scripts/lib/calc.py",
+      "sha256": "deb738ab0423ff4a71b20ee3c4b39b688831fd947ff11fb5913e9bc68d7250ee"
+    },
+    {
+      "path": "skills/earnings-preview/scripts/lib/changelog.py",
+      "sha256": "fc94f027d3b40b10ab64216a4a59f624b4847b860f578385b8348971f2ee65d7"
+    },
+    {
+      "path": "skills/earnings-preview/scripts/lib/io_utils.py",
+      "sha256": "f1491a850a18b77bc1c65408ec0ce7a6b4f320cb8ca4aead90ff1394a7ff96ff"
+    },
+    {
+      "path": "skills/earnings-preview/scripts/lib/kpi_packs.py",
+      "sha256": "b82d7dd4a4aa6433008217943d9e7cdeb5228a7ce87b0dff739368e8bcf6dbfd"
+    },
+    {
+      "path": "skills/earnings-preview/scripts/lib/qa.py",
+      "sha256": "72e697e4993fa58925582711f8031e35df8c0816dbb868f41cb70d46801751dc"
+    },
+    {
+      "path": "skills/earnings-preview/scripts/lib/render.py",
+      "sha256": "e306ed21d90de3b944988134e3203ddd471ec3d77df34d4e7c379d25a920c726"
+    },
+    {
+      "path": "skills/earnings-preview/scripts/make_plan.py",
+      "sha256": "7157d2507019377434d60f5fc19789e405576e551b1196aecfb502a0d2102cbd"
+    },
+    {
+      "path": "skills/earnings-preview/scripts/run_plan.py",
+      "sha256": "16310d27cf832cd7c1add763bc7c3769d83edb30aa9c1c685648fde2554e2755"
+    },
+    {
+      "path": "skills/earnings-preview/scripts/validate_plan.py",
+      "sha256": "d3c1d3bf40b3a31d2a703da9cd7c70d326691186cb30ea265295caf3a3d19a1b"
+    },
+    {
+      "path": "skills/earnings-preview/SKILL.md",
+      "sha256": "a9806d7d8c912e2ec2475b352331fa5f7cbecbf8ea895413fefe632b1428ca9c"
+    },
+    {
+      "path": "skills/economic-impact-report/agents/openai.yaml",
+      "sha256": "77ce47e6f3f0966dc3be2b5123891b33fe13963fdac7cf5dfd0d1e7b231c7a72"
+    },
+    {
+      "path": "skills/economic-impact-report/references/DASHBOARD_PACK.md",
+      "sha256": "e73e86cc2474286dc5c511436720d1a385f6f420125464616010d481ead1ef83"
+    },
+    {
+      "path": "skills/economic-impact-report/references/domain-checklists.md",
+      "sha256": "8635471922e2c3bde11318430789966221c6a4bb2af4fa515c825d5338144dec"
+    },
+    {
+      "path": "skills/economic-impact-report/references/impact-framework.md",
+      "sha256": "24cfab2b4b727b251788b9ccd8d90f3e0f345ee2ba582a170d3e0bf6e113e58b"
+    },
+    {
+      "path": "skills/economic-impact-report/references/quality-bar.md",
+      "sha256": "b00db8ec332f63be8923f9003d47e3d839f443227e0e8e584976c19b5d4c5e37"
+    },
+    {
+      "path": "skills/economic-impact-report/references/report-template.md",
+      "sha256": "9739396f08176ee5659a3838775fe6253938be3117571b7d73040e8d819450b4"
+    },
+    {
+      "path": "skills/economic-impact-report/references/workflow.md",
+      "sha256": "32b93d3c18253cec6840f8388422008827f5ed8896bcc289e321dd5f0e1151a7"
+    },
+    {
+      "path": "skills/economic-impact-report/scripts/check_economic_impact_report.py",
+      "sha256": "f55f949f0d44ed06367313ebfe868b5b67764f75e5bb606e7742602d55d4a104"
+    },
+    {
+      "path": "skills/economic-impact-report/SKILL.md",
+      "sha256": "957f8fcb377567efcc78be5fa6226fc8e2ee6a42a3a864d8fb89b1b1da789b81"
+    },
+    {
+      "path": "skills/equity-model-update/agents/openai.yaml",
+      "sha256": "f5cc1768a6e627dcf68827e5fc38a992fab31e4b06c1ec9a1789184cf8c7801b"
+    },
+    {
+      "path": "skills/equity-model-update/references/DASHBOARD_PACK.md",
+      "sha256": "89b57648d5a835a55d6f428fd2ab532db7bcc0b4f70b4ed95e9c53619716e817"
+    },
+    {
+      "path": "skills/equity-model-update/references/dashboard-map.md",
+      "sha256": "ff8d04ebdaaa55c44a5420e22c929a44a114057d4f1fb863e3ebf36c76029a8a"
+    },
+    {
+      "path": "skills/equity-model-update/references/executable-contract.md",
+      "sha256": "57fc937fb6075b01bedc23721a7ac1b46c9a95b0305e071c1e15abf0950a5b07"
+    },
+    {
+      "path": "skills/equity-model-update/references/sector-kpis.md",
+      "sha256": "34bf5eb0779d8af6da362a0ba9e75a477b1cc0439a90f41369f7c23a002baf78"
+    },
+    {
+      "path": "skills/equity-model-update/references/templates.md",
+      "sha256": "fd2f89f39ee223d04c0cebaae23fef607ffa88a55bf3d6fd677adde86bb14c17"
+    },
+    {
+      "path": "skills/equity-model-update/references/workflow.md",
+      "sha256": "baca8a48e625d56f37ec4454539fbb42e16ac56742764b38e155142b9bc285d1"
+    },
+    {
+      "path": "skills/equity-model-update/scripts/materialize_model_update.py",
+      "sha256": "f04c80c419531685ed7fcac1b7a20887820aec9488945a27c99a8bd47ff87f34"
+    },
+    {
+      "path": "skills/equity-model-update/scripts/materialize_workbook_update.py",
+      "sha256": "eb59ab139e23ef9131815d31e1b252202ccc9b49084d75149d0731c978b446e2"
+    },
+    {
+      "path": "skills/equity-model-update/scripts/model_update_artifacts.py",
+      "sha256": "05f2dd31f7dfa5e92110d4c70b6b0da761267f74dd68d3f37a1fde0f9b173d9b"
+    },
+    {
+      "path": "skills/equity-model-update/scripts/model_update_core.py",
+      "sha256": "5dbe05513cae16cbf0111e9a46a6a839aa8852297cadf59cd2956907505dee3e"
+    },
+    {
+      "path": "skills/equity-model-update/scripts/model_update_dates.py",
+      "sha256": "cb80071bb97c10cfdb615a18523d556163f0ae230e204d9c48b510cba205e423"
+    },
+    {
+      "path": "skills/equity-model-update/scripts/model_update_fields.py",
+      "sha256": "95326d06580cf14a93c8c3bce8f7ff81e207d12a343cb018c756b9a53ac53953"
+    },
+    {
+      "path": "skills/equity-model-update/scripts/model_update_format.py",
+      "sha256": "e96100dd555e5dbfe8192df869c3baf47d21de963a2735eac3d0fb796e1b0b25"
+    },
+    {
+      "path": "skills/equity-model-update/scripts/model_update_io.py",
+      "sha256": "f142a88242f9cae32789a78339b6f9f82f495380846fe18794dbf6921c57ff09"
+    },
+    {
+      "path": "skills/equity-model-update/scripts/model_update_rows.py",
+      "sha256": "746dc0580c57f4761d7a65c22b6e6dc0e1bc5dce58db8513f930b0dc1bb58037"
+    },
+    {
+      "path": "skills/equity-model-update/scripts/model_update_validate.py",
+      "sha256": "995a232fc4ba9127c2facebd94e22ac814be71eaf708a6e75ecf0185d38fe7bd"
+    },
+    {
+      "path": "skills/equity-model-update/SKILL.md",
+      "sha256": "33f7ba027f191e8854da82ef95dd7009e67c37c47579a0dac3d22bd35256c0b6"
+    },
+    {
+      "path": "skills/event-driven-analyzer/agents/openai.yaml",
+      "sha256": "01fdf00ae559e3b72bb822fc38bc364e30bc82e3b20cdc1bebf3f44424fae5bd"
+    },
+    {
+      "path": "skills/event-driven-analyzer/assets/event_memo_template.md",
+      "sha256": "548b46c7bfdf6328168d03697d3c56acbc01ce7af3b108d7f3cd4b9521b8a0fa"
+    },
+    {
+      "path": "skills/event-driven-analyzer/assets/monitoring_dashboard_template.csv",
+      "sha256": "62d544accb6ddfde2623a84b1b00dd8284745dd30be3a63d0a409bc078fb82f7"
+    },
+    {
+      "path": "skills/event-driven-analyzer/references/DASHBOARD_PACK.md",
+      "sha256": "c96cb839e35ef603375750943ebc9d5df7e08a6f9872365e3c60f2f5406c826a"
+    },
+    {
+      "path": "skills/event-driven-analyzer/references/event_taxonomy.md",
+      "sha256": "2dd5b3fec735fc084b7439fdfe934886390882af918a1c89c310b8999649ee68"
+    },
+    {
+      "path": "skills/event-driven-analyzer/references/event-math-schema.md",
+      "sha256": "d21ac1f3edf822ded67d94f3461f370a425255369ea02d736588e3d6d1aaf8a8"
+    },
+    {
+      "path": "skills/event-driven-analyzer/references/litigation_regulatory_playbook.md",
+      "sha256": "b3cd318bbacaece153f7f633ea56e0e5b029bb16a9f46dcf7395cd3581e42fbf"
+    },
+    {
+      "path": "skills/event-driven-analyzer/references/merger_arb_playbook.md",
+      "sha256": "26e573e043300bcf463e136316a22a3d41c8c37852cf667d3174103b09705687"
+    },
+    {
+      "path": "skills/event-driven-analyzer/references/output_templates.md",
+      "sha256": "d526ee82be5e61f7ac47424f6cca8485d250a8ec3d893a828cba0bd865e3234e"
+    },
+    {
+      "path": "skills/event-driven-analyzer/references/quality_checks.md",
+      "sha256": "83cb58d6bbd9f7cb46c648403671744bdc4626846605d5c67a7a3b2554f1e584"
+    },
+    {
+      "path": "skills/event-driven-analyzer/references/restructuring_special_situations_playbook.md",
+      "sha256": "a820c8cf6a15ba8b7bd2793c9d559aa03c2ccaab6c1ce50822d22c639854266f"
+    },
+    {
+      "path": "skills/event-driven-analyzer/references/scenario_math.md",
+      "sha256": "be01e565d9c9c6f8da61936525c455ee782cf635bd1b791c53dde7c2bc5b0ab9"
+    },
+    {
+      "path": "skills/event-driven-analyzer/references/source_hierarchy.md",
+      "sha256": "a62677716fe016941f2a18598aaf213dd2519324c09a4c7ac94f9e1b0016541e"
+    },
+    {
+      "path": "skills/event-driven-analyzer/references/spins_activism_playbook.md",
+      "sha256": "6234722f3cd4cc726ea809539040d654f5cc88a2078c72059899cf093dcc108a"
+    },
+    {
+      "path": "skills/event-driven-analyzer/scripts/event_math.py",
+      "sha256": "10385f4691ac844484fe93eb8ecc1ad371a9b9eebf1c3f5abd050e7845ab007b"
+    },
+    {
+      "path": "skills/event-driven-analyzer/SKILL.md",
+      "sha256": "1dcaf95dfa83f24678c6d39fb10b032d3453144458f5232017f606cd34df2e8a"
+    },
+    {
+      "path": "skills/financials-normalizer/agents/openai.yaml",
+      "sha256": "8265d80c09970e65ec0ad50e9066a92e0f2d231649e06e059723a9eba9ffb3eb"
+    },
+    {
+      "path": "skills/financials-normalizer/assets/icon.svg",
+      "sha256": "9c5f372d520f94b2d16a8323a63c2c3bc960c3153245ce4a0daf5745992a99a6"
+    },
+    {
+      "path": "skills/financials-normalizer/references/integration-guide.md",
+      "sha256": "9b1c38f86d9e670bda8a4f1582b95d93afd7838f20b83695112c639f03b4a6e0"
+    },
+    {
+      "path": "skills/financials-normalizer/references/line_item_aliases.csv",
+      "sha256": "f048d70b8fced3a68cea378948a8948fabc3a286da3c89af3f172862b1917bcd"
+    },
+    {
+      "path": "skills/financials-normalizer/references/line-item-taxonomy.md",
+      "sha256": "ffda10d09c48b316296b75b5cc2a06f81930c598e22ae9d4873719f12404614f"
+    },
+    {
+      "path": "skills/financials-normalizer/references/normalization-schema.md",
+      "sha256": "1a27f6d7c092591158f0c0220f6f4418d2259463e4b2d494689dec291ce67f14"
+    },
+    {
+      "path": "skills/financials-normalizer/references/qa-rules.md",
+      "sha256": "eff6c1e26bb04a41c3af2cc6aa0de96c66a53a059b2b08a27d4e5b807ae979de"
+    },
+    {
+      "path": "skills/financials-normalizer/references/source-protocol.md",
+      "sha256": "6fc598e8b0e8cbfab603117639dd9edcde7b35783aba801d0fa9909b79fdb6e3"
+    },
+    {
+      "path": "skills/financials-normalizer/scripts/build_source_index.py",
+      "sha256": "9f1a274e263b9ad5f0adf3fcfc2e6cfafb35602d225ca86803ecdaf7308810b3"
+    },
+    {
+      "path": "skills/financials-normalizer/scripts/normalize_extracted_financials.py",
+      "sha256": "21f191bf3396fd0eb34eab278436f5bb8aa0da944140a6533ae0aa33c6f92426"
+    },
+    {
+      "path": "skills/financials-normalizer/scripts/validate_normalized_financials.py",
+      "sha256": "ef8522130160ca5e9cfb654f304e6f51e9f389381cd9026c2162a2b7f629eddb"
+    },
+    {
+      "path": "skills/financials-normalizer/SKILL.md",
+      "sha256": "baacd2f688f093c90a1edc582f5f3c5b041d58667139776beb99c72c6c7363c3"
+    },
+    {
+      "path": "skills/idea-generation/agents/openai.yaml",
+      "sha256": "21be33da43d9f200d21467ee9294e8baee2804a75b29d31d89998e0ad1f093be"
+    },
+    {
+      "path": "skills/idea-generation/references/DASHBOARD_PACK.md",
+      "sha256": "1c84dd37c2e9548476986c1cf02adb35a6f8720d4d2992c6078475860b026f4d"
+    },
+    {
+      "path": "skills/idea-generation/references/downstream-routing.md",
+      "sha256": "c5a1f75b64ab3753bf8442efeb34ff3e8c77c0ceb7a67e024e08b2e946d5ac1b"
+    },
+    {
+      "path": "skills/idea-generation/references/output-standards.md",
+      "sha256": "556051a95119fbcc78af8381ed9f563c2c8ec481cd446b130a57fffd4fbb201e"
+    },
+    {
+      "path": "skills/idea-generation/references/scoring-materializer.md",
+      "sha256": "ecd44f82a644da3e91c803914d6d540d15b2146c5532f1bb6f489c19668cdf3a"
+    },
+    {
+      "path": "skills/idea-generation/references/screen-archetypes.md",
+      "sha256": "6c8e672f83fcaf44fb755512ef320832ae7d0612175f43d3058594da3b07b005"
+    },
+    {
+      "path": "skills/idea-generation/references/sector-overlays.md",
+      "sha256": "cb3d0f33a7009e0e4b3c6968f70b78df36053275ae7a5aacc682cb9ad71fee56"
+    },
+    {
+      "path": "skills/idea-generation/references/source-qc.md",
+      "sha256": "544e0f8f11149d6708ed9a469f8afa27817a64e40f7e46e2082c17b0930c2f57"
+    },
+    {
+      "path": "skills/idea-generation/references/workflow.md",
+      "sha256": "a05374edd0b248707369250d6ee5f29f8d53cdeedb5aca5ecc4d517c82ee3697"
+    },
+    {
+      "path": "skills/idea-generation/scripts/score_ideas.py",
+      "sha256": "473c48c6756f8cf505016382abb7df4b7e62f271e7eabda2f37f05d2e1e48b6c"
+    },
+    {
+      "path": "skills/idea-generation/SKILL.md",
+      "sha256": "7edb4a2e1b3624278d2f15159db00d67ab9a7683b253d59cadaf8ca8517824f2"
+    },
+    {
+      "path": "skills/initiating-coverage/agents/openai.yaml",
+      "sha256": "2d3cd13a7747fad72d7bb68d8554e1189b4c585e8c12d76f58fb93dd0829544b"
+    },
+    {
+      "path": "skills/initiating-coverage/assets/icon.svg",
+      "sha256": "f0f9bdcfd6fc4eb4fa461afb29c51b51dcc44fa5407c680d4ea62a04900db548"
+    },
+    {
+      "path": "skills/initiating-coverage/references/DASHBOARD_PACK.md",
+      "sha256": "c6357033a3142592c3b1d3c113a0d10d2ac760d6a27b8568830d299fe60e4755"
+    },
+    {
+      "path": "skills/initiating-coverage/references/input-schema.md",
+      "sha256": "2fc4ad58ceec93ec84e94caa57e4ea7345a07ff2b381e5f3c9851554a56f5ee7"
+    },
+    {
+      "path": "skills/initiating-coverage/references/integration-guide.md",
+      "sha256": "816655bad6ecadcba9b75b7ce791742e425272ed5bd94a6b6003ce5ae3cc50b5"
+    },
+    {
+      "path": "skills/initiating-coverage/references/output-schema.md",
+      "sha256": "ad306e87405f04fb107072a81a241d5db7b274663eb4fb5e5610fabd8d2b2575"
+    },
+    {
+      "path": "skills/initiating-coverage/references/output-templates.md",
+      "sha256": "9f6d4431dee516524815317605ed2bb7ff54bd24c8966dbc07856eb37ffb440f"
+    },
+    {
+      "path": "skills/initiating-coverage/references/pm-md-standards.md",
+      "sha256": "272a01b536d66d819ba09936366fe93ac66b6a332ec2ae2cbf9dc13947fdc97e"
+    },
+    {
+      "path": "skills/initiating-coverage/references/quality-checklist.md",
+      "sha256": "808604650e9126d63a21c333e347207e2ab040592a4cb98c80272cba884524e1"
+    },
+    {
+      "path": "skills/initiating-coverage/references/report-architecture.md",
+      "sha256": "daffec8f15354311f3b74553c833b63a4b197116676616a92f7d7214a0af3e6f"
+    },
+    {
+      "path": "skills/initiating-coverage/references/report-modes.md",
+      "sha256": "d9d02ee6ffd645e01bf6ed2c72b84f6193085e09319b568fd07b6627c2d40592"
+    },
+    {
+      "path": "skills/initiating-coverage/references/sector-overlays.md",
+      "sha256": "265e11f503f1c119ab4d169e366fd01b1dd099eb30a27cf6b716eecba3d60e51"
+    },
+    {
+      "path": "skills/initiating-coverage/references/source-and-evidence.md",
+      "sha256": "771bd1179ccca68c8923e76ac0393aa40638e331a32655552925fddb2da13ad0"
+    },
+    {
+      "path": "skills/initiating-coverage/references/thesis-framework.md",
+      "sha256": "7d71e9c18f86cab1e565ba9fcd1fbd71eaff0973be34a6a3a632576f96ac7349"
+    },
+    {
+      "path": "skills/initiating-coverage/references/valuation-and-modeling.md",
+      "sha256": "8826bf504367d37716e75bcd9a65dbbb277d0b0ff628e48f6a510ba8174dd5c0"
+    },
+    {
+      "path": "skills/initiating-coverage/scripts/build_initiation_markdown.py",
+      "sha256": "681d69a021bd95b3f4cf7b87b466fd3a004dcfadba3784fbcaced9737c88a608"
+    },
+    {
+      "path": "skills/initiating-coverage/scripts/build_source_request_checklist.py",
+      "sha256": "1c63aad4249de14a4e937f24a07725ce36c212be0641fbac6b15760450669fbc"
+    },
+    {
+      "path": "skills/initiating-coverage/scripts/calculate_price_target.py",
+      "sha256": "bd4817adfefc3bb99d7ef95dcd4cab4b5f8a154a00889f230d11b82a20815649"
+    },
+    {
+      "path": "skills/initiating-coverage/scripts/validate_initiation_json.py",
+      "sha256": "8296d7db345e0f4e3710e0825f0dcee659ee4c8f3c0e1b5597c7f4f7cfa4b7c3"
+    },
+    {
+      "path": "skills/initiating-coverage/SKILL.md",
+      "sha256": "bb2ce42ee5f93d83f82da330fa967a1ad042693e307a36bf7a0f14c37beb8f76"
+    },
+    {
+      "path": "skills/long-short-pitch/agents/openai.yaml",
+      "sha256": "26f6178c0133a17fcab50131e95bd2c27c52196cca48dcb12b539eecf701b8f2"
+    },
+    {
+      "path": "skills/long-short-pitch/references/DASHBOARD_PACK.md",
+      "sha256": "c26cbfa1d94274cceb3224c934716a403e1938acc6387e07dc89d14f221a4118"
+    },
+    {
+      "path": "skills/long-short-pitch/references/intake-and-source-policy.md",
+      "sha256": "86b14b0b4863c266435059961a309c6af4313826fe47546a94bacfdc9a152ea8"
+    },
+    {
+      "path": "skills/long-short-pitch/references/output-contract.md",
+      "sha256": "246a76cdcc6fcb515d73b9c7e808c7faeeeaeceb087de1c541de229188508de5"
+    },
+    {
+      "path": "skills/long-short-pitch/references/scenario-ev-schema.md",
+      "sha256": "e27b380ec61c4f6fe39fc4e2e8dd30cd3e3e969e2073ec8efe8c561bb3369920"
+    },
+    {
+      "path": "skills/long-short-pitch/references/sector-overlays.md",
+      "sha256": "e08d2b92a9497ed7e5a10cbfdfff6eacd5c6d30b8af0f605c1f4a072dee40b54"
+    },
+    {
+      "path": "skills/long-short-pitch/references/strategy-playbooks.md",
+      "sha256": "eedf290bcf873b612e6ef4270bfcbb22ce33a2f5baf142885bd34e0c95122508"
+    },
+    {
+      "path": "skills/long-short-pitch/scripts/materialize_trade_scenarios.py",
+      "sha256": "9a3ed01a7ed7210abf13940f3baa8030a831e69790289e87d1034c9bf4094b95"
+    },
+    {
+      "path": "skills/long-short-pitch/SKILL.md",
+      "sha256": "f84f7097bb49c89ba95b9b50b9d0765f329b8ed0e6b4da977fcf98c16d41680d"
+    },
+    {
+      "path": "skills/meeting-prep/agents/openai.yaml",
+      "sha256": "b74166bcb96ce8ab2fd4b1a504e765312d19614d2ed5e22777b08cf909b78085"
+    },
+    {
+      "path": "skills/meeting-prep/assets/icon.svg",
+      "sha256": "3e9d8fd9c0d3e79c3c5118a877b091d1dd1e938139d4275afc897102edee1144"
+    },
+    {
+      "path": "skills/meeting-prep/references/context-and-sources.md",
+      "sha256": "b8f932ea625570203c08547095a6cb0591baf4d13607f996c45f06c718cdce9e"
+    },
+    {
+      "path": "skills/meeting-prep/references/DASHBOARD_PACK.md",
+      "sha256": "4466537978c5f259a06fee70b3796733841983e4b4fc51f68b916fe29e8dbac1"
+    },
+    {
+      "path": "skills/meeting-prep/references/follow-up-and-action-tracking.md",
+      "sha256": "4a3799c60cab959ed746d497af29a0274ae69538b4da3528125f37f53134fdf3"
+    },
+    {
+      "path": "skills/meeting-prep/references/meeting-type-playbooks.md",
+      "sha256": "fd0914946282a1649613aec741f88773a0dee9d64ee3df4adac1bd55d8385bf9"
+    },
+    {
+      "path": "skills/meeting-prep/references/output-templates.md",
+      "sha256": "930a0de6d46936ca46b558652cc6aedbf1f7b006c14861a708aa91aafc39d0c1"
+    },
+    {
+      "path": "skills/meeting-prep/references/question-and-evidence-bank.md",
+      "sha256": "bc184646926d9d70498131455385bd389782647c72f1ba3353156e9f78ca6ab5"
+    },
+    {
+      "path": "skills/meeting-prep/references/safety-and-integrations.md",
+      "sha256": "78d70539736970c89c352159f9adb995588347ec4c7a30c85c4d5b274a93c76a"
+    },
+    {
+      "path": "skills/meeting-prep/SKILL.md",
+      "sha256": "e44f2f8082301b6f50bd1d8c74708b7811aa36a49f36fe828c22dd30f20c794e"
+    },
+    {
+      "path": "skills/memo-builder/agents/openai.yaml",
+      "sha256": "eeb9b7c5c0e4347d13d36c544ce0133a35ca2b8d6fe680c27868cd926329107a"
+    },
+    {
+      "path": "skills/memo-builder/references/DASHBOARD_PACK.md",
+      "sha256": "095a8ce5a2189afc2e7674825d64cf6a1b404d230bf0ecaa9c13c0d9df3201b9"
+    },
+    {
+      "path": "skills/memo-builder/references/memo-modes.md",
+      "sha256": "123d4ca96910da149a2ff2ac37cfbbf4f09d887d8849d3956b2c6d38f8384e5f"
+    },
+    {
+      "path": "skills/memo-builder/references/output-contracts.md",
+      "sha256": "15716f07c9cb46b4ee71ea82cde802180929fdb0af01c32f10849c98420dc66d"
+    },
+    {
+      "path": "skills/memo-builder/references/quality-workflow.md",
+      "sha256": "c5d08fbf9bb33bd15b7b23d63b494a41a72f59fdf80c3ba6ec15a4142e08209c"
+    },
+    {
+      "path": "skills/memo-builder/references/sector-overlays.md",
+      "sha256": "d27ec904e4bf30faa58909631b3227ef0027dbda1721863d0c80e4271067ab56"
+    },
+    {
+      "path": "skills/memo-builder/references/source-policy.md",
+      "sha256": "9bd5b94a73b04742937ef0fc9bf026840838e7beaf23e66058d3b9913ecbaad0"
+    },
+    {
+      "path": "skills/memo-builder/scripts/build_memo_package.py",
+      "sha256": "c8abbb1f39fe5ad4a961846b55ce0fe0c68bd4dd8f0c6de6a4afe2c986af9a61"
+    },
+    {
+      "path": "skills/memo-builder/SKILL.md",
+      "sha256": "98dcba7272bd6d0118345a41aca9292ecda70172ccca89071621f62a58729934"
+    },
+    {
+      "path": "skills/model-audit-tieout/agents/openai.yaml",
+      "sha256": "e431a8f9428c3003c6b0b6a01f078bbc7314817d12a85e6e9a1c6e93670b4d28"
+    },
+    {
+      "path": "skills/model-audit-tieout/references/audit-playbook.md",
+      "sha256": "29ef213a95d9877dc3ed3cc3163904cbcb590c267871608803aae27498b07c85"
+    },
+    {
+      "path": "skills/model-audit-tieout/references/dashboard-map.md",
+      "sha256": "f80f0c2b148e7a6ed500d740e7f6bd08a6825982a44b355de67d5416f4618d72"
+    },
+    {
+      "path": "skills/model-audit-tieout/references/formula-and-workbook-controls.md",
+      "sha256": "9137bda92395511a6bd9cf82249199d9466bcee1b33832362cba956a2413e9ed"
+    },
+    {
+      "path": "skills/model-audit-tieout/references/issue-taxonomy.md",
+      "sha256": "11a4b3bf54824368950047e09761d609265d34b8a8f3d2bf2c21288c6f1daa40"
+    },
+    {
+      "path": "skills/model-audit-tieout/references/output-templates.md",
+      "sha256": "c16c8f408915d3a54a0fbc8e504b8c89c8048dff0903ff75ad062c9dd71f1abd"
+    },
+    {
+      "path": "skills/model-audit-tieout/references/p0-integrations.md",
+      "sha256": "44e11db0654751c823472420b75b40f37ed0b72d11ace134cf6e1a8ac9a11f88"
+    },
+    {
+      "path": "skills/model-audit-tieout/references/tieout-and-source-checks.md",
+      "sha256": "556808441e1746fb5864973e7c5bcd2f1e17c883ec809946d577727cce822e37"
+    },
+    {
+      "path": "skills/model-audit-tieout/scripts/audit_workbook.py",
+      "sha256": "1b02abecfdf2549daf7f832e4499241ca156d775dcaec8a0e9c38346278d44e8"
+    },
+    {
+      "path": "skills/model-audit-tieout/scripts/requirements.txt",
+      "sha256": "c742c29e5b75415834bfd7a0050f740c521c3817a2171901ade6dc5922a7bd58"
+    },
+    {
+      "path": "skills/model-audit-tieout/SKILL.md",
+      "sha256": "8c0eb88c0a541e64f980e5f01aa8cc2af038f49776c55d3286ee4fa60058023c"
+    },
+    {
+      "path": "skills/portfolio-risk-management/agents/openai.yaml",
+      "sha256": "2e5d41e8b5f9dc05557a77de823bd3a76f4caefa5d99fad470ef1f54242ef809"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/DASHBOARD_PACK.md",
+      "sha256": "a5ba4ea008fbab4afe63709ff1be39640ec83fc1fb8d456c7936453b6af7cda3"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/example-risk-position-input.json",
+      "sha256": "26685479acd3a40b4a1baea65a7e02ee42c5e1247a38baa1420d1fb9eca3d094"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/exposure-and-factor-risk.md",
+      "sha256": "a726d378cf560c7bc177321ab1d5bb6f5463d0d3a3a772d5254713c4d1791f89"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/hedge-output-templates.md",
+      "sha256": "c2832494be73f96f6eced7c6e7704c6bf3fff5d221b69f9acef39b72d20cd68b"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/hedge-scorecard-schema.md",
+      "sha256": "213385c70b11a01240e25f1fbba8a8cd8556a91723eb68584ef94accefac4d7f"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/hedge-workflow.md",
+      "sha256": "83303fe21cf8cc60588bc6c58fa539410eaf5bc5100f1720d3c96cf91d530f54"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/instrument-playbooks.md",
+      "sha256": "51668a54e359683950e4dcd5ac26ed781e0c0deb7b8fa9b48764f6e9c6da43d3"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/liquidity-drawdown-scenarios.md",
+      "sha256": "3c64cad60aee83189b80647a6de057b2b15612921aad444ca4ef008c38dda61d"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/position-sizing-output-templates.md",
+      "sha256": "6a3b4a2abf4571ad1149ee5dd9467b1cf27a97ac6198cfeaac60d9f05cad16aa"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/quality-control.md",
+      "sha256": "28b248edbc656ad8ae6bb4ebdaf80993b9f4bce61ae8306a4fb727ba750bf234"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/sizing-framework.md",
+      "sha256": "7906cbc2a549b3d9cf8f8c0b41816f1bddc00e4249b7e129a8f673a674ce3627"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/source-and-context-protocol.md",
+      "sha256": "9284482312b0b21b1d90642ee74f239cdb17b1f9e2b8e285fdf97fdcd7bc7934"
+    },
+    {
+      "path": "skills/portfolio-risk-management/references/strategy-nuance.md",
+      "sha256": "f03b58202e1f7e6234d610c4a3931c0fa257d1ecbf1a1ea4dbdeec6be114f7a5"
+    },
+    {
+      "path": "skills/portfolio-risk-management/scripts/create_position_sizing_templates.py",
+      "sha256": "9a7ac5c0787dd5b262e8280923b9672c37cd078c609486652987a5a94ec140c8"
+    },
+    {
+      "path": "skills/portfolio-risk-management/scripts/position_sizing_calculator.py",
+      "sha256": "ce6deda2265b88c2b654905562ff0d6ccacf233dcbb1710c69f4f48c6ac32413"
+    },
+    {
+      "path": "skills/portfolio-risk-management/scripts/position_sizing_core.py",
+      "sha256": "5ce3f0272af02cc5c213cbf48f1b156df0cbab25102bcf7f6a377879797da020"
+    },
+    {
+      "path": "skills/portfolio-risk-management/scripts/position_sizing_outputs.py",
+      "sha256": "7d88df6ee00f2a6b6bfb0e20699b6de365666e4017e3684101bbba68531844d1"
+    },
+    {
+      "path": "skills/portfolio-risk-management/scripts/score_hedge_candidates.py",
+      "sha256": "59640c084c55bb11b99cca741c52a9363de1af405ea6412eb310365aea66cfa7"
+    },
+    {
+      "path": "skills/portfolio-risk-management/SKILL.md",
+      "sha256": "e5b2ccf2ca6afc798c42d20f1d91a9a4664aadcfb8ee6fe6be87eadc1a5878b6"
+    },
+    {
+      "path": "skills/public-equity-investing/agents/openai.yaml",
+      "sha256": "6fd187bcf9c55d1e607af4bfab42186575fbc8076e7bf8935d40103e277b1254"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/daloopa-provider-guide/INTERNAL.md",
+      "sha256": "3f078bc17d3b892f33d90c339fe85e1009ab6791523bbc63eef4abdfb5af19ec"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/daloopa-provider-guide/references/connector-playbook.md",
+      "sha256": "9a58229eeabe1d3c43b97d20dfa3859654946b763d297bf2b91cb6bf4d491074"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/daloopa-provider-guide/references/workbook-mode.md",
+      "sha256": "f4f30d95d9c2284282430b62374aaa3349eb2c2cd9f6c1ac819f082d5ce6bce5"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/comps-valuation-sample.json",
+      "sha256": "af2b12d1d769884c1042b2762841350a65ab1e787e8afa0c0b2f6f363bad8b4e"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/deck-report-qc-sample.json",
+      "sha256": "1f40103f0e816be2595ca78aa47da4124101354e64e29c3f2b5fa5ba17089b43"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/draft-incomplete-chart-support-sample.json",
+      "sha256": "6c4c026f29cd93d604547029017cae5bf92b6a020677ab1392c44e2028760a36"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/draft-support-source-gap-sample.json",
+      "sha256": "2703db6ada5b196f830c7b875763174bece71ded83cc57508ea9bb94c1de08ee"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/earnings-preview-minimal.json",
+      "sha256": "f6562283af2ac00fbf7c9e50cb095eef57cbda91e21a9aa8b81204a5e1e3047c"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/financial-trend-incomplete-sample.json",
+      "sha256": "651730439f0b2e6bc2f5dc2cff8087ccadfad318ad9fb9e2d7073b668aaebcda"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/hero-citations-sample.json",
+      "sha256": "1a5f90047a91474ecb0397d223c7c09d077f63d4e49a9ae706988b86089b182a"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/idea-generation-sample.json",
+      "sha256": "b981ba2079ab2cd3610aee18792bfc8ca7b5b96e52dc08602e7d3b63447ea419"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/initiating-coverage-sample.json",
+      "sha256": "c63732c1cdb407c83ffd5cf202644d90a522b29ef783b8bb5b68a346271f4553"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/portfolio-hedge-mode-sample.json",
+      "sha256": "005f1d953516a819bc411eab2ffb867ae0ea8dcde66b0905722583ab1d2f004c"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/portfolio-sizing-mode-sample.json",
+      "sha256": "fa7bb5f38f26739b986e8588b453eaf29ceeaa4c4de58f514b101aab775354fb"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/production-complete-sample.json",
+      "sha256": "79f20d6f3d62fdb37ed2816cb134281a953d5fad3f1b60ba7d137dd2522830cd"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/production-missing-source-fails-sample.json",
+      "sha256": "60e1b961732e03eda159f7b67c4e2902958007cbc80f30dcea3b6bd375edb8ba"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/production-unresolved-citation-fails-sample.json",
+      "sha256": "21379be1a28e2f3eab857fd00be22fdedd2193b441714660183d234a30c1078d"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/assets/example_payloads/scenario-sensitivity-sample.json",
+      "sha256": "e219cf12f329fee0420d6dc4925ff5cf5c6a65af7c6b7b4b3331f8548277a5bc"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/INTERNAL.md",
+      "sha256": "91313ab922353758e8586f94acb52ce47a59d7980256daf91a081018c7a88fde"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/references/earnings-dashboard-feedback-map.md",
+      "sha256": "dda598825923a05cae95a246d8a2a495399324cdda116dfb50901c47a3a7b48b"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/references/mobile-qa.md",
+      "sha256": "091516f06ff66caed7a1a925ba6b836d2fdb882e2ecbbbaa8510f83f8a55530c"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/references/module-contract.md",
+      "sha256": "01cb1e11396ead443dfef277c270ba6a669c5e99736ac372d59a776180cd4068"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/scripts/render_dashboard.py",
+      "sha256": "e4b81182d3f22a3c9958c6c75673b0266a0af89700d4e4d904ec14aaf6471fa1"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/dashboard-builder/scripts/validate_payload.py",
+      "sha256": "0dee38dace5fb8b1541117f5540acb33a5be324a46a47c9201d9fed4d34672f4"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/excel-data-cleaner/INTERNAL.md",
+      "sha256": "1a028c900b619f720cfc1bec99c769b32ca6246da09234e73425b75b069af3b7"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/excel-data-cleaner/references/cleaning-standards.md",
+      "sha256": "d76041e4a3e7640b57afc271698e3603f190bacececfca4f7fb8ac28b264846b"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/excel-data-cleaner/references/domain-playbook.md",
+      "sha256": "4ffc6dc6076a59bc5c2980faa09b071d6645408566a25f134705d9b6bc2c4b3c"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/excel-data-cleaner/references/examples.md",
+      "sha256": "4306b2aed07cddb590d1ffd1fdcbce9f1612e3f0cbe3194a54d7f650a9a49170"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/excel-data-cleaner/references/workbook-output-spec.md",
+      "sha256": "4fcda9921b2da846fa95a70b30ae38c7ffe1bb76e55d1a30ef88788f7a34f0fb"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/excel-data-cleaner/scripts/clean_tabular_data.py",
+      "sha256": "2efc019a74f018b47d6d7448032174258a877a01afb7cb3bac34e5c9d5a5005a"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/excel-data-cleaner/scripts/profile_tabular_data.py",
+      "sha256": "a4666a2c018486192937a1054085048beeb83f38e221f928d61f1dd3d843c1ac"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/excel-data-cleaner/scripts/requirements.txt",
+      "sha256": "0cc37e41bcb62bcbb4e728c018056cc20ba74c88079946a75f305479e5a82650"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/excel-data-cleaner/scripts/workbook_formatting.py",
+      "sha256": "fc7db1a883a725bbf16dc8bdb0f901a4e7077e48ca2c810df7c6a63b03f18755"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/financial-source-of-truth/INTERNAL.md",
+      "sha256": "159a39b72aade4eb2b7730ceea5c8cb1221f95516f07f543283d9c6a4017beda"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/financial-source-of-truth/references/citation-and-ledger-format.md",
+      "sha256": "78eb7ef8daf737c74bceae05810770fd5af6ddcd61aef3739d282cad04e0b8f2"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/financial-source-of-truth/references/evidence-hierarchy.md",
+      "sha256": "b5c3d4121b207c42b5e5a1d07d1fd015024e9fe1946dd8d193855a71cadd2910"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/financial-source-of-truth/references/fact-assumption-labeling.md",
+      "sha256": "a918c1f7c8d06116251e926860570e69a2f8762385da9674880d978293458d1b"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/financial-source-of-truth/references/source-discipline-output-patterns.md",
+      "sha256": "62d0176ad26481da49b77a95fa444cac7c5ed7b894b27729c54fba7530ee8b7d"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/financial-source-of-truth/references/staleness-and-conflicts.md",
+      "sha256": "0b8c833fe6ea7cb8f97bc12f0df52890594b9150ad1fd116dcf43addf1bfcfad"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/financial-source-of-truth/scripts/validate_evidence_ledger.py",
+      "sha256": "9987b2a821fbf45a8a33af89a1bf6bff5742b39483c962fb767d8d4a45e784d9"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/policy.md",
+      "sha256": "7f4973816af960aa65adfc06ba87eb9a0b2a0b15a39d907f97279e466bd20ef6"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/quartr-provider-guide/INTERNAL.md",
+      "sha256": "9e3531b7e2d157e679154c08d08828c8381d7939383d0c7142ee56acb82eed4d"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/quartr-provider-guide/references/connector-playbook.md",
+      "sha256": "a0272223f96698f05424e428cc30570ed4430d176eca0df90dd755b84aa4271c"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/quartr-provider-guide/references/workbook-mode.md",
+      "sha256": "3d635cd3ee9f21145019c9ee7771e05c573a1d75024f527a0e5df8c949d271d8"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/INTERNAL.md",
+      "sha256": "099221bc6ffafe002aed98c29c288c2f4ecc515996780c913f30ef4df3d7d3e4"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/banks/archetypes.md",
+      "sha256": "c445f9ab339ec4b1a7c1aa50923e80594806adfe39ddc0eb02b14622104b3647"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/banks/kpi-cheat-sheet.md",
+      "sha256": "f8b11ab4a99ca97022ff673f4bfd9d7b83998481f22e694d2ba33f2ffa144549"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/banks/model-architecture.md",
+      "sha256": "50c0a29a6570fdabea362ddf3f5a41ef5d40a4e5fc04b5086e96352884f5fc9e"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/banks/modeling-rules.md",
+      "sha256": "33057a217a2c13c4edfa836967d5c862d9e58b1d4097476dda41c1d4715ed66a"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/banks/output-overlays.md",
+      "sha256": "d10fdf98d69f7e451fac2a047cfe2b387cb50a7e6cf44cacbe246d6d2f60071b"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/banks/red-flags.md",
+      "sha256": "55456dd1f486e1e8bf60a6d6f34727b7e7bade3be072e03ac87d898ea974b2e2"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/banks/source-hierarchy.md",
+      "sha256": "5ddfb81da70daeff5b56622d06209eb330138ceb9b6130eb9f403ba18f6499f5"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/banks/valuation-rules.md",
+      "sha256": "825b4c36fdd56ba2037a7d5d946a46b8e5bc80eeb505a2ce3ad84b4dea93ca58"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/biotech-pharma/archetypes.md",
+      "sha256": "99a60ed8b5451c13ecbdf89bd36735acdb40a4e54936d6f8f7c49c5de4a64c09"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/biotech-pharma/kpi-cheat-sheet.md",
+      "sha256": "ca073acb9bf17d000639a1ffdece6898a63f14ced0dbeed129fd47b23e167bbb"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/biotech-pharma/model-architecture.md",
+      "sha256": "694176f67d6595d5d9f2938a848918eb26b27e42f16a44562b7b20bb6eb0bfc0"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/biotech-pharma/modeling-rules.md",
+      "sha256": "2bec66afbe3fac94803c2c5b8db6e2f2074da94b86b8b6b81099a42d6283cd0e"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/biotech-pharma/output-overlays.md",
+      "sha256": "4944f13c83b4b11c4952dfee6550a34873ab0ef6e7d9924822d958fdbe3f0d84"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/biotech-pharma/red-flags.md",
+      "sha256": "09115bc053600812b1ff931628cca59198a3f8c13fdf68c908c3d8232f13b286"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/biotech-pharma/source-hierarchy.md",
+      "sha256": "24db31308774f58a5bf8cb5f4c6ae271d14a35fbab4c2e8d2b717d351741ae38"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/biotech-pharma/valuation-rules.md",
+      "sha256": "4d43807577febcc799cd72e20adcdbc9ee2d96dda32c329c70235443d51ab3a9"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/consumer-internet-marketplaces/archetypes.md",
+      "sha256": "e9963f957ca2e1419e933dc6550e41b894bac10c1b9967509e2fafbdefb5cbae"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/consumer-internet-marketplaces/kpi-cheat-sheet.md",
+      "sha256": "d61d2a2ab53d8610e83125d53401c4341a3a2fe809ca3af64aa37bb14eb8fbfa"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/consumer-internet-marketplaces/model-architecture.md",
+      "sha256": "7731829eef27189bc57092dbc480a82d0eaa8dc32710d1d18eebf7ddd56e8cea"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/consumer-internet-marketplaces/modeling-rules.md",
+      "sha256": "ba4dd3ea7a8e0f73a5457a1f19d56fa8a2c01bed351ae8d123396fe6bfb078ee"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/consumer-internet-marketplaces/output-overlays.md",
+      "sha256": "9eb57d0ae8f8cdb031ccf3321406cdc23bb6ac3073d07090768610cbf0010ad4"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/consumer-internet-marketplaces/red-flags.md",
+      "sha256": "5125cb46a8adeda817cfdfa4cf8f8fbd11432f213fac9478077bf390f45f8b9c"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/consumer-internet-marketplaces/source-hierarchy.md",
+      "sha256": "e15be611d62e03be435375331fceffef0f860f29105b0bfb9e70c82e51eb5a7b"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/consumer-internet-marketplaces/valuation-rules.md",
+      "sha256": "94225ac1ab4b5696ae65d8b0d28b1aa2899091cf63fb31b8985b6ae3c495d627"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/exchanges-market-infrastructure/archetypes.md",
+      "sha256": "be6d32210baf8f8c032391e34fcdee51edbe1733dfb1ee254064cd58a1dc1df5"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/exchanges-market-infrastructure/kpi-cheat-sheet.md",
+      "sha256": "c54c4cf94e070d1e5c0c7515be99844b8eab196283c22b7b9e989b5912ceabe6"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/exchanges-market-infrastructure/model-architecture.md",
+      "sha256": "1ec39c6cce795e342e689e5317e296993a86493a987ae561a224f4fdf2d2890c"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/exchanges-market-infrastructure/modeling-rules.md",
+      "sha256": "77375af78a82d08bff7c47ecc213db898e4eb2963aead22431ea7466d04d9a79"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/exchanges-market-infrastructure/output-overlays.md",
+      "sha256": "01c25680d4d2447f6cc1e88499aea8d4c3884c2e337c245d594c1d121165e74c"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/exchanges-market-infrastructure/red-flags.md",
+      "sha256": "4f58b6dcb7174a7ef67f3d11b6158c565de6f65bb1b93a0b9630c7ec6ddf4d1b"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/exchanges-market-infrastructure/source-hierarchy.md",
+      "sha256": "8cee7a586d2047f18b11fd61d72699318bc09aa5de0e5be176ff2fdd95e4a478"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/exchanges-market-infrastructure/valuation-rules.md",
+      "sha256": "641db3a8941d41bf54795399ff4eaac11e47baad3570add0cc25d774dd260db8"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/insurance/archetypes.md",
+      "sha256": "d9c28d48da5fb34bccbd660bea4d801205eb302cc02e1b7c2d23926bd2d009d6"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/insurance/kpi-cheat-sheet.md",
+      "sha256": "75cd8fbe4ce9491b6d54d65105a40f8e44c0d9a1fb062e7d5a81256d272fdf73"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/insurance/model-architecture.md",
+      "sha256": "0e7b0360e84290e8c2be8d0ed1cbbef76782d93059be6849609c447b18f500e1"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/insurance/modeling-rules.md",
+      "sha256": "b9437b903b6a349e04de94f0af6ec4d2d18987f41d6bfc42d641bbce92314d2c"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/insurance/output-overlays.md",
+      "sha256": "25f504d6b4a677c473ec038b5976e5034daf1b95500be54bb3798577312ad53d"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/insurance/red-flags.md",
+      "sha256": "b0c720a5eb42416c72312069718f7d4de15b1f252334b017a66fe6540b5ebf14"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/insurance/source-hierarchy.md",
+      "sha256": "33f22af2aea52b065c8716a1562b86e32fa69ac09f0f4869db401b902eae1dcf"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/insurance/valuation-rules.md",
+      "sha256": "6452f1a094a9a744806beb1b4118d7df21e6d0938674546bfce58b53a3d4421d"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/oil-gas-ep/archetypes.md",
+      "sha256": "8118e5bdd566bd0bd217e43c411b226b2a7f60e3d410ba429cffb6d053af44b4"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/oil-gas-ep/kpi-cheat-sheet.md",
+      "sha256": "76eaaa8beabb1924d08eca904b970dd4920d09f90ea1897c6037f3f46ff32124"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/oil-gas-ep/model-architecture.md",
+      "sha256": "a11e0572f1c7b6def95639c8be588f559da0592726243fdb44de26d8ef434053"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/oil-gas-ep/modeling-rules.md",
+      "sha256": "3bca8bfd225d29fa88a1d5e37f7f3398b0aa76907e377127b999a2fb1abdeca0"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/oil-gas-ep/output-overlays.md",
+      "sha256": "017766e9346881850de5b4b5c9e8b96a5016ced2445b015387caa5fbd98864d0"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/oil-gas-ep/red-flags.md",
+      "sha256": "e383a0c0001e605a58eaa2cda1719dbfded68667b2bb88e7d6ac1e83270efe0e"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/oil-gas-ep/source-hierarchy.md",
+      "sha256": "f4cf6c964468d98a2626b68bf5c0fff7dd035047863f2424c305fec96fb04828"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/oil-gas-ep/valuation-rules.md",
+      "sha256": "5fe74e6be18e9187b1c5019acc3f10be357b1757e6631eccc6397b1569b0f360"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/pm-judgment-heuristics.md",
+      "sha256": "2cbe5035d2ccb631ce74624a9812e4ef96ed8a51127d15be8b6f2480de5f4d33"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/reits/archetypes.md",
+      "sha256": "a73e43b03992133d2be8cf85b31d952c759e1df6acbd34fa3da43a5f8ac57886"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/reits/kpi-cheat-sheet.md",
+      "sha256": "a7b6d716926c282067a2467fe1e943a9a30b2f1d970b27c4504c3db3ce39b142"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/reits/model-architecture.md",
+      "sha256": "f93dd7470e119bab8e8e13169f502c9bbb7a2f1d817d578f4d6c11d885fcdf3f"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/reits/modeling-rules.md",
+      "sha256": "f04dd84d75abcbadd263f5d20ac8c10142b7260ee7a6186a09784eaae5ca238a"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/reits/output-overlays.md",
+      "sha256": "21a61d3bf279e794b21bb084407473b30df7ff1ab1a9249a8e5b5e026f174897"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/reits/red-flags.md",
+      "sha256": "14640406ef862fa5b15078941a4201f6e77888b95d2ea0428fcbfbed72afdf6b"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/reits/source-hierarchy.md",
+      "sha256": "f645ea4a9b17328b3e8da52b3398ad9d824c52b51d5a1f449874e8c7d27acfaf"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/reits/valuation-rules.md",
+      "sha256": "b8496334287761401b6cbef3103c60a1602558d384e446496bcd509073baf24f"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/research-output-overlay-contract.md",
+      "sha256": "c218a6d2fb2e849ab321d03e9efacb26becd4c6a2cf264f0cd327a4b86ff3d7e"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/saas-subscription-software/archetypes.md",
+      "sha256": "ade706fa975879e31497673ff50ac8555ab6c327e7dde8b88719af9cc2778629"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/saas-subscription-software/kpi-cheat-sheet.md",
+      "sha256": "3c7d533052b0e619c6b5acac41566bcde0a57e75a082a9721181c80cab7c58ba"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/saas-subscription-software/model-architecture.md",
+      "sha256": "9d4aec767630c1b247654689cfcadc58cff00d4201ee05e9cde10ffc9561fd65"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/saas-subscription-software/modeling-rules.md",
+      "sha256": "6f930f703b6133a6b553451879d569362ccded164bd5cdf0d9fba31fae9bb33d"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/saas-subscription-software/output-overlays.md",
+      "sha256": "24a69e16f2fe7d30a3591c6c36b9909624bbd97ebe6b9b66fee7c269050eca32"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/saas-subscription-software/red-flags.md",
+      "sha256": "a7ffd701af7f9c6831267a5eab74dc427c32557dee68a45f27efb7944ac1dc25"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/saas-subscription-software/source-hierarchy.md",
+      "sha256": "809037f80887e4487d278b635b9ce9a4566013e611106496d57cb7c77222e4eb"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/saas-subscription-software/valuation-rules.md",
+      "sha256": "7c432bdc76e5f1e816c36b37fe45014e822d2f254ec78462be0b94bbc3c6c7aa"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/references/sector-index.md",
+      "sha256": "9145f5fe11ab662f5f56b9c6cb8738e2b76ce4c414b6ce96dbc75d83cab82de6"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/sector-context-overlay/scripts/resolve_sector_lens.py",
+      "sha256": "e9fad8ca557a30795cdf9bbd807ef1e86109e6270d9e829a02de1b0708590e97"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/style-guide-adapter/assets/icon.svg",
+      "sha256": "d938e8732741faedfd261f38ff976203fe68bdfe4df2f367beaa1310058be12b"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/style-guide-adapter/INTERNAL.md",
+      "sha256": "51ff77029dc38754392f985f36768f6d9106a9700a1ce8f8202c352345aa7b4f"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/style-guide-adapter/references/artifact-application-rules.md",
+      "sha256": "04bf8356a2ecdfd9dccc591153a6b4faaa3d462322ecc6801b4e66a555d1a7c1"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/style-guide-adapter/references/output-templates.md",
+      "sha256": "7af84851cdede0b55f22b4b6cd58dd64977fa3bb171031aae9e6757f22344d0b"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/style-guide-adapter/references/source-and-safety.md",
+      "sha256": "0a56be43adce8e3b5ff320896e5b6f6158506586cc5db1e0e560007b7660e6a8"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/style-guide-adapter/references/style-extraction-playbook.md",
+      "sha256": "b7ebb36b2a3fa2443487cfdecbb9e05f44a818051afc45a76d9d71919860abd5"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/style-guide-adapter/references/writing-style-adaptation.md",
+      "sha256": "91c06194d2b8428159333ca809b3955049ce607cefcca24c41b736a2eefde62e"
+    },
+    {
+      "path": "skills/public-equity-investing/internal-support/style-guide-adapter/scripts/extract_office_style.py",
+      "sha256": "b4ee8b5bb305100420a386fec5343a17ecf1c915bc78f7e4b9e108ca7230b99b"
+    },
+    {
+      "path": "skills/public-equity-investing/SKILL.md",
+      "sha256": "730e3cd4f5dfe4f2201bff9ed39b3f2cf2360212726d50a18ed90a8fded70bc7"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/agents/openai.yaml",
+      "sha256": "7cffbdd8e41db2ddedc041f0ba752aa088b8d92aa315879151a21d8c9c48c78e"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/assets/research_action_register_template.csv",
+      "sha256": "db483433800d835c9f451d6cfc90175ff1e67735881b9d25bdf22a6d18daf245"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/assets/scenario_overlay_template.csv",
+      "sha256": "d2e789e7958d1926455a3c7f858622b3d597dbfec2977e5d1ec5dcf8be80b7c0"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/assets/sensitivity_matrix_template.csv",
+      "sha256": "16efa95e5eb9c0933aa7abb20280fa26e54b3480e23cc915968199238a2d1181"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/assets/target_backsolve_template.csv",
+      "sha256": "a0121eba726d26ecf6bc0587f9522fe9e8343086e3dd37155632de519705628d"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/assets/trigger_metrics_template.csv",
+      "sha256": "e1ba96af99336dbae36303699343d43e8a33017cc39b7d3f5874783a3e01c0e4"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/references/DASHBOARD_PACK.md",
+      "sha256": "1f67fe00f483bfeed3d919e63bc08115528c73a7267c597ae12792a51fcfa6e0"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/references/materializer-schema.md",
+      "sha256": "c8f8f211b064f27bf6d2080ec995d8ad5dc91c45d4a0cec6763b4299f1895c03"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/references/output-templates.md",
+      "sha256": "26ccadcc4d73bdb8e9328cdbc1b1006ab864772f1a809139a50a758196ed97a7"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/references/p0-integration.md",
+      "sha256": "31c3a8dc47c5a8d4ba1fa0b591032253629ec0092a58474bd1b1b614e9e3fd34"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/references/planning-mode-router.md",
+      "sha256": "6d2401af9c3f8013b888b0ec6e10155b72877902276e812e309797151fc51e4c"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/references/public-equity-investing-sensitivity-taxonomy.md",
+      "sha256": "325bd98b648870022a3601b18dc106ef7e763361335ec9a013477878d0bc0fd9"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/references/scenario-overlay-contract.md",
+      "sha256": "73b352671531f45cc4641419bd072424133ad2ca02f7e7ea823d9d9b0444b9e2"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/references/target-backsolve-rubric.md",
+      "sha256": "a893f86752f10e34b1c245b8331ca68491ce05eaf5d2033239d23d8e684774cb"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/scripts/materialize_public_equity_sensitivities.py",
+      "sha256": "4104f1935a26afd6c20ef841a53d946f2cae1e6c3b3fc0de3519365a3eb9d552"
+    },
+    {
+      "path": "skills/scenario-sensitivity-generator/SKILL.md",
+      "sha256": "89835569843532f439c894ca2c92b92bb260d9e59868c8070d36164d86169973"
+    },
+    {
+      "path": "skills/thesis-tracker/agents/openai.yaml",
+      "sha256": "abfdfdfeac911bc86118037061869c06ae2b0a5f54029472b494e7f91bc594dc"
+    },
+    {
+      "path": "skills/thesis-tracker/assets/blank-thesis-tracker-starter.csv",
+      "sha256": "65f6e28b9091d2360b8fcd81da807beee8bfee9d14fa34797af67bae5cb26dad"
+    },
+    {
+      "path": "skills/thesis-tracker/assets/icon.svg",
+      "sha256": "8793905e2c32ff73634ddb98d6354010c7fbd31d47bf1933b6a2a505a29f89b9"
+    },
+    {
+      "path": "skills/thesis-tracker/references/DASHBOARD_PACK.md",
+      "sha256": "544fdf0377db4cae37c6f38a890f6f8b184ce53de5217492b978608cd3b9a431"
+    },
+    {
+      "path": "skills/thesis-tracker/references/intake-and-source-priority.md",
+      "sha256": "38e7a1fc5ed6746787a0d1bc43bd708bc707f01488e1e0ea2138e483a1462c23"
+    },
+    {
+      "path": "skills/thesis-tracker/references/investor-sector-overlays.md",
+      "sha256": "b232e0c6d85db89fd6dabb585eac12b7b10d529d5c5b7400d06040e14bacecc8"
+    },
+    {
+      "path": "skills/thesis-tracker/references/output-templates.md",
+      "sha256": "72892a7ce10cfc203ac884d72f25c207c15bdd4bf592e7fa5887c202e6afb524"
+    },
+    {
+      "path": "skills/thesis-tracker/references/quality-guardrails.md",
+      "sha256": "020c08381ded692b1fd141ea8886f12c0b8e76e510273021c0af8a2da4ca9ace"
+    },
+    {
+      "path": "skills/thesis-tracker/references/thesis-schema.md",
+      "sha256": "f1a3b9d7caeaf62487128309aafc117e0d13c6f3e928069dcc92f132007d7777"
+    },
+    {
+      "path": "skills/thesis-tracker/references/tracker-materializer.md",
+      "sha256": "6196960277082e5514ea3e762a5d0758c4c41a8bd69952723df0c5c8ea60ac19"
+    },
+    {
+      "path": "skills/thesis-tracker/references/workflow-core.md",
+      "sha256": "ee990dbc209ae911f3b1d442d830f2c868775a44ff02c5853a3867ea8012eff4"
+    },
+    {
+      "path": "skills/thesis-tracker/scripts/materialize_thesis_tracker.py",
+      "sha256": "ec5f27d7ab34c51fc5dc022d8f50ef3178509bdb46f5494b319bf3c9cdfe831b"
+    },
+    {
+      "path": "skills/thesis-tracker/scripts/requirements.txt",
+      "sha256": "c742c29e5b75415834bfd7a0050f740c521c3817a2171901ade6dc5922a7bd58"
+    },
+    {
+      "path": "skills/thesis-tracker/SKILL.md",
+      "sha256": "400723258c93cb9a64aff5737db37083417145464ea4c2a44112623adb61402c"
+    },
+    {
+      "path": "skills/three-statement-model-builder/agents/openai.yaml",
+      "sha256": "44923c08d31edf711d67c6e6280635be1ff99f124caf3517643f3758a2321630"
+    },
+    {
+      "path": "skills/three-statement-model-builder/assets/plan_template.json",
+      "sha256": "8d48490e6b27fa7df00a99bd1efa15f75fcffb432480bfa6db448f4a36ae1c95"
+    },
+    {
+      "path": "skills/three-statement-model-builder/assets/templates/banker_formula_workbook_template.xlsx",
+      "sha256": "ece8b10e863c0e8f2896a0295ea08b4ad7a0821978e901209484f94082ed294b"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/banker-formula-workbook-contract.md",
+      "sha256": "cb8697acb422953d1ca68f4705f4dd172b2148f7d13e9228b47d5f3c5bcb817c"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/dashboard-map.md",
+      "sha256": "e54e3b96703fdb3368db335063870d5304ae3988eaa3a7d5e80464df8374fdab"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/forecast-judgment-guide.md",
+      "sha256": "7106b72a9f90af3149d3c85988e653febcf91351ca7a0456fc42de1a369d68b3"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/industry-playbooks.md",
+      "sha256": "523a488da1d30cb6c17e911ba091a96f2ac09788bdf03b5331cdb7d08777bf56"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/integrity-controls.md",
+      "sha256": "a55488404825f980bf176bb0d05a8f873e0ef269d422d9a1f9909e170143ae32"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/model-architecture.md",
+      "sha256": "01ceaf5e6d04549370da6be1c8b39a8257965d4f555ab2ce42c740547f931a52"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/model-math.md",
+      "sha256": "d3bf14dc02faa9f5f0bdfaf448d67347afe5f1e9196d14fe0ac596c061727740"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/output-and-review.md",
+      "sha256": "11cefd328c3c99bb4d674b1059c9a8640a8bf740351eba193abfafb8b0b25224"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/output-spec.md",
+      "sha256": "7fa2b6b6539f547b71461f92540b4ecad408be118339e5fbab74a655b726b577"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/p0-integrations.md",
+      "sha256": "b01c7fb411c74c2cb1c9218499c0779f5a0294bbb6b8c473120d7306e259720a"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/plan-schema.md",
+      "sha256": "c6728b5306267e5fd69823dc39be4621dcd3ad03b193f88bad493e635c18b7e2"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/qa-checks.md",
+      "sha256": "4726c4e67f2a0ce917460146d4a27f7e524df50205b5fb1054901e6b180eb027"
+    },
+    {
+      "path": "skills/three-statement-model-builder/references/reference-router.md",
+      "sha256": "a3c23e205e4c244cf9ed04b5df9d1779e416f4d28b7f0f9f35a7458c396ab1de"
+    },
+    {
+      "path": "skills/three-statement-model-builder/scripts/build_banker_formula_workbook_runtime",
+      "sha256": "ace1c0ad919441324b02cca680b3a249f9b07f848d03cf835aae8883fb6da8cb"
+    },
+    {
+      "path": "skills/three-statement-model-builder/scripts/build_banker_formula_workbook.py",
+      "sha256": "b61621285e8fa3ba0b045da1839000dbea168928e89374b4413184a924b4bdc9"
+    },
+    {
+      "path": "skills/three-statement-model-builder/scripts/run_pipeline.py",
+      "sha256": "26a98d8c8a7c1896d6e9fddc99239dadf4d3ca21ac4146c24b27e31c6bb6596c"
+    },
+    {
+      "path": "skills/three-statement-model-builder/scripts/runtime_loader.py",
+      "sha256": "d940563eac4aeadde84e3bf9463b6f334a5bb8691e6d4e40fe568789a67271c4"
+    },
+    {
+      "path": "skills/three-statement-model-builder/scripts/skill_core.py",
+      "sha256": "54e9e62923c0183dddb918db1f7335403b9b0af45833a5210d3687556111bbf3"
+    },
+    {
+      "path": "skills/three-statement-model-builder/scripts/validate_plan.py",
+      "sha256": "e9cebc811a44292d0ad7a7934b13b37b305b5f4511c87a0cde8332bb377965d4"
+    },
+    {
+      "path": "skills/three-statement-model-builder/scripts/xlsx_writer.py",
+      "sha256": "3bd0bd533dc771ffa0764f6e80ef853238f1ae005b0f4b5cb0f06477dcea168e"
+    },
+    {
+      "path": "skills/three-statement-model-builder/SKILL.md",
+      "sha256": "694420f7e1f00c337f10f03bc79c2642551ee7cd4b097a789724d86121e4e171"
+    },
+    {
+      "path": "skills/user-context/agents/openai.yaml",
+      "sha256": "78ef42c17999fd51bf7419ad54fb39533371e123f3b34a3a264a08be48472334"
+    },
+    {
+      "path": "skills/user-context/plugin-author-config/automation-config.md",
+      "sha256": "e3bf22371b92eee6581477fe36968a34bdf5d87453dddfe2a602ed8537093afe"
+    },
+    {
+      "path": "skills/user-context/plugin-author-config/source-category-config.json",
+      "sha256": "8fd5d20f27d725487122c4caa9efc424fb84ad328437c93b873c9dc5e60d726c"
+    },
+    {
+      "path": "skills/user-context/plugin-author-config/user-context-config.md",
+      "sha256": "73ab30272c3fb792187fa32615ee078781bc6245745953322e8f5224a016a20f"
+    },
+    {
+      "path": "skills/user-context/references/automation.md",
+      "sha256": "bbf63d28acd1e7250d9ff898fd219c9e0d365f224a2560e9091822151de7a99b"
+    },
+    {
+      "path": "skills/user-context/references/onboarding-state-template.json",
+      "sha256": "8ce778e66ccef88f36f2a129f7a9160a9dd14e0a2f695a74295dcd129a9bad5f"
+    },
+    {
+      "path": "skills/user-context/references/onboarding.md",
+      "sha256": "48c46f725f04b29d947580f243ca40e8121f43e265b287ffd6649310b86779f0"
+    },
+    {
+      "path": "skills/user-context/references/plugin-memory.md",
+      "sha256": "fed3b259a042a8120ce26c2156567d13bfce80a2d79d0933026e4af9bbe8faf5"
+    },
+    {
+      "path": "skills/user-context/references/source-category-runtime.md",
+      "sha256": "f809af372cc04153bf2f6a50855afafb6f8ed3e6ebb35900804fbd11bf3802bc"
+    },
+    {
+      "path": "skills/user-context/scripts/init_user_context_state.py",
+      "sha256": "b3567a46974795ef219d1da285e8eb9e1ea2d177bda76bc5e2155afc33beb9d4"
+    },
+    {
+      "path": "skills/user-context/scripts/reset_user_context_state.py",
+      "sha256": "6a7aff46ec8a73eb74f84cdc98e89a59478b81b420c2a8f85ccb0a949f0078b9"
+    },
+    {
+      "path": "skills/user-context/scripts/state_paths.py",
+      "sha256": "80edd7f9131805fc1fd55486b99fc12cfc01fd08fedd79318f225f601369abde"
+    },
+    {
+      "path": "skills/user-context/scripts/user_context_preflight.py",
+      "sha256": "aa105f9fc85347122a1c5ba121db2d559eae24a3dbac85bc03ba02d19c7a5aaa"
+    },
+    {
+      "path": "skills/user-context/SKILL.md",
+      "sha256": "c5906d3303e2f1aabf26f5bc36ed025cb1611c4c7c4675cab103ab0545e1b145"
+    },
+    {
+      "path": "skills/user-context/tests/test_state_helpers.py",
+      "sha256": "c7403b2eb3401974ad88cd70f18b76ca7daa57e5123054e27a5be6bbaaec7e82"
+    },
+    {
+      "path": "tests/goldens/dashboard-production-complete.png",
+      "sha256": "ddc59788c95af1cd5ccedcfadf11733ad38c9aa48ca584e5cdbd0ffe56358118"
+    },
+    {
+      "path": "tests/pm_judgment_golden_prompts.json",
+      "sha256": "9807133c4d4e432fcfcd7763997ef1815c2dfff2d0cc0f5ebca85e85ab44234c"
+    },
+    {
+      "path": "tests/test_artifact_packaging_and_qc.py",
+      "sha256": "9b17a4e97f7e43689a651f7eedfe75db94f4d44c316320552fb9a4c48541608f"
+    },
+    {
+      "path": "tests/test_comps_model_artifact_metadata.py",
+      "sha256": "561ce6053872c16259726c54ef33425c8dd1cb6665651b6dfbf7ff50ca733fc4"
+    },
+    {
+      "path": "tests/test_comps_model_populated_expectations.py",
+      "sha256": "9ec5bc2326e2602bc9491ca642446a1f2c5923ee5d574e126e0f4d5a16a9d339"
+    },
+    {
+      "path": "tests/test_comps_multiple_bridge_contract.py",
+      "sha256": "75036f8e4cc6a8389544457e656fb360e53adeafdee99985b31c0e4e09c0c6d0"
+    },
+    {
+      "path": "tests/test_core_pm_skill_sharpening.py",
+      "sha256": "27669bfa73807328c5b6d16a1b95fe4ac6fde290e9a4392e6cb5e3dab4f08237"
+    },
+    {
+      "path": "tests/test_credit_language_boundary_contract.py",
+      "sha256": "99918f025b04823fb63fc9fc9cac5d426b4de599426c8c01b70718de26e2583f"
+    },
+    {
+      "path": "tests/test_credit_markets_handoffs_for_risk.py",
+      "sha256": "3e76e1b2df43a8456abe9103e77d0f0c400cb0ec9ef32c1cda7fc1ace1d7c9be"
+    },
+    {
+      "path": "tests/test_credit_markets_handoffs_for_valuation.py",
+      "sha256": "71af7c4ae489a128a818e1b18bca9de8dafc79063be2f89e3231afac59cbfc83"
+    },
+    {
+      "path": "tests/test_dashboard_kind_contract.py",
+      "sha256": "6c808182ac570e2e0d8ed0ad8189e3f205008ffb392075e188ebf7d85c9eda7f"
+    },
+    {
+      "path": "tests/test_dashboard_map_coverage.py",
+      "sha256": "60857088e2c0f02e46a311b6574809dd5086fb61358f6927a42f6935cda8824e"
+    },
+    {
+      "path": "tests/test_deck_report_qc_equity_research_contract.py",
+      "sha256": "24af8191fe2577ccaf4b325750c9d28801bd2de2679608308d457711fb3e260a"
+    },
+    {
+      "path": "tests/test_deliverable_framework.py",
+      "sha256": "0985f674e20a10de7c211cf702204656993774058d2cd26fd3c3c8e6364e2bb6"
+    },
+    {
+      "path": "tests/test_economic_impact_public_equity_contract.py",
+      "sha256": "f07a4ab18f03fc20a9b1b52dcfd690731892797c5c9711c29d9c1aa480211bb3"
+    },
+    {
+      "path": "tests/test_equity_model_update_rename.py",
+      "sha256": "0391494a182ebacacd61c9c47a44199dcc4ea3adea4c17ad0d047aea997c9c46"
+    },
+    {
+      "path": "tests/test_equity_model_update_workbook.py",
+      "sha256": "245f015fc5f8521d5ea4cafe459592133338ce2d9dca5f9921a693e7541745cc"
+    },
+    {
+      "path": "tests/test_equity_research_support_layer_contracts.py",
+      "sha256": "3c9547d7646b3fcfeee8df5a4647a4104e0e6d41a6479040618ccc761cb23477"
+    },
+    {
+      "path": "tests/test_excel_data_cleaner_public_equity_domains.py",
+      "sha256": "85deed00419da37062389430cce7eaca983f5bd6ce7858f5f8bd7cfb9d16a3b7"
+    },
+    {
+      "path": "tests/test_financials_normalizer_public_equity_contract.py",
+      "sha256": "56542cc6ba4598942259486a97f21a71d4ca2afa0e5df0fc20e0a7afe76c38d7"
+    },
+    {
+      "path": "tests/test_index_etf_event_contracts.py",
+      "sha256": "2c4062522a6f819ea3bb51a9d783e3052d086c0370170d1d82e6703f83ee151f"
+    },
+    {
+      "path": "tests/test_markdown_support_policy.py",
+      "sha256": "62037781e7dec598b0b383882efaa7ebe3689bb5e8d879c96f0f8ce91773f9c1"
+    },
+    {
+      "path": "tests/test_model_audit_tieout.py",
+      "sha256": "10d31adf953566ed16d63b29b2f4876a50fa4fd69466c08e086a37c07285a1bb"
+    },
+    {
+      "path": "tests/test_model_valuation_pm_judgment.py",
+      "sha256": "2e618ee9db1435caff941deb5460714a35add74d164f7611be0d1a315177861d"
+    },
+    {
+      "path": "tests/test_model_workbook_artifacts.py",
+      "sha256": "2581f67f5223b6659c22fd5409235c83c8cfa1cc2558b39d1cb46d32d497d30a"
+    },
+    {
+      "path": "tests/test_pm_judgment_language.py",
+      "sha256": "69b00fff1204862aa0c8fb715a796178dbb81e93a688500968e05ddbe0d18d47"
+    },
+    {
+      "path": "tests/test_pm_risk_workflow_contracts.py",
+      "sha256": "a97b1e5601000a251d3741b5e6b996eeb349f1d60901c917474a564523b1dce0"
+    },
+    {
+      "path": "tests/test_portfolio_risk_management_hedge_credit_boundary.py",
+      "sha256": "e505e86403170222004064fc34de9a826a7803b4b1107d34ee392bc12f7ec809"
+    },
+    {
+      "path": "tests/test_portfolio_risk_management_sizing_credit_boundary.py",
+      "sha256": "aae4dea0d2e9114b87b5c9c0ab755eb32f18b9f7535ce068b6d3c7a6702bc432"
+    },
+    {
+      "path": "tests/test_portfolio_risk_management_sizing_logic.py",
+      "sha256": "6d4308a070ee6cd60dd56306894d9c38ab7e11556380c2b211983e3ef9174140"
+    },
+    {
+      "path": "tests/test_public_equity_monitoring_contracts.py",
+      "sha256": "c2ba0552699ded6a712d765bf82db0879ac94d318ecabb09462ef888ed9534ae"
+    },
+    {
+      "path": "tests/test_scenario_skew_contract.py",
+      "sha256": "1a4cb94cbd604af89791123e15382aa2981a5e6e6daf1d3bf9317ff4629a4c9d"
+    },
+    {
+      "path": "tests/test_sector_context_overlay_contract.py",
+      "sha256": "bca61a41282a9823d0ec5e535671025f0eb49d2153fbb121d08cdf3efb31d2ee"
+    },
+    {
+      "path": "tests/test_sector_overlay_credit_language_classification.py",
+      "sha256": "bda56b5444601b42cf2b195d5e98857281b6dcf149f7199c8af7896d2c33b5c5"
+    },
+    {
+      "path": "tests/test_source_data_qa_credit_handoffs.py",
+      "sha256": "76614feb750d42308ba1735e5f0f5664f81e1af84ca7d8becd52ebe343270b44"
+    },
+    {
+      "path": "tests/test_stale_public_markets_language.py",
+      "sha256": "f74cf8622e7d9ee8ab29307386c653dc782097aeb2b878b68a04a972a1be55e7"
+    },
+    {
+      "path": "tests/test_style_guide_adapter_equity_artifact_contract.py",
+      "sha256": "351fa2da84676a24ee0143100d98aa9879d8d602399620556f53b73c436ecb47"
+    },
+    {
+      "path": "tests/test_unsupported_connector_promises.py",
+      "sha256": "79d713a2993940b39503da419efcffda31925b2e4a1a8b153b4101dd28f0f5b3"
+    }
+  ]
+}

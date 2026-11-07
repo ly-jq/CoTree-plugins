@@ -1,0 +1,61 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.linear",
+  "name": "Linear",
+  "version": "0.2.0",
+  "description": "通过 Linear 官方 MCP 完成任务分诊、Issue 维护和项目规划。",
+  "presentation": {
+    "icon": "resources/source-02/content/assets/logo.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.linear.connect",
+      "description": "配置或排查 Linear 认证并确认当前工作区、团队和可用工具。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.linear.triage",
+      "description": "读取和整理 Linear 任务、项目或周期，识别阻塞与重复事项。",
+      "path": "skills/triage/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.linear.manage",
+      "description": "创建、更新、关闭或评论 Linear 任务，并确认最终字段。",
+      "path": "skills/manage/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.linear.plan",
+      "description": "把需求整理为 Linear 项目或父子任务，并在用户要求落地时创建。",
+      "path": "skills/plan/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "linear",
+      "transport": "streamable-http",
+      "url": "https://mcp.linear.app/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_LINEAR_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "d5efce165ce889eb6f3ee9d811924271c3e02d6bab0a7223d733732a4ffeea98"
+  }
+}

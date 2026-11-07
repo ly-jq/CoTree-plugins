@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.typescript-lsp",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "typescript-lsp",
+    "repository": "claude-plugins-official",
+    "path": "plugins/typescript-lsp",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "51c4a8ecfe48c98d36099557b45cadae8b2ca9bbb2d962e36415a27f27506445",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "已有语言的原生 LSP 配置已生成；需要在目标工作区合并配置并验证工具链，插件安装不会自动写设置。"
+  ],
+  "components": [
+    {
+      "kind": "lsp",
+      "source": "marketplace.json#lspServers",
+      "state": "reference",
+      "target": "configuration/lsp.json",
+      "reason": "Native workspace configuration proposal; installing this plugin does not apply LSP settings."
+    }
+  ],
+  "copiedFiles": 2,
+  "sourceFiles": [
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "1a14b7083f67af18499d0bc2e5cefce11925e851c58b12eb982db90ea644662a"
+    }
+  ]
+}

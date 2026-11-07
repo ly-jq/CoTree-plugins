@@ -1,0 +1,64 @@
+{
+  "resources": [
+    {
+      "sourceId": "import.claude.math-olympiad",
+      "sourcePath": "content/skills/math-olympiad/references/solver_heuristics.md",
+      "destination": "references/olympiad-source/solver_heuristics.md",
+      "sha256": "cd2d7a405e2ffd30529e081d4c118014db20163eba53f1714b9c0b41fda3bb08",
+      "source": {
+        "ecosystem": "claude",
+        "package": "math-olympiad",
+        "repository": "claude-plugins-official",
+        "path": "plugins/math-olympiad",
+        "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+        "dirty": false,
+        "digest": "d390a7d573ec91c5f289515dfd3689d84b05343f1f82c20b6b662008fb0b791c"
+      }
+    },
+    {
+      "sourceId": "import.claude.math-olympiad",
+      "sourcePath": "content/skills/math-olympiad/references/known_constructions.md",
+      "destination": "references/olympiad-source/known_constructions.md",
+      "sha256": "b953ac02c44fb580283a64c5ec31b5c4ea9013666470eaef39cd069e376c9490",
+      "source": {
+        "ecosystem": "claude",
+        "package": "math-olympiad",
+        "repository": "claude-plugins-official",
+        "path": "plugins/math-olympiad",
+        "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+        "dirty": false,
+        "digest": "d390a7d573ec91c5f289515dfd3689d84b05343f1f82c20b6b662008fb0b791c"
+      }
+    },
+    {
+      "sourceId": "import.claude.math-olympiad",
+      "sourcePath": "content/skills/math-olympiad/references/verifier_patterns.md",
+      "destination": "references/olympiad-source/verifier_patterns.md",
+      "sha256": "849d52b765d0ab4737d0c75f12d3aee909268ccf2fa30e4c5b15213f91778327",
+      "source": {
+        "ecosystem": "claude",
+        "package": "math-olympiad",
+        "repository": "claude-plugins-official",
+        "path": "plugins/math-olympiad",
+        "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+        "dirty": false,
+        "digest": "d390a7d573ec91c5f289515dfd3689d84b05343f1f82c20b6b662008fb0b791c"
+      }
+    },
+    {
+      "sourceId": "import.claude.math-olympiad",
+      "sourcePath": "content/skills/math-olympiad/references/presentation_prompts.md",
+      "destination": "references/olympiad-source/presentation_prompts.md",
+      "sha256": "a7fa503d7e8caec53af25026130da155ae6fa803ecf274b27fd95e178038afda",
+      "source": {
+        "ecosystem": "claude",
+        "package": "math-olympiad",
+        "repository": "claude-plugins-official",
+        "path": "plugins/math-olympiad",
+        "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+        "dirty": false,
+        "digest": "d390a7d573ec91c5f289515dfd3689d84b05343f1f82c20b6b662008fb0b791c"
+      }
+    }
+  ]
+}

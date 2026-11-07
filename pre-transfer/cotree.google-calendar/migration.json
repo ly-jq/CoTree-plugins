@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.google-calendar",
+  "version": "0.2.0",
+  "category": "通信与日程",
+  "priority": 0,
+  "batch": 11,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "google-calendar",
+      "repository": "plugins",
+      "path": "plugins/google-calendar",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "716c891d97d34b3e3875357db2fe3c28c39858fd4512ed535f91aa4e0793b93a",
+      "upstreamVersion": "1.2.6"
+    }
+  ],
+  "changes": [
+    "专属连接器改为六个原生工作流及九项 Calendar REST 操作，保留原图标和官方 MCP。",
+    "显式时间窗口、重复实例、全天独占结束日期、分页、ETag 和通知参数进入执行合同。"
+  ],
+  "limitations": [
+    "随包 REST 客户端使用固定操作和固定 HTTPS origin，一次一页，1 MiB JSON 输入 / 8 MiB 响应、20 秒超时；不跟随重定向、不自动重试、不存储凭据。真实账户读写与 OAuth 获取 / 刷新仍待验收。",
+    "官方 MCP 仍需 Workspace Developer Preview 准入、Calendar API / MCP API 启用和独立 OAuth；普通 API key 不可替代。",
+    "REST 不包含 ACL 管理、日历创建 / 永久清空、增量同步、事件导入 / 跨日历移动；会议链接与附件须匹配实际 API schema 和权限。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "list calendars / summarize day / daily brief": "connect / agenda / brief：身份、日历、时间窗口、展开重复事件、分页和会议准备。",
+    "availability / scheduling": "availability / schedule：freebusy 独立只读 POST、事件创建、时区 / 全天和通知语义。",
+    "create / update / delete events": "schedule / modify：固定 REST、ETag 条件更新 / 删除、单次与系列区分，保留官方 MCP。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

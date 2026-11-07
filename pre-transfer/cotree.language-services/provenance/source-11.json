@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.swift-lsp",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "swift-lsp",
+    "repository": "claude-plugins-official",
+    "path": "plugins/swift-lsp",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "cb267f509356035209208f327b448371071f510ce0936ab7affc2413a7d02ef4",
+    "upstreamVersion": "1.0.0"
+  },
+  "status": "deferred-original-function",
+  "limitations": [
+    "当前 Elyra 未支持该 LSP 语言；仅保留服务资料，不能通过安装本包启用语言能力。"
+  ],
+  "components": [
+    {
+      "kind": "lsp",
+      "source": "marketplace.json#lspServers",
+      "state": "deferred",
+      "reason": "Language is not supported by the current Elyra LSP runtime."
+    }
+  ],
+  "copiedFiles": 2,
+  "sourceFiles": [
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6a06feb0a42c55c92210f3ef951df7302d23daff9be2643ff44e9d1d9b9b0d3d"
+    }
+  ]
+}

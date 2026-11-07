@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-10-14T07:48:44.597Z",
+  "results": {
+    "elyra.discord": {
+      "packageDigest": "dda920ad75c48151c1ce716a2a495a48cfb487831f187312d769aece2273588e",
+      "status": "isolated-channel-runtime",
+      "skills": 4
+    },
+    "elyra.telegram": {
+      "packageDigest": "33be210362177e45f745ea052f00f173b3a42622e886facad4925520ff7a0f49",
+      "status": "isolated-channel-runtime",
+      "skills": 3
+    },
+    "elyra.imessage": {
+      "packageDigest": "b55ad2f9bda1c601137c9130671114213beb46efb52d221b4b1501f74e0d269c",
+      "status": "isolated-channel-runtime",
+      "skills": 3
+    },
+    "elyra.fakechat": {
+      "packageDigest": "f8c9d5fe76506cb603010dd25ff0c1d23191c5b69a93ad244d25bdfe53454688",
+      "status": "isolated-channel-runtime",
+      "skills": 2
+    }
+  },
+  "artifacts": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch27\\runtime-check\\discord-protocol.json",
+      "sha256": "107a4e49845f18bcd2402498266d48434ec52f3ad8d06aa96ee95edc7da81908"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch27\\runtime-check\\telegram-protocol.json",
+      "sha256": "cb35c9e5891d663e97a6408eba2afd6e97e12c259048e240c6f76e31c1a68638"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch27\\runtime-check\\imessage-history.json",
+      "sha256": "a1467f7628f4e8a6e3e2f0489d7eb88e28f4af29f74a8de5c17032d75b90d03f"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch27\\runtime-check\\synthetic-messages.sqlite",
+      "sha256": "7bdb0f4ce3b49bd8ef8981c3e5e6969d6657bae7ae8945b81327e0ad876300b6"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch27\\runtime-check\\imessage-send-plan.json",
+      "sha256": "556221f235bfe492e4eda16f9a700c793525fce17de94b49dbcf6f9d32f0a48b"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch27\\runtime-check\\imessage-platform.json",
+      "sha256": "8d4a9a03b596a863a60bb1b9754e4ad80ff8c9f34a9d203f0fe9dfb6ad214a70"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch27\\runtime-check\\attachment.txt",
+      "sha256": "6c042e99a6e75194e70316fbdca5deb83dc148b03fbb5ce2d2db740f003bec5d"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch27\\runtime-check\\downloaded.txt",
+      "sha256": "6c042e99a6e75194e70316fbdca5deb83dc148b03fbb5ce2d2db740f003bec5d"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch27\\runtime-check\\desktop.png",
+      "sha256": "5846bcf091a0003690d99f4d06e59e39da7ea35102e91a8d504a18b198e55792"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch27\\runtime-check\\mobile.png",
+      "sha256": "a7636b79518d3749cef983c7b595a4bdae0016cf4ed47561fc4121fb6547b522"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch27\\runtime-check\\fakechat-browser.json",
+      "sha256": "93152feac8d3e3dabe1dd55b30bae940a0cc789e21d5cf5ded6a14446ffe4748"
+    }
+  ],
+  "realAccounts": false,
+  "externalMessagesSent": 0,
+  "providerCalls": 0,
+  "limitations": [
+    "Discord/Telegram network operations use injected fixtures only.",
+    "iMessage uses synthetic SQLite and argv planning; real macOS permission and delivery remain pending.",
+    "Fakechat uses a real loopback HTTP server and browser; it does not run a model."
+  ]
+}

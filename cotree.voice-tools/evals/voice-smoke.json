@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "id": "audio-transcribe-smoke",
+      "suite": "voice-smoke",
+      "task": "Use the PluginCoTreeVoiceToolsAudioTranscribe tool to convert a provided base64 speech clip to text, then confirm a non-empty transcript is returned.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    },
+    {
+      "id": "audio-speech-smoke",
+      "suite": "voice-smoke",
+      "task": "Use the PluginCoTreeVoiceToolsAudioSpeech tool to synthesize the sentence 'Hello from CoTree' into mp3 audio, then confirm audio bytes are returned.",
+      "execution": "agent",
+      "maxSteps": 4,
+      "expectedStatus": "completed"
+    }
+  ]
+}

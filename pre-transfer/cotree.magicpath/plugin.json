@@ -1,0 +1,68 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.magicpath",
+  "name": "MagicPath",
+  "version": "0.2.0",
+  "description": "在 CoTree 中连接 MagicPath，搜索和复用设计组件、同步主题、编辑画布并检查构建结果。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/magicpath.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.magicpath.connect",
+      "description": "准备独立 MagicPath CLI 和账户连接。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.magicpath.discover",
+      "description": "发现 MagicPath 项目、团队、组件和当前画布选择。",
+      "path": "skills/discover/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.magicpath.integrate",
+      "description": "将 MagicPath 组件接入实际应用，或翻译成目标框架。",
+      "path": "skills/integrate/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.magicpath.canvas",
+      "description": "把仓库界面或组件创建、修改到 MagicPath 画布。",
+      "path": "skills/canvas/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.magicpath.themes",
+      "description": "读取 MagicPath 设计系统并应用 CSS 变量和字体。",
+      "path": "skills/themes/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.magicpath.images",
+      "description": "检查 MagicPath 画布图片并按授权上传项目素材。",
+      "path": "skills/images/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.magicpath.share",
+      "description": "获取 MagicPath 链接并在 CoTree 的实际浏览器查看。",
+      "path": "skills/share/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "ef1311a80fa2fa8fb456ff01e7db287e13649db1726b80fc473fee7400f50f14"
+  }
+}

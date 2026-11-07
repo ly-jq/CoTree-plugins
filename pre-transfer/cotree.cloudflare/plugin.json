@@ -1,0 +1,103 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.cloudflare",
+  "name": "Cloudflare",
+  "version": "0.2.0",
+  "description": "在 CoTree 中开发和部署 Cloudflare Workers、Agents、Durable Objects 与 MCP 服务，并管理存储、环境和实际性能证据。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/cloudflare.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.cloudflare.connect",
+      "description": "接入 Cloudflare 官方 Code Mode MCP，核实身份与 account / zone 范围。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.cloudflare.platform",
+      "description": "按实际需求选择 Cloudflare 产品，并查阅完整平台参考与当前文档。",
+      "path": "skills/platform/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.cloudflare.workers",
+      "description": "实现或维护 Cloudflare Workers，核对绑定、请求生命周期与运行时兼容性。",
+      "path": "skills/workers/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.cloudflare.storage",
+      "description": "配置 Cloudflare KV、R2、D1、Queues、Vectorize 等资源与应用绑定。",
+      "path": "skills/storage/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.cloudflare.durable-objects",
+      "description": "开发 Durable Objects 的持久状态、RPC、alarm 与 WebSocket 协调。",
+      "path": "skills/durable-objects/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.cloudflare.agents",
+      "description": "使用 Cloudflare Agents SDK 构建有状态应用、调度、RPC 与可恢复聊天。",
+      "path": "skills/agents/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.cloudflare.mcp",
+      "description": "将 MCP 服务适配 Cloudflare Workers，配置传输、状态与独立 OAuth。",
+      "path": "skills/mcp/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.cloudflare.sandbox",
+      "description": "开发 Cloudflare Sandbox SDK 应用，管理容器、任务、文件和预览生命周期。",
+      "path": "skills/sandbox/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.cloudflare.wrangler",
+      "description": "使用项目已有 Wrangler 执行开发、类型生成和明确范围的管理命令。",
+      "path": "skills/wrangler/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.cloudflare.deploy",
+      "description": "向明确 Cloudflare 环境发布应用，核对路由、版本和可观察结果。",
+      "path": "skills/deploy/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.cloudflare.performance",
+      "description": "用现有浏览器能力测量 Cloudflare 页面性能并验证改进。",
+      "path": "skills/performance/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "cloudflare-api",
+      "transport": "streamable-http",
+      "url": "https://mcp.cloudflare.com/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_CLOUDFLARE_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "77338f034dc73e45c5f042f713df343a123ded9485e1804a4bdfff33060b9f4e"
+  }
+}

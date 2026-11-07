@@ -1,0 +1,43 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.teaching",
+  "name": "教学与解释",
+  "version": "0.2.0",
+  "description": "按需解释工程决策、组织有意义的代码练习并反馈学习结果。",
+  "presentation": {
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.teaching.explain",
+      "description": "结合实际代码解释实现、设计取舍和可迁移知识。",
+      "path": "skills/explain/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.teaching.practice",
+      "description": "以用户主动练习为中心，安排范围明确的代码任务与渐进提示。",
+      "path": "skills/practice/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.teaching.feedback",
+      "description": "对练习代码给出基于证据的反馈、提示与下一步练习。",
+      "path": "skills/feedback/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "259edcc00eb34d803814b33921ec2d8635a862ada86798b360583225dff4fbd2"
+  }
+}

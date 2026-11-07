@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.fakechat",
+  "version": "0.2.0",
+  "category": "通信与日程",
+  "priority": 0,
+  "batch": 27,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "fakechat",
+      "repository": "claude-plugins-official",
+      "path": "external_plugins/fakechat",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "f1720dbd490ddd141e1e4c62d8e5e1c72cabcc79c8b8977bdba7ce59f3ff8605",
+      "upstreamVersion": "0.0.1"
+    }
+  ],
+  "changes": [
+    "Bun/私有Channels改为自包含Node loopback UI及显式本地消息操作。",
+    "保留回复、编辑、上传/下载和有界收件箱，令牌授权及XSS/请求来源边界可验证。"
+  ],
+  "limitations": [
+    "当前任务显式poll处理入站，不自动唤醒模型；进程结束不保留历史。",
+    "本地模拟不证明Discord/Telegram/iMessage真实服务可用。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "browser UI / attachments": "start：独立跨平台loopback界面、内存附件及会话令牌。",
+    "reply / edit_message / inbound": "exchange：显式poll/reply/edit/upload，真实本地消息与附件回读。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

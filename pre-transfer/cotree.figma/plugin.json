@@ -1,0 +1,92 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.figma",
+  "name": "Figma",
+  "version": "0.2.0",
+  "description": "连接 Figma 设计上下文，完成代码实现、组件映射与设计 / FigJam / Slides 创作。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/logo-padded.png",
+    "darkIcon": "resources/source-01/content/assets/logo-padded.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true,
+    "mcpServers": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.figma.connect",
+      "description": "选择 Figma 桌面或远程 MCP，核实客户端准入、连接与可用能力。",
+      "path": "skills/connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.figma.inspect",
+      "description": "读取 Figma 文件或选区的结构、设计上下文、变量和截图。",
+      "path": "skills/inspect/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.figma.implement",
+      "description": "将 Figma 设计实现到当前项目，包括 SwiftUI，并核验设计一致性。",
+      "path": "skills/implement/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.figma.compose",
+      "description": "在 Figma 中创建文件或从代码 / 描述构建设计页面，复用已有库。",
+      "path": "skills/compose/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.figma.library",
+      "description": "盘点或维护 Figma 变量、样式、组件库和项目设计规则。",
+      "path": "skills/library/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.figma.code-connect",
+      "description": "建立或检查 Figma 组件与项目代码组件的 Code Connect 映射。",
+      "path": "skills/code-connect/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.figma.diagram",
+      "description": "在 FigJam 创建流程、架构、时序或关系图，并检查连接关系。",
+      "path": "skills/diagram/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.figma.slides",
+      "description": "在 Figma Slides 构建或编辑可继续修改的演示文稿。",
+      "path": "skills/slides/SKILL.md",
+      "disableModelInvocation": true
+    },
+    {
+      "name": "cotree.figma.motion",
+      "description": "读取 Figma 动效并实现到代码，或在支持的编辑 API 中维护时间线。",
+      "path": "skills/motion/SKILL.md",
+      "disableModelInvocation": true
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "figma",
+      "transport": "streamable-http",
+      "url": "https://mcp.figma.com/mcp",
+      "headersEnv": {
+        "Authorization": "COTREE_FIGMA_MCP_AUTHORIZATION"
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "c2193f8f877ce11a4a9534e5255330ee505b5c2cfdc414f3ad47490d76682ef1"
+  }
+}

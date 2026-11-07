@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.claude-security",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "claude-security",
+    "repository": "claude-plugins-official",
+    "path": "plugins/claude-security",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "02df5ca9903d6f1112988c3a0b68b819a3263ba848431ae51eada4dc92d7f46a",
+    "upstreamVersion": "0.12.0"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "通用审查资料已迁移；专有 Workflow / Agent 选择器和权限 Hook 未注册。",
+    "Agent import.claude.claude-security.explore 保留模型引用 sonnet；需配置对应 Elyra 模型，不静默改变模型选择。",
+    "Agent import.claude.claude-security.scan-inventory 保留模型引用 sonnet；需配置对应 Elyra 模型，不静默改变模型选择。",
+    "Agent import.claude.claude-security.scan-loader 保留模型引用 sonnet；需配置对应 Elyra 模型，不静默改变模型选择。",
+    "Agent import.claude.claude-security.scan-redactor 保留模型引用 sonnet；需配置对应 Elyra 模型，不静默改变模型选择。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/claude-security/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/claude-security/SKILL.md",
+      "sourceMetadata": {
+        "name": "claude-security",
+        "description": "Claude Security: scan the codebase (the whole repository or a scoped part of it), scan changes (this branch's or a pull request's diff, or one commit), or suggest patches (findings turned into targeted patch files, each verified by a panel of agents, that you apply when you choose). Use when the user asks to scan, audit or check code with Claude Security, to scan their changes with Claude Security, or to fix or patch Claude Security findings."
+      }
+    },
+    {
+      "kind": "agent",
+      "source": "agents/claude-security.md",
+      "state": "deferred",
+      "reason": "Cannot preserve tool restrictions: Workflow, Workflow(claude-security:scan), TaskCreate, TaskGet, TaskList, TaskUpdate, TaskOutput, TaskStop, Agent(claude-security:scan-inventory, claude-security:scan-researcher, claude-security:scan-verifier, claude-security:scan-loader, claude-security:scan-redactor, claude-security:patch-generator, claude-security:patch-verifier, claude-security:explore). Definition retained as reference."
+    },
+    {
+      "kind": "agent",
+      "source": "agents/explore.md",
+      "state": "converted",
+      "target": "content/agents/explore.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/patch-generator.md",
+      "state": "deferred",
+      "reason": "Cannot preserve tool restrictions: Agent(claude-security:explore). Definition retained as reference."
+    },
+    {
+      "kind": "agent",
+      "source": "agents/patch-verifier.md",
+      "state": "deferred",
+      "reason": "Cannot preserve tool restrictions: Agent(claude-security:explore). Definition retained as reference."
+    },
+    {
+      "kind": "agent",
+      "source": "agents/scan-inventory.md",
+      "state": "converted",
+      "target": "content/agents/scan-inventory.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/scan-loader.md",
+      "state": "converted",
+      "target": "content/agents/scan-loader.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/scan-redactor.md",
+      "state": "converted",
+      "target": "content/agents/scan-redactor.md"
+    },
+    {
+      "kind": "agent",
+      "source": "agents/scan-researcher.md",
+      "state": "deferred",
+      "reason": "Cannot preserve tool restrictions: Agent(claude-security:explore). Definition retained as reference."
+    },
+    {
+      "kind": "agent",
+      "source": "agents/scan-verifier.md",
+      "state": "deferred",
+      "reason": "Cannot preserve tool restrictions: Agent(claude-security:explore). Definition retained as reference."
+    },
+    {
+      "kind": "hook",
+      "source": "hooks/hooks.json",
+      "state": "deferred",
+      "reason": "Source host event / output contract is not registered in Elyra."
+    }
+  ],
+  "copiedFiles": 44,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "3576c397867ad312519d7346afba035f1363007b400d12b5e241e15dd50b81fd"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "6165c3453b390e9e0718ddeeb212cd9652559d7dff94a622aca6819279d5f133"
+    },
+    {
+      "path": "agents/claude-security.md",
+      "sha256": "b6ffed9f97ac263cbee4b6a986df5e8c00f6c2affee6979f1b43c04650d2320a"
+    },
+    {
+      "path": "agents/explore.md",
+      "sha256": "33469106c1b754c53000fada8dd5f72eb1f17348d9e7da435b0997795155dac9"
+    },
+    {
+      "path": "agents/patch-generator.md",
+      "sha256": "c813ba43601b11ca47f1d8f6db97c487b17f37c555482ea552461cc6150d0b2b"
+    },
+    {
+      "path": "agents/patch-verifier.md",
+      "sha256": "a9cffdbb894da9da96bed5c1ef31a1bf20e2c2dcf626d7185ad59aa12bcd8ee2"
+    },
+    {
+      "path": "agents/scan-inventory.md",
+      "sha256": "84dc5a96c9ae4c198ab39e3c8db6f2e2729ff032f9e80ab5ab766ed64adea465"
+    },
+    {
+      "path": "agents/scan-loader.md",
+      "sha256": "6dd1b274aae7de7b1b3c8810a469aeee46eba8ccaccccb0cba1fd1b55bd1a2f1"
+    },
+    {
+      "path": "agents/scan-redactor.md",
+      "sha256": "9261f274a1c4930ad95d62b1cc1f25719af414543aa434dd9b2ab52d089d95e9"
+    },
+    {
+      "path": "agents/scan-researcher.md",
+      "sha256": "e708259950956244471f6fef4adbc50bf99e189c68a48b925f8dca0f674df659"
+    },
+    {
+      "path": "agents/scan-verifier.md",
+      "sha256": "6a24be23785cd44069c4999c30a62aabb2d8c799100916fb8d76da7e3249fa9b"
+    },
+    {
+      "path": "hooks/hooks.json",
+      "sha256": "e74c462ffb157fc972a9ece65d0d78aabc264e0de850be9aa79e924f59aeaac7"
+    },
+    {
+      "path": "hooks/hooks.py",
+      "sha256": "2243b2a80a71fd3a21650ba0c18fc3a89eb7a1761709b4102a4f2b2f844d5786"
+    },
+    {
+      "path": "hooks/hooks.sh",
+      "sha256": "5a2c9a25bfababe681f126ed4bd10d9eec44b7082ec52cb158999c7aadcd31ba"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "15d46b21bd3c8ead21dd4fe0f4b82a8d934b698cf6367b09c06211058fc4332d"
+    },
+    {
+      "path": "NOTICE.md",
+      "sha256": "de9f06a5e0b160f563704ef53f03336f17b65685285b0b077a574ff3f3d28d8f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ee6076a0c950676b6cb8e55d106bf98e738ab5fb4f1e03501642595c4301d9e8"
+    },
+    {
+      "path": "scripts/keep-waiting.sh",
+      "sha256": "ba887b9e1ca809609514961dececde97e7ba86c970249916151e919d1fe182ad"
+    },
+    {
+      "path": "scripts/lib/__init__.py",
+      "sha256": "4673bbd8db2c97c8dd7f387345693a7b55f9ac8ce9d6a13f7ce0c4b6a4757981"
+    },
+    {
+      "path": "scripts/lib/absolute.py",
+      "sha256": "274b390e2ec1b45b514d6cfb5adcfa7367793059d8761142e75f8725bd0e119b"
+    },
+    {
+      "path": "scripts/lib/chain.py",
+      "sha256": "9ffe1168e340719d85cced9d3ec71e7d6e43588b0bad3efe771ad93315490025"
+    },
+    {
+      "path": "scripts/lib/console.py",
+      "sha256": "64fd95924c02e42696941e07df425cd4c326cedeb978dda1f9244fd7e5e4f374"
+    },
+    {
+      "path": "scripts/lib/cwe-categories.json",
+      "sha256": "ebc4b1eff4fb1dfba2e1783f53c61371d1a66c6935a76098ed47c10e6d97dcc0"
+    },
+    {
+      "path": "scripts/lib/cwe.py",
+      "sha256": "24732e033eed4800ba14b5a39e3876b7e20cdddd5686dad76996ee423439e331"
+    },
+    {
+      "path": "scripts/lib/finding.py",
+      "sha256": "696f51b5744f7bbc34ddb3bd6dc4dd6d66057430492e118d2ad955e46343ff03"
+    },
+    {
+      "path": "scripts/lib/git.py",
+      "sha256": "1194a377b419dfab18d990a1f0bc2053d2665eb3c20b91d811c52432eda4756a"
+    },
+    {
+      "path": "scripts/lib/link.py",
+      "sha256": "0f5991ed0bbf86b8f043ec41d3ffe76bad2e818868f2663a1ea7650864c19fc2"
+    },
+    {
+      "path": "scripts/lib/plugin.py",
+      "sha256": "ddd59daf34345e3d88fcf516500db38122dbf8d929d2662911f84b1ef5286459"
+    },
+    {
+      "path": "scripts/lib/revision.py",
+      "sha256": "36ebc075d805a3c85aac3b1c609c750e018cb4f0d7858a09cf3b175d0607cc64"
+    },
+    {
+      "path": "scripts/lib/sarif.py",
+      "sha256": "888a95e8332174eb0a85e7e15bbbc15da2e2f428a9a4f054f4a402f6c99920cf"
+    },
+    {
+      "path": "scripts/lib/secret.py",
+      "sha256": "e44c15a5d7343e4e6b610be494a0d207e359ced9180c55a0b9cfbef4b3ef977b"
+    },
+    {
+      "path": "scripts/lib/source.py",
+      "sha256": "931c24e4d439083ee2f585107e2623c6d005120fcdfa2ae6c199c908bc7b90ce"
+    },
+    {
+      "path": "scripts/lib/strictjson.py",
+      "sha256": "5eeb94bf5046157aab855aacbc3335c2aeb89a65c89493ddf9a8475674b21896"
+    },
+    {
+      "path": "scripts/patch_artifacts.py",
+      "sha256": "636c9f7cad43687be94bcad7639bddb95a4828651853d7caef19744bd40f67e1"
+    },
+    {
+      "path": "scripts/render_report.py",
+      "sha256": "2884f1c99bbef75c7d0df7259ef2ce648369f1021a5b48867ada648e4b45c8c8"
+    },
+    {
+      "path": "scripts/save_result.py",
+      "sha256": "e38c959da2199f3e7a14bf7ffd06803f7a239f4ecb5663c5ef80c216f1e017d4"
+    },
+    {
+      "path": "scripts/write_scan_meta.py",
+      "sha256": "1cbf92f8fdfe51431edfdafacf10165fe0e5116f004376a034bb575db4374c4f"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "b60e6fcc9f67467478500b150fe7f87fe76c3d04404b2baffccfc5b6ad6f5caf"
+    },
+    {
+      "path": "skills/claude-security/jobs/scan-changes.md",
+      "sha256": "038279778115e5f81d15fed1ec348ce2587e8e2df13518701c825ff18fb3f7eb"
+    },
+    {
+      "path": "skills/claude-security/jobs/scan-codebase.md",
+      "sha256": "bd03e0fc69a6f7f36b7a4ccc3443b3bcdb4d408e75f37d1653d679b1307c4e38"
+    },
+    {
+      "path": "skills/claude-security/jobs/suggest-patches.md",
+      "sha256": "c4af04aa33b7038e968f436200a16c6a347ff56d62b1b3f5af369b9e0a07828f"
+    },
+    {
+      "path": "skills/claude-security/role.md",
+      "sha256": "3871c06865a02e7e25106a36b45ec8072a95a9f870d76c97aed37e41598c9560"
+    },
+    {
+      "path": "skills/claude-security/SKILL.md",
+      "sha256": "58898a55aa8d086460bc4cc9c87e75b6198bf3b7cd55fe1fa231c0d66016480f"
+    },
+    {
+      "path": "skills/claude-security/specs/patch-spec.md",
+      "sha256": "dd7d48ecf53a1a18f4ec4036841c3c8bd2b1e23e661391635de576f40cb121ef"
+    },
+    {
+      "path": "skills/claude-security/specs/report-spec.md",
+      "sha256": "138df8ea0f296d040a0de51872c6f15a8a227d34e51fb92e1f6cb1ce127a1ca6"
+    },
+    {
+      "path": "workflows/scan.js",
+      "sha256": "a0bc7ba25dfb024878811b5c266c75eb6d73b84dcbc32fde462535dbfbc284f0"
+    }
+  ]
+}

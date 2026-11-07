@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.code-review",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "code-review",
+    "repository": "claude-plugins-official",
+    "path": "plugins/code-review",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "0bb347b20401753166748f890c642604f5aa72690b5348164fd3160407faa65c"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "command",
+      "source": "commands/code-review.md",
+      "state": "converted",
+      "target": "content/commands/code-review.md",
+      "sourceMetadata": {
+        "description": "Code review a pull request",
+        "disable-model-invocation": false
+      }
+    }
+  ],
+  "copiedFiles": 3,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "0c696b6273aad8535a0ecf27ce256b941950d3f701af67e4c36a50d119fa33dc"
+    },
+    {
+      "path": "commands/code-review.md",
+      "sha256": "e7e5eee326fbf12c21a52e4beaec91c6d4dcf74afe8313f3b980aad94547fa73"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "771946f4aa675a6db5b61ee3f209c47644cb65b7ffb47a0dda5596e14730a7ba"
+    }
+  ]
+}

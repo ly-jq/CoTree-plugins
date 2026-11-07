@@ -1,0 +1,91 @@
+{
+  "observedAt": "2026-10-06T11:44:51.677Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "preserved-reader-tests-and-real-local-browser-fixtures",
+  "credentialsUsed": false,
+  "cloudCalls": false,
+  "packages": [
+    {
+      "id": "elyra.data-analytics",
+      "digest": "90a7d1eed9da6ab08ff16a7a25f58372aaeb521e8ddc2552004f10aedfddbe7c"
+    },
+    {
+      "id": "elyra.build-web-data-visualization",
+      "digest": "8ab695b2754dc2eba2c3806795d502dab8109e204beb1b5c3778a54f76d3c5ea"
+    }
+  ],
+  "sourceTests": {
+    "sha256": "89b04143e9aa78be069f94bc027c15f366c01c2382f631a1c66260334ca0b25f",
+    "passed": 25,
+    "skipped": 0,
+    "modifications": "Only builder import, CLI path, asset directory and owned temporary output location; assertions unchanged."
+  },
+  "syntheticQueryRecomputed": true,
+  "browser": {
+    "channel": "msedge",
+    "observations": [
+      {
+        "surface": "report",
+        "readerHydrated": true,
+        "numericTableSort": true,
+        "globalFilterToolbar": "not-provided-by-report-surface",
+        "chartRendered": true,
+        "printFallbackVisible": true,
+        "narrowOverflow": false,
+        "pageErrors": []
+      },
+      {
+        "surface": "dashboard",
+        "readerHydrated": true,
+        "filterChangedRows": [
+          2,
+          1
+        ],
+        "chartRendered": true,
+        "printFallbackVisible": true,
+        "narrowOverflow": false,
+        "pageErrors": []
+      },
+      {
+        "type": "bar",
+        "rendered": true,
+        "missingDataPreserved": true,
+        "narrowOverflow": false,
+        "pageErrors": []
+      },
+      {
+        "type": "line",
+        "rendered": true,
+        "missingDataPreserved": true,
+        "narrowOverflow": false,
+        "pageErrors": []
+      },
+      {
+        "surface": "report",
+        "javascriptDisabled": true,
+        "semanticFallbackReadable": true
+      }
+    ],
+    "externalRequests": 0
+  },
+  "outputs": [
+    {
+      "name": "report.html",
+      "sha256": "7411f379d09a487f6a3c7c9506c9a509dcb8226a88a1c9660e09fa63934dcea4"
+    },
+    {
+      "name": "dashboard.html",
+      "sha256": "f717ffd26c89c7adfdf6a88bc5dbf4733b1e9e7d2d3eb149af4449b7dc1558bc"
+    },
+    {
+      "name": "chart.html",
+      "sha256": "e4a44814baadd38561477e82f12d70cee774e3ec835c32fc37e912bd8810c0b7"
+    },
+    {
+      "name": "line.html",
+      "sha256": "1a650ba3b35318a964d3e9df7b189ade68da475e2a1e927b375918a1f0278b1b"
+    }
+  ],
+  "boundary": "Local synthetic data; no real account, model analysis quality, all visualization types or cloud export acceptance."
+}

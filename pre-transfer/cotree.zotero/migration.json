@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.zotero",
+  "version": "0.2.0",
+  "category": "团队协作与知识",
+  "priority": 0,
+  "batch": 16,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "codex",
+      "package": "zotero",
+      "repository": "plugins",
+      "path": "plugins/zotero",
+      "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+      "dirty": false,
+      "digest": "5f8583a93eae664f2fba3a188fe4c175569e5372c7a9d2c19f58df0f1570ed60",
+      "upstreamVersion": "0.1.2"
+    }
+  ],
+  "changes": [
+    "将来源工作流重写为八个原生入口；使用 Node.js 标准库替换 Python 执行依赖，完整保留 Python 来源与路由参考。",
+    "增加固定 loopback、显式分页 / 内容开关 / 导入目标核对，以及无部分写入的离线引用计划；实际文稿编辑复用 CoTree 文件工具。"
+  ],
+  "limitations": [
+    "原生工作流与协议适配已实现；真实账户或本地 Desktop 文献库、模型任务效果及跨平台运行仍待验收。",
+    "需运行 Zotero Desktop 并启用本地 API，固定 127.0.0.1:23119；不自动改 prefs、重启、读取数据库或暴露端口。没有新增远程账户依赖。",
+    "本包使用本地 API 读取与 Connector 导入；未实现 Zotero 10 的直接对象写入 / 本地授权密钥、附件上传或云 API。Connector 导入依赖当前 UI 选择，预检查无法消除选择变化竞争，需导入后确认实际目标。",
+    "引用规划器处理有界 BibTeX 结构，不执行 TeX 或解析宏；同键内容不同、多个待引条目或 marker 歧义时拒绝，需要先解决冲突。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "status / probe / enable / restart": "connect：元数据探测和实际 Desktop 设置；不自动编辑运行中 prefs、关闭应用或直接操作 SQLite。",
+    "inventory / search / collections / tags / groups / searches": "固定 loopback API、显式分页、版本与实例约束；不猜搜索首条就是正确文献。",
+    "export-bibtex / sync-bib / citations / cite": "export / bibliography / cite：真实导出键、CSL 结果、单条引用规划和宿主文件编辑，拒绝同键冲突及重复 marker。",
+    "children / fulltext / file-url": "attachments：显式内容意图，索引全文与附件实际内容分开，不自动打开返回路径。",
+    "selected-target / import-bibtex / import-ris": "import：核对当前库 / 集合、明确写入意图、稳定 session；UI 选择存在竞争，导入后必须核实实际目标。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 2,
+  "id": "cotree.session-insights",
+  "version": "0.2.0",
+  "category": "开发与质量",
+  "priority": 0,
+  "batch": 20,
+  "status": "native-adapted",
+  "sources": [
+    {
+      "ecosystem": "claude",
+      "package": "receipts",
+      "repository": "claude-plugins-official",
+      "path": "plugins/receipts",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "374437e59d46fbb3df9f332e814d6bf6d8f679973a30496add9c99fb7a245074"
+    },
+    {
+      "ecosystem": "claude",
+      "package": "session-report",
+      "repository": "claude-plugins-official",
+      "path": "plugins/session-report",
+      "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+      "dirty": false,
+      "digest": "e559ba53f3d228dfb50a774b372b1473c274c82261a0515dbad409b9415f6fff"
+    }
+  ],
+  "changes": [
+    "两份来源会话分析能力去重为三个原生工作流，替换 ~/.claude/projects 和来源 transcript 解析。",
+    "新增只读 SQLite 快照分析，聚合实际模型响应、项目、Run / 子 Run、Skill 和工具结果，缺失值保留 null 与诊断。",
+    "同一份聚合数据生成 JSON、Markdown 和可筛选 / 排序的离线 HTML；独占输出目录，不导出正文或推算账单。"
+  ],
+  "limitations": [
+    "每次读取一个显式选择的 CoTree agent.db；其他工作区数据库、设备或已清理事件不包含。需 Node 22.13+ 支持 node:sqlite，当前 CoTree runs / events 表合同。",
+    "缺少来源 transcript 特有的缓存中断、prompt 归因和文件编辑统计时不伪造等价指标。当前工具成功、Run 终态或 token 数不证明业务交付；Git / PR 需按任务另核实。"
+  ],
+  "deduplicated": [],
+  "capabilityCoverage": {
+    "session-report / analyze-sessions / HTML template": "report：只读 CoTree SQLite，UTC 窗口、项目 / Run / Skill / 工具统计与交互 HTML，去除 Claude 日志解析。",
+    "receipts / mine-transcripts / manager narrative": "receipt：同一份聚合 JSON 生成 Markdown 和 HTML，具体产出以实际 Git / PR / 文件证据补充，不推算收益。",
+    "tokens / cache / subagents / expensive prompts / git attribution": "investigate：实际响应账本和父 Run，缺值及覆盖率明确；没有正文的统计不能推断 prompt 开销、缓存中断或提交归因。"
+  },
+  "evidenceBoundary": "Native packaging and integration are checked separately from model-driven tasks and external service outcomes."
+}

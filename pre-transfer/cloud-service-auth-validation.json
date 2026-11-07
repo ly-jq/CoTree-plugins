@@ -1,0 +1,41 @@
+{
+  "observedAt": "2026-10-06T15:04:39.510Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "live-unauthenticated-boundary-only",
+  "credentialsSent": false,
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "results": {
+    "elyra.cloudflare": {
+      "packageDigest": "253b3298712ab9b18b4a51ac8b1f62a0f1670eb75dfe893710b3acf80b18d1a2",
+      "endpoint": "https://mcp.cloudflare.com/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.gitlab": {
+      "packageDigest": "7264e3520ba4b11af29014aca5e666e79d2330a3b82454fcf4d6bff69055cf12",
+      "endpoint": "https://gitlab.com/api/v4/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    }
+  }
+}

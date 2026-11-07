@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.claude.playground",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "claude",
+    "package": "playground",
+    "repository": "claude-plugins-official",
+    "path": "plugins/playground",
+    "commit": "d182ca456ca09d31d139f7d3818d1d333b103cce",
+    "dirty": false,
+    "digest": "84472481337b92ab8a6bf0ad86e366b7324e4dd155b11326f581e71802cda392"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/playground/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/playground/SKILL.md",
+      "sourceMetadata": {
+        "name": "playground",
+        "description": "Creates interactive HTML playgrounds — self-contained single-file explorers that let users configure something visually through controls, see a live preview, and copy out a prompt. Use when the user asks to make a playground, explorer, or interactive tool for a topic."
+      }
+    }
+  ],
+  "copiedFiles": 9,
+  "sourceFiles": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "6ae3e38f012b50a98e065ea76d035d1142c8d6626032a5d50bc7d426f70fadcd"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e542439528e2e42cc1e3c0d6aff27c84f456e2a931b94235d6a39dc4c4dd778f"
+    },
+    {
+      "path": "skills/playground/SKILL.md",
+      "sha256": "28a20850338318564a5eee2ec57123710f753d70e0cabe4a567ce4df19278fed"
+    },
+    {
+      "path": "skills/playground/templates/code-map.md",
+      "sha256": "be968f883f6c05b8e8eb0f407d6fd7e691105626c45a6d2960033123c9f3a4e3"
+    },
+    {
+      "path": "skills/playground/templates/concept-map.md",
+      "sha256": "5e7dcec97f3bb758d3e1d428a530fb4fe9444b425dc459fcd0c7e75c38272663"
+    },
+    {
+      "path": "skills/playground/templates/data-explorer.md",
+      "sha256": "a53caa674afb9ce221933e0d5a5ad0508bd67553e672505bb0be7c121d54be9d"
+    },
+    {
+      "path": "skills/playground/templates/design-playground.md",
+      "sha256": "50e483e1a8a4ec6f591bb07c284c4f55dda0682252166cfc1399fe9569ed9a84"
+    },
+    {
+      "path": "skills/playground/templates/diff-review.md",
+      "sha256": "de0b2059bdd17365992b5cacbfb8e2aadf00dee55b9e45b1413b7fffecf5eff5"
+    },
+    {
+      "path": "skills/playground/templates/document-critique.md",
+      "sha256": "adb065891dbdde891c4cd13a6015465e5f5e5e3ffa5ba3d477b2968a82cc65d7"
+    }
+  ]
+}

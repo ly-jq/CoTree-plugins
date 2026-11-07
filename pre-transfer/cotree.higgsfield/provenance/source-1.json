@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.higgsfield",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "higgsfield",
+    "repository": "plugins",
+    "path": "plugins/higgsfield",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "daa43e63fc55749f886b57fe5dd2497f90487a75d1b0d84dc68aa8c4801973a4",
+    "upstreamVersion": "1.2.1"
+  },
+  "status": "partial-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_HIGGSFIELD_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/faceless-channel/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/faceless-channel/SKILL.md",
+      "sourceMetadata": {
+        "name": "faceless-channel",
+        "description": "Use only when the user asks to produce a finished multi-scene narrator-led\nvideo and explicitly requests a faceless channel, YouTube automation, narrated\nexplainer/story/education, documentary, storybook or myth retelling, or kids\nsong video. Topic alone is never enough: a generic video of/about something,\nincluding a historical topic, uses ordinary video generation. Do not use for\nplanning or ideas, single clips, silent animation, image-to-video, footage\nedits, ads, product demos, or UGC. This workflow requires a consistent\nnon-photoreal style, reusable assets, narrator voiceover, and burned subtitles.\n"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/narrator/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/narrator/SKILL.md",
+      "sourceMetadata": {
+        "name": "narrator",
+        "description": "Activate when the user explicitly names the narrator skill or requests\nproduction-ready narration in either case: (1) numbered takes fitted to fixed\nvideo windows, or (2) one continuous long-form story read in a locked voice\nthat must be measured and retried for timbre or internal pauses. Collect\nmissing text, voice_id, or voice_type after activation; their absence is not a\nreason to skip this workflow. Own pacing, speech-duration gates, retries, and\nready audio delivery; never time-stretch. Do not use for ordinary TTS, \"read\nthis aloud\", an unconstrained voiceover, voice browsing, music, SFX, singing,\ndubbing existing speech, or voice cloning.\n"
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/subtitles/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/subtitles/SKILL.md",
+      "sourceMetadata": {
+        "name": "subtitles",
+        "description": "Burn timed subtitles onto a finished video or configure Whisper-timed caption\nburning during faceless-video assembly. Takes video/audio generation jobs or a\nlocal finished video, optionally with authored narration text, and returns a\ncaptioned video or the exact backend subtitle configuration.\nTimings always come from Whisper on the video's own audio — never estimated.\nTHREE looks: `paper` (torn cream paper label, handwritten ink), `bold` (UGC\nALL-CAPS, white with black stroke, platform safe zones), `clean` (slim white\nCAPS, no plate, tiny at the bottom — no Pillow needed).\nUse when: adding/burning subtitles or captions to an existing video, restyling\ncaptions, or when a production workflow needs its finished cut subtitled.\nNOT for: generating the video, translating speech, or live/soft subtitle tracks\n(this burns them into the picture).\n"
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#higgsfield",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/higgsfield"
+    },
+    {
+      "kind": "connector",
+      "source": ".app.json",
+      "state": "deferred",
+      "reason": "Host connector identities are not MCP endpoints. Credentials and app records are not copied."
+    }
+  ],
+  "copiedFiles": 25,
+  "sourceFiles": [
+    {
+      "path": ".app.json",
+      "sha256": "24e92bf45b90f91a2ddc02653a7ace5beb1d41c7306558295e17953b8b8c8a23"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "03ab83486422b690d3af0f644ca8f54dc5bdd1d2e78d47325cf3fca4485d35d1"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "d21a0c33bba7bd9a92b6c3d9f3cc1ffb213852201ae7b6400f3168952e7cde5a"
+    },
+    {
+      "path": "skills/faceless-channel/agents/openai.yaml",
+      "sha256": "b471dae4748972f28a1f0fcbbb38fcd76aebab33ccf3a41c0375dae8e9251604"
+    },
+    {
+      "path": "skills/faceless-channel/assets/icon.svg",
+      "sha256": "d2a185ab8b1dc146787aaec6d4d48cc48bbb8ebe84e0ede44990ea8db7cad2c7"
+    },
+    {
+      "path": "skills/faceless-channel/references/generation-and-delivery.md",
+      "sha256": "2cc9f46b09932ca746ebe29c344e23a6c2de61e88783e8379bf5ad72b81cb637"
+    },
+    {
+      "path": "skills/faceless-channel/references/history-longform.md",
+      "sha256": "3898e130b30cad3253372396476e7ea935d9f2598c25c30cd9e2cc4f7b2b29bc"
+    },
+    {
+      "path": "skills/faceless-channel/references/intake-and-dispatch.md",
+      "sha256": "f81c2d7e2d013127ca720f764ea80f37aa51649a5b7e8462a630366a0302ac5d"
+    },
+    {
+      "path": "skills/faceless-channel/references/kids-song.md",
+      "sha256": "d9227a0fc25736941260d9be51f694a52a006dc34203f1277a872f180d07467d"
+    },
+    {
+      "path": "skills/faceless-channel/references/kids-styles.md",
+      "sha256": "f523e33d34d7d4af53f553aae2211b617317c9a17fd201f44a37f18d59b033ab"
+    },
+    {
+      "path": "skills/faceless-channel/references/picture-flow.md",
+      "sha256": "9a1a1d988c3319fb1ae4f7f28f2d58db0785b2729faf0c85d10be24b496ba07b"
+    },
+    {
+      "path": "skills/faceless-channel/references/prompts.md",
+      "sha256": "225174b4d6c1c4aae4260187857492c948e22faf76c138b5f7a30934f41a144a"
+    },
+    {
+      "path": "skills/faceless-channel/references/style-cinematic-storybook.md",
+      "sha256": "61c5305a75ad1d5e9c3922c9d3e7e2768c75422ad05e6974cd6247caf835d423"
+    },
+    {
+      "path": "skills/faceless-channel/references/style-editorial-collage.md",
+      "sha256": "c2a69500f129fec210f8fef0e0c115bfd397a2dab010e94d3b94d97d5c36abc9"
+    },
+    {
+      "path": "skills/faceless-channel/references/style-mannequin.md",
+      "sha256": "e2304b6987470c45ba3ea0930e46e6e3d82fc375595e57d485832a12770ab69c"
+    },
+    {
+      "path": "skills/faceless-channel/references/style-paper-diorama.md",
+      "sha256": "df3600f7648a95322de163c2c457074f8fcaf36a46760b302976ef56f3a35ca6"
+    },
+    {
+      "path": "skills/faceless-channel/references/vo_and_captions.md",
+      "sha256": "dceca61cfc8d917135bde279b99d29f8dc02277783fb7450ed0aade5241f6963"
+    },
+    {
+      "path": "skills/faceless-channel/SKILL.md",
+      "sha256": "8f73cc981e3da3573337c849c08c465adca57b0e54758cf149a7c38ae11a4610"
+    },
+    {
+      "path": "skills/narrator/agents/openai.yaml",
+      "sha256": "5bdb8a569e144dd6922784d31e7eb376e4721aa01859931bc885d4d81efbca49"
+    },
+    {
+      "path": "skills/narrator/assets/icon.svg",
+      "sha256": "d2a185ab8b1dc146787aaec6d4d48cc48bbb8ebe84e0ede44990ea8db7cad2c7"
+    },
+    {
+      "path": "skills/narrator/scripts/speech_metrics.sh",
+      "sha256": "0de5d75eb5c98a6dc0d0f921e07755768f7028c9e0c75b0adb2af60e6a295eb3"
+    },
+    {
+      "path": "skills/narrator/SKILL.md",
+      "sha256": "959cdac83a43c298f5a55f3bb6f4fcf352752455c35bedeb5b50e0763f945f31"
+    },
+    {
+      "path": "skills/subtitles/agents/openai.yaml",
+      "sha256": "37b73b1d602968fdd2db936182c6fdcc8350a05acfcd2e6248c68b0e5896b258"
+    },
+    {
+      "path": "skills/subtitles/assets/icon.svg",
+      "sha256": "2f264abab3ebabc3876f3f25a23bc7e05ce558ee176b3059598922889bc61ceb"
+    },
+    {
+      "path": "skills/subtitles/scripts/audio_to_captions.py",
+      "sha256": "a1aa0e80f8927980872f09a8f5687a77e3a06790ea9bacf7c1024215864c1a3f"
+    },
+    {
+      "path": "skills/subtitles/scripts/burn_caps_clean.sh",
+      "sha256": "2af668697c584ce775c644eb015a3d6fb3a9bf0ca34d58509f2d010aff031319"
+    },
+    {
+      "path": "skills/subtitles/scripts/subtitle_paper_burn.py",
+      "sha256": "0271e202fbe6e83f4df6beaf2a8c0b9a38551bd75a58f76605d3291a7783a211"
+    },
+    {
+      "path": "skills/subtitles/SKILL.md",
+      "sha256": "606e31e0c81e13d1653cf13cb18e94031ea67495a388dea75b504fa0e90de73c"
+    }
+  ]
+}

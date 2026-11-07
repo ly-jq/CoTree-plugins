@@ -1,0 +1,131 @@
+{
+  "generatedAt": "2026-10-14T08:16:50.691Z",
+  "results": {
+    "elyra.adobe": {
+      "packageDigest": "d7cc373668dfa9deba03e2408a88b10a000f151220d3f17dc33e53b38c338537",
+      "status": "isolated-media-runtime",
+      "skills": 7
+    },
+    "elyra.chatcut": {
+      "packageDigest": "ef6775ce892905d60371a5a9475c1ebd371dd472ba95ef1481022e6edadd8d6d",
+      "status": "isolated-media-runtime",
+      "skills": 2
+    },
+    "elyra.creative-production": {
+      "packageDigest": "a8c73e4c0753552b740f47dcc39390342ed33decf73d066b3eb1294b3add8afe",
+      "status": "isolated-media-runtime",
+      "skills": 4
+    },
+    "elyra.higgsfield": {
+      "packageDigest": "ce91c23129f36b315b5dc60b3d38825955d624a110ff236be66bef5a488f1784",
+      "status": "isolated-media-runtime",
+      "skills": 5
+    }
+  },
+  "artifacts": [
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\adobe-coverage.json",
+      "sha256": "0e76d22baa77c741017b4a9363dbf764181bc5b957cd1147c4455fd86fe7acbb"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\chatcut-package\\metadata.json",
+      "sha256": "80373d19f0e1e3d2df2fa0aea8e107f60fd8fd5992089be4e7016b203c10bcfc"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\chatcut-package\\package.tgz",
+      "sha256": "77631e44c58ae42d79b653dfcffdf37a5bd9f00e94975df180a6de17812cc8d9"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\launcher with spaces & parentheses (fixture)\\echo.mjs",
+      "sha256": "0c434caa1accd404536198fe0741d23467117d01f507b958a03331d75af4d4d4"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\launcher with spaces & parentheses (fixture)\\chatcut-mcp.cmd",
+      "sha256": "650a1296f97091ce3dec9358684ad0649855a1b7d60ecdc50f807399f2f96acd"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\chatcut-transport.json",
+      "sha256": "09c4256106b6356c9bb6856ef80f4b0e658a1efec20c8b6f1be1b89b672bde81"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\direction-a.png",
+      "sha256": "6b39cb2806da9566d001fac124808d879ad592f1d776bf3697db7ebbfa39a0c3"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\direction-b.png",
+      "sha256": "6a943c54f0ee109c4b84ceecbf5675334344c9003fa42ef02246322ec42f42e6"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\synthetic-tone.wav",
+      "sha256": "2580d947f7259aed57633d7454732d527e211f261a38b0af24b8cd0735f1b296"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\assembled.mp4",
+      "sha256": "569c813bdef47d8d10c3b8d93756de368eb2607c5f5181a0c684c94716c7bda8"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\assembly.json",
+      "sha256": "237dc999090d475db6d0b366ad2738809e74981867306fa93a83bc58ea13cf41"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\captions.srt",
+      "sha256": "33fea66d5c58a49fff29fef9acddf91166058763626c34ced654954b21169fc5"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\captioned.mp4",
+      "sha256": "b5f6d66e19a53b6f38afd94327fcffd71cfa115230bba2c473c2e52aac9f1f06"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\captioned.json",
+      "sha256": "5367636c1856dad3f19958999c5d9a6914617a39de1e4dfa4451eabaaf861b77"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\caption-frame.png",
+      "sha256": "a2c981743949b4edd203e611f837eb40fcc90a7e2b3cc272395f322f232a32b2"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\tests\\plugin-runtime\\fixtures\\media-input-check.py",
+      "sha256": "02117e5208bdac98b4b32189d4fdc1785b18ad31ce00ee652ff0f5ae14dfcc9d"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\board.json",
+      "sha256": "2ae616b5eb6dc253442685bc9269b2a3217d6ad482ca8f9c29c723bef274a62b"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\python-check.json",
+      "sha256": "e1a7d345eb6812220283ab00f3109f2ba0dd8d1b2232dd1b5def6694008a737b"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\review-board.3142c2813e5583aac702411f20123764a3612b0a6aabe8822f0d0a4afbd44735.bak",
+      "sha256": "3142c2813e5583aac702411f20123764a3612b0a6aabe8822f0d0a4afbd44735"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\review-board.html",
+      "sha256": "9baab16abd1d009e34f10feecac95af1a79ee4a4a1d865702bcb0c74e325a90e"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\higgsfield-anonymous.json",
+      "sha256": "76c87ffe9676621989c08031bd4f478f5e978d9e1373820d7487a0edffb15da0"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\desktop.png",
+      "sha256": "c1d4431715037a5713a16027efb7743e424350408ca1ad8a394f428501ae96de"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\mobile.png",
+      "sha256": "51236b4c5a4ceee9baeb2aafe5b83672432a17bbd5af55cc21689affbcb58f63"
+    },
+    {
+      "path": "G:\\CommonTools\\SEO\\ElyDream\\.codex-tmp\\batch29\\runtime-final\\creative-browser.json",
+      "sha256": "fbc0c328a95f1eb929db019ed2a6514dfa45f53cc09cf359c2ca52fa8d42f5f8"
+    }
+  ],
+  "realAccounts": false,
+  "externalWrites": 0,
+  "limitations": [
+    "Adobe has workflow/resource verification only; no real Adobe editing or login.",
+    "ChatCut official bridge transport tested using a synthetic launcher; Desktop and project unavailable.",
+    "Creative board and FFmpeg run on synthetic raster/tone/caption fixtures.",
+    "No paid generation, voice, transcription/model downloads or publication performed."
+  ]
+}

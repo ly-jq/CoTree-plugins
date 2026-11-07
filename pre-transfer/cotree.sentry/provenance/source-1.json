@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.sentry",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "sentry",
+    "repository": "plugins",
+    "path": "plugins/sentry",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "f60e81163e6dde965bb3413d8b4d4245ac0a24502eaba0ac6ad0fde5a8710088",
+    "upstreamVersion": "0.1.2"
+  },
+  "status": "converted-unverified",
+  "limitations": [
+    "设置 ELYRA_CODEX_SENTRY_MCP_AUTHORIZATION 为该服务独立授权得到的完整 Authorization header（例如 Bearer 加访问令牌）。不复用原宿主 OAuth client。自动 OAuth 发现 / 刷新未实现。"
+  ],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/sentry/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/sentry/SKILL.md",
+      "sourceMetadata": {
+        "name": "sentry",
+        "description": "Use when the user asks to inspect Sentry issues or events, summarize recent production errors, or pull basic Sentry health data via the Sentry API; perform read-only queries with the bundled script and require `SENTRY_AUTH_TOKEN`."
+      }
+    },
+    {
+      "kind": "mcp",
+      "source": ".mcp.json#sentry",
+      "state": "converted",
+      "target": "plugin.json#mcpServers/sentry"
+    }
+  ],
+  "copiedFiles": 8,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "06c4bcb304c61061aa73faf5ea9b38c24c2e8a0420886c6f860d1cbcf189f33b"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "9e690a53182accfb705a4dd23514f60c0ae8baf6f72ab4b656663a4cfe3979d6"
+    },
+    {
+      "path": "assets/sentry-small.svg",
+      "sha256": "a87c83365ec42f2e8ccbe55268fcad06517335b3e0a6d4062f8680462d734b29"
+    },
+    {
+      "path": "assets/sentry.png",
+      "sha256": "b61e0534635a275cf56f7dad26ac7cc36504b7bd9a60c95791d6e72634129fb1"
+    },
+    {
+      "path": "skills/sentry/agents/openai.yaml",
+      "sha256": "1f78c906ba246985f1df1b2429ebfbde79579de14bee293fa0b8ef413b2c3639"
+    },
+    {
+      "path": "skills/sentry/assets/sentry-small.svg",
+      "sha256": "a87c83365ec42f2e8ccbe55268fcad06517335b3e0a6d4062f8680462d734b29"
+    },
+    {
+      "path": "skills/sentry/assets/sentry.png",
+      "sha256": "b61e0534635a275cf56f7dad26ac7cc36504b7bd9a60c95791d6e72634129fb1"
+    },
+    {
+      "path": "skills/sentry/LICENSE.txt",
+      "sha256": "44e03f7e263eb3ad256440c1eeab5e49168baff5a78ecef9a5447261cf3a91bc"
+    },
+    {
+      "path": "skills/sentry/scripts/sentry_api.py",
+      "sha256": "3224ecbe37e6e5c2e9b5448aa97b2d4e225d32ddb8e51a001b395f4231a5baaf"
+    },
+    {
+      "path": "skills/sentry/SKILL.md",
+      "sha256": "ce816e37e0790d01ec9aae9640889033b3fd8b144e9387c52ad621746650d601"
+    }
+  ]
+}

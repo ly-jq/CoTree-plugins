@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "converterVersion": "1.0.0",
+  "id": "import.codex.circleci",
+  "version": "0.1.0",
+  "source": {
+    "ecosystem": "codex",
+    "package": "circleci",
+    "repository": "plugins",
+    "path": "plugins/circleci",
+    "commit": "5fd93af4cd0c623e020d0cc7e9ce178b4ac1f70f",
+    "dirty": false,
+    "digest": "44d483c3be5e8e6abd8bfb21452b3943d724c9ab653ef93587e8c7b02fbe1203",
+    "upstreamVersion": "1.0.4"
+  },
+  "status": "converted-unverified",
+  "limitations": [],
+  "components": [
+    {
+      "kind": "skill",
+      "source": "skills/builds/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/builds/SKILL.md",
+      "sourceMetadata": {
+        "name": "circleci-builds",
+        "description": "Diagnose and fix failing CircleCI builds quickly and safely. Use when users ask to investigate failed CircleCI jobs, triage flaky pipelines, identify root causes from logs, and implement minimal fixes in configuration, test setup, or build-related code paths."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/chunk/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/chunk/SKILL.md",
+      "sourceMetadata": {
+        "name": "chunk",
+        "description": "Use CircleCI Chunk for AI-assisted CI/CD work through either the Chunk web UI or the chunk-cli. Trigger this skill when users ask to set up Chunk, troubleshoot or fix failing builds with Chunk, configure Chunk environments, schedule/proactively run Chunk tasks, or use chunk-cli commands such as init, validate, build-prompt, auth, sandbox, task, and skill install."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/cli/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/cli/SKILL.md",
+      "sourceMetadata": {
+        "name": "circleci-cli",
+        "description": "Operate and troubleshoot CircleCI using the CircleCI CLI. Use when users ask to authenticate CLI access, inspect pipeline/workflow/job status, validate configuration locally, rerun pipelines/jobs, trigger pipelines, or gather actionable diagnostics from CLI outputs."
+      }
+    },
+    {
+      "kind": "skill",
+      "source": "skills/config/SKILL.md",
+      "state": "converted",
+      "target": "content/skills/config/SKILL.md",
+      "sourceMetadata": {
+        "name": "circleci-config",
+        "description": "Optimize CircleCI configuration for speed, reliability, and maintainability. Use when users ask to improve `.circleci/config.yml`, reduce CI runtime, tune caching/workspaces/parallelism, remove pipeline waste, or fix flaky pipeline behavior caused by configuration choices."
+      }
+    }
+  ],
+  "copiedFiles": 18,
+  "sourceFiles": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "92d032c70941d2d6b8fff1216b93fff4d3f742e83a26e0dbd423d84ed86b27dc"
+    },
+    {
+      "path": "assets/composer-icon.svg",
+      "sha256": "22afa0808e4d865e89a4c55da4c369ef384d41b573e3e1c5203e456034e0d110"
+    },
+    {
+      "path": "assets/logo-dark.png",
+      "sha256": "90c627e6cd18e245e0337d9ed5e33b543bfa8e697f13be35c6c7e89b69922396"
+    },
+    {
+      "path": "assets/logo.png",
+      "sha256": "2cfb69f15521888cedce9adf3c6554976f2b8d780b48414068c25b3da57d5d6c"
+    },
+    {
+      "path": "skills/builds/agents/openai.yaml",
+      "sha256": "92d6aa3673fe169b11832b7325ace902e7c3ad4b58929d487b0cc2994f4e9624"
+    },
+    {
+      "path": "skills/builds/references/transient-vs-deterministic.md",
+      "sha256": "d5d347cfd6151875b91484bc5e03393fc221862078cbfee635657e2ea78f3bf9"
+    },
+    {
+      "path": "skills/builds/SKILL.md",
+      "sha256": "51727943726400a0f94898d3a73d5b357979ab696c2352591034fbcb2f5c2e96"
+    },
+    {
+      "path": "skills/chunk/agents/openai.yaml",
+      "sha256": "cb900a1b85862a1b5ef36a1f9fa973a0224c56d342b6965a10483999e7d0f636"
+    },
+    {
+      "path": "skills/chunk/references/chunk-cli.md",
+      "sha256": "ad925b5c612578e523cd709b81b71917b9d0150be8ac52b5b2a7984ff1cafbf3"
+    },
+    {
+      "path": "skills/chunk/references/chunk-ui.md",
+      "sha256": "b068b1852fd46102aacdcbb5de1e5af0dba4e25ec2adca7f82c452525375d892"
+    },
+    {
+      "path": "skills/chunk/SKILL.md",
+      "sha256": "aae5ea99692fdb12f489277ced967d46a1dec8857fa42905cfeb5cb4e8576c7a"
+    },
+    {
+      "path": "skills/cli/agents/openai.yaml",
+      "sha256": "5fb4f109eb002ab25fcabb04d036d2f94705845e5e3f54b28ae3c9abfbbc76ab"
+    },
+    {
+      "path": "skills/cli/SKILL.md",
+      "sha256": "121eefe595f584a10c24a266e09e433885b6aebb572e34a6569c6ed928f66584"
+    },
+    {
+      "path": "skills/config/agents/openai.yaml",
+      "sha256": "4dd67a1c41adcdef16dc73770efd905dabb93b12b3278b553509cdc9c84adf8c"
+    },
+    {
+      "path": "skills/config/references/cache-optimization.md",
+      "sha256": "e9902e723a9ffd9fbbcbdcd432ae1389402dff6595ee0af6497e07a76dd4b68d"
+    },
+    {
+      "path": "skills/config/references/patterns.md",
+      "sha256": "e101ef6755e9dd7f49791af072f40b8e7dc9ba7c35f99ccf59ef0d6f9625e0b7"
+    },
+    {
+      "path": "skills/config/references/persisting-data.md",
+      "sha256": "21bbbd35fa2c91600b385ec12e6bac9f172e8dbd53559153096d7b0cb578a4a2"
+    },
+    {
+      "path": "skills/config/references/test-results-and-splitting.md",
+      "sha256": "0ebc5548d7b713b23169311490b9974087970d02520fdf3588ae099673383ac7"
+    },
+    {
+      "path": "skills/config/SKILL.md",
+      "sha256": "83eb08c66b155c8c3020da4b1a830a53386758e174584f793d0e7de6c1e8e5d7"
+    }
+  ]
+}

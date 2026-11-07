@@ -1,0 +1,56 @@
+{
+  "observedAt": "2026-10-06T14:06:38.936Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "live-unauthenticated-boundary-only",
+  "credentialsSent": false,
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "results": {
+    "elyra.airtable": {
+      "packageDigest": "2856becdf1eac3468a6e90fee517d8961eb719147cb5dc7b0cb021af21dfe23d",
+      "endpoint": "https://mcp.airtable.com/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.dropbox": {
+      "packageDigest": "ee060bf4e2584772b6ec2e9ef8268d1a0c4ee046865f845aa3f5ae5c322122e5",
+      "endpoint": "https://mcp.dropbox.com/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.monday-com": {
+      "packageDigest": "ef5d6583d826a67e11933a94afc08e078d43a9e1ba3c1ea99b830488199bca81",
+      "endpoint": "https://mcp.monday.com/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "errorCode": "MCP_CONNECTION_CLOSED",
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    }
+  }
+}

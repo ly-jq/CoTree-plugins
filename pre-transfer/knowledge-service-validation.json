@@ -1,0 +1,60 @@
+{
+  "observedAt": "2026-10-07T04:25:41.369Z",
+  "platform": "win32",
+  "node": "v24.13.0",
+  "scope": "anonymous-mcp-discovery-and-local-metadata-only",
+  "credentialsSent": false,
+  "providerCalls": false,
+  "activeUserRegistryModified": false,
+  "results": {
+    "elyra.granola": {
+      "packageDigest": "73e9ced40776b192a54e69ed4552f2c80b05b20aa4bae172e9867cd6f306a007",
+      "endpoint": "https://mcp.granola.ai/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "toolsCalled": [],
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.consensus": {
+      "packageDigest": "6f7bd61f0df46b32a03042550429f84e17e0698e1cd5dbb5fa6cb4751ce06b11",
+      "endpoint": "https://mcp.consensus.app/mcp",
+      "status": "authentication-required",
+      "requests": [
+        {
+          "method": "POST",
+          "httpStatus": 401,
+          "authenticationChallenge": true
+        }
+      ],
+      "toolsCalled": [],
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    },
+    "elyra.zotero": {
+      "packageDigest": "4e70be15e2c242b0cdc70f7b16e5770a045da84aa1ff58e42b1fb28e3b0e92fd",
+      "endpoint": "http://127.0.0.1:23119",
+      "status": "local-runtime-unverified",
+      "observations": [
+        {
+          "action": "status",
+          "status": "unavailable-or-denied"
+        },
+        {
+          "action": "ping",
+          "status": "unavailable-or-denied"
+        }
+      ],
+      "libraryRecordsRead": false,
+      "profilesModified": false,
+      "authenticatedBusinessRead": "not-tested",
+      "writeOperations": "not-tested"
+    }
+  }
+}

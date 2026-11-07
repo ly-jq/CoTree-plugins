@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "rules": [
+    {
+      "id": "example-output-path",
+      "enabled": false,
+      "phase": "before",
+      "tools": [
+        "Write"
+      ],
+      "action": "block",
+      "message": "This explicit example protects a configured output path.",
+      "conditions": [
+        {
+          "field": "input.path",
+          "operator": "equals",
+          "pattern": "protected-example.txt"
+        }
+      ]
+    }
+  ]
+}

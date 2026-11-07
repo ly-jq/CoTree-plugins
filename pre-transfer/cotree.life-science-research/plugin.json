@@ -1,0 +1,98 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.life-science-research",
+  "name": "生命科学研究",
+  "version": "0.2.0",
+  "description": "跨公共数据库研究基因、变异、表达、结构、化合物、试验和多组学证据。",
+  "presentation": {
+    "icon": "resources/source-01/content/assets/app-icon.png",
+    "readme": "README.md"
+  },
+  "minKernelVersion": "0.1.0",
+  "entry": "README.md",
+  "capabilities": {
+    "skills": true
+  },
+  "permissions": {
+    "shell": "none",
+    "browser": "none"
+  },
+  "skills": [
+    {
+      "name": "cotree.life-science-research.research",
+      "description": "组织生命科学问题、实体识别与跨来源证据综合。",
+      "path": "skills/research/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.life-science-research.identifiers",
+      "description": "解析基因、物种与表型本体标识，保留坐标版本。",
+      "path": "skills/identifiers/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.life-science-research.targets",
+      "description": "联合 Open Targets、GWAS、因果证据和位点到基因映射研究靶点。",
+      "path": "skills/targets/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.life-science-research.variants",
+      "description": "核对 ClinVar、gnomAD 与 EVA 的变异频率和证据。",
+      "path": "skills/variants/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.life-science-research.cohorts",
+      "description": "查询多队列 PheWAS 与基因负担证据并比较复现性。",
+      "path": "skills/cohorts/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.life-science-research.expression",
+      "description": "研究组织、细胞和调控表达证据。",
+      "path": "skills/expression/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.life-science-research.proteins",
+      "description": "检索 UniProt、PDB 与 AlphaFold 的蛋白及结构证据。",
+      "path": "skills/proteins/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.life-science-research.pathways",
+      "description": "检索相互作用、GO、Reactome 和反应注释。",
+      "path": "skills/pathways/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.life-science-research.chemistry",
+      "description": "综合化合物、靶点结合、代谢物与药理注释。",
+      "path": "skills/chemistry/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.life-science-research.clinical",
+      "description": "检索试验登记、肿瘤证据和免疫遗传数据。",
+      "path": "skills/clinical/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.life-science-research.literature",
+      "description": "使用 NCBI 与预印本数据库检索可追溯的研究文献。",
+      "path": "skills/literature/SKILL.md",
+      "disableModelInvocation": false
+    },
+    {
+      "name": "cotree.life-science-research.datasets",
+      "description": "发现公共序列、表达、蛋白质组、代谢组和微生物研究数据。",
+      "path": "skills/datasets/SKILL.md",
+      "disableModelInvocation": false
+    }
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "e882350656fd98ce61cce1c9c2868561fc7eec9b8d783cdc7e581c41b3add4df"
+  }
+}
