@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "id": "cotree.example-plugin",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "category": "开发与质量",
   "priority": 0,
   "batch": 26,
@@ -19,7 +19,8 @@
   ],
   "changes": [
     "示例命令两种来源格式去重，改为真实可运行的CoTree参数回显。",
-    "去除虚构MCP和原宿主权限声明。"
+    "去除虚构MCP和原宿主权限声明。",
+    "对齐 SDK 0.13.0 / API 1：区分声明式 v3、普通辅助脚本与 v4 代码插件，代码模板复用官方初始化器。"
   ],
   "limitations": [
     "演示包只用于教学，不包含实际第三方服务。"

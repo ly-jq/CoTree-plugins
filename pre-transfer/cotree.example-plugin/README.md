@@ -1,8 +1,8 @@
 # example-plugin
 
-可安装的 CoTree Manifest v3 与显式参数入口演示。
+可安装的声明式 Skill 示例，说明与 SDK 0.13.0 / API 1 代码扩展的边界。
 
-- 插件：cotree.example-plugin，版本 0.2.0，CoTree Manifest v3。
+- 插件：cotree.example-plugin，版本 0.2.1，CoTree Manifest v3。
 - 分类：开发与质量；优先级 P0；第 26 批。
 - 完整度：**native-adapted**。native-adapted 表示运行内容已按 CoTree 重写；不表示真实模型或所有外部场景已验收。其余状态仍在改造队列。
 
@@ -17,6 +17,7 @@
 
 - 示例命令两种来源格式去重，改为真实可运行的CoTree参数回显。
 - 去除虚构MCP和原宿主权限声明。
+- 对齐 SDK 0.13.0 / API 1：区分声明式 v3、普通辅助脚本与 v4 代码插件，代码模板复用官方初始化器。
 
 ## 使用
 

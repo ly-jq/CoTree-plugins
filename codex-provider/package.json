@@ -1,0 +1,5 @@
+{
+  "name": "cotree-codex-provider", "private": true, "version": "0.2.2", "type": "module",
+  "scripts": { "build": "node build.mjs", "package": "node build.mjs --archive", "typecheck": "tsc -p tsconfig.json" },
+  "devDependencies": { "@cotree/plugin-sdk": "file:../../packages/plugin-sdk", "archiver": "^7.0.1", "esbuild": "^0.25.0", "typescript": "^5.9.0" }
+}

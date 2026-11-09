@@ -30,6 +30,16 @@ export function bootstrap({ output, name, template = 'prototype' }) {
     files[runtimeTest] = testSource.replace(cornerClick, `const overlayBox = await page.getByTestId("sheet-overlay").boundingBox();
   if (!overlayBox) throw new Error("Missing overlay bounds");
   await page.mouse.click(overlayBox.x + overlayBox.width / 2, overlayBox.y + overlayBox.height * 0.12);`);
+    // Text inputs deliberately retain pointer gestures. Test keyboard dismissal
+    // from the footer padding after its opening animation, not from the input.
+    for (const [before, after] of [
+      ['deltaY: number, steps = 8)', 'deltaY: number, steps = 8, position?: { y: number })'],
+      ['const startY = box.y + box.height / 2;', 'const startY = box.y + (position?.y ?? box.height / 2);'],
+      ['await drag(page, footer, 0, 120, 5);', 'await expect.poll(() => keyboard.evaluate(element => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42)).toBeLessThan(1);\n  await drag(page, footer, 0, 120, 5, { y: 8 });']
+    ]) {
+      if (files[runtimeTest].split(before).length !== 2) throw new Error('Review the upstream keyboard gesture test before adapting it.');
+      files[runtimeTest] = files[runtimeTest].replace(before, after);
+    }
     files['playwright.config.ts'] = `import { defineConfig } from '@playwright/test';\nconst port = Number(process.env.MOBILE_RUNTIME_TEST_PORT ?? 4174);\nif (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error('Invalid fixture port');\nexport default defineConfig({ testDir: './tests', testMatch: '**/*.spec.ts', timeout: 20000, use: { baseURL: 'http://127.0.0.1:' + port, viewport: { width: 1100, height: 1100 }, ...(process.env.COTREE_PLAYWRIGHT_CHANNEL ? { channel: process.env.COTREE_PLAYWRIGHT_CHANNEL } : {}) }, webServer: { command: 'npm run dev -- --host 127.0.0.1 --port ' + port + ' --strictPort', url: 'http://127.0.0.1:' + port + '/tests/runtime-fixture.html', reuseExistingServer: false } });\n`;
   }
   files['package.json'] = JSON.stringify(pkg, null, 2) + '\n';

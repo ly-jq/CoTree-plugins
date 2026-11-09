@@ -2,7 +2,7 @@
   "manifestVersion": 3,
   "id": "cotree.product-design",
   "name": "产品设计",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "从产品背景、URL 或参考图完成设计研究、原型、体验审查和交付。",
   "presentation": {
     "icon": "resources/source-01/content/assets/logo.png",
@@ -69,6 +69,6 @@
   ],
   "integrity": {
     "algorithm": "sha256",
-    "digest": "f32e667137e096223db6535c0dfcfb1ff71200a09330dc2f0aa17279f79db59d"
+    "digest": "8bf35f4ac9d58c6fb9b50edd97a19e105ab800eff649a70b433afa6f4a2f84f6"
   }
 }

@@ -1,5 +1,12 @@
 # CoTree Plugins (source)
 
+`codex-provider/` is the executable **ChatGPT plan Provider**. Version 0.2.1
+uses the host's SIWC registration and public Responses implementation, retaining
+`cotree.codex.subscription` and restoring session/turn routing for cache reuse.
+The update preserves an existing 0.2.0 account authorization; cache hits remain
+subject to upstream availability.
+See [installation, authorization and packaging](codex-provider/README.md).
+
 This directory is an independent Git repository. The CoTree host repository
 ignores `plugins/`; commit plugin sources from this repository, and host changes
 from the parent repository. Local build and integration scripts expect this
@@ -8,7 +15,7 @@ the parent directory. Install dependencies with `pnpm install` from that parent
 after checking out both repositories. Downloaded offline runtimes, credentials,
 dependencies and build output remain untracked.
 
-Hand-authored **declarative plugin** sources. Each subdirectory is one plugin package
+Hand-authored plugin sources, including declarative packages and executable SDK extensions. Each subdirectory is one plugin package
 (`<id>/plugin.json` plus optional `README.md`, `evals/`, assets). These are the
 version-controlled *sources*; installing **materializes** them into a workspace or
 global plugin registry (local runtime state, not committed).
@@ -34,16 +41,26 @@ Windows and Kylin V10 machines. Its downloaded binaries are ignored by Git; see
 [the offline deployment guide](lsp-offline/README.md) for checksums, architecture
 selection and setup. It is not a plugin package and has no `plugin.json`.
 
-## Why "declarative"
+## Declarative packages and SDK extensions
 
-CoTree plugin code runs sandboxed in child processes, so high-frequency / streaming model
-calls cannot go through plugin code. Instead, governed plugins **declare** catalog entries
-that point at a builtin runtime provider. Cost gradient (cheapest first — fill in this order):
+Most `pre-transfer/` packages contribute Skills, Agent templates and MCP declarations.
+Their Manifest v3 remains supported by the same host runtime. They do not need an npm
+SDK dependency merely because the public SDK has advanced.
+
+Executable extensions can use `@cotree/plugin-sdk@0.13.0` / API 1 and Manifest v4.
+The public Tool, Service, UI and Provider entries support host-owned tasks, managed
+processes, model/HTTP streams, interactions, sessions/workflows and ComputerDriver.
+Availability and authorization remain specific to the caller's context; process isolation
+does not itself provide an OS sandbox. Code extensions must not create another host
+AgentLoop or persistence authority. See the [SDK manual](../docs/plugin-sdk-manual/README.md)
+and [pre-transfer adaptation report](pre-transfer/sdk-compatibility.md).
+
+Existing declaration categories remain useful where they fit the feature:
 
 | Slot | Cost | What you write |
 |------|------|----------------|
 | `modelProviders` | lowest (zero runtime code) | one provider/profile declaration |
-| `tools` | low | a sandboxed entry that calls an external API |
+| `tools` | low | a governed code tool using host capabilities |
 | `memoryProviders` | medium | implement the 5 `MemoryProvider` methods |
 | `platformAdapters` | high | a long-lived connection adapter |
 

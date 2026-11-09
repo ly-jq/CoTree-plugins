@@ -7,6 +7,10 @@
 - implementation-pending：0 个，仅有说明或参考，原功能仍缺实现。
 - 实际待改造：0 个；用户要求跳过：1 个。
 
+## SDK 0.13.0 适配
+
+2026-11-09 已检查全部 93 个包。`cotree.plugin-development` 升级至 0.3.0，代码脚手架复用公开 SDK 的七种 Manifest v4 / API 1 模板；`cotree.example-plugin` 升级至 0.2.1，明确声明式包与 SDK 代码扩展的区别。其余 91 包的既有声明式合同继续受支持。逐项原因、验证和安装方式见 [SDK 适配结果](sdk-compatibility.md)；不因包可以安装而改变原业务验收状态。
+
 ## 批次与验证
 
 按用户要求跳过 Codex Security 安全审查相关插件：cotree.security-review 家族保留原状，不自动排入后续批次。跳过记录见 inventory.json 的 skippedFamilies；该包仍计入总量和未完成状态。

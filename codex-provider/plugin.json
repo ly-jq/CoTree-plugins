@@ -1,0 +1,24 @@
+{
+  "manifestVersion": 3,
+  "id": "cotree.codex",
+  "name": "ChatGPT plan Provider",
+  "description": "Sign in with ChatGPT and use your plan through the public Responses API. Upgrades the original Codex subscription plugin.",
+  "version": "0.2.2",
+  "minKernelVersion": "0.1.0",
+  "entry": "dist/service.mjs",
+  "execution": { "runtime": "node", "abi": "cotree.plugin.tool.v2", "isolation": "brokered-process" },
+  "capabilities": { "modelProviders": true, "modelProviderExecution": true, "services": true },
+  "permissions": {
+    "shell": "none", "browser": "none", "services": ["provider"],
+    "network": { "allowDomains": ["api.openai.com", "auth.openai.com"], "methods": ["GET", "POST"] },
+    "modelProvider": { "inputs": true, "inferenceOrigins": ["https://api.openai.com"], "authOrigins": ["https://auth.openai.com"] }
+  },
+  "services": [{ "id": "provider", "entry": "dist/service.mjs", "runtime": "node", "protocol": "cotree.plugin.service.v1" }],
+  "modelProviders": { "providers": { "subscription": {
+    "displayName": "ChatGPT plan",
+    "runtimeProvider": "openai-responses", "auth": "oauth",
+    "defaultBaseUrl": "https://api.openai.com/v1",
+    "description": "Continue with ChatGPT to authorize plan usage. Existing Codex accounts require a new sign-in.",
+    "execution": { "kind": "adapter", "serviceId": "provider", "exportId": "codex", "protocol": "cotree.provider", "requires": ["adapter.responses", "adapter.responses.namespace", "adapter.responses.routing", "auth.chatgpt-plan"], "streaming": true }
+  } } }
+}

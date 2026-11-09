@@ -2,8 +2,8 @@
   "manifestVersion": 3,
   "id": "cotree.example-plugin",
   "name": "example-plugin",
-  "version": "0.2.0",
-  "description": "可安装的 CoTree Manifest v3 与显式参数入口演示。",
+  "version": "0.2.1",
+  "description": "可安装的声明式 Skill 示例，说明与 SDK 0.13.0 / API 1 代码扩展的边界。",
   "presentation": {
     "readme": "README.md"
   },
@@ -32,6 +32,6 @@
   ],
   "integrity": {
     "algorithm": "sha256",
-    "digest": "f7e21016965765a2eb2a942bea1c54533e82047c1fc3852a090ca75f2637cc82"
+    "digest": "167c718baee00462ab3fd3891c476c77ce94aeec5c869b099b7fbd185c3f3c8f"
   }
 }

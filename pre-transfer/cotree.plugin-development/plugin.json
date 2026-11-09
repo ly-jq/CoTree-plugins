@@ -2,7 +2,7 @@
   "manifestVersion": 3,
   "id": "cotree.plugin-development",
   "name": "插件开发",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "description": "创建、装配、验证和评估 CoTree 原生插件，复用现有 SDK 与安装生命周期。",
   "presentation": {
     "icon": "resources/source-02/content/assets/plugin-eval.svg",
@@ -45,6 +45,6 @@
   ],
   "integrity": {
     "algorithm": "sha256",
-    "digest": "72afe29c7ee2d9d6e4963d2d808590853f77e08ab99b6df992b5a562a737bf4e"
+    "digest": "37e86d35b0ec03855700b50ca1efb17d87d0c1d398049dafd4fa750526613280"
   }
 }
