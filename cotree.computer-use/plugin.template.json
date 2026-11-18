@@ -2,7 +2,7 @@
   "manifestVersion": 3,
   "id": "cotree.computer-use",
   "name": "Computer Use",
-  "version": "1.8.7",
+  "version": "1.8.8",
   "description": "Cua browser and desktop execution for CoTree's existing control SDK.",
   "minKernelVersion": "0.1.0",
   "entry": "index.mjs",

@@ -1,5 +1,5 @@
 import { isDeepStrictEqual } from "node:util";
-import { createHash } from "node:crypto";
+import { createHash, randomUUID } from "node:crypto";
 import { computerTargetKey, isCuaDriverManagement, isCuaDriverObservation } from "@cotree/agent-core";
 import type { PluginJsonValue } from "@cotree/plugin-sdk";
 import type { PluginServiceContext } from "@cotree/plugin-sdk/service";
@@ -10,6 +10,10 @@ export type FullCuaDriver = CuaDriverPort & { listToolsJson(): Promise<string>; 
 const json = (value: unknown): PluginJsonValue => JSON.parse(JSON.stringify(value));
 const fail = (code: string, message: string) => ({ ok: false, error: { code, message, recoverable: true },
   output: { execution: "not_started", executionSettled: true, effect: "none" } });
+function beforeDispatchFailure(error: unknown) {
+  const code = object(error).code;
+  return fail(typeof code === "string" ? code : "CUA_DRIVER_PRE_DISPATCH_FAILED", error instanceof Error ? error.message : String(error));
+}
 // These commands configure or manage the Driver. A successful native return
 // acknowledges that command; it is not a claim about an application's UI.
 // In particular Cua's session/cursor/recorder outputs have no `effect` field.
@@ -20,10 +24,10 @@ function publicDefinition(tool: Record<string, unknown>): Record<string, unknown
     properties: Object.fromEntries(Object.entries(object(schema.properties)).filter(([key]) => visible(key))),
     ...(Array.isArray(schema.required) ? { required: schema.required.filter(key => typeof key === "string" && visible(key)) } : {}) } };
 }
-async function updateCheckpoint(checkpoints: NonNullable<PluginServiceContext["checkpoints"]>, update: (root: Record<string, unknown>) => void): Promise<void> {
+async function updateCheckpoint(checkpoints: NonNullable<PluginServiceContext["checkpoints"]>, update: (root: Record<string, unknown>) => void | false): Promise<void> {
   for (let attempt = 0; ; attempt++) {
     const saved = await checkpoints.get(), root = object(saved?.value);
-    update(root);
+    if (update(root) === false) return;
     try { await checkpoints.set(json(root), saved?.revision ?? 0); return; }
     catch (error) {
       if (attempt >= 3 || !(object(error).code === "CONTROL_STATE_CONFLICT" || String(error).includes("CONTROL_STATE_CONFLICT"))) throw error;
@@ -108,8 +112,10 @@ export function createCuaDriverAdapter(factory: (authority: { authorize(request:
       const operationId = String(authority.operationId ?? "");
       if (mutation && !operationId) return fail("CUA_DRIVER_OPERATION_REQUIRED", "Host invocation identity is required for Driver mutations.");
       const digest = createHash("sha256").update(JSON.stringify([name, input])).digest("hex");
-      const saved = await checkpoints.get();
-      const checkpoint = object(saved?.value), records = object(checkpoint.driverOperations), previous = object(records[operationId]);
+      let checkpoint: Record<string, unknown>;
+      try { checkpoint = object((await checkpoints.get())?.value); }
+      catch (error) { return beforeDispatchFailure(error); }
+      const records = object(checkpoint.driverOperations), previous = object(records[operationId]);
       if (mutation && previous.digest) return previous.digest !== digest ? fail("CUA_DRIVER_REPLAY_MISMATCH", "Invocation identity cannot be reused for different input.")
         : json(previous.receipt ?? fail("CUA_DRIVER_PREVIOUS_INPUT_UNKNOWN", "This invocation was already admitted; observe its effect instead of replaying it."));
       const durable = object(object(checkpoint.driverScopes)[scopeKey]);
@@ -122,6 +128,9 @@ export function createCuaDriverAdapter(factory: (authority: { authorize(request:
       const management = isCuaDriverManagement(name, input);
       if (mutation && uncertain && !management) return fail("CUA_DRIVER_PREVIOUS_INPUT_UNKNOWN", "Read the affected browser/window state before sending more input to that target.");
       let leased = false;
+      let admissionId: string | undefined;
+      let nativeStarted = false;
+      let unsentFailure: ReturnType<typeof fail> | undefined;
       const invocation = { context, name, input };
       try {
         if (mutation) {
@@ -130,10 +139,11 @@ export function createCuaDriverAdapter(factory: (authority: { authorize(request:
             await control.acquire(); leased = true;
             await control.assert();
           }
-          if (context.signal.aborted) return fail("CUA_DRIVER_CANCELLED", "Cancelled before native dispatch.");
+          if (context.signal.aborted) throw Object.assign(new Error("Cancelled before native dispatch."), { code: "CUA_DRIVER_CANCELLED" });
+          admissionId = randomUUID();
           await updateCheckpoint(checkpoints, root => {
             const entries = object(root.driverOperations);
-            if (entries[operationId]) throw new Error("CUA_DRIVER_REPLAY_CONFLICT: Invocation was already admitted.");
+            if (entries[operationId]) throw Object.assign(new Error("Invocation was already admitted."), { code: "CUA_DRIVER_REPLAY_CONFLICT" });
             // Keep every identity/digest, but bound historical native payloads.
             // Compact receipts remain usable replay tombstones, not fresh input.
             const settled = Object.values(entries).map(object).filter(record => record.state === "settled" && record.receipt);
@@ -143,12 +153,14 @@ export function createCuaDriverAdapter(factory: (authority: { authorize(request:
                 execution: output.execution, executionSettled: true, inputAcknowledged: output.inputAcknowledged,
                 effect: output.effect, retained: true, payloadCompacted: true, tool: output.tool } };
             }
-            entries[operationId] = { digest, state: "dispatched", scope: scopeKey, target };
+            entries[operationId] = { digest, admissionId, state: "dispatched", scope: scopeKey, target };
             root.driverOperations = entries;
           });
+          if (context.signal.aborted) throw Object.assign(new Error("Cancelled before native dispatch."), { code: "CUA_DRIVER_CANCELLED" });
         }
         // Do not cancel a native sender promise: its settlement owns the lease.
         active.authority.add(invocation);
+        nativeStarted = true;
         const result = await active.driver.callTool(name, JSON.stringify(input), !mutation ? { signal: context.signal } : undefined);
         const data = result.structuredJson ? object(JSON.parse(result.structuredJson)) : object(object(JSON.parse(result.rawJson || "{}")).structuredContent);
         const refused = result.isError || data.status === "refused" || data.effect === "refused"
@@ -170,7 +182,8 @@ export function createCuaDriverAdapter(factory: (authority: { authorize(request:
           // receipt is persisted for replay rejection/recovery.
           await updateCheckpoint(checkpoints, root => {
             const entries = object(root.driverOperations);
-            entries[operationId] = { digest, state: "settled", scope: scopeKey, target,
+            if (object(entries[operationId]).admissionId !== admissionId) throw new Error("The Driver admission changed before settlement.");
+            entries[operationId] = { digest, admissionId, state: "settled", scope: scopeKey, target,
               uncertain: !inputAcknowledged && !notDispatched, receipt: { ...object(receipt), content: undefined } };
             root.driverOperations = entries;
           });
@@ -187,10 +200,33 @@ export function createCuaDriverAdapter(factory: (authority: { authorize(request:
         }
         return receipt;
       } catch (error) {
+        if (!nativeStarted) {
+          unsentFailure = beforeDispatchFailure(error);
+          if (admissionId) {
+            // A failed write acknowledgement can follow a committed admission. Remove only our own unsent operation.
+            try {
+              await updateCheckpoint(checkpoints, root => {
+                const entries = object(root.driverOperations);
+                if (object(entries[operationId]).admissionId !== admissionId) return false;
+                delete entries[operationId];
+              });
+            } catch (cleanup) { unsentFailure.error.message += ` Could not clear the admission: ${String(cleanup)}`; }
+          }
+          return unsentFailure;
+        }
         const reason = object(object(error).inner).reason;
         if (typeof reason === "string") throw Object.assign(new Error(`CUA_DRIVER_NATIVE_ERROR: ${reason}`), { cause: error });
         throw error;
-      } finally { active.authority.delete(invocation); if (leased) await control.release(); }
+      } finally {
+        active.authority.delete(invocation);
+        if (leased) {
+          try { await control.release(); }
+          catch (error) {
+            if (!unsentFailure) throw error;
+            unsentFailure.error.message += ` Could not release the input lease: ${String(error)}`;
+          }
+        }
+      }
     });
     active.tails.set(resource, work);
     if (barrier) active.barrier = work.catch(() => undefined);

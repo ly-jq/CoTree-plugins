@@ -1,5 +1,7 @@
 # Computer Use
 
+Version 1.8.8 reports input lease and checkpoint failures before native dispatch as settled, unsent operations. If a checkpoint write loses its acknowledgement, the driver clears only the admission created by that invocation.
+
 Version 1.8.7 requires action protocol 4; CoTree Desktop 0.1.281 supplies the
 matching file-input identity and current-focus fixes. Unlabelled native upload controls retain their
 APC display text separately from the same-node AX name used for input validation.
