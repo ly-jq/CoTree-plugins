@@ -1,0 +1,1 @@
+{"cases":[{"id":"app-studio.group-application","suite":"app-studio","task":"使用 cotree.app-studio.app-studio，在当前隔离工作区实现工单应用：用户提交并查看自己的工单，管理员处理并回复；提供用户端、后端和管理端，数据持久化，实际验证跨端业务流程。","execution":"agent","expectedStatus":"completed"}]}

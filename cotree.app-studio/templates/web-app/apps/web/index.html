@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>应用用户端</title>
+<style>body{font:16px system-ui;margin:4rem auto;max-width:60rem;padding:0 1.5rem;background:#f6f8fb;color:#172334}a{color:#176e60}main{background:white;border-radius:16px;padding:2rem;border:1px solid #dce4ec}</style>
+<main><h1>应用用户端</h1><p>工程入口已就绪。业务功能由 Group 成员按产品规则实现。</p><a href="/admin">打开管理端</a><p id="health" role="status">正在连接服务…</p></main>
+<script>fetch('/api/health').then(r=>{if(!r.ok)throw Error();return r.json()}).then(()=>document.querySelector('#health').textContent='后端可连接；业务尚未实现。').catch(()=>document.querySelector('#health').textContent='服务连接失败，请检查运行记录。');</script></html>

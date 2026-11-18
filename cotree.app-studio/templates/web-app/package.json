@@ -1,0 +1,5 @@
+{
+  "name": "app-studio-application", "private": true, "type": "module", "version": "0.1.0",
+  "engines": { "node": ">=22.13" },
+  "scripts": { "dev": "node apps/api/server.mjs", "preview": "node apps/api/server.mjs", "test": "node --test tests/*.test.mjs", "build": "node --check apps/api/server.mjs", "test:e2e": "node --test tests/*.test.mjs" }
+}

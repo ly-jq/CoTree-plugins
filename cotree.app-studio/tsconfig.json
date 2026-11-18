@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "module": "NodeNext", "moduleResolution": "NodeNext",
+    "lib": ["ES2023", "DOM"], "strict": true, "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true, "noEmit": true,
+    "paths": {
+      "@cotree/plugin-sdk": ["../../packages/plugin-sdk/src/index.ts"],
+      "@cotree/plugin-sdk/service": ["../../packages/plugin-sdk/src/service.ts"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}
