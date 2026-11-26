@@ -1,0 +1,797 @@
+/* ============================================================================
+ * CoTree × t3code × ReUI Shared Design Tokens & Primitives
+ * Zero layout transitions, zero transition-all, strict WCAG >= 4.5:1 pairs
+ * ============================================================================ */
+
+:root {
+  color-scheme: light;
+
+  /* Typography — matches CoTree Desktop styles.css */
+  --ext-font-sans: "Microsoft YaHei UI", "PingFang SC", "Inter", "Segoe UI Variable Text", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --ext-font-mono: "JetBrains Mono", "Cascadia Code", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  /* Surface ladder (cool neutral — matches CoTree Desktop + t3code) */
+  --ext-bg-sidebar: #f3f4f8;
+  --ext-bg-canvas: #fbfcfe;
+  --ext-bg-card: #ffffff;
+  --ext-bg-elevated: #ffffff;
+  --ext-bg-subtle: #f1f3f8;
+  --ext-bg-inset: #eef0f6;
+  --ext-bg-hover: rgba(15, 23, 42, 0.048);
+  --ext-bg-active: rgba(97, 85, 217, 0.095);
+  --ext-bg-user-bubble: #eff1f7;
+  --ext-bg-steer-bubble: #f3f0fe;
+  --ext-bg-code: #f5f6fa;
+  --ext-bg-code-bar: #ecedf4;
+  --ext-bg-scrim: rgba(15, 23, 42, 0.36);
+
+  /* Hairline strokes */
+  --ext-border: rgba(15, 23, 42, 0.095);
+  --ext-border-subtle: rgba(15, 23, 42, 0.06);
+  --ext-border-strong: rgba(15, 23, 42, 0.16);
+
+  /* Text ladder */
+  --ext-text: #151822;
+  --ext-text-secondary: #485063;
+  --ext-text-muted: #6c7489;
+  --ext-text-subtle: #8f97ab;
+
+  /* Brand accent (CoTree violet) */
+  --ext-accent: #6155d9;
+  --ext-accent-hover: #5246c9;
+  --ext-accent-soft: rgba(97, 85, 217, 0.105);
+  --ext-accent-border: rgba(97, 85, 217, 0.24);
+  --ext-accent-fg: #4a3dc4;
+
+  /* ReUI Semantic State Pairs (light mode: WCAG >= 4.5:1 verified) */
+  --ext-ok-bg: #e7f6ee;
+  --ext-ok-border: rgba(21, 128, 61, 0.18);
+  --ext-ok-fg: #166534;
+  --ext-ok-dot: #16a34a;
+
+  --ext-run-bg: #eef0ff;
+  --ext-run-border: rgba(97, 85, 217, 0.22);
+  --ext-run-fg: #4a3dc4;
+  --ext-run-dot: #6155d9;
+
+  --ext-warn-bg: #fef4e6;
+  --ext-warn-border: rgba(180, 83, 9, 0.22);
+  --ext-warn-fg: #9a3412;
+  --ext-warn-dot: #d97706;
+
+  --ext-err-bg: #fdecef;
+  --ext-err-border: rgba(190, 18, 60, 0.22);
+  --ext-err-fg: #b91c3b;
+  --ext-err-dot: #dc264c;
+
+  --ext-idle-bg: #eef0f5;
+  --ext-idle-border: rgba(15, 23, 42, 0.08);
+  --ext-idle-fg: #525a6e;
+  --ext-idle-dot: #8e96aa;
+
+  /* Provider brand identity hues */
+  --ext-provider-codex: #151822;
+  --ext-provider-claude: #d97757;
+  --ext-provider-antigravity: #6155d9;
+  --ext-provider-gemini: #3b82f6;
+  --ext-provider-opencode: #0f766e;
+  --ext-provider-qwen: #6366f1;
+  --ext-provider-kiro: #7c3aed;
+  --ext-provider-goose: #c2410c;
+  --ext-provider-acp: #475569;
+
+  /* Diff semantics */
+  --ext-diff-add-bg: rgba(22, 163, 74, 0.10);
+  --ext-diff-add-fg: #15803d;
+  --ext-diff-del-bg: rgba(220, 38, 76, 0.10);
+  --ext-diff-del-fg: #b91c3b;
+  --ext-diff-hunk-fg: #4a3dc4;
+
+  /* Shadows (static — never transitioned) */
+  --ext-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --ext-shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 12px -6px rgba(15, 23, 42, 0.06);
+  --ext-shadow-composer: 0 1px 2px rgba(15, 23, 42, 0.05), 0 10px 28px -12px rgba(15, 23, 42, 0.12);
+  --ext-shadow-popover: 0 8px 24px -4px rgba(15, 23, 42, 0.14), 0 0 0 1px rgba(15, 23, 42, 0.07);
+  --ext-shadow-modal: 0 24px 64px -16px rgba(15, 23, 42, 0.28), 0 0 0 1px rgba(15, 23, 42, 0.08);
+
+  /* Radii & layout */
+  --ext-radius-sm: 6px;
+  --ext-radius-md: 10px;
+  --ext-radius-lg: 14px;
+  --ext-radius-xl: 16px;
+  --ext-chat-max-w: 47rem;
+
+  /* Motion curve (ReUI house motion) */
+  --ext-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --ext-bg-sidebar: #111319;
+  --ext-bg-canvas: #161820;
+  --ext-bg-card: #1c1f28;
+  --ext-bg-elevated: #222530;
+  --ext-bg-subtle: #1e212b;
+  --ext-bg-inset: #191c24;
+  --ext-bg-hover: rgba(255, 255, 255, 0.058);
+  --ext-bg-active: rgba(137, 125, 245, 0.16);
+  --ext-bg-user-bubble: #232734;
+  --ext-bg-steer-bubble: #27223a;
+  --ext-bg-code: #14171f;
+  --ext-bg-code-bar: #1b1f2a;
+  --ext-bg-scrim: rgba(4, 6, 10, 0.64);
+
+  --ext-border: rgba(255, 255, 255, 0.092);
+  --ext-border-subtle: rgba(255, 255, 255, 0.055);
+  --ext-border-strong: rgba(255, 255, 255, 0.165);
+
+  --ext-text: #edeef2;
+  --ext-text-secondary: #b7becd;
+  --ext-text-muted: #848ca0;
+  --ext-text-subtle: #636b7f;
+
+  --ext-accent: #7f74f2;
+  --ext-accent-hover: #9086f7;
+  --ext-accent-soft: rgba(127, 116, 242, 0.16);
+  --ext-accent-border: rgba(127, 116, 242, 0.32);
+  --ext-accent-fg: #bbb4ff;
+
+  --ext-ok-bg: rgba(52, 211, 153, 0.13);
+  --ext-ok-border: rgba(52, 211, 153, 0.25);
+  --ext-ok-fg: #6ee7b7;
+  --ext-ok-dot: #34d399;
+
+  --ext-run-bg: rgba(127, 116, 242, 0.16);
+  --ext-run-border: rgba(127, 116, 242, 0.30);
+  --ext-run-fg: #bbb4ff;
+  --ext-run-dot: #9086f7;
+
+  --ext-warn-bg: rgba(245, 158, 11, 0.15);
+  --ext-warn-border: rgba(245, 158, 11, 0.28);
+  --ext-warn-fg: #fcd34d;
+  --ext-warn-dot: #f59e0b;
+
+  --ext-err-bg: rgba(244, 63, 94, 0.15);
+  --ext-err-border: rgba(244, 63, 94, 0.30);
+  --ext-err-fg: #fda4af;
+  --ext-err-dot: #fb7185;
+
+  --ext-idle-bg: rgba(255, 255, 255, 0.065);
+  --ext-idle-border: rgba(255, 255, 255, 0.10);
+  --ext-idle-fg: #9fa7ba;
+  --ext-idle-dot: #6f778c;
+
+  --ext-provider-codex: #edeef2;
+  --ext-provider-claude: #e58d6e;
+  --ext-provider-antigravity: #a298ff;
+  --ext-provider-gemini: #60a5fa;
+  --ext-provider-opencode: #5eead4;
+  --ext-provider-qwen: #818cf8;
+  --ext-provider-kiro: #c4b5fd;
+  --ext-provider-goose: #fb923c;
+  --ext-provider-acp: #94a3b8;
+
+  --ext-diff-add-bg: rgba(52, 211, 153, 0.14);
+  --ext-diff-add-fg: #6ee7b7;
+  --ext-diff-del-bg: rgba(244, 63, 94, 0.16);
+  --ext-diff-del-fg: #fda4af;
+  --ext-diff-hunk-fg: #bbb4ff;
+
+  --ext-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.24);
+  --ext-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.28), 0 6px 16px -8px rgba(0, 0, 0, 0.45);
+  --ext-shadow-composer: 0 1px 2px rgba(0, 0, 0, 0.32), 0 14px 32px -14px rgba(0, 0, 0, 0.72);
+  --ext-shadow-popover: 0 12px 32px -6px rgba(0, 0, 0, 0.62), 0 0 0 1px rgba(255, 255, 255, 0.09);
+  --ext-shadow-modal: 0 28px 72px -16px rgba(0, 0, 0, 0.78), 0 0 0 1px rgba(255, 255, 255, 0.10);
+}
+
+/* ============================================================================
+ * Base Reset & Scrollbar
+ * ============================================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+body.cotree-plugin-view {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--ext-font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ext-text);
+  background: var(--ext-bg-canvas);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 136, 158, 0.28) transparent;
+}
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(128, 136, 158, 0.26);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 136, 158, 0.44);
+}
+
+/* Focus rings — crisp, instant (no transition per ReUI focus-transition rule) */
+:where(button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--ext-accent);
+  outline-offset: 1px;
+}
+
+/* Layout utilities */
+.cli-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+.cli-between {
+  justify-content: space-between;
+}
+.cli-end {
+  justify-content: flex-end;
+}
+.cli-wrap {
+  flex-wrap: wrap;
+}
+.cli-flex-1 {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+.cli-muted {
+  color: var(--ext-text-muted);
+  font-size: 12px;
+}
+.cli-mono {
+  font-family: var(--ext-font-mono);
+  font-variant-numeric: tabular-nums;
+}
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Icons */
+.ext-icon,
+.ext-provider-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.ext-provider-icon.provider-codex { color: var(--ext-provider-codex); }
+.ext-provider-icon.provider-claude { color: var(--ext-provider-claude); }
+.ext-provider-icon.provider-antigravity { color: var(--ext-provider-antigravity); }
+.ext-provider-icon.provider-gemini { color: var(--ext-provider-gemini); }
+.ext-provider-icon.provider-opencode { color: var(--ext-provider-opencode); }
+.ext-provider-icon.provider-qwen { color: var(--ext-provider-qwen); }
+.ext-provider-icon.provider-kiro { color: var(--ext-provider-kiro); }
+.ext-provider-icon.provider-goose { color: var(--ext-provider-goose); }
+.ext-provider-icon.provider-acp { color: var(--ext-provider-acp); }
+
+/* ============================================================================
+ * ReUI-Aligned Buttons, Badges, Inputs, Popovers & Modals
+ * ============================================================================ */
+
+.cotree-button,
+.reui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 0;
+  height: 30px;
+  padding: 0 11px;
+  border-radius: 8px;
+  border: 1px solid var(--ext-border);
+  background: var(--ext-bg-card);
+  color: var(--ext-text);
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: var(--ext-shadow-xs);
+  transition: background-color 150ms, border-color 150ms, color 150ms, transform 150ms;
+}
+
+.cotree-button:hover:not(:disabled),
+.reui-btn:hover:not(:disabled) {
+  background: var(--ext-bg-subtle);
+  border-color: var(--ext-border-strong);
+}
+
+.cotree-button:active:not(:disabled),
+.reui-btn:active:not(:disabled) {
+  transform: translateY(0.5px);
+}
+
+.cotree-button[data-variant="primary"],
+.reui-btn[data-variant="primary"] {
+  background: var(--ext-accent);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.cotree-button[data-variant="primary"]:hover:not(:disabled),
+.reui-btn[data-variant="primary"]:hover:not(:disabled) {
+  background: var(--ext-accent-hover);
+}
+
+.cotree-button[data-variant="ghost"],
+.reui-btn[data-variant="ghost"] {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: var(--ext-text-secondary);
+}
+
+.cotree-button[data-variant="ghost"]:hover:not(:disabled),
+.reui-btn[data-variant="ghost"]:hover:not(:disabled) {
+  background: var(--ext-bg-hover);
+  color: var(--ext-text);
+}
+
+.cotree-button[data-variant="danger"],
+.cotree-button.danger {
+  background: var(--ext-err-bg);
+  border-color: var(--ext-err-border);
+  color: var(--ext-err-fg);
+  box-shadow: none;
+}
+
+.cotree-button[data-variant="danger"]:hover:not(:disabled),
+.cotree-button.danger:hover:not(:disabled) {
+  background: var(--ext-err-dot);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.reui-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ext-text-secondary);
+  transition: background-color 150ms, color 150ms, border-color 150ms;
+}
+.reui-icon-btn:hover:not(:disabled) {
+  background: var(--ext-bg-hover);
+  color: var(--ext-text);
+}
+.reui-icon-btn.bordered {
+  border-color: var(--ext-border);
+  background: var(--ext-bg-card);
+  box-shadow: var(--ext-shadow-xs);
+}
+.reui-icon-btn.bordered:hover:not(:disabled) {
+  background: var(--ext-bg-subtle);
+  border-color: var(--ext-border-strong);
+}
+.reui-icon-btn.danger:hover:not(:disabled) {
+  background: var(--ext-err-bg);
+  color: var(--ext-err-fg);
+}
+.reui-icon-btn[data-armed="true"] {
+  width: auto;
+  padding: 0 7px;
+  gap: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--ext-err-bg);
+  color: var(--ext-err-fg);
+  border-color: var(--ext-err-border);
+}
+
+.compact-btn {
+  height: 28px;
+  padding: 0 9px;
+  font-size: 12px;
+}
+
+.cli-mini-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ext-text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  transition: background-color 150ms, color 150ms, border-color 150ms;
+}
+.cli-mini-btn:hover:not(:disabled) {
+  background: var(--ext-bg-hover);
+  color: var(--ext-text);
+}
+.cli-mini-btn.bordered {
+  border-color: var(--ext-border);
+  background: var(--ext-bg-card);
+  color: var(--ext-text-secondary);
+}
+.cli-mini-btn.accent {
+  background: var(--ext-accent-soft);
+  border-color: var(--ext-accent-border);
+  color: var(--ext-accent-fg);
+}
+.cli-mini-btn.accent:hover:not(:disabled) {
+  background: var(--ext-accent);
+  color: #ffffff;
+}
+.cli-mini-btn.danger-text:hover:not(:disabled) {
+  background: var(--ext-err-bg);
+  color: var(--ext-err-fg);
+}
+
+.mini-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  background: transparent;
+  color: var(--ext-text-muted);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: background-color 150ms, color 150ms;
+}
+.mini-link-btn:hover:not(:disabled) {
+  background: var(--ext-bg-hover);
+  color: var(--ext-text);
+}
+
+/* ReUI Semantic Badges (-light recipes) */
+.cli-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  border: 1px solid var(--ext-idle-border);
+  background: var(--ext-idle-bg);
+  color: var(--ext-idle-fg);
+  font-variant-numeric: tabular-nums;
+}
+.cli-pill.ok {
+  background: var(--ext-ok-bg);
+  border-color: var(--ext-ok-border);
+  color: var(--ext-ok-fg);
+}
+.cli-pill.run {
+  background: var(--ext-run-bg);
+  border-color: var(--ext-run-border);
+  color: var(--ext-run-fg);
+}
+.cli-pill.warn {
+  background: var(--ext-warn-bg);
+  border-color: var(--ext-warn-border);
+  color: var(--ext-warn-fg);
+}
+.cli-pill.err {
+  background: var(--ext-err-bg);
+  border-color: var(--ext-err-border);
+  color: var(--ext-err-fg);
+}
+.cli-pill.idle {
+  background: var(--ext-idle-bg);
+  border-color: var(--ext-idle-border);
+  color: var(--ext-idle-fg);
+}
+.cli-pill.outline {
+  background: transparent;
+  border-color: var(--ext-border);
+  color: var(--ext-text-secondary);
+}
+
+/* Status dots — ambient pulse ONLY on active running state (max 3 per view, reduced-motion safe) */
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  background: var(--ext-idle-dot);
+}
+.status-dot.ok { background: var(--ext-ok-dot); }
+.status-dot.run {
+  background: var(--ext-run-dot);
+  animation: ext-status-pulse 2.2s ease-in-out infinite;
+}
+.status-dot.warn { background: var(--ext-warn-dot); }
+.status-dot.err { background: var(--ext-err-dot); }
+
+@keyframes ext-status-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.42; }
+}
+
+/* Form controls */
+.cotree-input,
+.cotree-select,
+.cotree-textarea {
+  width: 100%;
+  min-height: 0;
+  border-radius: 8px;
+  border: 1px solid var(--ext-border);
+  background: var(--ext-bg-card);
+  color: var(--ext-text);
+  font-size: 12.5px;
+  padding: 6px 10px;
+  transition: border-color 150ms, background-color 150ms;
+}
+.cotree-input,
+.cotree-select {
+  height: 32px;
+}
+.cotree-textarea {
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 68px;
+}
+.cotree-input:hover,
+.cotree-select:hover,
+.cotree-textarea:hover {
+  border-color: var(--ext-border-strong);
+}
+.cotree-input:focus,
+.cotree-select:focus,
+.cotree-textarea:focus {
+  outline: none;
+  border-color: var(--ext-accent);
+  box-shadow: 0 0 0 3px var(--ext-accent-soft);
+}
+.cotree-input::placeholder,
+.cotree-textarea::placeholder {
+  color: var(--ext-text-subtle);
+}
+
+/* Notices */
+.notice {
+  font-size: 12px;
+  color: var(--ext-text-muted);
+  min-height: 0;
+  line-height: 1.4;
+}
+.notice:empty {
+  display: none;
+}
+.notice[data-error="true"] {
+  color: var(--ext-err-fg);
+  background: var(--ext-err-bg);
+  border: 1px solid var(--ext-err-border);
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+/* Kbd badge */
+.cli-kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 5px;
+  border: 1px solid var(--ext-border-strong);
+  background: var(--ext-bg-subtle);
+  color: var(--ext-text-secondary);
+  font-family: var(--ext-font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* Segmented Tabs (ReUI Tabs) */
+.reui-segmented {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  border-radius: 8px;
+  background: var(--ext-bg-inset);
+  border: 1px solid var(--ext-border-subtle);
+  gap: 2px;
+}
+.reui-segmented .tab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 24px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ext-text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  transition: background-color 150ms, color 150ms;
+}
+.reui-segmented .tab-btn:hover {
+  color: var(--ext-text);
+}
+.reui-segmented .tab-btn.active {
+  background: var(--ext-bg-card);
+  color: var(--ext-text);
+  box-shadow: var(--ext-shadow-xs);
+}
+
+/* Dropdown Menu (ReUI Popover) */
+.reui-menu-wrap {
+  position: relative;
+}
+.reui-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 60;
+  min-width: 204px;
+  padding: 5px;
+  border-radius: 11px;
+  background: var(--ext-bg-elevated);
+  border: 1px solid var(--ext-border);
+  box-shadow: var(--ext-shadow-popover);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.reui-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 7px 9px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ext-text);
+  font-size: 12.5px;
+  text-align: left;
+  transition: background-color 150ms, color 150ms;
+}
+.reui-menu-item:hover:not(:disabled) {
+  background: var(--ext-bg-hover);
+}
+.reui-menu-item .menu-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.reui-menu-item .menu-left .ext-icon {
+  color: var(--ext-text-muted);
+}
+.reui-menu-item .menu-right {
+  font-size: 11.5px;
+  color: var(--ext-text-muted);
+}
+.reui-menu-item.danger {
+  color: var(--ext-err-fg);
+}
+.reui-menu-item.danger .menu-left .ext-icon {
+  color: var(--ext-err-fg);
+}
+.reui-menu-item.danger:hover:not(:disabled) {
+  background: var(--ext-err-bg);
+}
+.reui-menu-sep {
+  height: 1px;
+  background: var(--ext-border-subtle);
+  margin: 4px 6px;
+}
+
+/* Dialog / Modal Backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--ext-bg-scrim);
+  backdrop-filter: blur(4px);
+}
+.modal-card {
+  width: min(500px, 100%);
+  max-height: min(86vh, 720px);
+  overflow-y: auto;
+  background: var(--ext-bg-card);
+  border: 1px solid var(--ext-border);
+  border-radius: 16px;
+  box-shadow: var(--ext-shadow-modal);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.modal-card.wide {
+  width: min(640px, 100%);
+}
+.modal-card h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.modal-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ext-text-secondary);
+}
+.modal-card label.remember-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  color: var(--ext-text-secondary);
+}
+.modal-card label.remember-row input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--ext-accent);
+}
+
+/* Reduced motion compliance (ReUI hard rule) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

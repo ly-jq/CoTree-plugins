@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>外部 CLI 会话详情</title>
+  <link rel="stylesheet" href="transcript.css">
+</head>
+<body class="cotree-plugin-view transcript-body">
+  <div class="transcript-shell">
+    <aside class="rail" aria-label="外部 CLI 会话列表">
+      <div class="rail-header">
+        <div class="cli-row cli-between rail-title-row">
+          <h2 class="rail-heading">外部 CLI</h2>
+          <div class="cli-row">
+            <button id="btn-import-native" type="button" class="reui-icon-btn" title="从本机 Codex / ACP 导入已有历史会话" aria-label="导入本机历史会话"></button>
+            <button id="refresh" type="button" class="reui-icon-btn" title="刷新会话与模型目录" aria-label="刷新状态"></button>
+            <button id="toggle-new" type="button" class="cotree-button compact-btn" data-variant="primary"></button>
+          </div>
+        </div>
+        <div id="rail-workspace" class="workspace-context-bar" hidden></div>
+
+        <div class="rail-search-wrap">
+          <span id="rail-search-icon" class="rail-search-icon"></span>
+          <input id="search" class="cotree-input rail-search-input" placeholder="搜索会话、目录或引擎…" aria-label="搜索会话">
+        </div>
+
+        <div id="engine-filters" class="engine-filters" role="tablist" aria-label="按引擎筛选">
+          <button type="button" class="filter-chip active" data-engine="all">全部</button>
+          <button type="button" class="filter-chip" data-engine="codex">Codex</button>
+          <button type="button" class="filter-chip" data-engine="claude">Claude</button>
+          <button type="button" class="filter-chip" data-engine="antigravity">Agy</button>
+          <button type="button" class="filter-chip" data-engine="gemini">Gemini</button>
+          <button type="button" class="filter-chip" data-engine="opencode" hidden>OpenCode</button>
+          <button type="button" class="filter-chip" data-engine="qwen" hidden>Qwen</button>
+          <button type="button" class="filter-chip" data-engine="acp_more" hidden>ACP+</button>
+        </div>
+
+        <div id="engines" class="engine-status-strip" aria-label="引擎就绪状态"></div>
+        <div id="rail-notice" class="notice" role="status" aria-live="polite"></div>
+      </div>
+
+      <div id="rail-list" class="rail-list" role="list"></div>
+      <div id="rail-empty" class="empty-box" hidden>
+        <p class="cli-muted">没有匹配的托管 CLI 会话</p>
+      </div>
+    </aside>
+
+    <section class="canvas">
+      <div id="canvas-empty" class="canvas-empty">
+        <div class="canvas-empty-card">
+          <div id="empty-provider-row" class="empty-provider-row"></div>
+          <h2>托管外部 Coding CLI</h2>
+          <p class="cli-muted">统一编排 Codex、Claude Code、Antigravity、Gemini、OpenCode、Qwen Code 及 ACP 引擎——支持 60fps 增量流式渲染、Plan 规划审批、运行中排队与插话、跨引擎无损交接及 Turn 级 Git 检查点。</p>
+          <div class="cli-row empty-actions">
+            <button id="empty-new-btn" type="button" class="cotree-button" data-variant="primary"></button>
+            <button id="empty-import-btn" type="button" class="cotree-button"></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="canvas-active" class="canvas-active" hidden>
+        <header class="canvas-header">
+          <div class="canvas-header-main">
+            <div class="cli-row canvas-title-group">
+              <span id="hdr-engine-icon" class="hdr-engine-icon"></span>
+              <h1 id="hdr-title"></h1>
+              <span id="hdr-status" class="cli-pill"></span>
+              <span id="hdr-agent-badge" class="cli-pill agent-origin-pill" hidden></span>
+              <span id="hdr-silence" class="cli-pill warn silence-pill" hidden></span>
+              <span id="hdr-plan-badge" class="cli-pill run" hidden>PLAN</span>
+              <span id="hdr-worktree" class="cli-pill outline" hidden>Worktree</span>
+            </div>
+
+            <div class="cli-row canvas-header-actions">
+              <button id="ctx-meter" type="button" class="ctx-meter" hidden title="上下文窗口用量 — 点击触发压缩 (/compact)" aria-label="上下文窗口用量">
+                <span class="ctx-meter-track"><span id="ctx-meter-fill" class="ctx-meter-fill"></span></span>
+                <span id="ctx-meter-text" class="ctx-meter-text cli-mono"></span>
+              </button>
+
+              <div class="reui-segmented" role="tablist" aria-label="视图模式">
+                <button id="mode-readable" type="button" class="tab-btn active" role="tab" aria-selected="true">会话</button>
+                <button id="mode-raw" type="button" class="tab-btn" role="tab" aria-selected="false">协议</button>
+              </div>
+
+              <button id="btn-review" type="button" class="cotree-button compact-btn" title="打开 CoTree 原生 Review 差异面板"></button>
+
+              <div class="reui-menu-wrap">
+                <button id="btn-header-more" type="button" class="reui-icon-btn bordered" title="更多会话操作" aria-label="更多会话操作" aria-haspopup="menu" aria-expanded="false"></button>
+                <div id="header-more-menu" class="reui-menu" role="menu" hidden>
+                  <button id="btn-fork" type="button" class="reui-menu-item" role="menuitem"></button>
+                  <button id="btn-handoff" type="button" class="reui-menu-item" role="menuitem"></button>
+                  <button id="btn-notify-pref" type="button" class="reui-menu-item" role="menuitem"></button>
+                  <label class="reui-menu-item menu-check-row" role="menuitemcheckbox">
+                    <span id="menu-autoscroll-label" class="menu-left"></span>
+                    <input id="auto-scroll" type="checkbox" checked>
+                  </label>
+                  <div class="reui-menu-sep" role="separator"></div>
+                  <button id="btn-interrupt" type="button" class="reui-menu-item" role="menuitem"></button>
+                  <button id="btn-kill" type="button" class="reui-menu-item danger" role="menuitem"></button>
+                  <button id="btn-delete" type="button" class="reui-menu-item danger" role="menuitem"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="canvas-header-sub">
+            <span id="hdr-engine" class="hdr-engine-name"></span>
+            <span id="hdr-model" class="hdr-model-text cli-mono" hidden></span>
+            <div id="hdr-meta" class="hdr-meta cli-mono"></div>
+          </div>
+
+          <div id="changed-files-bar" class="changed-files-bar" hidden></div>
+          <div id="notice" class="notice header-notice" role="status" aria-live="polite"></div>
+        </header>
+
+        <div id="find-bar" class="find-bar" hidden>
+          <span id="find-icon" class="find-icon"></span>
+          <input id="find-input" class="cotree-input find-input" placeholder="在当前会话中查找… (Enter 下一个 · Esc 关闭)" aria-label="查找会话内容">
+          <span id="find-count" class="cli-muted tabular-nums"></span>
+          <button id="find-prev" type="button" class="reui-icon-btn" aria-label="上一处"></button>
+          <button id="find-next" type="button" class="reui-icon-btn" aria-label="下一处"></button>
+          <button id="find-close" type="button" class="reui-icon-btn" aria-label="关闭查找"></button>
+        </div>
+
+        <div id="stream-viewport" class="stream-viewport">
+          <div class="stream-inner">
+            <div id="older-turns-wrap" class="older-turns-wrap" hidden>
+              <button id="btn-load-older" type="button" class="cotree-button compact-btn"></button>
+            </div>
+            <div id="turns-container" class="turns-container"></div>
+            <div id="raw-container" class="raw-container" hidden>
+              <section class="raw-section">
+                <h3>结构化事件时间线</h3>
+                <div id="raw-events" class="raw-events"></div>
+              </section>
+              <section class="raw-section">
+                <h3>原始 STDOUT 尾段</h3>
+                <pre id="raw-stdout" class="cli-pre raw-full"></pre>
+              </section>
+              <section class="raw-section">
+                <h3>原始 STDERR 尾段</h3>
+                <pre id="raw-stderr" class="cli-pre raw-full"></pre>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <div class="composer-dock-outer">
+          <section id="interventions-dock" class="interventions-dock" hidden>
+            <div class="interventions-dock-head">
+              <span id="interventions-dock-title" class="cli-row"></span>
+            </div>
+            <div id="interventions-list" class="approvals-list"></div>
+          </section>
+
+          <footer id="composer-root" class="composer">
+            <div id="composer-popover" class="composer-popover" hidden></div>
+            <div id="queue-dock" class="queue-dock" hidden></div>
+            <div id="stash-bar" class="stash-bar" hidden></div>
+
+            <div class="composer-surface">
+              <div id="attachments-bar" class="attachments-bar" hidden></div>
+              <div class="composer-input-wrap">
+                <textarea id="steer-input" class="composer-input" rows="2" maxlength="16000" placeholder="输入指令… / 触发命令 · @ 引用文件 · 粘贴或拖入截图 (Enter 发送 · Shift+Tab 切换 Plan)"></textarea>
+              </div>
+              <div class="composer-bar">
+                <div class="composer-controls">
+                  <button id="btn-attach" type="button" class="composer-ghost-icon" title="附加文件或截图 (<= 6 MiB)" aria-label="附加文件或截图"></button>
+                  <input id="composer-file-input" type="file" multiple hidden>
+
+                  <div class="composer-pill-select" title="切换会话模型">
+                    <span id="composer-model-icon" class="pill-leading-icon"></span>
+                    <span id="composer-model-label" class="pill-display-label">默认模型</span>
+                    <span class="pill-chevron" data-chevron="1"></span>
+                    <select id="steer-model-select" class="pill-overlay-select" aria-label="切换会话模型"></select>
+                  </div>
+                  <input id="steer-model-custom" class="cotree-input compact-custom-input" maxlength="128" placeholder="自定义模型 ID…" hidden>
+
+                  <div id="steer-effort-wrap" class="composer-pill-select" title="思考深度" hidden>
+                    <span id="composer-effort-icon" class="pill-leading-icon"></span>
+                    <span id="composer-effort-label" class="pill-display-label">默认</span>
+                    <span class="pill-chevron" data-chevron="1"></span>
+                    <select id="steer-effort" class="pill-overlay-select" aria-label="思考深度"></select>
+                  </div>
+
+                  <button id="steer-refresh-models" type="button" class="composer-ghost-icon" title="刷新可用模型列表" aria-label="刷新模型列表"></button>
+
+                  <span class="composer-sep" aria-hidden="true"></span>
+
+                  <div class="composer-pill-select" title="权限模式 (Ctrl+Shift+A 切换)">
+                    <span id="composer-perm-icon" class="pill-leading-icon"></span>
+                    <span id="composer-perm-label" class="pill-display-label">受控审批</span>
+                    <span class="pill-chevron" data-chevron="1"></span>
+                    <select id="steer-permission" class="pill-overlay-select" aria-label="权限模式">
+                      <option value="supervised">受控审批</option>
+                      <option value="accept_edits">自动编辑</option>
+                      <option value="auto">AI 审核</option>
+                      <option value="full_access">完全放行</option>
+                    </select>
+                  </div>
+
+                  <button id="btn-plan-toggle" type="button" class="composer-toggle-pill" title="切换 Plan 规划模式 (Shift+Tab)"></button>
+                  <button id="btn-fast-tier" type="button" class="composer-toggle-pill warn-pill" hidden title="Codex Fast Service Tier"></button>
+                  <button id="btn-followup-mode" type="button" class="composer-toggle-pill" title="运行中发送策略：排队 vs 插话"></button>
+                </div>
+
+                <div class="composer-primary-group">
+                  <button id="btn-composer-stop" type="button" class="composer-stop-circle" hidden title="软中断当前轮次" aria-label="停止当前生成"></button>
+                  <button id="btn-steer" type="button" class="composer-send-circle" title="发送指令 (Enter)" aria-label="发送指令"></button>
+                </div>
+              </div>
+            </div>
+            <div class="composer-caption-bar">
+              <span id="composer-hint" class="composer-hint"></span>
+              <span class="composer-caption-kbd">Shift+Tab 切换 Plan · / 命令 · @ 引用文件</span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- New Session Dialog Modal -->
+  <div id="new-drawer" class="modal-backdrop" hidden>
+    <div class="modal-card wide" role="dialog" aria-modal="true" aria-labelledby="new-modal-title">
+      <div class="cli-row cli-between">
+        <h3 id="new-modal-title">新建外部 CLI 会话</h3>
+        <button id="new-close-x" type="button" class="reui-icon-btn" aria-label="关闭"></button>
+      </div>
+
+      <div class="field-group">
+        <span class="field-caption">选择引擎</span>
+        <div id="new-engine-grid" class="engine-picker-grid" role="radiogroup" aria-label="选择 CLI 引擎"></div>
+        <select id="new-engine" class="sr-only-select" aria-label="引擎">
+          <option value="codex">Codex CLI</option>
+          <option value="claude">Claude Code</option>
+          <option value="antigravity">Antigravity CLI</option>
+          <option value="gemini">Gemini CLI</option>
+          <option value="opencode">OpenCode (ACP)</option>
+          <option value="qwen">Qwen Code (ACP)</option>
+          <option value="kiro">Kiro CLI (ACP)</option>
+          <option value="goose">Goose (ACP)</option>
+          <option value="acp">Custom ACP</option>
+        </select>
+      </div>
+
+      <div class="drawer-grid-2">
+        <label>权限模式
+          <select id="new-permission" class="cotree-select">
+            <option value="supervised">受控审批 (Supervised)</option>
+            <option value="accept_edits">自动编辑 (Accept Edits)</option>
+            <option value="auto">AI 自动审核 (Auto)</option>
+            <option value="full_access">完全放行 (Full Access)</option>
+          </select>
+        </label>
+        <label>交互模式
+          <select id="new-interaction" class="cotree-select">
+            <option value="default">执行模式 (Default)</option>
+            <option value="plan">规划模式 (Plan)</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="drawer-grid-2">
+        <label>工作目录 (相对路径)
+          <input id="new-cwd" class="cotree-input cli-mono" value="." placeholder=".">
+        </label>
+        <label>会话标签 (可选)
+          <input id="new-label" class="cotree-input" placeholder="例如：核心重构">
+        </label>
+      </div>
+
+      <div class="model-picker-block">
+        <div class="cli-row cli-between">
+          <label for="new-model-select" class="field-caption">模型与推理深度</label>
+          <button id="new-refresh-models" type="button" class="mini-link-btn" title="重新探测当前 CLI 可用模型"></button>
+        </div>
+        <div class="drawer-grid-2">
+          <select id="new-model-select" class="cotree-select" aria-label="选择 CLI 模型"></select>
+          <div id="new-effort-wrap" hidden>
+            <select id="new-effort" class="cotree-select" aria-label="思考深度"></select>
+          </div>
+        </div>
+        <input id="new-model-custom" class="cotree-input" maxlength="128" placeholder="输入自定义模型 ID…" hidden>
+        <div id="new-model-hint" class="cli-muted"></div>
+      </div>
+
+      <label class="remember-row">
+        <input id="new-remember-model" type="checkbox" checked>
+        <span>记住为该 CLI 的默认模型偏好</span>
+      </label>
+
+      <label>初始任务 (可选，留空启动空会话)
+        <textarea id="new-prompt" class="cotree-textarea" rows="3" placeholder="留空可直接启动交互会话，也可在此输入第一条任务指令…"></textarea>
+      </label>
+
+      <div id="new-status" class="notice" role="status" aria-live="polite"></div>
+      <div class="cli-row cli-end">
+        <button id="new-cancel" type="button" class="cotree-button">取消</button>
+        <button id="new-submit" type="button" class="cotree-button" data-variant="primary">启动会话</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Handoff Modal -->
+  <div id="handoff-modal" class="modal-backdrop" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="handoff-modal-title">
+      <div class="cli-row cli-between">
+        <h3 id="handoff-modal-title">跨引擎无损交接 (Handoff)</h3>
+        <button id="handoff-close" type="button" class="reui-icon-btn" aria-label="关闭"></button>
+      </div>
+      <p class="cli-muted">按确定性预算打包当前会话关键上下文（零额外总结延迟），无损移交给目标引擎继续工作。</p>
+      <label>目标引擎
+        <select id="handoff-engine" class="cotree-select">
+          <option value="codex">Codex CLI (原生 thread/inject_items)</option>
+          <option value="claude">Claude Code (Agent SDK)</option>
+          <option value="antigravity">Antigravity CLI (agy)</option>
+          <option value="gemini">Gemini CLI (ACP)</option>
+          <option value="opencode">OpenCode (ACP)</option>
+          <option value="qwen">Qwen Code (ACP)</option>
+          <option value="kiro">Kiro CLI (ACP)</option>
+          <option value="goose">Goose (ACP)</option>
+          <option value="acp">Custom ACP</option>
+        </select>
+      </label>
+      <label>目标模型 (可选，留空用默认)
+        <input id="handoff-model" class="cotree-input cli-mono" placeholder="例如：gpt-5.4 / opus">
+      </label>
+      <label>交接后的首条指令 (可选)
+        <textarea id="handoff-prompt" class="cotree-textarea" rows="3" placeholder="留空将先准备就绪，在您下一条指令时自动注入上下文…"></textarea>
+      </label>
+      <div class="cli-row cli-end">
+        <button id="handoff-cancel" type="button" class="cotree-button">取消</button>
+        <button id="handoff-confirm" type="button" class="cotree-button" data-variant="primary">立即交接</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import Native Session Modal -->
+  <div id="import-modal" class="modal-backdrop" hidden>
+    <div class="modal-card wide" role="dialog" aria-modal="true" aria-labelledby="import-modal-title">
+      <div class="cli-row cli-between">
+        <h3 id="import-modal-title">导入本机原生 CLI 历史会话</h3>
+        <button id="import-close" type="button" class="reui-icon-btn" aria-label="关闭"></button>
+      </div>
+      <p class="cli-muted">实时列出本机 Codex CLI (thread/list) 及活跃 ACP 引擎的原生线程，一键导入 CoTree 续聊。</p>
+      <div id="import-status" class="notice"></div>
+      <div id="import-list" class="import-list"></div>
+      <div class="cli-row cli-end">
+        <button id="import-refresh" type="button" class="cotree-button"></button>
+        <button id="import-cancel" type="button" class="cotree-button">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div id="lightbox-modal" class="modal-backdrop" hidden>
+    <div class="lightbox-card" role="dialog" aria-modal="true" aria-label="图片预览">
+      <div class="cli-row cli-between">
+        <strong id="lightbox-caption"></strong>
+        <div class="cli-row">
+          <button id="lightbox-open-file" type="button" class="cotree-button compact-btn">在文件面板打开</button>
+          <button id="lightbox-close" type="button" class="reui-icon-btn" aria-label="关闭"></button>
+        </div>
+      </div>
+      <img id="lightbox-img" class="lightbox-img" alt="预览">
+    </div>
+  </div>
+
+  <script type="module" src="transcript.js"></script>
+</body>
+</html>

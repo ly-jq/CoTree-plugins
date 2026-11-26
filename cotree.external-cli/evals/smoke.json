@@ -1,0 +1,11 @@
+{
+  "cases": [
+    {
+      "id": "external-cli.inspect-and-lifecycle",
+      "suite": "external-cli",
+      "task": "使用 cotree.external-cli.external-cli 检查本机可用的外部 Agent CLI（codex / claude），在隔离工作区通过插件启动一次受管会话、等待完成、追加一次 steer 指令并干净停止。",
+      "execution": "agent",
+      "expectedStatus": "completed"
+    }
+  ]
+}
